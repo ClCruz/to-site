@@ -11,7 +11,7 @@
         </div>
         <div class="mr-0 ml-0 mt-4 mb-0 p-0 w-100 justify-content-center row">
           <div class="col-12 col-sm-2" v-for="(item, index) in nextEvents" :key='index'>
-            <p class="next__events  p-2" @click="goto(item)">
+            <p class="next__events  p-2" @click="goto('event', item)">
               {{item.ds_evento}}
             </p>
           </div>
@@ -44,7 +44,7 @@
                   </div>
                 </div>
                 <div class="button-event pt-4 w-100">
-                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="search('','')" type="button">Comprar ingressos</button>
+                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: '/evento/natal_com_as_estrelas_teatro_italia_22700'})" type="button">Comprar ingressos</button>
 
                 </div>
               </div>
@@ -69,7 +69,7 @@
                   </div>
                 </div>
                 <div class="button-event pt-4 w-100">
-                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="search('','')" type="button">Comprar ingressos</button>
+                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: '/evento/ze_manoel_e_diogo_strausz_teatro_italia_22698'})" type="button">Comprar ingressos</button>
 
                 </div>
               </div>
@@ -90,16 +90,16 @@
         <div class="col-12 col-sm-12 text-left">
           <h3>Gêneros em destaque</h3>
         </div>
-        <div class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in genreList" :key='index'>
-          <p @click="search('cidade',item)">
+        <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in genreList" :key='index'>
+          <p>
             <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
               <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
             </div>
-            <span class="genre" v-if="">{{ item.genreName }}</span>
+            <span class="genre">{{ item.genreName }}</span>
           </p>
         </div>
-        <div class="col-6 col-sm-2 card__container  card__see-more">
-          <p @click="search('cidade',item.ds_nome_teatro)">
+        <div @click="goto('genre','+')" class="col-6 col-sm-2 card__container  card__see-more" v-if="false">
+          <p>
             <div alt="image" class="img-fluid rounded card__home">
             </div>
             <span class="genre">Ver mais</span>
@@ -114,8 +114,8 @@
         <div class="col-12 col-sm-12 text-left">
           <h3>Locais em destaque</h3>
         </div>
-        <div class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in localsList" :key='index'>
-          <p @click="search('cidade',item.ds_nome_teatro)">
+        <div @click="goto('local',item.ds_nome_teatro)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in localsList" :key='index'>
+          <p>
             <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
               <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
             </div>
@@ -123,8 +123,8 @@
           </p>
         </div>
 
-        <div class="col-6 col-sm-2 card__container  card__see-more">
-          <p @click="search('cidade',item.ds_nome_teatro)">
+        <div @click="goto('local','+')" class="col-6 col-sm-2 card__container  card__see-more" v-if="false">
+          <p>
             <div alt="image" class="img-fluid rounded card__home">
             </div>
             <span class="genre">Ver mais</span>
@@ -139,8 +139,8 @@
         <div class="col-12 col-sm-12 text-left">
           <h3>Cidades em destaque</h3>
         </div>
-        <div class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in cityList" :key='index'>
-          <p @click="search('cidade',item.ds_municipio)">
+        <div @click="goto('city',item.ds_municipio)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in cityList" :key='index'>
+          <p>
             <div class="img-fluid rounded card__home" :class="['card__home-' + index]">
               <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
             </div>
@@ -148,8 +148,8 @@
           </p>
         </div>
 
-        <div class="col-6 col-sm-2 card__container card__see-more">
-          <p @click="search('cidade',item.ds_nome_teatro)">
+        <div @click="goto('city','+')" class="col-6 col-sm-2 card__container card__see-more" v-if="false">
+          <p>
             <div alt="image" class="img-fluid rounded card__home">
             </div>
             <span class="genre">Ver mais</span>
@@ -166,7 +166,7 @@
           <h3 class="font-weight-bold">Eventos</h3>
         </div>
 
-        <div class="col-sm-3 pb-4 text-left" v-for="(item, index) in slideData" :key='index' @click="goto(item)">
+        <div class="col-sm-3 pb-4 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
           <div class="fdb-box p-0">
             <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
@@ -254,11 +254,31 @@ export default {
         //this.$refs.slick.reSlick();
       });
     },
-    goto(item) {
-      this.$router.push(item.uri);
-    },
     search(type, item) {
       this.$router.push('/busca/' + type + '/' + item);
+    },
+    goto(type, item) {
+      if (item.notselectable != undefined && item.notselectable == 1) return;
+
+      let where = item.type != undefined ? item.type : type;
+
+      switch (where) {
+        case "local":
+          this.$router.push("/busca/local/" + item);
+        break;
+        case "genre":
+          this.$router.push("/busca/genero/" + item);
+        break;
+        case "city":
+          this.$router.push("/busca/cidade/" + item);
+        break;
+        case "state":
+          this.$router.push("/busca/estado/" + item);
+        break;
+        case "event":
+          this.$router.push(item.uri);
+        break;
+      }
     },
     getListResultAgain() {
       eventService.list(this.locale.city.name, this.locale.state.name).then(
