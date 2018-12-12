@@ -6,7 +6,7 @@
     <header class="bg-dark" data-block-type="headers" data-id="2">
       <div class="container">
         <nav class="navbar navbar-expand-md no-gutters">
-          <div class="header__logo col-2 text-left" v-if="$route.path==='/' || $route.path.includes('/busca') ||$route.path.includes('/sac')  ? false : true">
+          <div class="header__logo col-2 text-left" >
             <router-link to="/">
               <div class="img"></div>
             </router-link>
@@ -541,5 +541,6 @@ export default {
 .header__logo .img {
   height: 50px;
   width: 100%;
+  background-position: left center;
 }
 </style>
