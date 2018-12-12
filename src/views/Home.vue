@@ -1,5 +1,5 @@
 <template>
-    <app-slider v-if="!itau"></app-slider>
+    <app-slider v-if="itau"></app-slider>
     <ticket-hub-events v-else></ticket-hub-events>
 </template>
 
@@ -69,6 +69,7 @@ export default {
   },
   data() {
     return { 
+      itau: false,
       metaObj: this.metatag_getObj(),
     };
   },

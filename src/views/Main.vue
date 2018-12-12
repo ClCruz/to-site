@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid" v-if="!itau">
+<div class="container-fluid" v-if="itau">
   <section class="main main__itau" v-if="$route.path.includes('/itau')">
     <app-header :key="idappheader" v-if="!isTicketOffice"></app-header>
     <div style="">

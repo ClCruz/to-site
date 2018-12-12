@@ -1,216 +1,189 @@
 <template>
-  <div class="a">
-    <section class="fdb-block fdb-viewport bg-dark bg__purple" style="" data-block-type="call_to_action" data-id="2">
-      <div class="container justify-content-center align-items-center d-flex p-5">
-        <div class="col-10 justify-content-center text-center">
-          <div class="d-none d-sm-block" style="">
-            <h2>O quê deseja encontrar ?</h2>
-          </div>
-          <div class="d-none d-sm-block input-group mt-4 mb-4 p-3 w-100">
-            <app-search></app-search>
-          </div>
-          <div class="mr-0 ml-0 mt-4 mb-0 p-0 w-100 justify-content-center row">
-            <div class="col-12 col-sm-2" v-for="(item, index) in nextEvents" :key='index'>
-              <p class="next__events  p-2" @click="goto(item)">
-                {{item.ds_evento}}
-              </p>
-            </div>
+<div class="a">
+  <section class="fdb-block fdb-viewport bg-dark bg__purple" style="" data-block-type="call_to_action" data-id="2">
+    <div class="container justify-content-center align-items-center d-flex p-5">
+      <div class="col-10 justify-content-center text-center">
+        <div class="d-none d-sm-block" style="">
+          <h2>O quê deseja encontrar ?</h2>
+        </div>
+        <div class="d-none d-sm-block input-group mt-4 mb-4 p-3 w-100">
+          <app-search></app-search>
+        </div>
+        <div class="mr-0 ml-0 mt-4 mb-0 p-0 w-100 justify-content-center row">
+          <div class="col-12 col-sm-2" v-for="(item, index) in nextEvents" :key='index'>
+            <p class="next__events  p-2" @click="goto(item)">
+              {{item.ds_evento}}
+            </p>
           </div>
         </div>
       </div>
+    </div>
 
-    </section>
+  </section>
 
-    <section id="section__slider">
-      <div class="container pt-4">
-        <!-- swiper -->
-        <swiper :options="swiperOption">
+  <section id="section__slider">
+    <div class="container pt-4">
+      <!-- swiper -->
+      <swiper :options="swiperOption">
 
-          <swiper-slide>
-            <div class="item__slide">
-              <div class="row">
-                <div class="col-md-8  col-xs-12 nopadding">
-                  <a href="" target="_blank">
-                    <img src="https://images.pexels.com/photos/1117256/pexels-photo-1117256.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" style="width:100%;">
+        <swiper-slide>
+          <div class="item__slide">
+            <div class="row">
+              <div class="col-md-8  col-xs-12 nopadding">
+                <a href="" target="_blank">
+                    <img src="http://teatroitalia.com.br/wp-content/uploads/2015/03/natalcomasestrelas.jpg" alt="" style="width:100%;">
                   </a>
+              </div>
+              <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
+                <h3 class="">Natal com as Estrelas</h3>
+                <div class="">
+                  <div class="event-name pull-left">
+                    <div class="event-location-city">
+                      <i class="fa fa-map-marker color-grey"></i>
+                      Teatro Italia, SP </div>
+                  </div>
                 </div>
-                <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
-                  <h3 class="">Sundance Festival</h3>
-                  <div class="">
-                    <div class="event-name pull-left">
-                      <div class="event-location-city">
-                        <i class="fa fa-map-marker color-grey"></i>
-                        Arraial d'Ajuda, BA </div>
-                    </div>
-                  </div>
-                  <div class="button-event pt-4 w-100">
-                    <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="search('','')" type="button">Comprar ingressos</button>
+                <div class="button-event pt-4 w-100">
+                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="search('','')" type="button">Comprar ingressos</button>
 
-                  </div>
                 </div>
               </div>
             </div>
-          </swiper-slide>
-
-          <swiper-slide>
-            <div class="item__slide">
-              <div class="row">
-                <div class="col-md-8  col-xs-12 nopadding">
-                  <a href="" target="_blank">
-                    <img src="https://images.pexels.com/photos/954039/pexels-photo-954039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" style="width:100%;">
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="item__slide">
+            <div class="row">
+              <div class="col-md-8  col-xs-12 nopadding">
+                <a href="" target="_blank">
+                    <img src="http://teatroitalia.com.br/wp-content/uploads/2018/12/intersecoes.jpg" alt="" style="width:100%;">
                   </a>
-                </div>
-                <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
-                  <h3 class="">Sundance Festival</h3>
-                  <div class="">
-                    <div class="event-name pull-left">
-                      <div class="event-location-city">
-                        <i class="fa fa-map-marker color-grey"></i>
-                        Arraial d'Ajuda, BA </div>
-                    </div>
-                  </div>
-                  <div class="button-event pt-4 w-100">
-                    <button class="btn btn-sm btn-outline-dark w-50 mx-auto" @click="search('','')" type="button">Ver mais</button>
-
-                  </div>
-                </div>
               </div>
-            </div>
-          </swiper-slide>
-
-          <swiper-slide>
-            <div class="item__slide">
-              <div class="row">
-                <div class="col-md-8  col-xs-12 nopadding">
-                  <a href="" target="_blank">
-                    <img src="https://images.pexels.com/photos/904277/pexels-photo-904277.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" style="width:100%;">
-                  </a>
+              <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
+                <h3 class="">ZÉ MANOEL E DIOGO STRAUSZ</h3>
+                <div class="">
+                  <div class="event-name pull-left">
+                    <div class="event-location-city">
+                      <i class="fa fa-map-marker color-grey"></i>
+                      Teatro Italia, SP </div>
+                  </div>
                 </div>
-                <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
-                  <h3 class="">Sundance Festival</h3>
-                  <div class="">
-                    <div class="event-name pull-left">
-                      <div class="event-location-city">
-                        <i class="fa fa-map-marker color-grey"></i>
-                        Arraial d'Ajuda, BA </div>
-                    </div>
-                  </div>
-                  <div class="button-event pt-4 w-100">
-                    <button class="btn btn-sm btn-outline-dark w-50 mx-auto" @click="search('','')" type="button">Ver mais</button>
+                <div class="button-event pt-4 w-100">
+                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="search('','')" type="button">Comprar ingressos</button>
 
-                  </div>
                 </div>
               </div>
             </div>
-          </swiper-slide>
+          </div>
+        </swiper-slide>
 
-          <div class="swiper-pagination" slot="pagination"></div>
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
-        </swiper>
-      </div>
-    </section>
+        <div class="swiper-pagination" slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
+    </div>
+  </section>
 
-    <section class="features" data-block-type="features"  data-id="3">
-      <div class="container">
-        <div class="row text-left pt-3 pb-1">
-          <div class="col-12 col-sm-12 text-left">
-            <h3>Gêneros em destaque</h3>
-          </div>
-          <div class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in genreList" :key='index'>
-            <p @click="search('cidade',item)">
-              <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-                <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
-              </div>
-              <span class="genre" v-if="">{{ item.genreName }}</span>
-            </p>
-          </div>
-  <div class="col-6 col-sm-2 card__container  card__see-more">
-            <p @click="search('cidade',item.ds_nome_teatro)">
-              <div alt="image" class="img-fluid rounded card__home">
-              </div>
-              <span class="genre">Ver mais</span>
-            </p>
-          </div>
+  <section class="features" data-block-type="features" data-id="3">
+    <div class="container">
+      <div class="row text-left pt-3 pb-1">
+        <div class="col-12 col-sm-12 text-left">
+          <h3>Gêneros em destaque</h3>
+        </div>
+        <div class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in genreList" :key='index'>
+          <p @click="search('cidade',item)">
+            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
+              <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
+            </div>
+            <span class="genre" v-if="">{{ item.genreName }}</span>
+          </p>
+        </div>
+        <div class="col-6 col-sm-2 card__container  card__see-more">
+          <p @click="search('cidade',item.ds_nome_teatro)">
+            <div alt="image" class="img-fluid rounded card__home">
+            </div>
+            <span class="genre">Ver mais</span>
+          </p>
         </div>
       </div>
-    </section>
-    <section class="features" data-block-type="features"  data-id="3">
-      <div class="container">
-        <div class="row text-left pt-3 pb-1">
-          <div class="col-12 col-sm-12 text-left">
-            <h3>Locais em destaque</h3>
-          </div>
-          <div class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in localsList" :key='index'>
-            <p @click="search('cidade',item.ds_nome_teatro)">
-              <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-                <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
-              </div>
-              <span class="genre">{{ item.ds_nome_teatro }}</span>
-            </p>
-          </div>
+    </div>
+  </section>
+  <section class="features" data-block-type="features" data-id="3">
+    <div class="container">
+      <div class="row text-left pt-3 pb-1">
+        <div class="col-12 col-sm-12 text-left">
+          <h3>Locais em destaque</h3>
+        </div>
+        <div class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in localsList" :key='index'>
+          <p @click="search('cidade',item.ds_nome_teatro)">
+            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
+              <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
+            </div>
+            <span class="genre">{{ item.ds_nome_teatro }}</span>
+          </p>
+        </div>
 
-          <div class="col-6 col-sm-2 card__container  card__see-more">
-            <p @click="search('cidade',item.ds_nome_teatro)">
-              <div alt="image" class="img-fluid rounded card__home">
-              </div>
-              <span class="genre">Ver mais</span>
-            </p>
-          </div>
+        <div class="col-6 col-sm-2 card__container  card__see-more">
+          <p @click="search('cidade',item.ds_nome_teatro)">
+            <div alt="image" class="img-fluid rounded card__home">
+            </div>
+            <span class="genre">Ver mais</span>
+          </p>
         </div>
       </div>
-    </section>
-    <section class="features" data-block-type="features"  data-id="3">
-      <div class="container">
-        <div class="row text-left pt-3 pb-5">
-          <div class="col-12 col-sm-12 text-left">
-            <h3>Cidades em destaque</h3>
-          </div>
-          <div class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in cityList" :key='index'>
-            <p @click="search('cidade',item.ds_municipio)">
-              <div class="img-fluid rounded card__home" :class="['card__home-' + index]">
-                <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
-              </div>
-              <span class="genre">{{ item.ds_municipio }}</span>
-            </p>
-          </div>
-
-            <div class="col-6 col-sm-2 card__container card__see-more">
-            <p @click="search('cidade',item.ds_nome_teatro)">
-              <div alt="image" class="img-fluid rounded card__home">
-              </div>
-              <span class="genre">Ver mais</span>
-            </p>
-          </div>
-
+    </div>
+  </section>
+  <section class="features" data-block-type="features" data-id="3">
+    <div class="container">
+      <div class="row text-left pt-3 pb-5">
+        <div class="col-12 col-sm-12 text-left">
+          <h3>Cidades em destaque</h3>
         </div>
+        <div class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in cityList" :key='index'>
+          <p @click="search('cidade',item.ds_municipio)">
+            <div class="img-fluid rounded card__home" :class="['card__home-' + index]">
+              <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
+            </div>
+            <span class="genre">{{ item.ds_municipio }}</span>
+          </p>
+        </div>
+
+        <div class="col-6 col-sm-2 card__container card__see-more">
+          <p @click="search('cidade',item.ds_nome_teatro)">
+            <div alt="image" class="img-fluid rounded card__home">
+            </div>
+            <span class="genre">Ver mais</span>
+          </p>
+        </div>
+
       </div>
-    </section>
-    <section class="fdb-block team-1">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 text-left mt-2 mb-4">
-            <h3 class="font-weight-bold">Eventos</h3>
-          </div>
+    </div>
+  </section>
+  <section class="fdb-block team-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 text-left mt-2 mb-4">
+          <h3 class="font-weight-bold">Eventos</h3>
+        </div>
 
-          <div class="col-sm-3 pb-4 text-left" v-for="(item, index) in slideData" :key='index' @click="goto(item)">
-            <div class="fdb-box p-0">
-              <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="height: 200px; background-size: cover;"></div>
+        <div class="col-sm-3 pb-4 text-left" v-for="(item, index) in slideData" :key='index' @click="goto(item)">
+          <div class="fdb-box p-0">
+            <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
-              <div class="content p-1">
-                <h4>
-                  <strong>{{ item.ds_evento }}</strong>
-                </h4>
-                <p class="p-0 m-0 h-200">{{ item.ds_nome_teatro }} </p>
-                <p class="p-0 m-0 h-200 fa-xs "> {{ item.ds_municipio }}, {{ item.sg_estado }}</p>
-              </div>
+            <div class="content p-1">
+              <h4>
+                <strong>{{ item.ds_evento }}</strong>
+              </h4>
+              <p class="p-0 m-0 h-200">{{ item.ds_nome_teatro }} </p>
+              <p class="p-0 m-0 h-200 fa-xs "> {{ item.ds_municipio }}, {{ item.sg_estado }}</p>
             </div>
           </div>
-
         </div>
+
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+</div>
 </template>
 
 <script>
@@ -239,22 +212,22 @@ export default {
       nextEvents: [],
 
       swiperOption: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          autoplay: true,
-          speed: 2000,
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev'
-          },
-          autoplay: {
-            delay: 5000
-          },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: true,
+        speed: 900,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+          delay: 5000
+        },
         breakpoints: {}
       }
 
@@ -375,7 +348,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .fdb-box {
   cursor: pointer;
 }
@@ -856,17 +829,23 @@ svg:not(:root).svg-inline--fa {
   padding-top: 0 !important;
 }
 
+
 .fdb-block .fdb-box {
   height: 100%;
   transition: 0.5s;
-  
 
-h4 {
-  font-size: 0.8rem;
-  padding-top: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
+  .img-fluid {
+    height: 170px;
+    background-position: center;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   &:hover {
     transform: translateY(-2px);
   }
@@ -898,14 +877,16 @@ h4 {
   border-radius: 10px;
   background: #f8f8f8;
   box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.12) !important;
-    width: 97%;
-    margin: 0 auto;
+  width: 97%;
+  margin: 0 auto;
+
   img {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  max-height: 350px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    max-height: 350px;
 
   }
+
   h3 {
     font-size: 2rem;
   }
@@ -1001,37 +982,41 @@ input::-webkit-input-placeholder {
   color: #333;
 }
 
+.swiper-container {}
 
-.swiper-container {
-
-}
 .swiper-wrapper {
-  float: left!important;
+  float: left !important;
   padding-bottom: 3ex;
-  padding-left: 1px;  
+  padding-left: 1px;
   -webkit-transition-timing-function: linear !important;
   -o-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
 }
-.swiper-button-prev, .swiper-button-next {
-    right: 0;
-    background-color: transparent;
-    transition: 0.5s;
-    &:focus {
-      outline: none;
-    }
 
-    img {
-      height: 40px;
-      transition: 0.4s;
-      &:hover {
-        opacity: 0.9;
-      }
+.swiper-button-prev,
+.swiper-button-next {
+  right: 0;
+  background-color: transparent;
+  transition: 0.5s;
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    height: 40px;
+    transition: 0.4s;
+
+    &:hover {
+      opacity: 0.9;
     }
+  }
 }
 
-.swiper-button-prev, .swiper-container-rtl, .swiper-button-next {
-  background-image: none!important;
+.swiper-button-prev,
+.swiper-container-rtl,
+.swiper-button-next {
+  background-image: none !important;
 }
 
 .swiper-button-next {
@@ -1041,43 +1026,45 @@ input::-webkit-input-placeholder {
       transform: translateX(3px);
       opacity: 0.7;
     }
+
     &:hover {
       transform: translateX(2px);
-      }
     }
+  }
 }
 
 .swiper-button-prev {
-  
+
   img {
     &:focus {
       transform: translateX(-2px);
       opacity: 0.7;
     }
+
     &:hover {
       transform: translateX(-2px);
-      }
     }
+  }
 }
+
 .swiper-button-disabled {
   display: none;
 }
 
 .swiper-pagination-bullet {
-  margin: -10px 8px!important;
-  height: 10px!important;
-  width: 10px!important;
+  margin: -10px 8px !important;
+  height: 10px !important;
+  width: 10px !important;
 
-  &:hover {
-  }
+  &:hover {}
 }
- 
+
 .swiper-pagination-bullet-active {
   background: #444;
 }
 
 .fdb-viewport {
-  padding-bottom: 150px!important;
+  padding-bottom: 150px !important;
 }
 
 #section__slider {
@@ -1086,19 +1073,20 @@ input::-webkit-input-placeholder {
 
 .card__see-more {
   .card__home {
-  background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/blue.svg');
-filter: grayscale(5);
+    background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/blue.svg');
+    filter: grayscale(5);
   }
 
 }
 
 h3 {
   font-size: 1.8rem;
-    font-weight: 18px;
+  font-weight: 18px;
 
 }
 
 body {
   background: #f8f8f8;
 }
+
 </style>

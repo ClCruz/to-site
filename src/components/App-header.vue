@@ -11,7 +11,6 @@
           <router-link to="/">
             <div class="img"></div>
                         <img src="" class="hidden" alt="Home">
-
           </router-link>
         </div>
       </div>

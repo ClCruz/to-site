@@ -6,10 +6,10 @@
     <header class="bg-dark" data-block-type="headers" data-id="2">
       <div class="container">
         <nav class="navbar navbar-expand-md no-gutters">
-          <div class="col-2 text-left">
-            <a href="MENU_-_TIXS.ME">
-            <img src="https://www.tixs.me/assets/tixs%20(1).png" height="30" alt="image">
-          </a>
+          <div class="header__logo col-2 text-left" v-if="$route.path==='/' || $route.path.includes('/busca') ||$route.path.includes('/sac')  ? false : true">
+            <router-link to="/">
+              <div class="img"></div>
+            </router-link>
           </div>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav12" aria-controls="navbarNav12"
@@ -528,5 +528,18 @@ export default {
     top: 15px;
     right: 35px;
   }
+}
+
+.content__show {
+  background-color: #dedede;
+}
+
+.btn-secundary {
+  border-color: transparent;
+}
+
+.header__logo .img {
+  height: 50px;
+  width: 100%;
 }
 </style>

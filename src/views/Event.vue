@@ -1,7 +1,21 @@
 <template>
-<div class="content__show">
+<div>
+  <section class="fdb-block fdb-viewport bg-dark bg__purple" style="" data-block-type="call_to_action" data-id="2" v-if="isNewTemplate">
+    <div class="container justify-content-center align-items-center d-flex p-5">
+      <div class="col-10 justify-content-center text-center">
+        <div class="d-none d-sm-block" style="">
+          <h2>Deseja encontrar outro evento ?</h2>
+        </div>
+        <div class="d-none d-sm-block input-group mt-4 mb-2 p-1 w-100">
+          <app-search></app-search>
+        </div>
+      </div>
+    </div>
+
+  </section>
+<div class="content__show" :class="{ containerNew: isNewTemplate}">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" :class="{ container: isNewTemplate}">
       <div class="row">
         <div class="col-md-12" style="">
 
@@ -60,12 +74,12 @@
                 <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
             </div>
             <div class="result__button-group" v-else>
-              <b-dropdown id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
-                <b-dropdown-item-button v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
+              <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
+                <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
               </b-dropdown>
-              <b-dropdown id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
-                <b-dropdown-item-button @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as salas'})">Todas as salas</b-dropdown-item-button>
-                <b-dropdown-item-button v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
+              <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
+                <b-dropdown-item-button style="border-color: transparent!important" :variant="btn-dark" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as salas'})">Todas as salas</b-dropdown-item-button>
+                <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
               </b-dropdown>
             </div>
           </div>
@@ -103,6 +117,7 @@
     </div>
   </div>
 </div>
+</div>
 </template>
 
 <script>
@@ -114,6 +129,7 @@ import { func } from '@/functions';
 import EventTimeLoader from '@/components/loaders/EventTimeLoader.vue';
 import EventRoomLoader from '@/components/loaders/EventRoomLoader.vue';
 import EventImageLoader from '@/components/loaders/EventImageLoader.vue';
+import AppSearch from "@/components/App-search.vue";
 
 import {
   eventService
@@ -137,7 +153,8 @@ export default {
     components: {
     EventTimeLoader,
     EventRoomLoader,
-    EventImageLoader    
+    EventImageLoader,
+    AppSearch    
   },
   head: {
     title: function () {
@@ -183,6 +200,7 @@ export default {
       processing: true,
       filterBy: 0,
       filterByDate: '',
+      isNewTemplate: true,
       filterByRoom: 'Todas as salas',
       metaObj: this.metatag_getObj(),
       event: {
@@ -504,5 +522,23 @@ export default {
   color: #fff;
   text-decoration: none;
   background-color: #1d2124;
+}
+
+
+.content__description .event__card {
+  max-height: 56vh!important;
+}
+
+.time__card {
+  max-height: 73vh!important;
+}
+
+.containerNew {
+  margin-bottom: 100px;
+  margin-top: -150px;
+}
+
+.btn-secondary {
+  border-color: 0px solid black!important;
 }
 </style>

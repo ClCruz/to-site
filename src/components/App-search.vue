@@ -53,7 +53,7 @@ export default {
     keyup(event) {
       switch (event.key) {
         case "Enter":
-          this.searchQuery = document.getElementsByClassName("inputautocomplete")[0].value;
+          this.searchQuery = document.getElementsByClassName("inputautocomplete")[1].value;
 
           Vue.nextTick().then(response => {
             this.onSubmit(event);

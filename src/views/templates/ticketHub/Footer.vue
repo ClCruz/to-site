@@ -1,11 +1,8 @@
 <template>
-<footer class="fdb-block footer-large bg-dark fp-active" data-block-type="footers" data-id="4">
+<footer class="fdb-block footer-large bg-dark fp-active mt-5 pt-5" data-block-type="footers" data-id="4">
     <div class="container">
       <div class="row align-items-top text-center text-md-left">
         <div class="col-12 col-sm-6 col-md-4" style="z-index: 10000;">
-          <h3>
-            <strong>Country A</strong>
-          </h3>
           <p>Street Address 52
             <br>Contact Name</p>
           <p>+44 827 312 5002</p>
@@ -15,9 +12,6 @@
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 mt-4 mt-sm-0" style="z-index: 10000;">
-          <h3>
-            <strong>Country B</strong>
-          </h3>
           <p>Street Address 100
             <br>Contact Name</p>
           <p>+13 827 312 5002</p>
@@ -27,9 +21,6 @@
         </div>
 
         <div class="col-12 col-md-4 mt-5 mt-md-0 text-md-left" style="z-index: 10000;">
-          <h3>
-            <strong>About Us</strong>
-          </h3>
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         </div>
       </div>
