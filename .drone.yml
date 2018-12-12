@@ -13,7 +13,8 @@ steps:
   - cd dist
   - rsync -vr /tmp/host/teste/site/ /tmp/host/bk/site
   - rsync -vrR --exclude='.git' * /tmp/host/teste/site
-  - chmod -R 777 /tmp/host/legacy/site
+  - rsync -vrR --exclude='.git' .htaccess /tmp/host/teste/site
+  - chmod -R 777 /tmp/host/teste/site
   
 volumes:
 - name: wl
