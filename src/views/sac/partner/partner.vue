@@ -1,26 +1,72 @@
 <template>
-<div class="content">
-  <div class="row">
-    <Logo></Logo>
-    <div class="col-12 col-md-10 content__show">
-      <div class="row">
-        <!-- SAC Index -->
-        <sacInfo></sacInfo>
+<div>
+  <div class="content" v-if="!newTemplate">
+    <div class="row">
+      <Logo></Logo>
+      <div class="col-12 col-md-10 content__show">
+        <div class="row">
+          <!-- SAC Index -->
+          <sacInfo></sacInfo>
 
-        <!-- Show SAC content -->
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-12">
+          <!-- Show SAC content -->
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
 
-              <div class="content__description">
-                <div class="card event__card sac__card">
+                <div class="content__description">
+                  <div class="card event__card sac__card">
                   <h3 class="title__page">Seja nosso parceiro</h3>
                   <p>
                   Caso você tenha interesse em fazer novos negócios com a  {{siteName}}, por favor preencha
 todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
 Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
 equipe retornará o contato em até 4 dias úteis.
-                  </p>
+</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content" v-else>
+      <section class="fdb-block fdb-viewport bg-dark bg__purple" style="" data-block-type="call_to_action" data-id="2" v-if="newTemplate">
+    <div class="container justify-content-center align-items-center d-flex p-5">
+      <div class="col-10 justify-content-center text-center">
+        <div class="d-none d-sm-block" style="">
+          <h2>Deseja encontrar outro evento ?</h2>
+        </div>
+        <div class="d-none d-sm-block input-group mt-4 mb-2 p-1 w-100">
+          <app-search></app-search>
+        </div>
+      </div>
+    </div>
+
+  </section>
+    <div class="container container__sac">
+      <div class="">
+        
+        <div class="row">
+          <!-- SAC Index -->
+          <sacInfo></sacInfo>
+
+          <!-- Show SAC content -->
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+
+                <div class="content__description">
+                  <div class="card event__card sac__card">
+                  <h3 class="title__page">Seja nosso parceiro</h3>
+                  <p>
+                  Caso você tenha interesse em fazer novos negócios com a  {{siteName}}, por favor preencha
+todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
+Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
+equipe retornará o contato em até 4 dias úteis.
+</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -39,7 +85,7 @@ import VueHead from 'vue-head';
 import VueResource from "vue-resource";
 import Logo from "@/components/App-logo.vue";
 import SacInfo from "@/views/sac/sac-info.vue";
-
+import AppSearch from "@/components/App-search.vue";
 import config from "@/config";
 import {
   func
@@ -55,7 +101,8 @@ export default {
   mixins: [func],
   components: {
     Logo,
-    SacInfo
+    SacInfo,
+    AppSearch
   },
   head: {
     title: function () {
@@ -166,8 +213,9 @@ export default {
   },
   data() {
     return {
+      newTemplate: true,
       metaObj: this.metatag_getObj(),
-      siteName: config.info.siteName,    
+      siteName: config.info.siteName,
     };
   },
   mounted() {
@@ -203,5 +251,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+  .container__sac {
+    margin-top: -150px;
+    margin-bottom: 100px;
+  }
 </style>

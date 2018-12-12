@@ -1,6 +1,6 @@
 <template>
 <div>
-  <section class="fdb-block fdb-viewport bg-dark bg__purple" style="" data-block-type="call_to_action" data-id="2" v-if="isNewTemplate">
+  <section class="fdb-block fdb-viewport bg-dark bg__purple" style="" data-block-type="call_to_action" data-id="2" v-if="newTemplate">
     <div class="container justify-content-center align-items-center d-flex p-5">
       <div class="col-10 justify-content-center text-center">
         <div class="d-none d-sm-block" style="">
@@ -13,9 +13,9 @@
     </div>
 
   </section>
-<div class="content__show" :class="{ containerNew: isNewTemplate}">
+<div class="content__show" :class="{ containerNew: newTemplate}">
   <div class="row">
-    <div class="col-md-6" :class="{ container: isNewTemplate}">
+    <div class="col-md-6" :class="{ container: newTemplate}">
       <div class="row">
         <div class="col-md-12" style="">
 
@@ -200,7 +200,7 @@ export default {
       processing: true,
       filterBy: 0,
       filterByDate: '',
-      isNewTemplate: true,
+      newTemplate: true,
       filterByRoom: 'Todas as salas',
       metaObj: this.metatag_getObj(),
       event: {

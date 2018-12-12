@@ -1,20 +1,21 @@
 <template>
-<div class="content">
-  <div class="row">
-    <Logo></Logo>
-    <div class="col-12 col-md-10 content__show">
-      <div class="row">
-        <!-- SAC Index -->
-        <sacInfo></sacInfo>
+<div>
+  <div class="content" v-if="!newTemplate">
+    <div class="row">
+      <Logo></Logo>
+      <div class="col-12 col-md-10 content__show">
+        <div class="row">
+          <!-- SAC Index -->
+          <sacInfo></sacInfo>
 
-        <!-- Show SAC content -->
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-12">
+          <!-- Show SAC content -->
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
 
-              <div class="content__description">
-                <div class="card event__card sac__card">
-                  <h3 class="title__page">Política de Meia Entrada</h3>
+                <div class="content__description">
+                  <div class="card event__card sac__card">
+                <h3 class="title__page">Política de Meia Entrada</h3>
                  
 <p>
 Durante o segundo semestre de 2013 foram aprovadas as leis 12.852 e 12.933, que
@@ -49,6 +50,79 @@ Prestação Continuada da assistência Social ou documento emitido pelo Institut
 de Seguro Social (INSS). Quando a pessoa com deficiência precisar de acompanhante,
 este também terá direito ao ingresso com a metade do preço.
 </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content" v-else>
+      <section class="fdb-block fdb-viewport bg-dark bg__purple" style="" data-block-type="call_to_action" data-id="2" v-if="newTemplate">
+    <div class="container justify-content-center align-items-center d-flex p-5">
+      <div class="col-10 justify-content-center text-center">
+        <div class="d-none d-sm-block" style="">
+          <h2>Deseja encontrar outro evento ?</h2>
+        </div>
+        <div class="d-none d-sm-block input-group mt-4 mb-2 p-1 w-100">
+          <app-search></app-search>
+        </div>
+      </div>
+    </div>
+
+  </section>
+    <div class="container container__sac">
+      <div class="">
+        
+        <div class="row">
+          <!-- SAC Index -->
+          <sacInfo></sacInfo>
+
+          <!-- Show SAC content -->
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+
+                <div class="content__description">
+                  <div class="card event__card sac__card">
+                <h3 class="title__page">Política de Meia Entrada</h3>
+                 
+<p>
+Durante o segundo semestre de 2013 foram aprovadas as leis 12.852 e 12.933, que
+regulam a meia-entrada no Brasil. São leis que tratam do direito ao estudante, idosos,
+jovens de baixa renda e deficientes de pagar metade do valor em shows, filmes, peças de
+teatro, e qualquer evento de natureza cultural ou esportiva.
+Segundo o texto, que regulamenta a lei aprovada em dezembro de 2013, o benefício
+prevê a reserva de pelo menos 40% dos ingressos de meia-entrada em espetáculos
+artísticos, culturais e esportivos.
+</p><p>
+Estudantes
+<br>
+A partir de agora, só serão aceitas carteiras estudantis emitidas pela União Nacional do
+Estudantes (UNE), União Brasileira dos Estudantes (Ubes), escolas estaduais e
+municipais filiadas às duas entidades, Diretórios Centrais dos Estudantes (DCEs) e
+instituições de ensino médio e superior. O objetivo é padronizar o documento, aumentar a
+fiscalização e evitar possíveis fraudes. Conter nome completo, data de nascimento, grau
+de escolaridade, foto atual, nome da instituição, matrícula ativa, data de validade ao dia
+31 de Março do ano subsequente ao de expedição.
+</p><p>
+JOVENS DE BAIXA RENDA
+<br>
+Os jovens de baixa renda também terão direito à meia-entrada com a apresentação da
+chamada Identidade Jovem, documento que será emitido pela Secretaria Nacional da
+Juventude.
+</p><p>
+IDOSOS OU NECESSIDADES ESPECIAIS
+<br>
+O texto concede às pessoas com 60 (sessenta) anos ou mais também o benefício da
+meia-entrada. Já as pessoas com deficiência, podem apresentar o cartão de Benefício de
+Prestação Continuada da assistência Social ou documento emitido pelo Instituto Nacional
+de Seguro Social (INSS). Quando a pessoa com deficiência precisar de acompanhante,
+este também terá direito ao ingresso com a metade do preço.
+</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -67,7 +141,7 @@ import VueHead from 'vue-head';
 import VueResource from "vue-resource";
 import Logo from "@/components/App-logo.vue";
 import SacInfo from "@/views/sac/sac-info.vue";
-
+import AppSearch from "@/components/App-search.vue";
 import config from "@/config";
 import {
   func
@@ -79,11 +153,12 @@ Vue.use(VueHead);
 Vue.use(VueResource);
 
 export default {
-  name: "policyDiscount",
+  name: "discount",
   mixins: [func],
   components: {
     Logo,
-    SacInfo
+    SacInfo,
+    AppSearch
   },
   head: {
     title: function () {
@@ -194,6 +269,7 @@ export default {
   },
   data() {
     return {
+      newTemplate: true,
       metaObj: this.metatag_getObj(),
       siteName: config.info.siteName,
     };
@@ -231,5 +307,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+  .container__sac {
+    margin-top: -150px;
+    margin-bottom: 100px;
+  }
 </style>
