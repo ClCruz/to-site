@@ -1,0 +1,26 @@
+kind: 
+name: site
+
+steps:
+- name: install
+  image: blcoccaro/linuxphpsql:v4
+  volumes:
+  - name: wl
+    path: /tmp/host
+  commands:
+  - npm run build
+  - cd dist
+  - rsync -vr /tmp/host/teste/site/ /tmp/host/bk/site
+  - rsync -vrR --exclude='.git' * /tmp/host/teste/site
+  - chmod -R 777 /tmp/host/legacy/site
+  
+volumes:
+- name: wl
+  host:
+    path: /var/www/unique
+
+trigger:
+  branch:
+  - master
+  event:
+  - push
