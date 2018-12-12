@@ -3,7 +3,7 @@ name: site
 
 steps:
 - name: install
-  image: blcoccaro/linuxphpsql:v4
+  image: blcoccaro/to-deploy:v1
   volumes:
   - name: wl
     path: /tmp/host
