@@ -1,0 +1,153 @@
+
+.first-slider,
+.second-slider,
+.third-slider {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 1400px) {}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+
+  position: absolute;
+  top: 50%;
+
+  display: block;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+  cursor: pointer;
+
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'FontAwesome';
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1;
+
+  opacity: .75;
+  color: black;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: opacity 0.25s;
+}
+
+.slick-prev {
+  left: 0;
+  z-index: 1;
+}
+
+.swiper-container {
+  z-index: 0!important;
+}
+
+[dir='rtl'] .slick-prev {
+  right: 0;
+  left: auto;
+}
+
+.slick-prev:before {
+  content: url('/assets/icons/arrow-right-circle.svg');
+}
+
+[dir='rtl'] .slick-prev:before {
+  content: '\f105';
+}
+
+.slick-next {
+  right: 0;
+}
+
+[dir='rtl'] .slick-next {
+  right: auto;
+  left: 0;
+}
+
+.slick-next:before {
+  content: '\f105';
+}
+
+[dir='rtl'] .slick-next:before {
+  content: url('/assets/icons/arrow-right-circle.svg');
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+[dir='rtl'] .slick-prev:before
+{
+    content: '\2192'!important;
+}
+
+.slick-next:before
+{
+    content: url('/assets/icons/arrow-right-circle.svg')!important;
+}
+
+.swiper-slide {
+
+  @include MQ(S) {
+  }
+}
+
+
+.swiper-slide {
+ 
+ @include MQ(S) {
+  //  display: flex;
+  //  justify-self: center;
+  //  justify-content: center;
+  //  width: 90%;
+  // width: auto!important;
+ }
+}
+
+.container__carousel {
+  @include MQ(S) {
+    padding: 10px;
+  }
+}
+
+.swiper-container {
+  padding-bottom: 5px!important;
+}

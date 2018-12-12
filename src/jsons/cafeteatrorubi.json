@@ -1,0 +1,44 @@
+{
+  "env": "production",
+  "host": "cafeteatrorubi.tk",
+  "uri": "https://www.cafeteatrorubi.tk",
+  "api": "https://api.cafeteatrorubi.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.cafeteatrorubi.tk",
+  "apikey": "live_3ddd7486246a499daf8d169d154a14d833dfbe5594084ba397e9fa9f3c990bb5",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/cafeteatrorubi/main.scss",
+  "css": "/stylesheets/themes/cafeteatrorubi/main.css",
+  "logo": "https://media.tixs.me/logos/logo-cafeteatrorubi.png",
+  "favico": "/img/cafeteatrorubi/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,cafeteatrorubi,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "cafeteatrorubi.tk | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "cafeteatrorubi.tk",
+    "CNPJ": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_cafeteatrorubi/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_cafeteatrorubi/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_cafeteatrorubi/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_cafeteatrorubi/emailComprador.html",
+      "gift": "../comprar/templates/multi_cafeteatrorubi/emailPresente.html",
+      "signature": "../comprar/templates/multi_cafeteatrorubi/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_cafeteatrorubi/confirmacaoEmail.html"
+
+    }
+  }
+}

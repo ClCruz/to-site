@@ -1,0 +1,45 @@
+{
+  "env": "production",
+  "host": "bringressos.com.br",
+  "uri": "https://www.bringressos.com.br",
+  "api": "https://api.bringressos.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.bringressos.com.br",
+  "apikey": "live_578abaf329f84119bb7c1e55dfdc7e0f4f20e693cd2c4bc7a5bc0a0965fae322",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "template": "www.bringressos.com.br",
+  "css": "/stylesheets/themes/bringressos/main.css",
+  "logo": "https://media.tixs.me/logos/logo-bringressos.svg",
+  "favico": "/img/bringressos/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,bringressos,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "bringressos.com.br | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "BR INGRESSOS.com.br",
+    "CNPJ": "", 
+    "companyAddress": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_bringressos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_bringressos/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_bringressos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_bringressos/emailComprador.html",
+      "gift": "../comprar/templates/multi_bringressos/emailPresente.html",
+      "signature": "../comprar/templates/multi_bringressos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_bringressos/confirmacaoEmail.html"
+
+    }
+  }
+}

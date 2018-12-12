@@ -1,0 +1,76 @@
+.swal2-modal {
+	background-color: $black !important;
+	color: #fff;
+}
+
+.swal2-popup .swal2-file,
+.swal2-popup .swal2-input,
+.swal2-popup .swal2-textarea {
+	width: 80% !important;
+	font-size: 0.8em!important;
+}
+
+.swal2-popup #swal2-content {
+	color: #fff;
+}
+
+.swal2-progresscircle {
+	background: $gradiente !important;
+	opacity: 0.7;
+}
+
+.swal2-progresssteps .swal2-progressline {
+	background: $gradiente !important;
+	opacity: 0.5;
+}
+
+.swal2-activeprogressstep {
+  background: $gradiente !important;
+  opacity: 1;
+}
+
+.swal2-styled {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $gradiente !important;
+	border: none;
+	color: white;
+	transition: 0.5s;
+
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
+	}
+}
+
+.swal2-footer {
+	border: none;
+
+	a {
+		color: $secundary;
+	}
+}
+
+.alert__tixsme {
+  box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25)!important;
+}
+
+
+.swal2-popup .swal2-title {
+  color: white!important;
+}
+
+#swal-email1,
+#swal-email2,
+#swal-email3,
+#swal-email4,
+#swal-email5 {
+  margin: 5px;
+}
+
+#swal-email4 {
+  margin-top: 5px;
+}

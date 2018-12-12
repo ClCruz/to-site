@@ -1,0 +1,39 @@
+
+.footer {
+  text-align: right;
+  margin-top: 0px;
+
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+
+  ul,
+  li {
+    padding-left: 0;
+  }
+
+  @include MQ(S) {
+    margin-top: 20px;
+  }
+
+  .row {
+    @include MQ(S) {
+      margin: 0;
+    }
+  }
+}
+
+.footer__address {
+  color: white;
+  font-size: 9px;
+  align-self: center;
+}
+
+.footer__company,
+.footer__social {
+  color: white;
+  font-size: 10px;
+  align-self: center;
+}

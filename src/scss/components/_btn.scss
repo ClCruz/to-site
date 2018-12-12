@@ -1,0 +1,65 @@
+
+.btn__filter {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $gradiente();
+	border: none;
+	color: white;
+	transition: 0.5s;
+
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
+	}
+}
+
+#ddown-sm-split button {
+	font-size: 0.72rem;
+	margin-top: 5px;
+}
+
+.result__button-group {
+	padding-right: 14px;
+	padding-left: 24px;
+	text-transform: uppercase;
+
+	&:first-child() {
+		background-image: url(/assets/icons/calendar.svg);
+			background-repeat: no-repeat;
+			background-position:6px;
+			background-size: 12px;
+	}
+
+	.dropdown-item:hover, .dropdown-item:focus {
+		color: #16181b;
+		text-decoration: none;
+		background: #292929;
+		border: none;
+		outline: none;
+	}
+}
+
+.btn__datas {
+	
+}
+
+#ddown-sm-split__BV_button_,
+#ddown-sm-split__BV_toggle_ {
+	background-color: $secundary;
+}
+
+
+
+#ddown-sm-split .dropdown-menu {
+	background: #222;
+	color: #fff;
+	    max-height: 300px;
+    overflow: scroll;
+}
+#ddown-sm-split .dropdown-item {
+	color: #fff;
+	cursor: pointer;
+}

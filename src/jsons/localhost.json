@@ -1,0 +1,45 @@
+{
+  "env": "dev",
+  "host": "tixs.me",
+  "uri": "http://localhost:8080",
+  "api": "http://localhost:2002",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "http://localhost:2004",
+  "apikey": "live_185e1621cf994a99ba945fe9692d4bf6d66ef03a1fcc47af8ac909dbcea53fb5",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "template": "www.tixs.me",
+  "css": "/stylesheets/themes/tixsme/main.css",
+  "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
+  "favico": "/img/tixsme/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,tixs,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "tixsme | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "Tixs.ME",
+    "CNPJ": "15.150.423/0001-65",
+    "companyAddress": "Alameda Rio Negro, 503 - 6 andar - Alphaville, Barueri",
+    "companyName": "Empresa Brasileira de Comercialização de Ingressos"
+   },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_tixsme/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_tixsme/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_tixsme/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_tixsme/emailComprador.html",
+      "gift": "../comprar/templates/multi_tixsme/emailPresente.html",
+      "signature": "../comprar/templates/multi_tixsme/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_tixsme/confirmacaoEmail.html"
+
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "env": "production",
+  "host": "cultingressos.tixs.me",
+  "uri": "https://www.cultingressos.tixs.me",
+  "api": "https://api.cultingressos.tixs.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.cultingressos.tixs.me",
+  "apikey": "live_9ecd18599fd54d1f852dccc5599edbd0a6a593a0a97943c1aac0f2a7adb1f3de",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/www.cultingressos.tixs.me/main.scss",
+  "css": "/stylesheets/themes/www.cultingressos.tixs.me/main.css",
+  "logo": "https://media.tixs.me/logos/logo-cultingressos.png",
+  "favico": "/img/cultingressos/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,cultingressos,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "cultingressos.tixs.me | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "cultingressos.tixs.me",
+    "CNPJ": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_cultingressos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_cultingressos/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_cultingressos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_cultingressos/emailComprador.html",
+      "gift": "../comprar/templates/multi_cultingressos/emailPresente.html",
+      "signature": "../comprar/templates/multi_cultingressos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_cultingressos/confirmacaoEmail.html"
+
+    }
+  }
+}

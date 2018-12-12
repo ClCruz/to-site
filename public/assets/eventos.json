@@ -1,0 +1,259 @@
+[{
+  "id_evento": 2743,
+  "ds_evento": "DUDINHA E A GALINHA PINTADINHA TBF",
+  "ds_nome_teatro": "COTA DE INGRESSOS",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/2743\/card.jpg",
+  "image": "https://www.compreingressos.com/images/espetaculos/10094/miniatura.jpg?1522002320",
+  "uri": "\/evento\/dudinha_e_a_galinha_pintadinha_tbf",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 5325,
+  "ds_evento": "X TESTE X",
+  "ds_nome_teatro": "LIVRE",
+  "ds_municipio": "RIO DE JANEIRO",
+  "sg_estado": "RJ",
+  "img": "http:\/\/localhost:1003\/evento\/5325\/card.jpg",
+  "image": "https://www.compreingressos.com/images/espetaculos/10504/miniatura.jpg?1536607770",
+  "uri": "\/evento\/x_teste_x",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 5504,
+  "ds_evento": "COM\u00c9DIA AO VIVO",
+  "ds_nome_teatro": "TEATRO RENAISSANCE - Sao Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/5504\/card.jpg",
+  "uri": "\/evento\/comedia_ao_vivo",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 17961,
+  "ds_evento": "THE BEST OF EARTH, WIND & FIRE",
+  "ds_nome_teatro": "TEATRO UMC - S\u00e3o Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/17961\/card.jpg",
+  "image": "https://www.compreingressos.com/images/espetaculos/10495/miniatura.jpg?1536293404",
+  "uri": "\/evento\/the_best_of_earth_wind_fire",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 18804,
+  "ds_evento": "FALE MAIS SOBRE ISSO",
+  "ds_nome_teatro": "TEATRO RENAISSANCE - Sao Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/²11²2@",
+  "uri": "\/evento\/fale_mais_sobre_isso",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 18832,
+  "ds_evento": "ANTES S\u00d3 DO QUE MAL CASADO",
+  "ds_nome_teatro": "TEATRO RAPOSO SHOPPING - S\u00e3o Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/18832\/card.jpg",
+  "uri": "\/evento\/antes_so_do_que_mal_casado",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 19119,
+  "ds_evento": "OS MISER\u00c1VEIS",
+  "ds_nome_teatro": "TEATRO RAPOSO SHOPPING - S\u00e3o Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/19119\/card.jpg",
+  "uri": "\/evento\/os_miseraveis",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 20238,
+  "ds_evento": "A PRINCESA FEL\u00cdCIA",
+  "ds_nome_teatro": "TEATRO RAPOSO SHOPPING - S\u00e3o Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/20238\/card.jpg",
+  "uri": "\/evento\/a_princesa_felicia",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 20369,
+  "ds_evento": "QUEEN LIVE KIDS",
+  "ds_nome_teatro": "TEATRO UMC - S\u00e3o Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/20369\/card.jpg",
+  "uri": "\/evento\/queen_live_kids",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 20778,
+  "ds_evento": "O CIRCO DA PATRULHA - TBF",
+  "ds_nome_teatro": "COTA DE INGRESSOS",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/20778\/card.jpg",
+  "uri": "\/evento\/o_circo_da_patrulha_tbf",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 21501,
+  "ds_evento": "TESSTE",
+  "ds_nome_teatro": "LIVRE",
+  "ds_municipio": "RIO DE JANEIRO",
+  "sg_estado": "RJ",
+  "img": "http:\/\/localhost:1003\/evento\/21501\/card.jpg",
+  "uri": "\/evento\/tesste",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 21504,
+  "ds_evento": "3TESTE",
+  "ds_nome_teatro": "LIVRE",
+  "ds_municipio": "RIO DE JANEIRO",
+  "sg_estado": "RJ",
+  "img": "http:\/\/localhost:1003\/evento\/21504\/card.jpg",
+  "uri": "\/evento\/3teste",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 21804,
+  "ds_evento": "LEVANDO O CAOS",
+  "ds_nome_teatro": "TEATRO RENAISSANCE - Sao Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/21804\/card.jpg",
+  "uri": "\/evento\/levando_o_caos",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 22039,
+  "ds_evento": "HUMOR STAND UP COMEDY GUARULHOS\t\t\t",
+  "ds_nome_teatro": "COTA DE INGRESSOS",
+  "ds_municipio": "S\u00c3O CAETANO DO SUL",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/22039\/card.jpg",
+  "uri": "\/evento\/humor_stand_up_comedy_guarulhos",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 22486,
+  "ds_evento": "MISA CRIOLLA",
+  "ds_nome_teatro": "TEATRO UMC - S\u00e3o Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/22486\/card.jpg",
+  "uri": "\/evento\/misa_criolla",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 22493,
+  "ds_evento": "A PORTA DA FRENTE",
+  "ds_nome_teatro": "TEATRO RENAISSANCE - Sao Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/22493\/card.jpg",
+  "uri": "\/evento\/a_porta_da_frente",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 22497,
+  "ds_evento": "CARMEN MONARCHA-CARMEN CANTA CALLAS",
+  "ds_nome_teatro": "TEATRO ITALIA - Sao Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/22497\/card.jpg",
+  "uri": "\/evento\/carmen_monarchacarmen_canta_callas",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 22540,
+  "ds_evento": "O LOUCO E A CAMISA",
+  "ds_nome_teatro": "TEATRO RENAISSANCE - Sao Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/22540\/card.jpg",
+  "uri": "\/evento\/o_louco_e_a_camisa",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 22548,
+  "ds_evento": "D\u00d3RIS A MULHER DA TUPPERWARE",
+  "ds_nome_teatro": "TEATRO RENAISSANCE - Sao Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/22548\/card.jpg",
+  "uri": "\/evento\/doris_a_mulher_da_tupperware",
+  "flag": [
+"../assets/images/badge_ci.png",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg",
+    "https://www.konkero.com.br/revistawp/wp-content/uploads/2015/10/316x196-itaucard-mc-brasi-f-completo.jpg"
+  ]
+}, {
+  "id_evento": 22551,
+  "ds_evento": "PRONTOS PARA AMAR",
+  "ds_nome_teatro": "TEATRO ITALIA - Sao Paulo",
+  "ds_municipio": "S\u00c3O PAULO",
+  "sg_estado": "SP",
+  "img": "http:\/\/localhost:1003\/evento\/22551\/card.jpg",
+  "uri": "\/evento\/prontos_para_amar"
+}]

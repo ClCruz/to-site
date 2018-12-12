@@ -1,0 +1,205 @@
+
+body {
+	background-color: $border-color;
+	font-family: $font-family;
+	font-style: normal;
+	max-height: 99vh;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	max-width: 100vw;
+	@include MQ(S) {
+		overflow-y: scroll;
+	}
+}
+
+.container-fluid {
+	@include MQ(S) {
+		padding: 0;
+	}
+}
+
+
+.swiper-container {
+  z-index: 0;
+}
+
+.main {
+	position: relative;
+	@include box-shadow();
+	width: 94vw;
+	min-height: 88vh;
+	max-height: 88vh;
+	margin: 0 auto;
+	margin-top: 5vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	@include MQ(S) {
+		margin: 0;
+		width: 100vw;
+		max-width: 100vw;
+		min-height: unset;
+		max-height: unset;
+		overflow: hidden;
+		padding: 0;
+		padding-bottom: 20px;
+	}
+}
+
+.main__tixsme {
+	background: $gradiente;
+}
+
+.container__logo {
+	@include MQ(S) {
+		text-align: center;
+		display: none;
+	}
+
+	.logo {
+		width: 80%;
+		margin-left: 40px;
+		margin-top: 23vh;
+		@include MQ(S) {
+			margin-top: 0;
+			margin-left: 0;
+			margin: 0 auto;
+		}
+	}
+	.logo-img {
+		min-height: 100px;
+		min-width: 100px;
+		max-width: 80%;
+		background-image: url($logo);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right center;	
+	
+		@include MQ(S) {
+			width: 50px;
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+	}
+}
+
+.container__search {
+	@include MQ(S) {
+		padding: 20px;
+		max-height: none;
+	}
+}
+
+.container__carousel:first-of-type {
+	padding-top: 15px;
+}
+
+.container__carousel {
+	padding-top: 0px;
+	margin-left: 0px;
+}
+
+.container__cards {
+	margin-right: 7px;
+
+	.cards {
+		height: $height-card;
+		width: $width-card;
+
+		@include MQ(M) {
+		}
+		background: white;
+		-webkit-transition: 0.5s;
+		transition: 0.5s;
+		overflow: hidden;
+
+		&:hover {
+			width: $width-card;
+			height: $height-card;
+
+			
+		}
+  }
+  
+  .cards:hover {
+    @include MQ(M) {
+			}
+  }
+}
+
+
+.content__show {
+	margin-top: 50px;
+
+	.flag {
+		@include maxSize(50px, auto);
+		background: none;
+
+		img {
+			@include box-shadow();
+
+		background: #ffffff;
+		box-shadow: $box-shadow;
+			border-radius: 3px;
+			margin-right: 10px;
+			@include size(32px, auto);
+		}
+	}
+}
+
+.content__description {
+	.event__card {
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+}
+
+/* Turn on custom 8px wide scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+	/* 1px wider than Lion. */
+	/* This is more usable for users trying to click it. */
+	background-color: rgba(0, 0, 0, 0);
+	-webkit-border-radius: 100px;
+}
+
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+	background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+	/* This is the EXACT color of Mac OS scrollbars. 
+     Yes, I pulled out digital color meter */
+	background: rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 100px;
+	background-clip: padding-box;
+	border: 2px solid rgba(0, 0, 0, 0);
+	min-height: 10px;
+	/*Prevent it from getting too small */
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+	background: rgba(0, 0, 0, 0.61);
+	/* Some darker color when you click it */
+	-webkit-border-radius: 100px;
+}
+
+
+#aboveAll {
+	opacity: 0.5;
+	display: flex;
+	justify-content: center;
+	
+	img {
+		width: 40px;
+		height: 40px;
+		align-self: center;
+	}
+}
+
+.container__placeholder {
+	@include MQ(S) {width: 100%;
+	}
+}

@@ -1,0 +1,44 @@
+{
+  "env": "production",
+  "host": "teatroumc.tk",
+  "uri": "https://www.teatroumc.tk",
+  "api": "https://api.teatroumc.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.teatroumc.tk",
+  "apikey": "live_6f709463b3b84943a7c0b379067c6e108fa8df6ff0b44551aff7e71e65a32be0",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/www.teatroumc.tk/main.scss",
+  "css": "/stylesheets/themes/www.teatroumc.tk/main.css",
+  "logo": "https://media.tixs.me/logos/teatroumc.png",
+  "favico": "/img/teatroumc/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,teatroumc,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "teatroumc.tk | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "teatroumc.tk",
+    "CNPJ": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_teatroumc/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_teatroumc/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_teatroumc/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_teatroumc/emailComprador.html",
+      "gift": "../comprar/templates/multi_teatroumc/emailPresente.html",
+      "signature": "../comprar/templates/multi_teatroumc/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_teatroumc/confirmacaoEmail.html"
+
+    }
+  }
+}

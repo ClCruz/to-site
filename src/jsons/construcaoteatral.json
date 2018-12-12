@@ -1,0 +1,44 @@
+{
+  "env": "production",
+  "host": "construcaoteatral.tixs.me",
+  "uri": "https://www.construcaoteatral.tixs.me",
+  "api": "https://api.construcaoteatral.tixs.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.construcaoteatral.tixs.me",
+  "apikey": "live_fe6854cf54b74e568f58cc7c531f4ea7bc0f1afffb5f4400846152d735ceaa05",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/construcaoteatral/main.scss",
+  "css": "/stylesheets/themes/www.construcaoteatral.tixs.me/main.css",
+  "logo": "https://media.tixs.me/logos/logo-construcaoteatral.jpg",
+  "favico": "/img/construcaoteatral/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,construcaoteatral,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "construcaoteatral.tixs.me | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "construcaoteatral.tixs.me",
+    "CNPJ": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_construcaoteatral/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_construcaoteatral/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_construcaoteatral/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_construcaoteatral/emailComprador.html",
+      "gift": "../comprar/templates/multi_construcaoteatral/emailPresente.html",
+      "signature": "../comprar/templates/multi_construcaoteatral/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_construcaoteatral/confirmacaoEmail.html"
+
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "env": "production",
+  "host": "ciadeingressos.com",
+  "uri": "https://www.ciadeingressos.com",
+  "api": "https://api.ciadeingressos.com",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.ciadeingressos.com",
+  "apikey": "live_db039d6905d44d2689042e0a81fe30c200409f61fa6940c38fe807ad391b0400",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "template": "www.ciadeingressos.com",
+  "logo": "https://media.tixs.me/logos/logo-ciadeingressos.jpeg",
+  "favico": "/img/ciadeingressos/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,cia,ingressos,ciadeingressos,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "ciadeingressos.com | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "ciadeingressos.com",
+    "CNPJ": "",
+    "companyAddress": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_ciadeingressos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_ciadeingressos/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_ciadeingressos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_ciadeingressos/emailComprador.html",
+      "gift": "../comprar/templates/multi_ciadeingressos/emailPresente.html",
+      "signature": "../comprar/templates/multi_ciadeingressos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_ciadeingressos/confirmacaoEmail.html"
+
+    }
+  }
+}

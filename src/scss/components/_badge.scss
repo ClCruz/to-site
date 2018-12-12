@@ -1,0 +1,55 @@
+.event__badges {
+	font-size: 1rem;
+	padding-bottom: 20px;
+
+	a {
+		margin-right: 10px;
+		cursor: pointer!important;
+	}
+}
+
+
+.badge {
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	
+	&:hover {
+		-webkit-transform: translateY(-1px);
+		transform: translateY(-1px);
+	}
+}
+
+
+.badge__icon {
+	padding-left: 18px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	position: relative;
+	background-position: 4px;
+	background-size: 10px;
+}
+
+.badge__event {
+	background-image: url('/assets/icons/star.svg');
+}
+
+.badge__local {
+	background-image: url('/assets/icons/map-pin-white.svg');
+}
+
+.badge__city {
+	background-image: url('/assets/icons/map-white.svg');
+}
+
+.badge__state {
+	background-image: url('/assets/icons/home.svg');
+}
+
+.badge__genre {
+	background-image: url('/assets/icons/tag-white.svg');
+}
+
+.badge__money {
+	background-image: url('/assets/icons/dollar-sign-white.svg');
+	background-size: 12px;
+}

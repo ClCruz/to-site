@@ -1,0 +1,42 @@
+  
+  .bar_loading {
+    position: absolute;
+    height: 2px;
+    width: 500px;
+    margin: 0 auto;
+    background: #347fc3;
+    margin-top: 284px;
+    margin-left: 10%;
+    z-index:6001;
+  }
+  
+  .circle_loading {
+    position: absolute;
+    top: -30px;
+    margin-left: -30px;
+    height: 60px;
+    width: 60px;
+    left: 0;
+    background: #347fc3;
+    border-radius: 30%;
+    -webkit-animation: move 5s infinite;
+    z-index:6001;
+  }
+  
+  .p_loading {
+    position: absolute;
+    top: 28px;
+    right: -80px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: helvetica, sans-serif;
+    font-weight: bold;
+    z-index:6001;
+  }
+  
+  @-webkit-keyframes move {
+    0% {left: 0;}
+    50% {left: 100%; -webkit-transform: rotate(450deg); width: 120px; height: 120px;}
+    75% {left: 100%; -webkit-transform: rotate(450deg); width: 120px; height: 120px;}
+    100% {right: 100%;}
+  } 

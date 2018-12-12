@@ -1,0 +1,10 @@
+#pai {
+  background: $secundary!important;
+}
+
+$gradiente-bg: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%);
+$gradiente: $primary;
+
+.main__tixsme {
+  background: $gradiente-bg;
+}
