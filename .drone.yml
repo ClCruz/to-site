@@ -3,7 +3,7 @@ name: site
 
 steps:
 - name: install
-  image: blcoccaro/to-deploy:v1
+  image: blcoccaro/to-deploy:v2
   volumes:
   - name: wl
     path: /tmp/host
