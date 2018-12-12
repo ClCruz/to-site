@@ -8,6 +8,8 @@ steps:
   - name: wl
     path: /tmp/host
   commands:
+  - npm install
+  - npm install gulp 
   - npm run build
   - cd dist
   - rsync -vr /tmp/host/teste/site/ /tmp/host/bk/site
