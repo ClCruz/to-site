@@ -750,4 +750,22 @@ body {
   background: #f8f8f8;
 }
 
+
+.content__description .event__card {
+  max-height: 56vh !important;
+}
+
+.time__card {
+  max-height: 73vh !important;
+}
+
+.containerNew {
+  margin-bottom: 100px;
+  margin-top: -150px;
+}
+
+.btn-secondary {
+  border-color: 0px solid black !important;
+}
+
 }

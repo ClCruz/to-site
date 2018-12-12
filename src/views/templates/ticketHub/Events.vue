@@ -193,6 +193,7 @@ import {
   func
 } from '@/functions';
 import AppSearch from "@/components/App-search.vue";
+import config from '@/config';
 
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';

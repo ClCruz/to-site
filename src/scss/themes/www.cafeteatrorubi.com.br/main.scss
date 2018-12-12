@@ -2,7 +2,6 @@
 @import "../../main.scss";
 @import "override.scss";
 @import "../../ticketHub/main.scss";
-@import "../../ticketHub/main.scss";
 
 @if $tickethub == true {
 	@include froala;

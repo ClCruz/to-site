@@ -15,6 +15,7 @@ export const func = {
     data() {
         return {
             lsSecure: false,
+            isNewTemplate: config.info.newTemplate,
             waitCallers: [],
             locale: {
                 city: {

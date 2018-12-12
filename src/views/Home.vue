@@ -1,5 +1,5 @@
 <template>
-    <app-slider v-if="itau"></app-slider>
+    <app-slider v-if="isNewTemplate"></app-slider>
     <ticket-hub-events v-else></ticket-hub-events>
 </template>
 
