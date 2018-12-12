@@ -8,11 +8,6 @@ import VueWait from 'vue-wait';
 import vueAlert from 'vue-sweetalert2';
 import VueHead from 'vue-head';
 
-//navigator.serviceWorker.register("./registerServiceWorker").then(function (reg) {
-//  debugger;
-//  console.log(JSON.stringify(reg));
-//});
-//debugger;
 import './registerServiceWorker';
 
 //Vue.config.productionTip = false;

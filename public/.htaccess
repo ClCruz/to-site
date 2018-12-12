@@ -7,7 +7,6 @@
   RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
   RewriteRule ^$ http://192.168.81.22:2002/v1/home_metatag [P]
 
-  #RedirectMatch 404 \.json
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

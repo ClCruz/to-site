@@ -1,30 +1,27 @@
 /* eslint-disable no-console */
 
-import { register } from 'register-service-worker';
+//import { register } from 'register-service-worker';
 
-if (process.env.NODE_ENV === 'production') {
-  navigator.serviceWorker.register(`${process.env.BASE_URL}service-worker.js`).then(function (reg) {
-    console.log(JSON.stringify(reg));
-  });
-  /*register(`${process.env.BASE_URL}service-worker.js`, {
-    ready () {
-      console.log(
-        'App is being served from cache by a service worker.\n' +
-        'For more details, visit https://goo.gl/AFskqB'
-      )
-    },
-    cached () {
-      console.log('Content has been cached for offline use.')
-    },
-    updated () {
-      alert("atualiza3!!");
-      console.log('New content is available; please refresh.')
-    },
-    offline () {
-      console.log('No internet connection found. App is running in offline mode.')
-    },
-    error (error) {
-      console.error('Error during service worker registration:', error)
-    }
-  })*/
-}
+navigator.serviceWorker.register(`${process.env.BASE_URL}service-worker.js`)
+					.then(reg => {
+						reg.onupdatefound = () => {
+							const installingWorker = reg.installing;
+							installingWorker.onstatechange = () => {
+								switch (installingWorker.state) {
+									case 'installed':
+										if (navigator.serviceWorker.controller) {
+											// new update available
+                      //alert("new");
+                      reg.update();
+                      location.reload(true);
+										} else {
+											// no update available
+											//alert("notnew");
+										}
+										break;
+								}
+							};
+						};
+					})
+					.catch(err => console.error('[SW ERROR]', err));
+
