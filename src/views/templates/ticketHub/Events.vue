@@ -258,7 +258,6 @@ export default {
       this.$router.push('/busca/' + type + '/' + item);
     },
     goto(type, item) {
-      debugger;
       if (item.notselectable != undefined && item.notselectable == 1) return;
 
       let where = item.type != undefined ? item.type : type;
