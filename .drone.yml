@@ -11,10 +11,10 @@ steps:
   - npm install
   - npm run build
   - cd dist
-  - rsync -vr /tmp/host/teste/site/ /tmp/host/bk/site
-  - rsync -vrR --exclude='.git' * /tmp/host/teste/site
-  - rsync -vrR --exclude='.git' .htaccess /tmp/host/teste/site
-  - chmod -R 777 /tmp/host/teste/site
+  - rsync -vr /tmp/host/site/ /tmp/host/bk/site
+  - rsync -vrR --exclude='.git' * /tmp/host/site
+  - rsync -vrR --exclude='.git' .htaccess /tmp/teste/site
+  - chmod -R 777 /tmp/host/site
   
 volumes:
 - name: wl
