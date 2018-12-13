@@ -26,57 +26,32 @@
       <!-- swiper -->
       <swiper :options="swiperOption">
 
-        <swiper-slide>
+        <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
           <div class="item__slide">
             <div class="row">
               <div class="col-md-8  col-xs-12 nopadding">
                 <a href="" target="_blank">
-                    <img src="http://teatroitalia.com.br/wp-content/uploads/2015/03/natalcomasestrelas.jpg" alt="" style="width:100%;">
+                    <img :src="item.img" alt="" style="width:100%;">
                   </a>
               </div>
               <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
-                <h3 class="">Natal com as Estrelas</h3>
+                <h3 class="">{{item.ds_evento}}</h3>
                 <div class="">
                   <div class="event-name pull-left">
+                    <p> {{item.bannerDescription}} </p>
                     <div class="event-location-city">
                       <i class="fa fa-map-marker color-grey"></i>
-                      Teatro Italia, SP </div>
+                      {{item.ds_municipio}}, {{item.sg_estado}} </div>
                   </div>
                 </div>
                 <div class="button-event pt-4 w-100">
-                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: '/evento/natal_com_as_estrelas_teatro_italia_22700'})" type="button">Comprar ingressos</button>
+                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: item.uri})" type="button">Comprar ingressos</button>
 
                 </div>
               </div>
             </div>
           </div>
         </swiper-slide>
-        <swiper-slide>
-          <div class="item__slide">
-            <div class="row">
-              <div class="col-md-8  col-xs-12 nopadding">
-                <a href="" target="_blank">
-                    <img src="http://teatroitalia.com.br/wp-content/uploads/2018/12/intersecoes.jpg" alt="" style="width:100%;">
-                  </a>
-              </div>
-              <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
-                <h3 class="">ZÉ MANOEL E DIOGO STRAUSZ</h3>
-                <div class="">
-                  <div class="event-name pull-left">
-                    <div class="event-location-city">
-                      <i class="fa fa-map-marker color-grey"></i>
-                      Teatro Italia, SP </div>
-                  </div>
-                </div>
-                <div class="button-event pt-4 w-100">
-                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: '/evento/ze_manoel_e_diogo_strausz_teatro_italia_22698'})" type="button">Comprar ingressos</button>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-
         <div class="swiper-pagination" slot="pagination"></div>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
@@ -211,6 +186,7 @@ export default {
       localsList: [],
       genreList: [],
       nextEvents: [],
+      bannerEvents: [],
 
       swiperOption: {
         slidesPerView: 1,
@@ -315,6 +291,17 @@ export default {
     getNextEvents() {
       this.nextEvents = this.slideData.slice(1, 5);
     },
+    getBanner() {
+      eventService.banner(this.locale.city.name, this.locale.state.name).then(
+        response => {
+          this.bannerEvents = response;
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
     getListResults() {
 
       this.getLocation(this.getListResultAgain);
@@ -355,6 +342,7 @@ export default {
   computed: {},
   created() {
     this.getListResults();
+    this.getBanner();
   },
   beforeUpdate() {
     //if (this.$refs.slick) {
