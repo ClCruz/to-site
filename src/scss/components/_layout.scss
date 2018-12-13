@@ -208,3 +208,7 @@ body {
 .time__placeholder {
 	margin-bottom: 40px;
 }
+.v-suggestions input::placeholder { 
+	color: $primary; 
+	font-size: 85%;
+}

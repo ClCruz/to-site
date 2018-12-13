@@ -42,6 +42,7 @@ export default {
       options: {
         debounce: 200,
         inputClass: 'inputautocomplete',
+        placeholder: "Pesquise por evento, gênero, local, cidade ou estado..."
       }
     };
   },
