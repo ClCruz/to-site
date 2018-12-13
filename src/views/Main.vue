@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid" v-if="itau">
+<div class="container-fluid" v-if="isNewTemplate">
   <section class="main main__itau" v-if="$route.path.includes('/itau')">
     <app-header :key="idappheader" v-if="!isTicketOffice"></app-header>
     <div style="">
@@ -43,6 +43,7 @@ import AppFooter from "@/components/App-footer";
 import HeaderTicketHub from "@/views/templates/ticketHub/Header"
 import FooterTicketHub from "@/views/templates/ticketHub/Footer"
 import { func } from '@/functions';
+import config from '@/config';
 
 export default {
   name: "DefaultLayout",
@@ -78,7 +79,7 @@ export default {
     }
   },
   watch: {
-  '$route' (to, from) {
+    '$route' (to, from) {
     const toDepth = to.path.split('/').length
     const fromDepth = from.path.split('/').length
     this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'

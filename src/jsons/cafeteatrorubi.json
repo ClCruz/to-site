@@ -10,6 +10,7 @@
   "ga": "",
   "scss": "./src/scss/themes/cafeteatrorubi/main.scss",
   "css": "/stylesheets/themes/cafeteatrorubi/main.css",
+  "newTemplate": false,
   "logo": "https://media.tixs.me/logos/logo-cafeteatrorubi.png",
   "favico": "/img/cafeteatrorubi/",
   "meta": {

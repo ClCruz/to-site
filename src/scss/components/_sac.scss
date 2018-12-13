@@ -30,9 +30,13 @@
   }
 }
 
+.container__sac .sac__card {
+	background: $black;
+}
+
 .sac__card {
 	padding-top: 15px;
-	background: #222 !important;
+	background: $black !important;
 	box-shadow: $box-shadow;
 	border-radius: 5px !important;
 	overflow: auto!important;
