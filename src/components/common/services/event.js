@@ -11,7 +11,8 @@ export const eventService = {
   description,
   presentation,
   rooms,
-  dates
+  dates,
+  banner
 }
 
 function list(city,state) {
@@ -19,6 +20,26 @@ function list(city,state) {
   if (state == null) state = "";
   
   let url = config.api + `/v1/home/card?city=${city}&state=${state}`;
+
+  var ret = new Promise(
+    function (resolve, reject) {
+      Vue.http.get(url).then(res => {
+        resolve(res.body);
+      }, err => {
+        reject({
+          error: true,
+          msg: err
+        });
+      });
+    }
+  );
+  return ret;
+}
+function banner(city,state) {
+  if (city == null) city = "";
+  if (state == null) state = "";
+  
+  let url = config.api + `/v1/home/banner?city=${city}&state=${state}`;
 
   var ret = new Promise(
     function (resolve, reject) {
