@@ -108,55 +108,46 @@ export default {
             spaceBetween: 5
           },
           2000: {
-            slidesPerGroup: 4,
-            slidesPerView: 6.3,
+            slidesPerView: 3.5,
             slidesPerColumn: 3,
             spaceBetween: 8
           },
           1600: {
-            slidesPerGroup: 4,
-            slidesPerView: 5.7,
+            slidesPerView: 3.5,
             slidesPerColumn: 3,
             spaceBetween: 8
           },
           1500: {
-            slidesPerGroup: 4,
-            slidesPerView: 5.3,
-            slidesPerColumn: 2,
+            slidesPerView:3.5,
+            slidesPerColumn: 3,
             spaceBetween: 8
           },
           1400: {
-            slidesPerView: 4.85,
-            slidesPerColumn: 2,
+            slidesPerView: 3,
+            slidesPerColumn: 3,
             spaceBetween: 10,
-            slidesPerGroup: 4.85
           },
           1300: {
-            slidesPerView: 4.5,
-            slidesPerColumn: 2,
+            slidesPerView: 3,
+            slidesPerColumn: 3,
             spaceBetween: 10,
-            slidesPerGroup: 4.5
           },
           1200: {
-            slidesPerGroup: 3,
-            slidesPerView: 4.2,
-            slidesPerColumn: 2,
+            slidesPerView: 2.5,
+            slidesPerColumn: 3,
             spaceBetween: 10
           },
           1100: {
-            slidesPerGroup: 3,
-            slidesPerView: 3.8,
+            slidesPerView: 2.5,
             slidesPerColumn: 2,
             spaceBetween: 10
           },
           980: {
-            slidesPerGroup: 2,
             slidesPerView: 3.4,
             slidesPerColumn: 2,
             spaceBetween: 5
           },
           900: {
-            slidesPerGroup: 2,
             slidesPerView: 3.2,
             slidesPerColumn: 2,
             spaceBetween: 5
