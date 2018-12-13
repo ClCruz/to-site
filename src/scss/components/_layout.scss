@@ -204,3 +204,7 @@ body {
 	@include MQ(S) {width: 100%;
 	}
 }
+
+.time__placeholder {
+	margin-bottom: 40px;
+}
