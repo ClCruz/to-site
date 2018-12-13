@@ -14,8 +14,7 @@ Vue.use(VueGeolocation);
 export const func = {
     data() {
         return {
-            lsSecure: false,
-            isNewTemplate: config.info.newTemplate,
+            lsSecure: true,
             waitCallers: [],
             locale: {
                 city: {
@@ -32,6 +31,11 @@ export const func = {
                 },
             }
 
+        }
+    },
+    computed: {
+        isNewTemplate() {
+            return config.info.newTemplate;
         }
     },
     methods: {
