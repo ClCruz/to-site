@@ -46,6 +46,7 @@
 }
 .header__signin {
 	margin-right: 5%;
+	padding-right: 10px;
 	@include MQ(S) {
 		display: none;
 		margin-right: 15px;
