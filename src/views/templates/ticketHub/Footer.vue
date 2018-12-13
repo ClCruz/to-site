@@ -71,7 +71,19 @@ export default {
   name: "Footer",
   computed: {},
   methods: {
-
+    loadSACPage: function (categoria, pagina) {
+      switch (categoria) {
+        case "company":
+          this.$router.push("/sac/empresa/" + pagina);
+          break;
+        case "policy":
+          this.$router.push("/sac/politica/" + pagina);
+          break;
+        case "partner":
+          this.$router.push("/sac/parceiros/" + pagina);
+          break;
+      }
+    },
     contact() {
       this.$swal.queue([{
         title: 'Atendimento ao cliente',
