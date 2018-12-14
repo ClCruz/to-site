@@ -12,7 +12,7 @@
                     <div class="cards">
                       <div class="rootLink"></div>
                       <article class="cardexp">
-                        <div class="thumb" :style="{ backgroundImage: 'url(http://teatroitalia.com.br/wp-content/uploads/2018/10/natalcomasestrelas.jpg)' }"></div>
+                        <div class="thumb" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
                         <div class="infos">
                          
                           <h2 class="title"> {{ item.ds_evento }}</h2>
