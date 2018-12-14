@@ -209,6 +209,16 @@ body {
 	margin-bottom: 40px;
 }
 .v-suggestions input::placeholder { 
-	color: $primary; 
-	font-size: 85%;
+	color: #ccc; 
+	font-size: 0.8rem;
+	visibility: hidden;
+
+	&:hover {}
+
+	@include MQ(S) {
+		color: transparent;
+	}
 }
+
+.v-suggestions input:focus::-webkit-input-placeholder {
+visibility: unset;}

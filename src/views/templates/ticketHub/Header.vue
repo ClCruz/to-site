@@ -18,34 +18,10 @@
 
           <div class="collapse navbar-collapse justify-content-center col-md-8" id="navbarNav12">
             <ul class="navbar-nav mr-auto">
-              <!-- <li class="nav-item active">
-                <a class="nav-link" href="https://www.froala.com">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.froala.com">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.froala.com">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.froala.com">Team</a>
-              </li> -->
+              
             </ul>
             <ul class="navbar-nav justify-content-center">
-              <!-- <li class="nav-item active">
-              <a class="nav-link" href="https://www.froala.com">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.froala.com">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.froala.com">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.froala.com">Team</a>
-            </li> -->
+          
             </ul>
           </div>
 
@@ -335,7 +311,7 @@ export default {
               }
             );
           },
-        },
+           },
         {
           title: 'Verificando',
           position: 'center',

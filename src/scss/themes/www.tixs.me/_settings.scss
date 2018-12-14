@@ -5,10 +5,9 @@
 $gradiente: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%);
 $gradiente-inv: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%);
 
-$logo:'/assets/tixs (1).png' !default;
+$logo: '/assets/tixs (1).png' !default;
 
-
-$box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 $box-shadow-2: 0px 2.23393px 2.23393px rgba(0, 0, 0, 0.24), 0px 0px 2.23393px rgba(0, 0, 0, 0.12);
 
 $height-card: 150px;
@@ -20,11 +19,10 @@ $thumb-height: 100%;
 
 $border-radius: 3px;
 
-
 $transition: cubic-bezier(0.17, 0.67, 0.5, 1.03);
 $timing-1: 0.35s 0.15s;
 $timing-2: 0.45s 0.25s;
 
-$font-family: 'Open Sans', sans-serif; 
+$font-family: 'Open Sans', sans-serif;
 
-$tickethub: true;
+$tickethub: false;

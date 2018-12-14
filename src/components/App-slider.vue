@@ -12,7 +12,7 @@
                     <div class="cards">
                       <div class="rootLink"></div>
                       <article class="cardexp">
-                        <div class="thumb" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
+                        <div class="thumb" :style="{ backgroundImage: 'url(http://teatroitalia.com.br/wp-content/uploads/2018/10/natalcomasestrelas.jpg)' }"></div>
                         <div class="infos">
                          
                           <h2 class="title"> {{ item.ds_evento }}</h2>
@@ -108,12 +108,12 @@ export default {
             spaceBetween: 5
           },
           2000: {
-            slidesPerView: 3.5,
+            slidesPerView: 4.3,
             slidesPerColumn: 3,
             spaceBetween: 8
           },
           1600: {
-            slidesPerView: 3.5,
+            slidesPerView: 4,
             slidesPerColumn: 3,
             spaceBetween: 8
           },
@@ -139,23 +139,23 @@ export default {
           },
           1100: {
             slidesPerView: 2.5,
-            slidesPerColumn: 2,
+            slidesPerColumn: 3,
             spaceBetween: 10
           },
           980: {
-            slidesPerView: 3.4,
+            slidesPerView: 2.2,
             slidesPerColumn: 2,
             spaceBetween: 5
           },
           900: {
-            slidesPerView: 3.2,
+            slidesPerView: 2,
             slidesPerColumn: 2,
             spaceBetween: 5
           },
           800: {
-            slidesPerGroup: 1,
-            slidesPerView: 1.65,
+            slidesPerView: 1,
             slidesPerColumn: 2,
+            speed: 50,
             spaceBetween: 5,
             mousewheel: false,
           },
