@@ -14,7 +14,7 @@ Vue.use(VueGeolocation);
 export const func = {
     data() {
         return {
-            lsSecure: true,
+            lsSecure: false,
             waitCallers: [],
             locale: {
                 city: {
