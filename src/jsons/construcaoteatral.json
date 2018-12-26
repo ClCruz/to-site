@@ -10,7 +10,7 @@
   "ga": "",
   "scss": "./src/scss/themes/construcaoteatral/main.scss",
   "css": "/stylesheets/themes/www.construcaoteatral.tixs.me/main.css",
-  "newTemplate": false,
+  "newTemplate": true,
   "logo": "https://media.tixs.me/logos/logo-construcaoteatral.jpg",
   "favico": "/img/construcaoteatral/",
   "meta": {
