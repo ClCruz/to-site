@@ -10,11 +10,12 @@
 	@include footer;
 
 	.bg-dark {
-		background-color: rgb(71, 58, 58) !important;
+		// background-color: rgb(202, 8, 19) !important;
+		background-color: rgb(40, 40, 40) !important;
 	}
 
 	.header__logo .img {
-		height: 60px;
+		height: 45px;
 		width: 100%;
 		background-position: left center;
 	}
