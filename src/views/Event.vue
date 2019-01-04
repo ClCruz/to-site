@@ -95,7 +95,7 @@
                   </div>
 
                   <transition-group name="fade">
-                    <div class="card" v-for="(item, index) in filtered" :key='index'>
+                    <div class="card" v-for="(item) in filtered" :key='item'>
                       <div class="card-body row">
                         <div class="col-4 col-md-2 text-center card__date">
                           {{ item.weekdayName }} <br /> {{ item.day }} <br /> {{ item.HorSessao }}
@@ -200,7 +200,7 @@
                   </div>
 
                   <transition-group name="fade">
-                    <div class="card" v-for="(item, index) in filtered" :key='index'>
+                    <div class="card" v-for="(item) in filtered" :key='item'>
                       <div class="card-body row">
                         <div class="col-4 col-md-2 text-center card__date">
                           {{ item.weekdayName }} <br /> {{ item.day }} <br /> {{ item.HorSessao }}
