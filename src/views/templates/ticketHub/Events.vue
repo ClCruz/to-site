@@ -9,7 +9,7 @@
         <div class="d-none d-sm-block input-group mt-4 mb-4 p-3 w-100">
           <app-search></app-search>
         </div>
-        <div class="mr-0 ml-0 mt-4 mb-0 p-0 w-100 justify-content-center row">
+        <div class="d-none d-sm-block mr-0 ml-0 mt-4 mb-0 p-0 w-100 justify-content-center row">
           <div class="col-12 col-sm-2" v-for="(item, index) in nextEvents" :key='index'>
             <p class="next__events  p-2" @click="goto('event', item)">
               {{item.ds_evento}}
