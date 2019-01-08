@@ -83,57 +83,6 @@
       </div>
     </div>
   </section>
-  <!-- <section class="features" data-block-type="features" data-id="3">
-    <div class="container">
-      <div class="row text-left pt-3 pb-1">
-        <div class="col-12 col-sm-12 text-left">
-          <h3>Locais em destaque</h3>
-        </div>
-        <div @click="goto('local',item.ds_nome_teatro)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in localsList" :key='index'>
-          <p>
-            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-              <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
-            </div>
-            <span class="genre">{{ item.ds_nome_teatro }}</span>
-          </p>
-        </div>
-
-        <div @click="goto('local','+')" class="col-6 col-sm-2 card__container  card__see-more" v-if="false">
-          <p>
-            <div alt="image" class="img-fluid rounded card__home">
-            </div>
-            <span class="genre">Ver mais</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="features" data-block-type="features" data-id="3">
-    <div class="container">
-      <div class="row text-left pt-3 pb-5">
-        <div class="col-12 col-sm-12 text-left">
-          <h3>Cidades em destaque</h3>
-        </div>
-        <div @click="goto('city',item.ds_municipio)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in cityList" :key='index'>
-          <p>
-            <div class="img-fluid rounded card__home" :class="['card__home-' + index]">
-              <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
-            </div>
-            <span class="genre">{{ item.ds_municipio }}</span>
-          </p>
-        </div>
-
-        <div @click="goto('city','+')" class="col-6 col-sm-2 card__container card__see-more" v-if="false">
-          <p>
-            <div alt="image" class="img-fluid rounded card__home">
-            </div>
-            <span class="genre">Ver mais</span>
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section> -->
   <section class="fdb-block team-1">
     <div class="container">
       <div class="row">
