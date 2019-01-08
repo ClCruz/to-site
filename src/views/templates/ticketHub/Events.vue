@@ -83,7 +83,7 @@
       </div>
     </div>
   </section>
-  <section class="features" data-block-type="features" data-id="3">
+  <!-- <section class="features" data-block-type="features" data-id="3">
     <div class="container">
       <div class="row text-left pt-3 pb-1">
         <div class="col-12 col-sm-12 text-left">
@@ -133,7 +133,7 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
   <section class="fdb-block team-1">
     <div class="container">
       <div class="row">
