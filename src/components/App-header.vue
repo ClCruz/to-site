@@ -185,7 +185,7 @@
     </div>
     <div class="col-6 text-center mx-0 mx-auto">
       <b-navbar-brand class="" href="/">
-        TIXS.ME
+        {{siteName}}
       </b-navbar-brand>
     </div>
     <div class="col-3">
@@ -268,6 +268,7 @@ export default {
       form: {
         login: null,
         pass: null,
+              siteName: config.info.siteName,
       }
     };
   },

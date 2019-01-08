@@ -1,0 +1,22 @@
+@import "settings.scss";
+@import "../../main.scss";
+@import "override.scss";
+@import "../../ticketHub/main.scss";
+
+@if $tickethub == true {
+	@include froala;
+	@include header;
+	@include content;
+	@include footer;
+
+	.bg-dark {
+		// background-color: rgb(202, 8, 19) !important;
+		background-color: rgb(40, 40, 40) !important;
+	}
+
+	.header__logo .img {
+		height: 45px;
+		width: 100%;
+		background-position: left center;
+	}
+}

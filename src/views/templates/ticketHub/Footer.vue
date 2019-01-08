@@ -11,7 +11,7 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4 mt-4 mt-sm-0" style="">
-        <ul>
+        <ul class="pl-0">
           <li>
             <a href="#" @click="loadSACPage('company','sobre')">
               Sobre a empresa
