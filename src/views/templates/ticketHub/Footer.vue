@@ -1,5 +1,5 @@
 <template>
-  <footer class="fdb-block footer-small bg-dark" style="font-size: 12px">
+  <footer class="fdb-block footer-small bg-dark mt-4" style="font-size: 12px">
     <div class="container  pt-4 pb-2">
       <div class="row text-center align-items-center">
         <div class="col-12 col-lg-2 text-lg-left">
