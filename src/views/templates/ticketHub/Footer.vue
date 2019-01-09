@@ -1,62 +1,63 @@
 <template>
-<footer class="fdb-block footer-large bg-dark fp-active mt-5 pt-5" data-block-type="footers" data-id="4">
-  <div class="container">
-    <div class="row align-items-top text-center text-md-left">
-      <div class="col-12 col-sm-6 col-md-4" style="">
-        <p> {{companyName}}
-          <p>        <span v-if="companyName">{{companyAddress}}</span></p>
-          <p>
-            <span v-if="CNPJ">CNPJ - {{CNPJ}}</span>
-          </p>
-      </div>
-
-      <div class="col-12 col-sm-6 col-md-4 mt-4 mt-sm-0" style="">
-        <ul class="pl-0">
-          <li>
-            <a href="#" @click="loadSACPage('company','sobre')">
-              Sobre a empresa
-            </a>
-          </li>
-          <li>
-            <a href="#" @click="loadSACPage('policy','venda')">
-              Politica de Venda
-            </a>
-          </li>
-          <li>
-            <a href="#" @click="loadSACPage('policy','desconto')">
-              Política de Meia Entrada
-            </a>
-          </li>
-          <li>
-            <a href="#" @click="loadSACPage('policy','privacidade')">
-              Politica de Privacidade
-            </a>
-          </li>
-          <li>
-            <a href="#" @click="loadSACPage('partner','sejaParceiro')">
-              Seja nosso Parceiro
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-12 col-md-4 mt-5 mt-md-0 text-md-left" style="">
-        <li @click="contact" style="cursor: pointer">Atendimento ao cliente</li>     
-      </div>
-    </div>
-
-    <div class="row mt-5">
-      <div class="col text-center fr-box" role="application" style="">
-        <div class="fr-wrapper" dir="auto">
-          <div class="fr-element fr-view" dir="auto" contenteditable="true" aria-disabled="false" spellcheck="true">
-        2018 {{siteName}}, Inc. Todos os direitos reservados.
-            
+  <footer class="fdb-block footer-small bg-dark" style="font-size: 12px">
+    <div class="container  pt-4 pb-2">
+      <div class="row text-center align-items-center">
+        <div class="col-12 col-lg-2 text-lg-left">
+          <div class="footer__logo text-left">
+            <router-link to="/">
+              <div class="img"></div>
+            </router-link>
           </div>
+        </div>
+
+        <div class="col mt-4 mt-lg-0 text-center">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a href="#" class="nav-link" @click="loadSACPage('company','sobre')">
+                Sobre a empresa
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" @click="loadSACPage('policy','venda')">
+                Politica de Venda
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" @click="loadSACPage('policy','desconto')">
+                Política de Meia Entrada
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" @click="loadSACPage('policy','privacidade')">
+                Politica de Privacidade
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" @click="loadSACPage('partner','sejaParceiro')">
+                Seja nosso Parceiro
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-2 mt-4 mt-lg-0 text-lg-right">
+          <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col text-center">
+          <span style="color: #ccc">{{companyName}} - {{companyAddress}} - CNPJ: {{CNPJ}} </span>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col text-center">
+          2018 {{siteName}},  Inc.
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 </template>
 
 <script>

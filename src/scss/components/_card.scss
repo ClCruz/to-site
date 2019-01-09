@@ -1,9 +1,9 @@
-
 .cards {
 	overflow: auto;
 	width: 100%;
 
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	border-radius: 2px;
 }
 
 .cards {
@@ -321,7 +321,6 @@ article.cardexp .flag {
 	}
 }
 
-
 .search_card {
 	background: #fff;
 	width: 100%;
@@ -356,14 +355,14 @@ article.cardexp .flag {
 }
 
 .show__date-disp {
-margin-bottom: 10px;
+	margin-bottom: 10px;
 	border-radius: $border-radius;
 	-webkit-box-shadow: $box-shadow;
-					box-shadow: $box-shadow;
-					
-					@include MQ(S) {
-						margin-top: 30px;
-					}
+	box-shadow: $box-shadow;
+
+	@include MQ(S) {
+		margin-top: 30px;
+	}
 }
 
 .card {
@@ -371,7 +370,7 @@ margin-bottom: 10px;
 	margin: auto;
 	padding: 0.5rem;
 	font-size: 0.8rem;
-	background: $black!important;
+	background: $black !important;
 	border: 1px;
 	-o-border-image: $gradiente;
 	border-image: $gradiente;
@@ -435,7 +434,7 @@ margin-bottom: 10px;
 	overflow-x: hidden;
 	margin-top: 0;
 	overflow-y: auto;
-padding-top: 0;
+	padding-top: 0;
 	p {
 		padding-left: 10px;
 		padding-right: 10px;
@@ -453,7 +452,7 @@ padding-top: 0;
 .event__card-img {
 	float: left;
 	padding: 0 10px 10px 0;
-	max-height: 200px;
+	max-width: 280px;
 }
 
 .event__description {
@@ -557,19 +556,17 @@ padding-top: 0;
 }
 
 .container__time {
-    padding: 0;
-    margin: 0 auto;
-		overflow-x: hidden;
-		overflow-y: auto;
-    max-height: 80%;
-    padding: 0;
-		width: 90%;
-		
-		.card {
-			width: 100%;
-		}
+	padding: 0;
+	margin: 0 auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	max-height: 80%;
+	padding: 0;
+	width: 90%;
 
-		
+	.card {
+		width: 100%;
+	}
 }
 
 .container__time .card:first-of-type {

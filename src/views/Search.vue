@@ -114,7 +114,7 @@
           </div>
         </div>
         <div class="row">
-          <div @click="goto(item)" class="col-sm-3 pb-4 text-left" v-for="(item, index) in searchResults" :key='index'>
+          <div @click="goto(item)" class="col-sm-3 pb-4 pl-1 pr-1 text-left" v-for="(item, index) in searchResults" :key='index'>
             <div class="fdb-box p-0">
               <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.cardimage + '\')' }" style="background-size: cover;"></div>
 

@@ -90,7 +90,7 @@
           <h3 class="font-weight-bold">Eventos</h3>
         </div>
 
-        <div class="col-sm-3 pb-4 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
+        <div class="col-sm-3 pb-4 pl-1 pr-1 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
           <div class="fdb-box p-0">
             <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
@@ -141,7 +141,7 @@ export default {
         slidesPerView: 1,
         spaceBetween: 30,
         autoplay: true,
-        speed: 1300,
+        speed: 700,
         loop: true,
         pagination: {
           el: '.swiper-pagination',
