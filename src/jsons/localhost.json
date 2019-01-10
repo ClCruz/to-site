@@ -9,7 +9,7 @@
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "template": "www.construcaoteatral.tixs.me",
-  "newTemplate": false,
+  "newTemplate": true,
   "css": "/stylesheets/themes/tixsme/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "favico": "/img/tixsme/",
@@ -22,12 +22,12 @@
     "public": ""
   },
   "info": {
-    "title": "tixsme | Venda de Ingressos",
+    "title": "teatroparatodos.tk | Venda de Ingressos",
     "description": "Venda de Ingressos",
-    "siteName": "Tixs.ME",
-    "CNPJ": "15.150.423/0001-65",
-    "companyAddress": "Alameda Rio Negro, 503 - 6 andar - Alphaville, Barueri",
-    "companyName": "Empresa Brasileira de Comercialização de Ingressos"
+    "siteName": "teatroparatodos.tk",
+    "CNPJ": "11.111.111/1111-111",
+    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
+    "companyName": "Teatro para Todos"
    },
   "templates": {
     "print": {
