@@ -268,8 +268,8 @@ export default {
       form: {
         login: null,
         pass: null,
-              siteName: config.info.siteName,
-      }
+      },
+        siteName: config.info.siteName,
     };
   },
   computed: {
