@@ -1,6 +1,6 @@
 <template>
 <div class="a">
-  <section class="fdb-block fdb-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
+  <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
     <div class="container justify-content-center align-items-center d-flex p-5">
       <div class="col-10 justify-content-center text-center">
         <div class="d-none d-sm-block" style="">
@@ -83,7 +83,7 @@
       </div>
     </div>
   </section>
-  <section class="fdb-block team-1">
+  <section class="to-block team-1">
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-12 text-left mt-2 mb-4">
@@ -91,7 +91,7 @@
         </div>
 
         <div class="col-10 col-md-3 pb-4 pl-1 pr-1 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
-          <div class="fdb-box p-0">
+          <div class="to-box p-0">
             <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
             <div class="content p-1">
@@ -138,21 +138,15 @@ export default {
       bannerEvents: [],
 
       swiperOption: {
-        slidesPerView: 1,
-        spaceBetween: 30,
+        loop: true,
         autoplay: true,
         speed: 700,
-        loop: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
         },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
         autoplay: {
-          delay: 5000
+          delay: 4000
         },
         breakpoints: {}
       }

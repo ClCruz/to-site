@@ -1,5 +1,5 @@
 @mixin content {
-	.fdb-box {
+	.to-box {
 		cursor: pointer;
 	}
 
@@ -453,7 +453,7 @@
 		width: auto;
 	}
 
-	.fdb-block {
+	.to-block {
 		overflow: unset !important;
 		padding: 0 !important;
 		padding-bottom: 30px !important;
@@ -479,7 +479,7 @@
 		padding-top: 0 !important;
 	}
 
-	.fdb-block .fdb-box {
+	.to-block .to-box {
 		height: 100%;
 		transition: 0.5s;
 
@@ -727,7 +727,7 @@
 		background: #444;
 	}
 
-	.fdb-viewport {
+	.to-viewport {
 		padding-bottom: 150px !important;
 	}
 

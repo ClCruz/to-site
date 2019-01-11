@@ -3,7 +3,7 @@
 @import "../../ticketHub/main.scss";
 
 @if $tickethub == true {
-	@include froala;
+	@include ticketoffice;
 	@include header;
 	@include content;
 	@include footer;

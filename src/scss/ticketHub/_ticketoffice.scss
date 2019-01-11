@@ -1,4 +1,4 @@
-@mixin froala {
+@mixin ticketoffice {
   
 dl,
 ol,
@@ -69,8 +69,8 @@ hr,
 input {
 	overflow: visible;
 }
-.fdb-block,
-.fdb-block .container {
+.to-block,
+.to-block .container {
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -372,7 +372,7 @@ hr {
 	border: 0;
 	border-top: 1px solid rgba(0, 0, 0, .1);
 }
-.fdb-block,
+.to-block,
 .rounded {
 	overflow: hidden;
 }
@@ -1385,7 +1385,7 @@ p {
 	border-bottom-left-radius: 0 !important;
 	border-bottom-right-radius: 0 !important;
 }
-.fdb-block {
+.to-block {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizelegibility;
@@ -1394,20 +1394,20 @@ p {
 	background-size: cover;
 	background-color: #fff;
 }
-.fdb-block .container {
+.to-block .container {
 	background-size: contain;
 }
-.fdb-block .container.bg-r {
+.to-block .container.bg-r {
 	background-position: right;
 }
-.fdb-block.fdb-viewport,
-.fdb-block.fdb-viewport .container {
+.to-block.to-viewport,
+.to-block.to-viewport .container {
 	min-height: calc(100% - 2 * 7.5rem);
 }
-.fdb-block.fdb-image-bg {
+.to-block.to-image-bg {
 	color: #f2f2f2;
 }
-.fdb-block .fdb-box {
+.to-block .to-box {
 	background: #fff;
 	padding: 3.75rem 2.5rem;
 	overflow: hidden;
@@ -1415,59 +1415,59 @@ p {
 	border-radius: .25rem;
 	box-shadow: 0 .3125rem .875rem 0 rgba(129, 129, 129, .2) !important;
 }
-.fdb-block .col-fill-left,
-.fdb-block .col-fill-right {
+.to-block .col-fill-left,
+.to-block .col-fill-right {
 	width: 50%;
 	top: 0;
 	bottom: 0;
 	background-size: cover;
 	background-position: center;
 }
-.fdb-block .fdb-touch {
+.to-block .to-touch {
 	border-top: solid .3125rem #329ef7;
 	z-index: 2;
 }
-.fdb-block img + h3,
-.fdb-block img + h4,
-.fdb-block img + p {
+.to-block img + h3,
+.to-block img + h4,
+.to-block img + p {
 	margin-top: 1.25rem;
 }
-.fdb-block img + h1,
-.fdb-block img + h2 {
+.to-block img + h1,
+.to-block img + h2 {
 	margin-top: 2.5rem;
 }
-.fdb-block .col-fill-left {
+.to-block .col-fill-left {
 	position: absolute;
 	left: 0;
 	z-index: 1;
 }
-.fdb-block .col-fill-left + div {
+.to-block .col-fill-left + div {
 	position: relative;
 	z-index: 2;
 }
-.fdb-block .col-fill-right {
+.to-block .col-fill-right {
 	position: absolute;
 	right: 0;
 	z-index: 1;
 }
-.fdb-block .col-fill-right + div {
+.to-block .col-fill-right + div {
 	position: relative;
 	z-index: 2;
 }
-.fdb-block img.fdb-icon,
-.fdb-block img.fdb-icon-round {
+.to-block img.to-icon,
+.to-block img.to-icon-round {
 	width: auto;
 	width: 3.75rem;
 }
-.fdb-block .row-100 {
+.to-block .row-100 {
 	height: 6.25rem;
 	width: 100%;
 }
-.fdb-block .row-50 {
+.to-block .row-50 {
 	height: 3.125rem;
 	width: 100%;
 }
-.fdb-block .row-70 {
+.to-block .row-70 {
 	height: 4.375rem;
 	width: 100%;
 }

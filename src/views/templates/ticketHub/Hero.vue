@@ -1,6 +1,6 @@
 <template>
 <div class="a">
-  <section class="fdb-block fdb-viewport bg-dark p-5" style="background-image: url(./img/bg.svg);"
+  <section class="to-block to-viewport bg-dark p-5" style="background-image: url(./img/bg.svg);"
     data-block-type="call_to_action" data-id="2">
     <div class="container justify-content-center align-items-center d-flex p-5">
       <div class="col-8 justify-content-center text-center">

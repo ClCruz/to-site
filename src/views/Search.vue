@@ -89,7 +89,7 @@
     </div>
   </div>
   <div v-else>
-     <section class="fdb-block fdb-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
+     <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
     <div class="container justify-content-center align-items-center d-flex pt-5 pb-0 mb-0 h-25">
       <div class="col-10 justify-content-center text-center">
         <div class="d-none d-sm-block" style="">
@@ -102,7 +102,7 @@
     </div>
 
   </section>
-    <section class="fdb-block fdb_result">
+    <section class="to-block fdb_result">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 pb-4 text-left mt-4">
@@ -115,7 +115,7 @@
         </div>
         <div class="row">
           <div @click="goto(item)" class="col-sm-3 pb-4 pl-1 pr-1 text-left" v-for="(item, index) in searchResults" :key='index'>
-            <div class="fdb-box p-0">
+            <div class="to-box p-0">
               <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.cardimage + '\')' }" style="background-size: cover;"></div>
 
               <div class="content p-1">
