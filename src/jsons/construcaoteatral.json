@@ -24,9 +24,9 @@
   "info": {
     "title": "construcaoteatral.tixs.me | Venda de Ingressos",
     "description": "Venda de Ingressos",
-    "siteName": "construcaoteatral.tixs.me",
-    "CNPJ": "",
-    "companyName": ""
+    "CNPJ": "11.111.111/1111-111",
+    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
+    "companyName": "Teatro para Todos"
   },
   "templates": {
     "print": {

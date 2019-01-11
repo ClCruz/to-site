@@ -10,7 +10,7 @@
   "ga": "",
   "template": "www.sazarteingressos.com.br",
   "css": "/stylesheets/themes/sazarte/main.css",
-  "newTemplate": false,
+  "newTemplate": true,
 
   "logo": "https://media.tixs.me/logos/logo-sazarte.jpeg",
   "favico": "/img/sazarte/",
@@ -26,9 +26,9 @@
     "title": "sazarteingressos.com.br | Venda de Ingressos",
     "description": "Venda de Ingressos",
     "siteName": "sazarteingressos.com.br",
-    "CNPJ": "",
-    "companyAddress": "",  
-    "companyName": ""
+    "CNPJ": "11.111.111/1111-111",
+    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
+    "companyName": "Teatro para Todos"
   },
   "templates": {
     "print": {
