@@ -791,9 +791,3 @@
 		margin: 0 auto;
 	}
 }
-
-.container__search {
-	@include MQ(S) {
-		display: none !important;
-	}
-}

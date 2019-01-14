@@ -1,0 +1,11 @@
+@import "settings.scss";
+@import "../../main.scss";
+@import "override.scss";
+@import "../../ticketHub/main.scss";
+
+@if $tickethub == true {
+	@include ticketoffice;
+	@include header;
+	@include content;
+	@include footer;
+}
