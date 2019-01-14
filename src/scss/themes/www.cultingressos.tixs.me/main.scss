@@ -8,4 +8,38 @@
 	@include header;
 	@include content;
 	@include footer;
+
+	.bg-dark {
+		// background-color: rgb(202, 8, 19) !important;
+		background-color: rgb(40, 40, 40) !important;
+	}
+
+	$gradiente: $secundary !important;
+
+	.header__logo .img {
+		height: 45px;
+		width: 100%;
+		background-position: left center;
+	}
+
+	.swal2-progresscircle {
+		background: $secundary !important;
+	}
+
+	.swal2-styled {
+		font-size: 0.8rem;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 5px;
+		background: $secundary !important;
+		border: none;
+		color: white;
+		transition: 0.5s;
+
+		&:hover {
+			-webkit-transform: translateY(-2px);
+			transform: translateY(-2px);
+			@include box-shadow();
+		}
+	}
 }

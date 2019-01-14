@@ -785,3 +785,9 @@
 		opacity: 0.8;
 	}
 }
+
+.row__events .col-10 {
+	@include MQ(S) {
+		margin: 0 auto;
+	}
+}

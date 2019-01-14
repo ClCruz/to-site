@@ -11,7 +11,7 @@
   "scss": "./src/scss/themes/www.cultingressos.tixs.me/main.scss",
   "css": "/stylesheets/themes/www.cultingressos.tixs.me/main.css",
   "logo": "https://media.tixs.me/logos/logo-cultingressos.png",
-  "newTemplate": false,
+  "newTemplate": true,
   "favico": "/img/cultingressos/",
   "meta": {
     "description": "Venda de Ingressos",
@@ -25,8 +25,9 @@
     "title": "cultingressos.tixs.me | Venda de Ingressos",
     "description": "Venda de Ingressos",
     "siteName": "cultingressos.tixs.me",
-    "CNPJ": "",
-    "companyName": ""
+    "CNPJ": "11.111.111/1111-111",
+    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
+    "companyName": "Teatro para Todos"
   },
   "templates": {
     "print": {

@@ -30,9 +30,9 @@
           <div class="item__slide">
             <div class="row">
               <div class="col-md-8  col-xs-12 nopadding">
-                <a href="" target="_blank">
+                  <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
                     <img :src="item.img" alt="" style="width:100%;">
-                  </a>
+                  </span>
               </div>
               <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
                 <h3 class="">{{item.ds_evento}}</h3>
@@ -85,7 +85,7 @@
   </section>
   <section class="to-block team-1">
     <div class="container">
-      <div class="row">
+      <div class="row row__events">
         <div class="col-12 col-sm-12 text-left mt-2 mb-4">
           <h3 class="font-weight-bold">Eventos</h3>
         </div>
@@ -300,5 +300,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+ 
 </style>
