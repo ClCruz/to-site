@@ -1,7 +1,7 @@
 <template>
 <div class="a">
   <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
-    <div class="container justify-content-center align-items-center d-flex p-5 container__search d-none d-sm-block">
+    <div class="container justify-content-center align-items-center d-flex p-5 container__search">
       <div class="col-10 justify-content-center text-center">
         <div class="d-none d-sm-block" style="">
           <h2>O quê deseja encontrar ?</h2>
