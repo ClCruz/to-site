@@ -118,12 +118,12 @@ export default {
             spaceBetween: 8
           },
           1500: {
-            slidesPerView:3.5,
+            slidesPerView:3.8,
             slidesPerColumn: 3,
             spaceBetween: 8
           },
           1400: {
-            slidesPerView: 3,
+            slidesPerView: 3.4    ,
             slidesPerColumn: 3,
             spaceBetween: 10,
           },
@@ -143,7 +143,7 @@ export default {
             spaceBetween: 10
           },
           980: {
-            slidesPerView: 2.2,
+            slidesPerView: 2.5,
             slidesPerColumn: 2,
             spaceBetween: 5
           },
