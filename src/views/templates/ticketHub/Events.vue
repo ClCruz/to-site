@@ -30,9 +30,9 @@
           <div class="item__slide">
             <div class="row">
               <div class="col-md-8  col-xs-12 nopadding">
-                <a href="" target="_blank">
+                  <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
                     <img :src="item.img" alt="" style="width:100%;">
-                  </a>
+                  </span>
               </div>
               <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
                 <h3 class="">{{item.ds_evento}}</h3>
