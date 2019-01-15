@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" style="padding-bottom: 300px">
     <v-wait for="loadingAboveAll">
         <template slot="waiting">
             <div id="aboveAll">

@@ -1,6 +1,6 @@
 <template>
-  <suggestions v-model="searchQuery" :options="options" :onItemSelected="onSearchItemSelected" :onInputChange="onInputChange" @keyup.native="keyup">
-    <div slot="item" slot-scope="props" class="single-item" v-bind:class="{ noClick: (props.item.notselectable === 1) }" @click.prevent="goto(props.item);">
+  <suggestions v-model="searchQuery" :options="options" :onItemSelected="onSearchItemSelected" :onInputChange="onInputChange" @keyup.native="keyup" style="padding: 0">
+    <div slot="item" slot-scope="props" class="single-item" v-bind:class="{ noClick: (props.item.notselectable === 1) }" @click.prevent="goto(props.item);" style="padding: 8px">
       <span class="suggestions-group" v-if="props.item.notselectable === 1">
           {{props.item.description}}
       </span>
@@ -162,5 +162,9 @@ export default {
 <style>
 .noClick {
   cursor: default;
+}
+
+.v-suggestions .item {
+  padding: 0!important;
 }
 </style>

@@ -1,17 +1,17 @@
 <template>
 <div class="a">
   <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
-    <div class="container justify-content-center align-items-center d-flex p-5 container__search d-none d-sm-block">
+    <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub">
       <div class="col-10 justify-content-center text-center">
         <div class="d-none d-sm-block" style="">
-          <h2>O quê deseja encontrar ?</h2>
+          <h1>O quê deseja encontrar ?</h1>
         </div>
-        <div class="d-none d-sm-block input-group mt-4 mb-4 p-3 w-100">
+        <div class="d-none d-sm-block input-group mt-3 mb-3 p-3 w-100">
           <app-search></app-search>
         </div>
         <div class="mr-0 ml-0 mt-4 mb-0 p-0 w-100 justify-content-center row">
-          <div class="col-12 col-sm-2 d-none d-sm-block" v-for="(item, index) in nextEvents" :key='index'>
-            <p class="next__events  p-2" @click="goto('event', item)">
+          <div class="col-12 col-sm-2  d-none d-sm-block" v-for="(item, index) in nextEvents" :key='index'>
+            <p class="next__events p-2" @click="goto('event', item)">
               {{item.ds_evento}}
             </p>
           </div>
@@ -30,23 +30,25 @@
           <div class="item__slide">
             <div class="row">
               <div class="col-md-8  col-xs-12 nopadding">
-                  <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
+                <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
                     <img :src="item.img" alt="" style="width:100%;">
                   </span>
               </div>
-              <div class="col-md-4 visible-md visible-lg" style="height:320px;padding:30px;">
-                <h3 class="">{{item.ds_evento}}</h3>
+              <div class="col-md-4 visible-md visible-lg to__slide" style="height:320px;padding:30px;">
+                <h3 class="" style="font-size: 24px">{{item.ds_evento}}</h3>
                 <div class="">
                   <div class="event-name pull-left">
                     <p> {{item.bannerDescription}} </p>
                     <div class="event-location-city">
+                    </div>
+                    <div class="event-location-city">
                       <i class="fa fa-map-marker color-grey"></i>
+                      {{item.ds_nome_teatro}} - 
                       {{item.ds_municipio}}, {{item.sg_estado}} </div>
                   </div>
                 </div>
-                <div class="button-event pt-4 w-100">
+                <div class="button-event pt-4 w-100 to__slide-button" style="">
                   <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: item.uri})" type="button">Comprar ingressos</button>
-
                 </div>
               </div>
             </div>
@@ -103,7 +105,7 @@
             </div>
           </div>
         </div>
-  
+
       </div>
     </div>
   </section>
@@ -140,13 +142,13 @@ export default {
       swiperOption: {
         loop: true,
         autoplay: true,
-        speed: 700,
+        speed: 900,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
         },
         autoplay: {
-          delay: 4000
+          delay: 5000
         },
         breakpoints: {}
       }
@@ -185,19 +187,19 @@ export default {
       switch (where) {
         case "local":
           this.$router.push("/busca/local/" + item);
-        break;
+          break;
         case "genre":
           this.$router.push("/busca/genero/" + item);
-        break;
+          break;
         case "city":
           this.$router.push("/busca/cidade/" + item);
-        break;
+          break;
         case "state":
           this.$router.push("/busca/estado/" + item);
-        break;
+          break;
         case "event":
           this.$router.push(item.uri);
-        break;
+          break;
       }
     },
     getListResultAgain() {
@@ -238,6 +240,7 @@ export default {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.bannerEvents = response;
+          console.log(this.bannerEvents);
         },
         error => {
           this.hideWaitAboveAll();
@@ -301,5 +304,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+input::placeholder {
+		color: #ccc !important;
+		font-size: 85%;
+	}
+
+	input::placeholder {
+		color: green !important;
+	}
  
 </style>
