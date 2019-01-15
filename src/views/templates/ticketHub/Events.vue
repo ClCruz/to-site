@@ -1,12 +1,12 @@
 <template>
 <div class="a">
   <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
-    <div class="container justify-content-center align-items-center d-flex p-5 container__search">
+    <div class="container justify-content-center align-items-center d-flex p-5 container__search--tickethub">
       <div class="col-10 justify-content-center text-center">
         <div class="d-none d-sm-block" style="">
           <h2>O quê deseja encontrar ?</h2>
         </div>
-        <div class="d-none d-sm-block input-group mt-4 mb-4 p-3 w-100">
+        <div class="d-none d-sm-block input-group mt-3 mb-3 p-3 w-100">
           <app-search></app-search>
         </div>
         <div class="mr-0 ml-0 mt-4 mb-0 p-0 w-100 justify-content-center row">

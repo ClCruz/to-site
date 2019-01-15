@@ -570,12 +570,16 @@
 	.v-suggestions input[type=text] {
 		width: 100%;
 		background: white url(/assets/icons/search.svg) no-repeat 10px center;
-		height: 35px;
+		height: 45px;
 		box-sizing: border-box;
 		color: black;
-		padding-left: 30px;
-		background-position-x: 5px;
+		padding-left: 35px;
+		background-position-x: 10px;
 		background-position-y: center;
+		background-size: 18px;
+		cursor: text;
+
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.1);
 	}
 	.v-suggestions input::placeholder {
 		color: #ccc;
@@ -584,13 +588,15 @@
 
 	.v-suggestions {
 		box-sizing: border-box;
+		width: 80%;
 	}
 
 	.v-suggestions input[type=text]:focus {
 		width: 100%;
-		padding-left: 30px;
-		background-position-x: 5px;
+		padding-left: 35px;
+		background-position-x: 10px;
 		background-position-y: center;
+		background-size: 18px;
 	}
 
 	.v-suggestions .items {
@@ -789,5 +795,11 @@
 .row__events .col-10 {
 	@include MQ(S) {
 		margin: 0 auto;
+	}
+}
+
+.container__search--tickethub {
+	@include MQ(S) {
+		display: none;
 	}
 }
