@@ -1,0 +1,46 @@
+{
+  "env": "production",
+  "host": "teatromodulodemo.tk",
+  "uri": "https://www.teatromodulodemo.tk",
+  "api": "https://api.teatromodulodemo.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.teatromodulodemo.tk",
+  "apikey": "live_fe6854cf54b74e568f58cc7c531f4ea7bc0f1afffb5f4400846152d735ceaa05",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/teatromodulo/main.scss",
+  "css": "/stylesheets/themes/www.teatromodulodemo.tk/main.css",
+  "newTemplate": true,
+  "logo": "https://media.tixs.me/logos/logo-teatromodulo.jpg",
+  "favico": "/img/teatromodulo/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,teatromodulo,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "teatromodulodemo.tk | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "teatromodulodemo.tk",
+    "CNPJ": "11.111.111/1111-111",
+    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
+    "companyName": "Teatro para Todos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_teatromodulo/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_teatromodulo/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_teatromodulo/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_teatromodulo/emailComprador.html",
+      "gift": "../comprar/templates/multi_teatromodulo/emailPresente.html",
+      "signature": "../comprar/templates/multi_teatromodulo/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_teatromodulo/confirmacaoEmail.html"
+
+    }
+  }
+}
