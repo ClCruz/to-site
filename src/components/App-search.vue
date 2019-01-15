@@ -61,10 +61,14 @@ export default {
           });
         break;
         default:
-          if(/Android|webOS|iPhone||iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            this.searchQuery = querySelector('.header__mobile .inputautocomplete').value;
-            this.$children.query = this.searchQuery;
-            // this.$children[0].onQueryChanged(this.searchQuery);
+          if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            try {
+              this.searchQuery = querySelector('.header__mobile .inputautocomplete').value;
+              this.$children.query = this.searchQuery;
+              // this.$children[0].onQueryChanged(this.searchQuery);
+            } catch (e) {
+              console.log(e);
+            }
           }
         break;
       }

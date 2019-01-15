@@ -18,10 +18,10 @@
 
           <div class="collapse navbar-collapse justify-content-center col-md-8" id="navbarNav12">
             <ul class="navbar-nav mr-auto">
-              
+
             </ul>
             <ul class="navbar-nav justify-content-center">
-          
+
             </ul>
           </div>
 
@@ -73,11 +73,11 @@
       </div>
     </div>
     <div class="col-6 text-center mx-0 mx-auto">
-                  <div class="footer__logo text-left">
-            <router-link to="/">
-              <div class="img"></div>
-            </router-link>
-          </div>
+      <div class="footer__logo text-left">
+        <router-link to="/">
+          <div class="img"></div>
+        </router-link>
+      </div>
     </div>
     <div class="col-3">
       <div class="icon"></div>
@@ -314,7 +314,7 @@ export default {
               }
             );
           },
-           },
+        },
         {
           title: 'Verificando',
           position: 'center',
