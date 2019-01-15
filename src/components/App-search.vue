@@ -67,7 +67,7 @@ export default {
               this.$children.query = this.searchQuery;
               // this.$children[0].onQueryChanged(this.searchQuery);
             } catch (e) {
-              console.log(e);
+              console.log(e)
             }
           }
         break;
