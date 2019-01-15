@@ -175,6 +175,7 @@ export default {
             hours: [],
             form: {
                 codVenda: '',
+                codVendaToRefund: '',
                 id_pedido_venda: null,
                 nin: null,
                 selected: [],
@@ -288,7 +289,7 @@ export default {
             printService.ticket(this.get_id_base(), data.CodVenda, '');
         },
         refundIntern() {
-            purchaseService.refund(this.get_id_base(), this.getLoggedId(), this.form.codVenda, 0,this.form.selected.join(),this.form.inGatewayTo ? 1 : 0).then(response=> {
+            purchaseService.refund(this.get_id_base(), this.getLoggedId(), this.form.codVendaToRefund, 0,this.form.selected.join(),this.form.inGatewayTo ? 1 : 0).then(response=> {
                     if (this.validateJSON(response))
                     {
                         this.$swal.insertQueueStep({
@@ -390,11 +391,21 @@ export default {
 
         },
         rowSelected(record, index) {
+            if (this.form.codVendaToRefund == '')
+                this.form.codVendaToRefund = record.CodVenda;
+            else {
+                if (this.form.codVendaToRefund != record.CodVenda) {
+                    this.toastError("Só é possível escolher cadeiras do mesmo código venda.");        
+                    return;
+                }
+            }
+
             record._rowVariant = record._rowVariant == 'info' ? '' : 'info';
 
             let indice = record.Indice;
             let purchaseType = record.purchaseType;
             this.form.inGatewayTo = record.refundInGateway || record.refundInGateway == "1" || record.refundInGateway == 1;
+
 
             let found = this.form.selected.map(function(e) { return e; }).indexOf(indice);
             if (found!=-1)
