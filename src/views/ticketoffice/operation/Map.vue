@@ -14,8 +14,10 @@
                     </ul>
                 </span>
             </b-tooltip>
-            <div id="mapa_de_plateia" class="mapa_de_plateia" v-if="hasSeatNumber">
-                <img :src="map.img" />
+            <div id="mapa_de_plateia" :style="{
+                'max-width': ( map.width - 10 )+ 'px', 'min-height': map.height + 'px', 'margin' : '0 0 20px'
+            }" class="mapa_de_plateia" v-if="hasSeatNumber">
+                <img :src="map.img" :height="map.height" :width="map.width" style="max-width: 880px; margin: 0 0 20px;"/>
             </div>
         </span>
     </div>
@@ -337,9 +339,10 @@ export default {
                     this.hasSeatNumber = response.IngressoNumerado == "1";
                     if (this.hasSeatNumber)
                     {
+                        console.log(response);
                         this.map.img = response.FotoImagemSite;
-                        this.map.width = parseInt(response.LarguraSite) > 450 ? "450" : response.LarguraSite;
-                        this.map.height = parseInt(response.AlturaSite) > 350 ? "350" : response.AlturaSite;
+                        this.map.width = parseInt(response.LarguraSite);
+                        this.map.height = parseInt(response.AlturaSite);
                         this.getSeats(true);
                     }
                     else {
