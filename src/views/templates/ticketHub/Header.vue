@@ -73,9 +73,11 @@
       </div>
     </div>
     <div class="col-6 text-center mx-0 mx-auto">
-      <b-navbar-brand class="" href="/">
-        {{siteName}}
-      </b-navbar-brand>
+                  <div class="footer__logo text-left">
+            <router-link to="/">
+              <div class="img"></div>
+            </router-link>
+          </div>
     </div>
     <div class="col-3">
       <div class="icon"></div>
