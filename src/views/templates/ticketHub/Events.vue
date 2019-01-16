@@ -143,6 +143,7 @@ export default {
         loop: true,
         autoplay: true,
         speed: 900,
+        loopedSlides: 1,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
@@ -150,7 +151,22 @@ export default {
         autoplay: {
           delay: 5000
         },
-        breakpoints: {}
+        breakpoints: {},
+        on: {
+          slideChangeTransitionEnd: function () {
+            let me = this;
+            if (this.isEnd) {
+              if (this.autoplay.running) {
+                setTimeout(function(){ 
+                  console.log(me.params.speed);
+                    me.slideToLoop(0, me.params.speed);
+                    me.autoplay.stop();
+                    me.autoplay.start();
+                  }, this.params.autoplay.delay);   
+              }
+            }
+          }
+        }
       }
 
     }
