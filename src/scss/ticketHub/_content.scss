@@ -839,3 +839,30 @@
 		bottom: 0;
 	}
 }
+
+.swal2-modal {
+	background-color: #fff !important;
+	color: #333 !important;
+}
+
+.swal2-container.swal2-shown {
+	background-color: rgba(0, 0, 0, .2) !important;
+}
+
+.swal2-popup {
+	border-radius: 2px !important;
+	border-top: 4px solid $secundary;
+	padding-top: 3px;
+}
+
+.swal2-popup #swal2-content {
+	color: #333 !important;
+	font-weight: normal;
+	display: block;
+	font-size: 26px;
+	padding-bottom: 10px;
+}
+
+.swal2-popup .swal2-title {
+	color: #333 !important;
+}
