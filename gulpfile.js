@@ -92,6 +92,7 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('dist'));
 });
 
+//gulp favicon --whitelabel bringressos
 gulp.task('favicon', function() {
 	return gulp
 		.src('public/assets/logo-' + options.whitelabel + "*")
@@ -100,7 +101,7 @@ gulp.task('favicon', function() {
 				background: '#fff',
 				path: 'public/assets/favicons/',
 				scope: '/',
-				logging: false,
+				logging: true,
 				html: 'index.html',
 				pipeHTML: false,
 				replace: true,
