@@ -158,7 +158,6 @@ export default {
             if (this.isEnd) {
               if (this.autoplay.running) {
                 setTimeout(function(){ 
-                  console.log(me.params.speed);
                     me.slideToLoop(0, me.params.speed);
                     me.autoplay.stop();
                     me.autoplay.start();
