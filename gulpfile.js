@@ -22,6 +22,21 @@ gulp.task('sass', function() {
 		.pipe(livereload());
 });
 
+gulp.task('sassLocal', function() {
+	gulp
+		.src('./src/scss/themes/**/*.scss')
+		// .pipe(sourcemaps.init())
+		.pipe(
+			sass({
+				outputStyle: 'compressed'
+			}).on('error', sass.logError)
+		)
+		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'android 4'))
+		// .pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest('./public/assets/css/'))
+		.pipe(livereload());
+});
+
 gulp.task('sassLocalhost', function() {
 	gulp
 		.src('./src/scss/themes/www.tixs.me/main.scss')
@@ -71,8 +86,8 @@ gulp.task('sassLocalhost', function() {
 
 gulp.task('watch', function() {
 	livereload.listen();
-	gulp.watch('./src/scss/**/*.scss', [ 'sass' ]);
-	gulp.watch('./src/scss/**/*.scss', [ 'sassLocalhost' ]);
+	gulp.watch('./src/scss/**/*.scss', [ 'sassLocal' ]);
+	// gulp.watch('./src/scss/**/*.scss', [ 'sassLocalhost' ]);
 	gulp.watch([ './src/**/*.css' ], function(files) {
 		livereload.changed(files);
 	});
