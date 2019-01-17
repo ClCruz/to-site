@@ -28,12 +28,19 @@
   <app-footer></app-footer>
 
 </div>
-<div v-else>
+<div v-else-if="!isNewTemplate">
   <header-ticket-hub></header-ticket-hub>
   <transition name="component-fade" mode="out-in">
     <router-view :key="$route.fullPath"></router-view>
   </transition>
   <footer-ticket-hub></footer-ticket-hub>
+</div>
+<div v-else>
+  <header-ticket-hub-video-background></header-ticket-hub-video-background>
+  <transition name="component-fade" mode="out-in">
+    <router-view :key="$route.fullPath"></router-view>
+  </transition>
+  <footer-ticket-hub-video-background></footer-ticket-hub-video-background>
 </div>
 </template>
 
@@ -42,6 +49,8 @@ import AppHeader from "@/components/App-header";
 import AppFooter from "@/components/App-footer";
 import HeaderTicketHub from "@/views/templates/ticketHub/Header"
 import FooterTicketHub from "@/views/templates/ticketHub/Footer"
+import HeaderTicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Header"
+import FooterTicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Footer"
 import { func } from '@/functions';
 import config from '@/config';
 
@@ -58,7 +67,9 @@ export default {
     AppHeader,
     AppFooter,
     HeaderTicketHub,
-    FooterTicketHub
+    FooterTicketHub,
+    HeaderTicketHubVideoBackground,
+    FooterTicketHubVideoBackground
   },
   methods: {
   },

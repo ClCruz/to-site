@@ -1,6 +1,11 @@
 <template>
+    <!-- tixs.me -->
     <app-slider v-if="!isNewTemplate"></app-slider>
-    <ticket-hub-events v-else></ticket-hub-events>
+    <!-- Template 2 -->
+    <ticket-hub-events v-else-if="!isNewTemplate"></ticket-hub-events>
+    <!-- Template 3 (Fred) -->
+    <ticket-hub-video-background v-else></ticket-hub-video-background>
+    <!-- Template 4 (Header com busca) -->
 </template>
 
 
@@ -10,6 +15,7 @@ import Vue from "vue";
 import VueHead from 'vue-head';
 import AppSlider from "@/components/App-slider.vue";
 import TicketHubEvents from "@/views/templates/ticketHub/Events.vue";
+import TicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Events.vue";
 import VueGeolocation from "vue-browser-geolocation";
 import VueResource from "vue-resource";
 import config from "@/config";
@@ -27,7 +33,8 @@ export default {
   mixins: [func],
   components: {
     AppSlider,
-    TicketHubEvents
+    TicketHubEvents,
+    TicketHubVideoBackground
   },
   head: {
     title: function () {
