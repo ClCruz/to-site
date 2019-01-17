@@ -1,0 +1,46 @@
+{
+  "env": "production",
+  "host": "famillyproducoesdemo.tk",
+  "uri": "https://www.famillyproducoesdemo.tk",
+  "api": "https://api.famillyproducoesdemo.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.famillyproducoesdemo.tk",
+  "apikey": "live_fe6854cf54b74e568f58cc7c531f4ea7bc0f1afffb5f4400846152d735ceaa05",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/famillyproducoes/main.scss",
+  "css": "/stylesheets/themes/www.famillyproducoesdemo.tk/main.css",
+  "newTemplate": true,
+  "logo": "https://media.tixs.me/logos/logo-famillyproducoes.jpeg",
+  "favico": "/img/famillyproducoes/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,famillyproducoes,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Familly Producoes | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "sitename": "Familly Produções",
+    "CNPJ": "11.111.111/1111-111",
+    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
+    "companyName": "famillyproducoes"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_famillyproducoes/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_famillyproducoes/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_famillyproducoes/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_famillyproducoes/emailComprador.html",
+      "gift": "../comprar/templates/multi_famillyproducoes/emailPresente.html",
+      "signature": "../comprar/templates/multi_famillyproducoes/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_famillyproducoes/confirmacaoEmail.html"
+
+    }
+  }
+}

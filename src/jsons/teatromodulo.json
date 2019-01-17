@@ -11,7 +11,7 @@
   "scss": "./src/scss/themes/teatromodulo/main.scss",
   "css": "/stylesheets/themes/www.teatromodulodemo.tk/main.css",
   "newTemplate": true,
-  "logo": "https://media.tixs.me/logos/logo-teatromodulo.jpg",
+  "logo": "https://media.tixs.me/logos/logo-teatromodulo.png",
   "favico": "/img/teatromodulo/",
   "meta": {
     "description": "Venda de Ingressos",

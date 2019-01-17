@@ -24,7 +24,20 @@
   <section id="section__slider">
     <div class="container pt-4">
       <!-- swiper -->
-      <swiper :options="swiperOption">
+      <div v-if="!slideLoaded">
+        <div class="item__slide">
+          <div class="row">
+            <div class="col-md-8  col-xs-12 nopadding">
+              <CarrouselLoader class="nopadding" style="max-height: 320px;padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
+            </div>
+            <div class="col-md-4 visible-md visible-lg to__slide nopadding" style="height:320px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+              <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <swiper :options="swiperOption" v-else>
 
         <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
           <div class="item__slide">
@@ -43,7 +56,7 @@
                     </div>
                     <div class="event-location-city">
                       <i class="fa fa-map-marker color-grey"></i>
-                      {{item.ds_nome_teatro}} - 
+                      {{item.ds_nome_teatro}} -
                       {{item.ds_municipio}}, {{item.sg_estado}} </div>
                   </div>
                 </div>
@@ -120,6 +133,8 @@ import {
 } from '@/functions';
 import AppSearch from "@/components/App-search.vue";
 import config from '@/config';
+import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
+import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
 
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
@@ -132,6 +147,7 @@ export default {
   mixins: [func],
   data() {
     return {
+      slideLoaded: false,
       slideData: [],
       cityList: [],
       localsList: [],
@@ -142,7 +158,7 @@ export default {
       swiperOption: {
         loop: true,
         autoplay: true,
-        speed: 900,
+        speed: 1000,
         loopedSlides: 1,
         pagination: {
           el: '.swiper-pagination',
@@ -151,17 +167,18 @@ export default {
         autoplay: {
           delay: 5000
         },
+
         breakpoints: {},
         on: {
           slideChangeTransitionEnd: function () {
             let me = this;
             if (this.isEnd) {
               if (this.autoplay.running) {
-                setTimeout(function(){ 
-                    me.slideToLoop(0, me.params.speed);
-                    me.autoplay.stop();
-                    me.autoplay.start();
-                  }, this.params.autoplay.delay);   
+                setTimeout(function () {
+                  me.slideToLoop(0, me.params.speed);
+                  me.autoplay.stop();
+                  me.autoplay.start();
+                }, this.params.autoplay.delay);
               }
             }
           }
@@ -172,6 +189,8 @@ export default {
   },
   components: {
     AppSearch,
+    CarrouselLoader,
+    CarrouselTextLoader
   },
   methods: {
     next() {
@@ -256,6 +275,7 @@ export default {
         response => {
           this.bannerEvents = response;
           console.log(this.bannerEvents);
+          this.slideLoaded = true;
         },
         error => {
           this.hideWaitAboveAll();
@@ -320,12 +340,11 @@ export default {
 
 <style lang="scss" scoped>
 input::placeholder {
-		color: #ccc !important;
-		font-size: 85%;
-	}
+  color: #ccc !important;
+  font-size: 85%;
+}
 
-	input::placeholder {
-		color: green !important;
-	}
- 
+input::placeholder {
+  color: green !important;
+}
 </style>

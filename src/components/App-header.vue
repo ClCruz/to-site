@@ -334,6 +334,7 @@ export default {
         allowOutsideClick: false,
         allowEnterKey: false,
         showConfirmButton: false,
+          animation: false,
         customClass: 'swal-theme',
         text: 'Efetuando o login.',
       });
@@ -372,6 +373,7 @@ export default {
           position: 'center',
           input: 'email',
           showCloseButton: true,
+          animation: false,
           customClass: 'swal-theme',
           inputPlaceholder: 'Digite seu e-mail',
           text: 'Já tem cadastro?',
