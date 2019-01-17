@@ -1,17 +1,18 @@
 <template>
-  <footer class="to-block footer-small bg-dark mt-4" style="font-size: 12px">
-    <div class="container  pt-4 pb-2">
-      <div class="row text-center align-items-center">
-        <div class="col-12 col-lg-2 text-lg-left">
-          <div class="footer__logo text-left">
-            <router-link to="/">
-              <div class="img"></div>
-            </router-link>
-          </div>
+<footer class="to-block footer-small bg-dark mt-4" style="font-size: 12px">
+  <div class="container  pt-4 pb-2">
+    <div class="row text-center align-items-center">
+      <div class="col-12 col-lg-2 text-lg-left">
+        <div class="footer__logo text-left">
+          <router-link to="/">
+            <div class="img"></div>
+          </router-link>
         </div>
+      </div>
 
-        <div class="col mt-4 mt-lg-0 text-center">
-          <ul class="nav justify-content-center">
+      <div class="col mt-4 mt-lg-0 text-center">
+        <div class="row nopadding">
+          <ul class="nav justify-content-center mx-0 nopadding">
             <li class="nav-item">
               <a href="#" class="nav-link" @click="loadSACPage('company','sobre')">
                 Sobre a empresa
@@ -40,24 +41,25 @@
           </ul>
         </div>
 
-        <div class="col-12 col-lg-2 mt-4 mt-lg-0 text-lg-right">
-          <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
+        <div class="row mt-4 nopadding">
+          <div class="col text-center">
+            <span style="color: #ccc">{{companyName}} - {{companyAddress}} - CNPJ: {{CNPJ}} </span>
+          </div>
+        </div>
+        <div class="row mt-4 nopadding mb-0 pb-0">
+          <div class="col text-center">
+            2018 {{siteName}}, Inc.
+          </div>
         </div>
       </div>
 
-      <div class="row mt-4">
-        <div class="col text-center">
-          <span style="color: #ccc">{{companyName}} - {{companyAddress}} - CNPJ: {{CNPJ}} </span>
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col text-center">
-          2018 {{siteName}},  Inc.
-        </div>
+      <div class="col-12 col-lg-2 mt-4 mt-lg-0 text-lg-right">
+        <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
       </div>
     </div>
-  </footer>
+
+  </div>
+</footer>
 </template>
 
 <script>
@@ -128,7 +130,6 @@ export default {
       });
     },
   },
-
 
   data: function () {
     return {
