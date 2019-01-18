@@ -6,18 +6,18 @@
     </video>
   </section>
 
-  <section id="section__slider" style="margin-top: 100vh">
-    <div class="container pt-4">
+  <section id="section__slider" class="pt-4" style="margin-top: 100vh">
+     <div class="container">
       <!-- swiper -->
       <div v-if="!slideLoaded">
         <div class="item__slide">
           <div class="row">
-            <div class="col-md-8  col-xs-12 nopadding">
-              <CarrouselLoader class="nopadding" style="max-height: 320px;padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
+            <div class="col-md-8  col-xs-12 nopadding" style="height: 350px">
+              <CarrouselLoader class="nopadding" style="max-height: 350px;padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
             </div>
-            <div class="col-md-4 visible-md visible-lg to__slide nopadding" style="height:320px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+            <div class="col-md-4 visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
               <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
-              
+
             </div>
           </div>
         </div>
@@ -58,8 +58,7 @@
       </swiper>
     </div>
   </section>
-
-  <section class="features" data-block-type="features" data-id="3">
+  <section class="features" style="background: white" data-block-type="features" data-id="3">
     <div class="container">
       <div class="row text-left pt-3 pb-1">
         <div class="col-12 col-sm-12 text-left">

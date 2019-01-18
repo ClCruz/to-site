@@ -1,17 +1,17 @@
 <template>
 <div class="a">
-  <section id="">
-    <div class="container pt-4">
+  <section id="" class="bg__main pt-4 pb-4">
+    <div class="container">
       <!-- swiper -->
       <div v-if="!slideLoaded">
         <div class="item__slide">
           <div class="row">
-            <div class="col-md-8  col-xs-12 nopadding">
-              <CarrouselLoader class="nopadding" style="max-height: 320px;padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
+            <div class="col-md-8  col-xs-12 nopadding" style="height: 350px">
+              <CarrouselLoader class="nopadding" style="max-height: 350px;padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
             </div>
-            <div class="col-md-4 visible-md visible-lg to__slide nopadding" style="height:320px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+            <div class="col-md-4 visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
               <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
-              
+
             </div>
           </div>
         </div>
@@ -19,11 +19,11 @@
       <swiper :options="swiperOption" v-else>
 
         <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
-          <div class="item__slide">
+          <div class="item__slide" style="height: 350px;">
             <div class="row">
               <div class="col-md-8  col-xs-12 nopadding">
                 <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
-                    <img :src="item.img" alt="" style="width:100%;">
+                    <img :src="item.img" alt="" style="width:100%; height: 350px;">
                   </span>
               </div>
               <div class="col-md-4 visible-md visible-lg to__slide" style="height:320px;padding:30px;">
@@ -253,8 +253,10 @@ export default {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.bannerEvents = response;
-          console.log(this.bannerEvents);
-          this.slideLoaded = true;
+          setTimeout(() => {
+            this.slideLoaded = true;
+          }, 1000)
+
         },
         error => {
           this.hideWaitAboveAll();
