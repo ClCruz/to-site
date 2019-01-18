@@ -1,13 +1,13 @@
 
 <template>
 	<content-loader
-		:height="350"
-		:width="775"
+		:height="390"
+		:width="790"
 		:speed="4"
 		primaryColor="#f3f3f3"
 		secondaryColor="#ecebeb"
 	>
-		<rect x="0" y="0" rx="0" ry="0" width="775" height="350" /> 
+		<rect x="0" y="0" rx="20" ry="10" width="790" height="390" /> 
 	</content-loader>
 </template>
 

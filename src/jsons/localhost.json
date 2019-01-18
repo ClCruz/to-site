@@ -8,7 +8,7 @@
   "apikey": "live_185e1621cf994a99ba945fe9692d4bf6d66ef03a1fcc47af8ac909dbcea53fb5",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "template": "ticketHub",
+  "template": "ticketHubSearchHeader",
   "css": "/stylesheets/themes/tixsme/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "favico": "/img/tixsme/",
