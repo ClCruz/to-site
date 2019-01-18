@@ -25,7 +25,7 @@ $gradiente: $secundary !important;
 	background: $secundary !important;
 }
 
-&:hover {
+.swal2-progresscircle:hover {
 	-webkit-transform: translateY(-2px);
 	transform: translateY(-2px);
 	@include box-shadow();
