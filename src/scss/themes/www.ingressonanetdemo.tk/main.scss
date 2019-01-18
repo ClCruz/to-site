@@ -3,48 +3,41 @@
 @import "override.scss";
 @import "../../to-framework/main.scss";
 
-@if $template != 'tixs' {
-	@include grid;
-	@include header;
-	@include content;
-	@include footer;
+header.bg-dark {
+	// background-color: rgb(202, 8, 19) !important;
+	background-color: rgba(255, 255, 255, 0.9) !important;
+}
 
-	header.bg-dark {
-		// background-color: rgb(202, 8, 19) !important;
-		background-color: rgba(255, 255, 255, 0.9) !important;
+.bg-main {
+}
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+}
+
+$gradiente: $secundary !important;
+
+.swal2-progresscircle {
+	background: $secundary !important;
+}
+
+.swal2-styled {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $secundary !important;
+	border: none;
+	color: white;
+	transition: 0.5s;
+
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
 	}
+}
 
-	.bg-main {
-	}
-	.header__logo .img {
-		height: 55px;
-		width: 100%;
-	}
-
-	$gradiente: $secundary !important;
-
-	.swal2-progresscircle {
-		background: $secundary !important;
-	}
-
-	.swal2-styled {
-		font-size: 0.8rem;
-		padding-left: 20px;
-		padding-right: 20px;
-		margin-top: 5px;
-		background: $secundary !important;
-		border: none;
-		color: white;
-		transition: 0.5s;
-
-		&:hover {
-			-webkit-transform: translateY(-2px);
-			transform: translateY(-2px);
-			@include box-shadow();
-		}
-	}
-
-	.header__signin {
-		color: #333;
-	}
+.header__signin {
+	color: #333;
 }

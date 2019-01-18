@@ -2,10 +2,3 @@
 @import "../../main.scss";
 @import "override.scss";
 @import "../../to-framework/main.scss";
-
-@if $template != 'tixs' {
-	@include grid;
-	@include header;
-	@include content;
-	@include footer;
-}
