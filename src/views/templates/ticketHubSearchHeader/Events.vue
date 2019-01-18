@@ -1,12 +1,6 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main" style="position: absolute; top: 0; width: 99vw; z-index: -1" data-block-type="call_to_action" data-id="2">
-    <video autoplay muted loop id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
-      <source src="/assets/teste2.mp4" type="video/mp4">
-    </video>
-  </section>
-
-  <section id="section__slider" style="margin-top: 100vh">
+  <section id="">
     <div class="container pt-4">
       <!-- swiper -->
       <div v-if="!slideLoaded">
@@ -59,7 +53,7 @@
     </div>
   </section>
 
-  <section class="features" data-block-type="features" data-id="3">
+  <section class="features" style="background: white" data-block-type="features" data-id="3">
     <div class="container">
       <div class="row text-left pt-3 pb-1">
         <div class="col-12 col-sm-12 text-left">
@@ -323,6 +317,5 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
 </style>

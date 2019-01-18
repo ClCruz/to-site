@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid" v-if="!isNewTemplate">
+<div class="container-fluid" v-if="template == 'tixs'">
   <section class="main main__itau" v-if="$route.path.includes('/itau')">
     <app-header :key="idappheader" v-if="!isTicketOffice"></app-header>
     <div style="">
@@ -28,19 +28,26 @@
   <app-footer></app-footer>
 
 </div>
-<div v-else-if="!isNewTemplate">
+<div v-else-if="template == 'ticketHub'">
   <header-ticket-hub></header-ticket-hub>
   <transition name="component-fade" mode="out-in">
     <router-view :key="$route.fullPath"></router-view>
   </transition>
   <footer-ticket-hub></footer-ticket-hub>
 </div>
-<div v-else>
+<div v-else-if="template == 'ticketHubVideo'">
   <header-ticket-hub-video-background></header-ticket-hub-video-background>
   <transition name="component-fade" mode="out-in">
     <router-view :key="$route.fullPath"></router-view>
   </transition>
   <footer-ticket-hub-video-background></footer-ticket-hub-video-background>
+</div>
+<div v-else>
+  <header-ticket-hub-search-header></header-ticket-hub-search-header>
+  <transition name="component-fade" mode="out-in">
+    <router-view :key="$route.fullPath"></router-view>
+  </transition>
+  <footer-ticket-hub-search-header></footer-ticket-hub-search-header>
 </div>
 </template>
 
@@ -49,6 +56,8 @@ import AppHeader from "@/components/App-header";
 import AppFooter from "@/components/App-footer";
 import HeaderTicketHub from "@/views/templates/ticketHub/Header"
 import FooterTicketHub from "@/views/templates/ticketHub/Footer"
+import HeaderTicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Header"
+import FooterTicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Footer"
 import HeaderTicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Header"
 import FooterTicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Footer"
 import { func } from '@/functions';
@@ -68,12 +77,15 @@ export default {
     AppFooter,
     HeaderTicketHub,
     FooterTicketHub,
+    HeaderTicketHubSearchHeader,
+    FooterTicketHubSearchHeader,
     HeaderTicketHubVideoBackground,
     FooterTicketHubVideoBackground
   },
   methods: {
   },
   created() {
+    console.log(this.template);
     if (this.queryString("logout")) {
       this.$store.dispatch('logout');
     }

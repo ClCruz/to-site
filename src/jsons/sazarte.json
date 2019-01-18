@@ -10,7 +10,7 @@
   "ga": "",
   "template": "www.sazarteingressos.com.br",
   "css": "/stylesheets/themes/sazarte/main.css",
-  "newTemplate": true,
+  "template": "ticketHub",
 
   "logo": "https://media.tixs.me/logos/logo-sazarte.jpeg",
   "favico": "/img/sazarte/",

@@ -10,7 +10,7 @@
   "ga": "",
   "template": "default",
   "css": "/stylesheets/themes/tixsme/main.css",
-  "newTemplate": false,
+  "template": "tixs",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "favico": "/img/tixsme/",
   "meta": {

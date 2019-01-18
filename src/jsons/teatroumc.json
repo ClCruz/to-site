@@ -10,7 +10,7 @@
   "ga": "",
   "scss": "./src/scss/themes/www.teatroumc.tk/main.scss",
   "css": "/stylesheets/themes/www.teatroumc.tk/main.css",
-  "newTemplate": true,
+  "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/teatroumc.png",
   "favico": "/img/teatroumc/",
   "meta": {

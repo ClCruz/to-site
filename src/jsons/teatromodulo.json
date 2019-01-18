@@ -10,7 +10,7 @@
   "ga": "",
   "scss": "./src/scss/themes/teatromodulo/main.scss",
   "css": "/stylesheets/themes/www.teatromodulodemo.tk/main.css",
-  "newTemplate": true,
+  "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/logo-teatromodulo.png",
   "favico": "/img/teatromodulo/",
   "meta": {

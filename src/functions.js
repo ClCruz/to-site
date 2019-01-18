@@ -34,8 +34,8 @@ export const func = {
         }
     },
     computed: {
-        isNewTemplate() {
-            return config.info.newTemplate;
+        template() {
+            return config.info.template;
         }
     },
     methods: {

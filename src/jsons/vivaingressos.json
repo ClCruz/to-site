@@ -11,7 +11,7 @@
   "template": "www.xwxy.com.br",
   "css": "/stylesheets/themes/vivaingressos/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
-  "newTemplate": true,
+  "template": "ticketHub",
   "favico": "/img/vivaingressos/",
   "meta": {
     "description": "Venda de Ingressos",

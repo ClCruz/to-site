@@ -1,17 +1,20 @@
 @import "settings.scss";
 @import "../../main.scss";
 @import "override.scss";
-@import "../../ticketHub/main.scss";
+@import "../../to-framework/main.scss";
 
-@if $tickethub == true {
-	@include ticketoffice;
+@if $template != 'tixs' {
+	@include grid;
 	@include header;
 	@include content;
 	@include footer;
 
 	header.bg-dark {
 		// background-color: rgb(202, 8, 19) !important;
-		background-color: rgb(255, 255, 255) !important;
+		background-color: rgba(255, 255, 255, 0.9) !important;
+	}
+
+	.bg-main {
 	}
 	.header__logo .img {
 		height: 55px;

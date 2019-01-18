@@ -339,12 +339,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-input::placeholder {
-  color: #ccc !important;
-  font-size: 85%;
-}
-
-input::placeholder {
-  color: green !important;
-}
 </style>

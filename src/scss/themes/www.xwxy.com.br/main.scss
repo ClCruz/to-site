@@ -1,10 +1,10 @@
 @import "settings.scss";
 @import "../../main.scss";
 @import "override.scss";
-@import "../../ticketHub/main.scss";
+@import "../../to-framework/main.scss";
 
-@if $tickethub == true {
-	@include ticketoffice;
+@if $template != 'tixs' {
+	@include grid;
 	@include header;
 	@include content;
 	@include footer;

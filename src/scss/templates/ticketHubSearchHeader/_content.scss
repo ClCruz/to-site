@@ -1,0 +1,16 @@
+@mixin contentTicketHubSearchHeader {
+	.content__show {
+		padding-bottom: 50px;
+		margin-top: 0;
+		padding-top: 50px;
+		overflow-x: hidden;
+	}
+
+	body {
+		overflow-x: hidden !important;
+	}
+
+	.features {
+		background-color: #fff !important;
+	}
+}

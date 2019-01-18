@@ -1,10 +1,11 @@
 <template>
     <!-- tixs.me -->
-    <app-slider v-if="!isNewTemplate"></app-slider>
+    <app-slider v-if="template == 'tixs'"></app-slider>
     <!-- Template 2 -->
-    <ticket-hub-events v-else-if="!isNewTemplate"></ticket-hub-events>
+    <ticket-hub-events v-else-if="template == 'ticketHub'"></ticket-hub-events>
     <!-- Template 3 (Fred) -->
-    <ticket-hub-video-background v-else></ticket-hub-video-background>
+    <ticket-hub-video-background v-else-if="template == 'ticketHubVideo'"></ticket-hub-video-background>
+    <ticket-hub-search-header v-else></ticket-hub-search-header>
     <!-- Template 4 (Header com busca) -->
 </template>
 
@@ -15,6 +16,7 @@ import Vue from "vue";
 import VueHead from 'vue-head';
 import AppSlider from "@/components/App-slider.vue";
 import TicketHubEvents from "@/views/templates/ticketHub/Events.vue";
+import TicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Events.vue";
 import TicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Events.vue";
 import VueGeolocation from "vue-browser-geolocation";
 import VueResource from "vue-resource";
@@ -34,6 +36,7 @@ export default {
   components: {
     AppSlider,
     TicketHubEvents,
+    TicketHubSearchHeader,
     TicketHubVideoBackground
   },
   head: {

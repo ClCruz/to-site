@@ -778,10 +778,6 @@
 		max-height: 56vh !important;
 	}
 
-	.time__card {
-		max-height: 73vh !important;
-	}
-
 	.containerNew {
 		margin-bottom: 100px;
 		margin-top: -150px;
@@ -789,10 +785,6 @@
 
 	.btn-secondary {
 		border-color: 0px solid black !important;
-	}
-
-	.content__show {
-		margin-top: -150px;
 	}
 }
 
@@ -870,4 +862,8 @@
 	.swal2-progresssteps {
 		padding-top: 20px;
 	}
+}
+
+header.bg-dark {
+	background-color: transparent !important;
 }

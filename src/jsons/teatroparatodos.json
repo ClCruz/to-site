@@ -10,7 +10,7 @@
   "ga": "",
   "scss": "./src/scss/themes/teatroparatodos/main.scss",
   "css": "/stylesheets/themes/www.teatroparatodos.tk/main.css",
-  "newTemplate": true,
+  "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/logo-teatroparatodos.jpg",
   "favico": "/img/teatroparatodos/",
   "meta": {
