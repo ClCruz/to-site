@@ -46,11 +46,11 @@
 var link = document.createElement('link');
 link.rel = "stylesheet";
 link.type = "text/css";
-if (!window.location.hostname.startsWith("www")) {
-  link.href = "/assets/css/www.famillyproducoesdemo.tk/main.css";
-} else {
-  link.href = "/assets/css/" + window.location.hostname + "/main.css";
-}
+// if (!window.location.hostname.startsWith("www")) {
+//   link.href = "/assets/css/www.famillyproducoesdemo.tk/main.css";
+// } else {
+// }
+link.href = "/assets/css/" + window.location.hostname + "/main.css";
 document.head.appendChild(link);
 
 //document.querySelector('body').style.display = 'unset';
