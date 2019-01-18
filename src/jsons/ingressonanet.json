@@ -10,7 +10,7 @@
   "ga": "",
   "scss": "./src/scss/themes/ingressonanet/main.scss",
   "css": "/stylesheets/themes/www.ingressonanet.tk/main.css",
-  "newTemplate": true,
+  "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/logo-ingressonanet.jpg",
   "favico": "/img/ingressonanet/",
   "meta": {

@@ -1,47 +1,40 @@
 @import "settings.scss";
 @import "../../main.scss";
 @import "override.scss";
-@import "../../ticketHub/main.scss";
+@import "../../to-framework/main.scss";
 
-@if $tickethub == true {
-	@include ticketoffice;
-	@include header;
-	@include content;
-	@include footer;
+header.bg-dark {
+	// background-color: rgb(202, 8, 19) !important;
+	background-color: rgb(255, 255, 255) !important;
+}
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+}
 
-	header.bg-dark {
-		// background-color: rgb(202, 8, 19) !important;
-		background-color: rgb(255, 255, 255) !important;
+$gradiente: $secundary !important;
+
+.swal2-progresscircle {
+	background: $secundary !important;
+}
+
+.swal2-styled {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $secundary !important;
+	border: none;
+	color: white;
+	transition: 0.5s;
+
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
 	}
-	.header__logo .img {
-		height: 55px;
-		width: 100%;
-	}
+}
 
-	$gradiente: $secundary !important;
-
-	.swal2-progresscircle {
-		background: $secundary !important;
-	}
-
-	.swal2-styled {
-		font-size: 0.8rem;
-		padding-left: 20px;
-		padding-right: 20px;
-		margin-top: 5px;
-		background: $secundary !important;
-		border: none;
-		color: white;
-		transition: 0.5s;
-
-		&:hover {
-			-webkit-transform: translateY(-2px);
-			transform: translateY(-2px);
-			@include box-shadow();
-		}
-	}
-
-	.header__signin {
-		color: #333;
-	}
+.header__signin {
+	color: #333;
 }

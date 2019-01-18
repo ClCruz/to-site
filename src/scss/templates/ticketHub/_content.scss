@@ -1,0 +1,9 @@
+@mixin contentTicketHub {
+	.content__show {
+		margin-top: -150px;
+	}
+
+	.time__card {
+		max-height: 73vh !important;
+	}
+}

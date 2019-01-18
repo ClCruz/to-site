@@ -21,18 +21,18 @@
 
   </section>
 
-  <section id="section__slider">
-    <div class="container pt-4">
+  <section class="pt-4" id="section__slider">
+        <div class="container">
       <!-- swiper -->
       <div v-if="!slideLoaded">
         <div class="item__slide">
           <div class="row">
-            <div class="col-md-8  col-xs-12 nopadding">
-              <CarrouselLoader class="nopadding" style="max-height: 320px;padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
+            <div class="col-md-8  col-xs-12 nopadding" style="height: 350px">
+              <CarrouselLoader class="nopadding" style="max-height: 350px;padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
             </div>
-            <div class="col-md-4 visible-md visible-lg to__slide nopadding" style="height:320px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+            <div class="col-md-4 visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
               <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
-              
+
             </div>
           </div>
         </div>
@@ -339,12 +339,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-input::placeholder {
-  color: #ccc !important;
-  font-size: 85%;
-}
-
-input::placeholder {
-  color: green !important;
-}
 </style>

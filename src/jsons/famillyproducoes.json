@@ -10,8 +10,8 @@
   "ga": "",
   "scss": "./src/scss/themes/famillyproducoes/main.scss",
   "css": "/stylesheets/themes/www.famillyproducoesdemo.tk/main.css",
-  "newTemplate": true,
-  "logo": "https://media.tixs.me/logos/logo-famillyproducoes.png",
+  "template": "ticketHubSearchHeader",
+  "logo": "https://media.tixs.me/logos/logo-famillyproducoes.jpeg",
   "favico": "/img/famillyproducoes/",
   "meta": {
     "description": "Venda de Ingressos",

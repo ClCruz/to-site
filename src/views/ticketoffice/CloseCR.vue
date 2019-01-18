@@ -30,8 +30,6 @@
                             <span>{{calc(data.item.amount, data.item.amountInput) | money}}</span>
                         </template>
 
-                        <template slot="FOOT_TipForPagto" slot-scope="data">
-                        </template>
                         <template slot="FOOT_amount" slot-scope="data">
                             <strong>{{sum(data.column) | money}}</strong>
                         </template>

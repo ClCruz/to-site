@@ -11,7 +11,7 @@ const mytext = {
   meta_description: multi.meta.description,
   meta_keywords: multi.meta.keywords,
   favicoPath: multi.favico,
-  newTemplate: multi.newTemplate,
+  template: multi.template,
 }
 
 export default Object.assign({}, mytext);

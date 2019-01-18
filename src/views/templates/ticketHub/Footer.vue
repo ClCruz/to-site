@@ -43,7 +43,7 @@
 
         <div class="row mt-4 nopadding">
           <div class="col text-center">
-            <span style="color: #ccc">{{companyName}} - {{companyAddress}} - CNPJ: {{CNPJ}} </span>
+            <span>{{companyName}} - {{companyAddress}} - CNPJ: {{CNPJ}} </span>
           </div>
         </div>
         <div class="row mt-4 nopadding mb-0 pb-0">

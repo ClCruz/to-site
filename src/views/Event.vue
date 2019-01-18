@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="isNewTemplate">
+    <div v-if="template == 'ticketHub'">
       <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
         <div class="container justify-content-center align-items-center d-flex p-5">
           <div class="col-10 justify-content-center text-center">

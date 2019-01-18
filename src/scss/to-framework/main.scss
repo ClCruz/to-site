@@ -1,0 +1,24 @@
+@import "_grid.scss";
+@import "_header.scss";
+@import "_content.scss";
+@import "_footer.scss";
+@import "../templates/ticketHub/main.scss";
+@import "../templates/ticketHubVideo/main.scss";
+@import "../templates/ticketHubSearchHeader/main.scss";
+
+@if $template != 'tixs' {
+	@include grid;
+	@include header;
+	@include content;
+	@include footer;
+}
+
+@if $template == 'ticketHub' {
+	@include contentTicketHub;
+}
+@if $template == 'ticketHubVideo' {
+	@include contentTicketHubVideo;
+}
+@if $template == 'ticketHubSearchHeader' {
+	@include contentTicketHubSearchHeader;
+}
