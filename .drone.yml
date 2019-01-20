@@ -19,7 +19,7 @@ steps:
 volumes:
 - name: wl
   host:
-    path: /var/www/unique
+    path: /hd/www/unique
 
 trigger:
   branch:
