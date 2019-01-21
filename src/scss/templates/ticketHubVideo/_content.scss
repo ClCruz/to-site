@@ -17,4 +17,25 @@
 		padding-top: 50px;
 		overflow-x: hidden;
 	}
+
+	#section__slider {
+		@include MQ(S) {
+			margin-top: 270px !important;
+		}
+	}
+
+	#app > div > div:nth-child(2) > section.to-block.to-viewport.bg-dark.bg__main {
+		@include MQ(S) {
+			top: 150px !important;
+		}
+	}
+
+	.v-suggestions {
+		z-index: 0 !important;
+	}
+
+	.container__sac {
+		margin-top: 0 !important;
+		padding-top: 40px;
+	}
 }

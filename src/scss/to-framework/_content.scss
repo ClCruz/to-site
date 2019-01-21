@@ -863,3 +863,8 @@
 		padding-top: 20px;
 	}
 }
+
+.nav__mobile {
+	visibility: hidden;
+	z-index: -500;
+}
