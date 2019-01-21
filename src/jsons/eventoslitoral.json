@@ -24,10 +24,10 @@
   "info": {
     "title": "Eventos Litoral | Venda de Ingressos",
     "description": "Venda de Ingressos",
-    "siteName": "eventoslitoraldemo.tk",
+    "siteName": "Eventos Litoral Demonstração",
     "CNPJ": "11.111.111/1111-111",
     "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
-    "companyName": "eventoslitoral"
+    "companyName": "Eventos Litoral"
   },
   "templates": {
     "print": {
