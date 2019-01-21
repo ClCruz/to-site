@@ -11,10 +11,10 @@
   "compra.ciadeingressos.com": "ciadeingressos",
   "localhost:2004": "localhost",
   "localhost:2002": "localhost",
-  "localhost:8080": "ingressonanet",
+  "localhost:8080": "eventoslitoral",
   "192.168.15.23:8080": "localhost",
   "192.168.15.23": "localhost",
-  "localhost": "localhost",
+  "localhost": "eventoslitoral",
   "localhost:2001": "localhost",
   "10.0.2.2:8080": "pinpad_lh",
   "10.0.2.2": "pinpad_lh",
@@ -62,5 +62,11 @@
   "compra.jjrproducoes.com.br": "jjrproducoes",
   "www.famillyproducoesdemo.tk": "famillyproducoes",
   "api.famillyproducoesdemo.tk": "famillyproducoes",
-  "compra.famillyproducoesdemo.tk": "famillyproducoes"
+  "compra.famillyproducoesdemo.tk": "famillyproducoes",
+  "www.amigoseciademo.tk": "amigosecia",
+  "api.amigoseciademo.tk": "amigosecia",
+  "compra.amigoseciademo.tk": "amigosecia",
+  "www.eventoslitoraldemo.tk": "eventoslitoral",
+  "api.eventoslitoraldemo.tk": "eventoslitoral",
+  "compra.eventoslitoraldemo.tk": "eventoslitoral"
 }

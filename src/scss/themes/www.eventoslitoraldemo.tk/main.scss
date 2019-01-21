@@ -1,0 +1,48 @@
+@import "settings.scss";
+@import "../../main.scss";
+@import "override.scss";
+@import "../../to-framework/main.scss";
+
+header.bg-dark {
+	// background-color: rgb(202, 8, 19) !important;
+	background-color: rgb(255, 255, 255) !important;
+}
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+}
+
+.bg-dark {
+	background-color: rgb(59, 165, 220) !important;
+}
+
+$gradiente: $secundary !important;
+
+.swal2-progresscircle {
+	background: $secundary !important;
+}
+
+.swal2-styled {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $secundary !important;
+	border: none;
+	color: white;
+	transition: 0.5s;
+
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
+	}
+}
+
+.header__signin {
+	color: #333;
+}
+
+#app > div > div:nth-child(2) > section.to-block.to-viewport.bg-dark.bg__main {
+	overflow-x: hidden !important;
+}

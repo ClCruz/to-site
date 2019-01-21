@@ -1,0 +1,46 @@
+{
+  "env": "production",
+  "host": "eventoslitoraldemo.tk",
+  "uri": "https://www.eventoslitoraldemo.tk",
+  "api": "https://api.eventoslitoraldemo.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.eventoslitoraldemo.tk",
+  "apikey": "live_fe6854cf54b74e568f58cc7c531f4ea7bc0f1afffb5f4400846152d735ceaa05",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/eventoslitoral/main.scss",
+  "css": "/stylesheets/themes/www.eventoslitoraldemo.tk/main.css",
+  "template": "ticketHubVideo",
+  "logo": "https://media.tixs.me/logos/logo-eventoslitoral.jpg",
+  "favico": "/img/eventoslitoral/",
+  "meta": {
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,eventoslitoral,br,me"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Eventos Litoral | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "eventoslitoraldemo.tk",
+    "CNPJ": "11.111.111/1111-111",
+    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
+    "companyName": "eventoslitoral"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_eventoslitoral/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_eventoslitoral/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_eventoslitoral/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_eventoslitoral/emailComprador.html",
+      "gift": "../comprar/templates/multi_eventoslitoral/emailPresente.html",
+      "signature": "../comprar/templates/multi_eventoslitoral/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_eventoslitoral/confirmacaoEmail.html"
+
+    }
+  }
+}

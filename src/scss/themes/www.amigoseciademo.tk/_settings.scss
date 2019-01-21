@@ -1,0 +1,28 @@
+@import 'mixins.scss';
+@import 'colors.scss';
+@import 'media.scss';
+
+$gradiente: $secundary;
+$gradiente-inv: linear-gradient(121.11deg, $secundary 0%, $primary 43.45%);
+
+$logo: '/assets/logo-amigosecia.png';
+
+$box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25);
+$box-shadow-2: 0px 2.23393px 2.23393px rgba(0, 0, 0, 0.24), 0px 0px 2.23393px rgba(0, 0, 0, 0.12);
+$box-shadow: 0 1px 4px rgba($black, 0.3);
+
+$height-card: 150px;
+$width-card: 255px;
+
+$card-width: 255px;
+$card-height: 150px;
+$thumb-height: 100%;
+
+$border-radius: 3px;
+
+$transition: cubic-bezier(0.17, 0.67, 0.5, 1.03);
+$timing-1: 0.35s 0.15s;
+$timing-2: 0.45s 0.25s;
+
+$font-family: 'Open Sans', sans-serif;
+$template: 'ticketHubSearchHeader';
