@@ -117,7 +117,7 @@
     </div>
   </div>
   <div class="content" v-else>
-      <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2" v-if="newTemplate">
+      <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2" v-if="template == 'ticketHub'">
     <div class="container justify-content-center align-items-center d-flex p-5">
       <div class="col-10 justify-content-center text-center">
         <div class="d-none d-sm-block" style="">

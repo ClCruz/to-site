@@ -21,36 +21,36 @@
         <div class="col-md-10 p-0 col-12" v-if="!isLoaded">
           <div class="row container__search">
             <div class="col-6 col-lg-3 col-md-3 col-xs-12">
-              <SearchItemLoader  :speed="2" :animate="true" style="height: 245px; padding-top: 15px"></SearchItemLoader>
+              <SearchItemLoader :speed="2" :animate="true" style="height: 245px; padding-top: 15px"></SearchItemLoader>
             </div>
           </div>
         </div>
         <div class="col-md-10 p-0 col-12" v-else>
           <div class="row container__search" v-if="!filterCards">
-            <div  class="" v-for="(item, index) in searchResults" :key="index">
+            <div class="" v-for="(item, index) in searchResults" :key="index">
               <div class="search__card" style="margin-left: 15px; margin-right: 5px">
 
-                  <div class="rootLink"></div>
-                  <article class="cardexp">
-                    <div class="thumb" :style="{ backgroundImage: 'url(\'' + item.cardimage + '\')' }"></div>
-                    <div class="infos">
-                      <!-- <span class="flag">
+                <div class="rootLink"></div>
+                <article class="cardexp">
+                  <div class="thumb" :style="{ backgroundImage: 'url(\'' + item.cardimage + '\')' }"></div>
+                  <div class="infos">
+                    <!-- <span class="flag">
                         <img v-for="(ibadge, index) in item.badge" :key="'badge'+index" :src="ibadge.img" :title="ibadge.tag" :alt="ibadge.tag">
                         <img v-for="(ipromo, index) in item.promo" :key="'promo'+index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                       </span> -->
-                      <h2 class="title"> {{ item.ds_evento }}</h2>
-                      <h3 class="date"> {{item.datas}} </h3>
-                      <h3 class="date">
-                        {{ item.ds_nome_teatro }}
-                        <br> {{ item.ds_municipio }}, {{ item.sg_estado }}
-                      </h3>
-                      <h3 class="details">
-                        <button type="button" class="btn btn-light btn-sm" @click="goto(item)">
+                    <h2 class="title"> {{ item.ds_evento }}</h2>
+                    <h3 class="date"> {{item.datas}} </h3>
+                    <h3 class="date">
+                      {{ item.ds_nome_teatro }}
+                      <br> {{ item.ds_municipio }}, {{ item.sg_estado }}
+                    </h3>
+                    <h3 class="details">
+                      <button type="button" class="btn btn-light btn-sm" @click="goto(item)">
                                 Comprar
                               </button>
-                      </h3>
-                    </div>
-                  </article>
+                    </h3>
+                  </div>
+                </article>
               </div>
             </div>
           </div>
@@ -89,19 +89,19 @@
     </div>
   </div>
   <div v-else>
-     <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
-    <div class="container justify-content-center align-items-center d-flex pt-5 pb-0 mb-0 h-25">
-      <div class="col-10 justify-content-center text-center">
-        <div class="d-none d-sm-block" style="">
-          <h2>Deseja encontrar outro evento ?</h2>
-        </div>
-        <div class="d-none d-sm-block input-group mt-4 mb-0 p-1 w-100">
-          <app-search></app-search>
+    <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2"  v-if="template == 'ticketHub'">
+      <div class="container justify-content-center align-items-center d-flex pt-5 pb-0 mb-0 h-25">
+        <div class="col-10 justify-content-center text-center">
+          <div class="d-none d-sm-block" style="">
+            <h2>Deseja encontrar outro evento ?</h2>
+          </div>
+          <div class="d-none d-sm-block input-group mt-4 mb-0 p-1 w-100">
+            <app-search></app-search>
+          </div>
         </div>
       </div>
-    </div>
 
-  </section>
+    </section>
     <section class="to-block fdb_result">
       <div class="container">
         <div class="row">
@@ -131,7 +131,7 @@
         </div>
       </div>
     </section>
-  </div >
+  </div>
 </div>
 </template>
 
@@ -383,8 +383,4 @@ export default {
 
 <style lang="scss" scoped>
 
-.fdb_result {
-  margin-bottom: 100px;
-  margin-top: -150px;
-}
 </style>
