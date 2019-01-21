@@ -1,7 +1,7 @@
 <template>
 <div class="a">
   <section class="to-block to-viewport bg-dark bg__main" style="position: absolute; top: 0; width: 99vw; z-index: -1;background: none!important" data-block-type="call_to_action" data-id="2">
-    <video autoplay muted loop id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
+    <video autoplay loop id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
       <source src="/assets/teste2.mp4" type="video/mp4">
     </video>
   </section>
