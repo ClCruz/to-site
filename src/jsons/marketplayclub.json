@@ -1,0 +1,46 @@
+{
+  "env": "production",
+  "host": "www.marketplay.club",
+  "uri": "www.marketplay.club",
+  "api": "https://api.marketplay.club",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.marketplay.club",
+  "apikey": "live_6bfa0de8c52f4dd0bbb53d5a61945bbddb2aaa5545644e61873f1d1cd78f6bae",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/marketplayclub/main.scss",
+  "css": "/stylesheets/themes/marketplayclub/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "https://media.tixs.me/logos/logo-marketplayclub.jpg",
+  "favico": "/img/marketplayclub/",
+  "meta": {
+    "description": "marketplay.club seu hub de venda de ingressos",
+    "keywords": "marketplay, ingressos, marketplayclub"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Marketplay.club",
+    "description": "marketplay.club seu hub de venda de ingressos",
+    "siteName": "www.marketplay.club",
+    "CNPJ": "29.324.734/0001-81",
+    "companyAddress": "Rua Ministro João Mendes , 20",
+    "companyName": "ASSET EVENTOS EIREL - ME"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_marketplayclub/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_marketplayclub/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_marketplayclub/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_marketplayclub/emailComprador.html",
+      "gift": "../comprar/templates/multi_marketplayclub/emailPresente.html",
+      "signature": "../comprar/templates/multi_marketplayclub/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_marketplayclub/confirmacaoEmail.html"
+
+    }
+  }
+}
