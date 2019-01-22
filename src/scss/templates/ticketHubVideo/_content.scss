@@ -30,12 +30,6 @@
 		}
 	}
 
-	.v-suggestions {
-		@include MQ(S) {
-			z-index: 0 !important;
-		}
-	}
-
 	.container__sac {
 		margin-top: 0 !important;
 		padding-top: 40px;

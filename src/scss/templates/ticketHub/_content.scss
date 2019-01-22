@@ -12,9 +12,9 @@
 		margin-top: -150px;
 	}
 
-	.v-suggestions {
-		@include MQ(S) {
-			z-index: 0 !important;
-		}
-	}
+	// .v-suggestions {
+	// 	@include MQ(S) {
+	// 		z-index: 0 !important;
+	// 	}
+	// }
 }
