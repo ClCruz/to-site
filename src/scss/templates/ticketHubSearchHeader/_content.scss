@@ -15,7 +15,9 @@
 	}
 
 	.v-suggestions {
-		z-index: 0 !important;
+		@include MQ(S) {
+			z-index: 0 !important;
+		}
 	}
 
 	.container__sac {
