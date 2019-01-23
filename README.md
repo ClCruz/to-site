@@ -33,7 +33,7 @@ npm run build
 ```bash
 sudo docker run -it -d -p 2001:80 --restart=always --name unique.site \
 -v /var/www/unique/site:/var/www/html \
-blcoccaro/linuxphpsql:v5
+blcoccaro/phpwithsql:v1
 ```
 
 ### meanings 
