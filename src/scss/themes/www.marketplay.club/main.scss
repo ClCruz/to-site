@@ -12,11 +12,13 @@ header.bg-dark {
 	width: 100%;
 }
 
+.footer__logo .img {
+	background-image: url($logo-footer);
+}
 
 .bg-dark {
 	background-color: $secundary !important;
 }
-
 
 $gradiente: $secundary !important;
 
