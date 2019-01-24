@@ -2,7 +2,8 @@
 <div class="a">
   <section class="to-block to-viewport bg-dark bg__main" style="position: absolute; top: 0; width: 99vw; z-index: -1;background: none!important" data-block-type="call_to_action" data-id="2">
     <video autoplay loop autobuffer muted playsinline id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
-      <source src="/assets/video2.mp4" type="video/ogg">
+      <source src="/assets/videos/demo1.webm" type="video/webm">
+      <source src="/assets/videos/demo1.mp4" type="video/mp4">
     </video>
   </section>
 
