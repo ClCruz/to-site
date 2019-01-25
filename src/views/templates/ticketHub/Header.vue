@@ -81,7 +81,7 @@
     </div>
     <div class="col-3">
       <div class="icon"></div>
-      <span v-if="!isLogged" class="btn btn-sm btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
+      <span v-if="!isLogged" class="btn btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
       <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="" alt=""></span>
       <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName" no-caret>
         <template slot="button-content">
