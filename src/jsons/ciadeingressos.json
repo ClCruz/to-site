@@ -8,10 +8,14 @@
   "apikey": "live_db039d6905d44d2689042e0a81fe30c200409f61fa6940c38fe807ad391b0400",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "template": "www.ciadeingressos.com",
+  "scss": "./src/scss/themes/www.ciadeingressos.com/main.scss",
+  "css": "/stylesheets/themes/www.ciadeingressos.com/main.css",
   "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/logo-ciadeingressos.jpeg",
   "favico": "/img/ciadeingressos/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,cia,ingressos,ciadeingressos,br,me"

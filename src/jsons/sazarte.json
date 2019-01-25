@@ -8,12 +8,14 @@
   "apikey": "live_0aeae6ff88784a9bb0a704359699051677c08991c03d46759ec943ec415a71e8",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "template": "www.sazarteingressos.com.br",
+  "scss": "./src/scss/themes/www.sazarteingressos.com.br/main.scss",
   "css": "/stylesheets/themes/sazarte/main.css",
   "template": "ticketHub",
-
   "logo": "https://media.tixs.me/logos/logo-sazarte.jpeg",
   "favico": "/img/sazarte/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,sazarte,br,me"

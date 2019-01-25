@@ -13,6 +13,9 @@
   "css": "/stylesheets/themes/bringressos/main.css",
   "logo": "https://media.tixs.me/logos/logo-bringressos.svg",
   "favico": "/img/bringressos/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,bringressos,br,me"

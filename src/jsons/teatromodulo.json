@@ -13,6 +13,9 @@
   "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/logo-teatromodulo.png",
   "favico": "/img/teatromodulo/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,teatromodulo,br,me"

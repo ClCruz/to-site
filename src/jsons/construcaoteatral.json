@@ -13,6 +13,9 @@
   "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/logo-construcaoteatral.jpg",
   "favico": "/img/construcaoteatral/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,construcaoteatral,br,me"
