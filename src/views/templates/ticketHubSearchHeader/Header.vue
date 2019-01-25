@@ -21,8 +21,8 @@
           </div>
 
           <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex">
-            <span v-if="!isLogged" class="header__signin hidden-xs hidden-sm" @click="login">Entrar</span>
-            <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="" alt=""></span>
+            <span v-if="!isLogged" class="btn   btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
+            <span v-if="!isLogged" class="" @click="login"><img src="" alt=""></span>
 
             <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName">
               <b-dropdown-item @click="goto('legacy:my_account')">Minha Conta</b-dropdown-item>
@@ -76,8 +76,8 @@
     </div>
     <div class="col-3">
       <div class="icon"></div>
-      <span v-if="!isLogged" class="header__signin hidden-xs hidden-sm" @click="login">Entrar</span>
-      <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="" alt=""></span>
+      <span v-if="!isLogged" class="btn btn-sm btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
+      <span v-if="!isLogged" class="" @click="login"><img src="" alt=""></span>
       <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName" no-caret>
         <template slot="button-content">
           <img src="" alt=""><span class="sr-only">Search</span>
