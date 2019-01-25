@@ -1,10 +1,12 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main" style="position: absolute; top: 0; width: 99vw; z-index: -1;background: none!important" data-block-type="call_to_action" data-id="2">
-    <video autoplay muted loop id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
-      <source src="/assets/video2.mp4" type="video/ogg">
+  <section class="to-block to-viewport bg-dark bg__main" style="position: absolute; top: 0; width: 99vw;z-index: -1;background: none!important" id="sectionVideo" data-block-type="call_to_action" data-id="2">
+    <video autoplay loop autobuffer muted playsinline id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
+      <source src="/assets/videos/demo1.webm" type="video/webm">
+      <source src="/assets/videos/demo1.mp4" type="video/mp4">
     </video>
   </section>
+
 
   <section id="section__slider" class="pt-4" style="margin-top: 100vh">
      <div class="container">
@@ -305,10 +307,24 @@ export default {
 
   },
   computed: {},
+  mounted() {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      try {
+        console.log("oi");
+        document.getElementById("myVideo").controls = true;
+        // this.$children[0].onQueryChanged(this.searchQuery);
+      } catch (e) {
+        console.log("tchau");
+        //console.log(e)
+      }
+    }
+
+  },
   created() {
     this.getListResults();
     this.getBanner();
-        document.getElementById('myVideo').play();
+
+    //document.getElementById('myVideo').play();
   },
   beforeUpdate() {
     //if (this.$refs.slick) {

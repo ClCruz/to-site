@@ -23,6 +23,7 @@
 			margin-top: 270px !important;
 		}
 	}
+	
 
 	#app > div > div:nth-child(2) > section.to-block.to-viewport.bg-dark.bg__main {
 		@include MQ(S) {
@@ -34,4 +35,16 @@
 		margin-top: 0 !important;
 		padding-top: 40px;
 	}
+
+	#sectionVideo {
+		@include MQ(S) {
+			z-index: 5000	 !important;
+		}
+	}
+	#myVideo {
+		@include MQ(S) {
+			z-index: 5000	 !important;
+		}
+	}
+	
 }
