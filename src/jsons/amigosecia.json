@@ -13,6 +13,9 @@
   "template": "ticketHubSearchHeader",
   "logo": "https://media.tixs.me/logos/logo-amigosecia.jpg",
   "favico": "/img/amigosecia/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,amigosecia,br,me"

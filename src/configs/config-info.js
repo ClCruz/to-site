@@ -1,5 +1,4 @@
 import multi from "../multi";
-
 const mytext = {
   title: multi.info.title,
   description: multi.info.description, //Page description. No longer than 155 characters.
@@ -12,6 +11,7 @@ const mytext = {
   meta_keywords: multi.meta.keywords,
   favicoPath: multi.favico,
   template: multi.template,
+  videos: multi.videos,
 }
 
 export default Object.assign({}, mytext);

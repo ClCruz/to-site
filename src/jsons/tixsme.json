@@ -8,11 +8,14 @@
   "apikey": "live_ad7750c9491a41b7bd2fed3b0d03a8f44613d2c3b20d4435b6e7f2b67881d34c",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "template": "default",
-  "template": "tixs",
+  "scss": "./src/scss/themes/www.tixs.me/main.scss",
   "css": "/stylesheets/themes/tixsme/main.css",
+  "template": "tixs",
   "logo": "https://media.tixs.me/logos/logo-tixsme.png",
   "favico": "/img/tixsme/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,tixs,me"

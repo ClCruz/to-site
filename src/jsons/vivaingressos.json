@@ -8,11 +8,14 @@
   "apikey": "live_b790768c6ea74d2f8eaabc9e8c7354c3bc89a3ed15a54c2fa25d02dfe5854a87",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "template": "www.xwxy.com.br",
+  "scss": "./src/scss/themes/www.xwxy.me/main.scss",
   "css": "/stylesheets/themes/vivaingressos/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "template": "ticketHub",
   "favico": "/img/vivaingressos/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,vivaingressos,viva,br,me"
