@@ -43,6 +43,11 @@ $gradiente: $secundary !important;
 	}
 }
 
-.header__signin {
+.to-btn {
 	// color: #333;
+	background-color: rgb(200, 104, 113) !important;
+
+	&:hover {
+		// color: #333;
+	}
 }
