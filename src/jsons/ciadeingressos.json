@@ -10,7 +10,7 @@
   "ga": "",
   "scss": "./src/scss/themes/www.ciadeingressos.com/main.scss",
   "css": "/stylesheets/themes/www.ciadeingressos.com/main.css",
-  "template": "ticketHub",
+  "template": "ticketHubSearchHeader",
   "logo": "https://media.tixs.me/logos/logo-ciadeingressos.jpeg",
   "favico": "/img/ciadeingressos/",
   "videos": {
