@@ -1,11 +1,11 @@
   RewriteEngine On
   RewriteBase /
   RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
-  RewriteRule ^evento/(.*)$ http://192.168.81.22:2002/v1/event_metatag?id=$1 [P]
+  RewriteRule ^evento/(.*)$ http://172.30.5.2:2002/v1/event_metatag?id=$1 [P]
   RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
-  RewriteRule ^busca/(.*)$ http://192.168.81.22:2002/v1/search_metatag?id=$1 [P]
+  RewriteRule ^busca/(.*)$ http://172.30.5.2:2002/v1/search_metatag?id=$1 [P]
   RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
-  RewriteRule ^$ http://192.168.81.22:2002/v1/home_metatag [P]
+  RewriteRule ^$ http://172.30.5.2:2002/v1/home_metatag [P]
 
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
