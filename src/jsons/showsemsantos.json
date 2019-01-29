@@ -4,6 +4,7 @@
   "uri": "www.showsemsantosdemo.tk",
   "api": "https://api.showsemsantosdemo.tk",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.showsemsantosdemo.tk",
   "legacy": "https://compra.showsemsantosdemo.tk",
   "apikey": "live_eba85a42d2fe4c33a094572426628fc15a03cb1063dc4c9e90144685988681ff",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

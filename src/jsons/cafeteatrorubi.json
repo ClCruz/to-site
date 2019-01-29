@@ -4,6 +4,7 @@
   "uri": "https://www.cafeteatrorubi.tk",
   "api": "https://api.cafeteatrorubi.tk",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.cafeteatrorubi.tk",
   "legacy": "https://compra.cafeteatrorubi.tk",
   "apikey": "live_3ddd7486246a499daf8d169d154a14d833dfbe5594084ba397e9fa9f3c990bb5",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

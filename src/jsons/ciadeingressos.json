@@ -4,6 +4,7 @@
   "uri": "https://www.ciadeingressos.com",
   "api": "https://api.ciadeingressos.com",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.ciadeingressos.com",
   "legacy": "https://compra.ciadeingressos.com",
   "apikey": "live_db039d6905d44d2689042e0a81fe30c200409f61fa6940c38fe807ad391b0400",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

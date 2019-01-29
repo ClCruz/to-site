@@ -4,6 +4,7 @@
   "uri": "www.marketplay.club",
   "api": "https://api.marketplay.club",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.marketplay.club",
   "legacy": "https://compra.marketplay.club",
   "apikey": "live_6bfa0de8c52f4dd0bbb53d5a61945bbddb2aaa5545644e61873f1d1cd78f6bae",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

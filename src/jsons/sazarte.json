@@ -4,6 +4,7 @@
   "uri": "https://www.sazarteingressos.com.br",
   "api": "https://api.sazarteingressos.com.br",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.sazarteingressos.com.br",
   "legacy": "https://compra.sazarteingressos.com.br",
   "apikey": "live_0aeae6ff88784a9bb0a704359699051677c08991c03d46759ec943ec415a71e8",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

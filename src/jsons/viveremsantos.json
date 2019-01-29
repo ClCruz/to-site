@@ -4,6 +4,7 @@
   "uri": "https://www.viveremsantosdemo.tk",
   "api": "https://api.viveremsantosdemo.tk",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.viveremsantosdemo.tk",
   "legacy": "https://compra.viveremsantosdemo.tk",
   "apikey": "live_fe6854cf54b74e568f58cc7c531f4ea7bc0f1afffb5f4400846152d735ceaa05",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
