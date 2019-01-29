@@ -13,6 +13,9 @@
   "template": "tixs",
   "logo": "https://media.tixs.me/logos/logo-cafeteatrorubi.png",
   "favico": "/img/cafeteatrorubi/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,cafeteatrorubi,br,me"

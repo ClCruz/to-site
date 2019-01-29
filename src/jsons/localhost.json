@@ -12,6 +12,12 @@
   "css": "/stylesheets/themes/tixsme/main.css",
   "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
   "favico": "/img/tixsme/",
+  "videos": {
+    "list": [ 
+      { "order":1, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.webm", "type": "video/webm"  }, 
+      { "order":2, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.mp4", "type": "video/mp4"  }
+    ]
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,tixs,me"

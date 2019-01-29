@@ -13,6 +13,9 @@
   "logo": "https://media.tixs.me/logos/logo-cultingressos.png",
   "template": "ticketHub",
   "favico": "/img/cultingressos/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,cultingressos,br,me"

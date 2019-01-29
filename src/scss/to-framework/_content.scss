@@ -786,6 +786,18 @@
 	.btn-secondary {
 		border-color: 0px solid black !important;
 	}
+
+	.to-btn {
+		background: $secundary !important;
+		border: none !important;
+		border-radius: 20px;
+		transition: 0.3s;
+		color: #fff;
+		&:hover {
+			transform: translateY(-1px);
+			color: #fff;
+		}
+	}
 }
 
 .footer__logo {

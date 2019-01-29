@@ -10,9 +10,12 @@
   "ga": "",
   "scss": "./src/scss/themes/viveremsantosdemo/main.scss",
   "css": "/stylesheets/themes/www.viveremsantosdemo.tk/main.css",
-  "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/logo-viveremsantos.jpg",
+  "template": "ticketHub",
   "favico": "/img/viveremsantos/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,viveremsantosdemo,br,me"

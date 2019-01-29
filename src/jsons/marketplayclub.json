@@ -13,6 +13,9 @@
   "template": "ticketHubSearchHeader",
   "logo": "https://media.tixs.me/logos/logo-marketplayclub.jpg",
   "favico": "/img/marketplayclub/",
+  "videos": {
+    "list": []
+  },
   "meta": {
     "description": "marketplay.club seu hub de venda de ingressos",
     "keywords": "marketplay, ingressos, marketplayclub"

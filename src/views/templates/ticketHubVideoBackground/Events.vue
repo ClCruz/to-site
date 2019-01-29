@@ -1,10 +1,11 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main" style="position: absolute; top: 0; width: 99vw; z-index: -1;background: none!important" data-block-type="call_to_action" data-id="2">
-    <video autoplay muted loop id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
-      <source src="/assets/video2.mp4" type="video/ogg">
+  <section class="to-block to-viewport bg-dark bg__main" style="position: absolute; top: 0; width: 99vw;z-index: -1;background: none!important" id="sectionVideo" data-block-type="call_to_action" data-id="2">
+    <video autoplay loop autobuffer muted playsinline id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
+      <source v-for="(item) in getconfig.info.videos.list" v-bind:key="item.order" :src="item.src" :type="item.type">
     </video>
   </section>
+
 
   <section id="section__slider" class="pt-4" style="margin-top: 100vh">
      <div class="container">
@@ -111,20 +112,15 @@
 
 <script>
 import $ from "jquery";
-import Logo from "@/components/App-logo.vue";
-import {
-  func
-} from '@/functions';
-import AppSearch from "@/components/App-search.vue";
 import config from '@/config';
+import Logo from "@/components/App-logo.vue";
+import { func } from '@/functions';
+import AppSearch from "@/components/App-search.vue";
 import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
 import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
-
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
-import {
-  eventService
-} from "@/components/common/services/event";
+import { eventService } from "@/components/common/services/event";
 
 export default {
   name: "Events",
@@ -224,7 +220,6 @@ export default {
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.slideData = response;
-          //console.log(response);
           this.hideWaitAboveAll();
         },
         error => {
@@ -258,7 +253,6 @@ export default {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.bannerEvents = response;
-          console.log(this.bannerEvents);
           this.slideLoaded = true;
         },
         error => {
@@ -275,7 +269,6 @@ export default {
         response => {
           this.slideData = response;
           this.hideWaitAboveAll();
-          //console.log(response);
           this.isLoaded = true;
 
           this.getCityList();
@@ -304,11 +297,24 @@ export default {
     handleLazeLoadError(event, slick, image, imageSource) {},*/
 
   },
-  computed: {},
+  computed: {
+    getconfig() {
+      return config;
+    },
+  },
+  mounted() {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      try {
+        document.getElementById("myVideo").controls = true;
+      } catch (e) { console.log("problem in add controls in video."); }
+    }
+
+  },
   created() {
     this.getListResults();
     this.getBanner();
-        document.getElementById('myVideo').play();
+
+    //document.getElementById('myVideo').play();
   },
   beforeUpdate() {
     //if (this.$refs.slick) {
