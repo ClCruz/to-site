@@ -1,0 +1,50 @@
+{
+  "env": "production",
+  "host": "ingressos.cafeteatrorubi.com.br",
+  "uri": "ingressos.cafeteatrorubi.com.br",
+  "api": "https://api.cafeteatrorubi.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.cafeteatrorubi.com.br",
+  "admin": "https://admin.cafeteatrorubi.com.br",
+  "apikey": "live_3ddd7486246a499daf8d169d154a14d833dfbe5594084ba397e9fa9f3c990bb5",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/cafeteatrorubi/main.scss",
+  "css": "/stylesheets/themes/ingressos.cafeteatrorubi.com.br/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-cafeteatrorubi.png",
+  "favico": "/img/cafeteatrorubi/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Café Teatro Rubi | Espaço cultural que apresenta produções de música, teatro e dança. Localizado no Sheraton da Bahia Hotel, tem capacidade para 156 pessoas distribuídas em 39 mesas.",
+    "keywords": "café,teatro,rubi,ingressos,venda,online,bahia,hotel,sheraton,capacidade,pessoas,156,dança,musica,música,produções,espaço,cultural,mesas"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Café Teatro Rubi",
+    "description": "Café Teatro Rubi | Espaço cultural que apresenta produções de música, teatro e dança. Localizado no Sheraton da Bahia Hotel, tem capacidade para 156 pessoas distribuídas em 39 mesas.",
+    "siteName": "ingressos.cafeteatrorubi.com.br",
+    "CNPJ": "19.653.679/0001-46",
+    "companyAddress": "Avenida Sete de Setembro, 1537 | Salvador, Bahia – 40080-001 – Brasil | Café-Teatro Rubi – Wish Hotel da Bahia",
+    "companyName": "Nace - Nucleo de Ações Culturais Estratégicas Eirelli"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_cafeteatrorubi/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_cafeteatrorubi/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_cafeteatrorubi/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_cafeteatrorubi/emailComprador.html",
+      "gift": "../comprar/templates/multi_cafeteatrorubi/emailPresente.html",
+      "signature": "../comprar/templates/multi_cafeteatrorubi/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_cafeteatrorubi/confirmacaoEmail.html"
+
+    }
+  }
+}
