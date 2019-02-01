@@ -603,10 +603,10 @@
 	}
 
 	.suggestions {
-		top: 47px !important;
 		@media only screen and (max-width: 720px) {
 			top: 38px !important;
 		}
+		top: 47px !important;
 	}
 	.v-suggestions input[type=text]:focus {
 		width: 100%;

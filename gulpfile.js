@@ -25,14 +25,11 @@ gulp.task('sass', function() {
 gulp.task('sassLocal', function() {
 	gulp
 		.src('./src/scss/themes/**/*.scss')
-		// .pipe(sourcemaps.init())
 		.pipe(
 			sass({
 				outputStyle: 'compressed'
 			}).on('error', sass.logError)
 		)
-		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'android 4'))
-		// .pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./public/assets/css/'))
 		.pipe(livereload());
 });
