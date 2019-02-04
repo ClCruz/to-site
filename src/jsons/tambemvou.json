@@ -1,0 +1,50 @@
+{
+  "env": "production",
+  "host": "www.tambemvoudemo.tk",
+  "uri": "www.tambemvoudemo.tk",
+  "api": "https://api.tambemvoudemo.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.tambemvoudemo.tk",
+  "admin": "https://admin.tambemvoudemo.tk",
+  "apikey": "live_87407d71fcb74ef6a7076291d8f3e138d1ee83b9f1be48029b07594c45236c69",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/tambemvou/main.scss",
+  "css": "/stylesheets/themes/www.tambemvoudemo.tk/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-tambemvou.png",
+  "favico": "/img/tambemvou/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "meta desc",
+    "keywords": "meta key"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Também vou!",
+    "description": "meta desc",
+    "siteName": "www.tambemvoudemo.tk",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Lá",
+    "companyName": "Também Vou"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_tambemvou/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_tambemvou/impressaoPresente.html"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_tambemvou/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_tambemvou/emailComprador.html",
+      "gift": "../comprar/templates/multi_tambemvou/emailPresente.html",
+      "signature": "../comprar/templates/multi_tambemvou/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_tambemvou/confirmacaoEmail.html"
+
+    }
+  }
+}
