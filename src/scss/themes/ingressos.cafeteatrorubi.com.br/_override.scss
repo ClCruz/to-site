@@ -1,7 +1,9 @@
-.main__tixsme {
-  background: $primary;
+#pai {
+  background: $secundary!important;
 }
 
-body {
-  background: #secundary;
+$gradiente: $primary;
+
+.main__tixsme {
+  background: $primary;
 }
