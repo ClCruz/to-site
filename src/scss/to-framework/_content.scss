@@ -821,6 +821,18 @@
 			left: 100%;
 		}
 	}
+
+	#app > div > div:nth-child(1) > nav > div:nth-child(4) {
+		@include MQ(S) {
+			display: flex;
+		}
+	}
+
+	#app > div > div:nth-child(1) > nav > div:nth-child(4) > span.btn.btn-light.to-btn.hidden-xs.hidden-sm {
+		@include MQ(S) {
+			align-self: center;
+		}
+	}
 }
 
 .footer__logo {
@@ -835,6 +847,10 @@
 	background-position: center;
 	&:hover {
 		opacity: 0.8;
+	}
+
+	@include MQ(S) {
+		height: 40px;
 	}
 }
 
