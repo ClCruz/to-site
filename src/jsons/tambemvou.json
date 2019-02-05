@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/tambemvou/main.scss",
   "css": "/stylesheets/themes/www.tambemvoudemo.tk/main.css",
-  "template": "ticketHub",
+  "template": "ticketHubSearchHeader",
   "logo": "/assets/logo-tambemvou.png",
   "favico": "/img/tambemvou/",
   "videos": {
