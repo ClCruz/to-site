@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/amigosecia/main.scss",
   "css": "/stylesheets/themes/www.amigoseciademo.tk/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ticketHub",
   "logo": "https://media.tixs.me/logos/logo-amigosecia.jpg",
   "favico": "/img/amigosecia/",
   "videos": {
