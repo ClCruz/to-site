@@ -4,6 +4,7 @@
   "uri": "https://www.teatroumc.tk",
   "api": "https://api.teatroumc.tk",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.teatroumc.tk",
   "legacy": "https://compra.teatroumc.tk",
   "apikey": "live_6f709463b3b84943a7c0b379067c6e108fa8df6ff0b44551aff7e71e65a32be0",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

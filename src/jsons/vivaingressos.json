@@ -4,6 +4,7 @@
   "uri": "https://www.xwxy.me",
   "api": "https://api.xwxy.me",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.xwxy.me",
   "legacy": "https://compra.xwxy.me",
   "apikey": "live_b790768c6ea74d2f8eaabc9e8c7354c3bc89a3ed15a54c2fa25d02dfe5854a87",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

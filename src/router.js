@@ -26,7 +26,7 @@ export default new Router({
       path: '/ticketoffice',
       name: 'ticketoffice',
       redirect: to => {
-        window.location = `http://admin.tixs.me`;
+        window.location = `${config.admin}`;
         return { path: '/', query: null }
       },
       component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')

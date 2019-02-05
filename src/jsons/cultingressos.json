@@ -4,6 +4,7 @@
   "uri": "https://www.cultingressos.tixs.me",
   "api": "https://api.cultingressos.tixs.me",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.cultingressos.tixs.me",
   "legacy": "https://compra.cultingressos.tixs.me",
   "apikey": "live_9ecd18599fd54d1f852dccc5599edbd0a6a593a0a97943c1aac0f2a7adb1f3de",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

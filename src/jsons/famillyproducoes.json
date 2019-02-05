@@ -4,6 +4,7 @@
   "uri": "https://www.famillyproducoesdemo.tk",
   "api": "https://api.famillyproducoesdemo.tk",
   "pinpad": "http://localhost:7001/api",
+  "admin": "https://admin.famillyproducoesdemo.tk",
   "legacy": "https://compra.famillyproducoesdemo.tk",
   "apikey": "live_fe6854cf54b74e568f58cc7c531f4ea7bc0f1afffb5f4400846152d735ceaa05",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

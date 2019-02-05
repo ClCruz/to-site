@@ -2,6 +2,7 @@ const domains = require('./jsons/domains.json');
 
 let json = {};
 const domain = domains[window.location.hostname];
+console.log(domain);
 const jsonName = `./jsons/${domain}.json`;
 
 json = require(`./jsons/${domain}.json`);
