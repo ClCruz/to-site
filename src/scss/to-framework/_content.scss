@@ -581,7 +581,7 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.1);
 
 		@media only screen and (max-width: 720px) {
-			height: 30px;
+			height: 40px;
 		}
 	}
 
@@ -813,6 +813,14 @@
 			max-height: 200px !important;
 		}
 	}
+
+	#nav-icon1 span,
+	#nav-icon3 span,
+	#nav-icon4 span {
+		@include MQ(S) {
+			left: 100%;
+		}
+	}
 }
 
 .footer__logo {
@@ -892,6 +900,9 @@
 }
 
 .nav__mobile {
-	visibility: hidden;
-	z-index: -500;
+	z-index: 100000;
+}
+
+.overlay {
+	z-index: 99999 !important;
 }
