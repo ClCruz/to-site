@@ -13,10 +13,10 @@
       <div v-if="!slideLoaded">
         <div class="item__slide">
           <div class="row">
-            <div class="col-md-8  col-xs-12 nopadding" style="height: 350px">
-              <CarrouselLoader class="nopadding" style="max-height: 350px;padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
+            <div class="col-md-8  col-xs-12 nopadding slide__image">
+              <CarrouselLoader class="nopadding" style="padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
             </div>
-            <div class="col-md-4 visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+            <div class="d-none d-sm-block col-md-4 visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
               <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
 
             </div>
@@ -30,10 +30,10 @@
             <div class="row">
               <div class="col-md-8  col-xs-12 nopadding">
                 <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
-                    <img :src="item.img" alt="" style="width:100%;">
+                    <img :src="item.img" class="slide__image" alt="" style="width:100%;">
                   </span>
               </div>
-              <div class="col-md-4 visible-md visible-lg to__slide" style="height:320px;padding:30px;">
+              <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide" style="height:320px;padding:30px;">
                 <h3 class="" style="font-size: 24px">{{item.ds_evento}}</h3>
                 <div class="">
                   <div class="event-name pull-left">

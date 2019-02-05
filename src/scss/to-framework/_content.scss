@@ -798,6 +798,20 @@
 			color: #fff;
 		}
 	}
+
+	.slide__image {
+		@include MQ(NS) {
+			height: 350px;
+		}
+	}
+
+	.item__slide img {
+		@include MQ(S) {
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			max-height: 200px !important;
+		}
+	}
 }
 
 .footer__logo {
