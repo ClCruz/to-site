@@ -809,8 +809,8 @@
 	.item__slide img {
 		@include MQ(S) {
 			border-top-right-radius: 10px;
-			border-bottom-right-radius: 10px;
 			max-height: 200px !important;
+			border-bottom-right-radius: 10px;
 		}
 	}
 
