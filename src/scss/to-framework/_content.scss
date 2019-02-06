@@ -833,6 +833,17 @@
 			align-self: center;
 		}
 	}
+
+	.event__title {
+		text-transform: capitalize !important;
+		font-size: 13.5px !important;
+		color: black;
+	}
+
+	.event__item {
+		font-size: 12px !important;
+		text-transform: capitalize !important;
+	}
 }
 
 .footer__logo {

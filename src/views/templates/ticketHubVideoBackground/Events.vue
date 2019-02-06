@@ -6,9 +6,8 @@
     </video>
   </section>
 
-
   <section id="section__slider" class="pt-4" style="margin-top: 100vh">
-     <div class="container">
+    <div class="container">
       <!-- swiper -->
       <div v-if="!slideLoaded">
         <div class="item__slide">
@@ -94,12 +93,12 @@
           <div class="to-box p-0">
             <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
-            <div class="content p-1">
-              <h4>
-                <strong>{{ item.ds_evento }}</strong>
+            <div class="content p-2 pt-2 pb-2">
+              <h4 class="event__title">
+                <strong>{{ item.ds_evento | truncate(29, ' ...') }}</strong>
               </h4>
-              <p class="p-0 m-0 h-200">{{ item.ds_nome_teatro }} </p>
-              <p class="p-0 m-0 h-200 fa-xs "> {{ item.ds_municipio }}, {{ item.sg_estado }}</p>
+              <p class="p-0 pt-1 m-0 h-200 event__item">{{ item.ds_nome_teatro }} </p>
+              <p class="p-0 m-0 event__item "> {{ item.ds_municipio }}, {{ item.sg_estado }}</p>
             </div>
           </div>
         </div>
@@ -114,13 +113,17 @@
 import $ from "jquery";
 import config from '@/config';
 import Logo from "@/components/App-logo.vue";
-import { func } from '@/functions';
+import {
+  func
+} from '@/functions';
 import AppSearch from "@/components/App-search.vue";
 import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
 import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
-import { eventService } from "@/components/common/services/event";
+import {
+  eventService
+} from "@/components/common/services/event";
 
 export default {
   name: "Events",
@@ -303,10 +306,12 @@ export default {
     },
   },
   mounted() {
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       try {
         document.getElementById("myVideo").controls = true;
-      } catch (e) { console.log("problem in add controls in video."); }
+      } catch (e) {
+        console.log("problem in add controls in video.");
+      }
     }
 
   },
@@ -325,6 +330,15 @@ export default {
     //if (this.$refs.slick && !this.$refs.slick.$el.classList.contains('slick-initialized')) {
     //this.$refs.slick.create();
     //}
+  },
+  filters: {
+    truncate: function (text, length, clamp) {
+      clamp = clamp || '...';
+      var node = document.createElement('div');
+      node.innerHTML = text;
+      var content = node.textContent;
+      return content.length > length ? content.slice(0, length) + clamp : content;
+    }
   }
 };
 </script>

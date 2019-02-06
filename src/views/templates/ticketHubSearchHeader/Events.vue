@@ -88,12 +88,12 @@
           <div class="to-box p-0">
             <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
-            <div class="content p-1">
-              <h4>
-                <strong>{{ item.ds_evento }}</strong>
+            <div class="content p-2 pt-2 pb-2">
+              <h4 class="event__title">
+                <strong>{{ item.ds_evento | truncate(29, ' ...') }}</strong>
               </h4>
-              <p class="p-0 m-0 h-200">{{ item.ds_nome_teatro }} </p>
-              <p class="p-0 m-0 h-200 fa-xs "> {{ item.ds_municipio }}, {{ item.sg_estado }}</p>
+              <p class="p-0 pt-1 m-0 h-200 event__item">{{ item.ds_nome_teatro }} </p>
+              <p class="p-0 m-0 event__item "> {{ item.ds_municipio }}, {{ item.sg_estado }}</p>
             </div>
           </div>
         </div>
@@ -315,6 +315,15 @@ export default {
     //if (this.$refs.slick && !this.$refs.slick.$el.classList.contains('slick-initialized')) {
     //this.$refs.slick.create();
     //}
+  },
+  filters: {
+    truncate: function (text, length, clamp) {
+      clamp = clamp || '...';
+      var node = document.createElement('div');
+      node.innerHTML = text;
+      var content = node.textContent;
+      return content.length > length ? content.slice(0, length) + clamp : content;
+    }
   }
 };
 </script>
