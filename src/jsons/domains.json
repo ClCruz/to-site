@@ -82,5 +82,9 @@
     "www.bilhete.promo": "bilhetepromo",
     "api.bilhete.promo": "bilhetepromo",
     "compra.bilhete.promo": "bilhetepromo",
-    "admin.bilhete.promo": "bilhetepromo"
+    "admin.bilhete.promo": "bilhetepromo",
+    "www.ingresso.promo": "ingressopromo",
+    "api.ingresso.promo": "ingressopromo",
+    "compra.ingresso.promo": "ingressopromo",
+    "admin.ingresso.promo": "ingressopromo"
 }
