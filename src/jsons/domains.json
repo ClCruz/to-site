@@ -94,5 +94,9 @@
     "www.ingressos.store": "ingressosstore",
     "api.ingressos.store": "ingressosstore",
     "compra.ingressos.store": "ingressosstore",
-    "admin.ingressos.store": "ingressosstore"
+    "admin.ingressos.store": "ingressosstore",
+    "www.meuingresso.promo": "meuingressopromo",
+    "api.meuingresso.promo": "meuingressopromo",
+    "compra.meuingresso.promo": "meuingressopromo",
+    "admin.meuingresso.promo": "meuingressopromo"
 }
