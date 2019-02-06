@@ -86,5 +86,9 @@
     "www.ingresso.promo": "ingressopromo",
     "api.ingresso.promo": "ingressopromo",
     "compra.ingresso.promo": "ingressopromo",
-    "admin.ingresso.promo": "ingressopromo"
+    "admin.ingresso.promo": "ingressopromo",
+    "www.ingresso.store": "ingressostore",
+    "api.ingresso.store": "ingressostore",
+    "compra.ingresso.store": "ingressostore",
+    "admin.ingresso.store": "ingressostore"
 }
