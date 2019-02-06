@@ -90,5 +90,9 @@
     "www.ingresso.store": "ingressostore",
     "api.ingresso.store": "ingressostore",
     "compra.ingresso.store": "ingressostore",
-    "admin.ingresso.store": "ingressostore"
+    "admin.ingresso.store": "ingressostore",
+    "www.ingressos.store": "ingressosstore",
+    "api.ingressos.store": "ingressosstore",
+    "compra.ingressos.store": "ingressosstore",
+    "admin.ingressos.store": "ingressosstore"
 }

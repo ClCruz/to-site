@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.ingressos.store",
+  "uri": "https://www.ingressos.store",
+  "api": "https://api.ingressos.store",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.ingressos.store",
+  "admin": "https://admin.ingressos.store",
+  "apikey": "live_58e5ee394a0f49d3b3d2942270b5060ee77bf5feb95d43618fc49532531601ca",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/ingressosstore/main.scss",
+  "css": "/stylesheets/themes/www.ingressos.store/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-ingressosstore.jpeg",
+  "favico": "/img/ingressosstore/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Venda de Bilhetes",
+    "keywords": "venda,bilhete"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Ingressos.Store",
+    "description": "Venda de Bilhetes",
+    "siteName": "www.ingressos.store",
+    "CNPJ": "28.427.697/0001-09",
+    "companyAddress": "Rua Guaiaos, 1",
+    "companyName": "E2C COMPANHIA ENTRETENIMENTO ESPORTES TECNOLOGIA NEGÓCIOS LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_ingressosstore/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_ingressosstore/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_ingressosstore/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_ingressosstore/emailComprador.html",
+      "gift": "../comprar/templates/multi_ingressosstore/emailPresente.html",
+      "signature": "../comprar/templates/multi_ingressosstore/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_ingressosstore/confirmacaoEmail.html"
+
+    }
+  }
+}
