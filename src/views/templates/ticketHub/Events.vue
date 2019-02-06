@@ -98,7 +98,7 @@
 
             <div class="content p-2 pt-2 pb-2">
               <h4 class="event__title">
-                <strong>{{ item.ds_evento |  truncate(28, ' ...') }}</strong>
+                <strong>{{ item.ds_evento |  truncate(25, ' ...') }}</strong>
               </h4>
               <p class="p-0 pt-1 m-0 h-200 event__item">{{ item.ds_nome_teatro }} </p>
               <p class="p-0 m-0 event__item "> {{ item.ds_municipio }}, {{ item.sg_estado }}</p>
