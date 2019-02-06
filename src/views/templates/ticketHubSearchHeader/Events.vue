@@ -84,7 +84,7 @@
           <h3 class="font-weight-bold">Eventos</h3>
         </div>
 
-        <div class="col-10 col-md-3 pb-4 pl-1 pr-1 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
+        <div class="col-10 col-xl-3 col-md-4 pb-4 pl-1 pr-1 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
           <div class="to-box p-0">
             <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
