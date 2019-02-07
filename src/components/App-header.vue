@@ -393,6 +393,7 @@ export default {
                       allowEnterKey: true,
                       input: 'password',
                       inputPlaceholder: 'Digite sua senha',
+                      footer: `<a href="${config.legacy}/comprar/minha_conta.php">Esqueceu sua senha? Clique aqui.</a>`,
                       inputAttributes: {
                         maxlength: 100,
                         autocapitalize: 'off',
