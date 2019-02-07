@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.meuingresso.promo",
+  "uri": "https://www.meuingresso.promo",
+  "api": "https://api.meuingresso.promo",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.meuingresso.promo",
+  "admin": "https://admin.meuingresso.promo",
+  "apikey": "live_d436c9e13b6b4e5ab2aa4d33062b5235b8c99f5b0f6b4b458d0f295732879798",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/meuingressopromo/main.scss",
+  "css": "/stylesheets/themes/www.meuingresso.promo/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-meuingressopromo.png",
+  "favico": "/img/meuingressopromo/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Venda de Bilhetes",
+    "keywords": "venda,bilhete"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Meu Ingresso Promo",
+    "description": "Venda de Bilhetes",
+    "siteName": "www.meuingresso.promo",
+    "CNPJ": "28.427.697/0001-09",
+    "companyAddress": "Rua Guaiaos, 1",
+    "companyName": "E2C COMPANHIA ENTRETENIMENTO ESPORTES TECNOLOGIA NEGÓCIOS LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_meuingressopromo/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_meuingressopromo/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_meuingressopromo/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_meuingressopromo/emailComprador.html",
+      "gift": "../comprar/templates/multi_meuingressopromo/emailPresente.html",
+      "signature": "../comprar/templates/multi_meuingressopromo/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_meuingressopromo/confirmacaoEmail.html"
+
+    }
+  }
+}

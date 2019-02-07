@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.bilhete.promo",
+  "uri": "https://www.bilhete.promo",
+  "api": "https://api.bilhete.promo",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.bilhete.promo",
+  "admin": "https://admin.bilhete.promo",
+  "apikey": "live_5e72ec2c5dbd4cb796ad9c08442b697c0b12cf45523e4fd3b97c3fb678381a1c",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/bilhetepromo/main.scss",
+  "css": "/stylesheets/themes/www.bilhete.promo/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-bilhetepromo.png",
+  "favico": "/img/bilhetepromo/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Venda de Bilhetes",
+    "keywords": "venda,bilhete"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Bilhete.Promo",
+    "description": "Venda de Bilhetes",
+    "siteName": "www.bilhete.promo",
+    "CNPJ": "28.427.697/0001-09",
+    "companyAddress": "Rua Guaiaos, 1",
+    "companyName": "E2C COMPANHIA ENTRETENIMENTO ESPORTES TECNOLOGIA NEGÓCIOS LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_bilhetepromo/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_bilhetepromo/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_bilhetepromo/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_bilhetepromo/emailComprador.html",
+      "gift": "../comprar/templates/multi_bilhetepromo/emailPresente.html",
+      "signature": "../comprar/templates/multi_bilhetepromo/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_bilhetepromo/confirmacaoEmail.html"
+
+    }
+  }
+}

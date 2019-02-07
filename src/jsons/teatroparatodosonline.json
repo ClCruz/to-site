@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.teatroparatodos.online",
+  "uri": "https://www.teatroparatodos.online",
+  "api": "https://api.teatroparatodos.online",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.teatroparatodos.online",
+  "admin": "https://admin.teatroparatodos.online",
+  "apikey": "live_da1f3e41301c4652a1bfa1980f8bcca5f6fee19a4f0549b49f6ac8eb0a337bef",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/teatroparatodosonline/main.scss",
+  "css": "/stylesheets/themes/www.teatroparatodos.online/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-teatroparatodosonline.jpeg",
+  "favico": "/img/teatroparatodosonline/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Venda de Bilhetes",
+    "keywords": "venda,bilhete"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Teatro para Todos",
+    "description": "Venda de Bilhetes",
+    "siteName": "www.teatroparatodos.online",
+    "CNPJ": "28.427.697/0001-09",
+    "companyAddress": "Rua Guaiaos, 1",
+    "companyName": "E2C COMPANHIA ENTRETENIMENTO ESPORTES TECNOLOGIA NEGÓCIOS LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_teatroparatodosonline/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_teatroparatodosonline/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_teatroparatodosonline/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_teatroparatodosonline/emailComprador.html",
+      "gift": "../comprar/templates/multi_teatroparatodosonline/emailPresente.html",
+      "signature": "../comprar/templates/multi_teatroparatodosonline/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_teatroparatodosonline/confirmacaoEmail.html"
+
+    }
+  }
+}

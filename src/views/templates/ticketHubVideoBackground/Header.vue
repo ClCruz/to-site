@@ -59,7 +59,7 @@
       </div>
 
     </div>
-    <div class="col-3 nav__mobile">
+    <div class="col-4 nav__mobile">
       <div id="nav-icon3" class="toggle nav__hamburger" @click="toggleNavMobile()" @keyup.esc="toggleNavMobile()">
         <span></span>
         <span></span>
@@ -67,14 +67,14 @@
         <span></span>
       </div>
     </div>
-    <div class="col-6 text-center mx-0 mx-auto">
+    <div class="col-4 text-center mx-0 mx-auto">
       <div class="footer__logo text-left">
         <router-link to="/">
           <div class="img"></div>
         </router-link>
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-4">
       <div class="icon"></div>
       <span v-if="!isLogged" class="btn   btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
       <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="" alt=""></span>

@@ -581,9 +581,10 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.1);
 
 		@media only screen and (max-width: 720px) {
-			height: 30px;
+			height: 40px;
 		}
 	}
+
 	.v-suggestions input::placeholder {
 		color: #aaa;
 		font-size: 85%;
@@ -808,9 +809,40 @@
 	.item__slide img {
 		@include MQ(S) {
 			border-top-right-radius: 10px;
-			border-bottom-right-radius: 10px;
 			max-height: 200px !important;
+			border-bottom-right-radius: 10px;
 		}
+	}
+
+	#nav-icon1 span,
+	#nav-icon3 span,
+	#nav-icon4 span {
+		@include MQ(S) {
+			left: 100%;
+		}
+	}
+
+	#app > div > div:nth-child(1) > nav > div:nth-child(4) {
+		@include MQ(S) {
+			display: flex;
+		}
+	}
+
+	#app > div > div:nth-child(1) > nav > div:nth-child(4) > span.btn.btn-light.to-btn.hidden-xs.hidden-sm {
+		@include MQ(S) {
+			align-self: center;
+		}
+	}
+
+	.event__title {
+		text-transform: capitalize !important;
+		font-size: 13.5px !important;
+		color: black;
+	}
+
+	.event__item {
+		font-size: 12px !important;
+		text-transform: capitalize !important;
 	}
 }
 
@@ -826,6 +858,10 @@
 	background-position: center;
 	&:hover {
 		opacity: 0.8;
+	}
+
+	@include MQ(S) {
+		height: 40px;
 	}
 }
 
@@ -891,6 +927,9 @@
 }
 
 .nav__mobile {
-	visibility: hidden;
-	z-index: -500;
+	z-index: 100000;
+}
+
+.overlay {
+	z-index: 99999 !important;
 }
