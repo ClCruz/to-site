@@ -156,6 +156,11 @@ export default {
           "img": "/assets/logo-bilhetepromo.png"
         },
         {
+          "name": "BR INGRESSOS.com.br",
+          "url": "http://bringressos.com.br",
+          "img": "/assets/logo-bringressos.svg"
+        },
+        {
           "name": "www.ingresso.promo",
           "url": "http://ingresso.promo",
           "img": "/assets/logo-ingressopromo.png"
@@ -192,7 +197,9 @@ export default {
         // },
       ]
     }
-  }
+  },
+  created() {
+  },
 };
 </script>
 
