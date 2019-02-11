@@ -102,7 +102,7 @@
                 <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
               </h4>
               <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
-              <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
+              <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
 
             </div>
           </div>
