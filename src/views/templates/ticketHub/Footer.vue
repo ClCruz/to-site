@@ -11,7 +11,8 @@
       </div>
 
       <div class="col mt-4 mt-lg-0 text-center">
-        <div class="row nopadding">
+
+        <div class="row nopadding" style="justify-content: center!important">
           <ul class="nav justify-content-center mx-0 nopadding">
             <li class="nav-item">
               <a href="#" class="nav-link" @click="loadSACPage('company','sobre')">
@@ -40,7 +41,18 @@
             </li>
           </ul>
         </div>
+        <div class="row nopadding mt-4" style="justify-content: center!important" v-if="isPartner()">
+          <ul class="nav justify-content-center mx-0 nopadding text-center" >
+            <li v-for="(item) in listPartners" v-bind:key="item" class=" ml-3 mr-3 pl-3 pr-3 nav-item text-center mx-0 mx-auto">
 
+              <a :href="item.url" v-if="item.name != 'Localhost'">
+               <img :src="item.img" style="width: 70px"> 
+
+             </a>
+            </li>
+
+          </ul>
+        </div>
         <div class="row mt-4 nopadding">
           <div class="col text-center">
             <span>{{companyName}} - {{companyAddress}} - CNPJ: {{CNPJ}} </span>
@@ -87,6 +99,9 @@ export default {
           break;
       }
     },
+    isPartner() {
+      return this.listPartners.filter(x => x.name == this.siteName).length > 0;
+    },
     contact() {
       this.$swal.queue([{
         title: 'Atendimento ao cliente',
@@ -122,9 +137,7 @@ export default {
           );
         }
       }]).then((result) => {
-        if (result.value) {
-          console.log(result)
-        } else if (result.dismiss === this.$swal.DismissReason.cancel) {
+        if (result.value) {} else if (result.dismiss === this.$swal.DismissReason.cancel) {
 
         }
       });
@@ -137,6 +150,47 @@ export default {
       CNPJ: config.info.CNPJ,
       companyName: config.info.companyName,
       companyAddress: config.info.companyAddress,
+      listPartners: [{
+          "name": "www.bilhete.promo",
+          "url": "http://bilhete.promo",
+          "img": "/assets/logo-bilhetepromo.png"
+        },
+        {
+          "name": "www.ingresso.promo",
+          "url": "http://ingresso.promo",
+          "img": "/assets/logo-ingressopromo.png"
+        },
+        {
+          "name": "www.ingresso.store",
+          "url": "https://www.ingresso.store/",
+          "img": "/assets/logo-ingressostore.png"
+        },
+        {
+          "name": "www.ingressos.store",
+          "url": "https://www.ingressos.store/",
+          "img": "/assets/logo-ingressosstore.jpeg"
+        },
+        {
+          "name": "www.meuingresso.promo",
+          "url": "https://meuingresso.promo",
+          "img": "/assets/logo-meuingressopromo.png"
+        },
+        {
+          "name": "www.teatroparatodos.club",
+          "url": "https://teatroparatodos.club",
+          "img": "/assets/logo-teatroparatodosclub.jpeg"
+        },
+        {
+          "name": "www.teatroparatodos.online",
+          "url": "https://teatroparatodos.online",
+          "img": "/assets/logo-teatroparatodosonline.jpeg"
+        },
+        // {
+        //   "name": "Localhost",
+        //   "url": "localhost:8080",
+        //   "img": "/assets/logo-teatroparatodosonline.jpeg"
+        // },
+      ]
     }
   }
 };
