@@ -1,8 +1,4 @@
 @mixin content {
-	.to-box {
-		cursor: pointer;
-	}
-
 	svg:not(:root).svg-inline--fa {
 		overflow: visible;
 	}
@@ -468,6 +464,7 @@
 		color: white;
 		font-weight: bold;
 		/* background: white; */
+		cursor: pointer;
 		font-size: 14px;
 	}
 
@@ -479,13 +476,36 @@
 		padding-top: 0 !important;
 	}
 
+	.to-box {
+		cursor: pointer;
+		box-shadow: 0 0rem 0.8rem rgba(140, 140, 140, 0.6) !important;
+
+		&:hover {
+			box-shadow: 0 0rem 0.5rem rgba(140, 140, 140, 0.8) !important;
+			transform: translateY(-1px);
+		}
+	}
+
 	.to-block .to-box {
 		height: 100%;
 		transition: 0.5s;
 
 		.img-fluid {
-			height: 150px;
+			height: 182px;
 			background-position: center;
+
+			// box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2) !important;
+
+			@include MQ(M) {
+				height: 240px;
+			}
+
+			@include MQ(NS) {
+				height: 150px;
+			}
+
+			&:hover {
+			}
 		}
 
 		h4 {
@@ -496,7 +516,6 @@
 		}
 
 		&:hover {
-			transform: translateY(-2px);
 		}
 
 		p {
@@ -520,12 +539,12 @@
 		cursor: pointer;
 
 		background-size: cover !important;
-		height: 80px;
-		width: 100%;
+		height: 85px;
+		width: 97%;
 		transition: 0.5s;
-
+		margin: 0 auto;
 		&:hover {
-			box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25) !important;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2) !important;
 		}
 	}
 
@@ -549,22 +568,27 @@
 
 	.card__home-0 {
 		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/yellow.svg');
+		// background: url('/assets/background.svg');
 	}
 
 	.card__home-1 {
 		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/red.svg');
+		// background: url('/assets/background_2.svg');
 	}
 
 	.card__home-2 {
 		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/blue.svg');
+		// background: url('/assets/background_3.svg');
 	}
 
 	.card__home-3 {
 		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/red.svg');
+		// background: url('/assets/background_4.svg');
 	}
 
 	.card__home-4 {
 		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/purple.svg');
+		// background: url('/assets/background_5.svg');
 	}
 
 	.v-suggestions input[type=text] {
@@ -639,9 +663,9 @@
 	}
 
 	.img__inside {
-		margin-right: -13px;
-		width: 60px;
-		height: 60px;
+		margin-right: -9px;
+		width: 70px;
+		height: 70px;
 		background: black;
 		float: right;
 		margin-top: 28px;
@@ -836,13 +860,119 @@
 
 	.event__title {
 		text-transform: capitalize !important;
-		font-size: 13.5px !important;
-		color: black;
+		font-size: 14px !important;
+		color: rgb(68, 68, 68);
+		margin-top: 0;
+		padding-top: 0;
 	}
 
 	.event__item {
-		font-size: 12px !important;
-		text-transform: capitalize !important;
+	}
+
+	.event__date {
+		position: absolute;
+		top: 0;
+		left: 15px;
+		background-color: #2d313c;
+		color: #fff;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		@include box-shadow();
+
+		padding: 0.5em;
+		span {
+			display: block;
+			text-align: center;
+		}
+		.day {
+			font-weight: 700;
+			font-size: 20px;
+			text-shadow: 2px 3px 2px rgba($black, 0.1);
+		}
+		.month {
+			text-transform: uppercase;
+		}
+		.month,
+		.year {
+			font-size: 13px;
+		}
+	}
+
+	.bold {
+		font-weight: 500 !important;
+	}
+	.card__date-2 {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background-color: #2d313c;
+		color: #fff;
+		height: 100%;
+		@include box-shadow();
+
+		padding: 0.5em;
+		span {
+			display: block;
+			text-align: center;
+		}
+		.day {
+			font-weight: 700;
+			font-size: 20px;
+			text-shadow: 2px 3px 2px rgba($black, 0.1);
+		}
+		.month {
+			text-transform: uppercase;
+		}
+		.month,
+		.year {
+			font-size: 13px;
+		}
+	}
+	.card__date:nth-of-type(2) {
+		position: absolute;
+		top: 0;
+		background-color: $secundary;
+		color: #fff;
+		border-bottom-right-radius: 5px;
+		border-top-left-radius: 3px;
+		@include box-shadow();
+		padding: 0.5em;
+		span {
+			display: block;
+			text-align: center;
+		}
+		.day {
+			font-weight: 700;
+			font-size: 16px;
+		}
+		.month {
+			text-transform: uppercase;
+		}
+		.month,
+		.year {
+			font-size: 12px;
+		}
+	}
+
+	.event__item-date {
+		background: url('/assets/icons/calendar.svg') no-repeat 5px center;
+		background-size: 16px;
+		margin-left: -6px !important;
+		font-size: 13px !important;
+		margin-top: 4px !important;
+		padding-left: 28px !important;
+		transition: 0.5s;
+
+		// color: #333;
+	}
+	.event__item-local {
+		background: url('/assets/icons/map-pin.svg') no-repeat 5px center;
+		background-size: 16px;
+		margin-left: -6px !important;
+		font-size: 13px !important;
+		padding-left: 28px !important;
+		text-transform: unset !important;
+		// color: #333;
 	}
 }
 

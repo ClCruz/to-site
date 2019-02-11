@@ -27,7 +27,7 @@ gulp.task('sassLocal', function() {
 		.src('./src/scss/themes/**/*.scss')
 		.pipe(
 			sass({
-				outputStyle: 'compressed'
+				outputStyle: 'nested'
 			}).on('error', sass.logError)
 		)
 		.pipe(gulp.dest('./public/assets/css/'))
