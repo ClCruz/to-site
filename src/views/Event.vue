@@ -548,6 +548,8 @@ export default {
 
           if (response.error) {
             this.toastError(response.msg);
+            if (response.goto == "home")
+              window.location = "/";
             return;
           }
           if (this.validateJSON(response)) {
