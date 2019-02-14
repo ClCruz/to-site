@@ -5,7 +5,7 @@
 		:width="960"
 		:speed="2"
 		primaryColor="#f3f3f3"
-		secondaryColor="#ecebeb"
+		secondaryColor="#dedede"
 	>
 		<rect x="25" y="0" rx="20" ry="20" width="650" height="60" /> 
 		<rect x="25" y="150" rx="5" ry="5" width="500" height="30" /> 

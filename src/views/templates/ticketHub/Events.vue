@@ -23,8 +23,21 @@
 
   <section class="pt-4" id="section__slider">
     <div class="container">
+      <!-- swiper -->
+      <div v-if="!slideLoaded">
+        <div class="item__slide">
+          <div class="row">
+            <div class="col-md-8 col-xs-12 nopadding slide__image" style="">
+              <CarrouselLoader class="nopadding" style="padding: 0!important; border-top-left-radius: 5px; margin-right: -5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
+            </div>
+            <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+              <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
 
-      <swiper :options="swiperOption">
+            </div>
+          </div>
+        </div>
+      </div>
+      <swiper :options="swiperOption" v-else>
 
         <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
           <div class="item__slide" style="">
@@ -65,7 +78,7 @@
     <div class="container">
       <div class="row text-left pt-3 pb-1">
         <div class="col-12 col-sm-12 text-left">
-          <h3>Gêneros em destaque</h3>
+          <h3 v-if="genreList != ''">Gêneros em destaque</h3>
         </div>
         <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in genreList" :key='index'>
           <p>
