@@ -30,36 +30,37 @@
           </a>
         </div>
 
-        <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
-          <h3><strong>Formas de Pagamento</strong></h3>
-          <div class="credit__cards col-10 nopadding p-0">
-            <img src="/assets/images/logo-visa.png" alt="">
-            <img src="/assets/images/logo-mastercard.png" alt="">
-            <img src="/assets/images/logo-amex.png" alt="">
-            <img src="/assets/images/logo-discover.png" alt="">
-            <img src="/assets/images/logo-elo.png" alt="" class="credit__cards-elo">
-            <img src="/assets/images/logo-hipercard.png" class="credit__cards-hipercard" alt="">
-            <img src="/assets/images/logo-diners.png" alt="">
-            <img src="/assets/images/logo-aura.png" alt="" class="credit__cards-aura">
-            <img src="/assets/images/logo-jcb.png" alt="">
-            <img src="/assets/images/logo-boleto.png" alt="">
-
-          </div>
-          </div>
+         
           <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
             <h3><strong>Políticas</strong></h3>
 
             <a href="#" click="loadSACPage('policy','venda')">
                 Politica de Venda
-          </a>
+            </a>
             <br>
             <a href="#" click="loadSACPage('policy','desconto')">
                 Política de Meia Entrada
-          </a>
+            </a>
             <br>
             <a href="#" click="loadSACPage('policy','privacidade')">
                 Politica de Privacidade
-          </a>
+            </a>
+          </div>
+           <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
+            <h3><strong>Formas de Pagamento</strong></h3>
+            <div class="credit__cards col-10 nopadding p-0">
+              <img src="/assets/images/logo-visa.png" alt="">
+              <img src="/assets/images/logo-mastercard.png" alt="">
+              <img src="/assets/images/logo-amex.png" alt="">
+              <img src="/assets/images/logo-discover.png" alt="">
+              <img src="/assets/images/logo-elo.png" alt="" class="credit__cards-elo">
+              <img src="/assets/images/logo-hipercard.png" class="credit__cards-hipercard" alt="">
+              <img src="/assets/images/logo-diners.png" alt="">
+              <img src="/assets/images/logo-aura.png" alt="" class="credit__cards-aura">
+              <img src="/assets/images/logo-jcb.png" alt="">
+              <img src="/assets/images/logo-boleto.png" alt="">
+
+            </div>
           </div>
           <div v-if="isPartner()" class="col-12 col-md mt-5 mt-md-0 text-md-left">
             <h3 style=""><strong>Parceiros</strong></h3>

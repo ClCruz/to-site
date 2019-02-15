@@ -9,7 +9,6 @@
   "apikey": "live_578abaf329f84119bb7c1e55dfdc7e0f4f20e693cd2c4bc7a5bc0a0965fae322",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "template": "www.bringressos.com.br",
   "template": "ticketHub",
   "css": "/stylesheets/themes/bringressos/main.css",
   "logo": "https://media.tixs.me/logos/logo-bringressos.svg",
@@ -27,11 +26,11 @@
   },
   "info": {
     "title": "bringressos.com.br | Venda de Ingressos",
-    "description": "Venda de Ingressos",
-    "siteName": "BR INGRESSOS.com.br",
-    "CNPJ": "", 
-    "companyAddress": "",
-    "companyName": ""
+    "description": "Venda de Bilhetes",
+    "siteName": "www.teatroparatodos.club",
+    "CNPJ": "28.427.697/0001-09",
+    "companyAddress": "Rua Guaiaos, 1",
+    "companyName": "E2C COMPANHIA ENTRETENIMENTO ESPORTES TECNOLOGIA NEGÓCIOS LTDA"
   },
   "templates": {
     "print": {
