@@ -6,7 +6,7 @@
         <div class="col-12 col-md">
           <div class="footer__logo text-left mb-3">
             <router-link to="/">
-              <div class="img" style="background-position: left!important"></div>
+              <div class="img" style=""></div>
             </router-link>
           </div>
 
