@@ -36,7 +36,7 @@
                 <h3 class="" style="font-size: 24px">{{item.ds_evento}}</h3>
                 <div class="">
                   <div class="event-name pull-left">
-                    <p> {{item.bannerDescription}} </p>
+                    <p v-html="item.bannerDescription"></p>
                     <div class="event-location-city">
                     </div>
                     <div class="event-location-city">
