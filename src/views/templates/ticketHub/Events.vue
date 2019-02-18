@@ -23,8 +23,21 @@
 
   <section class="pt-4" id="section__slider">
     <div class="container">
+      <!-- swiper -->
+      <div v-if="!slideLoaded">
+        <div class="item__slide">
+          <div class="row">
+            <div class="col-md-8 col-xs-12 nopadding slide__image" style="">
+              <CarrouselLoader class="nopadding" style="padding: 0!important; border-top-left-radius: 5px; margin-right: -5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
+            </div>
+            <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+              <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
 
-      <swiper :options="swiperOption">
+            </div>
+          </div>
+        </div>
+      </div>
+      <swiper :options="swiperOption" v-else>
 
         <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
           <div class="item__slide" style="">
@@ -65,7 +78,7 @@
     <div class="container">
       <div class="row text-left pt-3 pb-1">
         <div class="col-12 col-sm-12 text-left">
-          <h3>Gêneros em destaque</h3>
+          <h3 v-if="genreList != ''">Gêneros em destaque</h3>
         </div>
         <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in genreList" :key='index'>
           <p>
@@ -92,16 +105,21 @@
           <h3 class="font-weight-bold">Eventos</h3>
         </div>
 
-        <div class="col-10 col-xl-3 col-md-4 pb-4 pl-1 pr-1 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
+        <div class="col-10 col-xl-4 col-md-6 pb-4 pl-2 pr-2 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
           <div class="to-box p-0">
+            <!-- <div class="event__date">
+                <span class="day">12</span>
+                <span class="month">AGO</span>
+              </div> -->
             <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
-            <div class="content p-2 pt-2 pb-2">
-              <h4 class="event__title">
-                <strong>{{ item.ds_evento |  truncate(25, ' ...') }}</strong>
+            <div class="content to-box p-2 pt-0 pb-2" style="position: relative">
+              <h4 class="event__title pb-1">
+                <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
               </h4>
-              <p class="p-0 pt-1 m-0 h-200 event__item">{{ item.ds_nome_teatro }} </p>
-              <p class="p-0 m-0 event__item "> {{ item.ds_municipio }}, {{ item.sg_estado }}</p>
+              <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
+              <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
+
             </div>
           </div>
         </div>
@@ -227,7 +245,6 @@ export default {
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.slideData = response;
-          //console.log(response);
           this.hideWaitAboveAll();
         },
         error => {
@@ -261,7 +278,6 @@ export default {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.bannerEvents = response;
-          console.log(this.bannerEvents);
           this.slideLoaded = true;
         },
         error => {
@@ -278,7 +294,6 @@ export default {
         response => {
           this.slideData = response;
           this.hideWaitAboveAll();
-          //console.log(response);
           this.isLoaded = true;
 
           this.getCityList();
@@ -329,6 +344,15 @@ export default {
       node.innerHTML = text;
       var content = node.textContent;
       return content.length > length ? content.slice(0, length) + clamp : content;
+    },
+    replace: function (message, toReplace, replacement) {
+      return message.replace(toReplace, replacement);
+    },
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      value = value.toLowerCase();
+      return value.charAt(0).toUpperCase() + value.slice(1)
     }
   }
 }

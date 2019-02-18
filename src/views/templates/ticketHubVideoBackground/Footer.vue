@@ -1,65 +1,100 @@
 <template>
-<footer class="to-block footer-small bg-dark mt-4" style="font-size: 12px">
-  <div class="container  pt-4 pb-2">
-    <div class="row text-center align-items-center">
-      <div class="col-12 col-lg-2 text-lg-left">
-        <div class="footer__logo text-left">
-          <router-link to="/">
-            <div class="img"></div>
-          </router-link>
-        </div>
-      </div>
+<div>
+  <footer class="fdb-block bg-dark">
+    <div class="container">
+      <div class="row align-items-top text-center text-md-left">
+        <div class="col-12 col-md">
+          <div class="footer__logo text-left mb-3">
+            <router-link to="/">
+              <div class="img" style=""></div>
+            </router-link>
+          </div>
 
-      <div class="col mt-4 mt-lg-0 text-center">
-        <div class="row nopadding">
-          <ul class="nav justify-content-center mx-0 nopadding">
-            <li class="nav-item">
-              <a href="#" class="nav-link" @click="loadSACPage('company','sobre')">
+          <!-- <p>2018 - {{companyName}}</p>
+
+          <p> <span>{{companyAddress}}</span></p>
+          <p>CNPJ: {{CNPJ}} </p> -->
+        </div>
+
+        <div class="col-12 col-md mt-4 mt-sm-0">
+          <h3><strong>Institucional</strong></h3>
+          <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
+
+          <br>
+          <a href="#" @click="loadSACPage('company','sobre')">
                 Sobre a empresa
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" @click="loadSACPage('policy','venda')">
-                Politica de Venda
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" @click="loadSACPage('policy','desconto')">
-                Política de Meia Entrada
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" @click="loadSACPage('policy','privacidade')">
-                Politica de Privacidade
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" @click="loadSACPage('partner','sejaParceiro')">
+            </a>
+        <br>
+        <a href="#" @click="loadSACPage('partner','sejaParceiro')">
                 Seja nosso Parceiro
-              </a>
-            </li>
-          </ul>
+          </a>
         </div>
 
-        <div class="row mt-4 nopadding">
+         
+          <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
+            <h3><strong>Políticas</strong></h3>
+
+            <a href="#" click="loadSACPage('policy','venda')">
+                Politica de Venda
+            </a>
+            <br>
+            <a href="#" click="loadSACPage('policy','desconto')">
+                Política de Meia Entrada
+            </a>
+            <br>
+            <a href="#" click="loadSACPage('policy','privacidade')">
+                Politica de Privacidade
+            </a>
+          </div>
+           <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
+            <h3><strong>Formas de Pagamento</strong></h3>
+            <div class="credit__cards col-10 nopadding p-0">
+              <img src="/assets/images/logo-visa.png" alt="">
+              <img src="/assets/images/logo-mastercard.png" alt="">
+              <img src="/assets/images/logo-amex.png" alt="">
+              <img src="/assets/images/logo-discover.png" alt="">
+              <img src="/assets/images/logo-elo.png" alt="" class="credit__cards-elo">
+              <img src="/assets/images/logo-hipercard.png" class="credit__cards-hipercard" alt="">
+              <img src="/assets/images/logo-diners.png" alt="">
+              <img src="/assets/images/logo-aura.png" alt="" class="credit__cards-aura">
+              <img src="/assets/images/logo-jcb.png" alt="">
+              <img src="/assets/images/logo-boleto.png" alt="">
+
+            </div>
+          </div>
+          <div v-if="isPartner()" class="col-12 col-md mt-5 mt-md-0 text-md-left">
+            <h3 style=""><strong>Parceiros</strong></h3>
+            <div class="row nopadding mt-4" style="justify-content: center!important" v-if="isPartner()">
+              <ul class="nav justify-content-center mx-0 nopadding text-center">
+                <li v-for="(item) in listPartners" v-bind:key="item" class="m-1 pr-2 nav-item text-center mx-0 mx-auto">
+
+                  <a :href="item.url" v-if="item.name != 'Localhost'">
+               <img :src="item.img" style="width: 80px"> 
+
+             </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="row mt-5 footer-name nopadding">
           <div class="col text-center">
-            <span style="color: #ccc">{{companyName}} - {{companyAddress}} - CNPJ: {{CNPJ}} </span>
+            <p>2018 {{companyName}} </p>
           </div>
         </div>
-        <div class="row mt-4 nopadding mb-0 pb-0">
+        <div class="row mt-0 nopadding mb-0 pb-0">
           <div class="col text-center">
-            2018 {{siteName}}, Inc.
+            <p>
+              {{companyAddress}} - CNPJ: {{CNPJ}}
+            </p>
           </div>
         </div>
       </div>
-
-      <div class="col-12 col-lg-2 mt-4 mt-lg-0 text-lg-right">
-        <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
-      </div>
-    </div>
-
-  </div>
-</footer>
+  </footer>
+</div>
 </template>
 
 <script>
@@ -86,6 +121,9 @@ export default {
           this.$router.push("/sac/parceiros/" + pagina);
           break;
       }
+    },
+    isPartner() {
+      return this.listPartners.filter(x => x.name == this.siteName).length > 0;
     },
     contact() {
       this.$swal.queue([{
@@ -122,9 +160,7 @@ export default {
           );
         }
       }]).then((result) => {
-        if (result.value) {
-          console.log(result)
-        } else if (result.dismiss === this.$swal.DismissReason.cancel) {
+        if (result.value) {} else if (result.dismiss === this.$swal.DismissReason.cancel) {
 
         }
       });
@@ -137,8 +173,55 @@ export default {
       CNPJ: config.info.CNPJ,
       companyName: config.info.companyName,
       companyAddress: config.info.companyAddress,
+      listPartners: [{
+          "name": "www.bilhete.promo",
+          "url": "http://bilhete.promo",
+          "img": "/assets/logo-bilhetepromo.png"
+        },
+        {
+          "name": "BR INGRESSOS.com.br",
+          "url": "http://bringressos.com.br",
+          "img": "/assets/logo-bringressos.svg"
+        },
+        {
+          "name": "www.ingresso.promo",
+          "url": "http://ingresso.promo",
+          "img": "/assets/logo-ingressopromo.png"
+        },
+        {
+          "name": "www.ingresso.store",
+          "url": "https://www.ingresso.store/",
+          "img": "/assets/logo-ingressostore.png"
+        },
+        {
+          "name": "www.ingressos.store",
+          "url": "https://www.ingressos.store/",
+          "img": "/assets/logo-ingressosstore.jpeg"
+        },
+        {
+          "name": "www.meuingresso.promo",
+          "url": "https://meuingresso.promo",
+          "img": "/assets/logo-meuingressopromo.png"
+        },
+        {
+          "name": "www.teatroparatodos.club",
+          "url": "https://teatroparatodos.club",
+          "img": "/assets/logo-teatroparatodosclub.jpeg"
+        },
+        {
+          "name": "www.teatroparatodos.online",
+          "url": "https://teatroparatodos.online",
+          "img": "/assets/logo-teatroparatodosonline.jpeg"
+        },
+        // {
+        //   "name": "Localhost",
+        //   "url": "localhost:8080",
+        //   "img": "/assets/logo-teatroparatodosonline.jpeg"
+        // },
+      ]
     }
-  }
+  },
+  created() {},
 };
 </script>
 

@@ -3,11 +3,11 @@
 	<content-loader
 		:height="390"
 		:width="790"
-		:speed="4"
+		:speed="3"
 		primaryColor="#f3f3f3"
-		secondaryColor="#ecebeb"
+		secondaryColor="#dedede"
 	>
-		<rect x="0" y="0" rx="20" ry="10" width="790" height="390" /> 
+		<rect x="0" y="0" rx="5" ry="10" width="790" height="390" /> 
 	</content-loader>
 </template>
 

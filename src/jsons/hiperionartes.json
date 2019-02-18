@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "hiperionartes.marketplay.club",
+  "uri": "https://hiperionartes.marketplay.club",
+  "api": "https://api.hiperionartes.marketplay.club",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.hiperionartes.marketplay.club",
+  "admin": "https://admin.hiperionartes.marketplay.club",
+  "apikey": "live_2560b8c826354c7297e80d81276098a11d0fc4861a0d4f71b9f4ee5ba048b736",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/hiperionartes/main.scss",
+  "css": "/stylesheets/themes/hiperionartes.marketplay.club/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-hiperionartes.png",
+  "favico": "/img/hiperionartes/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Hiperion - Demostrativo",
+    "keywords": "ticketoffice, hiperion, demostrativo"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Hiperion",
+    "description": "Hiperion - Demostrativo",
+    "siteName": "hiperionartes.marketplay.club",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua",
+    "companyName": "Hiperion Artes"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_hiperionartes/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_hiperionartes/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_hiperionartes/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_hiperionartes/emailComprador.html",
+      "gift": "../comprar/templates/multi_hiperionartes/emailPresente.html",
+      "signature": "../comprar/templates/multi_hiperionartes/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_hiperionartes/confirmacaoEmail.html"
+
+    }
+  }
+}

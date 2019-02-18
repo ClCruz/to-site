@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
     <div v-if="template == 'ticketHub'">
       <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
         <div class="container justify-content-center align-items-center d-flex p-5">
@@ -122,19 +122,11 @@
           <div class="col-md-6 container">
             <div class="row">
               <div class="col-md-12" style="">
-
                 <div class="content__description">
                   <div class="card event__card">
                     <div class="show__date">
                       <h2>{{event.NomPeca}}</h2>
                       <span class="event__badges">
-                        <!-- <b-tooltip target="badge__gender" title="Clique para procurar outros eventos por gênero" placement="top"></b-tooltip>
-                  <b-tooltip target="badge__map" title="Mapa" placement="bottom"></b-tooltip>
-                  <b-tooltip target="badge__age" title="Classificação etária" placement="bottom"></b-tooltip>
-                  <b-tooltip target="badge__address" title="Clique para procurar outros eventos para esse local..." placement="bottom"></b-tooltip>
-                  <b-tooltip target="badge__city" title="Clique para procurar outros eventos para essa cidade..." placement="bottom"></b-tooltip>
-                  <b-tooltip target="badge__price" title="Faixa de preço" placement="bottom"></b-tooltip> -->
-
                         <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
                         <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
                         <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>

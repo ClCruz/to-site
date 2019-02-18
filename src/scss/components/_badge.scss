@@ -4,21 +4,19 @@
 
 	a {
 		margin-right: 10px;
-		cursor: pointer!important;
+		cursor: pointer !important;
 	}
 }
-
 
 .badge {
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
-	
+
 	&:hover {
 		-webkit-transform: translateY(-1px);
 		transform: translateY(-1px);
 	}
 }
-
 
 .badge__icon {
 	padding-left: 18px;
@@ -52,4 +50,17 @@
 .badge__money {
 	background-image: url('/assets/icons/dollar-sign-white.svg');
 	background-size: 12px;
+	cursor: initial !important;
+	&:hover {
+		transform: none !important;
+		cursor: default !important;
+	}
+}
+
+.badge__age {
+	cursor: initial !important;
+	&:hover {
+		transform: none !important;
+		cursor: default !important;
+	}
 }
