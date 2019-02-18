@@ -66,7 +66,7 @@
             <h3 style=""><strong>Parceiros</strong></h3>
             <div class="row nopadding mt-4" style="justify-content: center!important" v-if="isPartner()">
               <ul class="nav justify-content-center mx-0 nopadding text-center">
-                <li v-for="(item) in listPartners" v-bind:key="item" class="m-1 pr-2 nav-item text-center mx-0 mx-auto">
+                <li v-for="(item) in listPartners" v-bind:key="item.url" class="m-1 pr-2 nav-item text-center mx-0 mx-auto">
 
                   <a :href="item.url" v-if="item.name != 'Localhost'">
                <img :src="item.img" style="width: 80px"> 
@@ -106,7 +106,7 @@ import {
   func
 } from '@/functions';
 export default {
-  name: "Footer",
+  name: "Footer", 
   computed: {},
   methods: {
     loadSACPage: function (categoria, pagina) {

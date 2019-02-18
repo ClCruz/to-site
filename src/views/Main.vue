@@ -29,21 +29,21 @@
 
 </div>
 <div v-else-if="template == 'ticketHub'">
-  <header-ticket-hub></header-ticket-hub>
+  <header-ticket-hub :key="idappheader"></header-ticket-hub>
   <transition name="component-fade" mode="out-in">
     <router-view :key="$route.fullPath"></router-view>
   </transition>
   <footer-ticket-hub></footer-ticket-hub>
 </div>
 <div v-else-if="template == 'ticketHubVideo'">
-  <header-ticket-hub-video-background></header-ticket-hub-video-background>
+  <header-ticket-hub-video-background :key="idappheader"></header-ticket-hub-video-background>
   <transition name="component-fade" mode="out-in">
     <router-view :key="$route.fullPath"></router-view>
   </transition>
   <footer-ticket-hub-video-background></footer-ticket-hub-video-background>
 </div>
 <div v-else>
-  <header-ticket-hub-search-header></header-ticket-hub-search-header>
+  <header-ticket-hub-search-header :key="idappheader"></header-ticket-hub-search-header>
   <transition name="component-fade" mode="out-in">
     <router-view :key="$route.fullPath"></router-view>
   </transition>
