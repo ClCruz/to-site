@@ -1,4 +1,3 @@
-
 .btn__filter {
 	font-size: 0.8rem;
 	padding-left: 20px;
@@ -28,12 +27,13 @@
 
 	&:first-child() {
 		background-image: url(/assets/icons/calendar.svg);
-			background-repeat: no-repeat;
-			background-position:6px;
-			background-size: 12px;
+		background-repeat: no-repeat;
+		background-position: 6px;
+		background-size: 12px;
 	}
 
-	.dropdown-item:hover, .dropdown-item:focus {
+	.dropdown-item:hover,
+	.dropdown-item:focus {
 		color: #16181b;
 		text-decoration: none;
 		background: #292929;
@@ -43,21 +43,20 @@
 }
 
 .btn__datas {
-	
 }
 
 #ddown-sm-split__BV_button_,
 #ddown-sm-split__BV_toggle_ {
 	background-color: $secundary;
+	border-left: none !important;
+	border-right: none !important;
 }
-
-
 
 #ddown-sm-split .dropdown-menu {
 	background: #222;
 	color: #fff;
-	    max-height: 300px;
-    overflow: scroll;
+	max-height: 300px;
+	overflow: scroll;
 }
 #ddown-sm-split .dropdown-item {
 	color: #fff;
