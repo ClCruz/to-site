@@ -66,7 +66,7 @@
             <h3 style=""><strong>Parceiros</strong></h3>
             <div class="row nopadding mt-4" style="justify-content: center!important" v-if="isPartner()">
               <ul class="nav justify-content-center mx-0 nopadding text-center">
-                <li v-for="(item) in listPartners" v-bind:key="item" class="m-1 pr-2 nav-item text-center mx-0 mx-auto">
+                <li v-for="(item) in listPartners" v-bind:key="item" class="m-0 pr-2 nav-item text-center mx-0 mx-auto" style="margin-top: 2px !important; margin-bottom: 2px !important">
 
                   <a :href="item.url" v-if="item.name != 'Localhost'">
                <img :src="item.img" style="width: 80px"> 
