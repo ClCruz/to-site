@@ -114,16 +114,17 @@
           </div>
         </div>
         <div class="row">
-          <div @click="goto(item)" class="col-sm-3 pb-4 pl-1 pr-1 text-left" v-for="(item, index) in searchResults" :key='index'>
+          <div @click="goto(item)" class="col-10 col-xl-4 col-md-6 pb-4 pl-2 pr-2 text-left" v-for="(item, index) in searchResults" :key='index'>
             <div class="to-box p-0">
               <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.cardimage + '\')' }" style="background-size: cover;"></div>
 
-              <div class="content p-1">
-                <h4>
-                  <strong>{{ item.ds_evento }}</strong>
+              <div class="content to-box p-2 pt-0 pb-2" style="position: relative">
+                <h4 class="event__title pb-1">
+                  <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
                 </h4>
-                <p class="p-0 m-0 h-200">{{ item.ds_nome_teatro }} </p>
-                <p class="p-0 m-0 h-200 fa-xs "> {{ item.ds_municipio }}, {{ item.sg_estado }}</p>
+                <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
+                <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
+
               </div>
             </div>
           </div>
@@ -377,6 +378,24 @@ export default {
     //console.log(this.$route.params.input);
     this.createMetaObj();
     this.getSearchResults(this.$router.currentRoute.name, this.searchValue);
+  },
+  filters: {
+    truncate: function (text, length, clamp) {
+      clamp = clamp || '...';
+      var node = document.createElement('div');
+      node.innerHTML = text;
+      var content = node.textContent;
+      return content.length > length ? content.slice(0, length) + clamp : content;
+    },
+    replace: function (message, toReplace, replacement) {
+      return message.replace(toReplace, replacement);
+    },
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      value = value.toLowerCase();
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
   }
 };
 </script>
