@@ -34,15 +34,15 @@
           <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
             <h3><strong>Políticas</strong></h3>
 
-            <a href="#" click="loadSACPage('policy','venda')">
+            <a href="#" @click="loadSACPage('policy','venda')">
                 Politica de Venda
             </a>
             <br>
-            <a href="#" click="loadSACPage('policy','desconto')">
+            <a href="#" @click="loadSACPage('policy','desconto')">
                 Política de Meia Entrada
             </a>
             <br>
-            <a href="#" click="loadSACPage('policy','privacidade')">
+            <a href="#" @click="loadSACPage('policy','privacidade')">
                 Politica de Privacidade
             </a>
           </div>
