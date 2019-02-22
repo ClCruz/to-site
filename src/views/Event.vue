@@ -16,7 +16,7 @@
       </section>
       <div class="content__show container__new container-fluid pb-4">
         <div class="row">
-          <div class="col-12 col-md-6 container">
+          <div class="col-12 col-md-6  pr-0 container">
             <div class="row">
               <div class="col-md-12" style="">
 
@@ -62,7 +62,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 pl-0">
             <div class="row">
               <div class="col-md-12 time__card">
                 <div class="show__date show__date-disp">

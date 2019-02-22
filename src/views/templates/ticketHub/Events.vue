@@ -61,7 +61,7 @@
                   </div>
                 </div>
                 <div class="button-event pt-4 w-100 to__slide-button" style="">
-                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: item.uri})" type="button">Comprar ingressos</button>
+                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: item.uri})" type="button">Comprar</button>
                 </div>
               </div>
             </div>
