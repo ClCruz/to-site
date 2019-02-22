@@ -1,7 +1,7 @@
 {
   "env": "production",
-  "host": "ingressos.cafeteatrorubi.com.br",
-  "uri": "ingressos.cafeteatrorubi.com.br",
+  "host": "tickets.cafeteatrorubi.com.br",
+  "uri": "tickets.cafeteatrorubi.com.br",
   "api": "https://api.cafeteatrorubi.com.br",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.cafeteatrorubi.com.br",
@@ -10,7 +10,7 @@
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/cafeteatrorubi/main.scss",
-  "css": "/stylesheets/themes/ingressos.cafeteatrorubi.com.br/main.css",
+  "css": "/stylesheets/themes/tickets.cafeteatrorubi.com.br/main.css",
   "template": "ticketHubSearchHeader",
   "logo": "/assets/logo-cafeteatrorubi.png",
   "favico": "/img/cafeteatrorubi/",
@@ -28,7 +28,7 @@
   "info": {
     "title": "Café Teatro Rubi",
     "description": "Café Teatro Rubi | Espaço cultural que apresenta produções de música, teatro e dança. Localizado no Sheraton da Bahia Hotel, tem capacidade para 156 pessoas distribuídas em 39 mesas.",
-    "siteName": "ingressos.cafeteatrorubi.com.br",
+    "siteName": "tickets.cafeteatrorubi.com.br",
     "CNPJ": "19.653.679/0001-46",
     "companyAddress": "Avenida Sete de Setembro, 1537 | Salvador, Bahia – 40080-001 – Brasil | Café-Teatro Rubi – Wish Hotel da Bahia",
     "companyName": "Nace - Nucleo de Ações Culturais Estratégicas Eirelli"
