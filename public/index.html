@@ -28,7 +28,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" integrity="sha384-xyZLiqnBEFn1hDkS8VeG/YHoqOjS/ucimT8TI6GDr9+ZP1UNbZr6d/q0ldMi/xvL" crossorigin="anonymous">
   <title>Carregando...</title>
 </head>
@@ -46,11 +46,11 @@
 var link = document.createElement('link');
 link.rel = "stylesheet";
 link.type = "text/css";
-// if (!window.location.hostname.startsWith("www")) {
-//   link.href = "/assets/css/www.famillyproducoesdemo.tk/main.css";
-// } else {
-// }
-link.href = "/assets/css/" + window.location.hostname + "/main.css";
+if (window.location.hostname.startsWith("localhost")) {
+  link.href = "/assets/css/www.bringressos.com.br/main.css";
+} else {
+  link.href = "/assets/css/" + window.location.hostname + "/main.css";
+}
 document.head.appendChild(link);
 
 //document.querySelector('body').style.display = 'unset';

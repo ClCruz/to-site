@@ -36,7 +36,7 @@
                 <h3 class="" style="font-size: 24px">{{item.ds_evento}}</h3>
                 <div class="">
                   <div class="event-name pull-left">
-                    <p> {{item.bannerDescription}} </p>
+                    <p v-html="item.bannerDescription"></p>
                     <div class="event-location-city">
                     </div>
                     <div class="event-location-city">
@@ -46,7 +46,7 @@
                   </div>
                 </div>
                 <div class="button-event pt-4 w-100 to__slide-button" style="">
-                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: item.uri})" type="button">Comprar ingressos</button>
+                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: item.uri})" type="button">Comprar</button>
                 </div>
               </div>
             </div>
