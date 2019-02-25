@@ -36,6 +36,15 @@ sudo docker run -it -d -p 2001:80 --restart=always --name unique.site \
 blcoccaro/phpwithsql:v1
 ```
 
+### Domains
+```bash
+www.domain.xxx
+admin.domain.xxx
+api.domain.xxx
+legacy.domain.xxx
+compra.domain.xxx
+```
+
 ### meanings 
 | location | what |
 | -------- | ----- |

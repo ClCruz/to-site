@@ -5,7 +5,6 @@ import VueResource from "vue-resource";
 import { getInfo } from 'localStorage-info';
 import SecureLS from 'secure-ls';
 
-import { authTicketOffice } from './components/ticketoffice/services/auth';
 import { authService } from "./components/common/services/auth";
 
 Vue.use(VueResource);
@@ -126,15 +125,6 @@ export const func = {
         localStorageInfo() {
             console.log(getInfo());
         },
-        isPurchasePages() {
-            if (this.$route.path.startsWith("/ticketoffice/operation/"))
-                return true;
-            
-            if (this.$route.path.startsWith("/ticketoffice/sell"))
-                return true;
-
-            return false;
-        },
         gotoLegacy(id, type) {
             let token = "";
             if (this.ls_get("client")) {
@@ -152,71 +142,6 @@ export const func = {
                 break;
             }
         },
-        gotoHome() {
-            this.$router.push("/ticketoffice");
-            if (this.$parent.idHeader) this.$parent.idHeader++;
-        },
-        toffice_buttonNext(show, uri = "") {
-            for (let x in this.$parent.$children) {
-                if (!this.$parent.$children[x].isHeader) continue;
-
-                if (show) {
-                    this.$parent.$children[x].toNext = true;
-                    this.$parent.$children[x].toNextRoute = uri;
-                }
-                else {
-                    this.$parent.$children[x].toNext = false;
-                    this.$parent.$children[x].toNextRoute = "";        
-                }
-                break;
-            }
-        },
-        getHeader() {
-            for (let x in this.$parent.$children) {
-                if (!this.$parent.$children[x].isHeader) continue;
-                return this.$parent.$children[x];
-            }
-            for (let x in this.$children) {
-                if (!this.$parent.$children[x].isHeader) continue;
-                return this.$parent.$children[x];
-            }
-        },
-        getCashRegister() {
-            for (let x in this.$parent.$children) {
-                if (!this.$parent.$children[x].isCashRegister) continue;
-                return this.$parent.$children[x];
-            }
-            for (let x in this.$children) {
-                if (!this.$parent.$children[x].isCashRegister) continue;
-                return this.$parent.$children[x];
-            }
-        },
-        getMap() {
-            for (let x in this.$parent.$children) {
-                if (!this.$parent.$children[x].isMap) continue;
-                return this.$parent.$children[x];
-            }
-        },
-        getOperation() {
-            for (let x in this.$parent.$children) {
-                if (!this.$parent.$children[x].isOperation) continue;
-                return this.$parent.$children[x];
-            }
-            for (let x in this.$children) {
-                if (!this.$parent.$children[x].isOperation) continue;
-                return this.$parent.$children[x];
-            }
-        },
-        getClient() {
-            for (let x in this.$parent.$children) {
-                if (!this.$parent.$children[x].isClientAdd) continue;
-                return this.$parent.$children[x];
-            }
-            for (let x in this.$children) {
-                if (!this.$parent.$children[x].isClientAdd) continue;
-                return this.$parent.$children[x];
-            }
-        },
         showWaitAboveAll() {
             this.waitCallers.push("a");
             this.$wait.start("loadingAboveAll");
@@ -232,26 +157,6 @@ export const func = {
         },
         getLoggedId() {
             return this.ls_get("id");
-        },
-        tryLoginTicketOffice(callback) {
-            if (this.ls_get('token') == null) return;
-            this.showWaitAboveAll();
-            authTicketOffice.token(this.ls_get('token')).then(response => {
-                this.hideWaitAboveAll();
-                if (response.logged) {
-                    this.$store.dispatch('login', response);
-                } else {
-                    localStorage.clear();
-                }
-
-                if (callback!=null && callback != undefined)
-                    callback();
-            }, error => {
-                //console.log(JSON.stringify(response));
-                //this.processing=false;
-                //this.$wait.end("inprocess");
-                //this.toastError("Falha na execução.");
-            });
         },
         toastSuccess(message, timer = 4000, showbutton = false) {
             this.$swal({
