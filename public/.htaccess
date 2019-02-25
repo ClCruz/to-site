@@ -4,7 +4,7 @@
   RewriteCond %{HTTP_HOST} ^(.+)$ [NC]
   RewriteRule ^evento/(.*)$ http://172.30.5.2:2002/v1/event_metatag?id=$1&host=%1 [P]
   RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
-  RewriteCond %{HTTP_HOST} ^ingressos\.(.+)$ [NC]
+  RewriteCond %{HTTP_HOST} ^couvertartistico\.(.+)$ [NC]
   RewriteRule ^evento/(.*)$ http://172.30.5.2:2002/v1/event_metatag?id=$1&host=%1 [P]
 
   RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
