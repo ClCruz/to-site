@@ -449,10 +449,23 @@ article.cardexp .flag {
 	overflow: hidden;
 }
 
+.event__card-holder {
+	background: #242833 !important;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+
 .event__card-img {
-	float: left;
-	padding: 0 10px 10px 0;
-	max-width: 280px;
+	display: flex;
+	float: none;
+	margin: 0 auto;
+	max-width: 460px;
+	border-radius: 3px;
+	padding-right: 0 !important;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
 }
 
 .event__description {
@@ -575,6 +588,11 @@ article.cardexp .flag {
 
 .content__description .event__card {
 	max-height: 43.8vh;
+}
+.content__description {
+	h3 {
+		font-size: 18px;
+	}
 }
 
 .card__container {

@@ -806,7 +806,12 @@
 	}
 
 	.content__description .event__card {
-		max-height: 56vh !important;
+		max-height: none !important;
+	}
+
+	.container__time,
+	.time__card {
+		max-height: none !important;
 	}
 
 	.containerNew {

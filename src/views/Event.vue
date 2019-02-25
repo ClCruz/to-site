@@ -51,12 +51,14 @@
                 <div class="content__description">
                   <div class="card event__card card__container">
 
-                    <p>
-                      <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader>
-                      <img v-else class="event__card-img" :src="event.img" alt="" style="">
-                      <span class="event__description" v-html="event.description">
+                    <p class="event__card-holder">
+                      <!-- <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader> -->
+                      <span>
+                        <img class="event__card-img" :src="event.img" alt="" style="">
                       </span>
                     </p>
+                      <span class="event__description" v-html="event.description">
+                      </span>
                   </div>
                 </div>
               </div>
@@ -145,13 +147,15 @@
                 </div>
                 <div class="content__description">
                   <div class="card event__card card__container">
-
-                    <p>
-                      <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader>
-                      <img v-else class="event__card-img" :src="event.img" alt="" style="">
-                      <span class="event__description" v-html="event.description">
+                    <p class="event__card-holder">
+                      <!-- <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader> -->
+                      <span>
+                        <img class="event__card-img" :src="event.img" alt="" style="">
                       </span>
                     </p>
+                    <h3 style="padding-left: 10px">Descrição</h3>
+                      <span class="event__description" v-html="event.description">
+                      </span>
                   </div>
                 </div>
               </div>
