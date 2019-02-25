@@ -1,7 +1,7 @@
 {
   "env": "production",
   "host": "couvertartistico.cafeteatrorubi.com.br",
-  "uri": "couvertartistico.cafeteatrorubi.com.br",
+  "uri": "https://couvertartistico.cafeteatrorubi.com.br",
   "api": "https://api.cafeteatrorubi.com.br",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.cafeteatrorubi.com.br",
@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/cafeteatrorubi/main.scss",
   "css": "/stylesheets/themes/couvertartistico.cafeteatrorubi.com.br/main.css",
   "template": "ticketHubSearchHeader",
-  "logo": "/assets/logo-cafeteatrorubi.png",
+  "logo": "https://media.tixs.me/logos/logo-cafeteatrorubi.png",
   "favico": "/img/cafeteatrorubi/",
   "videos": {
     "list": []
