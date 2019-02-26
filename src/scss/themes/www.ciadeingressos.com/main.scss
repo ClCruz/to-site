@@ -3,9 +3,34 @@
 @import "override.scss";
 @import "../../to-framework/main.scss";
 
-.bg-dark {
+header.bg-dark {
 	// background-color: rgb(202, 8, 19) !important;
-	background-color: #2d313c !important;
+	background-color: rgb(255, 255, 255) !important;
+}
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+}
+
+footer.bg-dark {
+	background-color: rgb(255, 255, 255) !important;
+	color: black !important;
+}
+
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
+}
+
+footer.bg-dark a {
+	color: black !important;
+}
+
+footer .img {
+	// background: #fff;
+	// background-position: center !important;
+	// border-radius: 2px;
 }
 
 $gradiente: $secundary !important;
