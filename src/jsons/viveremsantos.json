@@ -13,10 +13,10 @@
   "css": "/stylesheets/themes/www.viveremsantosdemo.tk/main.css",
   "logo": "https://media.tixs.me/logos/logo-viveremsantos.jpg",
   "template": "ticketHub",
-  "favico": "/img/viveremsantos/",
   "videos": {
     "list": []
   },
+  "favico": "/img/viveremsantos/",
   "meta": {
     "description": "Venda de Ingressos",
     "keywords": "venda,ingresssos,viveremsantosdemo,br,me"
