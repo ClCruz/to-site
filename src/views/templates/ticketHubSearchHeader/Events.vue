@@ -142,7 +142,7 @@ export default {
       swiperOption: {
         loop: true,
         autoplay: true,
-        speed: 1000,
+        speed: 300,
         loopedSlides: 1,
         pagination: {
           el: '.swiper-pagination',
