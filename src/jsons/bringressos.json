@@ -2,7 +2,7 @@
   "env": "production",
   "host": "bringressos.com.br",
   "uri": "https://www.bringressos.com.br",
-  "api": "http://localhost:2002",
+  "api": "https://api.bringressos.com.br",
   "pinpad": "http://localhost:7001/api",
   "admin": "https://admin.bringressos.com.br",
   "legacy": "https://compra.bringressos.com.br",
@@ -30,7 +30,7 @@
     "siteName": "BR Ingressos",
     "CNPJ": "28.427.697/0001-09",
     "companyAddress": "Rua Guaiaos, 1",
-    "companyName": "E2C COMPANHIA ENTRETENIMENTO ESPORTES TECNOLOGIA NEGÓCIOS LTDA"
+    "companyName": "E2C COMPANHIA ENTRETENIMENTO ESPORTES TECNOLOGIA NEG�CIOS LTDA"
   },
   "templates": {
     "print": {
