@@ -49,7 +49,7 @@
             <div class="col-md-12 time__card">
               <div class="show__date show__date-disp">
                 <div>
-                  <h2>Escolha a data e o setor</h2>
+                  <h2>Escolha a data e a opção</h2>
                 </div>
                 <div class="result__button-group" v-if="!roomLoaded && !timeLoaded">
                   <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
@@ -59,7 +59,7 @@
                     <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
                   </b-dropdown>
                   <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
-                    <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as salas'})">Todas as salas</b-dropdown-item-button>
+                    <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as opções'})">Todas as opções</b-dropdown-item-button>
                     <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
                   </b-dropdown>
                 </div>
@@ -82,7 +82,7 @@
                           {{ item.weekdayName }} <br /> {{ item.day }} <br /> {{ item.HorSessao }}
                         </div>
                         <div class="col-7 col-md-7 card__description">
-                          {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} <br> {{ item.ds_municipio }}
+                          {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} <br> {{ item.ds_municipio }}/{{item.sg_estado}}
                         </div>
                         <div class="col-10 col-md-3 card__btn">
                           <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
@@ -266,7 +266,7 @@ export default {
       processing: true,
       filterBy: 0,
       filterByDate: '',
-      filterByRoom: 'Todas as salas',
+      filterByRoom: 'Todas as opções',
       metaObj: this.metatag_getObj(),
       event: {
         loaded: false,
