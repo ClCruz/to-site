@@ -2,9 +2,9 @@
 	<content-loader
 		:height="70"
 		:width="760"
-		:speed="2"
-		primaryColor="#151515"
-		secondaryColor="#222"
+		:speed="1"
+		primaryColor="#222"
+		secondaryColor="#2d313c"
 	>
 		<rect x="-36.64" y="-2.13" rx="5" ry="5" width="747.65" height="91.06" /> 
 		<rect x="282.63" y="12.61" rx="0" ry="0" width="0" height="0" /> 
