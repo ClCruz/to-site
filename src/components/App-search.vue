@@ -54,7 +54,16 @@ export default {
     keyup(event) {
       switch (event.key) {
         case "Enter":
-          this.searchQuery = document.getElementsByClassName("inputautocomplete")[1].value;
+          let toSearch = "";
+
+          for (let index = 0; index < document.getElementsByClassName("inputautocomplete").length; index++) {
+            toSearch = document.getElementsByClassName("inputautocomplete")[index].value;
+            if (toSearch!="" && toSearch!=undefined) {
+              break;
+            }
+          }
+
+          this.searchQuery = toSearch;
 
           Vue.nextTick().then(response => {
             this.onSubmit(event);
