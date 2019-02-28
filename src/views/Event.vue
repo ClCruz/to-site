@@ -1,7 +1,10 @@
 <template>
 <div>
   <div>
-    <div class="content__show container__new">
+      <section class="to-block to-viewport bg-dark bg__main" style="height: 500px;" data-block-type="call_to_action" data-id="2">
+
+      </section>
+    <div class="content__show container__new" style="margin-top: -500px !important">
       <div class="row">
         <div class="col-md-6 container">
           <div class="row">
