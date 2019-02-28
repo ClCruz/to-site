@@ -451,11 +451,17 @@ article.cardexp .flag {
 
 .event__card-holder {
 	background: #242833 !important;
-	padding: 0;
+	padding: 10px !important;
 	margin: 0;
-	width: 100%;
+	@include MQ(S) {
+		width: 100%;
+	}
+	@include MQ(NS) {
+		width: 90% !important;
+	}
 	margin-top: 10px;
 	border-radius: 3px;
+	margin-bottom: 20px;
 }
 
 .event__card-img {
@@ -469,6 +475,7 @@ article.cardexp .flag {
 }
 
 .event__description {
+	padding: 10px !important;
 	p {
 		padding-top: 0px;
 		padding-bottom: 0px;
