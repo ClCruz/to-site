@@ -1,5 +1,9 @@
 @mixin contentTicketHub {
 	.content__show {
+		padding-bottom: 50px !important;
+		margin-top: 0 !important;
+		padding-top: 50px !important;
+		overflow-x: hidden;
 	}
 
 	.time__card {
