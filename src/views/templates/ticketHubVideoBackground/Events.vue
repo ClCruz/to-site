@@ -67,7 +67,7 @@
             <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
               <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
             </div>
-            <span class="genre">{{ item.genreName }}</span>
+            <span class="genre" style="text-transform: uppercase">{{ item.genreName }}</span>
           </p>
         </div>
         <div @click="goto('genre','+')" class="col-6 col-sm-2 card__container  card__see-more" v-if="false">

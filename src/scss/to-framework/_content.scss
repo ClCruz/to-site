@@ -585,7 +585,7 @@
 	}
 
 	.card__home-0 {
-		@include randomBG(#ffdfba);
+		@include randomBG(rgb(99, 155, 201));
 	}
 
 	.card__home-1 {
@@ -1215,10 +1215,10 @@
 	.cc-sm svg {
 		width: 32px;
 	}
-}
 
-.event__description * {
-	color: white;
-}
-.swiper-pagination-bullet-active {
+	.event__description * {
+		color: white;
+	}
+	.swiper-pagination-bullet-active {
+	}
 }
