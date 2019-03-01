@@ -1,15 +1,15 @@
 {
   "env": "production",
-  "host": "sazarteingressos.com.br",
-  "uri": "https://www.sazarteingressos.com.br",
-  "api": "https://api.sazarteingressos.com.br",
+  "host": "sazarte.com",
+  "uri": "https://www.sazarte.com",
+  "api": "https://api.sazarte.com",
   "pinpad": "http://localhost:7001/api",
-  "admin": "https://admin.sazarteingressos.com.br",
-  "legacy": "https://compra.sazarteingressos.com.br",
+  "admin": "https://admin.sazarte.com",
+  "legacy": "https://compra.sazarte.com",
   "apikey": "live_0aeae6ff88784a9bb0a704359699051677c08991c03d46759ec943ec415a71e8",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "scss": "./src/scss/themes/www.sazarteingressos.com.br/main.scss",
+  "scss": "./src/scss/themes/www.sazarte.com/main.scss",
   "css": "/stylesheets/themes/sazarte/main.css",
   "template": "ticketHubSearchHeader",
   "logo": "https://media.tixs.me/logos/logo-sazarte.jpeg",
@@ -26,9 +26,9 @@
     "public": ""
   },
   "info": {
-    "title": "sazarteingressos.com.br | Venda de Ingressos",
+    "title": "sazarte.com | Venda de Ingressos",
     "description": "Venda de Ingressos",
-    "siteName": "sazarteingressos.com.br",
+    "siteName": "sazarte.com",
     "CNPJ": "11.111.111/1111-111",
     "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
     "companyName": "Sazarte Ingressos"
