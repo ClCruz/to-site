@@ -1,3 +1,8 @@
 @import "settings.scss";
 @import "../../main.scss";
 @import "../../to-framework/main.scss";
+
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+}
