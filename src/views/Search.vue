@@ -1,6 +1,6 @@
 <template>
 <div class="a">
-  <div class="content" v-if="itau">
+  <div class="content" v-if="template == 'tixs'">
     <div class="row">
       <Logo></Logo>
       <div class="col-md-10 col-xs-12">
@@ -11,7 +11,7 @@
               <br>
               <span class="result__count">{{ countEvents }} {{textForCount}}</span>
             </p>
-            <div class="result__button-group">
+            <div class="result__button-group pl-0 ">
               <button type="button" class="btn btn-dark btn-sm btn__search" v-on:click="toggleFilter('card')" v-bind:class="{ active: !filterCards }">Cartões</button>
               <button type="button" class="btn btn-dark btn-sm btn__search" v-on:click="toggleFilter('lists')" v-bind:class="{ active: !filterLists }">Listas</button>
             </div>
@@ -61,7 +61,6 @@
               <div class="card-body row">
                 <div class="col-2 col-md-1 card__date">
                   <img :src=item.cardimage alt="">
-                  <!-- <img :src="item.cardimage" alt=""> -->
                 </div>
                 <div class="col-8 col-md-8 card__description">
                   {{ item.ds_evento }}
@@ -69,11 +68,6 @@
                   <br>
                   <span class="flag">
                       <img v-for="(ibadge, index) in item.badge" :key="index" :src="ibadge.img" :alt="ibadge.tag">
-  <!--
-                      <img :src="item.badge_provider" alt="">
-                      <img :src="item.badge_partner" alt="">
-                      <img :src="item.badge_promotion" alt="">
-  -->
                     </span>
                 </div>
                 <div class="col-md-3 text-center card__btn">
