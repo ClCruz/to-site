@@ -537,6 +537,7 @@
 		}
 
 		@media only screen and (max-width: 720px) {
+			padding: 1em !important;
 			padding-top: 1em !important;
 		}
 		// background-image: url('../../../assets/bg.svg')
@@ -546,7 +547,7 @@
 	}
 
 	.text-left {
-		@include MQ(NS) {
+		@media only screen and (min-width: 720px) {
 			padding-left: 0 !important;
 		}
 	}
