@@ -530,11 +530,14 @@
 	$white: #ffffff;
 
 	.bg__main {
+		padding: 3em 3em;
 		@include MQ(NS) {
-			padding: 3em 3em;
 		}
 		@include MQ(S) {
-			padding-top: 1em;
+		}
+
+		@media only screen and (max-width: 720px) {
+			padding-top: 1em !important;
 		}
 		// background-image: url('../../../assets/bg.svg')
 		background: url('');
