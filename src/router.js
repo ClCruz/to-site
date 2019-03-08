@@ -23,21 +23,36 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
     },
     {
-      path: '/ticketoffice',
-      name: 'ticketoffice',
-      redirect: to => {
-        window.location = `${config.admin}`;
-        return { path: '/', query: null }
-      },
-      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
-    },
-    {
       path: '/newHome',
       name: 'newHome',
       redirect: to => {
         window.location = `${config.legacy}/admin`;
         return { path: '/', query: null }
       },
+      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
+    },
+    {
+      path: '/resetpass/:key',
+      name: 'resetpass',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
+    },
+    {
+      path: '/dologin',
+      name: 'dologin',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
+    },
+    {
+      path: '/createaccount',
+      name: 'createaccount',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
+    },
+    {
+      path: '/loginandshopping/:key',
+      name: 'loginandshopping',
+      props: true,
       component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
     },
     {
