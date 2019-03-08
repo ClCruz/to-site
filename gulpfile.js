@@ -6,6 +6,18 @@ var sourcemaps = require('gulp-sourcemaps');
 var favicons = require('favicons').stream,
 	log = require('fancy-log');
 var minimist = require('minimist');
+const purgecss = require('gulp-purgecss')
+
+gulp.task('purgecss', () => {
+  return gulp
+    .src('./public/assets/css/*.css')
+    .pipe(
+      purgecss({
+        content: ['./src/**/*.vue', './src/**/*.js', './src/index.html']
+      })
+    )
+    .pipe(gulp.dest('./test/'))
+})
 
 gulp.task('sass', function() {
 	gulp
