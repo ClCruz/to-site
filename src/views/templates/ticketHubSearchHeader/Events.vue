@@ -16,38 +16,7 @@
           </div>
         </div>
       </div>
-      <swiper :options="swiperOption" v-else>
-
-        <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
-          <div class="item__slide" style="">
-            <div class="row">
-              <div class="col-md-8  col-xs-12 nopadding">
-                <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
-                    <img :src="item.img" class="slide__image" alt="" style="width:100%;">
-                  </span>
-              </div>
-              <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide" style="height:320px;padding:30px;">
-                <h3 class="" style="font-size: 20px">{{item.ds_evento}}</h3>
-                <div class="">
-                  <div class="event-name pull-left">
-                    <p v-html="item.bannerDescription"></p>
-                    <div class="slide__item-icon">
-                      <p class="p-0 m-0 event__item event__item-date slide__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
-                      <p class="p-0 pt-1 m-0 h-200 event__item event__item-local slide__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="button-event pt-4 w-100 to__slide-button" style="">
-                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: item.uri})" type="button">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-      </swiper>
+      <banner-slide v-else :bannerEvents="bannerEvents" :swiperOption="swiperOption"></banner-slide>
     </div>
   </section>
   <card-city-list title="Cidades em Destaque" :cityList="cityList"></card-city-list>
@@ -75,6 +44,7 @@ import AppSearch from "@/components/App-search.vue";
 import CardEvent from "@/components/Card-event.vue";
 import CardGenreList from "@/components/Card-genreList.vue";
 import CardCityList from "@/components/Card-cityList.vue";
+import BannerSlide from "@/components/Banner-slide.vue";
 import config from '@/config';
 import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
 import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
@@ -135,6 +105,7 @@ export default {
     CarrouselLoader,
     CarrouselTextLoader,
     CardEvent,
+    BannerSlide,
     CardGenreList,
     CardCityList
   },
@@ -206,7 +177,6 @@ export default {
     },
     getCityList() {
       this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, this.slideData);
-      console.log(this.cityList);
     },
     getGenreList() {
       this.genreList = this.removeDuplicatesBy(x => x.genreName, this.slideData);
@@ -221,7 +191,6 @@ export default {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.bannerEvents = response;
-          console.log(response);
           setTimeout(() => {
             this.slideLoaded = true;
           }, 1000)

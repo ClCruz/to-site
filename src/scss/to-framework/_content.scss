@@ -1247,4 +1247,21 @@
 	}
 	.swiper-pagination-bullet-active {
 	}
+
+	.bouton-contact {
+		background: $secundary !important;
+	}
+
+	.contentform {
+		font-size: 14px !important;
+	}
+
+	.icon-case {
+		background-color: none !important;
+
+		i {
+			color: #777 !important;
+			font-size: 0.9em !important;
+		}
+	}
 }

@@ -37,91 +37,18 @@
           </div>
         </div>
       </div>
-      <swiper :options="swiperOption" v-else>
-
-        <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
-          <div class="item__slide" style="">
-            <div class="row">
-              <div class="col-md-8  col-xs-12 nopadding">
-                <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
-                    <img :src="item.img" class="slide__image" alt="" style="width:100%;">
-                  </span>
-              </div>
-              <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide" style="height:320px;padding:30px;">
-                <h3 class="" style="font-size: 20px">{{item.ds_evento}}</h3>
-                <div class="">
-                  <div class="event-name pull-left">
-                    <p v-html="item.bannerDescription"></p>
-                    <div class="slide__item-icon">
-                      <p class="p-0 m-0 event__item event__item-date slide__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
-                      <p class="p-0 pt-1 m-0 h-200 event__item event__item-local slide__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="button-event pt-4 w-100 to__slide-button" style="">
-                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: item.uri})" type="button">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-      </swiper>
+      <banner-slide v-else :bannerEvents="bannerEvents" :swiperOption="swiperOption"></banner-slide>
     </div>
   </section>
-
-  <section class="features" data-block-type="features" data-id="3">
-    <div class="container">
-      <div class="row text-left pt-3 pb-1">
-        <div class="col-12 col-sm-12 text-left">
-          <h3 v-if="genreList != ''">Gêneros em destaque</h3>
-        </div>
-        <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 p-0 card__container" style="" v-for="(item, index) in genreList" :key='index'>
-          <p>
-            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-              <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
-            </div>
-            <span class="genre" style="text-transform: uppercase">{{ item.genreName }}</span>
-          </p>
-        </div>
-        <div @click="goto('genre','+')" class="col-6 col-sm-2 card__container  card__see-more" v-if="false">
-          <p>
-            <div alt="image" class="img-fluid rounded card__home">
-            </div>
-            <span class="genre">Ver mais</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <card-city-list title="Cidades em Destaque" :cityList="cityList"></card-city-list>
+  <card-genre-list title="Gêneros em Destaque" :genreList="genreList"></card-genre-list>
   <section class="to-block team-1">
     <div class="container">
       <div class="row row__events">
         <div class="col-12 col-sm-12 text-left mt-2 mb-4">
           <h3 class="">Eventos</h3>
         </div>
-
-        <div class="col-12 col-xl-4 col-md-6 p-1 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
-          <div class="to-box p-0">
-            <!-- <div class="event__date">
-                <span class="day">12</span>
-                <span class="month">AGO</span>
-              </div> -->
-            <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
-
-            <div class="content to-box p-2 pt-0 pb-2" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
-              <h4 class="event__title pb-1">
-                <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
-              </h4>
-              <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
-              <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
-
-            </div>
-          </div>
-        </div>
-
+        <card-event v-for="(item, index) in slideData" :key='index' :item="item"></card-event>
       </div>
     </div>
   </section>
@@ -139,6 +66,10 @@ import config from '@/config';
 import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
 import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
 
+import CardEvent from "@/components/Card-event.vue";
+import CardGenreList from "@/components/Card-genreList.vue";
+import CardCityList from "@/components/Card-cityList.vue";
+import BannerSlide from "@/components/Banner-slide.vue";
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
 import {
@@ -193,7 +124,11 @@ export default {
   components: {
     AppSearch,
     CarrouselLoader,
-    CarrouselTextLoader
+    CarrouselTextLoader,
+    CardEvent,
+    BannerSlide,
+    CardGenreList,
+    CardCityList
   },
   methods: {
     next() {
