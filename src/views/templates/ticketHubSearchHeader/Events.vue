@@ -52,79 +52,15 @@
       </swiper>
     </div>
   </section>
-  <!-- <section class="features" style="background: white" data-block-type="features" data-id="3" v-if="siteName !== 'www.marketplay.club'">
-    <div class="container">
-      <div class="row text-left pt-3 pb-1">
-        <div class="col-12 col-sm-12 text-left">
-          <h3>Cidades em destaque</h3>
-        </div>
-        <div @click="goto('genre',item.ds_municipio)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in cityList" :key='index'>
-          <p>
-            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-            </div>
-            <span class="genre">{{ item.ds_municipio }}</span>
-          </p>
-        </div>
-        <div @click="goto('genre','+')" class="col-6 col-sm-2 card__container  card__see-more" v-if="false">
-          <p>
-            <div alt="image" class="img-fluid rounded card__home">
-            </div>
-            <span class="genre">Ver mais</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <section class="features" style="background: white" data-block-type="features" data-id="3">
-    <div class="container">
-      <div class="row text-left pt-3 pb-1">
-        <div class="col-12 col-sm-12 text-left">
-          <h3>Gêneros em destaque</h3>
-        </div>
-        <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in genreList" :key='index'>
-          <p>
-            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-              <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
-            </div>
-            <span class="genre" style="text-transform: uppercase">{{ item.genreName }}</span>
-          </p>
-        </div>
-        <div @click="goto('genre','+')" class="col-6 col-sm-2 card__container  card__see-more" v-if="false">
-          <p>
-            <div alt="image" class="img-fluid rounded card__home">
-            </div>
-            <span class="genre">Ver mais</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <card-city-list title="Cidades em Destaque" :cityList="cityList"></card-city-list>
+  <card-genre-list title="Gêneros em Destaque" :genreList="genreList"></card-genre-list>
   <section class="to-block team-1">
     <div class="container">
       <div class="row row__events">
         <div class="col-12 col-sm-12 text-left mt-2 mb-4">
           <h3 class="font-weight-bold">Eventos</h3>
         </div>
-
-        <div class="col-10 col-xl-4 col-md-6 pb-4 pl-2 pr-2 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
-          <div class="to-box p-0">
-            <!-- <div class="event__date">
-                <span class="day">12</span>
-                <span class="month">AGO</span>
-              </div> -->
-            <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
-
-            <div class="content to-box p-2 pt-0 pb-2" style="position: relative">
-              <h4 class="event__title pb-1">
-                <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
-              </h4>
-              <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
-              <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
-
-            </div>
-          </div>
-        </div>
-
+        <card-event v-for="(item, index) in slideData" :key='index' @click="goto('event', item)" :item="item"></card-event>
       </div>
     </div>
   </section>
@@ -138,6 +74,9 @@ import {
   func
 } from '@/functions';
 import AppSearch from "@/components/App-search.vue";
+import CardEvent from "@/components/Card-event.vue";
+import CardGenreList from "@/components/Card-genreList.vue";
+import CardCityList from "@/components/Card-cityList.vue";
 import config from '@/config';
 import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
 import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
@@ -196,7 +135,10 @@ export default {
   components: {
     AppSearch,
     CarrouselLoader,
-    CarrouselTextLoader
+    CarrouselTextLoader,
+    CardEvent,
+    CardGenreList,
+    CardCityList
   },
   methods: {
     next() {
@@ -345,22 +287,7 @@ export default {
     //}
   },
   filters: {
-    truncate: function (text, length, clamp) {
-      clamp = clamp || '...';
-      var node = document.createElement('div');
-      node.innerHTML = text;
-      var content = node.textContent;
-      return content.length > length ? content.slice(0, length) + clamp : content;
-    },
-    replace: function (message, toReplace, replacement) {
-      return message.replace(toReplace, replacement);
-    },
-    capitalize: function (value) {
-      if (!value) return ''
-      value = value.toString()
-      value = value.toLowerCase();
-      return value.charAt(0).toUpperCase() + value.slice(1)
-    }
+   
   }
 };
 </script>
