@@ -1,51 +1,49 @@
 {
   "env": "dev",
-  "host": "tixs.me",
+  "host": "www.marketplay.club",
   "uri": "http://localhost:8080",
   "api": "http://localhost:2002",
   "pinpad": "http://localhost:7001/api",
   "admin": "http://localhost:2000",
   "legacy": "http://localhost:2004",
-  "apikey": "live_185e1621cf994a99ba945fe9692d4bf6d66ef03a1fcc47af8ac909dbcea53fb5",
+  "apikey": "live_6bfa0de8c52f4dd0bbb53d5a61945bbddb2aaa5545644e61873f1d1cd78f6bae",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "template": "ticketHub",
-  "css": "/stylesheets/themes/tixsme/main.css",
-  "logo": "https://media.tixs.me/logos/logo-vivaingressos.png",
-  "favico": "/img/tixsme/",
+  "scss": "./src/scss/themes/marketplayclub/main.scss",
+  "css": "/stylesheets/themes/marketplayclub/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "https://media.tixs.me/logos/logo-marketplayclub.svg",
+  "favico": "/img/marketplayclub/",
   "videos": {
-    "list": [ 
-      { "order":1, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.webm", "type": "video/webm"  }, 
-      { "order":2, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.mp4", "type": "video/mp4"  }
-    ]
+    "list": []
   },
   "meta": {
-    "description": "Venda de Ingressos",
-    "keywords": "venda,ingresssos,tixs,me"
+    "description": "marketplay.club seu hub de venda de ingressos",
+    "keywords": "marketplay, ingressos, marketplayclub"
   },
   "recaptcha": {
     "private": "",
     "public": ""
   },
   "info": {
-    "title": "Localhost | Venda de Ingressos",
-    "description": "Venda de Ingressos",
-    "siteName": "Localhost",
-    "CNPJ": "11.111.111/1111-111",
-    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
-    "companyName": "Teatro para Todos"
-   },
+    "title": "Marketplay.club",
+    "description": "marketplay.club seu hub de venda de ingressos",
+    "siteName": "www.marketplay.club",
+    "CNPJ": "29.324.734/0001-81",
+    "companyAddress": "Rua Ministro João Mendes , 20",
+    "companyName": "ASSET EVENTOS EIREL - ME"
+  },
   "templates": {
     "print": {
-      "voucher": "../comprar/templates/multi_tixsme/impressaoComprador.html",
-      "gift": "../comprar/templates/multi_tixsme/impressaoPresente.html"
+      "voucher": "../comprar/templates/multi_marketplayclub/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_marketplayclub/impressaoPresente.html"
     },
     "email": {
-      "recover": "../comprar/templates/multi_tixsme/solicitarSenha.html",
-      "buyer": "../comprar/templates/multi_tixsme/emailComprador.html",
-      "gift": "../comprar/templates/multi_tixsme/emailPresente.html",
-      "signature": "../comprar/templates/multi_tixsme/confirmacaoEmailAssinatura.html",
-      "confirmation": "../comprar/templates/multi_tixsme/confirmacaoEmail.html"
+      "recover": "../comprar/templates/multi_marketplayclub/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_marketplayclub/emailComprador.html",
+      "gift": "../comprar/templates/multi_marketplayclub/emailPresente.html",
+      "signature": "../comprar/templates/multi_marketplayclub/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_marketplayclub/confirmacaoEmail.html"
 
     }
   }

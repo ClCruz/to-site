@@ -46,6 +46,8 @@ export default new Vuex.Store({
       func.methods.ls_remove("token");
       func.methods.ls_remove("id");
       func.methods.ls_remove("client");
+      func.methods.ls_remove("fb_connect");
+      func.methods.ls_remove("add_user");
       window.location = "/";
 
       //router.replace('/');

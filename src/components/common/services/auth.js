@@ -9,6 +9,7 @@ config.setapikey();
 export const authService = {
   check,
   login,
+  loginbyfb,
   contact,
   keepalive,
 }
@@ -34,10 +35,33 @@ function check(login) {
   return ret;
 }
 
-function login(login, pass) {
-  let url = config.api + `/v1/auth/legacy/login?login=${login}`;
+function loginbyfb(fb) {
+  let url = config.api + `/v1/auth/legacy/loginbyfb`;
 
   let obj = {
+      fb,
+  };
+
+  var ret = new Promise(
+      function (resolve, reject) {
+          Vue.http.post(url, obj, { emulateJSON: true }).then(res => {
+              resolve(res.body);
+          }, err => {
+              reject({
+                  error: true,
+                  msg: err
+              });
+          });    
+      }
+  );
+  return ret;
+}
+
+function login(login, pass) {
+  let url = config.api + `/v1/auth/legacy/login`;
+
+  let obj = {
+      login,
       pass,
   };
 
