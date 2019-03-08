@@ -80,7 +80,7 @@
         <div class="col-12 col-sm-12 text-left">
           <h3>Gêneros em destaque</h3>
         </div>
-        <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in genreList" :key='index'>
+        <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 p-0 card__container" style="" v-for="(item, index) in genreList" :key='index'>
           <p>
             <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
               <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
@@ -105,7 +105,7 @@
           <h3 class="">Eventos</h3>
         </div>
 
-        <div class="col-10 col-xl-4 col-md-6 pb-4 pl-2 pr-2 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
+       <div class="col-12 col-xl-4 col-md-6 p-1 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
           <div class="to-box p-0">
             <!-- <div class="event__date">
                 <span class="day">12</span>
@@ -113,7 +113,7 @@
               </div> -->
             <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
-            <div class="content to-box p-2 pt-0 pb-2" style="position: relative">
+            <div class="content to-box p-2 pt-0 pb-2" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
               <h4 class="event__title pb-1">
                 <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
               </h4>
