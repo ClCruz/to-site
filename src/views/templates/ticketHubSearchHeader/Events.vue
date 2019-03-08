@@ -1,6 +1,6 @@
 <template>
 <div class="a">
-  <section id="" class="bg__main pt-4 pb-4">
+  <section id="" class="bg__main">
     <div class="container">
       <!-- swiper -->
       <div v-if="!slideLoaded">
@@ -27,16 +27,14 @@
                   </span>
               </div>
               <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide" style="height:320px;padding:30px;">
-                <h3 class="" style="font-size: 24px">{{item.ds_evento}}</h3>
+                <h3 class="" style="font-size: 20px">{{item.ds_evento}}</h3>
                 <div class="">
                   <div class="event-name pull-left">
                     <p v-html="item.bannerDescription"></p>
-                    <div class="event-location-city">
+                    <div class="slide__item-icon">
+                      <p class="p-0 m-0 event__item event__item-date slide__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
+                      <p class="p-0 pt-1 m-0 h-200 event__item event__item-local slide__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
                     </div>
-                    <div class="event-location-city">
-                      <i class="fa fa-map-marker color-grey"></i>
-                      {{item.ds_nome_teatro}} -
-                      {{item.ds_municipio}}, {{item.sg_estado}} </div>
                   </div>
                 </div>
                 <div class="button-event pt-4 w-100 to__slide-button" style="">
@@ -58,9 +56,9 @@
     <div class="container">
       <div class="row row__events">
         <div class="col-12 col-sm-12 text-left mt-2 mb-4">
-          <h3 class="font-weight-bold">Eventos</h3>
+          <h3 class="">Eventos</h3>
         </div>
-        <card-event v-for="(item, index) in slideData" :key='index' @click="goto('event', item)" :item="item"></card-event>
+        <card-event v-for="(item, index) in slideData" :key='index' :item="item"></card-event>
       </div>
     </div>
   </section>
@@ -103,7 +101,7 @@ export default {
       swiperOption: {
         loop: true,
         autoplay: true,
-        speed: 300,
+        speed: 400,
         loopedSlides: 1,
         pagination: {
           el: '.swiper-pagination',
@@ -223,6 +221,7 @@ export default {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.bannerEvents = response;
+          console.log(response);
           setTimeout(() => {
             this.slideLoaded = true;
           }, 1000)
@@ -287,7 +286,22 @@ export default {
     //}
   },
   filters: {
-   
+     truncate: function (text, length, clamp) {
+      clamp = clamp || '...';
+      var node = document.createElement('div');
+      node.innerHTML = text;
+      var content = node.textContent;
+      return content.length > length ? content.slice(0, length) + clamp : content;
+    },
+    replace: function (message, toReplace, replacement) {
+      return message.replace(toReplace, replacement);
+    },
+    capitalize: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      value = value.toLowerCase();
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
   }
 };
 </script>

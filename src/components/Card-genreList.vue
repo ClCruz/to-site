@@ -31,7 +31,32 @@
 export default {
   name: "CardGenreList",
   computed: {},
-  methods: {},
+  methods: {
+
+    goto(type, item) {
+      if (item.notselectable != undefined && item.notselectable == 1) return;
+
+      let where = item.type != undefined ? item.type : type;
+
+      switch (where) {
+        case "local":
+          this.$router.push("/busca/local/" + item);
+          break;
+        case "genre":
+          this.$router.push("/busca/genero/" + item);
+          break;
+        case "city":
+          this.$router.push("/busca/cidade/" + item);
+          break;
+        case "state":
+          this.$router.push("/busca/estado/" + item);
+          break;
+        case "event":
+          this.$router.push(item.uri);
+          break;
+      }
+    },
+  },
   props: ['genreList', 'title'],
   created() {
     console.log(this.genreList[2]);

@@ -16,13 +16,13 @@
     "192.168.15.26:8080": "localhost",
     "192.168.15.23": "localhost",
     "192.168.15.26": "localhost",
-    "localhost": "localhost",
+    "localhost": "bringressos",
     "localhost:2001": "localhost",
     "10.0.2.2:8080": "pinpad_lh",
     "10.0.2.2": "pinpad_lh",
-    "www.sazarteingressos.com.br": "sazarte",
-    "api.sazarteingressos.com.br": "sazarte",
-    "compra.sazarteingressos.com.br": "sazarte",
+    "www.sazarte.com": "sazarte",
+    "api.sazarte.com": "sazarte",
+    "compra.sazarte.com": "sazarte",
     "www.vivaingressos.com.br": "vivaingressos",
     "api.vivaingressos.com.br": "vivaingressos",
     "compra.vivaingressos.com.br": "vivaingressos",
@@ -110,5 +110,9 @@
     "hiperionartes.marketplay.club": "hiperionartes",
     "api.hiperionartes.marketplay.club": "hiperionartes",
     "compra.hiperionartes.marketplay.club": "hiperionartes",
-    "admin.hiperionartes.marketplay.club": "hiperionartes"
+    "admin.hiperionartes.marketplay.club": "hiperionartes",
+    "cursos.simoesinvestimentos.com.br": "simoesinvestimentos",
+    "api.cursos.simoesinvestimentos.com.br": "simoesinvestimentos",
+    "compra.cursos.simoesinvestimentos.com.br": "simoesinvestimentos",
+    "admin.cursos.simoesinvestimentos.com.br": "simoesinvestimentos"
 }

@@ -1,5 +1,5 @@
 <template>
-<div class="col-12 col-xl-4 col-md-6 p-1 text-left">
+<div class="col-12 col-xl-4 col-md-6 p-1 text-left" @click="goto('event', item)">
   <div class="to-box p-0">
     <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
@@ -19,7 +19,30 @@
 export default {
   name: "CardEvent",
   computed: {},
-  methods: {},
+  methods: {
+    goto(type, item) {
+      if (item.notselectable != undefined && item.notselectable == 1) return;
+
+      let where = item.type != undefined ? item.type : type;
+
+      switch (where) {
+        case "local":
+          this.$router.push("/busca/local/" + item);
+          break;
+        case "genre":
+          this.$router.push("/busca/genero/" + item);
+          break;
+        case "city":
+          this.$router.push("/busca/cidade/" + item);
+          break;
+        case "state":
+          this.$router.push("/busca/estado/" + item);
+          break;
+        case "event":
+          this.$router.push(item.uri);
+          break;
+      }
+    },},
   props: ['item'],
 
   filters: {

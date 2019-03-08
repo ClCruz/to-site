@@ -24,8 +24,8 @@
       </div>
       <swiper :options="swiperOption" v-else>
 
-        <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
-          <div class="item__slide">
+         <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
+          <div class="item__slide" style="">
             <div class="row">
               <div class="col-md-8  col-xs-12 nopadding">
                 <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
@@ -33,16 +33,14 @@
                   </span>
               </div>
               <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide" style="height:320px;padding:30px;">
-                <h3 class="" style="font-size: 24px">{{item.ds_evento}}</h3>
+                <h3 class="" style="font-size: 20px">{{item.ds_evento}}</h3>
                 <div class="">
                   <div class="event-name pull-left">
                     <p v-html="item.bannerDescription"></p>
-                    <div class="event-location-city">
+                    <div class="slide__item-icon">
+                      <p class="p-0 m-0 event__item event__item-date slide__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
+                      <p class="p-0 pt-1 m-0 h-200 event__item event__item-local slide__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
                     </div>
-                    <div class="event-location-city">
-                      <i class="fa fa-map-marker color-grey"></i>
-                      {{item.ds_nome_teatro}} -
-                      {{item.ds_municipio}}, {{item.sg_estado}} </div>
                   </div>
                 </div>
                 <div class="button-event pt-4 w-100 to__slide-button" style="">
@@ -64,12 +62,12 @@
         <div class="col-12 col-sm-12 text-left">
           <h3>Gêneros em destaque</h3>
         </div>
-        <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 card__container" style="" v-for="(item, index) in genreList" :key='index'>
+        <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 p-0 card__container" style="" v-for="(item, index) in genreList" :key='index'>
           <p>
             <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
               <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
             </div>
-            <span class="genre">{{ item.genreName }}</span>
+            <span class="genre" style="text-transform: uppercase">{{ item.genreName }}</span>
           </p>
         </div>
         <div @click="goto('genre','+')" class="col-6 col-sm-2 card__container  card__see-more" v-if="false">
@@ -86,10 +84,10 @@
     <div class="container">
       <div class="row row__events">
         <div class="col-12 col-sm-12 text-left mt-2 mb-4">
-          <h3 class="font-weight-bold">Eventos</h3>
+          <h3 class="">Eventos</h3>
         </div>
 
-        <div class="col-10 col-xl-4 col-md-6 pb-4 pl-2 pr-2 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
+         <div class="col-12 col-xl-4 col-md-6 p-1 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
           <div class="to-box p-0">
             <!-- <div class="event__date">
                 <span class="day">12</span>
@@ -97,7 +95,7 @@
               </div> -->
             <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
-            <div class="content to-box p-2 pt-0 pb-2" style="position: relative">
+            <div class="content to-box p-2 pt-0 pb-2" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
               <h4 class="event__title pb-1">
                 <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
               </h4>
@@ -239,7 +237,7 @@ export default {
     removeDuplicatesBy(keyFn, array) {
       var mySet = new Set();
       return array.filter(function (x) {
-        var key = keyFn(x),
+        var key = keyFn(x).toUpperCase(),
           isNew = !mySet.has(key);
         if (isNew) mySet.add(key);
         return isNew;

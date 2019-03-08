@@ -1,10 +1,7 @@
 <template>
-<div>
-  <div>
-      <section class="to-block to-viewport bg-dark bg__main" style="height: 500px;" data-block-type="call_to_action" data-id="2">
-
-      </section>
-    <div class="content__show container__new" style="margin-top: -500px !important">
+<div class="aa">
+  <div v-if="template == 'tixs'">
+    <div class="content__show container__new">
       <div class="row">
         <div class="col-md-6 container">
           <div class="row">
@@ -31,12 +28,11 @@
                 </div>
               </div>
               <div class="content__description">
-                <div class="card 
-                   card__container">
+                <div class="card event__card card__container">
                   <p class="event__card-holder">
+                    <!-- <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader> -->
                     <span>
-                        <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader> 
-                        <img  v-else class="event__card-img" :src="event.img" alt="" style="">
+                        <img class="event__card-img" :src="event.img" alt="" style="">
                       </span>
                   </p>
                   <h3 style="padding-left: 10px">Descrição</h3>
@@ -52,7 +48,7 @@
             <div class="col-md-12 time__card">
               <div class="show__date show__date-disp">
                 <div>
-                  <h2>Escolha a data e a opção</h2>
+                  <h2>Escolha a data e o setor</h2>
                 </div>
                 <div class="result__button-group" v-if="!roomLoaded && !timeLoaded">
                   <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
@@ -62,7 +58,7 @@
                     <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
                   </b-dropdown>
                   <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
-                    <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as opções'})">Todas as opções</b-dropdown-item-button>
+                    <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as salas'})">Todas as salas</b-dropdown-item-button>
                     <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
                   </b-dropdown>
                 </div>
@@ -85,7 +81,7 @@
                           {{ item.weekdayName }} <br /> {{ item.day }} <br /> {{ item.HorSessao }}
                         </div>
                         <div class="col-7 col-md-7 card__description">
-                          {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} <br> {{ item.ds_municipio }}/{{item.sg_estado}}
+                          {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} <br> {{ item.ds_municipio }}
                         </div>
                         <div class="col-10 col-md-3 card__btn">
                           <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
@@ -101,6 +97,107 @@
       </div>
     </div>
   </div>
+<div v-else>
+  <section class="to-block to-viewport bg-dark bg__main" style="height: 500px;" data-block-type="call_to_action" data-id="2">
+
+  </section>
+  <div class="content__show container__new" style="margin-top: -500px !important">
+    <div class="row">
+      <div class="col-md-6 container">
+        <div class="row">
+          <div class="col-md-12" style="">
+            <div class="content__description">
+              <div class="card event__card">
+                <div class="show__date">
+                  <h2>{{event.NomPeca}}</h2>
+                  <span class="event__badges">
+                        <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
+                        <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
+                        <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
+                        <a href="#" class="badge badge__icon badge__city badge-secondary" id="badge__city" @click="gotoSearch(event.city, 'city')">{{event.cityBadgeText}}</a>
+                        <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
+                        <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a>
+                        <span class="flag" id="">
+                          <img v-for="(item) in event.badge" v-bind:key="item.tag" :id="item.tag" :title="item.tag" :src="item.img" alt="">
+                          <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
+                        </span>
+
+                  </span>
+                </div>
+
+              </div>
+            </div>
+            <div class="content__description">
+              <div class="card 
+                   card__container">
+                <p class="event__card-holder">
+                  <span>
+                        <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader> 
+                        <img  v-else class="event__card-img" :src="event.img" alt="" style="">
+                      </span>
+                </p>
+                <h3 style="padding-left: 10px">Descrição</h3>
+                <span class="event__description" v-html="event.description">
+                      </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12 time__card">
+            <div class="show__date show__date-disp">
+              <div>
+                <h2>Escolha a data e a opção</h2>
+              </div>
+              <div class="result__button-group" v-if="!roomLoaded && !timeLoaded">
+                <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
+              </div>
+              <div class="result__button-group" v-else>
+                <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
+                  <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
+                </b-dropdown>
+                <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
+                  <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as opções'})">Todas as opções</b-dropdown-item-button>
+                  <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
+                </b-dropdown>
+              </div>
+            </div>
+            <div class="container__time">
+              <EventTimeLoader class="container__placeholder" v-if="!roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 70px; border-radius: 5px"></EventTimeLoader>
+              <div class="time__placeholder" v-else>
+                <div class="card" v-if="filtered.length==0">
+                  <div class="card-body row">
+                    <div class="col col-md text-center card__date">
+                      Não há mais dias para esse evento.
+                    </div>
+                  </div>
+                </div>
+
+                <transition-group name="fade">
+                  <div class="card" v-for="(item) in filtered" :key='item'>
+                    <div class="card-body row">
+                      <div class="col-4 col-md-2 text-center card__date">
+                        {{ item.weekdayName }} <br /> {{ item.day }} <br /> {{ item.HorSessao }}
+                      </div>
+                      <div class="col-7 col-md-7 card__description">
+                        {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} <br> {{ item.ds_municipio }}/{{item.sg_estado}}
+                      </div>
+                      <div class="col-10 col-md-3 card__btn">
+                        <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
+                      </div>
+                    </div>
+                  </div>
+                </transition-group>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 </template>
 

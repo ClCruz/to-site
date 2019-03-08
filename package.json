@@ -58,6 +58,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.0.2",
     "gulp-livereload": "^3.8.0",
+    "gulp-purgecss": "^1.1.1",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.6.4",
     "minimist": "^1.2.0",
