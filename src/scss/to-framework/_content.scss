@@ -880,6 +880,9 @@
 			transform: translateY(-1px);
 			color: #fff;
 		}
+		&:focus {
+			color: #fff;
+		}
 	}
 
 	.slide__image {
@@ -1260,7 +1263,6 @@
 		background: none !important;
 
 		i {
-			color: #777 !important;
 			font-size: 0.9em !important;
 		}
 	}
@@ -1271,8 +1273,10 @@
 }
 
 #modals-container {
-	.form-control {
+	.form-control,
+	input {
 		border-left-color: $secundary;
+		border-radius: 5px !important;
 	}
 
 	.to-block {
@@ -1288,13 +1292,22 @@
 		margin: 0 auto;
 		background: $secundary;
 		border: none;
-
+		transition: 0.3s;
 		&:hover {
-			background: #333;
+			background: $secundary !important;
+			filter: brightness(95%);
 		}
+		
 
 		&:focus {
-			background: #444;
+			background: $secundary !important;
+			box-shadow: none;
 		}
+	}
+}
+
+.addusermodal {
+	@include MQ(S) {
+		width: auto !important;
 	}
 }

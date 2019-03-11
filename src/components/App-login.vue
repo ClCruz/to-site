@@ -21,13 +21,15 @@
                   </div>
                 </div>
                 <hr data-content="ou" class="divider">
-                <div class="row">
+                <div class="row wrapper_login">
                   <div class="col mt-3">
+                    <span class="icon-case" title="CEP"><i class="far fa-envelope"></i></span>          
                     <input type="email" id="inputEmail" v-on:keyup.enter="signin" v-model="form.login" placeholder="E-mail" required="" autofocus="" v-bind:class="{ errorinputuser: (!validateinfo.login), 'form-control': true }">
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row wrapper_login">
                     <div class="col mt-2">
+                      <span class="icon-case" title="CEP"><i class="fas fa-key"></i></span>          
                       <input type="password" id="inputPassword" v-model="form.pass" v-on:keyup.enter="signin" placeholder="Senha" required="" v-bind:class="{ errorinputuser: (!validateinfo.pass), 'form-control': true }">
                     </div>
                     </div>
@@ -42,7 +44,7 @@
                         <hr>
 
                         <div class="row">
-                          <div class="col" style="font-size: 15px;">
+                          <div class="col-12" style="font-size: 14px;">
                             Você ainda não tem uma conta?
                             <a href="#" id="forgot_pswd"  @click="signup" style="font-weight: bold">Cadastre-se</a>
                           </div>
@@ -52,12 +54,12 @@
 
                   </div>
                   <div v-if="showwatch == 'reset'">
-                    <input type="email" id="resetEmail" class="form-control" v-model="form.login" placeholder="Email address" required="" autofocus="">
-                    <button class="btn btn-primary btn-block" type="button" @click='resetmypassplease'>
+                    <input type="email" id="resetEmail" class="form-control mb-2 mt-4" v-model="form.login" placeholder="Endereço de E-mail" required="" autofocus="">
+                    <button class="btn btn-success mb-4 btn-block" type="button" @click='resetmypassplease'>
                         <span v-if="processing">Aguarde...</span>
                         <span v-if="!processing">Resetar senha</span>
                     </button>
-                    <a href="#" id="cancel_reset" @click="showwatch='login'"><i class="fas fa-angle-left"></i> Voltar</a>
+                    <a href="#" id="cancel_reset" class=" text-left" style="display: block" @click="showwatch='login'"><i class="fas fa-angle-left"></i> Voltar</a>
                   </div>
 
             </form>
@@ -448,7 +450,9 @@ export default {
 
   &:hover {
     cursor: pointer;
-    transform: translateY(-0.3px);
+    transform: translateY(-0.8px);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+
   }
 }
 
@@ -564,5 +568,31 @@ a:hover {
   border: 0.5px solid #eee;
   border-radius: .1rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+#cancel_reset {
+    &:hover {
+        color: #027175;
+        text-decoration: none;
+    }
+}
+
+.wrapper_login {
+  .icon-case {
+    background: none !important;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #d3d3d3;
+    i {
+     font-size: 0.9em !important;
+    }
+  }
 }
 </style>
