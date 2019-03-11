@@ -219,7 +219,7 @@ export default {
       window.location = "/";
     },
     openresetpass() {
-      this.$modal.show(appresetpass, { code: this.$route.params.key }, 
+      this.$modal.show(appresetpass, { code: window.location.pathname.replace("/resetpass/","") }, 
         {
           draggable: false,
           name: 'resetpass',
