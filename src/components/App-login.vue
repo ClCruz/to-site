@@ -1,11 +1,11 @@
 <template>
-    <div>
+    <div v-if="loaded">
         <div id="logreg-forms">
             <form class="form-signin">
                 <div v-if="showwatch == 'login'">
                     <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Entrar</h1>
-                    <div class="social-login">
-                        <button type="button" class="fblogin" @click="fblogin">Continue com o Facebook</button>
+                    <div class="social-login" v-if="hasfb">
+                        <button type="button" v-if="hasfb" class="fblogin" @click="fblogin">Continue com o Facebook</button>
                     </div>
                     <input type="email" id="inputEmail" v-on:keyup.enter="signin" v-model="form.login" placeholder="E-mail" required="" autofocus="" v-bind:class="{ errorinputuser: (!validateinfo.login), 'form-control': true }">
                     <input type="password" id="inputPassword" v-model="form.pass" v-on:keyup.enter="signin" placeholder="Senha" required="" v-bind:class="{ errorinputuser: (!validateinfo.pass), 'form-control': true }">
@@ -39,6 +39,7 @@ import config from "@/config";
 import { func } from "@/functions";
 import { authService } from "@/components/common/services/auth";
 import { usersiteService } from "@/components/common/services/user";
+import { partnerService } from "@/components/common/services/partner";
 
 // import { fblogin } from "@/components/directive/fblogin";
 
@@ -206,12 +207,38 @@ export default {
         signup() {
             this.ls_add("add_user", 1);
             this.closeloginfather();
+        },
+        initfb(has, id) {
+            this.hasfb = has == 1;
+            if (has == 0 || has == false) {
+                return;
+            }
+            FB.init({ appId: id, cookie: true, xfbml: true, version: 'v3.2' });
+        },
+        getinfo() {
+            this.processing = true;
+            partnerService.getinfo().then(
+                response => {
+                    this.loaded = true;
+                    this.processing = false;
+                    if (this.validateJSON(response)) {
+                        //console.log(response);
+                        this.initfb(response.hasfb, response.fb_appid);
+                    }
+                },
+                error => {
+                    this.loaded = true;
+                    this.processing = false;
+                }
+            );
         }
     },
     data () {
         return {
             processing: false,
+            loaded: false,
             showwatch: 'login',
+            hasfb: false,
             token: "",
             validateinfo: {
                 login: true,
@@ -228,13 +255,8 @@ export default {
     },
     created () {
         this.ls_remove("fb_connect");
-        FB.init({
-            appId      : '1346180728855488',
-            cookie     : true,  // enable cookies to allow the server to access 
-                                // the session
-            xfbml      : true,  // parse social plugins on this page
-            version    : 'v3.2' // The Graph API version to use for the call
-        });
+        this.getinfo();
+        
         // this.getWindow.fbAsyncInit = function() {
         // }
     },
