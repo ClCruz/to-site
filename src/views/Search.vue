@@ -108,20 +108,8 @@
           </div>
         </div>
         <div class="row">
-          <div @click="goto(item)" class="col-10 col-xl-4 col-md-6 pb-4 pl-2 pr-2 text-left" v-for="(item, index) in searchResults" :key='index'>
-            <div class="to-box p-0">
-              <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.cardimage + '\')' }" style="background-size: cover;"></div>
-
-              <div class="content to-box p-2 pt-0 pb-2" style="position: relative">
-                <h4 class="event__title pb-1">
-                  <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
-                </h4>
-                <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
-                <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
-
-              </div>
-            </div>
-          </div>
+          
+          <card-event v-for="(item, index) in searchResults" :key='index' :item="item"></card-event>
 
         </div>
       </div>
@@ -143,6 +131,7 @@ import {
 } from "@/components/common/services/search";
 import SearchItemLoader from '@/components/loaders/SearchItemLoader.vue';
 import AppSearch from "@/components/App-search.vue";
+import CardEvent from "@/components/Card-event.vue";
 
 Vue.use(VueHead);
 
@@ -151,7 +140,8 @@ export default {
   components: {
     SearchItemLoader,
     Logo,
-    AppSearch
+    AppSearch,
+    CardEvent
   },
   head: {
     title: function () {
@@ -338,6 +328,7 @@ export default {
       searchService.searchPage(type, input).then(
         response => {
           this.searchResults = response;
+          this.searchResults.map(x => x.img = x.cardimage);
           //console.log(response);
           this.isLoaded = true;
         },

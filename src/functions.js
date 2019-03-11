@@ -37,6 +37,25 @@ export const func = {
             return config.info.template;
         }
     },
+    
+    filters: {
+        truncate: function (text, length, clamp) {
+            clamp = clamp || '...';
+            var node = document.createElement('div');
+            node.innerHTML = text;
+            var content = node.textContent;
+            return content.length > length ? content.slice(0, length) + clamp : content;
+        },
+        replace: function (message, toReplace, replacement) {
+            return message.replace(toReplace, replacement);
+        },
+        capitalize: function (value) {
+            if (!value) return ''
+            value = value.toString()
+            value = value.toLowerCase();
+            return value.charAt(0).toUpperCase() + value.slice(1)
+        }
+    },
     methods: {
         validateCPF(cpf) {	
             cpf = cpf.replace(/[^\d]+/g,'');	
