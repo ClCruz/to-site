@@ -25,18 +25,6 @@ import { func } from "@/functions";
 import Slick from "vue-slick";
 import BootstrapVue from "bootstrap-vue";
 
-import VModal from 'vue-js-modal';
-
-import appresetpass from "@/components/App-resetpass.vue";
-import applogin from "@/components/App-login.vue";
-import appnewuser from "@/components/App-newuser.vue";
-
-
-Vue.use(VModal, {
-  dynamic: true,
-  injectModalsContainer: true
-});
-
 Vue.use(BootstrapVue);
 Vue.use(VueHead);
 Vue.use(VueResource);
@@ -91,8 +79,6 @@ export default {
   },
   data() {
     return { 
-      mynameis: 'home',
-      gotoafterlogin: '',
       itau: false,
       metaObj: this.metatag_getObj(),
     };
@@ -100,115 +86,12 @@ export default {
   mounted() {
     this.createMetaObj();
     this.getLocation();
-    this.checkroute();
   },
   computed: {
+
   },
   methods: {
-    modalloginclosed() {
-      if (this.ls_get("fb_connect") != "" && this.ls_get("fb_connect") != undefined && this.ls_get("fb_connect") != null) {
-        let obj = JSON.parse(this.ls_get("fb_connect"));
-        if (!obj.logged) {
-          //alert("id: " + obj.id);
-          this.adduser();
-        }
-        return;
-      }
-
-      if (this.ls_get("add_user") != "" && this.ls_get("add_user") != undefined && this.ls_get("add_user") != null) {
-        this.ls_remove("add_user");
-        this.adduser();
-        return;
-      }
-
-      this.$parent.idappheader = this.$parent.idappheader + 1;
-
-      switch (this.gotoafterlogin) {
-          case "cardafter":
-            this.gotoLegacy(null,'cardnow');
-          break;
-      }
-    },
-    modalnewuserclosed() {
-      this.$parent.idappheader = this.$parent.idappheader + 1;
-      switch (this.gotoafterlogin) {
-          case "cardafter":
-            this.gotoLegacy(null,'cardnow');
-          break;
-      }
-    },
-    adduser() {
-      this.$modal.show(appnewuser, { 
-        }, 
-        {
-          draggable: false,
-          name: 'newuser',
-          classes: 'addusermodal',
-          resizable: false,
-          width: 800,
-          adaptive: false,
-          height: "auto",
-          scrollable: true,
-        },
-        {
-          'closed': this.modalnewuserclosed,
-        }
-      );
-    },
-    login() {
-      this.$modal.show(applogin, { 
-        }, 
-        {
-          draggable: false,
-          name: 'login',
-          resizable: true,
-          adaptive: true,
-          height: "auto",
-          scrollable: true,
-        },
-        {
-          'closed': this.modalloginclosed,
-        }
-      );
-    },
-    modalresetpassclosed() {
-      window.location = "/";
-    },
-    openresetpass() {
-      this.$modal.show(appresetpass, { code: this.$route.params.key }, 
-        {
-          draggable: false,
-          name: 'resetpass',
-          classes: 'resetpass',
-          resizable: false,
-          width: 400,
-          adaptive: false,
-          height: "auto",
-          scrollable: true,
-        },
-        {
-          'closed': this.modalresetpassclosed,
-        }
-      );
-    },
-    checkroute() {
-      switch (this.$route.name) {
-        case "resetpass":
-          this.openresetpass();
-        break;
-        case "dologin":
-          this.login();
-        break;
-        case "loginandshopping":
-          this.gotoafterlogin = this.$route.params.key;
-          this.login();
-        break;
-        case "createaccount":
-          this.adduser();
-        break;
-      }
-    //  console.log(this.$route);
-    },
+    
     createMetaObj() {
         this.metaObj.appName = config.info.siteName;
         this.metaObj.description = config.info.meta_description;

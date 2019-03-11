@@ -189,7 +189,7 @@ export default {
   mounted() {},
   methods: {
     login() {
-      this.$parent.$refs.rvroot.login();
+      this.$route.matched[0].instances.default.$parent.login();
     },
     loadSACPage: function (categoria, pagina) {
       switch (categoria) {

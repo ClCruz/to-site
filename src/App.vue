@@ -21,6 +21,9 @@ export default {
       updateExists: false,
     };
   },
+  computed: {
+    
+  },
   created() {
     // Listen for swUpdated event and display refresh snackbar as required.
     document.addEventListener('swUpdated', this.showRefreshUI, { once: true });
@@ -30,6 +33,9 @@ export default {
       this.refreshing = true;
       window.location.reload();
     });
+  },
+  mounted() {
+    
   },
   methods: {
     toastSuccess(message, timer = 4000, showbutton = false) {

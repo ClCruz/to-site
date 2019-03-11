@@ -1,7 +1,7 @@
 <template>
     <div class="bodynewuser">
   <form>
-	    <h1>Por favor <span @click="fakeme">p</span>reencha os campos abaixo</h1>
+	    <h1>Por favor <span @click="fakeme">p</span>reencha os cam<span @click="fakemefb">p</span>os abaixo</h1>
 	    
     <div class="contentform">
     	<div class="leftcontact">
@@ -176,9 +176,7 @@ Vue.use(VModal, {
 export default {
     mixins: [func],
     name: 'login',
-    components: {
-        
-    },
+    components: { },
     computed: {
       getmask() {
         return this.form.documenttype == 0 ? "###.###.###-##" : "";
@@ -267,6 +265,29 @@ export default {
         this.form.login = 'email@email.com';
         this.form.login_confirm = 'email@email.com';
         this.form.pass = '123456789';
+        //this.form.pass_confirm = '';
+        this.form.newsletter = false;
+        this.form.agree = true;
+
+      },
+      fakemefb() {
+
+        this.form.gender = 'M';
+        this.form.birthdate = '01/12/1982';
+        this.form.document = '88074490130';
+        this.form.documenttype = '0';
+        this.form.brazilian_rg = '32548527';
+        this.form.phone_ddd = '13';
+        this.form.phone_number = '996340934';
+        this.form.zipcode = '11070061';
+        this.getbyzipcode();
+        //this.form.city_state = 'SP';
+        //this.form.city = '';
+        //this.form.neighborhood = '';
+        //this.form.address = '';
+        this.form.address_number = '125';
+        //this.form.address_number_title = '';
+        this.form.address_more = 'Ap.66';
         //this.form.pass_confirm = '';
         this.form.newsletter = false;
         this.form.agree = true;
@@ -465,6 +486,9 @@ export default {
           }
         );
       },
+      closemodalfather() {
+          this.$route.matched[0].instances.default.$parent.modal_close_newuser();
+      },
       save() {
         if (this.processing) return false;
 
@@ -496,7 +520,7 @@ export default {
                       login: response.login,
                     }));
                   }
-                  this.$modal.hide('newuser');
+                  this.closemodalfather();
                 }
                 else {
                   this.toastError(response.msg);

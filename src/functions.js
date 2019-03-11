@@ -170,7 +170,7 @@ export const func = {
             }
             switch (type) {
                 case "cardnow":
-                    window.location = `${config.legacy}/comprar/gotocard.php`;
+                    window.location = `${config.legacy}/comprar/gotocard.php?token=${token}`;
                 break;
                 case "shopping":
                     //alert(""+`${config.legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`);

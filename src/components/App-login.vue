@@ -50,14 +50,9 @@ Vue.use(VModal, {
 export default {
     mixins: [func],
     name: 'login',
-    components: {
-        
-    },
-    directives: {
-        // fblogin
-    },
-    computed: {
-    },
+    components: { },
+    directives: { },
+    computed: { },
     methods: {
         fblogin() {
             let ctx = this;
@@ -100,7 +95,7 @@ export default {
                     this.hideWaitAboveAll();
                     if (this.validateJSON(response)) {
                         this.toastSuccess(response.msg);
-                        this.$modal.hide('login');
+                        this.closeloginfather();
                     }
                 },
                 error => {
@@ -118,10 +113,10 @@ export default {
                         if (response.logged) {
                             this.ls_remove("fb_connect");
                             this.setClient(response);
-                            this.$modal.hide('login');
+                            this.closeloginfather();
                         }
                         else {
-                            this.$modal.hide('login');
+                            this.closeloginfather();
                             this.ls_add("fb_connect", JSON.stringify({ id, success: true }));
                         }
                     }
@@ -157,9 +152,7 @@ export default {
                     token: obj.token,
                     login: obj.login,
                 }));
-                this.$modal.hide('login');
-                // $emit('close');
-                //this.$parent.idappheader = this.$parent.idappheader + 1;
+                this.closeloginfather();
                 this.toastSuccess(`Seja bem vindo ${obj.name}.`);
             } else {
                 this.toastError(obj.msg);
@@ -196,7 +189,8 @@ export default {
                         else {
                             this.toastError(response.msg);
                         }
-                        this.$modal.hide('login');
+                        // console.log(this.$parent);
+                        this.closeloginfather();
                     }
                 },
                 error => {
@@ -206,9 +200,12 @@ export default {
             );
             
         },
+        closeloginfather() {
+            this.$route.matched[0].instances.default.$parent.modal_close_login();
+        },
         signup() {
             this.ls_add("add_user", 1);
-            this.$modal.hide('login');
+            this.closeloginfather();
         }
     },
     data () {
