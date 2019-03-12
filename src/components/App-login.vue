@@ -159,8 +159,8 @@ export default {
       );
 
     },
-    makeLoginbyFB(id) {
-      authService.loginbyfb(id).then(
+    makeLoginbyFB(id, email) {
+      authService.loginbyfb(id, email).then(
         response => {
           if (this.validateJSON(response)) {
             if (response.logged) {
@@ -183,9 +183,9 @@ export default {
     },
     getFB() {
       FB.api('/me', {
-        fields: 'id'
+        fields: 'id,email'
       }, user => {
-        this.makeLoginbyFB(user.id);
+        this.makeLoginbyFB(user.id,user.email);
       });
     },
     loginfb(obj) {

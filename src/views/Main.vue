@@ -124,7 +124,7 @@ export default {
         return;
       }
 
-      this.$parent.idappheader = this.$parent.idappheader + 1;
+      this.idappheader = this.idappheader + 1;
 
       switch (this.gotoafterlogin) {
           case "cardafter":
@@ -134,13 +134,20 @@ export default {
       }
     },
     modalnewuserclosed() {
-      this.$parent.idappheader = this.$parent.idappheader + 1;
-      switch (this.gotoafterlogin) {
-          case "cardafter":
-            this.blankme=true;
-            this.gotoLegacy(null,'cardnow');
-          break;
-      }
+      this.idappheader = this.idappheader + 1;
+
+      Vue.nextTick().then(response => {
+        if (!this.isLogged()) {
+          this.login();
+          return;
+        }
+        switch (this.gotoafterlogin) {
+            case "cardafter":
+              this.blankme=true;
+              this.gotoLegacy(null,'cardnow');
+            break;
+        }
+      });
     },
     modal_close_login() {
       console.log("modal_close_login");
@@ -154,7 +161,7 @@ export default {
     },
     adduser() {
       let clickToClose = true;
-      if (this.isLogged) return;
+      if (this.isLogged()) return;
 
       switch (this.gotoafterlogin) {
           case "cardafter":
@@ -190,7 +197,7 @@ export default {
           break;
       }
 
-      if (this.isLogged) {
+      if (this.isLogged()) {
         switch (this.gotoafterlogin) {
             case "cardafter":
               this.gotoLegacy(null,'cardnow');
@@ -253,8 +260,15 @@ export default {
           }
         break;
       }
-    //  console.log(this.$route);
     },
+    isLogged() {
+      if (!this.ls_get("client")) return false;
+
+      let logged = JSON.parse(this.ls_get("client"));
+      if (!logged) return false;
+
+      return true;
+    }
   },
   mounted() {
     this.checkroute();
@@ -272,14 +286,6 @@ export default {
     isItau() {
       return this.$route.path === '/itau';
     },
-    isLogged() {
-      if (!this.ls_get("client")) return false;
-
-      let logged = JSON.parse(this.ls_get("client"));
-      if (!logged) return false;
-
-      return true;
-    }
   },
   watch: {
     '$route' (to, from) {
