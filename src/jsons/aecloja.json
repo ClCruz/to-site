@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/aecloja/main.scss",
   "css": "/stylesheets/themes/www.aecloja.com.br/main.css",
   "template": "ticketHub",
-  "logo": "/assets/logo-aecloja.png",
+  "logo": "https://media.tixs.me/logos/logo-amigosecia.jpg",
   "favico": "/img/aecloja/",
   "videos": {
     "list": []
