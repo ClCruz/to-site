@@ -1,5 +1,5 @@
 <template>
-<div v-if="loaded">
+<div v-if="loaded" class="container__login">
   <section class="to-block">
     <div class="container">
       <div class="row justify-content-center">
@@ -20,7 +20,8 @@
                     </button>
                   </div>
                 </div>
-                <hr data-content="ou" class="divider">
+                <hr data-content="ou" v-if="hasfb" class="divider">
+                <hr data-content="" v-if="!hasfb" class="divider">
                 <div class="row wrapper_login">
                   <div class="col mt-3">
                     <span class="icon-case" title="CEP"><i class="far fa-envelope"></i></span>          
@@ -321,6 +322,8 @@ export default {
 </script>
 
 <style lang="scss">
+.container__login {
+  
 /* sign in FORM */
 #logreg-forms {
   width: 312px;
@@ -452,7 +455,6 @@ export default {
     cursor: pointer;
     transform: translateY(-0.8px);
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
-
   }
 }
 
@@ -594,5 +596,15 @@ a:hover {
      font-size: 0.9em !important;
     }
   }
+}
+
+#app {
+  overflow: hidden!important;
+}
+
+.to-block .to-box {
+  height: 98%;
+}
+
 }
 </style>

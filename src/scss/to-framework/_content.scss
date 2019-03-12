@@ -1297,7 +1297,6 @@
 			background: $secundary !important;
 			filter: brightness(95%);
 		}
-		
 
 		&:focus {
 			background: $secundary !important;
@@ -1310,4 +1309,12 @@
 	@include MQ(S) {
 		width: auto !important;
 	}
+}
+
+input:disabled {
+	background: #f3f3f3;
+}
+
+.container__register form {
+	border-top: solid .3125rem $secundary !important;
 }

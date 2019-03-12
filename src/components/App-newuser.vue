@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="container container__register form">
   <form>
     <div class="row">
       <div class="col-12">
@@ -260,7 +260,7 @@ export default {
   },
   methods: {
     fakeme() {
-
+      return;
       this.form.firstname = 'Matt';
       this.form.lastname = 'Murdock';
       this.form.gender = 'M';
@@ -288,7 +288,7 @@ export default {
 
     },
     fakemefb() {
-
+      return;
       this.form.gender = 'M';
       this.form.birthdate = '01/12/1982';
       this.form.document = '88074490130';
@@ -621,6 +621,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container__register {
+
 .bodynewuser {
   margin: auto;
   background: #eaeaea;
@@ -953,6 +955,19 @@ input {
   @media  screen and (max-width: 720px) {
     margin-right: 30px !important;
   }
+}
+
+
+}
+
+.container__register form {
+      padding: 3.75rem 2.5rem;
+    overflow: hidden;
+    color: #444;
+    padding: 0;
+    border-radius: .25rem;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+
 }
 
 </style>
