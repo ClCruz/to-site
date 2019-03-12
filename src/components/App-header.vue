@@ -327,29 +327,7 @@ export default {
       }
     },
     makeLogin() {
-      this.$swal.insertQueueStep({
-        position: 'center',
-        type: 'info',
-        allowEscapeKey: false,
-        allowOutsideClick: false,
-        allowEnterKey: false,
-        showConfirmButton: false,
-          animation: false,
-        customClass: 'swal-theme',
-        text: 'Efetuando o login.',
-      });
-      authService.login(this.form.login, this.form.pass).then(
-        response => {
-          if (this.validateJSON(response)) {
-            this.form.login = null;
-            this.form.pass = null;
-            this.setClient(response);
-          }
-        },
-        error => {
-          this.toastError("Falha na execução.");
-        }
-      );
+      
     },
 
     goto(to, item = null) {

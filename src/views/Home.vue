@@ -88,8 +88,10 @@ export default {
     this.getLocation();
   },
   computed: {
+
   },
   methods: {
+    
     createMetaObj() {
         this.metaObj.appName = config.info.siteName;
         this.metaObj.description = config.info.meta_description;

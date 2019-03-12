@@ -5,6 +5,7 @@
 @import "../templates/ticketHub/main.scss";
 @import "../templates/ticketHubVideo/main.scss";
 @import "../templates/ticketHubSearchHeader/main.scss";
+@import '../../../node_modules/pretty-checkbox/src/pretty-checkbox.scss';
 
 @if $template != 'tixs' {
 	@include grid;
