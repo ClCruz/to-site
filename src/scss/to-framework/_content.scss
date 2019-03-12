@@ -461,14 +461,14 @@
 		position: static;
 		width: auto;
 	}
-
-	.to-block {
-		overflow: unset !important;
-		padding: 0 !important;
-		padding-bottom: 30px !important;
-		margin: 0 !important;
+	.a {
+		.to-block {
+			overflow: unset !important;
+			padding: 0 !important;
+			padding-bottom: 30px !important;
+			margin: 0 !important;
+		}
 	}
-
 	.logo {
 		width: 100px;
 	}
@@ -488,45 +488,45 @@
 		cursor: pointer;
 		box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3);
 	}
+	.a {
+		.to-block .to-box {
+			height: 100%;
+			transition: 0.5s;
 
-	.to-block .to-box {
-		height: 100%;
-		transition: 0.5s;
+			.img-fluid {
+				height: 182px;
+				background-position: center;
 
-		.img-fluid {
-			height: 182px;
-			background-position: center;
+				// box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2) !important;
 
-			// box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2) !important;
+				@include MQ(M) {
+					height: 240px;
+				}
 
-			@include MQ(M) {
-				height: 240px;
+				@include MQ(NS) {
+					height: 150px;
+				}
+
+				&:hover {
+				}
 			}
 
-			@include MQ(NS) {
-				height: 150px;
+			h4 {
+				font-size: 0.8rem;
+				padding-top: 0;
+				margin-top: 0;
+				margin-bottom: 0;
 			}
 
 			&:hover {
 			}
-		}
 
-		h4 {
-			font-size: 0.8rem;
-			padding-top: 0;
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-
-		&:hover {
-		}
-
-		p {
-			font-size: 0.7rem;
-			justify-self: bottom;
+			p {
+				font-size: 0.7rem;
+				justify-self: bottom;
+			}
 		}
 	}
-
 	$white: #ffffff;
 
 	.bg__main {
@@ -878,6 +878,9 @@
 		color: #fff;
 		&:hover {
 			transform: translateY(-1px);
+			color: #fff;
+		}
+		&:focus {
 			color: #fff;
 		}
 	}
@@ -1247,4 +1250,71 @@
 	}
 	.swiper-pagination-bullet-active {
 	}
+
+	.bouton-contact {
+		background: $secundary !important;
+	}
+
+	.contentform {
+		font-size: 14px !important;
+	}
+
+	.icon-case {
+		background: none !important;
+
+		i {
+			font-size: 0.9em !important;
+		}
+	}
+}
+
+.to-block .to-touch {
+	border-top-color: $secundary !important;
+}
+
+#modals-container {
+	.form-control,
+	input {
+		border-left-color: $secundary;
+		border-radius: 5px !important;
+	}
+
+	.to-block {
+		padding-top: 2rem !important;
+		cursor: default !important;
+	}
+
+	.btn-success {
+		min-width: 100%;
+		padding: 8px;
+		border-radius: 2px;
+		font-size: 16px;
+		margin: 0 auto;
+		background: $secundary;
+		border: none;
+		transition: 0.3s;
+		&:hover {
+			background: $secundary !important;
+			filter: brightness(95%);
+		}
+
+		&:focus {
+			background: $secundary !important;
+			box-shadow: none;
+		}
+	}
+}
+
+.addusermodal {
+	@include MQ(S) {
+		width: auto !important;
+	}
+}
+
+input:disabled {
+	background: #f3f3f3;
+}
+
+.container__register form {
+	border-top: solid .3125rem $secundary !important;
 }

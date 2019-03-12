@@ -16,8 +16,10 @@ Vue.use(VueWait);
 Vue.use(vueAlert);
 
 // Global Components
-Vue.component('Appheader', Appheader)
-Vue.component('Appfooter', Appfooter)
+Vue.component('Appheader', Appheader);
+Vue.component('Appfooter', Appfooter);
+
+Vue.prototype.getWindow = window;
 
 const vueApp = new Vue({
   el: '#app',

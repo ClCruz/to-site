@@ -37,7 +37,63 @@ export const func = {
             return config.info.template;
         }
     },
+    
+    filters: {
+        truncate: function (text, length, clamp) {
+            clamp = clamp || '...';
+            var node = document.createElement('div');
+            node.innerHTML = text;
+            var content = node.textContent;
+            return content.length > length ? content.slice(0, length) + clamp : content;
+        },
+        replace: function (message, toReplace, replacement) {
+            return message.replace(toReplace, replacement);
+        },
+        capitalize: function (value) {
+            if (!value) return ''
+            value = value.toString()
+            value = value.toLowerCase();
+            return value.charAt(0).toUpperCase() + value.slice(1)
+        }
+    },
     methods: {
+        validateCPF(cpf) {	
+            cpf = cpf.replace(/[^\d]+/g,'');	
+            if(cpf == '') return false;	
+            // Elimina CPFs invalidos conhecidos	
+            if (cpf.length != 11 || 
+                cpf == "00000000000" || 
+                cpf == "11111111111" || 
+                cpf == "22222222222" || 
+                cpf == "33333333333" || 
+                cpf == "44444444444" || 
+                cpf == "55555555555" || 
+                cpf == "66666666666" || 
+                cpf == "77777777777" || 
+                cpf == "88888888888" || 
+                cpf == "99999999999")
+                    return false;		
+            // Valida 1o digito	
+            let add = 0;	
+            let rev = 0;
+            for (let i=0; i < 9; i ++)		
+                add += parseInt(cpf.charAt(i)) * (10 - i);	
+                rev = 11 - (add % 11);	
+                if (rev == 10 || rev == 11)		
+                    rev = 0;	
+                if (rev != parseInt(cpf.charAt(9)))		
+                    return false;		
+            // Valida 2o digito	
+            add = 0;	
+            for (let i = 0; i < 10; i ++)		
+                add += parseInt(cpf.charAt(i)) * (11 - i);	
+            rev = 11 - (add % 11);	
+            if (rev == 10 || rev == 11)	
+                rev = 0;	
+            if (rev != parseInt(cpf.charAt(10)))
+                return false;		
+            return true;   
+        },
         youshallnotpass() {
             if (config.environment != 'dev')
             {
@@ -132,6 +188,9 @@ export const func = {
                 token = client.token;
             }
             switch (type) {
+                case "cardnow":
+                    window.location = `${config.legacy}/comprar/gotocard.php?token=${token}`;
+                break;
                 case "shopping":
                     //alert(""+`${config.legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`);
                     window.location = `${config.legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`;

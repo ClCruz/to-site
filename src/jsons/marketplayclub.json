@@ -1,7 +1,7 @@
 {
   "env": "production",
   "host": "www.marketplay.club",
-  "uri": "www.marketplay.club",
+  "uri": "https://www.marketplay.club",
   "api": "https://api.marketplay.club",
   "pinpad": "http://localhost:7001/api",
   "admin": "https://admin.marketplay.club",

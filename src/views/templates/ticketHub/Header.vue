@@ -140,9 +140,6 @@ import config from '@/config';
 import {
   func
 } from '@/functions';
-import {
-  authService
-} from "@/components/common/services/auth";
 
 import AppSearch from "@/components/App-search.vue";
 import $ from "jquery";
@@ -191,6 +188,9 @@ export default {
   },
   mounted() {},
   methods: {
+    login() {
+      this.$route.matched[0].instances.default.$parent.login();
+    },
     loadSACPage: function (categoria, pagina) {
       switch (categoria) {
         case "company":
@@ -204,44 +204,6 @@ export default {
           break;
       }
     },
-    setClient(obj) {
-      if (obj.logged) {
-        this.ls_add("client", JSON.stringify({
-          name: obj.name,
-          token: obj.token,
-          login: obj.login,
-        }));
-        this.$parent.idappheader = this.$parent.idappheader + 1;
-        this.toastSuccess(`Seja bem vindo ${obj.name}.`);
-      } else {
-        this.toastError(obj.msg);
-      }
-    },
-    makeLogin() {
-      this.$swal.insertQueueStep({
-        position: 'center',
-        type: 'info',
-        allowEscapeKey: false,
-        allowOutsideClick: false,
-        allowEnterKey: false,
-        showConfirmButton: false,
-        customClass: 'swal-theme',
-        text: 'Efetuando o login.',
-      });
-      authService.login(this.form.login, this.form.pass).then(
-        response => {
-          if (this.validateJSON(response)) {
-            this.form.login = null;
-            this.form.pass = null;
-            this.setClient(response);
-          }
-        },
-        error => {
-          this.toastError("Falha na execução.");
-        }
-      );
-    },
-
     goto(to, item = null) {
       switch (to) {
         case "legacy:my_account":
@@ -251,85 +213,6 @@ export default {
           this.$store.dispatch('logout');
           break;
       }
-    },
-
-    login() {
-      this.$swal.queue([{
-          showCancelButton: false,
-          allowEscapeKey: true,
-          allowOutsideClick: () => !this.$swal.isLoading(),
-          allowEnterKey: false,
-          confirmButtonText: 'Continuar',
-          position: 'center',
-          input: 'email',
-          showCloseButton: true,
-          customClass: 'swal-theme',
-          inputPlaceholder: 'Digite seu e-mail',
-          text: 'Já tem cadastro?',
-          footer: `<a href="${config.legacy}/comprar/querocadastrar.php">Não tenho conta? Clique aqui.</a>`,
-          progressSteps: ['1', '2', '3'],
-          preConfirm: (login) => {
-            this.form.login = login;
-            authService.check(login).then(
-              response => {
-                if (this.validateJSON(response)) {
-                  if (response.exist == 1) {
-                    this.$swal.insertQueueStep({
-                      position: 'center',
-                      allowEscapeKey: true,
-                      allowOutsideClick: true,
-                      showCloseButton: true,
-                      allowEnterKey: true,
-                      input: 'password',
-                      inputPlaceholder: 'Digite sua senha',
-                      footer: `<a href="${config.legacy}/comprar/minha_conta.php">Esqueceu sua senha? Clique aqui.</a>`,
-                      inputAttributes: {
-                        maxlength: 100,
-                        autocapitalize: 'off',
-                        autocorrect: 'off'
-                      },
-                      progressSteps: ['1', '2', '3', '4'],
-                      preConfirm: (pass) => {
-                        this.form.pass = pass;
-                        this.makeLogin();
-                      }
-                    });
-                    this.$swal.clickConfirm();
-                  } else {
-                    this.$swal.insertQueueStep({
-                      position: 'center',
-                      type: 'error',
-                      showCloseButton: true,
-                      allowEscapeKey: true,
-                      allowOutsideClick: true,
-                      allowEnterKey: true,
-                      text: 'E-mail não existe.',
-                      progressSteps: ['1', '2', '3'],
-                    });
-                    this.$swal.clickConfirm();
-                  }
-                }
-              },
-              error => {
-                this.toastError("Falha na execução.");
-              }
-            );
-          },
-        },
-        {
-          title: 'Verificando',
-          position: 'center',
-          showConfirmButton: false,
-          allowEscapeKey: false,
-          allowOutsideClick: false,
-          allowEnterKey: false,
-          progressSteps: ['1', '2', '3'],
-        }
-      ]).then((result) => {
-        if (result.value) {} else if (result.dismiss === this.$swal.DismissReason.cancel) {
-
-        }
-      });
     },
     toggleNav() {
       document.getElementById("myNav").style.width = "0%";
