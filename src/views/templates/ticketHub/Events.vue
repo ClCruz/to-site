@@ -40,7 +40,7 @@
       <banner-slide v-else :bannerEvents="bannerEvents" :swiperOption="swiperOption"></banner-slide>
     </div>
   </section>
-  <card-city-list title="Cidades em Destaque" :cityList="cityList"></card-city-list>
+  <!-- <card-city-list title="Cidades em Destaque" :cityList="cityList"></card-city-list> -->
   <card-genre-list title="Gêneros em Destaque" :genreList="genreList"></card-genre-list>
   <section class="to-block team-1">
     <div class="container">
