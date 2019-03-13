@@ -10,7 +10,7 @@
           <app-search></app-search>
         </div>
         <div class="mr-0 ml-0 mt-4 mb-0 p-0 w-100 justify-content-center row">
-          <div class="col-12 col-sm-2  d-none d-sm-block" v-for="(item, index) in nextEvents" :key='index'>
+          <div class="col-12 col-sm-2  d-none d-sm-block" v-for="(item, index) in slideData" :key='index'>
             <p class="next__events p-2" @click="goto('event', item)">
               {{item.ds_evento}}
             </p>

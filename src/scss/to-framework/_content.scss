@@ -461,13 +461,11 @@
 		position: static;
 		width: auto;
 	}
-	.a {
-		.to-block {
-			overflow: unset !important;
-			padding: 0 !important;
-			padding-bottom: 30px !important;
-			margin: 0 !important;
-		}
+	.to-block {
+		overflow: unset !important;
+		padding: 0 !important;
+		padding-bottom: 30px !important;
+		margin: 0 !important;
 	}
 	.logo {
 		width: 100px;
