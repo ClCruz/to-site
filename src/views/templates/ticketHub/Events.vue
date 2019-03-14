@@ -10,7 +10,7 @@
           <app-search></app-search>
         </div>
         <div class="mr-0 ml-0 mt-4 mb-0 p-0 w-100 justify-content-center row">
-          <div class="col-12 col-sm-2  d-none d-sm-block" v-for="(item, index) in slideData" :key='index'>
+          <div class="col-12 col-sm-2  d-none d-sm-block" v-for="(item, index) in nextEvents" :key='index'>
             <p class="next__events p-2" @click="goto('event', item)">
               {{item.ds_evento}}
             </p>
@@ -22,7 +22,7 @@
   </section>
 
   <section class="pt-4" id="section__slider">
-    <div class="container">
+    <div class="container-fluid">
       <!-- swiper -->
       <div v-if="!slideLoaded">
         <div class="item__slide">
@@ -30,7 +30,7 @@
             <div class="col-md-8 col-xs-12 nopadding slide__image" style="">
               <CarrouselLoader class="nopadding" style="padding: 0!important; border-top-left-radius: 5px; margin-right: -5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
             </div>
-            <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+            <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide nopadding" style="height:400px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
               <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
 
             </div>
