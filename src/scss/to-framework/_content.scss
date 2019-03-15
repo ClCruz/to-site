@@ -1051,6 +1051,24 @@
 		text-transform: unset !important;
 		// color: #333;
 	}
+	.date__item-event {
+		background: url('/assets/icons/star-white.svg') no-repeat 5px center;
+		background-size: 10px;
+		margin-left: -8px !important;
+		font-size: 13px !important;
+		padding-left: 18px !important;
+		text-transform: unset !important;
+		// color: #333;
+	}
+	.date__item-local {
+		background: url('/assets/icons/map-pin-white.svg') no-repeat 5px center;
+		background-size: 10px;
+		margin-left: -8px !important;
+		font-size: 13px !important;
+		padding-left: 18px !important;
+		text-transform: unset !important;
+		// color: #333;
+	}
 
 	.item__slide {
 		border-radius: 4px;
