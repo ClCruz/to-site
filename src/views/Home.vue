@@ -5,6 +5,7 @@
     <ticket-hub-events v-else-if="template == 'ticketHub'"></ticket-hub-events>
     <!-- Template 3 (Fred) -->
     <ticket-hub-video-background v-else-if="template == 'ticketHubVideo'"></ticket-hub-video-background>
+    <ingressaria v-else-if="template == 'ingressaria'"></ingressaria>
     <ticket-hub-search-header v-else></ticket-hub-search-header>
     <!-- Template 4 (Header com busca) -->
 </template>
@@ -18,6 +19,7 @@ import AppSlider from "@/components/App-slider.vue";
 import TicketHubEvents from "@/views/templates/ticketHub/Events.vue";
 import TicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Events.vue";
 import TicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Events.vue";
+import ingressaria from "@/views/templates/ingressaria/Events.vue";
 import VueGeolocation from "vue-browser-geolocation";
 import VueResource from "vue-resource";
 import config from "@/config";
@@ -37,7 +39,8 @@ export default {
     AppSlider,
     TicketHubEvents,
     TicketHubSearchHeader,
-    TicketHubVideoBackground
+    TicketHubVideoBackground,
+    ingressaria
   },
   head: {
     title: function () {
