@@ -35,11 +35,12 @@ function check(login) {
   return ret;
 }
 
-function loginbyfb(fb) {
+function loginbyfb(fb, email) {
   let url = config.api + `/v1/auth/legacy/loginbyfb`;
 
   let obj = {
       fb,
+      email,
   };
 
   var ret = new Promise(
