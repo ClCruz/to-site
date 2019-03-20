@@ -1,7 +1,7 @@
 <template>
 <div class="a">
   <section id="" class="bg__main">
-    <div class="container">
+    <div class="container-fluid">
       <!-- swiper -->
       <div v-if="!slideLoaded">
         <div class="item__slide">
@@ -9,8 +9,8 @@
             <div class="col-md-8 col-xs-12 nopadding slide__image" style="">
               <CarrouselLoader class="nopadding" style="padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
             </div>
-            <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
-              <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
+            <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide nopadding" style="height:423px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+              <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 275px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
 
             </div>
           </div>
@@ -71,7 +71,7 @@ export default {
       swiperOption: {
         loop: true,
         autoplay: true,
-        speed: 400,
+        speed: 800,
         loopedSlides: 1,
         pagination: {
           el: '.swiper-pagination',
@@ -180,12 +180,13 @@ export default {
     },
     getGenreList() {
       this.genreList = this.removeDuplicatesBy(x => x.genreName, this.slideData);
+      this.genreList = this.genreList.slice(0, 6);
     },
     getLocalsList() {
       this.localsList = this.removeDuplicatesBy(x => x.ds_nome_teatro, this.slideData);
     },
     getNextEvents() {
-      this.nextEvents = this.slideData.slice(1, 5);
+      this.nextEvents = this.slideData.slice(0, 4);
     },
     getBanner() {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
