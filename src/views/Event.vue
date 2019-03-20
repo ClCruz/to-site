@@ -1,5 +1,5 @@
 <template>
-<div class="aa">
+<div>
   <div v-if="template == 'tixs'">
     <div class="content__show container__new">
       <div class="row">
@@ -97,19 +97,15 @@
       </div>
     </div>
   </div>
-<div v-else>
-  <section class="to-block to-viewport bg-dark bg__main" style="height: 500px;" data-block-type="call_to_action" data-id="2">
-
-  </section>
-  <div class="content__show container__new" style="margin-top: -500px !important">
-    <div class="row">
-      <div class="col-md-6 container">
-        <div class="row">
-          <div class="col-md-12" style="">
-            <div class="content__description">
-              <div class="card event__card">
-                <div class="show__date">
-                  <h2>{{event.NomPeca}}</h2>
+  <div v-else-if="template == 'ingressaria'">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <section class="to-block" style="background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzciIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2LjkgODIy%0D%0ALjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMTYuOSA4MjIuMTsiIHhtbDpz%0D%0AcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGNEY3%0D%0ARkU7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwwaDEyMTYuOXY3MzguNGMwLDAt%0D%0ANTg4LjgsMjAwLTYxMi44LTE4czM4OS44LTQ3NC4yLTExMS01MjlDMTAwLjEsMTQ4LjQsMCwwLDAs%0D%0AMHoiLz4KPC9zdmc+Cg==')">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-8 col-lg-6">
+                  <h1 class="title mb-2">{{event.NomPeca}}</h1>
                   <span class="event__badges">
                         <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
                         <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
@@ -121,75 +117,202 @@
                           <img v-for="(item) in event.badge" v-bind:key="item.tag" :id="item.tag" :title="item.tag" :src="item.img" alt="">
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
-
                   </span>
-                </div>
+                  <h3 class="mt-3">Detalhes do eventos</h3>
+                  <p id='read-more-p' class="lead mt-0 pt-0"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
+                  <div id='read-more' @click="expand(this)">
+                    <div class="btn to-btn dark">
+                      LER MAIS
+                    </div>
+                  </div>
+                  <div id='read-less' @click="retract(this)">
+                    <div class="btn to-btn dark">
+                      LER MENOS
+                    </div>
+                  </div>
 
+                </div>
+                <div class="col-10 col-sm-6 mx-auto col-md-4 col-lg-6">
+                  <img class="event__card-img" :src="event.img" alt="" style="">
+                  <!-- Share -->
+                  <div class="row" id="share">
+
+                    <!-- facebook -->
+                    <a class="facebook" href="https://www.facebook.com/share.php?u=url&title=title" target="blank"><i class="fab fa-facebook-f"></i></a>
+
+                    <!-- twitter -->
+                    <a class="twitter" href="https://twitter.com/intent/tweet?status=title+url" target="blank"><i class="fab fa-twitter"></i></a>
+
+                    <!-- linkedin -->
+                    <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=url&title=title&source=source" target="blank"><i class="fab fa-linkedin-in"></i></a>
+
+                    <!-- pinterest -->
+                    <a class="pinterest" href="https://pinterest.com/pin/create/bookmarklet/?media=media&url=url&is_video=false&description=title" target="blank"><i class="fab fa-pinterest-p"></i></a>
+
+                  </div>
+                  <!-- Produtor -->
+                  <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
+                    <h3 class="mt-3">Sobre o parceiro</h3>
+                    <div class="row align-items-center ">
+                      <div class="col-4 ">
+                        <!-- <img alt="image" class="img-fluid rounded-circle" src="https://github.com/froala/design-blocks/blob/2.0.1/dist/imgs/people/8.jpg?raw=true"> -->
+                      </div>
+
+                      <div class="col-12">
+                        <h4>Cia de Ingressos</h4>
+                        <p class="lead">A cia de ingressos fornece aos nossos clientes uma prestação de serviço diferenciada e específica para controle de venda de ingressos para todo o tipo de evento</p>
+                        <a href="#" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-link"></i>Ir para o site do parceiro</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;" v-if="imageLoaded && roomLoaded && timeLoaded">
+                      <iframe class="map" :src="returnMap()"
+          width="100%" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+
+                  </div> -->
+                </div>
               </div>
             </div>
-            <div class="content__description">
-              <div class="card 
+          </section>
+        </div>
+
+        <div class="col-12">
+
+                       <!-- Banner -->
+  <div class="">
+    <div class="">
+      <div class="container__arrows">
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </div>
+      <div class="row p-3">
+        <swiper :options="swiperOption" class="">
+          <swiper-slide class="">
+            <div class="">
+              <div class="">
+                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
+                </div>
+                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
+                </div>
+                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
+                </div>
+                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
+                </div>
+                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
+                </div>
+                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+
+        </swiper>
+      </div>
+    </div>
+  </div>
+        </div>
+        <!-- <div class="col-3">
+          a
+        </div> -->
+   
+      </div>
+    </div>
+
+  </div>
+  <div v-else>
+    <section class="to-block to-viewport bg-dark bg__main" style="height: 500px;" data-block-type="call_to_action" data-id="2">
+
+    </section>
+    <div class="content__show container__new" style="margin-top: -500px !important">
+      <div class="row">
+        <div class="col-md-6 container">
+          <div class="row">
+            <div class="col-md-12" style="">
+              <div class="content__description">
+                <div class="card event__card">
+                  <div class="show__date">
+                    <h2>{{event.NomPeca}}</h2>
+                    <span class="event__badges">
+                        <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
+                        <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
+                        <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
+                        <a href="#" class="badge badge__icon badge__city badge-secondary" id="badge__city" @click="gotoSearch(event.city, 'city')">{{event.cityBadgeText}}</a>
+                        <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
+                        <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a>
+                        <span class="flag" id="">
+                          <img v-for="(item) in event.badge" v-bind:key="item.tag" :id="item.tag" :title="item.tag" :src="item.img" alt="">
+                          <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
+                        </span>
+
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+              <div class="content__description">
+                <div class="card 
                    card__container">
-                <p class="event__card-holder">
-                  <span>
+                  <p class="event__card-holder">
+                    <span>
                         <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader> 
                         <img  v-else class="event__card-img" :src="event.img" alt="" style="">
                       </span>
-                </p>
-                <h3 style="padding-left: 10px">Descrição</h3>
-                <span class="event__description" v-html="event.description">
+                  </p>
+                  <h3 style="padding-left: 10px">Descrição</h3>
+                  <span class="event__description" v-html="event.description">
                       </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-md-12 time__card">
-            <div class="show__date show__date-disp">
-              <div>
-                <h2>Escolha a data e a opção</h2>
-              </div>
-              <div class="result__button-group" v-if="!roomLoaded && !timeLoaded">
-                <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
-              </div>
-              <div class="result__button-group" v-else>
-                <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
-                  <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
-                </b-dropdown>
-                <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
-                  <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as opções'})">Todas as opções</b-dropdown-item-button>
-                  <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
-                </b-dropdown>
-              </div>
-            </div>
-            <div class="container__time">
-              <EventTimeLoader class="container__placeholder" v-if="!roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 70px; border-radius: 5px"></EventTimeLoader>
-              <div class="time__placeholder" v-else>
-                <div class="card" v-if="filtered.length==0">
-                  <div class="card-body row">
-                    <div class="col col-md text-center card__date">
-                      Não há mais dias para esse evento.
-                    </div>
-                  </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12 time__card">
+              <div class="show__date show__date-disp">
+                <div>
+                  <h2>Escolha a data e a opção</h2>
                 </div>
-
-                <transition-group name="fade">
-                  <div class="card" v-for="(item) in filtered" :key='item'>
+                <div class="result__button-group" v-if="!roomLoaded && !timeLoaded">
+                  <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
+                </div>
+                <div class="result__button-group" v-else>
+                  <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
+                    <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
+                  </b-dropdown>
+                  <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
+                    <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as opções'})">Todas as opções</b-dropdown-item-button>
+                    <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
+                  </b-dropdown>
+                </div>
+              </div>
+              <div class="container__time">
+                <EventTimeLoader class="container__placeholder" v-if="!roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 70px; border-radius: 5px"></EventTimeLoader>
+                <div class="time__placeholder" v-else>
+                  <div class="card" v-if="filtered.length==0">
                     <div class="card-body row">
-                      <div class="col-4 col-md-2 text-center card__date">
-                        {{ item.weekdayName }} <br /> {{ item.day }} <br /> {{ item.HorSessao }}
-                      </div>
-                      <div class="col-7 col-md-7 card__description">
-                        {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} <br> {{ item.ds_municipio }}/{{item.sg_estado}}
-                      </div>
-                      <div class="col-10 col-md-3 card__btn">
-                        <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
+                      <div class="col col-md text-center card__date">
+                        Não há mais dias para esse evento.
                       </div>
                     </div>
                   </div>
-                </transition-group>
+
+                  <transition-group name="fade">
+                    <div class="card" v-for="(item) in filtered" :key='item'>
+                      <div class="card-body row">
+                        <div class="col-4 col-md-2 text-center card__date">
+                          {{ item.weekdayName }} <br /> {{ item.day }} <br /> {{ item.HorSessao }}
+                        </div>
+                        <div class="col-7 col-md-7 card__description">
+                          {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} <br> {{ item.ds_municipio }}/{{item.sg_estado}}
+                        </div>
+                        <div class="col-10 col-md-3 card__btn">
+                          <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </transition-group>
+                </div>
               </div>
             </div>
           </div>
@@ -197,7 +320,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 </template>
 
@@ -213,6 +335,9 @@ import EventTimeLoader from '@/components/loaders/EventTimeLoader.vue';
 import EventRoomLoader from '@/components/loaders/EventRoomLoader.vue';
 import EventImageLoader from '@/components/loaders/EventImageLoader.vue';
 import AppSearch from "@/components/App-search.vue";
+
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
 
 import {
   eventService
@@ -392,10 +517,52 @@ export default {
       timeLoaded: false,
       roomLoaded: false,
       dateLoaded: false,
-      imageLoaded: false
+      imageLoaded: false,
+       swiperOption: {
+        // loop: true,
+        // autoplay: true,
+        // speed: 1000,
+        // loopedSlides: 1,
+        slidesPerView: "auto",
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+          800: {
+            slidesPerView: 1
+          }
+        },
+      }
     }
   },
   methods: {
+    expand(target) {
+      let prev = document.querySelector("#read-more-p");
+
+      prev.style.height = prev.scrollHeight + "px";
+
+      let readmore = document.querySelector("#read-more");
+      let readless = document.querySelector("#read-less");
+      
+
+      readmore.style.display = "none";
+      readless.style.display = "block";
+    },
+    retract(target) {
+      let prev = document.querySelector("#read-more-p");
+      let readmore = document.querySelector("#read-more");
+      let readless = document.querySelector("#read-less");
+      
+
+      prev.style.height = "400px";
+      readmore.style.display = "block";
+      readless.style.display = "none";
+    },
     parentalrating(event) {
       let ret = "badge noClick ";
       switch (event.CenPeca) {
@@ -437,6 +604,13 @@ export default {
       if (event) event.preventDefault();
 
       window.open("http://maps.google.com/?q=" + (this.event.address == null || this.event.address == "" ? this.event.ds_local_evento : this.event.address));
+    },
+    returnMap() {
+    //  debugger
+      
+
+      var map = "https://www.google.com/maps/embed?q=" + encodeURIComponent(this.event.address)
+      return map;
     },
     gotoSearch(item, type) {
       switch (type) {

@@ -1,5 +1,5 @@
 <template>
-<div class="a">
+<div class="a" :class="{ eventHeader: ['event'].indexOf($route.name) > -1 }"> 
   <div class="header">
     <!-- header das paginas (menos evento) -->
     <header id="navbar" class="bg-dark" data-block-type="headers" data-id="2">
