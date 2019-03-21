@@ -101,11 +101,13 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <section class="to-block" style="background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzciIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2LjkgODIy%0D%0ALjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMTYuOSA4MjIuMTsiIHhtbDpz%0D%0AcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGNEY3%0D%0ARkU7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwwaDEyMTYuOXY3MzguNGMwLDAt%0D%0ANTg4LjgsMjAwLTYxMi44LTE4czM4OS44LTQ3NC4yLTExMS01MjlDMTAwLjEsMTQ4LjQsMCwwLDAs%0D%0AMHoiLz4KPC9zdmc+Cg==')">
+          <section class="to-block to-block-mobile" style="background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzciIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2LjkgODIy%0D%0ALjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMTYuOSA4MjIuMTsiIHhtbDpz%0D%0AcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGNEY3%0D%0ARkU7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwwaDEyMTYuOXY3MzguNGMwLDAt%0D%0ANTg4LjgsMjAwLTYxMi44LTE4czM4OS44LTQ3NC4yLTExMS01MjlDMTAwLjEsMTQ4LjQsMCwwLDAs%0D%0AMHoiLz4KPC9zdmc+Cg==')">
             <div class="container">
               <div class="row">
                 <div class="col-12 col-md-8 col-lg-6">
-                  <h1 class="title mb-2">{{event.NomPeca}}</h1>
+                  <img class="event__card-img img__mobile" :src="event.img" alt="" style="">
+
+                  <h1 class="title mb-2 mt-0">{{event.NomPeca}}</h1>
                   <span class="event__badges">
                         <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
                         <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
@@ -132,9 +134,10 @@
                   </div>
 
                 </div>
-                <div class="col-10 col-sm-6 mx-auto col-md-4 col-lg-6">
+                <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
                   <img class="event__card-img" :src="event.img" alt="" style="">
                   <!-- Share -->
+                  <hr data-content="Compartilhar" class="divider mb-0 mt-2" style="max-width: 460px">
                   <div class="row" id="share">
 
                     <!-- facebook -->
@@ -165,6 +168,22 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Local do evento -->
+                  <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
+                    <h3 class="mt-3">Local do evento</h3>
+                    <div class="row align-items-center ">
+                      <div class="col-4 ">
+                        <!-- <img alt="image" class="img-fluid rounded-circle" src="https://github.com/froala/design-blocks/blob/2.0.1/dist/imgs/people/8.jpg?raw=true"> -->
+                      </div>
+
+                      <div class="col-12">
+                        <p class="lead">{{this.event.address}}</p>
+                        <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-map"></i>Ver mapa</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Horários -->
                   <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;" v-if="imageLoaded && roomLoaded && timeLoaded">
                       <iframe class="map" :src="returnMap()"
           width="100%" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
@@ -173,48 +192,310 @@
                 </div>
               </div>
             </div>
-          </section>
-        </div>
 
-        <div class="col-12">
-
-                       <!-- Banner -->
-  <div class="">
-    <div class="">
-      <div class="container__arrows">
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-      </div>
-      <div class="row p-3">
-        <swiper :options="swiperOption" class="">
-          <swiper-slide class="">
-            <div class="">
+            <div class="btn__comprar" id="btn__comprar" @click="scrollTo()" title="Selecionar horários">
+              <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
+              <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
+              Selecionar horário
+            </div>
+            <!-- Banner -->
+            <div class="container pl-0 pt-4 container__calendar">
               <div class="">
-                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
-                </div>
-                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
-                </div>
-                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
-                </div>
-                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
-                </div>
-                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
-                </div>
-                <div class="img-fluid rounded-0" style="background-size: cover;height: 100px; width: 100px !important; background-color: black;">
+                <div class="p-2">
+                  <h3 class="" id="horario">Escolha de horário</h3>
+                  <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário</p>
+                  <div class="container__arrows">
+                    <div class="swiper-button-prev" slot="button-prev"></div>
+                    <div class="swiper-button-next" slot="button-next"></div>
+                  </div>
+                  <swiper :options="swiperOption" class="">
+                    <swiper-slide class="p-0">
+                      <div class="c">
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center card__time-active" style="">
+                          <div>
+                            <h3 class="">HOJE</h3>
+                            <p class="lead">Mar 21</p>
+                          </div>
+                          <i class="icon-active fa fa-caret-down"></i>
+                          <div>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                    <swiper-slide class="p-0">
+                      <div class="c">
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
+                          <div>
+                            <h3 class="">AMANHÃ</h3>
+                            <p class="lead">Mar 22</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                    <swiper-slide class="p-0">
+                      <div class="c">
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
+                          <div>
+                            <h3 class="">QUI</h3>
+                            <p class="lead">Mar 23</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                    <swiper-slide class="p-0">
+                      <div class="c">
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
+                          <div>
+                            <h3 class="">🎉SEX</h3>
+                            <p class="lead">Mar 24</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                    <swiper-slide class="p-0">
+                      <div class="c">
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
+                          <div>
+                            <h3 class="">SAB</h3>
+                            <p class="lead">Mar 25</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                    <swiper-slide class="p-0">
+                      <div class="c">
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
+                          <div>
+                            <h3 class="">DOM</h3>
+                            <p class="lead">Mar 26</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                    <swiper-slide class="p-0">
+                      <div class="c">
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
+                          <div>
+                            <h3 class="">SEG</h3>
+                            <p class="lead">Mar 27</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                    <swiper-slide class="p-0">
+                      <div class="c">
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
+                          <div>
+                            <h3 class="">TER</h3>
+                            <p class="lead">Mar 28</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                    <swiper-slide class="p-0">
+                      <div class="c">
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
+                          <div>
+                            <h3 class="">QUA</h3>
+                            <p class="lead">Mar 29</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                  </swiper>
+                  <div class="container__available-times pl-3 row">
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+                    <div class="card__hour text-center align-items-center" style="">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
+                        <p class="lead">A partir de R$ 17,00</p>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
               </div>
             </div>
-          </swiper-slide>
-
-        </swiper>
-      </div>
-    </div>
-  </div>
+          </section>
         </div>
+
         <!-- <div class="col-3">
           a
         </div> -->
-   
+
       </div>
     </div>
 
@@ -331,6 +612,7 @@ import config from '@/config';
 import {
   func
 } from '@/functions';
+import $ from "jquery";
 import EventTimeLoader from '@/components/loaders/EventTimeLoader.vue';
 import EventRoomLoader from '@/components/loaders/EventRoomLoader.vue';
 import EventImageLoader from '@/components/loaders/EventImageLoader.vue';
@@ -518,12 +800,12 @@ export default {
       roomLoaded: false,
       dateLoaded: false,
       imageLoaded: false,
-       swiperOption: {
+      swiperOption: {
         // loop: true,
         // autoplay: true,
         // speed: 1000,
         // loopedSlides: 1,
-        slidesPerView: "auto",
+        slidesPerView: "7",
         pagination: {
           el: '.swiper-pagination',
           clickable: true
@@ -534,13 +816,45 @@ export default {
         },
         breakpoints: {
           800: {
-            slidesPerView: 1
+            slidesPerView: "3",
           }
-        },
+        }
       }
     }
   },
+  created() {
+    // Fixa navbar ao ultrapassa-lo
+    var navbar = $('#navbar'),
+      distance = navbar.offset().top,
+      $window = $(window);
+
+    $window.scroll(function () {
+      if ($window.scrollTop() >= 140) {
+        navbar.removeClass('navbar-fixed-top').addClass('navbar-fixed-top');
+      } else {
+        navbar.removeClass('navbar-fixed-top');
+      }
+
+      if ($window.scrollTop() >= 600) {
+        $('#btn__comprar').css("opacity", 1 - $(window).scrollTop() / 250);
+      } else {
+        $('#btn__comprar').css("opacity", 1 + $(window).scrollTop() / 250);
+      }
+    });
+  },
   methods: {
+    scrollTo() {
+      var element = document.getElementById("horario");
+      var top = element.offsetTop;
+      window.scrollTo(0, top - 100);
+    },
+    showReadMore() {
+      //   let readmorep = document.querySelector("#read-more-p");
+      // if (readmorep.style.height < 399) {
+      //     let readmore = document.querySelector("#read-more");
+      //     readmore.style.display = "none";
+      // }
+    },
     expand(target) {
       let prev = document.querySelector("#read-more-p");
 
@@ -548,7 +862,6 @@ export default {
 
       let readmore = document.querySelector("#read-more");
       let readless = document.querySelector("#read-less");
-      
 
       readmore.style.display = "none";
       readless.style.display = "block";
@@ -557,7 +870,6 @@ export default {
       let prev = document.querySelector("#read-more-p");
       let readmore = document.querySelector("#read-more");
       let readless = document.querySelector("#read-less");
-      
 
       prev.style.height = "400px";
       readmore.style.display = "block";
@@ -606,8 +918,7 @@ export default {
       window.open("http://maps.google.com/?q=" + (this.event.address == null || this.event.address == "" ? this.event.ds_local_evento : this.event.address));
     },
     returnMap() {
-    //  debugger
-      
+      //  debugger
 
       var map = "https://www.google.com/maps/embed?q=" + encodeURIComponent(this.event.address)
       return map;
@@ -751,6 +1062,7 @@ export default {
 
             this.imageLoaded = true;
           }
+          console.log(this.event.description.length);
         },
         error => {
           this.processing = false;
@@ -763,6 +1075,7 @@ export default {
   mounted() {
     this.getEvent();
     this.keepalive();
+
   },
   computed: {
     key() {
@@ -786,6 +1099,12 @@ export default {
 
   }
 };
+
+$(document).ready(function () {
+  // console.log( "ready!" );
+  // debugger
+
+});
 </script>
 
 <style lang="scss" scoped>

@@ -566,6 +566,9 @@
 
 		.v-suggestions {
 			width: 70% !important;
+			@include MQ(S) {
+				width: 100% !important;
+			}
 			box-shadow: none !important;
 		}
 
@@ -597,6 +600,10 @@
 		font-weight: 600;
 		line-height: 1.3em;
 		margin-bottom: -10px;
+
+		@include MQ(S) {
+			margin-top: 1rem !important;
+		}
 	}
 
 	.event__description {
@@ -604,6 +611,20 @@
 	}
 
 	.event__card-img {
+		@include MQ(S) {
+			float: none !important;
+			margin-top: 50px !important;
+			display: none;
+		}
+	}
+
+	.img__mobile {
+		display: none;
+		@include MQ(S) {
+			margin-top: 0 !important;
+			display: block;
+			margin-bottom: 0 !important;
+		}
 	}
 
 	/* container */
@@ -670,7 +691,7 @@
 	}
 
 	#read-more-p {
-		height: 430px;
+		height: 400px;
 		overflow: hidden;
 	}
 
@@ -697,7 +718,203 @@
 		}
 	}
 
+	.btn__comprar {
+		position: fixed;
+		right: 20px;
+		bottom: 20px;
+		background: linear-gradient(135deg, #52abd1 10%, #04a6ec);
+		padding: 10px 20px;
+		cursor: pointer;
+		border-radius: 10px;
+		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .25);
+		font-size: 12px;
+		font-weight: bold;
+		z-index: 5000;
+		color: #fff !important;
+		transition: 0.4s;
+
+		i {
+			font-size: 12px;
+			margin-right: 5px;
+		}
+
+		@include MQ(S) {
+			display: none;
+		}
+
+		&:hover {
+			transform: translateY(-1px);
+		}
+	}
+
+	.to-btn.dark {
+		&:focus {
+			color: #333 !important;
+		}
+
+		@include MQ(S) {
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			float: none;
+			padding: 10px !important;
+			margin-top: 40px !important;
+		}
+	}
+
 	#read-less {
 		display: none;
+	}
+
+	.badge-light {
+		background-color: #e8e8e8;
+	}
+
+	// CALENDAR
+
+	.container__calendar {
+		margin-top: 50px;
+		@include MQ(S) {
+			justify-content: center;
+			margin-top: 0;
+		}
+	}
+
+	.card__time {
+		background: #f9f9f9;
+		height: 80px;
+		width: 97%;
+		margin-top: 10px;
+		border-radius: 4px !important;
+		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .25);
+		cursor: pointer;
+		display: flex;
+
+		justify-content: center;
+
+		transition: 0.4s;
+		h3 {
+			border-bottom: 1px solid #ddd;
+			margin-bottom: 0;
+		}
+
+		.lead {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			background: #efefef;
+		}
+	}
+
+	.card__time-active {
+		background: rgb(240, 247, 254);
+	}
+
+	.container__available-times {
+		margin-top: -10px;
+		border-top: 1px solid #eee;
+		display: flex;
+
+		@include MQ(S) {
+			padding: 0 !important;
+			margin: 0 !important;
+		}
+
+		.card__hour {
+			background: #f9f9f9;
+
+			margin-right: 5px;
+			margin-left: 2px;
+			height: auto;
+			padding: 10px;
+			width: calc((97% / 3)) !important;
+			margin-top: 10px;
+			border-radius: 4px !important;
+			box-shadow: 0 0px 5px 0 rgba(0, 0, 0, .25);
+			background: rgb(240, 247, 254);
+			cursor: pointer;
+			justify-content: center;
+			display: flex;
+
+			transition: 0.4s;
+
+			h3 {
+				// border-bottom: 1px solid #ddd;
+				margin-bottom: 0;
+				font-size: 1.1em;
+				font-weight: bold;
+			}
+
+			h3.lead {
+				font-size: 1.1em;
+				font-weight: bold;
+				margin-bottom: 0;
+			}
+
+			p.lead {
+				margin-bottom: 0;
+
+				font-size: 0.75em;
+			}
+
+			@include MQ(S) {
+				width: 48% !important;
+			}
+
+			&:hover {
+				background: rgb(211, 229, 248);
+			}
+		}
+	}
+
+	.icon-active {
+		position: absolute;
+		bottom: -18px;
+		text-shadow: 0 1px 0px #999;
+		color: rgb(240, 247, 254);
+		/* box-shadow: 0 0px 5px 0 rgba(0, 0, 0, .25); */
+		font-size: 30px;
+	}
+
+	.divider {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-style: italic;
+		font-size: 13px;
+		line-height: 1em;
+		position: relative;
+		outline: 0;
+		border: 0;
+		text-align: center;
+		height: 1.5em;
+	}
+
+	.divider:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 100%;
+		height: 1px;
+		background: #d6dade;
+	}
+
+	.divider:after {
+		font-size: 13px;
+		color: #b2b9c1;
+		content: attr(data-content);
+		position: relative;
+		display: inline-block;
+		padding: 0 .5em;
+		line-height: 1.5em;
+		background: rgb(240, 247, 254);
+	}
+
+	.to-block-mobile {
+		@include MQ(S) {
+			padding-top: 0 !important;
+		}
 	}
 }
