@@ -217,6 +217,23 @@ export const func = {
         getLoggedId() {
             return this.ls_get("id");
         },
+        isclientlogged() {
+            if (!this.ls_get("client")) return false;
+      
+            let logged = JSON.parse(this.ls_get("client"));
+            if (!logged) return false;
+      
+            return true;
+        },
+        getloggedtoken() {
+            if (this.isclientlogged()) {
+                let logged = JSON.parse(this.ls_get("client"));
+                return logged.token;
+            }
+            else {
+                return null;
+            }
+        },
         toastSuccess(message, timer = 4000, showbutton = false) {
             this.$swal({
                 type: 'success',

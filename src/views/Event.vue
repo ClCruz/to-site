@@ -578,18 +578,28 @@
                     </div>
                   </div>
 
-                  <transition-group name="fade">
-                    <div class="card" v-for="(item) in filtered" :key='item'>
-                      <div class="card-body row">
-                        <div class="col-4 col-md-2 text-center card__date">
-                          {{ item.weekdayName }} <br /> {{ item.day }} <br /> {{ item.HorSessao }}
-                        </div>
-                        <div class="col-7 col-md-7 card__description">
-                          {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} <br> {{ item.ds_municipio }}/{{item.sg_estado}}
-                        </div>
-                        <div class="col-10 col-md-3 card__btn">
-                          <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
-                        </div>
+                <transition-group name="fade">
+                  <div class="card" v-for="(item) in filtered" :key='item'>
+                    <div class="card-body row">
+                      <div class="col-3 col-md-2 text-center card__date p-0">
+                        <span style="font-size: 12px">
+                          {{ item.weekdayName }} 
+                        </span>
+                        <br />
+                        <span style="font-weight: bold; font-size: 14px">
+                          {{ item.day }} 
+                        </span> 
+                        <br /> 
+                        <span style="font-size: 12px">
+                          {{ item.HorSessao }}
+                        </span> 
+                      </div>
+                      <div class="col-8 col-md-7 card__description" style="border-left: 1px solid #777;padding-left: 15px;">
+                        <span class="">
+                        {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} </span> <br> <span class="pt-1">{{ item.ds_municipio }}/{{item.sg_estado}}</span>
+                      </div>
+                      <div class="col-10 col-md-3 card__btn">
+                        <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
                       </div>
                     </div>
                   </transition-group>

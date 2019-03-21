@@ -3,38 +3,14 @@
 @import "override.scss";
 @import "../../to-framework/main.scss";
 
-header.bg-dark {
-	// background-color: rgb(202, 8, 19) !important;
-	background-color: rgb(255, 255, 255) !important;
-}
-
-footer.bg-dark {
-	background-color: rgb(255, 255, 255) !important;
-	color: black !important;
-}
-
-footer a,
-footer p {
-	color: black !important;
-}
-
-.team-1,
-.features,
-#section__slider {
-	background: #f3f3f3 !important;
-}
-
-footer.bg-dark a {
-	color: black !important;
+.bg-dark {
+	background-color: rgb(202, 8, 19) !important;
+	background-color: rgb(53, 54, 58) !important;
 }
 
 .header__logo .img {
 	height: 55px;
 	width: 100%;
-}
-
-.bg-dark {
-	background-color: $secondary !important;
 }
 
 $gradiente: $secundary !important;

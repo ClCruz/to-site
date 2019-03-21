@@ -10,8 +10,31 @@ export const authService = {
   check,
   login,
   loginbyfb,
+  tokencheck,
   contact,
   keepalive,
+}
+
+function tokencheck(token) {
+  let url = config.api + `/v1/auth/legacy/clienttoken`;
+  
+  let obj = {
+    token,
+  };
+
+  var ret = new Promise(
+      function (resolve, reject) {
+          Vue.http.post(url, obj, { emulateJSON: true }).then(res => {
+              resolve(res.body);
+          }, err => {
+              reject({
+                  error: true,
+                  msg: err
+              });
+          });    
+      }
+  );
+  return ret;
 }
 
 function check(login) {

@@ -11,6 +11,10 @@
 	@return unquote("rgb(#{red($color)}, #{green($color)}, #{blue($color)})");
 }
 
+@function to-rgb($color) {
+	@return unquote("rgb(#{red($color)}, #{green($color)}, #{blue($color)}, 0.3)");
+}
+
 @mixin content {
 	svg:not(:root).svg-inline--fa {
 		overflow: visible;
@@ -461,13 +465,11 @@
 		position: static;
 		width: auto;
 	}
-	.a {
-		.to-block {
-			overflow: unset !important;
-			padding: 0 !important;
-			padding-bottom: 30px !important;
-			margin: 0 !important;
-		}
+	.to-block {
+		overflow: unset !important;
+		padding: 0 !important;
+		padding-bottom: 30px !important;
+		margin: 0 !important;
 	}
 	.logo {
 		width: 100px;
@@ -477,9 +479,9 @@
 		padding-top: 0 !important;
 	}
 
-	.col-10 > .to-box {
+	.col-12 > .to-box {
 		&:hover {
-			box-shadow: 0 0rem 0.5rem rgba(140, 140, 140, 0.8) !important;
+			box-shadow: 0 0rem 0.9rem rgba(140, 140, 140, 0.8) !important;
 			transform: translateY(-1px);
 		}
 	}
@@ -544,6 +546,20 @@
 		background: url('');
 		background-size: cover;
 		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_3' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 1345.7 869.8' style='enable-background:new 0 0 1345.7 869.8;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:"+safe-rgb($secundary)+";%7D .st1%7Bfill:%23FFFFFF;fill-opacity:0.1;%7D%0A%3C/style%3E%3Ctitle%3E11%3C/title%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='1419.33' y1='8841.4688' x2='1471.5165' y2='7812.6489' gradientTransform='matrix(8.000000e-02 1.38 -1.2 7.000000e-02 10556.291 -2142.6802)'%3E%3Cstop offset='0' style='stop-color:%23FF8A7E'/%3E%3Cstop offset='1' style='stop-color:%23FE6655'/%3E%3C/linearGradient%3E%3Cpath class='st0' d='M0,869.8V0h1345.7v869.8H0z'/%3E%3Cpath class='st1' d='M993.6,147.7c44.6,66.6-15.8,158.4-108.3,166.2c-26.6,2.3-58.8,3.6-97.4,3.1 c-184.4-2.5-407.6,131.2-474.9,158.3c-120.2,48.3-445,95.9-310.7-106C178.1,105.4-8.8-94.4,134.2-148.8 c123.3-46.9,329.9-13.3,426.7,15.9c90,27.2,317.9,120.3,430.9,278.2C992.5,146.1,993,146.9,993.6,147.7z'/%3E%3Cpath class='st1' d='M907.8,998.2c0,0-63.2-137.7-214.1-237.2s-88.4-211-31.6-227.3c38-10.9,229.6,29.7,333.8-46.6 s167.9-160.1,203.7-167.6c34.8-7.3,87.7-30.1,15.5,298.6c-72.2,328.8-144.8,395.2-177.4,419.4 C1016.6,1053.2,961.8,1075.6,907.8,998.2z'/%3E%3C/svg%3E%0A");
+
+		// background: linear-gradient(to bottom left, $secundary, to-rgb($secundary)) !important;
+	}
+
+	#section__slider,
+	.bg__main {
+		.container-fluid {
+			max-width: 1200px;
+		}
+	}
+
+	.container__new {
+		margin: 0 auto;
+		max-width: 1400px;
 	}
 
 	.text-left {
@@ -561,7 +577,7 @@
 		transition: 0.5s;
 		border-radius: 5px;
 		margin: 0 auto;
-		box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+		box-shadow: 0 0 1px 0px rgba(0, 0, 0, .3);
 
 		&:hover {
 			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2) !important;
@@ -593,7 +609,7 @@
 		font-weight: bold;
 		/* background: white; */
 		cursor: pointer;
-		font-size: 15.5px;
+		font-size: 14px;
 	}
 
 	.card__home-0 {
@@ -655,12 +671,12 @@
 		height: 45px;
 		box-sizing: border-box;
 		color: black;
-		padding-left: 35px;
+		padding-left: 40px;
 		background-position-x: 10px;
 		background-position-y: center;
 		background-size: 18px;
 		cursor: text;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2), 0 0px 4px rgba(0, 0, 0, 0.2);
 
 		@media only screen and (max-width: 720px) {
 			height: 40px;
@@ -668,8 +684,8 @@
 	}
 
 	.v-suggestions input::placeholder {
-		color: #aaa;
-		font-size: 85%;
+		color: #555;
+		font-size: 75%;
 		visibility: visible !important;
 
 		@media only screen and (max-width: 720px) {
@@ -693,14 +709,14 @@
 	}
 	.v-suggestions input[type=text]:focus {
 		width: 100%;
-		padding-left: 35px;
+		padding-left: 40px;
 		background-position-x: 10px;
 		background-position-y: center;
 		background-size: 18px;
 	}
 
 	.v-suggestions .items {
-		max-height: 400px;
+		max-height: 420px;
 		color: #555;
 	}
 
@@ -887,7 +903,7 @@
 
 	.slide__image {
 		@include MQ(NS) {
-			height: 350px;
+			height: 400px;
 		}
 	}
 
@@ -1035,18 +1051,36 @@
 		text-transform: unset !important;
 		// color: #333;
 	}
+	.date__item-event {
+		background: url('/assets/icons/star-white.svg') no-repeat 5px center;
+		background-size: 10px;
+		margin-left: -8px !important;
+		font-size: 13px !important;
+		padding-left: 18px !important;
+		text-transform: unset !important;
+		// color: #333;
+	}
+	.date__item-local {
+		background: url('/assets/icons/map-pin-white.svg') no-repeat 5px center;
+		background-size: 10px;
+		margin-left: -8px !important;
+		font-size: 13px !important;
+		padding-left: 18px !important;
+		text-transform: unset !important;
+		// color: #333;
+	}
 
 	.item__slide {
 		border-radius: 4px;
 		background: #f8f8f8;
-		box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.12) !important;
+		box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.18) !important;
 		width: 97%;
 		margin: 0 auto;
 		margin-bottom: 20px;
 		img {
 			border-top-left-radius: 4px;
 			border-bottom-left-radius: 4px;
-			max-height: 350px;
+			max-height: 420px;
 		}
 
 		h3 {
@@ -1317,4 +1351,9 @@ input:disabled {
 
 .container__register form {
 	border-top: solid .3125rem $secundary !important;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }

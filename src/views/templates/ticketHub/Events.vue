@@ -22,7 +22,7 @@
   </section>
 
   <section class="pt-4" id="section__slider">
-    <div class="container">
+    <div class="container-fluid">
       <!-- swiper -->
       <div v-if="!slideLoaded">
         <div class="item__slide">
@@ -30,7 +30,7 @@
             <div class="col-md-8 col-xs-12 nopadding slide__image" style="">
               <CarrouselLoader class="nopadding" style="padding: 0!important; border-top-left-radius: 5px; margin-right: -5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
             </div>
-            <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
+            <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide nopadding" style="height:400px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
               <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
 
             </div>
@@ -40,7 +40,7 @@
       <banner-slide v-else :bannerEvents="bannerEvents" :swiperOption="swiperOption"></banner-slide>
     </div>
   </section>
-  <card-city-list title="Cidades em Destaque" :cityList="cityList"></card-city-list>
+  <!-- <card-city-list title="Cidades em Destaque" :cityList="cityList"></card-city-list> -->
   <card-genre-list title="Gêneros em Destaque" :genreList="genreList"></card-genre-list>
   <section class="to-block team-1">
     <div class="container">

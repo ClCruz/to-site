@@ -83,6 +83,10 @@ import appresetpass from "@/components/App-resetpass.vue";
 import applogin from "@/components/App-login.vue";
 import appnewuser from "@/components/App-newuser.vue";
 
+import {
+  authService
+} from "@/components/common/services/auth";
+
 Vue.use(VModal, {
   dynamic: true,
   injectModalsContainer: true
@@ -120,6 +124,24 @@ export default {
     FooterTicketHubVideoBackground
   },
   methods: {
+    validatetoken() {
+      if (this.getloggedtoken() == null) return;
+
+      authService.tokencheck(this.getloggedtoken()).then(
+        response => {
+          if (this.validateJSON(response)) {
+            if (response.isvalid != 1) {
+              this.$store.dispatch('logout');
+              this.idappheader = this.idappheader + 1;
+            }
+          }
+        },
+        error => {
+          this.toastError("Falha na execução.");
+        }
+      );
+// 
+    },
     modalloginclosed() {
       if (this.ls_get("fb_connect") != "" && this.ls_get("fb_connect") != undefined && this.ls_get("fb_connect") != null) {
         let obj = JSON.parse(this.ls_get("fb_connect"));
@@ -162,13 +184,13 @@ export default {
       });
     },
     modal_close_login() {
-      console.log("modal_close_login");
+      // console.log("modal_close_login");
       this.$modal.hide(this.modals.login.name);
     }, 
     //this.$parent.$refs.rvroot.modal_close_newuser();
     //this.$parent.$refs.rvroot.modal_close_login();
     modal_close_newuser() {
-      console.log("modal_close_newuser");
+      // console.log("modal_close_newuser");
       this.$modal.hide(this.modals.add.name);
     },
     adduser() {
@@ -274,16 +296,12 @@ export default {
       }
     },
     isLogged() {
-      if (!this.ls_get("client")) return false;
-
-      let logged = JSON.parse(this.ls_get("client"));
-      if (!logged) return false;
-
-      return true;
+      return this.isclientlogged();
     }
   },
   mounted() {
     this.checkroute();
+    this.validatetoken();
   },
   created() {
     console.log(this.template);
