@@ -15,13 +15,13 @@
 
                 <div class="content__description">
                   <div class="card event__card sac__card">
-                  <h3 class="title__page">Seja nosso parceiro</h3>
-                  <p>
-                  Caso você tenha interesse em fazer novos negócios com a  {{siteName}}, por favor preencha
-todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
-Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
-equipe retornará o contato em até 4 dias úteis.
-</p>
+                    <h3 class="title__page">Seja nosso parceiro</h3>
+                    <p>
+                      Caso você tenha interesse em fazer novos negócios com a {{siteName}}, por favor preencha
+                      todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
+                      Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
+                      equipe retornará o contato em até 4 dias úteis.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -31,23 +31,58 @@ equipe retornará o contato em até 4 dias úteis.
       </div>
     </div>
   </div>
-  <div class="content" v-else>
-      <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2" v-if="template == 'ticketHub'">
-    <div class="container justify-content-center align-items-center d-flex p-5">
-      <div class="col-10 justify-content-center text-center">
-        <div class="d-none d-sm-block" style="">
-          <h2>Deseja encontrar outro evento ?</h2>
-        </div>
-        <div class="d-none d-sm-block input-group mt-4 mb-2 p-1 w-100">
-          <app-search></app-search>
+  <div class="content" v-else-if="template == 'ingressaria'">
+    <section class="to-block to-viewport bg-dark bg__main" style="">
+      <div class="container justify-content-center align-items-center d-flex p-5">
+        <div class="col-10 justify-content-center text-center">
+          <div class="d-none d-sm-block" style="">
+            <h2>Deseja encontrar outro evento ?</h2>
+          </div>
+          <div class="d-none d-sm-block input-group mt-4 mb-2 p-1 w-100">
+            <app-search></app-search>
+          </div>
         </div>
       </div>
-    </div>
 
-  </section>
+    </section>
+
+    <section class="to-block" style="background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzciIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2LjkgODIy%0D%0ALjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMTYuOSA4MjIuMTsiIHhtbDpz%0D%0AcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGNEY3%0D%0ARkU7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwwaDEyMTYuOXY3MzguNGMwLDAt%0D%0ANTg4LjgsMjAwLTYxMi44LTE4czM4OS44LTQ3NC4yLTExMS01MjlDMTAwLjEsMTQ4LjQsMCwwLDAs%0D%0AMHoiLz4KPC9zdmc+Cg=='); padding: 120px 0 !important">
+      <div class="container">
+        <div class="row">
+          <!-- SAC Index -->
+          <sacInfo></sacInfo>
+
+          <div class="col-12 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
+            <h3 class="title__page">Seja nosso parceiro</h3>
+            <p class="lead">
+              Caso você tenha interesse em fazer novos negócios com a {{siteName}}, por favor preencha
+              todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
+              Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
+              equipe retornará o contato em até 4 dias úteis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <div class="content" v-else>
+    <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2" v-if="template == 'ticketHub'">
+      <div class="container justify-content-center align-items-center d-flex p-5">
+        <div class="col-10 justify-content-center text-center">
+          <div class="d-none d-sm-block" style="">
+            <h2>Deseja encontrar outro evento ?</h2>
+          </div>
+          <div class="d-none d-sm-block input-group mt-4 mb-2 p-1 w-100">
+            <app-search></app-search>
+          </div>
+        </div>
+      </div>
+
+    </section>
     <div class="container container__sac">
       <div class="">
-        
+
         <div class="row">
           <!-- SAC Index -->
           <sacInfo></sacInfo>
@@ -59,13 +94,13 @@ equipe retornará o contato em até 4 dias úteis.
 
                 <div class="content__description">
                   <div class="card event__card sac__card">
-                  <h3 class="title__page">Seja nosso parceiro</h3>
-                  <p>
-                  Caso você tenha interesse em fazer novos negócios com a  {{siteName}}, por favor preencha
-todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
-Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
-equipe retornará o contato em até 4 dias úteis.
-</p>
+                    <h3 class="title__page">Seja nosso parceiro</h3>
+                    <p>
+                      Caso você tenha interesse em fazer novos negócios com a {{siteName}}, por favor preencha
+                      todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
+                      Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
+                      equipe retornará o contato em até 4 dias úteis.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -251,8 +286,8 @@ export default {
 </script>
 
 <style lang="scss">
-  .container__sac {
-    margin-top: -150px;
-    margin-bottom: 100px;
-  }
+.container__sac {
+  margin-top: -150px;
+  margin-bottom: 100px;
+}
 </style>

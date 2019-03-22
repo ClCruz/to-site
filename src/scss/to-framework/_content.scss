@@ -1357,3 +1357,16 @@ input:disabled {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+#swal-email1,
+#swal-email2,
+#swal-email3,
+#swal-email4,
+#swal-email5 {
+	font-size: 12px !important;
+}
+
+.swal2-center .swal2-popup .swal2-title {
+	font-size: 1.6em;
+	margin-top: 50px;
+}
