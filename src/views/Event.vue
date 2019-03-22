@@ -121,13 +121,13 @@
                         </span>
                   </span>
                   <h3 class="mt-3">Detalhes do eventos</h3>
-                  <p id='read-more-p' class="lead mt-0 pt-0"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
-                  <div id='read-more' @click="expand(this)">
+                  <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
+                  <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
                     <div class="btn to-btn dark">
                       LER MAIS
                     </div>
                   </div>
-                  <div id='read-less' @click="retract(this)">
+                  <div id='read-less' @click="showreadmoreclick" v-if="showreadandless && !showreadmore">
                     <div class="btn to-btn dark">
                       LER MENOS
                     </div>
@@ -787,6 +787,8 @@ export default {
       filterByDate: '',
       filterByRoom: 'Todas as opções',
       metaObj: this.metatag_getObj(),
+      showreadandless: false,
+      showreadmore: false,
       event: {
         loaded: false,
         NomPeca: null,
@@ -797,7 +799,7 @@ export default {
         id_base: null,
         address: null,
         valores: null,
-        description: null,
+        description: '',
         img: null,
         badge: [],
         promo: [],
@@ -855,37 +857,24 @@ export default {
     });
   },
   methods: {
+    showreadmoreclick() {
+      if (this.showreadmore) {
+        this.showreadmore = false;
+      }
+      else {
+        this.showreadmore = true;
+      }
+    },
+    setdescription() {
+      Vue.nextTick().then(response => {
+        this.showreadandless = this.$refs.eventdesc.clientHeight>400;
+        this.showreadmore = this.showreadandless;
+      });
+    },
     scrollTo() {
       var element = document.getElementById("horario");
       var top = element.offsetTop;
       window.scrollTo(0, top - 100);
-    },
-    showReadMore() {
-      //   let readmorep = document.querySelector("#read-more-p");
-      // if (readmorep.style.height < 399) {
-      //     let readmore = document.querySelector("#read-more");
-      //     readmore.style.display = "none";
-      // }
-    },
-    expand(target) {
-      let prev = document.querySelector("#read-more-p");
-
-      prev.style.height = prev.scrollHeight + "px";
-
-      let readmore = document.querySelector("#read-more");
-      let readless = document.querySelector("#read-less");
-
-      readmore.style.display = "none";
-      readless.style.display = "block";
-    },
-    retract(target) {
-      let prev = document.querySelector("#read-more-p");
-      let readmore = document.querySelector("#read-more");
-      let readless = document.querySelector("#read-less");
-
-      prev.style.height = "400px";
-      readmore.style.display = "block";
-      readless.style.display = "none";
     },
     parentalrating(event) {
       let ret = "badge noClick ";
@@ -1050,6 +1039,7 @@ export default {
             this.getRooms();
             this.getPresentation();
             this.getDates();
+            this.setdescription();
 
             this.metaObj.appName = config.info.siteName;
             this.metaObj.description = this.event.meta_description;
@@ -1074,7 +1064,6 @@ export default {
 
             this.imageLoaded = true;
           }
-          console.log(this.event.description.length);
         },
         error => {
           this.processing = false;
@@ -1086,8 +1075,7 @@ export default {
   },
   mounted() {
     this.getEvent();
-    this.keepalive();
-
+    this.keepalive();    
   },
   computed: {
     key() {
