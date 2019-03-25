@@ -5,16 +5,32 @@
 @import "../templates/ticketHub/main.scss";
 @import "../templates/ticketHubVideo/main.scss";
 @import "../templates/ticketHubSearchHeader/main.scss";
+@import "../templates/tixs/main.scss";
 @import "../templates/ingressaria/main.scss";
 @import '../../../node_modules/pretty-checkbox/src/pretty-checkbox.scss';
 
+@if $template == 'tixs' {
+	@include contentTixs;
+}
+
 @if $template != 'tixs' {
+	@include card;
+	@include btn;
+	@include badge;
+	@include headerTixs;
+	@include layout;
+	@include footerTixs;
+	@include slider;
+	@include result;
+	@include alert;
+	@include loading;
+	@include sac;
+
 	@include grid;
 	@include header;
 	@include content;
 	@include footer;
 }
-
 @if $template == 'ticketHub' {
 	@include contentTicketHub;
 }

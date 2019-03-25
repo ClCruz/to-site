@@ -1,0 +1,30 @@
+@import 'card.scss';
+@import 'btn.scss';
+@import 'badge.scss';
+@import 'footer.scss';
+
+@import 'header.scss';
+@import 'layout.scss';
+@import 'seats.scss';
+@import 'slider.scss';
+@import 'footer.scss';
+@import 'result.scss';
+@import 'alert.scss';
+@import 'loading.scss';
+@import 'sac.scss';
+
+@mixin contentTixs {
+	@include cardTixs;
+	@include btnTixs;
+	@include badgeTixs;
+	@include footerTixs;
+
+	@include headerTixs;
+	@include layoutTixs;
+	@include seatsTixs;
+	@include sliderTixs;
+	@include resultTixs;
+	@include alertTixs;
+	@include loadingTixs;
+	@include sacTixs;
+}

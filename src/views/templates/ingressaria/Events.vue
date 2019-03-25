@@ -98,7 +98,7 @@
   </div>
 
    <!-- Propaganda -->
-  <div class="container-fluid container__select mobile__only">
+  <!-- <div class="container-fluid container__select mobile__only">
     <div class="container p-0">
       <div class="row">
         <div class="col-12 col-xl-12 text-left">
@@ -109,7 +109,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <section class="to-block team-1 mt-0 pt-0">
     <div class="container">
