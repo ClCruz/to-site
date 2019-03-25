@@ -691,8 +691,11 @@
 	}
 
 	#read-more-p {
-		height: 400px;
+		// height: 400px;
 		overflow: hidden;
+	}
+	.read-more-p-limited {
+		height: 400px;
 	}
 
 	#read-more,
@@ -761,10 +764,6 @@
 			padding: 10px !important;
 			margin-top: 40px !important;
 		}
-	}
-
-	#read-less {
-		display: none;
 	}
 
 	.badge-light {
