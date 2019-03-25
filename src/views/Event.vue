@@ -101,60 +101,64 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <section class="to-block to-block-mobile" style="background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzciIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2LjkgODIy%0D%0ALjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMTYuOSA4MjIuMTsiIHhtbDpz%0D%0AcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGNEY3%0D%0ARkU7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwwaDEyMTYuOXY3MzguNGMwLDAt%0D%0ANTg4LjgsMjAwLTYxMi44LTE4czM4OS44LTQ3NC4yLTExMS01MjlDMTAwLjEsMTQ4LjQsMCwwLDAs%0D%0AMHoiLz4KPC9zdmc+Cg=='); margin-top: 140px!important">
+          <section class="to-block bg__ingressaria to-block-mobile" style="">
             <div class="container">
               <div class="row">
                 <div class="col-12 col-md-8 col-lg-6">
                   <img class="event__card-img img__mobile" :src="event.img" alt="" style="">
-
-                  <h1 class="title mb-2 mt-0">{{event.NomPeca}}</h1>
-                  <span class="event__badges">
+                  <EventTitleLoader v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true"></EventTitleLoader>
+                  <div v-else>
+                    <h1 class="title mb-2 mt-0">{{event.NomPeca}}</h1>
+                    <span class="event__badges">
                         <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
                         <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
                         <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
                         <a href="#" class="badge badge__icon badge__city badge-secondary" id="badge__city" @click="gotoSearch(event.city, 'city')">{{event.cityBadgeText}}</a>
                         <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
-                        <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a>
+                        <!-- <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a> -->
                         <span class="flag" id="">
                           <img v-for="(item) in event.badge" v-bind:key="item.tag" :id="item.tag" :title="item.tag" :src="item.img" alt="">
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
-                  </span>
-                  <h3 class="mt-3">Detalhes do eventos</h3>
-                  <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
-                  <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
-                    <div class="btn to-btn dark">
-                      LER MAIS
+                    </span>
+                    <h3 class="mt-3">Detalhes do eventos</h3>
+
+                    <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
+                    <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
+                      <div class="btn to-btn dark">
+                        LER MAIS
+                      </div>
                     </div>
-                  </div>
-                  <div id='read-less' @click="showreadmoreclick" v-if="showreadandless && !showreadmore">
-                    <div class="btn to-btn dark">
-                      LER MENOS
+                    <div id='read-less' @click="showreadmoreclick" v-if="showreadandless && !showreadmore">
+                      <div class="btn to-btn dark">
+                        LER MENOS
+                      </div>
                     </div>
                   </div>
 
                 </div>
                 <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
-                  <img class="event__card-img" :src="event.img" alt="" style="">
+                  <EventImageIngressariaLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 240px; border-radius: 5px; box-shadow: none!important"></EventImageIngressariaLoader>
+                  <img class="event__card-img" :src="event.img" alt="" style="" v-else>
                   <!-- Share -->
                   <hr data-content="Compartilhar" class="divider mb-0 mt-2" style="max-width: 460px">
                   <div class="row" id="share">
 
                     <!-- facebook -->
-                    <a class="facebook" href="https://www.facebook.com/share.php?u=url&title=title" target="blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="facebook" :href="linkFacebook" target="blank"><i class="fab fa-facebook-f"></i></a>
 
                     <!-- twitter -->
-                    <a class="twitter" href="https://twitter.com/intent/tweet?status=title+url" target="blank"><i class="fab fa-twitter"></i></a>
+                    <a class="twitter" :href="linkTwitter" target="blank"><i class="fab fa-twitter"></i></a>
 
                     <!-- linkedin -->
-                    <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=url&title=title&source=source" target="blank"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- <a class="linkedin" :href="linkLinkedin" target="blank"><i class="fab fa-linkedin-in"></i></a> -->
 
                     <!-- pinterest -->
-                    <a class="pinterest" href="https://pinterest.com/pin/create/bookmarklet/?media=media&url=url&is_video=false&description=title" target="blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a class="pinterest" :href="linkPinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
 
                   </div>
                   <!-- Produtor -->
-                  <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
+                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
                     <h3 class="mt-3">Sobre o parceiro</h3>
                     <div class="row align-items-center ">
                       <div class="col-4 ">
@@ -166,7 +170,7 @@
                         <a href="#" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-link"></i>Ir para o site do parceiro</a>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- Local do evento -->
                   <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
                     <h3 class="mt-3">Local do evento</h3>
@@ -197,7 +201,7 @@
               Selecionar horário
             </div>
             <!-- Banner -->
-            <div class="container pl-0 pt-4 container__calendar">
+            <div class="container pl-0 mt-5 pt-3 container__calendar">
               <div class="">
                 <div class="p-2">
                   <h3 class="" id="horario">Escolha de horário</h3>
@@ -225,7 +229,7 @@
                     </swiper-slide>
                   </swiper>
                   <div class="container__available-times pl-3 row">
-                    <div class="card__hour text-center align-items-center" style="" v-for="(item) in listOfHours" :key='item.HorSessao + item.day'>
+                    <div class="card__hour text-center align-items-center" style="" v-for="(item) in listOfHours" :key='item.HorSessao + item.day' @click="buy(item.id_apresentacao)">
                       <div>
                         <!-- <h3 class="">HORÁRIO</h3> -->
                         <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
@@ -374,8 +378,10 @@ import {
 } from '@/functions';
 import $ from "jquery";
 import EventTimeLoader from '@/components/loaders/EventTimeLoader.vue';
+import EventTitleLoader from '@/components/loaders/EventTitleLoader.vue';
 import EventRoomLoader from '@/components/loaders/EventRoomLoader.vue';
 import EventImageLoader from '@/components/loaders/EventImageLoader.vue';
+import EventImageIngressariaLoader from '@/components/loaders/EventImageIngressariaLoader.vue';
 import AppSearch from "@/components/App-search.vue";
 
 import VueAwesomeSwiper from 'vue-awesome-swiper';
@@ -401,8 +407,10 @@ export default {
   mixins: [func],
   components: {
     EventTimeLoader,
+    EventTitleLoader,
     EventRoomLoader,
     EventImageLoader,
+    EventImageIngressariaLoader,
     AppSearch
   },
   head: {
@@ -530,6 +538,10 @@ export default {
 
   data() {
     return {
+      linkFacebook: '',
+      linkTwitter: '',
+      linkLinkedin: '',
+      linkPinterest: '',
       processing: true,
       filterBy: 0,
       filterByDate: '',
@@ -608,17 +620,40 @@ export default {
     });
   },
   methods: {
+    escapeHtml(text) {
+      var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+
+      return text.replace(/[&<>"']/g, function (m) {
+        return map[m];
+      });
+    },
+    generateSocialLinks() {
+
+      let url = window.location;
+      let title = escape(this.event.NomPeca);
+      let media = this.event.img;
+
+      this.linkFacebook = "https://www.facebook.com/share.php?u=" + url + "&title=" + title;
+      this.linkLinkedin = "https://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title=" + title + "&source=source";
+      this.linkTwitter = "https://twitter.com/intent/tweet?text=" + title + "&url=" + url;
+      this.linkPinterest = "https://pinterest.com/pin/create/bookmarklet/?media=" + media + "&url=" + url + "&is_video=false&description=";
+    },
     showreadmoreclick() {
       if (this.showreadmore) {
         this.showreadmore = false;
-      }
-      else {
+      } else {
         this.showreadmore = true;
       }
     },
     setdescription() {
       Vue.nextTick().then(response => {
-        this.showreadandless = this.$refs.eventdesc.clientHeight>400;
+        this.showreadandless = this.$refs.eventdesc.clientHeight > 400;
         this.showreadmore = this.showreadandless;
       });
     },
@@ -799,6 +834,8 @@ export default {
             this.getDates();
             this.setdescription();
 
+            this.generateSocialLinks();
+
             this.metaObj.appName = config.info.siteName;
             this.metaObj.description = this.event.meta_description;
             this.metaObj.keywords = this.event.meta_keyword;
@@ -841,13 +878,13 @@ export default {
 
       setTimeout(function () {
         document.querySelector('.container__available-times').style.opacity = 1;
-        
+
       }, 200);
 
     },
     fillFirstHour() {
       this.selectedDate = this.presentantion[0];
-      console.log(this.presentantion);
+      // console.log(this.presentantion);
       this.filteredHours(this.selectedDate.day);
     },
     removeDuplicatesBy(keyFn, array) {
@@ -863,14 +900,17 @@ export default {
       // var a = document.getElementsByClassName('card__time');
       // Array.from(a).map(x => x.classList.remove('card__time-active'));
 
-      console.log(target)
+      // console.log(target)
       // element.target.classList.add('card__time-active');
       return;
     }
   },
   mounted() {
     this.getEvent();
-    this.keepalive();    
+    this.keepalive();
+
+    console.log(this.event)
+
   },
   computed: {
     key() {

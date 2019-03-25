@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/marketplayclub/main.scss",
   "css": "/stylesheets/themes/marketplayclub/main.css",
-  "template": "ingressaria",
+  "template": "ticketHubSearchHeader",
   "logo": "https://media.tixs.me/logos/logo-marketplayclub.svg",
   "favico": "/img/marketplayclub/",
   "videos": {

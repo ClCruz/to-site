@@ -4,7 +4,7 @@
     <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub">
       <div class="col-12 col-md-10 justify-content-center text-center">
         <div class="" style="">
-          <h1>Procure experiências</h1> 
+          <h1>Procure experiências</h1>
         </div>
         <div class="input-group mt-0 mb-3 p-2 w-100">
           <app-search></app-search>
@@ -20,13 +20,27 @@
       </div>
       <!-- <div class="col-12" style="margin:0 auto; display: flex; justify-content: center;"> -->
       <div class="col-6">
-        <datepicker :clear-button=true :language="ptBR" @selected="selectDate" @cleared="resetEvents" placeholder="Data" :bootstrap-styling=true clear-button-icon="fa fa-sm fa-times-circle"></datepicker>
+                  <datepicker :clear-button=true :language="ptBR" @selected="selectDate" @cleared="resetEvents" placeholder="Data" :bootstrap-styling=true clear-button-icon="fa fa-sm fa-times-circle"></datepicker>
+
+        <!-- <div class="dropdown">
+          <input class="dropdown-toggle" type="text">
+          <div class="dropdown-text">Data</div>
+          <ul class="dropdown-content">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Log out</a></li>
+            <li>
+              <a href="#">
+              </a>
+            </li>
+          </ul>
+        </div> -->
         <!-- <i @click="clearDate" class="fa fa-lg fa-times-circle"></i> -->
       </div>
     </div>
   </div>
   <!-- Propaganda -->
-  <div class="container-fluid container__select">
+  <div class="container-fluid container__select mobile__hidden">
     <div class="container p-0">
       <div class="row">
         <div class="col-12 col-xl-12 text-left">
@@ -34,9 +48,7 @@
             <div class="img-fluid rounded-0 ad" style="">
             </div>
           </div>
-
         </div>
-
       </div>
     </div>
   </div>
@@ -59,7 +71,7 @@
     </div>
   </section>
   <!-- Banner -->
-  <div class="container__select to-block container__features ">
+  <div class="container__select to-block container__features">
     <div class="container pt-2 pb-0 text-left">
       <h3 class="">Experiências em destaque</h3>
       <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</p>
@@ -75,12 +87,26 @@
                 <div @click="goto('event',{ uri: item.uri})" class="img-fluid rounded-0" style="background-size: cover;height: 300px !important" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }">
                 </div>
 
-                <div class="ad__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div>
+                <!-- <div class="ad__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div> -->
               </div>
             </div>
           </swiper-slide>
 
         </swiper>
+      </div>
+    </div>
+  </div>
+
+   <!-- Propaganda -->
+  <div class="container-fluid container__select mobile__only">
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-12 col-xl-12 text-left">
+          <div class="p-3">
+            <div class="img-fluid rounded-0 ad" style="">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
