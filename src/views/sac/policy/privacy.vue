@@ -116,6 +116,126 @@
       </div>
     </div>
   </div>
+   <div class="content" v-else-if="template == 'ingressaria'">
+    <section class="to-block to-viewport bg-dark bg__main" style="">
+      <div class="container justify-content-center align-items-center d-flex p-5">
+        <div class="col-10 justify-content-center text-center">
+          <div class="d-none d-sm-block" style="">
+            <h2>Deseja encontrar outro evento ?</h2>
+          </div>
+          <div class="d-none d-sm-block input-group mt-4 mb-2 p-1 w-100">
+            <app-search></app-search>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="to-block" style="background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzciIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2LjkgODIy%0D%0ALjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMTYuOSA4MjIuMTsiIHhtbDpz%0D%0AcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGNEY3%0D%0ARkU7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwwaDEyMTYuOXY3MzguNGMwLDAt%0D%0ANTg4LjgsMjAwLTYxMi44LTE4czM4OS44LTQ3NC4yLTExMS01MjlDMTAwLjEsMTQ4LjQsMCwwLDAs%0D%0AMHoiLz4KPC9zdmc+Cg=='); padding: 120px 0 !important">
+      <div class="container">
+        <div class="row">
+          <!-- SAC Index -->
+          <sacInfo></sacInfo>
+
+          <div class="col-12 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
+            <h3 class="title__page">Politica de privacidade</h3>
+                    <p class="lead">
+                    Nós respeitamos a sua privacidade A  {{siteName}} sabe que a sua privacidade é muito
+                    importante. Por favor, tome um minuto do seu tempo para ler e entender a nossa &quot;Política
+                    de Privacidade&quot;, para que você entenda como tratamos a sua informação pessoal. Se
+                    você tiver alguma pergunta sobre esta política, sobre as práticas deste site ou a sua
+                    relação com a  {{siteName}}, envie um e-mail para sac@{{siteName}}.
+                    </p><p class="lead">
+                    Padrão mundial
+                    <br>
+                    Devido à importância que o assunto privacidade exige, a  {{siteName}} preparou o seu manual
+                    baseado nos princípios utilizados pelos maiores e mais importantes sites de todo o
+                    mundo, usando como base o TRUSTe.org , organização que tem como objetivo promover
+                    as normas de confidencialidade de dados e privacidade no mundo digital.
+                    </p><p class="lead">
+                    Livre navegação
+                    <br>
+                    Em geral, você poderá navegar por este endereço Web &quot;http://www. {{siteName}}&quot; sem ter de
+                    declarar quem você é ou revelar qualquer informação a seu respeito. Haverá ocasiões, no
+                    entanto, em que poderá ser necessário uma identificação e a obtenção de seus dados
+                    pessoais, tais como seu nome, CPF, endereço, telefone, etc. Nossa intenção é lhe
+                    comunicar antes de coletar informações a seu respeito na Internet.
+                    </p><p class="lead">
+                    Pesquisas e enquetes
+                    <br>
+                    Ao se cadastrar e/ou participar de uma pesquisa na  {{siteName}}, você responde algumas
+                    informações pessoais e sobre seus interesses. Nós usamos essas informações para
+                    entender melhor o seu gosto e adaptar o site da melhor forma possível para você. Além
+                    do que estipula esta &quot;Política de Privacidade&quot;, nós não revelamos, alugamos ou
+                    vendemos sua informação pessoal para outros, sem sua aprovação ou conhecimento.
+                    Nós podemos utilizar alguns serviços provindos de outras companhias para nossos
+                    usuários. Em alguns casos, você terá que cadastrar-se conjuntamente com este parceiro
+                    para poder receber seus serviços. Através do cadastro conjunto, você estará dando sua
+                    informação pessoal também para esta outra empresa. Você, então, poderá receber
+                    informações sobre serviços e atualizações deste parceiro.
+                    </p><p class="lead">
+                    E-mail de atualizações e notícias
+                    <br>
+                    Algumas vezes, a  {{siteName}} envia e-mails de atualização com as novidades e outros
+                    serviços que o nosso site oferece para os usuários. Nós também poderemos enviar e-
+                    mails sobre novos produtos, companhias ou eventos que possam ser do seu interesse.
+                    Você poderá cancelar este serviço simplesmente seguindo as instruções contidas no e-
+                    mail. Em promoções nós poderemos solicitar, entre outras ocasiões, alguns dados
+                    pessoais identificáveis, para que você possa participar de sorteios, concursos ou
+                    promoções realizadas pela  {{siteName}} ou por parceiros. Salas de Bate-Papo e Fóruns
+                    Embora a  {{siteName}} tenha o direito de monitorar as salas de Bate Papo e os Fóruns, não
+                    será possível fazê-lo permanentemente. Lembre-se de que, se você divulgar alguma
+                    informação pessoal nas salas de Bate Papo ou nos fóruns, esta poderá ser usada por
+                    outras pessoas.
+                    </p><p class="lead">
+                    Direito autoral e autoridades legais
+                    <br>
+                    Aviso: as imagens contidas neste site são protegidas pela lei de direito autoral. nº 5988 de
+                    14/02/73. A cópia indevida ou a duplicação parcial ou total destas peças sofrerá pena de
+                    acordo com a lei que rege os direitos do autor. Nós poderemos compartilhar as
+                    informações dos nossos usuários com as autoridades do governo, quando tivermos
+                    alguma razão para acreditar que alguém está causando danos ou interferindo com nossos
+                    direitos ou propriedade intelectual, com outros usuários da  {{siteName}} ou com qualquer outra
+                    pessoa que possa sair prejudicado por estas atividades.
+                    </p><p class="lead">
+                    Cookies
+                    <br>
+                    Tentamos oferecer para você serviços e produtos de acordo com seus interesses. Para
+                    isso, utilizamos os &quot;cookies&quot; para guardar ou traçar informação sobre você. Um &quot;cookie&quot; é
+                    uma pequena quantidade de dados enviado ao seu browser pelo servidor Web, que é
+                    guardado no &quot;hard disk&quot; do seu computador. Nós utilizamos os &quot;cookies&quot; para: acessar
+                    sua informação na  {{siteName}} (que está na base de dados dos nossos computadores),
+                    oferecer um serviço personalizado; estimar o tamanho da nossa audiência para os nossos
+                    anunciantes; saber o número de visitas em nossas promoções, sorteios e concursos; e
+                    identificar quais áreas do nosso site você visitou. Nós analisamos esses dados para
+                    melhor entender nossos usuários. Esta informação nos permite oferecer um serviço que
+                    coincidirá melhor com seus interesses. Nós também mostramos uma análise dos nossos
+                    usuários (como um grupo) para os nossos potenciais parceiros, anunciantes e terceiros.
+                    </p><p class="lead">
+                    Acesso a outros sites através da  {{siteName}}
+                    <br>
+                    Você deve saber que, quando estiver na  {{siteName}}, terá a oportunidade de visitar outros
+                    sites não-operados pela  {{siteName}}. Estes sites, dos quais alguns são anunciantes da
+                     {{siteName}}, poderão obter informação pessoal identificável sobre você. A  {{siteName}} não
+                    controla os sites operados por outros e não se responsabiliza pelo uso de informações
+                    destes sites. Esta declaração de privacidade não se aplica para estes outros sites ou
+                    anunciantes.
+                    </p><p class="lead">
+                    Uso de conteúdo dos colaboradores
+                    <br>
+                    A  {{siteName}} é uma comunidade virtual com o objetivo de divulgar o teatro nacional e permitir
+                    o livre intercâmbio de ideias e opiniões entre seus usuários. A  {{siteName}} não se
+                    responsabiliza por opiniões, comentários, artigos, títulos e/ou espetáculos publicados por
+                    colaboradores, moderadores, usuários e entrevistados que, de alguma forma, através de
+                    imagem e/ou conteúdo, possam causar ofensas, perdas e danos, pois não representam a
+                    opinião dos nossos editores.
+                    </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
   <div class="content" v-else>
       <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2" v-if="template == 'ticketHub'">
     <div class="container justify-content-center align-items-center d-flex p-5">

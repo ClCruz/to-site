@@ -1,5 +1,5 @@
 <template>
-<div class="col-md-6">
+<div class="col-md-6" v-if="template != 'ingressaria'">
   <div class="row">
     <div class="col-md-12">
 
@@ -34,16 +34,55 @@
     </div>
   </div>
 </div>
+
+  <div class="col-10 col-sm-6 m-auto m-lg-0 col-lg-4" v-else-if="template == 'ingressaria'">
+    <h1 class="">SAC</h1>
+
+    <h3>Institucional</h3>
+    <b-link style="width: 100%" href="#" @click="loadSACPage('company','sobre')">Sobre a empresa</b-link>
+
+    <h3>Politicas</h3>
+    <ul style="padding-left: 0 ">
+      <li>
+    <b-link style="width: 100%" href="#" @click="loadSACPage('policy','venda')">
+      Politica de Venda
+    </b-link>
+    </li>
+<li>
+    <b-link style="width: 100%" href="#" @click="loadSACPage('policy','desconto')">
+      Política de Meia Entrada
+    </b-link>
+</li>
+<li>
+    <b-link style="width: 100%" href="#" @click="loadSACPage('policy','privacidade')">
+      Politica de Privacidade
+    </b-link>
+    </li>
+</ul>
+    <h3>Parceiros</h3>
+
+    <b-link style="width: 100%" href="#" @click="loadSACPage('partner','sejaParceiro')">
+      Seja nosso Parceiro
+    </b-link>
+
+</div>
 </template>
 
 <script>
+import config from "@/config";
+
+import {
+  func
+} from "@/functions";
+
 export default {
   name: "SacInfo",
   computed: {},
-  created: function() {
+  created: function () {
     this.toggleNav()
   },
-  
+  mixins: [func],
+
   methods: {
 
     toggleNav() {

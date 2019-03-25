@@ -1,5 +1,5 @@
 <template>
-<div class="aa">
+<div>
   <div v-if="template == 'tixs'">
     <div class="content__show container__new">
       <div class="row">
@@ -97,20 +97,175 @@
       </div>
     </div>
   </div>
-<div v-else>
-  <section class="to-block to-viewport bg-dark bg__main" style="height: 500px;" data-block-type="call_to_action" data-id="2">
+  <div v-else-if="template == 'ingressaria'">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <section class="to-block bg__ingressaria to-block-mobile" style="">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-8 col-lg-6">
+                  <img class="event__card-img img__mobile" :src="event.img" alt="" style="">
+                  <EventTitleLoader v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true"></EventTitleLoader>
+                  <div v-else>
+                    <h1 class="title mb-2 mt-0">{{event.NomPeca}}</h1>
+                    <span class="event__badges">
+                        <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
+                        <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
+                        <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
+                        <a href="#" class="badge badge__icon badge__city badge-secondary" id="badge__city" @click="gotoSearch(event.city, 'city')">{{event.cityBadgeText}}</a>
+                        <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
+                        <!-- <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a> -->
+                        <span class="flag" id="">
+                          <img v-for="(item) in event.badge" v-bind:key="item.tag" :id="item.tag" :title="item.tag" :src="item.img" alt="">
+                          <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
+                        </span>
+                    </span>
+                    <h3 class="mt-3">Detalhes do eventos</h3>
 
-  </section>
-  <div class="content__show container__new" style="margin-top: -500px !important">
-    <div class="row">
-      <div class="col-md-6 container">
-        <div class="row">
-          <div class="col-md-12" style="">
-            <div class="content__description">
-              <div class="card event__card">
-                <div class="show__date">
-                  <h2>{{event.NomPeca}}</h2>
-                  <span class="event__badges">
+                    <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
+                    <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
+                      <div class="btn to-btn dark">
+                        LER MAIS
+                      </div>
+                    </div>
+                    <div id='read-less' @click="showreadmoreclick" v-if="showreadandless && !showreadmore">
+                      <div class="btn to-btn dark">
+                        LER MENOS
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
+                  <EventImageIngressariaLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 240px; border-radius: 5px; box-shadow: none!important"></EventImageIngressariaLoader>
+                  <img class="event__card-img" :src="event.img" alt="" style="" v-else>
+                  <!-- Share -->
+                  <hr data-content="Compartilhar" class="divider mb-0 mt-2" style="max-width: 460px">
+                  <div class="row" id="share">
+
+                    <!-- facebook -->
+                    <a class="facebook" :href="linkFacebook" target="blank"><i class="fab fa-facebook-f"></i></a>
+
+                    <!-- twitter -->
+                    <a class="twitter" :href="linkTwitter" target="blank"><i class="fab fa-twitter"></i></a>
+
+                    <!-- linkedin -->
+                    <!-- <a class="linkedin" :href="linkLinkedin" target="blank"><i class="fab fa-linkedin-in"></i></a> -->
+
+                    <!-- pinterest -->
+                    <a class="pinterest" :href="linkPinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
+
+                  </div>
+                  <!-- Produtor -->
+                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
+                    <h3 class="mt-3">Sobre o parceiro</h3>
+                    <div class="row align-items-center ">
+                      <div class="col-4 ">
+                      </div>
+
+                      <div class="col-12">
+                        <h4>Cia de Ingressos</h4>
+                        <p class="lead">A cia de ingressos fornece aos nossos clientes uma prestação de serviço diferenciada e específica para controle de venda de ingressos para todo o tipo de evento</p>
+                        <a href="#" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-link"></i>Ir para o site do parceiro</a>
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- Local do evento -->
+                  <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
+                    <h3 class="mt-3">Local do evento</h3>
+                    <div class="row align-items-center ">
+                      <div class="col-4 ">
+                      </div>
+
+                      <div class="col-12">
+                        <p class="lead">{{this.event.address}}</p>
+                        <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-map"></i>Ver mapa</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Horários -->
+                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;" v-if="imageLoaded && roomLoaded && timeLoaded">
+                      <iframe class="map" :src="returnMap()"
+          width="100%" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="btn__comprar" id="btn__comprar" @click="scrollTo()" title="Selecionar horários">
+              <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
+              <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
+              Selecionar horário
+            </div>
+            <!-- Banner -->
+            <div class="container pl-0 mt-5 pt-3 container__calendar">
+              <div class="">
+                <div class="p-2">
+                  <h3 class="" id="horario">Escolha de horário</h3>
+                  <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário</p>
+                  <div class="container__arrows">
+                    <div class="swiper-button-prev" slot="button-prev"></div>
+                    <div class="swiper-button-next" slot="button-next"></div>
+                  </div>
+                  <swiper :options="swiperOption" class="">
+                    <swiper-slide class="p-0" v-for="(item, index) in filteredDays" :key='item.HorSessao + item.day'>
+                      <div class="c">
+                        <!-- :class="{ 'card__time-active': index == 0 }" -->
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center " style="" @click='filteredHours(item.day), selected = item.id_apresentacao' v-bind:class="{'card__time-active':selected == undefined ? selected = item.id_apresentacao : item.id_apresentacao == selected}">
+                          <div>
+                            <h3 v-if="item.istoday == 1" class="" style="text-transform: uppercase">HOJE</h3>
+                            <h3 v-else-if="item.istomorrow == 1" class="" style="text-transform: uppercase">AMANHÃ</h3>
+                            <h3 v-else class="" style="text-transform: uppercase">{{item.weekdayName }}</h3>
+                            <p class="lead">{{ item.day }}</p>
+                          </div>
+                          <i style="visibility: hidden" class="icon-active fa fa-caret-down"></i>
+                          <div>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                  </swiper>
+                  <div class="container__available-times pl-3 row">
+                    <div class="card__hour text-center align-items-center" style="" v-for="(item) in listOfHours" :key='item.HorSessao + item.day' @click="buy(item.id_apresentacao)">
+                      <div>
+                        <!-- <h3 class="">HORÁRIO</h3> -->
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
+                        <p class="lead">{{item.ValPeca | money }}</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- <div class="col-3">
+          a
+        </div> -->
+
+      </div>
+    </div>
+
+  </div>
+  <div v-else>
+    <section class="to-block to-viewport bg-dark bg__main" style="height: 500px;" data-block-type="call_to_action" data-id="2">
+
+    </section>
+    <div class="content__show container__new" style="margin-top: -500px !important">
+      <div class="row">
+        <div class="col-md-6 container">
+          <div class="row">
+            <div class="col-md-12" style="">
+              <div class="content__description">
+                <div class="card event__card">
+                  <div class="show__date">
+                    <h2>{{event.NomPeca}}</h2>
+                    <span class="event__badges">
                         <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
                         <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
                         <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
@@ -122,85 +277,87 @@
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
 
-                  </span>
-                </div>
+                    </span>
+                  </div>
 
+                </div>
               </div>
-            </div>
-            <div class="content__description">
-              <div class="card 
+              <div class="content__description">
+                <div class="card 
                    card__container">
-                <p class="event__card-holder">
-                  <span>
+                  <p class="event__card-holder">
+                    <span>
                         <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader> 
                         <img  v-else class="event__card-img" :src="event.img" alt="" style="">
                       </span>
-                </p>
-                <h3 style="padding-left: 10px">Descrição</h3>
-                <span class="event__description" v-html="event.description">
+                  </p>
+                  <h3 style="padding-left: 10px">Descrição</h3>
+                  <span class="event__description" v-html="event.description">
                       </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-md-12 time__card">
-            <div class="show__date show__date-disp">
-              <div>
-                <h2>Escolha a data e a opção</h2>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12 time__card">
+              <div class="show__date show__date-disp">
+                <div>
+                  <h2>Escolha a data e a opção</h2>
+                </div>
+                <div class="result__button-group" v-if="!roomLoaded && !timeLoaded">
+                  <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
+                </div>
+                <div class="result__button-group" v-else>
+                  <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
+                    <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
+                  </b-dropdown>
+                  <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
+                    <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as opções'})">Todas as opções</b-dropdown-item-button>
+                    <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
+                  </b-dropdown>
+                </div>
               </div>
-              <div class="result__button-group" v-if="!roomLoaded && !timeLoaded">
-                <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
-              </div>
-              <div class="result__button-group" v-else>
-                <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
-                  <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
-                </b-dropdown>
-                <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
-                  <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as opções'})">Todas as opções</b-dropdown-item-button>
-                  <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
-                </b-dropdown>
-              </div>
-            </div>
-            <div class="container__time">
-              <EventTimeLoader class="container__placeholder" v-if="!roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 70px; border-radius: 5px"></EventTimeLoader>
-              <div class="time__placeholder" v-else>
-                <div class="card" v-if="filtered.length==0">
-                  <div class="card-body row">
-                    <div class="col col-md text-center card__date">
-                      Não há mais dias para esse evento.
+              <div class="container__time">
+                <EventTimeLoader class="container__placeholder" v-if="!roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 70px; border-radius: 5px"></EventTimeLoader>
+                <div class="time__placeholder" v-else>
+                  <div class="card" v-if="filtered.length==0">
+                    <div class="card-body row">
+                      <div class="col col-md text-center card__date">
+                        Não há mais dias para esse evento.
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <transition-group name="fade">
-                  <div class="card" v-for="(item) in filtered" :key='item'>
-                    <div class="card-body row">
-                      <div class="col-3 col-md-2 text-center card__date p-0">
-                        <span style="font-size: 12px">
+                  <transition-group name="fade">
+                    <div class="card" v-for="(item) in filtered" :key='item'>
+                      <div class="card-body row">
+                        <div class="col-3 col-md-2 text-center card__date p-0">
+                          <span style="font-size: 12px">
                           {{ item.weekdayName }} 
                         </span>
-                        <br />
-                        <span style="font-weight: bold; font-size: 14px">
+                          <br />
+                          <span style="font-weight: bold; font-size: 14px">
                           {{ item.day }} 
-                        </span> 
-                        <br /> 
-                        <span style="font-size: 12px">
+                        </span>
+                          <br />
+                          <span style="font-size: 12px">
                           {{ item.HorSessao }}
-                        </span> 
-                      </div>
-                      <div class="col-8 col-md-7 card__description" style="border-left: 1px solid #777;padding-left: 15px;">
-                        <span class="">
+                        </span>
+                        </div>
+                        <div class="col-8 col-md-7 card__description" style="border-left: 1px solid #777;padding-left: 15px;">
+                          <span class="">
                         {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} </span> <br> <span class="pt-1">{{ item.ds_municipio }}/{{item.sg_estado}}</span>
+                        </div>
+                        <div class="col-10 col-md-3 card__btn">
+                          <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
+                        </div>
                       </div>
-                      <div class="col-10 col-md-3 card__btn">
-                        <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
-                      </div>
+
                     </div>
-                  </div>
-                </transition-group>
+                  </transition-group>
+                </div>
               </div>
             </div>
           </div>
@@ -208,7 +365,6 @@
       </div>
     </div>
   </div>
-</div>
 </div>
 </template>
 
@@ -220,10 +376,16 @@ import config from '@/config';
 import {
   func
 } from '@/functions';
+import $ from "jquery";
 import EventTimeLoader from '@/components/loaders/EventTimeLoader.vue';
+import EventTitleLoader from '@/components/loaders/EventTitleLoader.vue';
 import EventRoomLoader from '@/components/loaders/EventRoomLoader.vue';
 import EventImageLoader from '@/components/loaders/EventImageLoader.vue';
+import EventImageIngressariaLoader from '@/components/loaders/EventImageIngressariaLoader.vue';
 import AppSearch from "@/components/App-search.vue";
+
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
 
 import {
   eventService
@@ -245,8 +407,10 @@ export default {
   mixins: [func],
   components: {
     EventTimeLoader,
+    EventTitleLoader,
     EventRoomLoader,
     EventImageLoader,
+    EventImageIngressariaLoader,
     AppSearch
   },
   head: {
@@ -374,11 +538,18 @@ export default {
 
   data() {
     return {
+      linkFacebook: '',
+      linkTwitter: '',
+      linkLinkedin: '',
+      linkPinterest: '',
       processing: true,
       filterBy: 0,
       filterByDate: '',
       filterByRoom: 'Todas as opções',
       metaObj: this.metatag_getObj(),
+      selected: undefined,
+      showreadandless: false,
+      showreadmore: false,
       event: {
         loaded: false,
         NomPeca: null,
@@ -389,7 +560,7 @@ export default {
         id_base: null,
         address: null,
         valores: null,
-        description: null,
+        description: '',
         img: null,
         badge: [],
         promo: [],
@@ -397,16 +568,100 @@ export default {
         state: null,
         cityBadgeText: null,
       },
+      listOfHours: [],
+      selectedDay: [],
       dates: [],
       salasDisponiveis: [],
       presentantion: [],
       timeLoaded: false,
       roomLoaded: false,
       dateLoaded: false,
-      imageLoaded: false
+      imageLoaded: false,
+      swiperOption: {
+        // loop: true,
+        // autoplay: true,
+        // speed: 1000,
+        // loopedSlides: 1,
+        slidesPerView: "7",
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+          800: {
+            slidesPerView: "3",
+          }
+        }
+      }
     }
   },
+  created() {
+    // Fixa navbar ao ultrapassa-lo
+    var navbar = $('#navbar'),
+      distance = navbar.offset().top,
+      $window = $(window);
+
+    $window.scroll(function () {
+      if ($window.scrollTop() >= 140) {
+        navbar.removeClass('navbar-fixed-top').addClass('navbar-fixed-top');
+      } else {
+        navbar.removeClass('navbar-fixed-top');
+      }
+
+      if ($window.scrollTop() >= 500) {
+        $('#btn__comprar').css("opacity", 1 - $(window).scrollTop() / 250);
+      } else {
+        $('#btn__comprar').css("opacity", 1 + $(window).scrollTop() / 250);
+      }
+    });
+  },
   methods: {
+    escapeHtml(text) {
+      var map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+
+      return text.replace(/[&<>"']/g, function (m) {
+        return map[m];
+      });
+    },
+    generateSocialLinks() {
+
+      let url = window.location;
+      let title = escape(this.event.NomPeca);
+      let media = this.event.img;
+
+      this.linkFacebook = "https://www.facebook.com/share.php?u=" + url + "&title=" + title;
+      this.linkLinkedin = "https://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title=" + title + "&source=source";
+      this.linkTwitter = "https://twitter.com/intent/tweet?text=" + title + "&url=" + url;
+      this.linkPinterest = "https://pinterest.com/pin/create/bookmarklet/?media=" + media + "&url=" + url + "&is_video=false&description=";
+    },
+    showreadmoreclick() {
+      if (this.showreadmore) {
+        this.showreadmore = false;
+      } else {
+        this.showreadmore = true;
+      }
+    },
+    setdescription() {
+      Vue.nextTick().then(response => {
+        this.showreadandless = this.$refs.eventdesc.clientHeight > 400;
+        this.showreadmore = this.showreadandless;
+      });
+    },
+    scrollTo() {
+      var element = document.getElementById("horario");
+      var top = element.offsetTop;
+      window.scrollTo(0, top - 100);
+    },
     parentalrating(event) {
       let ret = "badge noClick ";
       switch (event.CenPeca) {
@@ -448,6 +703,12 @@ export default {
       if (event) event.preventDefault();
 
       window.open("http://maps.google.com/?q=" + (this.event.address == null || this.event.address == "" ? this.event.ds_local_evento : this.event.address));
+    },
+    returnMap() {
+      //  debugger
+
+      var map = "https://www.google.com/maps/embed?q=" + encodeURIComponent(this.event.address)
+      return map;
     },
     gotoSearch(item, type) {
       switch (type) {
@@ -491,6 +752,8 @@ export default {
               this.dates = response;
               this.dateLoaded = true;
               this.filterByDate = "Datas";
+
+              // console.log('TCL: getDates -> response', response)
               //if (this.dates.length > 0) {
               //  this.filterByDate = this.dates[0].date;
               // }
@@ -508,7 +771,7 @@ export default {
 
       });
     },
-    getPresentation() {
+    getPresentation(callback) {
       this.showWaitAboveAll();
       Vue.nextTick().then(response => {
         eventService.presentation(this.event.id_base, this.event.CodPeca).then(
@@ -517,6 +780,10 @@ export default {
             if (this.validateJSON(response)) {
               this.presentantion = response;
               this.timeLoaded = true;
+
+              if (callback !== null && callback !== undefined) {
+                callback();
+              }
             }
           },
           error => {
@@ -562,8 +829,12 @@ export default {
             this.event.state = response.sg_estado;
             this.event.cityBadgeText = response.badge_city_text;
             this.getRooms();
-            this.getPresentation();
+            this.getPresentation(this.fillFirstHour);
+
             this.getDates();
+            this.setdescription();
+
+            this.generateSocialLinks();
 
             this.metaObj.appName = config.info.siteName;
             this.metaObj.description = this.event.meta_description;
@@ -596,10 +867,50 @@ export default {
         }
       );
     },
+    filteredHours(day) {
+      // debugger
+      // let ret2 = this.presentantion;
+      let hours = this.presentantion.filter(x => x.day == day);
+
+      document.querySelector('.container__available-times').style.opacity = 0;
+
+      this.listOfHours = this.removeDuplicatesBy(x => x.HorSessao, hours);
+
+      setTimeout(function () {
+        document.querySelector('.container__available-times').style.opacity = 1;
+
+      }, 200);
+
+    },
+    fillFirstHour() {
+      this.selectedDate = this.presentantion[0];
+      // console.log(this.presentantion);
+      this.filteredHours(this.selectedDate.day);
+    },
+    removeDuplicatesBy(keyFn, array) {
+      var mySet = new Set();
+      return array.filter(function (x) {
+        var key = keyFn(x).toUpperCase(),
+          isNew = !mySet.has(key);
+        if (isNew) mySet.add(key);
+        return isNew;
+      });
+    },
+    toggleActiveCard(target) {
+      // var a = document.getElementsByClassName('card__time');
+      // Array.from(a).map(x => x.classList.remove('card__time-active'));
+
+      // console.log(target)
+      // element.target.classList.add('card__time-active');
+      return;
+    }
   },
   mounted() {
     this.getEvent();
     this.keepalive();
+
+    console.log(this.event)
+
   },
   computed: {
     key() {
@@ -620,9 +931,23 @@ export default {
 
       return ret;
     },
+    filteredDays() {
+      // debugger
+      let ret = this.presentantion;
+
+      // console.log('TCL: filtered -> ret;', ret)
+
+      return this.removeDuplicatesBy(x => x.day, ret);
+    },
 
   }
 };
+
+$(document).ready(function () {
+  // console.log( "ready!" );
+  // debugger
+
+});
 </script>
 
 <style lang="scss" scoped>

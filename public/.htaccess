@@ -1,20 +1,20 @@
   RewriteEngine On
   RewriteBase /
-  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
+  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|LinkedInBot/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
   RewriteCond %{HTTP_HOST} ^(.+)$ [NC]
   RewriteRule ^evento/(.*)$ http://172.30.5.2:2002/v1/event_metatag?id=$1&host=%1 [P]
-  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
+  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|LinkedInBot/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
   RewriteCond %{HTTP_HOST} ^couvertartistico\.(.+)$ [NC]
   RewriteRule ^evento/(.*)$ http://172.30.5.2:2002/v1/event_metatag?id=$1&host=%1 [P]
-  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
+  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|LinkedInBot/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
   RewriteCond %{HTTP_HOST} ^cursos\.(.+)$ [NC]
   RewriteRule ^evento/(.*)$ http://172.30.5.2:2002/v1/event_metatag?id=$1&host=%1 [P]
 
-  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
+  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|LinkedInBot/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
   RewriteCond %{HTTP_HOST} ^(.+)$ [NC]
   RewriteRule ^busca/(.*)$ http://172.30.5.2:2002/v1/search_metatag?id=$1&host=%1 [P]
 
-  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
+  RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|LinkedInBot/[0-9]|Twitterbot|Pinterest|WhatsApp|Google.*snippet)
   RewriteCond %{HTTP_HOST} ^(.+)$ [NC]
   RewriteRule ^(.*)$ http://172.30.5.2:2002/v1/home_metatag?host=%1 [P]
 

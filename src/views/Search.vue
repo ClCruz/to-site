@@ -82,6 +82,39 @@
       </div>
     </div>
   </div>
+  <div v-else-if="template == 'ingressaria'">
+    <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
+      <div class="container justify-content-center align-items-center d-flex pt-5 pb-0 mb-0 h-25">
+        <div class="col-10 justify-content-center text-center">
+          <div class="d-none d-sm-block" style="">
+            <h2>Deseja encontrar outro evento ?</h2>
+          </div>
+          <div class="d-none d-sm-block input-group mt-4 mb-0 p-1 w-100">
+            <app-search></app-search>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="to-block fdb_result">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 pb-1 text-left mt-4">
+            <h3 class="result__container mb-1">Resultados encontrados para:
+              <span class="result__description">"{{ searchValue }}"</span>
+              <br>
+            </h3>
+              <p><span class="mt-3 pt-3">{{ countEvents }} {{textForCount}}</span></p>
+          </div>
+        </div>
+        <div class="row">
+          
+          <card-event v-for="(item, index) in searchResults" :key='index' :item="item"></card-event>
+
+        </div>
+      </div>
+    </section>
+  </div>
   <div v-else>
     <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2"  v-if="template == 'ticketHub'">
       <div class="container justify-content-center align-items-center d-flex pt-5 pb-0 mb-0 h-25">

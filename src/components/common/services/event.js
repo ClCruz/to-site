@@ -15,26 +15,37 @@ export const eventService = {
   banner
 }
 
-function list(city,state) {
+function list(city,state,date) {
   if (city == null) city = "";
   if (state == null) state = "";
+  if (date == null) date = "";
   
-  let url = config.api + `/v1/home/card?city=${city}&state=${state}`;
+  let url = config.api + `/v1/home/card`;
+
+  console.log(url);
+
+  let obj = {
+    city,state,date
+  };
+
+  // console.log(obj);
 
   var ret = new Promise(
-    function (resolve, reject) {
-      Vue.http.get(url).then(res => {
-        resolve(res.body);
-      }, err => {
-        reject({
-          error: true,
-          msg: err
-        });
-      });
-    }
+      function (resolve, reject) {
+          Vue.http.post(url, obj, { emulateJSON: true }).then(res => {
+              resolve(res.body);
+          },
+          (err) => {
+              console.log("Err", err);
+            })
+          .catch((e) => {
+            console.log("Caught", e);
+          })
+      }
   );
   return ret;
 }
+
 function banner(city,state) {
   if (city == null) city = "";
   if (state == null) state = "";

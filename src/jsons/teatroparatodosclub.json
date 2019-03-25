@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/teatroparatodosclub/main.scss",
   "css": "/stylesheets/themes/www.teatroparatodos.club/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-teatroparatodosclub.jpeg",
   "favico": "/img/teatroparatodosclub/",
   "videos": {

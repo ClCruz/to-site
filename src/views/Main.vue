@@ -44,6 +44,14 @@
   </transition>
   <footer-ticket-hub-video-background></footer-ticket-hub-video-background>
 </div>
+<div v-else-if="template == 'ingressaria'">
+  <div class="blankme" v-if="blankme"></div>
+  <header-ingressaria :key="idappheader"></header-ingressaria>
+  <transition name="component-fade" mode="out-in">
+    <router-view ref="rvroot" :key="$route.fullPath"></router-view>
+  </transition>
+  <footer-ingressaria></footer-ingressaria>
+</div>
 <div v-else>
   <div class="blankme" v-if="blankme"></div>
   <header-ticket-hub-search-header :key="idappheader"></header-ticket-hub-search-header>
@@ -60,6 +68,8 @@ import AppHeader from "@/components/App-header";
 import AppFooter from "@/components/App-footer";
 import HeaderTicketHub from "@/views/templates/ticketHub/Header"
 import FooterTicketHub from "@/views/templates/ticketHub/Footer"
+import HeaderIngressaria from "@/views/templates/ingressaria/Header"
+import FooterIngressaria from "@/views/templates/ingressaria/Footer"
 import HeaderTicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Header"
 import FooterTicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Footer"
 import HeaderTicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Header"
@@ -106,6 +116,8 @@ export default {
     AppFooter,
     HeaderTicketHub,
     FooterTicketHub,
+    HeaderIngressaria,
+    FooterIngressaria,
     HeaderTicketHubSearchHeader,
     FooterTicketHubSearchHeader,
     HeaderTicketHubVideoBackground,
