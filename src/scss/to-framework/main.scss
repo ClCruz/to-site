@@ -13,33 +13,78 @@
 	@include contentTixs;
 }
 
-@if $template != 'tixs' {
+@if $template == 'ticketHub' {
 	@include card;
 	@include btn;
 	@include badge;
-	@include headerTixs;
 	@include layout;
-	@include footerTixs;
 	@include slider;
-	@include result;
 	@include alert;
 	@include loading;
 	@include sac;
 
 	@include grid;
-	@include header;
 	@include content;
+	@include autocomplete;
+	@include header;
 	@include footer;
-}
-@if $template == 'ticketHub' {
+
+	@include modal;
+
 	@include contentTicketHub;
 }
 @if $template == 'ticketHubVideo' {
+	@include card;
+	@include btn;
+	@include badge;
+	@include layout;
+	@include slider;
+	@include alert;
+	@include loading;
+	@include sac;
+
+	@include grid;
+	@include content;
+	@include autocomplete;
+	@include header;
+	@include footer;
+
+	@include modal;
+
 	@include contentTicketHubVideo;
 }
 @if $template == 'ticketHubSearchHeader' {
+	@include card;
+	@include btn;
+	@include badge;
+	@include layout;
+	@include slider;
+	@include alert;
+	@include loading;
+	@include sac;
+
+	@include grid;
+	@include content;
+	@include autocomplete;
+	@include header;
+	@include footer;
+
+	@include modal;
+
 	@include contentTicketHubSearchHeader;
 }
 @if $template == 'ingressaria' {
+	@include slider;
+	@include badge;
+	@include layout;
+
+	@include grid;
+	@include content;
+	@include autocomplete;
+	@include header;
+	@include footer;
+
+	@include modal;
+
 	@include contentIngressaria;
 }

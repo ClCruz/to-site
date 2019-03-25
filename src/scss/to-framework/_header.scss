@@ -1,4 +1,119 @@
 @mixin header {
+	.header {
+		padding-top: 16px;
+
+		@include MQ(S) {
+			display: none;
+		}
+	}
+
+	.header__mobile {
+		display: none;
+		box-shadow: $box-shadow-2;
+
+		background: #252525 !important;
+		@include MQ(S) {
+			display: flex;
+		}
+	}
+
+	.header__logo {
+		@include MQ(S) {
+			margin-left: 15px;
+		}
+	}
+
+	.header__logo .img {
+		height: 30px;
+		width: 45px;
+		float: right;
+		background-image: url($logo);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: right center;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.nav__hamburger {
+		@include MQ(S) {
+		}
+	}
+	.nav__mobile {
+		margin-top: -30px;
+	}
+	.header__signin {
+		margin-right: 5%;
+		padding-right: 10px;
+		@include MQ(S) {
+			display: none;
+			margin-right: 15px;
+		}
+	}
+
+	.header__signin-mobile {
+		margin-right: 15px;
+		color: #fff;
+		display: none;
+
+		@include MQ(S) {
+			display: unset;
+		}
+	}
+
+	.__search-bar {
+		-ms-flex-item-align: center;
+		align-self: center;
+	}
+
+	#ddown1 {
+		margin-top: 0 !important;
+		button {
+			border: none;
+			background: none !important;
+
+			&:hover {
+				background: none !important;
+			}
+
+			&:focus,
+			&:active,
+			&:hover {
+				box-shadow: none;
+				border: none;
+			}
+		}
+		.dropdown-menu {
+			background: $black;
+
+			a {
+				color: #fff;
+				padding-left: 10px;
+				&:focus,
+				&:hover,
+				&:active {
+					background: #555555;
+				}
+			}
+		}
+	}
+
+	.header__signin,
+	.header__signin-mobile,
+	#ddown1 {
+		float: right;
+	}
+
+	#ddown1__BV_toggle_ {
+		@include MQ(S) {
+			z-index: 1;
+			padding-right: 0;
+			&:after {
+				color: white;
+			}
+		}
+	}
 	/* The Overlay (background) */
 	.overlay {
 		/* Height & width depends on how you want to reveal the overlay (see JS below) */
@@ -161,6 +276,25 @@
 		}
 	}
 
+	#nav-icon1 span,
+	#nav-icon3 span,
+	#nav-icon4 span {
+		@include MQ(S) {
+			left: 100%;
+		}
+	}
+
+	#app > div > div:nth-child(1) > nav > div:nth-child(4) {
+		@include MQ(S) {
+			display: flex;
+		}
+	}
+
+	#app > div > div:nth-child(1) > nav > div:nth-child(4) > span.btn.btn-light.to-btn.hidden-xs.hidden-sm {
+		@include MQ(S) {
+			align-self: center;
+		}
+	}
 	.content__show {
 		background-color: #fff;
 	}
@@ -173,5 +307,21 @@
 		height: 50px;
 		width: 100%;
 		background-position: left center;
+	}
+
+	.logo {
+		width: 100px;
+	}
+
+	.header {
+		padding-top: 0 !important;
+	}
+
+	.nav__mobile {
+		z-index: 100000;
+	}
+
+	.overlay {
+		z-index: 99999 !important;
 	}
 }

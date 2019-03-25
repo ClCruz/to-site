@@ -1,0 +1,48 @@
+@mixin modal {
+	#modals-container {
+		.form-control,
+		input {
+			border-left-color: $secundary;
+			border-radius: 5px !important;
+		}
+
+		.to-block {
+			padding-top: 2rem !important;
+			cursor: default !important;
+		}
+
+		.btn-success {
+			min-width: 100%;
+			padding: 8px;
+			border-radius: 2px;
+			font-size: 16px;
+			margin: 0 auto;
+			background: $secundary;
+			border: none;
+			transition: 0.3s;
+			&:hover {
+				background: $secundary !important;
+				filter: brightness(95%);
+			}
+
+			&:focus {
+				background: $secundary !important;
+				box-shadow: none;
+			}
+		}
+	}
+
+	.addusermodal {
+		@include MQ(S) {
+			width: auto !important;
+		}
+	}
+
+	input:disabled {
+		background: #f3f3f3;
+	}
+
+	.container__register form {
+		border-top: solid .3125rem $secundary !important;
+	}
+}

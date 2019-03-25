@@ -606,4 +606,173 @@
 	.card__container {
 		overflow: auto !important;
 	}
+
+	.card__home-0 {
+		@include randomBG(rgb(99, 155, 201));
+	}
+
+	.card__home-1 {
+		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/red.svg');
+		// background: url('/assets/background_2.svg');
+		// @include randomBG(rgb(245-255-250));
+	}
+
+	.card__home-2 {
+		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/blue.svg');
+		// background: url('/assets/background_3.svg');
+		// @include randomBG(rgb(75, 182, 224));
+	}
+
+	.card__home-3 {
+		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/red.svg');
+		// @include randomBG(rgb(230, 182, 51));
+		// background: url('/assets/background_4.svg');
+		//@include randomBG(rgb(240-255-255));
+		@include randomBG(rgb(241, 124, 179));
+	}
+
+	.card__see-more {
+		.card__home {
+			background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/blue.svg');
+			filter: grayscale(5);
+		}
+	}
+
+	.card__container {
+		margin-top: 0.5rem !important;
+	}
+	.card__home-4 {
+		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/purple.svg');
+		// background: url('/assets/background_5.svg');
+	}
+
+	.card__home-5 {
+		background: url('https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//hero/red.svg');
+		@include randomBG(rgb(75,182,224));
+	}
+
+	.card__home-6 {
+		@include randomBG(rgb(241, 124, 179));
+	}
+	.card__home-7 {
+		@include randomBG(rgb(182, 166, 114));
+	}
+	.card__home-9 {
+		@include randomBG(rgb(255, 0, 179));
+	}
+	.card__home-10 {
+		@include randomBG(rgb(99, 155, 201));
+	}
+	.card__home-11 {
+		@include randomBG(rgb(99, 155, 201));
+	}
+	.card__home-12 {
+		@include randomBG(rgb(99, 155, 201));
+	}
+
+	.content__description .event__card {
+		max-height: none !important;
+	}
+
+	.container__time,
+	.time__card {
+		max-height: none !important;
+	}
+
+	.card__home {
+		cursor: pointer;
+
+		background-size: cover !important;
+		height: 90px;
+		width: 94%;
+		transition: 0.5s;
+		border-radius: 5px;
+		margin: 0 auto;
+		box-shadow: 0 0 1px 0px rgba(0, 0, 0, .3);
+
+		&:hover {
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2) !important;
+		}
+	}
+
+	.img__inside {
+		margin-right: -9px;
+		width: 70px;
+		height: 70px;
+		background: black;
+		float: right;
+		margin-top: 28px;
+		transform: rotateY(360deg) rotate(40deg);
+		box-shadow: 0px 4.32762px 4.32762px rgba(0, 0, 0, 0.25) !important;
+		transition: 0.5s;
+
+		&:hover {
+			transform: rotateY(360deg) rotate(38deg);
+		}
+	}
+
+	.genre {
+		position: absolute;
+		/* top: 0; */
+		left: 18px;
+		top: 24px;
+		color: white;
+		font-weight: bold;
+		/* background: white; */
+		cursor: pointer;
+		font-size: 14px;
+	}
+
+	.card__date-2 {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background-color: #2d313c;
+		color: #fff;
+		height: 100%;
+		@include box-shadow();
+
+		padding: 0.5em;
+		span {
+			display: block;
+			text-align: center;
+		}
+		.day {
+			font-weight: 700;
+			font-size: 20px;
+			text-shadow: 2px 3px 2px rgba($black, 0.1);
+		}
+		.month {
+			text-transform: uppercase;
+		}
+		.month,
+		.year {
+			font-size: 13px;
+		}
+	}
+	.card__date:nth-of-type(2) {
+		position: absolute;
+		top: 0;
+		background-color: $secundary;
+		color: #fff;
+		border-bottom-right-radius: 5px;
+		border-top-left-radius: 3px;
+		@include box-shadow();
+		padding: 0.5em;
+		span {
+			display: block;
+			text-align: center;
+		}
+		.day {
+			font-weight: 700;
+			font-size: 16px;
+		}
+		.month {
+			text-transform: uppercase;
+		}
+		.month,
+		.year {
+			font-size: 12px;
+		}
+	}
 }
