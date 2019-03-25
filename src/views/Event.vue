@@ -101,7 +101,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <section class="to-block to-block-mobile" style="background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzciIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2LjkgODIy%0D%0ALjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMTYuOSA4MjIuMTsiIHhtbDpz%0D%0AcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGNEY3%0D%0ARkU7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwwaDEyMTYuOXY3MzguNGMwLDAt%0D%0ANTg4LjgsMjAwLTYxMi44LTE4czM4OS44LTQ3NC4yLTExMS01MjlDMTAwLjEsMTQ4LjQsMCwwLDAs%0D%0AMHoiLz4KPC9zdmc+Cg=='); margin-top: 110px!important">
+          <section class="to-block to-block-mobile" style="background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDIyLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzciIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2LjkgODIy%0D%0ALjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyMTYuOSA4MjIuMTsiIHhtbDpz%0D%0AcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGNEY3%0D%0ARkU7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwwaDEyMTYuOXY3MzguNGMwLDAt%0D%0ANTg4LjgsMjAwLTYxMi44LTE4czM4OS44LTQ3NC4yLTExMS01MjlDMTAwLjEsMTQ4LjQsMCwwLDAs%0D%0AMHoiLz4KPC9zdmc+Cg=='); margin-top: 140px!important">
             <div class="container">
               <div class="row">
                 <div class="col-12 col-md-8 col-lg-6">
@@ -158,7 +158,6 @@
                     <h3 class="mt-3">Sobre o parceiro</h3>
                     <div class="row align-items-center ">
                       <div class="col-4 ">
-                        <!-- <img alt="image" class="img-fluid rounded-circle" src="https://github.com/froala/design-blocks/blob/2.0.1/dist/imgs/people/8.jpg?raw=true"> -->
                       </div>
 
                       <div class="col-12">
@@ -173,7 +172,6 @@
                     <h3 class="mt-3">Local do evento</h3>
                     <div class="row align-items-center ">
                       <div class="col-4 ">
-                        <!-- <img alt="image" class="img-fluid rounded-circle" src="https://github.com/froala/design-blocks/blob/2.0.1/dist/imgs/people/8.jpg?raw=true"> -->
                       </div>
 
                       <div class="col-12">
@@ -209,279 +207,29 @@
                     <div class="swiper-button-next" slot="button-next"></div>
                   </div>
                   <swiper :options="swiperOption" class="">
-                    <swiper-slide class="p-0">
+                    <swiper-slide class="p-0" v-for="(item, index) in filteredDays" :key='item.HorSessao + item.day'>
                       <div class="c">
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center card__time-active" style="">
+                        <!-- :class="{ 'card__time-active': index == 0 }" -->
+                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center " style="" @click='filteredHours(item.day), selected = item.id_apresentacao' v-bind:class="{'card__time-active':selected == undefined ? selected = item.id_apresentacao : item.id_apresentacao == selected}">
                           <div>
-                            <h3 class="">HOJE</h3>
-                            <p class="lead">Mar 21</p>
+                            <h3 v-if="item.istoday == 1" class="" style="text-transform: uppercase">HOJE</h3>
+                            <h3 v-else-if="item.istomorrow == 1" class="" style="text-transform: uppercase">AMANHÃ</h3>
+                            <h3 v-else class="" style="text-transform: uppercase">{{item.weekdayName }}</h3>
+                            <p class="lead">{{ item.day }}</p>
                           </div>
-                          <i class="icon-active fa fa-caret-down"></i>
+                          <i style="visibility: hidden" class="icon-active fa fa-caret-down"></i>
                           <div>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                    <swiper-slide class="p-0">
-                      <div class="c">
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
-                          <div>
-                            <h3 class="">AMANHÃ</h3>
-                            <p class="lead">Mar 22</p>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                    <swiper-slide class="p-0">
-                      <div class="c">
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
-                          <div>
-                            <h3 class="">QUI</h3>
-                            <p class="lead">Mar 23</p>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                    <swiper-slide class="p-0">
-                      <div class="c">
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
-                          <div>
-                            <h3 class="">🎉SEX</h3>
-                            <p class="lead">Mar 24</p>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                    <swiper-slide class="p-0">
-                      <div class="c">
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
-                          <div>
-                            <h3 class="">SAB</h3>
-                            <p class="lead">Mar 25</p>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                    <swiper-slide class="p-0">
-                      <div class="c">
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
-                          <div>
-                            <h3 class="">DOM</h3>
-                            <p class="lead">Mar 26</p>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                    <swiper-slide class="p-0">
-                      <div class="c">
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
-                          <div>
-                            <h3 class="">SEG</h3>
-                            <p class="lead">Mar 27</p>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                    <swiper-slide class="p-0">
-                      <div class="c">
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
-                          <div>
-                            <h3 class="">TER</h3>
-                            <p class="lead">Mar 28</p>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                    <swiper-slide class="p-0">
-                      <div class="c">
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center" style="">
-                          <div>
-                            <h3 class="">QUA</h3>
-                            <p class="lead">Mar 29</p>
                           </div>
                         </div>
                       </div>
                     </swiper-slide>
                   </swiper>
                   <div class="container__available-times pl-3 row">
-                    <div class="card__hour text-center align-items-center" style="">
+                    <div class="card__hour text-center align-items-center" style="" v-for="(item) in listOfHours" :key='item.HorSessao + item.day'>
                       <div>
                         <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
-                      </div>
-                    </div>
-                    <div class="card__hour text-center align-items-center" style="">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>18:00</h3>
-                        <p class="lead">A partir de R$ 17,00</p>
+                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
+                        <p class="lead">{{item.ValPeca | money }}</p>
                       </div>
                     </div>
 
@@ -578,33 +326,33 @@
                     </div>
                   </div>
 
-                <transition-group name="fade">
-                  <div class="card" v-for="(item) in filtered" :key='item'>
-                    <div class="card-body row">
-                      <div class="col-3 col-md-2 text-center card__date p-0">
-                        <span style="font-size: 12px">
+                  <transition-group name="fade">
+                    <div class="card" v-for="(item) in filtered" :key='item'>
+                      <div class="card-body row">
+                        <div class="col-3 col-md-2 text-center card__date p-0">
+                          <span style="font-size: 12px">
                           {{ item.weekdayName }} 
                         </span>
-                        <br />
-                        <span style="font-weight: bold; font-size: 14px">
+                          <br />
+                          <span style="font-weight: bold; font-size: 14px">
                           {{ item.day }} 
-                        </span> 
-                        <br /> 
-                        <span style="font-size: 12px">
+                        </span>
+                          <br />
+                          <span style="font-size: 12px">
                           {{ item.HorSessao }}
-                        </span> 
-                      </div>
-                      <div class="col-8 col-md-7 card__description" style="border-left: 1px solid #777;padding-left: 15px;">
-                        <span class="">
+                        </span>
+                        </div>
+                        <div class="col-8 col-md-7 card__description" style="border-left: 1px solid #777;padding-left: 15px;">
+                          <span class="">
                         {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} </span> <br> <span class="pt-1">{{ item.ds_municipio }}/{{item.sg_estado}}</span>
+                        </div>
+                        <div class="col-10 col-md-3 card__btn">
+                          <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
+                        </div>
                       </div>
-                      <div class="col-10 col-md-3 card__btn">
-                        <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
-                      </div>
+
                     </div>
-                  
-                  </div>
-                </transition-group>
+                  </transition-group>
                 </div>
               </div>
             </div>
@@ -787,6 +535,7 @@ export default {
       filterByDate: '',
       filterByRoom: 'Todas as opções',
       metaObj: this.metatag_getObj(),
+      selected: undefined,
       event: {
         loaded: false,
         NomPeca: null,
@@ -805,6 +554,8 @@ export default {
         state: null,
         cityBadgeText: null,
       },
+      listOfHours: [],
+      selectedDay: [],
       dates: [],
       salasDisponiveis: [],
       presentantion: [],
@@ -847,7 +598,7 @@ export default {
         navbar.removeClass('navbar-fixed-top');
       }
 
-      if ($window.scrollTop() >= 600) {
+      if ($window.scrollTop() >= 500) {
         $('#btn__comprar').css("opacity", 1 - $(window).scrollTop() / 250);
       } else {
         $('#btn__comprar').css("opacity", 1 + $(window).scrollTop() / 250);
@@ -977,6 +728,8 @@ export default {
               this.dates = response;
               this.dateLoaded = true;
               this.filterByDate = "Datas";
+
+              // console.log('TCL: getDates -> response', response)
               //if (this.dates.length > 0) {
               //  this.filterByDate = this.dates[0].date;
               // }
@@ -994,7 +747,7 @@ export default {
 
       });
     },
-    getPresentation() {
+    getPresentation(callback) {
       this.showWaitAboveAll();
       Vue.nextTick().then(response => {
         eventService.presentation(this.event.id_base, this.event.CodPeca).then(
@@ -1003,6 +756,10 @@ export default {
             if (this.validateJSON(response)) {
               this.presentantion = response;
               this.timeLoaded = true;
+
+              if (callback !== null && callback !== undefined) {
+                callback();
+              }
             }
           },
           error => {
@@ -1048,7 +805,8 @@ export default {
             this.event.state = response.sg_estado;
             this.event.cityBadgeText = response.badge_city_text;
             this.getRooms();
-            this.getPresentation();
+            this.getPresentation(this.fillFirstHour);
+
             this.getDates();
 
             this.metaObj.appName = config.info.siteName;
@@ -1074,7 +832,7 @@ export default {
 
             this.imageLoaded = true;
           }
-          console.log(this.event.description.length);
+
         },
         error => {
           this.processing = false;
@@ -1083,6 +841,43 @@ export default {
         }
       );
     },
+    filteredHours(day) {
+      // debugger
+      // let ret2 = this.presentantion;
+      let hours = this.presentantion.filter(x => x.day == day);
+
+      document.querySelector('.container__available-times').style.opacity = 0;
+
+      this.listOfHours = this.removeDuplicatesBy(x => x.HorSessao, hours);
+
+      setTimeout(function () {
+        document.querySelector('.container__available-times').style.opacity = 1;
+        
+      }, 200);
+
+    },
+    fillFirstHour() {
+      this.selectedDate = this.presentantion[0];
+      console.log(this.presentantion);
+      this.filteredHours(this.selectedDate.day);
+    },
+    removeDuplicatesBy(keyFn, array) {
+      var mySet = new Set();
+      return array.filter(function (x) {
+        var key = keyFn(x).toUpperCase(),
+          isNew = !mySet.has(key);
+        if (isNew) mySet.add(key);
+        return isNew;
+      });
+    },
+    toggleActiveCard(target) {
+      // var a = document.getElementsByClassName('card__time');
+      // Array.from(a).map(x => x.classList.remove('card__time-active'));
+
+      console.log(target)
+      // element.target.classList.add('card__time-active');
+      return;
+    }
   },
   mounted() {
     this.getEvent();
@@ -1107,6 +902,14 @@ export default {
       }
 
       return ret;
+    },
+    filteredDays() {
+      // debugger
+      let ret = this.presentantion;
+
+      // console.log('TCL: filtered -> ret;', ret)
+
+      return this.removeDuplicatesBy(x => x.day, ret);
     },
 
   }

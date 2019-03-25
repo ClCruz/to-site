@@ -809,13 +809,22 @@
 	}
 
 	.card__time-active {
-		background: rgb(240, 247, 254);
-	}
+		background: rgb(228, 236, 255);
+		transition: 0.5s;
 
+		.fa {
+			visibility: visible !important;
+		}
+
+		&:hover {
+			background: rgb(228, 236, 255);
+		}
+	}
 	.container__available-times {
 		margin-top: -10px;
 		border-top: 1px solid #eee;
 		display: flex;
+		transition: 0.6s;
 
 		@include MQ(S) {
 			padding: 0 !important;
@@ -833,12 +842,11 @@
 			margin-top: 10px;
 			border-radius: 4px !important;
 			box-shadow: 0 0px 5px 0 rgba(0, 0, 0, .25);
-			background: rgb(240, 247, 254);
+			background: rgb(228, 236, 255);
+
 			cursor: pointer;
 			justify-content: center;
 			display: flex;
-
-			transition: 0.4s;
 
 			h3 {
 				// border-bottom: 1px solid #ddd;
@@ -871,9 +879,10 @@
 
 	.icon-active {
 		position: absolute;
-		bottom: -18px;
-		text-shadow: 0 1px 0px #999;
-		color: rgb(240, 247, 254);
+		bottom: -16px;
+		text-shadow: 0 3px 0px #ccc;
+		color: rgb(228, 236, 255);
+
 		/* box-shadow: 0 0px 5px 0 rgba(0, 0, 0, .25); */
 		font-size: 30px;
 	}
