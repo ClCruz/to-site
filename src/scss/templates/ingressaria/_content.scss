@@ -387,12 +387,13 @@
 	.vdp-datepicker * {
 		transition: 0.2s;
 	}
+
 	// background: url('/assets/icons/map-pin.svg') no-repeat 5px center !important;
 
 	.swiper-button-prev {
 		background: url('/assets/icons/arrow-left-black.svg') no-repeat 5px !important;
 		fill: black;
-		width: 40px;
+		width: 27px;
 		height: 40px;
 		background-size: contain !important;
 		background-position: left !important;
@@ -409,7 +410,7 @@
 	.swiper-button-next {
 		background: url('/assets/icons/arrow-right-black.svg') no-repeat 5px !important;
 		position: unset !important;
-		width: 40px;
+		width: 27px;
 		height: 40px;
 		background-size: contain !important;
 		background-position: left !important;
@@ -419,6 +420,7 @@
 			transform: translateY(-1px);
 		}
 	}
+
 	.container__arrows {
 		display: flex;
 		margin-top: -20px;
