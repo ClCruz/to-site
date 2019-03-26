@@ -26,7 +26,8 @@
         <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="../assets/icons/log-in.svg" alt=""></span>
 
         <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName">
-          <b-dropdown-item @click="goto('legacy:my_account')">Minha Conta</b-dropdown-item>
+          <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
+          <b-dropdown-item @click="modifyme">Meu cadastro</b-dropdown-item>
           <b-dropdown-item @click="goto('system:logout')">Sair</b-dropdown-item>
         </b-dropdown>
 
@@ -121,7 +122,8 @@
         <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="../assets/icons/log-in.svg" alt=""></span>
 
         <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName">
-          <b-dropdown-item @click="goto('legacy:my_account')">Minha Conta</b-dropdown-item>
+          <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
+          <b-dropdown-item @click="modifyme">Meu cadastro</b-dropdown-item>
           <b-dropdown-item @click="goto('system:logout')">Sair</b-dropdown-item>
         </b-dropdown>
 
@@ -196,7 +198,8 @@
         <template slot="button-content">
           <img src="../assets/icons/user.svg" alt=""><span class="sr-only">Search</span>
         </template>
-        <b-dropdown-item @click="goto('legacy:my_account')">Minha Conta</b-dropdown-item>
+        <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
+        <b-dropdown-item @click="modifyme">Meu cadastro</b-dropdown-item>
         <b-dropdown-item @click="goto('system:logout')">Sair</b-dropdown-item>
       </b-dropdown>
     </div>

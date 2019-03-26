@@ -136,7 +136,7 @@
             <label>Aceito receber propaganda e promoções.</label>
           </div>
         </div>
-        <div class="pretty p-default mt-2" v-bind:class="{ errorcheckboxuser: (!validateinfo.agree) }">
+        <div class="pretty p-default mt-2" v-bind:class="{ errorcheckboxuser: (!validateinfo.agree) }" v-if="form.isnew">
           <input type="checkbox" v-model="form.agree" />
           <div class="state p-success">
             <label>Concordo com os termos do site.</label>
@@ -252,13 +252,62 @@ export default {
   },
   mounted() {
     this.populatedocumenttype();
+    this.loadme();
     if (!this.ls_get("fb_connect")) return false;
 
     let fbinfo = JSON.parse(this.ls_get("fb_connect"));
     this.getFB();
     //var this.ls_get("fb_connect");
+
   },
   methods: {
+    loadme() {
+      if (this.isclientlogged()) {
+        this.showWaitAboveAll();
+        usersiteService.get(this.getloggedtoken()).then(
+          response => {
+            this.hideWaitAboveAll();
+            if (this.validateJSON(response)) {
+              if (response.success) {
+                this.form.isnew = false;
+                this.form.firstname = response.ds_nome;
+                this.form.lastname = response.ds_sobrenome;
+                this.form.gender = response.in_sexo;
+                this.form.birthdate = response.dt_nascimento;
+                this.form.document = response.cd_cpf;
+                this.form.documenttype = '0';
+                this.form.brazilian_rg = response.cd_rg;
+                this.form.phone_ddd = response.ds_ddd_celular;
+                this.form.phone_number = response.ds_celular;
+                this.form.zipcode = response.cd_cep;
+                this.getbyzipcode();
+                //this.form.city_state = 'SP';
+                //this.form.city = '';
+                //this.form.neighborhood = '';
+                //this.form.address = '';
+                this.form.address_number = response.nr_endereco;
+                //this.form.address_number_title = '';
+                this.form.address_more = response.ds_compl_endereco;
+                this.form.login = response.cd_email_login;
+                this.form.login_confirm = response.cd_email_login;
+                //this.form.pass = '123456789';
+                //this.form.pass_confirm = '';
+                this.form.newsletter = response.in_recebe_info;
+                this.form.agree = true;
+                if (response.isfb) {
+                  this.form.canchangeemail = false;
+                }
+              }
+            }
+          },
+          error => {
+            this.processing = false;
+            this.hideWaitAboveAll();
+            this.toastError("Falha na execução.");
+          }
+        );
+      }
+    },
     fakeme() {
       return;
       this.form.firstname = 'Matt';
@@ -472,7 +521,7 @@ export default {
         this.validateinfo.login = false;
       }
 
-      if (this.form.pass.trim().length == 0 && this.form.fb == '') {
+      if (this.form.pass.trim().length == 0 && this.form.fb == '' && !this.isclientlogged()) {
         ret = false;
         this.validateinfo.pass = false;
       }
@@ -515,8 +564,8 @@ export default {
 
       this.processing = true;
       this.$wait.start("inprocess");
-
-      usersiteService.add(this.form.firstname, this.form.lastname, this.form.gender, this.form.birthdate, this.form.document, this.form.documenttype, this.form.brazilian_rg, this.form.phone_ddd, this.form.phone_number, this.form.zipcode, this.form.city_state, this.form.city, this.form.neighborhood, this.form.address, this.form.address_number, this.form.address_more, this.form.login, this.form.pass, this.form.newsletter, this.form.agree, this.form.fb, this.isforeign).then(
+      this.showWaitAboveAll();
+      usersiteService.add(this.form.firstname, this.form.lastname, this.form.gender, this.form.birthdate, this.form.document, this.form.documenttype, this.form.brazilian_rg, this.form.phone_ddd, this.form.phone_number, this.form.zipcode, this.form.city_state, this.form.city, this.form.neighborhood, this.form.address, this.form.address_number, this.form.address_more, this.form.login, this.form.pass, this.form.newsletter, this.form.agree, this.form.fb, this.isforeign, this.getloggedtoken()).then(
         response => {
           this.processing = false;
           this.hideWaitAboveAll();
@@ -609,6 +658,7 @@ export default {
         newsletter: false,
         agree: false,
         fb: '',
+        isnew: true
       },
       facebook: {
         FB: {},

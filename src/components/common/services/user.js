@@ -13,6 +13,7 @@ export const usersiteService = {
   newpass,
   documenttype,
   resetvalidatecode,
+  get,
 }
 
 function documenttype() {    
@@ -37,6 +38,29 @@ function resetvalidatecode(code) {
     
       let obj = {
         code
+      }
+  
+      var ret = new Promise(
+          function (resolve, reject) {
+              Vue.http.post(url, obj, {
+                  emulateJSON: true
+              }).then(res => {
+                  resolve(res.body);
+              }, err => {
+                  reject({
+                      error: true,
+                      msg: err
+                  });
+              });    
+          }
+      );
+      return ret;
+  }
+  function get(token) {
+    let url = config.api + `/v1/user/get`;
+    
+      let obj = {
+        token
       }
   
       var ret = new Promise(
@@ -104,14 +128,14 @@ function newpass(code, pass) {
     return ret;
 }
 
-function add(firstname, lastname, gender, birthdate, document, documenttype, brazilian_rg, phone_ddd, phone_number, zipcode, city_state, city, neighborhood, address, address_number, address_more, login, pass, newsletter, agree, fb, isforeign) {
+function add(firstname, lastname, gender, birthdate, document, documenttype, brazilian_rg, phone_ddd, phone_number, zipcode, city_state, city, neighborhood, address, address_number, address_more, login, pass, newsletter, agree, fb, isforeign, loggedtoken) {
   let url = config.api + `/v1/user/save`;
 
     let isadd = 1;
 
     let obj = {
       firstname, lastname, gender, birthdate, document, documenttype, brazilian_rg, phone_ddd, phone_number, zipcode, city_state, city, neighborhood, address, address_number, address_more, login, pass, newsletter: newsletter ? 1 : 0, agree: agree ? 1 : 0, fb, isforeign: isforeign ? 1 : 0,
-      type: isadd
+      type: isadd, loggedtoken
     }
 
     var ret = new Promise(

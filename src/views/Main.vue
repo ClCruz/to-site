@@ -193,6 +193,27 @@ export default {
       // console.log("modal_close_newuser");
       this.$modal.hide(this.modals.add.name);
     },
+    changeuser() {
+      let clickToClose = true;
+      if (!this.isLogged()) return;
+
+      this.$modal.show(appnewuser, { }, 
+        {
+          draggable: false,
+          name: this.modals.add.name,//'newuser',
+          classes: 'addusermodal',
+          resizable: false,
+          width: 800,
+          adaptive: false,
+          height: "auto",
+          scrollable: true,
+          clickToClose: clickToClose,
+        },
+        {
+          'closed': this.modalnewuserclosed,
+        }
+      );
+    },
     adduser() {
       let clickToClose = true;
       if (this.isLogged()) return;
@@ -220,6 +241,9 @@ export default {
           'closed': this.modalnewuserclosed,
         }
       );
+    },
+    modifyme() {
+      this.changeuser();
     },
     login() {
       let clickToClose = true;
