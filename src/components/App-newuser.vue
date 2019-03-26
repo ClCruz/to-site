@@ -296,6 +296,7 @@ export default {
                 this.form.agree = true;
                 if (response.isfb) {
                   this.form.canchangeemail = false;
+                  this.form.askforpass = false;
                 }
               }
             }
