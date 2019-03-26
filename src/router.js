@@ -92,36 +92,6 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
     },
     {
-      path: '/sac/',
-      name: 'sac',
-      props: true,
-      component: () => import( /* webpackChunkName: "about" */ './views/SAC.vue')
-    },
-    {
-      path: '/vClaudio',
-      name: 'vClaudio',
-      title: 'teste',
-      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
-    },
-    {
-      path: '/itau',
-      name: 'itau',
-      title: 'teste',
-      component: () => import( /* webpackChunkName: "about" */ './views/itau/Home.vue')
-    },
-    {
-      path: '/itau/evento',
-      name: 'itauEvento',
-      title: 'teste',
-      component: () => import( /* webpackChunkName: "about" */ './views/itau/Event.vue')
-    },
-    {
-      path: '/itau/busca',
-      name: 'itauBusca',
-      title: 'teste',
-      component: () => import( /* webpackChunkName: "about" */ './views/itau/Search.vue')
-    },
-    {
       path: '/about',
       name: 'about',
       // route level code-splitting
