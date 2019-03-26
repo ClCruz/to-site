@@ -9,11 +9,6 @@
               <div class="img" style=""></div>
             </router-link>
           </div>
-
-          <!-- <p>2018 - {{companyName}}</p>
-
-          <p> <span>{{companyAddress}}</span></p>
-          <p>CNPJ: {{CNPJ}} </p> -->
         </div>
 
         <div class="col-12 col-md mt-4 mt-sm-0">
@@ -21,44 +16,43 @@
           <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
 
           <br>
-          <a href="#" @click="loadSACPage('company','sobre')">
+          <a href="#" @click="loadSACPage('company','sobre')" v-if="checkSAC[0] != undefined && checkSAC[0].isvisible == 1">
                 Sobre a empresa
             </a>
-        <br>
-        <a href="#" @click="loadSACPage('partner','sejaParceiro')">
+          <br>
+          <a href="#" @click="loadSACPage('partner','sejaParceiro')"  v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">
                 Seja nosso Parceiro
           </a>
         </div>
 
-         
-          <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
-            <h3><strong>Políticas</strong></h3>
+        <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
+          <h3><strong>Políticas</strong></h3>
 
-            <a href="#" @click="loadSACPage('policy','venda')">
+          <a href="#" @click="loadSACPage('policy','venda')" v-if="checkSAC[1] != undefined && checkSAC[1].isvisible == 1">
                 Politica de Venda
             </a>
-            <br>
-            <a href="#" @click="loadSACPage('policy','desconto')">
+          <br>
+          <a href="#" @click="loadSACPage('policy','desconto')" v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
                 Política de Meia Entrada
             </a>
-            <br>
-            <a href="#" @click="loadSACPage('policy','privacidade')">
+          <br>
+          <a href="#" @click="loadSACPage('policy','privacidade')" v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
                 Politica de Privacidade
             </a>
-          </div>
-           <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
-            <h3><strong>Formas de Pagamento</strong></h3>
-            <div class="credit__cards col-10 nopadding p-0">
-              <img src="/assets/images/logo-visa.png" alt="">
-              <img src="/assets/images/logo-mastercard.png" alt="">
-              <img src="/assets/images/logo-amex.png" alt="">
-              <img src="/assets/images/logo-discover.png" alt="">
-              <img src="/assets/images/logo-elo.png" alt="" class="credit__cards-elo">
-              <img src="/assets/images/logo-hipercard.png" class="credit__cards-hipercard" alt="">
-              <img src="/assets/images/logo-diners.png" alt="">
-              <img src="/assets/images/logo-aura.png" alt="" class="credit__cards-aura">
-              <img src="/assets/images/logo-jcb.png" alt="">
-              <img src="/assets/images/logo-boleto.png" alt="">
+        </div>
+        <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
+          <h3><strong>Formas de Pagamento</strong></h3>
+          <div class="credit__cards col-10 nopadding p-0">
+            <img src="/assets/images/logo-visa.png" alt="">
+            <img src="/assets/images/logo-mastercard.png" alt="">
+            <img src="/assets/images/logo-amex.png" alt="">
+            <img src="/assets/images/logo-discover.png" alt="">
+            <img src="/assets/images/logo-elo.png" alt="" class="credit__cards-elo">
+            <img src="/assets/images/logo-hipercard.png" class="credit__cards-hipercard" alt="">
+            <img src="/assets/images/logo-diners.png" alt="">
+            <img src="/assets/images/logo-aura.png" alt="" class="credit__cards-aura">
+            <img src="/assets/images/logo-jcb.png" alt="">
+            <img src="/assets/images/logo-boleto.png" alt="">
 
             </div>
           </div>
@@ -105,10 +99,43 @@ import {
 import {
   func
 } from '@/functions';
+import {
+  staticPageService
+} from "@/components/common/services/static_page.js";
+
 export default {
-  name: "Footer", 
+  name: "Footer",
   computed: {},
   methods: {
+    checkSACPages() {
+      staticPageService.check().then(
+        response => {
+          this.checkSAC = response;
+          // console.log(response);
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getSACContent() {
+      for (var i = 1; i <= 5; i++) {
+        staticPageService.get(i).then(
+      
+          response => {
+            this.getSAC.push(response);
+          },
+          error => {
+            this.hideWaitAboveAll();
+            this.toastError("Falha na execução.");
+          }
+        );
+      }
+            // console.log(this.getSAC);
+
+    },
+
     loadSACPage: function (categoria, pagina) {
       switch (categoria) {
         case "company":
@@ -169,6 +196,8 @@ export default {
 
   data: function () {
     return {
+      getSAC: [],
+      checkSAC: [],
       siteName: config.info.siteName,
       CNPJ: config.info.CNPJ,
       companyName: config.info.companyName,
@@ -221,7 +250,13 @@ export default {
       ]
     }
   },
-  created() {},
+  mounted() {
+     this.$nextTick(() => {
+       this.checkSACPages();
+        //this.$refs.slick.reSlick();
+      });
+    // this.getSACContent();
+  },
 };
 </script>
 

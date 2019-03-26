@@ -15,44 +15,9 @@
 
                 <div class="content__description">
                   <div class="card event__card sac__card">
-                    <h3 class="title__page">Política de Meia Entrada</h3>
-
-                    <p>
-                      Durante o segundo semestre de 2013 foram aprovadas as leis 12.852 e 12.933, que
-                      regulam a meia-entrada no Brasil. São leis que tratam do direito ao estudante, idosos,
-                      jovens de baixa renda e deficientes de pagar metade do valor em shows, filmes, peças de
-                      teatro, e qualquer evento de natureza cultural ou esportiva.
-                      Segundo o texto, que regulamenta a lei aprovada em dezembro de 2013, o benefício
-                      prevê a reserva de pelo menos 40% dos ingressos de meia-entrada em espetáculos
-                      artísticos, culturais e esportivos.
-                    </p>
-                    <p>
-                      Estudantes
-                      <br>
-A partir de agora, só serão aceitas carteiras estudantis emitidas pela União Nacional do
-Estudantes (UNE), União Brasileira dos Estudantes (Ubes), escolas estaduais e
-municipais filiadas às duas entidades, Diretórios Centrais dos Estudantes (DCEs) e
-instituições de ensino médio e superior. O objetivo é padronizar o documento, aumentar a
-fiscalização e evitar possíveis fraudes. Conter nome completo, data de nascimento, grau
-de escolaridade, foto atual, nome da instituição, matrícula ativa, data de validade ao dia
-31 de Março do ano subsequente ao de expedição.
-</p>
-                      <p>
-                        JOVENS DE BAIXA RENDA
-                        <br>
-Os jovens de baixa renda também terão direito à meia-entrada com a apresentação da
-chamada Identidade Jovem, documento que será emitido pela Secretaria Nacional da
-Juventude.
-</p>
-                        <p>
-                          IDOSOS OU NECESSIDADES ESPECIAIS
-                          <br>
-O texto concede às pessoas com 60 (sessenta) anos ou mais também o benefício da
-meia-entrada. Já as pessoas com deficiência, podem apresentar o cartão de Benefício de
-Prestação Continuada da assistência Social ou documento emitido pelo Instituto Nacional
-de Seguro Social (INSS). Quando a pessoa com deficiência precisar de acompanhante,
-este também terá direito ao ingresso com a metade do preço.
-</p>
+                   <h3 class="title__page">{{pageData.title}}</h3>
+                    <span v-html="pageData.content">
+                    </span>
                   </div>
                 </div>
               </div>
@@ -83,45 +48,10 @@ este também terá direito ao ingresso com a metade do preço.
           <!-- SAC Index -->
           <sacInfo></sacInfo>
 
-          <div class="col-12 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
-               <h3 class="title__page">Política de Meia Entrada</h3>
-
-                    <p class="lead">
-                      Durante o segundo semestre de 2013 foram aprovadas as leis 12.852 e 12.933, que
-                      regulam a meia-entrada no Brasil. São leis que tratam do direito ao estudante, idosos,
-                      jovens de baixa renda e deficientes de pagar metade do valor em shows, filmes, peças de
-                      teatro, e qualquer evento de natureza cultural ou esportiva.
-                      Segundo o texto, que regulamenta a lei aprovada em dezembro de 2013, o benefício
-                      prevê a reserva de pelo menos 40% dos ingressos de meia-entrada em espetáculos
-                      artísticos, culturais e esportivos.
-                    </p>
-                    <p class="lead">
-                      Estudantes
-                      <br>
-A partir de agora, só serão aceitas carteiras estudantis emitidas pela União Nacional do
-Estudantes (UNE), União Brasileira dos Estudantes (Ubes), escolas estaduais e
-municipais filiadas às duas entidades, Diretórios Centrais dos Estudantes (DCEs) e
-instituições de ensino médio e superior. O objetivo é padronizar o documento, aumentar a
-fiscalização e evitar possíveis fraudes. Conter nome completo, data de nascimento, grau
-de escolaridade, foto atual, nome da instituição, matrícula ativa, data de validade ao dia
-31 de Março do ano subsequente ao de expedição.
-</p>
-                      <p class="lead">
-                        JOVENS DE BAIXA RENDA
-                        <br>
-Os jovens de baixa renda também terão direito à meia-entrada com a apresentação da
-chamada Identidade Jovem, documento que será emitido pela Secretaria Nacional da
-Juventude.
-</p>
-                        <p class="lead">
-                          IDOSOS OU NECESSIDADES ESPECIAIS
-                          <br>
-O texto concede às pessoas com 60 (sessenta) anos ou mais também o benefício da
-meia-entrada. Já as pessoas com deficiência, podem apresentar o cartão de Benefício de
-Prestação Continuada da assistência Social ou documento emitido pelo Instituto Nacional
-de Seguro Social (INSS). Quando a pessoa com deficiência precisar de acompanhante,
-este também terá direito ao ingresso com a metade do preço.
-</p>
+          <div class="col-12   col-md-7 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
+              <h3 class="title__page">{{pageData.title}}</h3>
+                    <span v-html="pageData.content">
+                    </span>
           </div>
         </div>
       </div>
@@ -156,44 +86,9 @@ este também terá direito ao ingresso com a metade do preço.
 
                 <div class="content__description">
                   <div class="card event__card sac__card">
-                    <h3 class="title__page">Política de Meia Entrada</h3>
-
-                    <p>
-                      Durante o segundo semestre de 2013 foram aprovadas as leis 12.852 e 12.933, que
-                      regulam a meia-entrada no Brasil. São leis que tratam do direito ao estudante, idosos,
-                      jovens de baixa renda e deficientes de pagar metade do valor em shows, filmes, peças de
-                      teatro, e qualquer evento de natureza cultural ou esportiva.
-                      Segundo o texto, que regulamenta a lei aprovada em dezembro de 2013, o benefício
-                      prevê a reserva de pelo menos 40% dos ingressos de meia-entrada em espetáculos
-                      artísticos, culturais e esportivos.
-                    </p>
-                    <p>
-                      Estudantes
-                      <br>
-A partir de agora, só serão aceitas carteiras estudantis emitidas pela União Nacional do
-Estudantes (UNE), União Brasileira dos Estudantes (Ubes), escolas estaduais e
-municipais filiadas às duas entidades, Diretórios Centrais dos Estudantes (DCEs) e
-instituições de ensino médio e superior. O objetivo é padronizar o documento, aumentar a
-fiscalização e evitar possíveis fraudes. Conter nome completo, data de nascimento, grau
-de escolaridade, foto atual, nome da instituição, matrícula ativa, data de validade ao dia
-31 de Março do ano subsequente ao de expedição.
-</p>
-                      <p>
-                        JOVENS DE BAIXA RENDA
-                        <br>
-Os jovens de baixa renda também terão direito à meia-entrada com a apresentação da
-chamada Identidade Jovem, documento que será emitido pela Secretaria Nacional da
-Juventude.
-</p>
-                        <p>
-                          IDOSOS OU NECESSIDADES ESPECIAIS
-                          <br>
-O texto concede às pessoas com 60 (sessenta) anos ou mais também o benefício da
-meia-entrada. Já as pessoas com deficiência, podem apresentar o cartão de Benefício de
-Prestação Continuada da assistência Social ou documento emitido pelo Instituto Nacional
-de Seguro Social (INSS). Quando a pessoa com deficiência precisar de acompanhante,
-este também terá direito ao ingresso com a metade do preço.
-</p>
+                   <h3 class="title__page">{{pageData.title}}</h3>
+                    <span v-html="pageData.content">
+                    </span>
                   </div>
                 </div>
               </div>
@@ -219,7 +114,9 @@ import {
   func
 } from "@/functions";
 import BootstrapVue from "bootstrap-vue";
-
+import {
+  staticPageService
+} from "@/components/common/services/static_page.js";
 Vue.use(BootstrapVue);
 Vue.use(VueHead);
 Vue.use(VueResource);
@@ -344,12 +241,27 @@ export default {
       newTemplate: true,
       metaObj: this.metatag_getObj(),
       siteName: config.info.siteName,
+      pageData: [],
     };
   },
   mounted() {
     this.createMetaObj();
   },
   methods: {
+
+    getSACContent() {
+        staticPageService.get(3).then(
+      
+          response => {
+            this.pageData = response;
+            console.log(this.pageData);
+          },
+          error => {
+            this.hideWaitAboveAll();
+            this.toastError("Falha na execução.");
+          }
+        );
+    },
     createMetaObj() {
       this.metaObj.appName = config.info.siteName;
       this.metaObj.description = config.info.meta_description;
@@ -374,7 +286,9 @@ export default {
     },
 
   },
-  created() {}
+  created() {
+    this.getSACContent();
+  },
 };
 </script>
 

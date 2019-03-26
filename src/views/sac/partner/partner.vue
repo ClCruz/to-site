@@ -15,13 +15,9 @@
 
                 <div class="content__description">
                   <div class="card event__card sac__card">
-                    <h3 class="title__page">Seja nosso parceiro</h3>
-                    <p>
-                      Caso você tenha interesse em fazer novos negócios com a {{siteName}}, por favor preencha
-                      todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
-                      Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
-                      equipe retornará o contato em até 4 dias úteis.
-                    </p>
+                  <h3 class="title__page">{{pageData.title}}</h3>
+                    <span v-html="pageData.content">
+                    </span>
                   </div>
                 </div>
               </div>
@@ -52,14 +48,10 @@
           <!-- SAC Index -->
           <sacInfo></sacInfo>
 
-          <div class="col-12 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
-            <h3 class="title__page">Seja nosso parceiro</h3>
-            <p class="lead">
-              Caso você tenha interesse em fazer novos negócios com a {{siteName}}, por favor preencha
-              todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
-              Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
-              equipe retornará o contato em até 4 dias úteis.
-            </p>
+          <div class="col-12 col-md-7 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
+            <h3 class="title__page">{{pageData.title}}</h3>
+                    <span v-html="pageData.content">
+                    </span>
           </div>
         </div>
       </div>
@@ -94,13 +86,9 @@
 
                 <div class="content__description">
                   <div class="card event__card sac__card">
-                    <h3 class="title__page">Seja nosso parceiro</h3>
-                    <p>
-                      Caso você tenha interesse em fazer novos negócios com a {{siteName}}, por favor preencha
-                      todas as informações do formulário abaixo. Este é um canal exclusivo da área comercial.
-                      Para falar sobre dúvidas, solicitações e reclamações, por favor, clique aqui e nossa
-                      equipe retornará o contato em até 4 dias úteis.
-                    </p>
+                   <h3 class="title__page">{{pageData.title}}</h3>
+                    <span v-html="pageData.content">
+                    </span>
                   </div>
                 </div>
               </div>
@@ -126,7 +114,9 @@ import {
   func
 } from "@/functions";
 import BootstrapVue from "bootstrap-vue";
-
+import {
+  staticPageService
+} from "@/components/common/services/static_page.js";
 Vue.use(BootstrapVue);
 Vue.use(VueHead);
 Vue.use(VueResource);
@@ -251,12 +241,27 @@ export default {
       newTemplate: true,
       metaObj: this.metatag_getObj(),
       siteName: config.info.siteName,
+      pageData: [],
     };
   },
   mounted() {
     this.createMetaObj();
   },
   methods: {
+
+    getSACContent() {
+        staticPageService.get(5).then(
+      
+          response => {
+            this.pageData = response;
+            console.log(this.pageData);
+          },
+          error => {
+            this.hideWaitAboveAll();
+            this.toastError("Falha na execução.");
+          }
+        );
+    },
     createMetaObj() {
       this.metaObj.appName = config.info.siteName;
       this.metaObj.description = config.info.meta_description;
@@ -281,8 +286,9 @@ export default {
     },
 
   },
-  created() {}
-};
+created() {
+    this.getSACContent();
+  },};
 </script>
 
 <style lang="scss">

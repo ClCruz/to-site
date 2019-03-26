@@ -15,17 +15,9 @@
 
                 <div class="content__description">
                   <div class="card event__card sac__card">
-                    <h3 class="title__page">Sobre a {{siteName}}</h3>
-                    <p>
-                      Somos uma empresa feita por gente apaixonada por entretenimento. Por isso,
-                      queremos compartilhar esse amor com outras pessoas que também sabem se divertir.
-                    </p>
-                    <p>
-                      Nossa história vem com alguns colaboradores que através dos anos foram pioneiros
-                      em venda de ingressos para teatros, shows, partidas de futebol e que agora se encontram em
-                      um lugar novo e diferenciado, com muita tecnologia e inovação para oferecer o melhor do
-                      entretenimento para você.
-                    </p>
+                     <h3 class="title__page">{{pageData.title}}</h3>
+                    <span v-html="pageData.content">
+                    </span>
                   </div>
                 </div>
               </div>
@@ -56,18 +48,10 @@
           <!-- SAC Index -->
           <sacInfo></sacInfo>
 
-          <div class="col-12 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
-            <h3 class="title__page">Sobre a {{siteName}}</h3>
-            <p class="lead">
-              Somos uma empresa feita por gente apaixonada por entretenimento. Por isso,
-              queremos compartilhar esse amor com outras pessoas que também sabem se divertir.
-            </p>
-            <p class="lead">
-              Nossa história vem com alguns colaboradores que através dos anos foram pioneiros
-              em venda de ingressos para teatros, shows, partidas de futebol e que agora se encontram em
-              um lugar novo e diferenciado, com muita tecnologia e inovação para oferecer o melhor do
-              entretenimento para você.
-            </p>
+          <div class="col-12 col-md-7 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
+            <h3 class="title__page">{{pageData.title}}</h3>
+            <span v-html="pageData.content">
+            </span>
           </div>
         </div>
       </div>
@@ -102,17 +86,9 @@
 
                 <div class="content__description">
                   <div class="card event__card sac__card">
-                    <h3 class="title__page">Sobre a {{siteName}}</h3>
-                    <p>
-                      Somos uma empresa feita por gente apaixonada por entretenimento. Por isso,
-                      queremos compartilhar esse amor com outras pessoas que também sabem se divertir.
-                    </p>
-                    <p>
-                      Nossa história vem com alguns colaboradores que através dos anos foram pioneiros
-                      em venda de ingressos para teatros, shows, partidas de futebol e que agora se encontram em
-                      um lugar novo e diferenciado, com muita tecnologia e inovação para oferecer o melhor do
-                      entretenimento para você.
-                    </p>
+                    <h3 class="title__page">{{pageData.title}}</h3>
+                    <span v-html="pageData.content">
+                    </span>
                   </div>
                 </div>
               </div>
@@ -138,6 +114,9 @@ import {
   func
 } from "@/functions";
 import BootstrapVue from "bootstrap-vue";
+import {
+  staticPageService
+} from "@/components/common/services/static_page.js";
 
 Vue.use(BootstrapVue);
 Vue.use(VueHead);
@@ -150,6 +129,9 @@ export default {
     Logo,
     SacInfo,
     AppSearch
+  },
+  created() {
+    this.getSACContent();
   },
   head: {
     title: function () {
@@ -263,12 +245,27 @@ export default {
       newTemplate: true,
       metaObj: this.metatag_getObj(),
       siteName: config.info.siteName,
+      pageData: [],
     };
   },
   mounted() {
     this.createMetaObj();
   },
   methods: {
+
+    getSACContent() {
+        staticPageService.get(1).then(
+      
+          response => {
+            this.pageData = response;
+            console.log(this.pageData);
+          },
+          error => {
+            this.hideWaitAboveAll();
+            this.toastError("Falha na execução.");
+          }
+        );
+    },
     createMetaObj() {
       this.metaObj.appName = config.info.siteName;
       this.metaObj.description = config.info.meta_description;
@@ -292,8 +289,7 @@ export default {
 
     },
 
-  },
-  created() {}
+  }
 };
 </script>
 

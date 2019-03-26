@@ -6,7 +6,7 @@ Vue.use(VueResource);
 
 config.setapikey();
 
-export const staticpageService = {
+export const staticPageService = {
   check,
   get,
 }
