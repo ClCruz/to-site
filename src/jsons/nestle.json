@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.ingressosnestle.tk",
+  "uri": "https://www.ingressosnestle.tk",
+  "api": "https://api.ingressosnestle.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.ingressosnestle.tk",
+  "admin": "https://admin.ingressosnestle.tk",
+  "apikey": "live_5179d9a7a34e40788f314219c3ad6694623979d112dc40549af9c644b02b94a4",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/nestle/main.scss",
+  "css": "/stylesheets/themes/www.ingressosnestle.tk/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-nestle.png",
+  "favico": "/img/nestle/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Ingressos para os eventos da Nestlé",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Ingressos Nestlé",
+    "description": "Ingressos para os eventos da Nestlé",
+    "siteName": "www.ingressosnestle.tk",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "",
+    "companyName": "Nestlé Brasil"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_nestle/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_nestle/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_nestle/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_nestle/emailComprador.html",
+      "gift": "../comprar/templates/multi_nestle/emailPresente.html",
+      "signature": "../comprar/templates/multi_nestle/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_nestle/confirmacaoEmail.html"
+
+    }
+  }
+}

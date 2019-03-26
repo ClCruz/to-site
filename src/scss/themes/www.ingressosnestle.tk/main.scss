@@ -1,0 +1,68 @@
+@import "settings.scss";
+@import "../../main.scss";
+@import "override.scss";
+@import "../../to-framework/main.scss";
+
+header.bg-dark {
+	// background-color: rgb(202, 8, 19) !important;
+	background-color: #6eb8e8 !important;
+}
+.header__logo .img {
+	height: 69px;
+	width: 130% !important;
+}
+
+.bg-dark {
+	background-color: $secondary !important;
+}
+
+$gradiente: $secundary !important;
+
+.swal2-progresscircle {
+	background: $secundary !important;
+}
+
+.swal2-styled {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $secundary !important;
+	border: none;
+	color: white;
+	transition: 0.5s;
+
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
+	}
+}
+
+.header__signin {
+	color: #333;
+}
+
+footer.bg-dark {
+	background-color: #f2f1f0 !important;
+	color: #6bcaff !important;
+}
+
+footer a,
+footer p {
+	color: #6bcaff !important;
+}
+
+.team-1,
+.features,
+#section__slider {
+}
+
+footer.bg-dark a {
+	color: #6bcaff !important;
+}
+
+.footer__logo .img {
+	background-image: url('https://www.nestle.com.br/comvoce/Content/img/logo-nestle-footer.png') !important;
+	background-repeat: no-repeat !important;
+}
