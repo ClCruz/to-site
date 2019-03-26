@@ -5,18 +5,46 @@
 
 header.bg-dark {
 	// background-color: rgb(202, 8, 19) !important;
-	background-color: rgb(255, 255, 255) !important;
+	// background-color: rgb(255, 255, 255) !important;
 }
 .header__logo .img {
 	height: 55px;
 	width: 100%;
 }
 
-.bg-dark {
-	background-color: $secundary !important;
+// footer.bg-dark {
+// 	background-color: rgb(255, 255, 255) !important;
+// 	color: black !important;
+// }
+
+// footer a,
+// footer p {
+// 	color: black !important;
+// }
+
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
 }
 
+// footer.bg-dark a {
+// 	color: black !important;
+// }
+
+// footer .img {
+// 	// background: #fff;
+// 	// background-position: center !important;
+// 	// border-radius: 2px;
+// }
+
 $gradiente: $secundary !important;
+
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+	background-position: left center;
+}
 
 .swal2-progresscircle {
 	background: $secundary !important;
@@ -39,6 +67,6 @@ $gradiente: $secundary !important;
 	}
 }
 
-.header__signin {
-	color: #333;
+#ddown1 button {
+	color: black !important;
 }
