@@ -45,7 +45,8 @@
       <div class="row">
         <div class="col-12 col-xl-12 text-left">
           <div class="p-3">
-            <div class="img-fluid rounded-0 ad" style="">
+            <div class="img-fluid rounded-0 ad">
+              <!-- style="{ backgroundImage: 'url(\'' + item.img + '\')' }" -->
             </div>
           </div>
         </div>
@@ -153,6 +154,7 @@ export default {
     return {
       slideLoaded: false,
       genreListLoaded: false,
+      discovery: [],
       slideData: [],
       ptBR: ptBR,
       format: "yyyy MM dd",
@@ -380,6 +382,16 @@ export default {
         },
         error => {
           this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getDiscovery() {
+      discoveryService.list().then(
+        response => {
+          this.discovery = response;
+        },
+        error => {
           this.toastError("Falha na execução.");
         }
       );

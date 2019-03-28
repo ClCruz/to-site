@@ -134,6 +134,7 @@ export default {
   data() {
     return {
       slideLoaded: false,
+      discovery: [],
       slideData: [],
       cityList: [],
       localsList: [],
@@ -263,6 +264,16 @@ export default {
         },
         error => {
           this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getDiscovery() {
+      discoveryService.list().then(
+        response => {
+          this.discovery = response;
+        },
+        error => {
           this.toastError("Falha na execução.");
         }
       );
