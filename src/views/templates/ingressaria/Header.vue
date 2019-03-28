@@ -1,10 +1,10 @@
 <template>
-<div class="a" :class="{ eventHeader: ['event'].indexOf($route.name) > -1 }"> 
+<div class="a" :class="{ eventHeader: ['event'].indexOf($route.name) > -1 }">
   <div class="header">
     <!-- header das paginas (menos evento) -->
     <header id="navbar" class="bg-dark" data-block-type="headers" data-id="2">
       <div class="container">
-        <nav  class="navbar navbar-expand-md no-gutters">
+        <nav class="navbar navbar-expand-md no-gutters">
           <div class="header__logo col-2 text-left">
             <router-link to="/">
               <div class="img"></div>
@@ -15,9 +15,33 @@
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
 
-          <div class="collapse navbar-collapse justify-content-center col-md-8" id="navbarNav12">
+          <div class="collapse navbar-collapse col-md-8">
+            <div class="nav__links navbar-nav ml-auto">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <router-link class="nav-link" to="/busca/genero/TEATRO">Teatro
+                  </router-link>
+                </li>
+                <li class="nav-item">
+
+                  <router-link class="nav-link" to="/busca/genero/Show">Shows
+                  </router-link>
+                </li>
+                <!-- <li class="nav-item">
+                  <router-link class="nav-link" to="/busca/genero/Musical">Musicais
+                  </router-link>
+                </li> -->
+                <li class="nav-item">
+                  <router-link class="nav-link" to="/busca/genero/Infantil">Infantil
+                  </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link class="nav-link" to="/sac/empresa/sobre">Ajuda
+                  </router-link>
+                </li>
+              </ul>
+            </div>
             <app-search class="header__search"></app-search>
           </div>
 
