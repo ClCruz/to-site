@@ -173,16 +173,20 @@
                   </div> -->
                   <!-- Local do evento -->
                   <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
+                    <LineLoader v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true"></LineLoader>
+                    <span v-else>
                     <h3 class="mt-3">Local do evento</h3>
                     <div class="row align-items-center ">
                       <div class="col-4 ">
                       </div>
 
                       <div class="col-12">
+                        
                         <p class="lead">{{this.event.address}}</p>
                         <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-map"></i>Ver mapa</a>
                       </div>
                     </div>
+                      </span>
                   </div>
 
                   <!-- Horários -->
@@ -380,6 +384,7 @@ import $ from "jquery";
 import EventTimeLoader from '@/components/loaders/EventTimeLoader.vue';
 import EventTitleLoader from '@/components/loaders/EventTitleLoader.vue';
 import EventRoomLoader from '@/components/loaders/EventRoomLoader.vue';
+import LineLoader from '@/components/loaders/LineLoader.vue';
 import EventImageLoader from '@/components/loaders/EventImageLoader.vue';
 import EventImageIngressariaLoader from '@/components/loaders/EventImageIngressariaLoader.vue';
 import AppSearch from "@/components/App-search.vue";
@@ -411,6 +416,7 @@ export default {
     EventRoomLoader,
     EventImageLoader,
     EventImageIngressariaLoader,
+    LineLoader,
     AppSearch
   },
   head: {
@@ -873,7 +879,7 @@ export default {
       let hours = this.presentantion.filter(x => x.day == day);
 
       document.querySelector('.container__available-times').style.opacity = 0;
-
+      console.log(hours);
       this.listOfHours = this.removeDuplicatesBy(x => x.HorSessao, hours);
 
       setTimeout(function () {

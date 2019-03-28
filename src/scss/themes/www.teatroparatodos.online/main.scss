@@ -3,20 +3,181 @@
 @import "override.scss";
 @import "../../to-framework/main.scss";
 
+// header.bg-dark {
+// 	// background-color: rgb(202, 8, 19) !important;
+// 	// background-color: rgb(255, 255, 255) !important;
+// }
+// .header__logo .img {
+// 	height: 55px;
+// 	width: 100%;
+// }
+
+// // footer.bg-dark {
+// // 	background-color: rgb(255, 255, 255) !important;
+// // 	color: black !important;
+// // }
+
+// // footer a,
+// // footer p {
+// // 	color: black !important;
+// // }
+
+// .team-1,
+// .features,
+// #section__slider,
+// .container__select {
+// 	background: #111 !important;
+// 	border: none !important;
+// }
+
+// .vdp-datepicker .input-group > .form-control,
+// .vdp-datepicker .input-group > .custom-select,
+// .vdp-datepicker .input-group > .custom-file,
+// .vdb-datepicker input::placeholder {
+// 	color: white !important;
+// }
+
+// .container > h3 {
+// 	color: white !important;
+// }
+
+// .container > p {
+// 	color: white !important;
+// }
+// .a .col-sm-12 h3 {
+// 	color: white !important;
+// }
+
+// .a .col-sm-12 p {
+// 	color: white !important;
+// }
+
+// // footer.bg-dark a {
+// // 	color: black !important;
+// // }
+
+// // footer .img {
+// // 	// background: #fff;
+// // 	// background-position: center !important;
+// // 	// border-radius: 2px;
+// // }
+
+// $gradiente: $secundary !important;
+
+// .header__logo .img {
+// 	height: 55px;
+// 	width: 100%;
+// 	background-position: left center;
+// }
+
+// .swal2-progresscircle {
+// 	background: $secundary !important;
+// }
+
+// .swal2-styled {
+// 	font-size: 0.8rem;
+// 	padding-left: 20px;
+// 	padding-right: 20px;
+// 	margin-top: 5px;
+// 	background: $secundary !important;
+// 	border: none;
+// 	color: white;
+// 	transition: 0.5s;
+
+// 	&:hover {
+// 		-webkit-transform: translateY(-2px);
+// 		transform: translateY(-2px);
+// 		@include box-shadow();
+// 	}
+// }
+
+// #ddown1 button {
+// 	color: black !important;
+// }
+
+// .bg-dark {
+// 	background-color: #2b2b2b !important;
+// 	border-bottom: 1px solid #111;
+// }
+
+// .bg__main {
+// 	background: #222 !important;
+// }
+
+// header.bg-dark {
+// 	background: #2b2b2b !important;
+// }
+
+// .bg__main * {
+// 	color: white !important;
+// }
+
+// .a .to-block .to-box {
+// 	background: #2b2b2b;
+// 	p,
+// 	h4,
+// 	.event__item-date,
+// 	.event__item-local {
+// 		filter: brightness(0) invert(1);
+// 		color: white !important;
+// 	}
+
+// 	&:hover {
+// 		box-shadow: none !important;
+// 	}
+// }
+
+// .select__city {
+// 	border-right: 1px solid #222 !important;
+// }
+
+// .container__select {
+// 	padding: 4px;
+// 	border-bottom: 1px solid #222 !important;
+// }
+
 header.bg-dark {
 	// background-color: rgb(202, 8, 19) !important;
-	background-color: rgb(255, 255, 255) !important;
+	// background-color: rgb(255, 255, 255) !important;
 }
 .header__logo .img {
 	height: 55px;
 	width: 100%;
 }
 
-.bg-dark {
-	background-color: $secundary !important;
+// footer.bg-dark {
+// 	background-color: rgb(255, 255, 255) !important;
+// 	color: black !important;
+// }
+
+// footer a,
+// footer p {
+// 	color: black !important;
+// }
+
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
 }
 
+// footer.bg-dark a {
+// 	color: black !important;
+// }
+
+// footer .img {
+// 	// background: #fff;
+// 	// background-position: center !important;
+// 	// border-radius: 2px;
+// }
+
 $gradiente: $secundary !important;
+
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+	background-position: left center;
+}
 
 .swal2-progresscircle {
 	background: $secundary !important;
@@ -39,6 +200,20 @@ $gradiente: $secundary !important;
 	}
 }
 
-.header__signin {
-	color: #333;
+#ddown1 button {
+	color: black !important;
+}
+
+.navbar-fixed-top .to-btn {
+	color: #fff !important;
+}
+
+.bg__main {
+	background: #222 !important;
+}
+
+header.bg-dark,
+footer.bg-dark {
+	background: #333 !important;
+	border-bottom: 1px solid #111;
 }

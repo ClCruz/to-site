@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/teatroparatodosonline/main.scss",
   "css": "/stylesheets/themes/www.teatroparatodos.online/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-teatroparatodosonline.jpeg",
   "favico": "/img/teatroparatodosonline/",
   "videos": {

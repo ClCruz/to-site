@@ -60,7 +60,10 @@
           <h3 class="">Explore nossos eventos</h3>
         </div>
 
-        <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container" style="" v-for="(item, index) in genreList" :key='index'>
+        <div class="col-12 p-0 mt-2 pt-2" style="" v-if="!genreListLoaded">
+          <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
+        </div>
+        <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container" style="" v-for="(item, index) in genreList" :key='index' v-else>
           <p>
             <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
               <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
@@ -97,20 +100,6 @@
     </div>
   </div>
 
-   <!-- Propaganda -->
-  <div class="container-fluid container__select mobile__only">
-    <div class="container p-0">
-      <div class="row">
-        <div class="col-12 col-xl-12 text-left">
-          <div class="p-3">
-            <div class="img-fluid rounded-0 ad" style="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <section class="to-block team-1 mt-0 pt-0">
     <div class="container">
       <div class="row row__events">
@@ -139,8 +128,9 @@ import {
 
 import AppSearch from "@/components/App-search.vue";
 import config from '@/config';
-import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
-import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
+// import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
+import GenreFeaturesLoader from '@/components/loaders/GenreFeaturesLoader.vue';
+// import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
 
 import CardEvent from "@/components/Card-event.vue";
 import CardGenreList from "@/components/Card-genreList.vue";
@@ -162,6 +152,7 @@ export default {
   data() {
     return {
       slideLoaded: false,
+      genreListLoaded: false,
       slideData: [],
       ptBR: ptBR,
       format: "yyyy MM dd",
@@ -210,10 +201,11 @@ export default {
   components: {
     ModelSelect,
     AppSearch,
-    CarrouselLoader,
-    CarrouselTextLoader,
+    // CarrouselLoader,
+    // CarrouselTextLoader,
     CardEvent,
     BannerSlide,
+    GenreFeaturesLoader,
     CardGenreList,
     CardCityList,
     Datepicker
@@ -357,6 +349,8 @@ export default {
     },
     getGenreList() {
       this.genreList = this.removeDuplicatesBy(x => x.genreName, this.slideData).slice(0, 6);
+
+      this.genreListLoaded = true;
     },
     getLocalsList() {
       this.localsList = this.removeDuplicatesBy(x => x.ds_nome_teatro, this.slideData);
