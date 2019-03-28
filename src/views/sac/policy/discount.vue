@@ -9,7 +9,7 @@
           <sacInfo></sacInfo>
 
           <!-- Show SAC content -->
-          <div class="col-md-6">
+          <div class="col-md-9">
             <div class="row">
               <div class="col-md-12">
 
@@ -80,7 +80,7 @@
           <sacInfo></sacInfo>
 
           <!-- Show SAC content -->
-          <div class="col-md-6">
+          <div class="col-md-9">
             <div class="row">
               <div class="col-md-12">
 
@@ -250,7 +250,7 @@ export default {
   methods: {
 
     getSACContent() {
-        staticPageService.get(3).then(
+        staticPageService.get(4).then(
       
           response => {
             this.pageData = response;

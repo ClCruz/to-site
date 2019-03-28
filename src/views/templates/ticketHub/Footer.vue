@@ -13,32 +13,42 @@
 
         <div class="col-12 col-md mt-4 mt-sm-0">
           <h3><strong>Institucional</strong></h3>
-          <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
-
-          <br>
-          <a href="#" @click="loadSACPage('company','sobre')" v-if="checkSAC[0] != undefined && checkSAC[0].isvisible == 1">
-                Sobre a empresa
+          <template>
+            <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
+            <br>
+          </template>
+          <template v-if="checkSAC[0] != undefined && checkSAC[0].isvisible == 1">
+            <a href="#" @click="loadSACPage('company','sobre')">
+                  Sobre a empresa
             </a>
-          <br>
-          <a href="#" @click="loadSACPage('partner','sejaParceiro')"  v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">
-                Seja nosso Parceiro
-          </a>
+            <br>
+          </template>
+          <template v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">
+            <a href="#" @click="loadSACPage('partner','sejaParceiro')">
+                  Seja nosso Parceiro
+            </a>
+          </template>
         </div>
 
         <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
           <h3><strong>Políticas</strong></h3>
-
-          <a href="#" @click="loadSACPage('policy','venda')" v-if="checkSAC[1] != undefined && checkSAC[1].isvisible == 1">
-                Politica de Venda
+          <template v-if="checkSAC[1] != undefined && checkSAC[1].isvisible == 1">
+            <a href="#" @click="loadSACPage('policy','venda')">
+                  Politica de Venda
             </a>
-          <br>
-          <a href="#" @click="loadSACPage('policy','desconto')" v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
-                Política de Meia Entrada
+            <br>
+          </template>
+          <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
+            <a href="#" @click="loadSACPage('policy','desconto')">
+                  Política de Meia Entrada
             </a>
-          <br>
-          <a href="#" @click="loadSACPage('policy','privacidade')" v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
-                Politica de Privacidade
+            <br>
+          </template>
+          <template v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
+            <a href="#" @click="loadSACPage('policy','privacidade')">
+                  Politica de Privacidade
             </a>
+          </template>
         </div>
         <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
           <h3><strong>Formas de Pagamento</strong></h3>

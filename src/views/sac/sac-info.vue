@@ -1,29 +1,29 @@
 <template>
-<div class="col-md-6" v-if="template != 'ingressaria'">
+<div class="col-md-3" v-if="template != 'ingressaria'">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
 
       <div class="content__description content__sac">
         <div class="card event__card sac__card">
           <h3 class="title__page">SAC</h3>
 
-          <p>Institucional</p>
+          <p v-if="checkSAC[0] != undefined && checkSAC[0].isvisible == 1">Institucional</p>
           <b-link href="#" @click="loadSACPage('company','sobre')" v-if="checkSAC[0] != undefined && checkSAC[0].isvisible == 1">Sobre a empresa</b-link>
 
-          <p>Politicas</p>
+          <p v-if="(checkSAC[1] != undefined && checkSAC[1].isvisible == 1) || (checkSAC[2] != undefined && checkSAC[2].isvisible == 1) || (checkSAC[3] != undefined && checkSAC[3].isvisible == 1)">Politicas</p>
           <b-link href="#" @click="loadSACPage('policy','venda')" v-if="checkSAC[1] != undefined && checkSAC[1].isvisible == 1">
             Politica de Venda
           </b-link>
 
-          <b-link href="#" @click="loadSACPage('policy','desconto')" v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
-            Política de Meia Entrada
-          </b-link>
-
-          <b-link href="#" @click="loadSACPage('policy','privacidade')" v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
+          <b-link href="#" @click="loadSACPage('policy','privacidade')" v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
             Politica de Privacidade
           </b-link>
 
-          <p>Parceiros</p>
+          <b-link href="#" @click="loadSACPage('policy','desconto')" v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
+            Política de Meia Entrada
+          </b-link>
+
+          <p v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">Parceiros</p>
 
           <b-link href="#" @click="loadSACPage('partner','sejaParceiro')" v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">
             Seja nosso Parceiro
