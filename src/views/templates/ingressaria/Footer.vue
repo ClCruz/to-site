@@ -38,13 +38,13 @@
             </a>
             <br>
           </template>
-          <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
+          <template v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
             <a href="#" @click="loadSACPage('policy','desconto')">
                   Política de Meia Entrada
             </a>
             <br>
           </template>
-          <template v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
+          <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
             <a href="#" @click="loadSACPage('policy','privacidade')">
                   Politica de Privacidade
             </a>
