@@ -16,18 +16,43 @@
           </div>
         </div>
       </div>
-      <banner-slide v-else :bannerEvents="bannerEvents" :swiperOption="swiperOption"></banner-slide>
+      <span v-else>
+        <span v-if="siteName == 'itaucard.compreingressos.com'">
+          <swiper>
+            <swiper-slide>
+              <div class="p-0" style="width: 100%">
+                <div class="row">
+                  <div class="col-md-12 col-xs-12 nopadding">
+                    <span style="cursor: pointer">
+                      <img  src="https://www.compreingressos.com/images/pagina_especial_visores/69/visor.jpg?1541728042" class="" alt="" style="width:100%;">
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+          </swiper>
+        </span>
+        <span v-else>
+          <banner-slide :bannerEvents="bannerEvents" :swiperOption="swiperOption"></banner-slide>
+        </span>
+
+      </span>
     </div>
   </section>
   <!-- <card-city-list title="Cidades em Destaque" :cityList="cityList"></card-city-list> -->
   <card-genre-list title="Gêneros em Destaque" :genreList="genreList"></card-genre-list>
   <section class="to-block team-1">
-    <div class="container">
+    <div class="container" v-if="siteName == 'itaucard.compreingressos.com'">
+          <card-event-itau :slideData='slideData'></card-event-itau>
+    </div>
+    <div class="container" v-else>
+
       <div class="row row__events">
-        <div class="col-12 col-sm-12 text-left mt-2 mb-4">
+      
+            <div class="col-12 col-sm-12 text-left mt-2 mb-4">
           <h3 class="">Eventos</h3>
         </div>
-        <card-event v-for="(item, index) in slideData" :key='index' :item="item"></card-event>
+          <card-event v-for="(item, index) in slideData" :key='index' :item="item"></card-event>
       </div>
     </div>
   </section>
@@ -42,6 +67,7 @@ import {
 } from '@/functions';
 import AppSearch from "@/components/App-search.vue";
 import CardEvent from "@/components/Card-event.vue";
+import CardEventItau from "@/components/Card-event-itau.vue";
 import CardGenreList from "@/components/Card-genreList.vue";
 import CardCityList from "@/components/Card-cityList.vue";
 import BannerSlide from "@/components/Banner-slide.vue";
@@ -67,6 +93,7 @@ export default {
       genreList: [],
       nextEvents: [],
       bannerEvents: [],
+        siteName: config.info.siteName,
 
       swiperOption: {
         loop: true,
@@ -105,6 +132,7 @@ export default {
     CarrouselLoader,
     CarrouselTextLoader,
     CardEvent,
+    CardEventItau,
     BannerSlide,
     CardGenreList,
     CardCityList
@@ -211,7 +239,7 @@ export default {
         response => {
           this.slideData = response;
           this.hideWaitAboveAll();
-          //console.log(response);
+          console.log(response);
           this.isLoaded = true;
 
           this.getCityList();
@@ -256,7 +284,7 @@ export default {
     //}
   },
   filters: {
-     truncate: function (text, length, clamp) {
+    truncate: function (text, length, clamp) {
       clamp = clamp || '...';
       var node = document.createElement('div');
       node.innerHTML = text;
