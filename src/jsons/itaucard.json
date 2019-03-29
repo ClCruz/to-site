@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "itaucard.compreingressos.com",
+  "uri": "https://itaucard.compreingressos.com",
+  "api": "https://api.itaucard.compreingressos.com",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.itaucard.compreingressos.com",
+  "admin": "https://admin.itaucard.compreingressos.com",
+  "apikey": "live_279e0f576f1547faa1ac5600d7802778f3754aa3f6d44f9aabbdbb709b2ed442",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/itaucard/main.scss",
+  "css": "/stylesheets/themes/itaucard.compreingressos.com/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-itaucard.png",
+  "favico": "/img/itaucard/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "itaucard, compreingressos",
+    "keywords": "compre ingressos, compreingressos, itaucard"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Compreingressos - Itaucard",
+    "description": "itaucard, compreingressos",
+    "siteName": "itaucard.compreingressos.com",
+    "CNPJ": "11.665.394/0001-13",
+    "companyAddress": "R General Jardim, 633 CONJ: 83;",
+    "companyName": "Compreingressos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_itaucard/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_itaucard/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_itaucard/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_itaucard/emailComprador.html",
+      "gift": "../comprar/templates/multi_itaucard/emailPresente.html",
+      "signature": "../comprar/templates/multi_itaucard/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_itaucard/confirmacaoEmail.html"
+
+    }
+  }
+}
