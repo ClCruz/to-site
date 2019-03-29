@@ -20,7 +20,7 @@
       </div>
       <!-- <div class="col-12" style="margin:0 auto; display: flex; justify-content: center;"> -->
       <div class="col-6">
-                  <datepicker :clear-button=true :language="ptBR" @selected="selectDate" @cleared="resetEvents" placeholder="Data" :bootstrap-styling=true clear-button-icon="fa fa-sm fa-times-circle"></datepicker>
+        <datepicker :clear-button=true :language="ptBR" @selected="selectDate" @cleared="resetEvents" placeholder="Data" :bootstrap-styling=true clear-button-icon="fa fa-sm fa-times-circle"></datepicker>
 
         <!-- <div class="dropdown">
           <input class="dropdown-toggle" type="text">
@@ -40,14 +40,14 @@
     </div>
   </div>
   <!-- Propaganda -->
-  <div class="container-fluid container__select mobile__hidden">
+  <div class="container-fluid container__select" v-if="discoveryBanner.length > 0">
     <div class="container p-0">
       <div class="row">
         <div class="col-12 col-xl-12 text-left">
           <div class="p-3">
-            <div class="img-fluid rounded-0 ad">
-              <!-- style="{ backgroundImage: 'url(\'' + item.img + '\')' }" -->
-            </div>
+            <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title">
+            <!-- <div class="discovery" :style="{ backgroundImage: 'url(\'' + discoveryBanner[0].imageURI + '\')' }"> -->
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@
         </div>
         <p style="font-size: 16px; font-weight: bold" class="mt-3" v-if="filteredData.length == 0">{{filteredData.length == 0 ? 'Nenhum evento encontrado' : ''}}</p>
 
-        <card-event v-for="(item, index) in filteredData" :key='index' :item="item"></card-event>
+        <card-event v-for="(item, index) in computedFilteredData" :key='index' :item="item"></card-event>
       </div>
     </div>
   </section>
@@ -142,6 +142,9 @@ import 'swiper/dist/css/swiper.css';
 import {
   eventService
 } from "@/components/common/services/event";
+import {
+  discoveryService
+} from "@/components/common/services/discovery";
 import Datepicker from 'vuejs-datepicker';
 import {
   ptBR
@@ -152,6 +155,7 @@ export default {
   mixins: [func],
   data() {
     return {
+      discoveryBanner: '',
       slideLoaded: false,
       genreListLoaded: false,
       discovery: [],
@@ -297,6 +301,9 @@ export default {
     getListResultsFiltered() {
       eventService.list(this.searchTerm, this.locale.state.name, this.date).then(
         response => {
+
+          console.log(this.discovery);
+
           this.filteredData = response;
           this.hideWaitAboveAll();
         },
@@ -329,25 +336,6 @@ export default {
     },
     getCityList() {
       this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, this.slideData);
-
-      // // console.log(this.slideData);
-      // var slideData2 = [];
-      // this.slideData.map(x => slideData2.push(x.datas.split(" - ")));
-      // var dates = [];
-
-      // for (var i = 0; i < slideData2.length; i++) {
-      //   for (var j = 0; j < slideData2[i].length; j++) {
-      //       dates.push(slideData2[i][j]);
-      //     }
-      // }
-
-      // console.log(this.removeDuplicatesBy(x => x, dates));
-
-      // this.optionsDate = dates;
-      // this.optionsDate.push({
-      //   value: slideData2[i][j],
-      //   text: slideData2[i][j]
-      // })
     },
     getGenreList() {
       this.genreList = this.removeDuplicatesBy(x => x.genreName, this.slideData).slice(0, 6);
@@ -389,20 +377,23 @@ export default {
     getDiscovery() {
       discoveryService.list().then(
         response => {
-          this.discovery = response;
+          this.discovery = response.filter(x => x.type !== 'banner');
+          this.discoveryBanner = response.filter(x => x.type == 'banner');
         },
         error => {
           this.toastError("Falha na execução.");
         }
       );
     },
-    getListResults() {
+    getListResults(callback) {
 
       this.getLocation(this.getListResultAgain);
 
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.slideData = response;
+          this.filteredData = this.slideData
+
           this.hideWaitAboveAll();
           this.isLoaded = true;
 
@@ -411,10 +402,13 @@ export default {
           this.getLocalsList();
           this.getNextEvents();
 
-          this.filteredData = this.slideData;
           this.populateCityPicker();
 
-          console.log(this.slideData);
+          // console.log(this.slideData);
+
+          if (callback !== null && callback !== undefined) {
+            callback();
+          }
         },
         error => {
           this.hideWaitAboveAll();
@@ -423,9 +417,30 @@ export default {
       );
     },
   },
-  computed: {},
+  computed: {
+    computedFilteredData() {
+      let ret = this.filteredData;
+
+      this.discovery.map(x => {
+        if (x.index == 0) {
+          const j = Math.floor(Math.random() * (ret.length));
+          ret.splice(j, 0, x);
+        } else {
+          if (x.index > ret.length) {
+            ret.push(x);
+          } else {
+            ret.splice(x.index, 0, x);
+          }
+        }
+      });
+
+      console.log(ret);
+
+      return ret;
+    },
+  },
   created() {
-    this.getListResults();
+    this.getListResults(this.getDiscovery);
     this.getBanner();
 
     // Fixa navbar ao ultrapassa-lo

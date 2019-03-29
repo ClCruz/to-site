@@ -1,5 +1,18 @@
 <template>
-<div class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="goto('event', item)">
+<div class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="window.location(item.link)" v-if="item.isdiscovery == 1">
+  <div class="to-box p-0">
+    <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.imageURI + '\')' }" style="background-size: cover;"></div>
+
+    <div class="content to-box p-2 pt-0 pb-1" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
+      <h4 class="event__title pb-1">
+        <strong>{{ item.title |  truncate(35, ' ...') }}</strong>
+      </h4>
+      <p class="p-0 pt-1 m-0 h-200 event__item" style="font-size: 13px">{{item.content | truncate(110, ' ...') }}</p>
+
+    </div>
+  </div>
+</div>
+<div v-else class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="goto('event', item)">
   <div class="to-box p-0">
     <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
@@ -47,6 +60,8 @@ export default {
 
   filters: {
      truncate: function (text, length, clamp) {
+      if (text == null || text == undefined) return;
+
       clamp = clamp || '...';
       var node = document.createElement('div');
       node.innerHTML = text;
@@ -54,10 +69,15 @@ export default {
       return content.length > length ? content.slice(0, length) + clamp : content;
     },
     replace: function (message, toReplace, replacement) {
+      if (message == null || message == undefined) return;
       return message.replace(toReplace, replacement);
     },
     capitalize: function (value) {
+      if (value == null || value == undefined) return;
+
       if (!value) return ''
+
+
       value = value.toString()
       value = value.toLowerCase();
       return value.charAt(0).toUpperCase() + value.slice(1)

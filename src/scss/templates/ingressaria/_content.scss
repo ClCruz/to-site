@@ -202,12 +202,13 @@
 		color: #333 !important;
 	}
 
-	.ad {
-		background-size: 100% auto;
-		background-position: bottom;
-		background: url('https://external-preview.redd.it/AU_vXWRMejWU49gXKdKZ4FMXUGIf3ajCGEn53hwZabg.png?width=640&crop=smart&auto=webp&s=8342925c47b3e35405e8146f2ea1b856f9c119c3');
-		height: 110px !important;
+	.discovery {
+		// background-size: 100% auto;
+		// background-position: bottom;
+		// background: url('https://external-preview.redd.it/AU_vXWRMejWU49gXKdKZ4FMXUGIf3ajCGEn53hwZabg.png?width=640&crop=smart&auto=webp&s=8342925c47b3e35405e8146f2ea1b856f9c119c3');
+		// height: auto !important;
 		border-radius: 2px !important;
+		width: 100%;
 	}
 
 	.ui.search.dropdown {
