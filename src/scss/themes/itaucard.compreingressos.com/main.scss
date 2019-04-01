@@ -3,7 +3,8 @@
 @import "override.scss";
 @import "../../to-framework/main.scss";
 
-header.bg-dark {
+header.bg-dark,
+.bg-dark, footer.bg-dark	{
 	// background-color: rgb(202, 8, 19) !important;
 	background-color: $secundary !important;
 }
@@ -42,4 +43,18 @@ $gradiente: $secundary !important;
 
 .header__signin {
 	color: #333;
+}
+
+
+footer.bg-dark  {
+	background-color: $secundary !important;
+
+}
+
+.features {
+	display: none;
+}
+
+.mb-4, .my-4 {
+	margin-bottom: 0rem !important;
 }

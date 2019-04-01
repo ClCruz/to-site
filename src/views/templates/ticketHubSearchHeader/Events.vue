@@ -185,8 +185,7 @@ export default {
     getListResultAgain() {
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
-          this.slideData = response;
-          //console.log(response);
+          this.slideData = respons
           this.hideWaitAboveAll();
         },
         error => {
@@ -250,7 +249,6 @@ export default {
         response => {
           this.slideData = response;
           this.hideWaitAboveAll();
-          // console.log(response);
           this.isLoaded = true;
 
           this.getCityList();
