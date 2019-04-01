@@ -84,14 +84,14 @@
           </div>
 
         </div>
-        <div class="row align-items-top text-center text-md-left" v-if="siteName == 'itaucard.compreingressos.com'">
+        <div class="row align-items-top text-center text-md-left" v-if="siteName == 'sazarte.com'">
           <div class="col-md"></div>
           <div class="col-12 col-md mt-4 mt-sm-0">
             <h3 style=""><strong>Telefones</strong></h3>
             <p class="mt-0 pt-0">11 3255 1979 - Bilheteria</p>
             <p class="mt-0 pt-0">11 3237 3662 - Administração Teatro Italia</p>
           </div>
-          <div class="col-12 col-md mt-4 mt-sm-0" v-if="siteName == 'itaucard.compreingressos.com'">
+          <div class="col-12 col-md mt-4 mt-sm-0" v-if="siteName == 'sazarte.com'">
             <h3 style=""><strong>Horário de Funcionamento</strong></h3>
             <p>
               De terça a domingo das 15h até o
