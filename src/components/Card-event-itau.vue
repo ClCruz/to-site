@@ -4,6 +4,7 @@
     <h3 class="" style="text-transform: capitalize">{{thisMonth}}</h3>
   </div>
   <div class="col-12 col-xl-4 col-md-6 p-2 text-left" v-for="(item, index) in computedSlideData" :key='index' @click="goto('event', item)"  v-if="thisMonthNumber == item.firstMonth || thisMonthNumber == item.lastMonth || thisMonthNumber > item.firstMonth && thisMonthNumber < item.lastMonth ">
+  
     <div class="to-box p-0">
       <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
