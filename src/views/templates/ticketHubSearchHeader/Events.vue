@@ -250,7 +250,7 @@ export default {
         response => {
           this.slideData = response;
           this.hideWaitAboveAll();
-          console.log(response);
+          // console.log(response);
           this.isLoaded = true;
 
           this.getCityList();
