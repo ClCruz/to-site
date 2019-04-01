@@ -17,17 +17,17 @@
             <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
             <br>
           </template>
-          <template v-if="checkSAC[0] != undefined && checkSAC[0].isvisible == 1">
-            <a href="#" @click="loadSACPage('company','sobre')">
+            <template v-if="checkSAC[0] != undefined && checkSAC[0].isvisible == 1">
+              <a href="#" @click="loadSACPage('company','sobre')">
                   Sobre a empresa
             </a>
-            <br>
+              <br>
           </template>
-          <template v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">
-            <a href="#" @click="loadSACPage('partner','sejaParceiro')">
+              <template v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">
+                <a href="#" @click="loadSACPage('partner','sejaParceiro')">
                   Seja nosso Parceiro
             </a>
-          </template>
+              </template>
         </div>
 
         <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
@@ -38,17 +38,17 @@
             </a>
             <br>
           </template>
-          <template v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
-            <a href="#" @click="loadSACPage('policy','desconto')">
+            <template v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
+              <a href="#" @click="loadSACPage('policy','desconto')">
                   Política de Meia Entrada
             </a>
-            <br>
+              <br>
           </template>
-          <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
-            <a href="#" @click="loadSACPage('policy','privacidade')">
+              <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
+                <a href="#" @click="loadSACPage('policy','privacidade')">
                   Politica de Privacidade
             </a>
-          </template>
+              </template>
         </div>
         <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
           <h3><strong>Formas de Pagamento</strong></h3>
@@ -83,6 +83,21 @@
 
           </div>
 
+        </div>
+        <div class="row align-items-top text-center text-md-left" v-if="siteName == 'itaucard.compreingressos.com'">
+          <div class="col-md"></div>
+          <div class="col-12 col-md mt-4 mt-sm-0">
+            <h3 style=""><strong>Telefones</strong></h3>
+            <p class="mt-0 pt-0">11 3255 1979 - Bilheteria</p>
+            <p class="mt-0 pt-0">11 3237 3662 - Administração Teatro Italia</p>
+          </div>
+          <div class="col-12 col-md mt-4 mt-sm-0" v-if="siteName == 'itaucard.compreingressos.com'">
+            <h3 style=""><strong>Horário de Funcionamento</strong></h3>
+            <p>
+              De terça a domingo das 15h até o
+              inicio do espetáculo. Quando não houver espetáculo, das 15h as 19h.</p>
+          </div>
+          <div class="col-md"></div>
         </div>
         <div class="row mt-5 footer-name nopadding">
           <div class="col text-center">
@@ -132,7 +147,7 @@ export default {
     getSACContent() {
       for (var i = 1; i <= 5; i++) {
         staticPageService.get(i).then(
-      
+
           response => {
             this.getSAC.push(response);
           },
@@ -142,7 +157,7 @@ export default {
           }
         );
       }
-            // console.log(this.getSAC);
+      // console.log(this.getSAC);
 
     },
 
@@ -261,10 +276,10 @@ export default {
     }
   },
   mounted() {
-     this.$nextTick(() => {
-       this.checkSACPages();
-        //this.$refs.slick.reSlick();
-      });
+    this.$nextTick(() => {
+      this.checkSACPages();
+      //this.$refs.slick.reSlick();
+    });
     // this.getSACContent();
   },
 };
