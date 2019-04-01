@@ -16,6 +16,7 @@
       </div>
     </div>
   </div>
+  
 
   <div class="col-12 col-sm-12 text-left mt-2 mb-4">
     <h3 class="" style="text-transform: capitalize">{{nextMonth}}</h3>
@@ -38,7 +39,7 @@
   <div class="col-12 col-sm-12 text-left mt-2 mb-4">
     <h3 class="">Eventos futuros</h3>
   </div>
-  <div class="col-12 col-xl-4 col-md-6 p-2 text-left" v-for="(item, index) in computedSlideData" :key='index' @click="goto('event', item)" v-if="item.firstMonth > nextMonthNumber">
+  <div class="col-12 col-xl-4 col-md-6 p-2 text-left" v-for="(item, index) in computedSlideData" :key='index' @click="goto('event', item)" v-if="item.firstMonth > nextMonthNumberx">
     <div class="to-box p-0">
       <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
 
