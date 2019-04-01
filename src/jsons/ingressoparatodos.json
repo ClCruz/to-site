@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "https://www.ingressoparatodos.com.br/",
+  "uri": "https://https://www.ingressoparatodos.com.br/",
+  "api": "https://api.https://www.ingressoparatodos.com.br/",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.https://www.ingressoparatodos.com.br/",
+  "admin": "https://admin.https://www.ingressoparatodos.com.br/",
+  "apikey": "live_c02e42c0d2524044b12ec3c3ee77e5a7e6d56d5ccc274dd3ba4690137492741e",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/ingressoparatodos/main.scss",
+  "css": "/stylesheets/themes/https://www.ingressoparatodos.com.br//main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-ingressoparatodos.png",
+  "favico": "/img/ingressoparatodos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "ingressos, venda, teatro, show, ingresso",
+    "keywords": "ingressos, venda, teatro, show, ingresso"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Ingresso para Todos",
+    "description": "ingressos, venda, teatro, show, ingresso",
+    "siteName": "https://www.ingressoparatodos.com.br/",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "",
+    "companyName": "Ingresso para Todos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_ingressoparatodos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_ingressoparatodos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_ingressoparatodos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_ingressoparatodos/emailComprador.html",
+      "gift": "../comprar/templates/multi_ingressoparatodos/emailPresente.html",
+      "signature": "../comprar/templates/multi_ingressoparatodos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_ingressoparatodos/confirmacaoEmail.html"
+
+    }
+  }
+}
