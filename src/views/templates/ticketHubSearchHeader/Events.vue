@@ -3,7 +3,7 @@
   <section id="" class="bg__main">
     <div class="container-fluid">
       <!-- swiper -->
-      <div v-if="!slideLoaded">
+      <div v-if="!slideLoaded" id="loader">
         <div class="item__slide">
           <div class="row">
             <div class="col-md-8 col-xs-12 nopadding slide__image" style="">
