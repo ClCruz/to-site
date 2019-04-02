@@ -35,7 +35,7 @@
   </div>
 </div>
 
-<div class="col-10 col-sm-3 col-md-3 m-auto m-lg-0 col-lg-4" v-else-if="template == 'ingressaria'">
+<div class="col-10 col-sm-3 col-md-3 m-auto m-lg-0 col-lg-4" v-else-if="template == 'ingressaria' || template == 'ticketHubVideo'">
   <h1 class="">SAC</h1>
 
   <h3>Institucional</h3>

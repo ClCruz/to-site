@@ -13,13 +13,30 @@ header.bg-dark {
 }
 
 .bg-dark {
-	background-color: rgb(59, 165, 220) !important;
+	// background-color: #fff !important;
 }
 
 $gradiente: $secundary !important;
 
 .swal2-progresscircle {
 	background: $secundary !important;
+}
+
+footer.bg-dark,
+.eventHeader header.bg-dark {
+	background-color: rgb(255, 255, 255) !important;
+	color: black !important;
+}
+
+footer a,
+footer p,
+header.bg-dark .navbar-nav a.nav-link,
+.to-btn {
+	color: #444 !important;
+
+	@include MQ(S) {
+		color: #fff !important;
+	}
 }
 
 .swal2-styled {
@@ -39,10 +56,19 @@ $gradiente: $secundary !important;
 	}
 }
 
-.header__signin {
-	color: #333;
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
 }
 
-#app > div > div:nth-child(2) > section.to-block.to-viewport.bg-dark.bg__main {
-	overflow-x: hidden !important;
+#ddown1 button {
+	color: black !important;
+}
+
+.container-fluid {
+	@include MQ(NS) {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
 }

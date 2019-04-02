@@ -82,7 +82,7 @@
       </div>
     </div>
   </div>
-  <div v-else-if="template == 'ingressaria'">
+  <div v-else-if="template == 'ingressaria' || template == 'ticketHubVideo'">
     <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
       <div class="container justify-content-center align-items-center d-flex pt-5 pb-0 mb-0 h-25">
         <div class="col-10 justify-content-center text-center">

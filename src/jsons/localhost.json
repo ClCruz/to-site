@@ -9,41 +9,44 @@
   "apikey": "live_578abaf329f84119bb7c1e55dfdc7e0f4f20e693cd2c4bc7a5bc0a0965fae322",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "scss": "./src/scss/themes/marketplayclub/main.scss",
-  "css": "/stylesheets/themes/marketplayclub/main.css",
-  "template": "ticketHubSearchHeader",
-  "logo": "https://media.tixs.me/logos/logo-marketplayclub.svg",
-  "favico": "/img/marketplayclub/",
+  "scss": "./src/scss/themes/eventoslitoral/main.scss",
+  "css": "/stylesheets/themes/www.eventoslitoraldemo.tk/main.css",
+  "template": "ticketHubVideo",
+  "logo": "https://media.tixs.me/logos/logo-eventoslitoral.jpg",
+  "favico": "/img/eventoslitoral/",
   "videos": {
-    "list": []
+    "list": [ 
+      { "order":1, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.webm", "type": "video/webm"  }, 
+      { "order":2, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.mp4", "type": "video/mp4"  }
+    ]
   },
   "meta": {
-    "description": "marketplay.club seu hub de venda de ingressos",
-    "keywords": "marketplay, ingressos, marketplayclub"
+    "description": "Venda de Ingressos",
+    "keywords": "venda,ingresssos,eventoslitoral,br,me"
   },
   "recaptcha": {
     "private": "",
     "public": ""
   },
   "info": {
-    "title": "Marketplay.club",
-    "description": "marketplay.club seu hub de venda de ingressos",
-    "siteName": "itaucard.compreingressos.com",
-    "CNPJ": "29.324.734/0001-81",
-    "companyAddress": "Rua Ministro João Mendes , 20",
-    "companyName": "ASSET EVENTOS EIREL - ME"
+    "title": "Eventos Litoral | Venda de Ingressos",
+    "description": "Venda de Ingressos",
+    "siteName": "Eventos Litoral Demonstração",
+    "CNPJ": "11.111.111/1111-111",
+    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
+    "companyName": "Eventos Litoral"
   },
   "templates": {
     "print": {
-      "voucher": "../comprar/templates/multi_marketplayclub/impressaoComprador.html",
-      "gift": "../comprar/templates/multi_marketplayclub/impressaoPresente.html"
+      "voucher": "../comprar/templates/multi_eventoslitoral/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_eventoslitoral/impressaoPresente.html"
     },
     "email": {
-      "recover": "../comprar/templates/multi_marketplayclub/solicitarSenha.html",
-      "buyer": "../comprar/templates/multi_marketplayclub/emailComprador.html",
-      "gift": "../comprar/templates/multi_marketplayclub/emailPresente.html",
-      "signature": "../comprar/templates/multi_marketplayclub/confirmacaoEmailAssinatura.html",
-      "confirmation": "../comprar/templates/multi_marketplayclub/confirmacaoEmail.html"
+      "recover": "../comprar/templates/multi_eventoslitoral/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_eventoslitoral/emailComprador.html",
+      "gift": "../comprar/templates/multi_eventoslitoral/emailPresente.html",
+      "signature": "../comprar/templates/multi_eventoslitoral/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_eventoslitoral/confirmacaoEmail.html"
 
     }
   }

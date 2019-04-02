@@ -1,8 +1,8 @@
 <template>
-<div class="a">
+<div class="a" :class="{ eventHeader: ['event'].indexOf($route.name) > -1 }">
   <div class="header">
     <!-- header das paginas (menos evento) -->
-    <header class="bg-dark" data-block-type="headers" data-id="2">
+    <header id="navbar" class="bg-dark" data-block-type="headers" data-id="2">
       <div class="container">
         <nav class="navbar navbar-expand-md no-gutters">
           <div class="header__logo col-2 text-left">
@@ -13,15 +13,40 @@
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav12" aria-controls="navbarNav12"
           aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <div class="collapse navbar-collapse justify-content-center col-md-8" id="navbarNav12">
-            <app-search></app-search>
+          <div class="collapse navbar-collapse col-md-8">
+            <div class="nav__links navbar-nav ml-auto">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <router-link class="nav-link" to="/busca/genero/TEATRO">Teatro
+                  </router-link>
+                </li>
+                <li class="nav-item">
+
+                  <router-link class="nav-link" to="/busca/genero/Show">Shows
+                  </router-link>
+                </li>
+                <!-- <li class="nav-item">
+                  <router-link class="nav-link" to="/busca/genero/Musical">Musicais
+                  </router-link>
+                </li> -->
+                <li class="nav-item">
+                  <router-link class="nav-link" to="/busca/genero/Infantil">Infantil
+                  </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link class="nav-link" to="/sac/empresa/sobre">Ajuda
+                  </router-link>
+                </li>
+              </ul>
+            </div>
+            <app-search class="header__search"></app-search>
           </div>
 
           <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex">
-            <span v-if="!isLogged" class="btn    btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
+            <span v-if="!isLogged" class="btn   btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
             <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="" alt=""></span>
 
             <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName">
@@ -77,7 +102,7 @@
     </div>
     <div class="col-4">
       <div class="icon"></div>
-      <span v-if="!isLogged" class="btn   btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
+      <span v-if="!isLogged" class="btn btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
       <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="" alt=""></span>
       <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName" no-caret>
         <template slot="button-content">

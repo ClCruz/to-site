@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <div class="content" v-else-if="template == 'ingressaria'">
+  <div class="content" v-else-if="template == 'ingressaria' || template == 'ticketHubVideo'">
     <section class="to-block to-viewport bg-dark bg__main" style="">
       <div class="container justify-content-center align-items-center d-flex p-5">
         <div class="col-10 justify-content-center text-center">

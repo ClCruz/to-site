@@ -6,7 +6,7 @@
   "pinpad": "http://localhost:7001/api",
   "admin": "https://admin.eventoslitoraldemo.tk",
   "legacy": "https://compra.eventoslitoraldemo.tk",
-  "apikey": "live_fe6854cf54b74e568f58cc7c531f4ea7bc0f1afffb5f4400846152d735ceaa05",
+  "apikey": "live_578abaf329f84119bb7c1e55dfdc7e0f4f20e693cd2c4bc7a5bc0a0965fae322",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/eventoslitoral/main.scss",

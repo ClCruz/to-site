@@ -4,108 +4,78 @@
     <video autoplay loop autobuffer muted playsinline id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
       <source v-for="(item) in getconfig.info.videos.list" v-bind:key="item.order" :src="item.src" :type="item.type">
     </video>
-  </section>
-
-  <section id="section__slider" class="pt-4" style="margin-top: 100vh">
-    <div class="container">
-      <!-- swiper -->
-      <div v-if="!slideLoaded">
-        <div class="item__slide">
-          <div class="row">
-            <div class="col-md-8  col-xs-12 nopadding slide__image">
-              <CarrouselLoader class="nopadding" style="padding: 0!important; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselLoader>
-            </div>
-            <div class="d-none d-sm-block col-md-4 visible-md visible-lg to__slide nopadding" style="height:350px;padding:30px; margin-left: -15px;border-top-right-radius: 5px; border-bottom-right-radius: 5px; background-color: white">
-              <CarrouselTextLoader class="col-12 nopadding" style="padding: 0!important; height: 320px; border-top-left-radius: 5px" :speed="2" :animate="true" v-if="!slideLoaded"></CarrouselTextLoader>
-
-            </div>
+  </section><!-- Propaganda -->
+  <div class="container-fluid container__select" v-if="discoveryBanner.length > 0">
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-12 col-xl-12 text-left">
+          <div class="p-3">
+            <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title">
+            <!-- <div class="discovery" :style="{ backgroundImage: 'url(\'' + discoveryBanner[0].imageURI + '\')' }"> -->
+            <!-- </div> -->
           </div>
         </div>
       </div>
-      <swiper :options="swiperOption" v-else>
-
-         <swiper-slide v-for="(item, index) in bannerEvents" :key='index'>
-          <div class="item__slide" style="">
-            <div class="row">
-              <div class="col-md-8  col-xs-12 nopadding">
-                <span style="cursor: pointer" @click="goto('event',{ uri: item.uri})">
-                    <img :src="item.img" class="slide__image" alt="" style="width:100%;">
-                  </span>
-              </div>
-              <div class="col-md-4 d-none d-sm-block visible-md visible-lg to__slide" style="height:320px;padding:30px;">
-                <h3 class="" style="font-size: 20px">{{item.ds_evento}}</h3>
-                <div class="">
-                  <div class="event-name pull-left">
-                    <p v-html="item.bannerDescription"></p>
-                    <div class="slide__item-icon">
-                      <p class="p-0 m-0 event__item event__item-date slide__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
-                      <p class="p-0 pt-1 m-0 h-200 event__item event__item-local slide__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="button-event pt-4 w-100 to__slide-button" style="">
-                  <button class="btn btn-sm btn-outline-dark w-70 mx-auto mx-0" @click="goto('event',{ uri: item.uri})" type="button">Comprar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-      </swiper>
     </div>
-  </section>
+  </div>
+  <!-- Destaque generos -->
   <section class="features" style="background: white" data-block-type="features" data-id="3">
     <div class="container">
-      <div class="row text-left pt-3 pb-1">
-        <div class="col-12 col-sm-12 text-left">
-          <h3>Gêneros em destaque</h3>
+      <div class="row text-left pt-1 pb-1">
+        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+          <h3 class="">Explore nossos eventos</h3>
         </div>
-        <div @click="goto('genre',item.genreName)" class="col-6 col-sm-2 p-0 card__container" style="" v-for="(item, index) in genreList" :key='index'>
+
+        <div class="col-12 p-0 mt-2 pt-2" style="" v-if="!genreListLoaded">
+          <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
+        </div>
+        <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container" style="" v-for="(item, index) in genreList" :key='index' v-else>
           <p>
             <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-              <div alt="image" class="img-fluid rounded card__home card__home-0 img__inside" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
+              <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
             </div>
-            <span class="genre" style="text-transform: uppercase">{{ item.genreName }}</span>
-          </p>
-        </div>
-        <div @click="goto('genre','+')" class="col-6 col-sm-2 card__container  card__see-more" v-if="false">
-          <p>
-            <div alt="image" class="img-fluid rounded card__home">
-            </div>
-            <span class="genre">Ver mais</span>
           </p>
         </div>
       </div>
     </div>
   </section>
- <section class="to-block team-1">
+  <!-- Banner -->
+  <div class="container__select to-block container__features">
+    <div class="container pt-2 pb-0 text-left">
+      <h3 class="">Experiências em destaque</h3>
+      <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</p>
+      <div class="container__arrows">
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </div>
+      <div class="row p-3">
+        <swiper :options="swiperOption" class="col-12 pb-0 mb-0">
+          <swiper-slide v-for="(item, index) in bannerEvents" :key='index' class="col-12 col-xl-6 col-md-6 p-0 pb-0 pt-0 text-left">
+            <div class="pr-1">
+              <div class="to-box p-0 ">
+                <div @click="goto('event',{ uri: item.uri})" class="img-fluid rounded-0" style="background-size: cover;height: 300px !important" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }">
+                </div>
+
+                <!-- <div class="ad__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div> -->
+              </div>
+            </div>
+          </swiper-slide>
+
+        </swiper>
+      </div>
+    </div>
+  </div>
+
+  <section class="to-block team-1 mt-0 pt-0">
     <div class="container">
       <div class="row row__events">
-        <div class="col-12 col-sm-12 text-left mt-2 mb-4">
-          <h3 class="">Eventos</h3>
+        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+          <h3 class="">Próximos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+          <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Encontre um evento com toda a facilidade que você precisa</p>
         </div>
+        <p style="font-size: 16px; font-weight: bold" class="mt-3" v-if="filteredData.length == 0">{{filteredData.length == 0 ? 'Nenhum evento encontrado' : ''}}</p>
 
-         <div class="col-12 col-xl-4 col-md-6 p-1 text-left" v-for="(item, index) in slideData" :key='index' @click="goto('event', item)">
-          <div class="to-box p-0">
-            <!-- <div class="event__date">
-                <span class="day">12</span>
-                <span class="month">AGO</span>
-              </div> -->
-            <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
-
-            <div class="content to-box p-2 pt-0 pb-2" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
-              <h4 class="event__title pb-1">
-                <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
-              </h4>
-              <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
-              <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
-
-            </div>
-          </div>
-        </div>
-
+        <card-event v-for="(item, index) in computedFilteredData" :key='index' :item="item"></card-event>
       </div>
     </div>
   </section>
@@ -114,83 +84,121 @@
 
 <script>
 import $ from "jquery";
-import config from '@/config';
 import Logo from "@/components/App-logo.vue";
 import {
   func
 } from '@/functions';
+import {
+  ModelSelect
+} from 'vue-search-select'
+
 import AppSearch from "@/components/App-search.vue";
-import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
-import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
+import config from '@/config';
+// import CarrouselLoader from '@/components/loaders/CarrouselLoader.vue';
+import GenreFeaturesLoader from '@/components/loaders/GenreFeaturesLoader.vue';
+// import CarrouselTextLoader from '@/components/loaders/CarrouselTextLoader.vue';
+
+import CardEvent from "@/components/Card-event.vue";
+import CardGenreList from "@/components/Card-genreList.vue";
+import CardCityList from "@/components/Card-cityList.vue";
+import BannerSlide from "@/components/Banner-slide.vue";
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
 import {
   eventService
 } from "@/components/common/services/event";
+import {
+  discoveryService
+} from "@/components/common/services/discovery";
+import Datepicker from 'vuejs-datepicker';
+import {
+  ptBR
+} from 'vuejs-datepicker/dist/locale'
 
 export default {
   name: "Events",
   mixins: [func],
   data() {
     return {
+      discoveryBanner: '',
       slideLoaded: false,
+      genreListLoaded: false,
       discovery: [],
       slideData: [],
+      ptBR: ptBR,
+      format: "yyyy MM dd",
       cityList: [],
       localsList: [],
       genreList: [],
+      date: '',
       nextEvents: [],
       bannerEvents: [],
+      filteredData: [],
+      searchTerm: '',
+      options: [],
+      dateValue: '',
+      optionsDate: [],
+      item: {
+        value: '',
+        text: ''
+      },
+      itemDate: {
+        value: '',
+        text: ''
+      },
 
       swiperOption: {
-        loop: true,
-        autoplay: true,
-        speed: 1000,
-        loopedSlides: 1,
+        // loop: true,
+        // autoplay: true,
+        // speed: 1000,
+        // loopedSlides: 1,
+        slidesPerView: 2,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
         },
-        autoplay: {
-          delay: 5000
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
         },
-
-        breakpoints: {},
-        on: {
-          slideChangeTransitionEnd: function () {
-            let me = this;
-            if (this.isEnd) {
-              if (this.autoplay.running) {
-                setTimeout(function () {
-                  me.slideToLoop(0, me.params.speed);
-                  me.autoplay.stop();
-                  me.autoplay.start();
-                }, this.params.autoplay.delay);
-              }
-            }
+        breakpoints: {
+          800: {
+            slidesPerView: 1
           }
-        }
+        },
       }
-
     }
   },
   components: {
+    ModelSelect,
     AppSearch,
-    CarrouselLoader,
-    CarrouselTextLoader
+    // CarrouselLoader,
+    // CarrouselTextLoader,
+    CardEvent,
+    BannerSlide,
+    GenreFeaturesLoader,
+    CardGenreList,
+    CardCityList,
+    Datepicker
   },
   methods: {
-    next() {
-      //this.$refs.slick.slick("slickSetOption", 'speed', 1, true)
-      //this.$refs.slick.next();
-      //this.$refs.slick.slick("slickSetOption", 'speed', 5000, true)
+    capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    },
+    reset() {
+      this.item = {}
+    },
+    selectFromParentComponent1() {
+      // select option from parent component
+      this.item = this.options[0]
+    },
+    clearDate() {
+      console.log(this.dateValue);
 
     },
 
-    prev() {
-      //this.$refs.slick.prev();
-    },
-
+    next() {},
+    prev() {},
     reInit() {
       // Helpful if you have to deal with v-for to update dynamic lists
       this.$nextTick(() => {
@@ -223,6 +231,53 @@ export default {
           break;
       }
     },
+
+    selectDate(data) {
+
+      console.log(data);
+      if (data == "1970-01-01") return;
+      if (data == null) return;
+
+      this.date = new Date(data).toISOString().split('T')[0];
+
+      this.getListResultsFiltered();
+
+    },
+    handleOnInput($event) {
+      this.item = $event;
+
+      if (this.item.value == "all") {
+        // this.filteredData = this.slideData;
+        this.searchTerm = "";
+        // return;
+      } else {
+        this.searchTerm = this.item.text;
+      }
+
+      console.log(this.searchTerm);
+      this.getListResultsFiltered();
+
+    },
+    resetEvents() {
+      this.date = "";
+
+      this.getListResultsFiltered();
+    },
+    getListResultsFiltered() {
+      eventService.list(this.searchTerm, this.locale.state.name, this.date).then(
+        response => {
+
+          console.log(this.discovery);
+
+          this.filteredData = response;
+          this.hideWaitAboveAll();
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
     getListResultAgain() {
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
@@ -248,7 +303,9 @@ export default {
       this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, this.slideData);
     },
     getGenreList() {
-      this.genreList = this.removeDuplicatesBy(x => x.genreName, this.slideData);
+      this.genreList = this.removeDuplicatesBy(x => x.genreName, this.slideData).slice(0, 6);
+
+      this.genreListLoaded = true;
     },
     getLocalsList() {
       this.localsList = this.removeDuplicatesBy(x => x.ds_nome_teatro, this.slideData);
@@ -256,10 +313,24 @@ export default {
     getNextEvents() {
       this.nextEvents = this.slideData.slice(1, 5);
     },
+    populateCityPicker() {
+      this.options.push({
+        value: "all",
+        text: "Todas as Cidades"
+      })
+      this.cityList.map(x => {
+        this.options.push({
+          value: x.ds_municipio,
+          text: x.ds_municipio.toLowerCase().replace(/^\w/, x => {
+            return x.toUpperCase();
+          })
+        })
+      });
+    },
     getBanner() {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
-          this.bannerEvents = response;
+          this.bannerEvents = response.slice(1, 4);;
           this.slideLoaded = true;
         },
         error => {
@@ -271,20 +342,23 @@ export default {
     getDiscovery() {
       discoveryService.list().then(
         response => {
-          this.discovery = response;
+          this.discovery = response.filter(x => x.type !== 'banner');
+          this.discoveryBanner = response.filter(x => x.type == 'banner');
         },
         error => {
           this.toastError("Falha na execução.");
         }
       );
     },
-    getListResults() {
+    getListResults(callback) {
 
       this.getLocation(this.getListResultAgain);
 
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.slideData = response;
+          this.filteredData = this.slideData
+
           this.hideWaitAboveAll();
           this.isLoaded = true;
 
@@ -292,31 +366,20 @@ export default {
           this.getGenreList();
           this.getLocalsList();
           this.getNextEvents();
+
+          this.populateCityPicker();
+
+          // console.log(this.slideData);
+
+          if (callback !== null && callback !== undefined) {
+            callback();
+          }
         },
         error => {
           this.hideWaitAboveAll();
           this.toastError("Falha na execução.");
         }
       );
-    },
-
-    // Events listeners
-    /*handleAfterChange(event, slick, currentSlide) {},
-    handleBeforeChange(event, slick, currentSlide, nextSlide) {},
-    handleBreakpoint(event, slick, breakpoint) {},
-    handleDestroy(event, slick) {},
-    handleEdge(event, slick, direction) {},
-    handleInit(event, slick) {},
-    handleReInit(event, slick) {},
-    handleSetPosition(event, slick) {},
-    handleSwipe(event, slick, direction) {},
-    handleLazyLoaded(event, slick, image, imageSource) {},
-    handleLazeLoadError(event, slick, image, imageSource) {},*/
-
-  },
-  computed: {
-    getconfig() {
-      return config;
     },
   },
   mounted() {
@@ -326,14 +389,50 @@ export default {
       } catch (e) {
         console.log("problem in add controls in video.");
       }
-    }
+    }},
 
+  computed: {
+    getconfig() {
+      return config;
+    },
+    computedFilteredData() {
+      let ret = this.filteredData;
+
+      this.discovery.map(x => {
+        if (x.index == 0) {
+          const j = Math.floor(Math.random() * (ret.length));
+          ret.splice(j, 0, x);
+        } else {
+          if (x.index > ret.length) {
+            ret.push(x);
+          } else {
+            ret.splice(x.index, 0, x);
+          }
+        }
+      });
+
+      console.log(ret);
+
+      return ret;
+    },
   },
   created() {
-    this.getListResults();
+    this.getListResults(this.getDiscovery);
     this.getBanner();
 
-    //document.getElementById('myVideo').play();
+    // Fixa navbar ao ultrapassa-lo
+    var navbar = $('#navbar'),
+      distance = navbar.offset().top,
+      $window = $(window);
+
+    $window.scroll(function () {
+      if ($window.scrollTop() >= 140) {
+        navbar.removeClass('navbar-fixed-top').addClass('navbar-fixed-top');
+      } else {
+        navbar.removeClass('navbar-fixed-top');
+      }
+    });
+
   },
   beforeUpdate() {
     //if (this.$refs.slick) {
@@ -363,9 +462,15 @@ export default {
       return value.charAt(0).toUpperCase() + value.slice(1)
     }
   }
-};
+
+}
 </script>
 
-<style scoped>
-
+<style lang="scss">
+.select__city {
+  .dropdown {
+    width: 140px;
+    float: right;
+  }
+}
 </style>
