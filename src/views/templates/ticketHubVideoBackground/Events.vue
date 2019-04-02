@@ -1,6 +1,6 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main" style="position: absolute; top: 0; width: 99vw;z-index: -1;background: none!important" id="sectionVideo" data-block-type="call_to_action" data-id="2">
+  <section class="to-block to-viewport bg-dark bg__main" style="top: 0; width: 99vw;z-index: -1;background: none!important" id="sectionVideo" data-block-type="call_to_action" data-id="2">
     <video autoplay loop autobuffer muted playsinline id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
       <source v-for="(item) in getconfig.info.videos.list" v-bind:key="item.order" :src="item.src" :type="item.type">
     </video>

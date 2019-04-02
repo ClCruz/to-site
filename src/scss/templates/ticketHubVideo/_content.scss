@@ -58,7 +58,6 @@
 	}
 
 	.header {
-		z-index: 5000;
 		// width: 100%;
 	}
 
@@ -277,6 +276,7 @@
 		width: 100%;
 		background: #fff !important;
 		margin-top: 0 !important;
+		transition: 2s ease-in;
 
 		.nav__links {
 			display: none;
@@ -321,8 +321,8 @@
 
 	#navbar {
 		// set animation
-		-webkit-transition: all 0.6s ease-out;
-		transition: all 0.6s ease-out;
+		-webkit-transition: all 10s ease-out;
+		transition: all 10s ease-out;
 	}
 
 	header.navbar-fixed-top {

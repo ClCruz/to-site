@@ -1,6 +1,6 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main pb-0" style="" data-block-type="call_to_action" data-id="2">
+  <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
     <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub">
       <div class="col-12 col-md-10 justify-content-center text-center">
         <div class="" style="">
