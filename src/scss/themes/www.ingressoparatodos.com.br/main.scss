@@ -1,0 +1,87 @@
+@import "settings.scss";
+@import "../../main.scss";
+@import "override.scss";
+@import "../../to-framework/main.scss";
+
+header.bg-dark {
+	// background-color: rgb(202, 8, 19) !important;
+	background-color: $secundary !important;
+}
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+}
+
+// footer.bg-dark {
+// 	background-color: rgb(255, 255, 255) !important;
+// 	color: black !important;
+// }
+
+// footer a,
+// footer p {
+// 	color: black !important;
+// }
+
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
+}
+
+// footer.bg-dark a {
+// 	color: black !important;
+// }
+
+// footer .img {
+// 	// background: #fff;
+// 	// background-position: center !important;
+// 	// border-radius: 2px;
+// }
+
+$gradiente: $secundary !important;
+.navbar-fixed-top .to-btn {
+	color: white !important;
+}
+.header__logo .img {
+	height: 40px;
+	width: 100%;
+	background-position: left center;
+}
+
+.swal2-progresscircle {
+	background: $secundary !important;
+}
+
+.swal2-styled {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $secundary !important;
+	border: none;
+	color: white;
+	transition: 0.5s;
+
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
+	}
+}
+
+#ddown1 button {
+	color: black !important;
+}
+
+.bg__main {
+	background: linear-gradient(150deg, #f05b5d 10%, #c43c3f) !important;
+
+	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
+	@include MQ(S) {
+		display: none !important;
+	}
+}
+
+.eventHeader header.bg-dark {
+	background: linear-gradient(135deg, $secundary 20%, #ca5557) !important;
+}

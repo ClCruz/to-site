@@ -236,6 +236,8 @@
 		// background: url('https://external-preview.redd.it/AU_vXWRMejWU49gXKdKZ4FMXUGIf3ajCGEn53hwZabg.png?width=640&crop=smart&auto=webp&s=8342925c47b3e35405e8146f2ea1b856f9c119c3');
 		// height: auto !important;
 		border-radius: 2px !important;
+		object-fit: contain !important;
+		height: auto;
 		width: 100%;
 	}
 
@@ -276,7 +278,8 @@
 		width: 100%;
 		background: #fff !important;
 		margin-top: 0 !important;
-		transition: 2s ease-in;
+		opacity: 1;
+		transition: top 0.4s linear;
 
 		.nav__links {
 			display: none;
@@ -321,13 +324,13 @@
 
 	#navbar {
 		// set animation
-		-webkit-transition: all 10s ease-out;
-		transition: all 10s ease-out;
+		transition: top 2s linear;
 	}
 
 	header.navbar-fixed-top {
 		background: #fff !important;
 		z-index: 50000;
+		transition: 2s !important;
 	}
 
 	.navbar-fixed-top .header__logo .img {
@@ -602,7 +605,7 @@
 
 	.eventHeader {
 		header.bg-dark {
-			background: #fff !important;
+			// background: none !important;
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .15);
 		}
 
