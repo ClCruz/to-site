@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/ingressaria/main.scss",
   "css": "/stylesheets/themes/www.ingressaria.com.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-ingressaria.png",
   "favico": "/img/ingressaria/",
   "videos": {
