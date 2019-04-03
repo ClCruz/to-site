@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.ingressaria.com.br",
+  "uri": "https://www.ingressaria.com.br",
+  "api": "https://api.ingressaria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.ingressaria.com.br",
+  "admin": "https://admin.ingressaria.com.br",
+  "apikey": "live_dd310c796ff04199b5680a5cad098930c2ae8da63b974b43abb21d92ec5123b2",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/ingressaria/main.scss",
+  "css": "/stylesheets/themes/www.ingressaria.com.br/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-ingressaria.png",
+  "favico": "/img/ingressaria/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "ingressaria, marketplace de eventos",
+    "keywords": "eventos, shows, teatro"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Ingressaria",
+    "description": "ingressaria, marketplace de eventos",
+    "siteName": "www.ingressaria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua das Rosas, 1",
+    "companyName": "Ingressaria"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_ingressaria/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_ingressaria/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_ingressaria/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_ingressaria/emailComprador.html",
+      "gift": "../comprar/templates/multi_ingressaria/emailPresente.html",
+      "signature": "../comprar/templates/multi_ingressaria/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_ingressaria/confirmacaoEmail.html"
+
+    }
+  }
+}

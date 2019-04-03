@@ -16,7 +16,6 @@
     "192.168.15.26:8080": "localhost",
     "192.168.15.23": "localhost",
     "192.168.15.26": "localhost",
-    "localhost": "bringressos",
     "localhost": "localhost",
     "localhost:2001": "localhost",
     "10.0.2.2:8080": "pinpad_lh",
@@ -131,5 +130,9 @@
     "www.ingressoparatodos.com.br\/": "ingressoparatodos",
     "api.ingressoparatodos.com.br\/": "ingressoparatodos",
     "compra.ingressoparatodos.com.br\/": "ingressoparatodos",
-    "admin.ingressoparatodos.com.br\/": "ingressoparatodos"
+    "admin.ingressoparatodos.com.br\/": "ingressoparatodos",
+    "www.ingressaria.com.br": "ingressaria",
+    "api.ingressaria.com.br": "ingressaria",
+    "compra.ingressaria.com.br": "ingressaria",
+    "admin.ingressaria.com.br": "ingressaria"
 }
