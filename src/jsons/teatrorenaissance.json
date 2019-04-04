@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "teatrorenaissance.tixs.me",
+  "uri": "https://teatrorenaissance.tixs.me",
+  "api": "https://api.teatrorenaissance.tixs.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.teatrorenaissance.tixs.me",
+  "admin": "https://admin.teatrorenaissance.tixs.me",
+  "apikey": "live_3cf02f67511e4f5db0f09f903e31ddb086814f06433b46228f711c2c5582d8a0",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/teatrorenaissance/main.scss",
+  "css": "/stylesheets/themes/teatrorenaissance.tixs.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-teatrorenaissance.jpeg",
+  "favico": "/img/teatrorenaissance/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "teatro",
+    "keywords": "teatro"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Teatro Renaissance",
+    "description": "teatro",
+    "siteName": "teatrorenaissance.tixs.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Teatro Renaissance",
+    "companyName": "Teatro Renaissance"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_teatrorenaissance/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_teatrorenaissance/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_teatrorenaissance/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_teatrorenaissance/emailComprador.html",
+      "gift": "../comprar/templates/multi_teatrorenaissance/emailPresente.html",
+      "signature": "../comprar/templates/multi_teatrorenaissance/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_teatrorenaissance/confirmacaoEmail.html"
+
+    }
+  }
+}
