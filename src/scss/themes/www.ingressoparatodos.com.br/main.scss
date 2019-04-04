@@ -12,10 +12,9 @@ header.bg-dark {
 	width: 100%;
 }
 
-// footer.bg-dark {
-// 	background-color: rgb(255, 255, 255) !important;
-// 	color: black !important;
-// }
+footer.bg-dark {
+	background: radial-gradient(circle farthest-corner at 10% 20%, #ffc576 0%, #fe6a67 47.7%, #f01717 92.3%) !important;
+}
 
 // footer a,
 // footer p {
@@ -96,7 +95,64 @@ $gradiente: $secundary !important;
 	) !important;
 }
 
+#modals-container .btn-success:hover,
+#modals-container .btn-success:focus,
+#modals-container .btn-success {
+	background-image: radial-gradient(
+		circle farthest-corner at 10% 20%,
+		rgba(255, 197, 118, 1) 0%,
+		rgba(254, 106, 103, 1) 47.7%,
+		rgba(240, 23, 23, 1) 92.3%
+	) !important;
+}
+
+.to-block .to-touch,
+.container__register form {
+	border-top-color: rgba(254, 106, 103, 1) !important;
+}
+.container__available-times .card__hour {
+	background-image: radial-gradient(
+		circle farthest-corner at 10% 20%,
+		rgba(255, 197, 118, 1) 0%,
+		rgba(254, 106, 103, 1) 47.7%,
+		rgba(240, 23, 23, 1) 92.3%
+	) !important;
+	* {
+		color: white !important;
+	}
+}
+
+.card__time {
+	&:hover {
+		background: rgba(254, 106, 103, 1) !important;
+		*,
+		p.lead {
+			color: white !important;
+		}
+
+		i {
+			color: rgba(254, 106, 103, 1) !important;
+		}
+	}
+}
+
+.card__time-active {
+	background: rgba(254, 106, 103, 1) 47.7%;
+	*,
+	p.lead {
+		color: white !important;
+	}
+}
+
+.icon-active {
+	color: rgba(254, 106, 103, 1) !important;
+}
+
 .eventHeader header.navbar-fixed-top {
 	background: white !important;
 	background-image: white !important;
+}
+
+.v--modal-overlay {
+	z-index: 999999 !important;
 }

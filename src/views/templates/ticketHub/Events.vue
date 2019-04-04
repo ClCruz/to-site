@@ -178,7 +178,8 @@ export default {
     getListResultAgain() {
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
-          this.slideData = response;
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+
           this.hideWaitAboveAll();
         },
         error => {
@@ -236,7 +237,8 @@ export default {
 
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
-          this.slideData = response;
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+
           this.hideWaitAboveAll();
           this.isLoaded = true;
 

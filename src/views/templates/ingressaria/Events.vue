@@ -316,7 +316,7 @@ export default {
     getListResultAgain() {
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
-          this.slideData = response;
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
           this.hideWaitAboveAll();
         },
         error => {
@@ -365,7 +365,7 @@ export default {
     getBanner() {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
-          this.bannerEvents = response.slice(1, 4);;
+          this.bannerEvents = response;
           this.slideLoaded = true;
         },
         error => {
@@ -391,7 +391,8 @@ export default {
 
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
-          this.slideData = response;
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+
           this.filteredData = this.slideData
 
           this.hideWaitAboveAll();
