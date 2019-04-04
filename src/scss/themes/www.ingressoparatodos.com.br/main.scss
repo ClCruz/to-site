@@ -86,7 +86,8 @@ $gradiente: $secundary !important;
 	}
 }
 
-.eventHeader header.bg-dark {
+.eventHeader header.bg-dark,
+.header__mobile {
 	background-image: radial-gradient(
 		circle farthest-corner at 10% 20%,
 		rgba(255, 197, 118, 1) 0%,
@@ -110,6 +111,7 @@ $gradiente: $secundary !important;
 .container__register form {
 	border-top-color: rgba(254, 106, 103, 1) !important;
 }
+
 .container__available-times .card__hour {
 	background-image: radial-gradient(
 		circle farthest-corner at 10% 20%,
