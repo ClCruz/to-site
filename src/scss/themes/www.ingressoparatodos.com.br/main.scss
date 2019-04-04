@@ -5,7 +5,7 @@
 
 header.bg-dark {
 	// background-color: rgb(202, 8, 19) !important;
-	background-color: $secundary !important;
+	background-color: none !important;
 }
 .header__logo .img {
 	height: 55px;
@@ -40,10 +40,10 @@ header.bg-dark {
 
 $gradiente: $secundary !important;
 .navbar-fixed-top .to-btn {
-	color: white !important;
+	// color: white !important;
 }
 .header__logo .img {
-	height: 40px;
+	height: 55px;
 	width: 100%;
 	background-position: left center;
 }
@@ -74,7 +74,12 @@ $gradiente: $secundary !important;
 }
 
 .bg__main {
-	background: linear-gradient(150deg, #f05b5d 10%, #c43c3f) !important;
+	background-image: radial-gradient(
+		circle farthest-corner at 10% 20%,
+		rgba(255, 197, 118, 1) 0%,
+		rgba(254, 106, 103, 1) 47.7%,
+		rgba(240, 23, 23, 1) 92.3%
+	) !important;
 
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
 	@include MQ(S) {
@@ -83,5 +88,15 @@ $gradiente: $secundary !important;
 }
 
 .eventHeader header.bg-dark {
-	background: linear-gradient(135deg, $secundary 20%, #ca5557) !important;
+	background-image: radial-gradient(
+		circle farthest-corner at 10% 20%,
+		rgba(255, 197, 118, 1) 0%,
+		rgba(254, 106, 103, 1) 47.7%,
+		rgba(240, 23, 23, 1) 92.3%
+	) !important;
+}
+
+.eventHeader header.navbar-fixed-top {
+	background: white !important;
+	background-image: white !important;
 }
