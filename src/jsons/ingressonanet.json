@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/ingressonanet/main.scss",
   "css": "/stylesheets/themes/www.ingressonanet.tk/main.css",
-  "template": "ticketHub",
+  "template": "ingressaria",
   "logo": "https://media.tixs.me/logos/logo-ingressonanet.jpg",
   "favico": "/img/ingressonanet/",
   "videos": {
