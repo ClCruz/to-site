@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/teatrorenaissance/main.scss",
   "css": "/stylesheets/themes/teatrorenaissance.tixs.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-teatrorenaissance.jpeg",
   "favico": "/img/teatrorenaissance/",
   "videos": {
