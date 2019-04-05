@@ -6,7 +6,7 @@
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.aecloja.com.br",
   "admin": "https://admin.aecloja.com.br",
-  "apikey": "live_11ce7f37324c4f8b9882288b94076b6761305b4b0b1b47b9ba66c58be26073cf",
+  "apikey": "live_87407d71fcb74ef6a7076291d8f3e138d1ee83b9f1be48029b07594c45236c69",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/aecloja/main.scss",
