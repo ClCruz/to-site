@@ -142,5 +142,9 @@
     "ingressos.coastfight.com.br": "coastfight",
     "api.ingressos.coastfight.com.br": "coastfight",
     "compra.ingressos.coastfight.com.br": "coastfight",
-    "admin.ingressos.coastfight.com.br": "coastfight"
+    "admin.ingressos.coastfight.com.br": "coastfight",
+    "reservagruposdemo.tk": "reservagrupos",
+    "api.reservagruposdemo.tk": "reservagrupos",
+    "compra.reservagruposdemo.tk": "reservagrupos",
+    "admin.reservagruposdemo.tk": "reservagrupos"
 }

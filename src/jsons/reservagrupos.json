@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "reservagruposdemo.tk",
+  "uri": "https://reservagruposdemo.tk",
+  "api": "https://api.reservagruposdemo.tk",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.reservagruposdemo.tk",
+  "admin": "https://admin.reservagruposdemo.tk",
+  "apikey": "live_675ee57d246b43fba26599abdc43a9afdc5d723ab8e4432cbc246e12ae32c753",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/reservagrupos/main.scss",
+  "css": "/stylesheets/themes/reservagruposdemo.tk/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-reservagrupos.png",
+  "favico": "/img/reservagrupos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "ingressos",
+    "keywords": "ingressos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Reserva Grupos",
+    "description": "ingressos",
+    "siteName": "reservagruposdemo.tk",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Endereço Teste",
+    "companyName": "Reserva Grupos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_reservagrupos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_reservagrupos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_reservagrupos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_reservagrupos/emailComprador.html",
+      "gift": "../comprar/templates/multi_reservagrupos/emailPresente.html",
+      "signature": "../comprar/templates/multi_reservagrupos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_reservagrupos/confirmacaoEmail.html"
+
+    }
+  }
+}
