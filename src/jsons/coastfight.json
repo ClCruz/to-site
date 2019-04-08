@@ -1,17 +1,17 @@
 {
   "env": "production",
-  "host": "coastfight.com.br",
-  "uri": "https://coastfight.com.br",
-  "api": "https://api.coastfight.com.br",
+  "host": "ingressos.coastfight.com.br",
+  "uri": "https://ingressos.coastfight.com.br",
+  "api": "https://api.ingressos.coastfight.com.br",
   "pinpad": "http://localhost:7001/api",
-  "legacy": "https://compra.coastfight.com.br",
-  "admin": "https://admin.coastfight.com.br",
+  "legacy": "https://compra.ingressos.coastfight.com.br",
+  "admin": "https://admin.ingressos.coastfight.com.br",
   "apikey": "live_46505e70036d429eac03c21086d05f16d9eb08a88ce34fd89c79e2f2a776bd99",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/coastfight/main.scss",
-  "css": "/stylesheets/themes/coastfight.com.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "css": "/stylesheets/themes/ingressos.coastfight.com.br/main.css",
+  "template": "ingressaria",
   "logo": "/assets/logo-coastfight.jpeg",
   "favico": "/img/coastfight/",
   "videos": {
@@ -28,7 +28,7 @@
   "info": {
     "title": "Coast Fight",
     "description": "Maior evento da Baixada Santista, realizado no Guarujá ",
-    "siteName": "coastfight.com.br",
+    "siteName": "ingressos.coastfight.com.br",
     "CNPJ": "11.111.111/1111-11",
     "companyAddress": "1",
     "companyName": "Coast Fight"
