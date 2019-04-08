@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "coastfight.com.br",
+  "uri": "https://coastfight.com.br",
+  "api": "https://api.coastfight.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.coastfight.com.br",
+  "admin": "https://admin.coastfight.com.br",
+  "apikey": "live_46505e70036d429eac03c21086d05f16d9eb08a88ce34fd89c79e2f2a776bd99",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/coastfight/main.scss",
+  "css": "/stylesheets/themes/coastfight.com.br/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-coastfight.jpeg",
+  "favico": "/img/coastfight/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Maior evento da Baixada Santista, realizado no Guarujá ",
+    "keywords": "lutas, cards, mma baixada"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Coast Fight",
+    "description": "Maior evento da Baixada Santista, realizado no Guarujá ",
+    "siteName": "coastfight.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "1",
+    "companyName": "Coast Fight"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_coastfight/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_coastfight/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_coastfight/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_coastfight/emailComprador.html",
+      "gift": "../comprar/templates/multi_coastfight/emailPresente.html",
+      "signature": "../comprar/templates/multi_coastfight/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_coastfight/confirmacaoEmail.html"
+
+    }
+  }
+}
