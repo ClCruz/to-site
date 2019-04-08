@@ -5,18 +5,46 @@
 
 header.bg-dark {
 	// background-color: rgb(202, 8, 19) !important;
-	background-color: rgb(255, 255, 255) !important;
+	background-color: none !important;
 }
 .header__logo .img {
 	height: 55px;
 	width: 100%;
 }
 
-.bg-dark {
-	background-color: $secondary !important;
+footer.bg-dark {
+	background: linear-gradient(to top, #f15f79, #b24592) !important;
 }
 
-$gradiente: $secundary !important;
+// footer a,
+// footer p {
+// 	color: black !important;
+// }
+
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
+}
+
+// footer.bg-dark a {
+// 	color: black !important;
+// }
+
+// footer .img {
+// 	// background: #fff;
+// 	// background-position: center !important;
+// 	// border-radius: 2px;
+// }
+
+.navbar-fixed-top .to-btn {
+	// color: white !important;
+}
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+	background-position: left center;
+}
 
 .swal2-progresscircle {
 	background: $secundary !important;
@@ -39,6 +67,41 @@ $gradiente: $secundary !important;
 	}
 }
 
-.header__signin {
-	color: #333;
+#ddown1 button {
+	color: black !important;
+}
+
+.bg__main {
+	background: linear-gradient(to top, #1488cc, #0072ff);
+	background: #b24592; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #f15f79, #b24592); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to top,
+		#f15f79,
+		#b24592
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
+	@include MQ(S) {
+		display: none !important;
+	}
+}
+
+.eventHeader header.bg-dark,
+.header__mobile {
+	background: linear-gradient(to top, #f15f79, #b24592) !important;
+}
+
+#modals-container .btn-success:hover,
+#modals-container .btn-success:focus,
+#modals-container .btn-success {
+	background: linear-gradient(to top, #f15f79, #b24592) !important;
+}
+.eventHeader header.navbar-fixed-top {
+	background: white !important;
+	background-image: white !important;
+}
+
+.v--modal-overlay {
+	z-index: 999999 !important;
 }
