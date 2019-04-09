@@ -3,7 +3,7 @@
   <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
     <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub">
       <div class="col-12 col-md-10 justify-content-center text-center">
-        <div v-if="siteName == 'ingressoparatodos'">
+        <div v-if="siteName == 'ingressoparatodos.com.br'">
           <h1 class="pb-0 mb-0" style="padding-bottom: -40px !important">INGRESSO PARA TODOS</h1>
           <p class="pt-0 mt-0" style="color: white !important; margin-top: -20px !important ">
 
