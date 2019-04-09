@@ -92,7 +92,7 @@
         </div>
         <div class="row mt-5 footer-name nopadding">
           <div class="col text-center">
-            <p>2018 {{companyName}} </p>
+            <p>{{companyName}} </p>
           </div>
         </div>
         <div class="row mt-0 nopadding mb-0 pb-0">
