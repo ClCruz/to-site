@@ -82,7 +82,7 @@
             </div>
 
           </div>
-          <div v-if="siteName == 'ingressoparatodos'" class="col-12 col-md mt-5 mt-md-0 text-md-left">
+          <div v-if="siteName == 'ingressoparatodos.com.br'" class="col-12 col-md mt-5 mt-md-0 text-md-left">
           <h3><strong>Realização:</strong></h3>
 
            <img style="width: 80%;" src="/assets/logo-parceiro-construcao.png" alt="">
