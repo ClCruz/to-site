@@ -98,7 +98,7 @@
         <div class="row mt-0 nopadding mb-0 pb-0">
           <div class="col text-center">
             <p>
-              {{companyAddress}} - CNPJ: {{CNPJ}}
+              {{companyAddress}} <span v-if="companyAddress != ''">-</span> CNPJ: {{CNPJ}}
             </p>
           </div>
         </div>
