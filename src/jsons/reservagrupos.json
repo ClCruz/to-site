@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/reservagrupos/main.scss",
   "css": "/stylesheets/themes/reservagrupos.tixs.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-reservagrupos.png",
   "favico": "/img/reservagrupos/",
   "videos": {
