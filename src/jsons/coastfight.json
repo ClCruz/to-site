@@ -4,7 +4,7 @@
   "uri": "https://ingressos.coastfight.com.br",
   "api": "https://api.coastfight.com.br",
   "pinpad": "http://localhost:7001/api",
-  "legacy": "https://compra.ingressos.coastfight.com.br",
+  "legacy": "https://compra.coastfight.com.br",
   "admin": "https://admin.coastfight.com.br",
   "apikey": "live_46505e70036d429eac03c21086d05f16d9eb08a88ce34fd89c79e2f2a776bd99",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",

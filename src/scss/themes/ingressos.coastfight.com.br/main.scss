@@ -76,17 +76,24 @@ $gradiente: $secundary !important;
 }
 
 .bg__main {
-	background: #222 !important;
 }
 
 header.bg-dark,
 footer.bg-dark {
-	background: rgb(39, 39, 39) !important;
+	background: #212121 !important;
 	border-bottom: 1px solid #111;
 }
 
 .bg__main {
-	background: rgb(39, 39, 39) !important;
+	background: #1a2a6c; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#fdbb2d,
+		#b21f1f,
+		#1a2a6c
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
 	@include MQ(S) {
 		display: none !important;
@@ -95,16 +102,16 @@ footer.bg-dark {
 
 .eventHeader header.bg-dark,
 .header__mobile {
-	background: rgb(39, 39, 39) !important;
+	background: #212121 !important;
 }
 
 #modals-container .btn-success:hover,
 #modals-container .btn-success:focus,
 #modals-container .btn-success {
-	background: rgb(39, 39, 39) !important;
+	background: #212121 !important;
 }
 .eventHeader header.navbar-fixed-top {
-	background: rgb(39, 39, 39) !important;
+	background: #212121 !important;
 }
 
 .v--modal-overlay {

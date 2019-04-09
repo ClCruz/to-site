@@ -19,7 +19,7 @@
           <div class="collapse navbar-collapse col-md-8">
             <div class="nav__links navbar-nav ml-auto">
               <ul class="navbar-nav">
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <router-link class="nav-link" to="/busca/genero/TEATRO">Teatro
                   </router-link>
                 </li>
@@ -28,14 +28,10 @@
                   <router-link class="nav-link" to="/busca/genero/Show">Shows
                   </router-link>
                 </li>
-                <!-- <li class="nav-item">
-                  <router-link class="nav-link" to="/busca/genero/Musical">Musicais
-                  </router-link>
-                </li> -->
                 <li class="nav-item">
                   <router-link class="nav-link" to="/busca/genero/Infantil">Infantil
                   </router-link>
-                </li>
+                </li> -->
                 <li class="nav-item">
                   <router-link class="nav-link" to="/sac/empresa/sobre">Ajuda
                   </router-link>
