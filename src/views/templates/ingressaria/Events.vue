@@ -3,8 +3,18 @@
   <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
     <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub">
       <div class="col-12 col-md-10 justify-content-center text-center">
-        <div class="" style="">
-          <h1>Procure experiências</h1>
+        <div v-if="siteName == 'ingressoparatodos'">
+          <h1 class="pb-0 mb-0" style="padding-bottom: -40px !important">INGRESSO PARA TODOS</h1>
+          <p class="pt-0 mt-0" style="color: white !important; margin-top: -20px !important ">
+
+            <br>
+Sem taxas - Preços Promocionais - Lugares Demarcados
+            <br>
+            <!-- <span style="">concorra a ingressos grátis toda semana</span> -->
+          </p>
+        </div>
+        <div class="" style="" v-else>
+          <h1>Pesquise experiências</h1>
         </div>
         <div class="input-group mt-0 mb-3 p-2 w-100">
           <app-search></app-search>
@@ -12,7 +22,7 @@
       </div>
     </div>
   </section>
-  <div class="container-fluid container__select pb-0" style="border-bottom: 1px solid #e3e3e3">
+  <div class="container-fluid container__select pb-0" style="border-bottom: 1px solid #e3e3e3" v-if="cityList.length > 1">
     <div class="row pb-0">
       <div class="col-6 text-right select__city" style="border-right: 1px solid #e3e3e3;">
         <model-select :options="options" v-model="item" placeholder="Selecionar Cidade" @input="handleOnInput">
@@ -39,6 +49,7 @@
       </div>
     </div>
   </div>
+  <div class="p-2 container-fluid container__select" v-else></div>
   <!-- Propaganda -->
   <div class="container-fluid container__select" v-if="discoveryBanner.length > 0">
     <div class="container p-0">
@@ -54,17 +65,18 @@
     </div>
   </div>
   <!-- Destaque generos -->
-  <section class="features" style="background: white" data-block-type="features" data-id="3">
+  <section class="features" style="background: white" data-block-type="features" data-id="3" id="features">
     <div class="container">
       <div class="row text-left pt-1 pb-1">
         <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-          <h3 class="">Explore nossos eventos</h3>
+          <h3 class="">Explore nossos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+          <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
         </div>
 
-        <div class="col-12 p-0 mt-2 pt-2" style="" v-if="!genreListLoaded">
+        <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
           <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
         </div>
-        <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container" style="" v-for="(item, index) in genreList" :key='index' v-else>
+        <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in genreList" :key='index' v-else>
           <p>
             <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
               <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
@@ -75,7 +87,7 @@
     </div>
   </section>
   <!-- Banner -->
-  <div class="container__select to-block container__features">
+  <div class="container__select to-block container__features" id="banner">
     <div class="container pt-2 pb-0 text-left">
       <h3 class="">Experiências em destaque</h3>
       <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</p>
@@ -101,7 +113,7 @@
     </div>
   </div>
 
-  <section class="to-block team-1 mt-0 pt-0">
+  <section class="to-block team-1 mt-0 pt-0" id="events">
     <div class="container">
       <div class="row row__events">
         <div class="col-12 col-sm-12 text-left mt-2 mb-2">
@@ -155,6 +167,7 @@ export default {
   mixins: [func],
   data() {
     return {
+      siteName: config.info.siteName,
       discoveryBanner: '',
       slideLoaded: false,
       genreListLoaded: false,
@@ -228,7 +241,7 @@ export default {
       this.item = this.options[0]
     },
     clearDate() {
-      console.log(this.dateValue);
+      // console.log(this.dateValue);
 
     },
 
@@ -269,14 +282,30 @@ export default {
 
     selectDate(data) {
 
-      console.log(data);
+      // console.log(data);
       if (data == "1970-01-01") return;
       if (data == null) return;
 
       this.date = new Date(data).toISOString().split('T')[0];
+      
+      this.refreshEffect();
 
       this.getListResultsFiltered();
 
+
+    },
+    refreshEffect() {
+      var banner = document.getElementById('banner');
+      var features = document.getElementById('features');
+      var events = document.getElementById('events');
+
+      $('#banner').fadeOut();
+      $('#features').fadeOut();
+      $('#events').fadeOut();
+
+      $('#banner').fadeIn();
+      $('#features').fadeIn();
+      $('#events').fadeIn();
     },
     handleOnInput($event) {
       this.item = $event;
@@ -289,7 +318,9 @@ export default {
         this.searchTerm = this.item.text;
       }
 
-      console.log(this.searchTerm);
+      this.refreshEffect();
+
+      // console.log(this.searchTerm);
       this.getListResultsFiltered();
 
     },
@@ -301,9 +332,6 @@ export default {
     getListResultsFiltered() {
       eventService.list(this.searchTerm, this.locale.state.name, this.date).then(
         response => {
-
-          console.log(this.discovery);
-
           this.filteredData = response;
           this.hideWaitAboveAll();
         },
@@ -336,9 +364,10 @@ export default {
     },
     getCityList() {
       this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, this.slideData);
+
     },
     getGenreList() {
-      this.genreList = this.removeDuplicatesBy(x => x.genreName, this.slideData).slice(0, 6);
+      this.genreList = this.removeDuplicatesBy(x => x.genreName, this.filteredData).slice(0, 6);
 
       this.genreListLoaded = true;
     },
@@ -375,8 +404,10 @@ export default {
       );
     },
     getDiscovery() {
-      discoveryService.list().then(
+      console.log(this.key);
+      discoveryService.list(this.key).then(
         response => {
+          console.log(response);
           this.discovery = response.filter(x => x.type !== 'banner');
           this.discoveryBanner = response.filter(x => x.type == 'banner');
         },
@@ -435,7 +466,7 @@ export default {
         }
       });
 
-      console.log(ret);
+      // console.log(ret);
 
       return ret;
     },
