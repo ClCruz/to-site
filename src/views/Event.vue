@@ -737,6 +737,9 @@ export default {
             this.hideWaitAboveAll();
             if (this.validateJSON(response)) {
               this.salasDisponiveis = response;
+
+              // console.log("Salas: ");
+              // console.log(this.salasDisponiveis);
               this.roomLoaded = true;
             }
           },
@@ -879,7 +882,7 @@ export default {
       let hours = this.presentantion.filter(x => x.day == day);
 
       document.querySelector('.container__available-times').style.opacity = 0;
-      console.log(hours);
+      // console.log(hours);
       this.listOfHours = this.removeDuplicatesBy(x => x.HorSessao, hours);
 
       setTimeout(function () {
@@ -915,7 +918,7 @@ export default {
     this.getEvent();
     this.keepalive();
 
-    console.log(this.event)
+    // console.log(this.event)
 
   },
   computed: {
@@ -935,13 +938,14 @@ export default {
         ret = ret.filter(x => x.day == day && x.year == year);
       }
 
+			// console.log("TCL: filtered -> ret", ret)
       return ret;
     },
     filteredDays() {
       // debugger
       let ret = this.presentantion;
-
-      // console.log('TCL: filtered -> ret;', ret)
+      
+			// console.log("TCL: filteredDays -> ret", ret)
 
       return this.removeDuplicatesBy(x => x.day, ret);
     },

@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/skauscombat/main.scss",
   "css": "/stylesheets/themes/skauscombat.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-skauscombat.png",
   "favico": "/img/skauscombat/",
   "videos": {
