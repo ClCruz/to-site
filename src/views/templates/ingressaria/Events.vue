@@ -4,13 +4,13 @@
     <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub">
       <div class="col-12 col-md-10 justify-content-center text-center">
         <div v-if="siteName == 'ingressoparatodos.com.br'">
-          <h1 class="pb-0 mb-0" style="padding-bottom: -40px !important">INGRESSO PARA TODOS</h1>
+          <h1 class="pb-0 mb-0" style="padding-bottom: -40px !important"><span style="color: ">I</span>NGRESSO PARA <span style="color: ">T</span>ODOS</h1>
+          <h3 class="pb-0 mb-0" style="color: white !important; padding-bottom: -40px !important">TICKETERIA DEMOCRATICA</h3>
           <p class="pt-0 mt-0" style="color: white !important; margin-top: -20px !important ">
 
             <br>
 Sem taxas - Preços Promocionais - Lugares Demarcados
             <br>
-            <!-- <span style="">concorra a ingressos grátis toda semana</span> -->
           </p>
         </div>
         <div class="" style="" v-else>
@@ -28,24 +28,8 @@ Sem taxas - Preços Promocionais - Lugares Demarcados
         <model-select :options="options" v-model="item" placeholder="Selecionar Cidade" @input="handleOnInput">
         </model-select>
       </div>
-      <!-- <div class="col-12" style="margin:0 auto; display: flex; justify-content: center;"> -->
       <div class="col-6">
         <datepicker :clear-button=true :language="ptBR" @selected="selectDate" @cleared="resetEvents" placeholder="Data" :bootstrap-styling=true clear-button-icon="fa fa-sm fa-times-circle"></datepicker>
-
-        <!-- <div class="dropdown">
-          <input class="dropdown-toggle" type="text">
-          <div class="dropdown-text">Data</div>
-          <ul class="dropdown-content">
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Log out</a></li>
-            <li>
-              <a href="#">
-              </a>
-            </li>
-          </ul>
-        </div> -->
-        <!-- <i @click="clearDate" class="fa fa-lg fa-times-circle"></i> -->
       </div>
     </div>
   </div>
@@ -57,15 +41,34 @@ Sem taxas - Preços Promocionais - Lugares Demarcados
         <div class="col-12 col-xl-12 text-left">
           <div class="p-3">
             <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title">
-            <!-- <div class="discovery" :style="{ backgroundImage: 'url(\'' + discoveryBanner[0].imageURI + '\')' }"> -->
-            <!-- </div> -->
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- Destaque generos -->
-  <section class="features" style="background: white" data-block-type="features" data-id="3" id="features">
+  <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
+    <div class="container">
+      <div class="row text-left pt-1 pb-1">
+        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+          <h3 class="">Nossos teatros <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+          <p class="mt-3 mb-0 pb-0">Descubra eventos específicos de cada teatro</p>
+        </div>
+ <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
+          <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
+        </div>
+        <div @click="goto('local',item.ds_nome_teatro)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in localsList" :key='index' v-else>
+          <p>
+            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
+              <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.ds_nome_teatro }}</span>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName !== 'ingressoparatodos.com.br'">
     <div class="container">
       <div class="row text-left pt-1 pb-1">
         <div class="col-12 col-sm-12 text-left mt-2 mb-2">
@@ -102,7 +105,6 @@ Sem taxas - Preços Promocionais - Lugares Demarcados
               <div class="to-box p-0 ">
                 <div @click="goto('event',{ uri: item.uri})" class="img-fluid rounded-0" style="background-size: cover;height: 300px !important" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }">
                 </div>
-
                 <!-- <div class="ad__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div> -->
               </div>
             </div>
@@ -112,7 +114,27 @@ Sem taxas - Preços Promocionais - Lugares Demarcados
       </div>
     </div>
   </div>
+<section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
+    <div class="container">
+      <div class="row text-left pt-1 pb-1">
+        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+          <h3 class="">Explore nossos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+          <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
+        </div>
 
+        <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
+          <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
+        </div>
+        <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in genreList" :key='index' v-else>
+          <p>
+            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
+              <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="to-block team-1 mt-0 pt-0" id="events">
     <div class="container">
       <div class="row row__events">
@@ -372,7 +394,9 @@ export default {
       this.genreListLoaded = true;
     },
     getLocalsList() {
-      this.localsList = this.removeDuplicatesBy(x => x.ds_nome_teatro, this.slideData);
+      this.localsList = this.removeDuplicatesBy(x => x.ds_nome_teatro, this.filteredData).slice(0, 6);
+
+      console.log(this.localsList);
     },
     getNextEvents() {
       this.nextEvents = this.slideData.slice(1, 5);
@@ -404,10 +428,10 @@ export default {
       );
     },
     getDiscovery() {
-      console.log(this.key);
+      // console.log(this.key);
       discoveryService.list(this.key).then(
         response => {
-          console.log(response);
+          // console.log(response);
           this.discovery = response.filter(x => x.type !== 'banner');
           this.discoveryBanner = response.filter(x => x.type == 'banner');
         },
@@ -466,7 +490,7 @@ export default {
         }
       });
 
-      console.log(ret);
+      // console.log(ret);
 
       return ret;
     },
