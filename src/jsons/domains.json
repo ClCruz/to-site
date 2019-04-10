@@ -146,5 +146,9 @@
     "reservagrupos.tixs.me": "reservagrupos",
     "api.reservagrupos.tixs.me": "reservagrupos",
     "compra.reservagrupos.tixs.me": "reservagrupos",
-    "admin.reservagrupos.tixs.me": "reservagrupos"
+    "admin.reservagrupos.tixs.me": "reservagrupos",
+    "skauscombat.ticketoffice.me": "skauscombat",
+    "api.skauscombat.ticketoffice.me": "skauscombat",
+    "compra.skauscombat.ticketoffice.me": "skauscombat",
+    "admin.skauscombat.ticketoffice.me": "skauscombat"
 }

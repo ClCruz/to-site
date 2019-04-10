@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "skauscombat.ticketoffice.me",
+  "uri": "https://skauscombat.ticketoffice.me",
+  "api": "https://api.skauscombat.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.skauscombat.ticketoffice.me",
+  "admin": "https://admin.skauscombat.ticketoffice.me",
+  "apikey": "live_7bb29eb0042949fb912fde77dc22b6b4e4229bb44ed340df89d833676462f570",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/skauscombat/main.scss",
+  "css": "/stylesheets/themes/skauscombat.ticketoffice.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-skauscombat.png",
+  "favico": "/img/skauscombat/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Skaus combat",
+    "keywords": "skaus combat, luta, mma"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Skaus Combat",
+    "description": "Skaus combat",
+    "siteName": "skauscombat.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua José Maria Lisboa, 593 - Sala 2 - Jardim Paulista - São Paulo/SP - Cep: 01423-000",
+    "companyName": "Skaus Combat"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_skauscombat/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_skauscombat/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_skauscombat/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_skauscombat/emailComprador.html",
+      "gift": "../comprar/templates/multi_skauscombat/emailPresente.html",
+      "signature": "../comprar/templates/multi_skauscombat/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_skauscombat/confirmacaoEmail.html"
+
+    }
+  }
+}
