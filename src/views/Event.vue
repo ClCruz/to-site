@@ -121,7 +121,7 @@
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
                     </span>
-                    <h3 class="mt-3">Detalhes do eventos</h3>
+                    <h3 class="mt-3">Detalhes do evento</h3>
 
                     <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
                     <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
