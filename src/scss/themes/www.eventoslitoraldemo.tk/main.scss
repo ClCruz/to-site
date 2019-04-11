@@ -8,8 +8,14 @@
 }
 
 .header__logo .img {
-	height: 55px;
+	height: 40px;
 	width: 100%;
+}
+
+.navbar-fixed-top {
+	.header__logo .img {
+		height: 40px !important;
+	}
 }
 
 .bg-dark {
@@ -84,9 +90,8 @@ body {
 	// background-size: contain !important;
 	// background-repeat: no-repeat !important;
 
-	  background: url(https://cdn.guicheweb.com.br/gw-bucket/imagenseventos/27-02-2019_19-24-03.jpg) center top no-repeat !important;
-		height: 450px;
-	  
+	background: url(https://cdn.guicheweb.com.br/gw-bucket/imagenseventos/27-02-2019_19-24-03.jpg) center top no-repeat !important;
+	height: 450px;
 }
 
 header {
@@ -102,4 +107,49 @@ header.navbar-fixed-top {
 }
 
 .bg__main {
+}
+
+.nav__links {
+	display: none;
+}
+nav {
+	padding: 10px !important;
+}
+
+.btn {
+	padding: .15rem 1.3rem !important;
+}
+
+.header__logo .img {
+	width: 100%;
+	background-position: left !important;
+}
+.to-btn {
+	color: #666 !important;
+	font-weight: normal !important;
+	font-size: 13px !important;
+}
+
+.header__search {
+	display: block !important;
+}
+
+.v-suggestions {
+	width: 70% !important;
+	box-shadow: none !important;
+}
+
+.v-suggestions input[type=text] {
+	height: 35px !important;
+	font-size: 13px !important;
+	background-size: 12px;
+	padding-left: 30px;
+
+	&:focus {
+		padding-left: 30px;
+	}
+}
+
+.suggestions {
+	top: 38px !important;
 }
