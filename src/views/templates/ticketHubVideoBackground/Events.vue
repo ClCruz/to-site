@@ -1,19 +1,21 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main row align-items-start justify-content-center" style="top: 0; width: 99vw;z-index: -1; background: none !important; padding: 0 !important;" id="sectionVideo" data-block-type="call_to_action" data-id="2">
-  <img src="/assets/eventoslitoraldata.png" alt="" style="position: absolute; height: 100px; left: 200px; top: 65px" >
+  <section class="to-block to-viewport bg-dark bg__main row align-items-start justify-content-center" style="top: 0; width: 99vw;z-index: -1; padding: 0 !important; " id="sectionVideo" data-block-type="call_to_action" data-id="2">
+  <!-- <img src="/assets/eventoslitoraldata.png" alt="" style="position: absolute; height: 100px; left: 200px; top: 65px" >
   <img src="/assets/eventoslitorallogo.png" alt="" style="position: absolute; height: 150px; right: 240px; top: 50px" >
   <img src="/assets/flecha_up.png" alt="" style="position: absolute; width: 200px; top: 0px; left: 5px" >
-  <img src="/assets/flecha_down.png" alt="" style="position: absolute; width: 200px; bottom: 0px; right: 5px" >
-  <swiper :options="swiperOptionLitoral" class="col-md-6 col-lg-4" style="position: absolute; justify-content: center; top: 20%">
+  <img src="/assets/flecha_down.png" alt="" style="position: absolute; width: 200px; bottom: 0px; right: 5px" > -->
+  <!-- <swiper :options="swiperOptionLitoral" class="col-md-6 col-lg-4" style="position: absolute; justify-content: center; top: 20%">
           <swiper-slide class=" text-center justify-content-center">
             <img src="/assets/pixote.png" alt=""  style="width: 90%">
           </swiper-slide>
           <swiper-slide class=" text-center justify-content-center">
             <img src="/assets/sorrisomaroto.png" alt=""  style="width: 90%">
           </swiper-slide>
-        </swiper>
-  <img src="/assets/bg_eventoslitoral.jpg" alt="" style="height: 100vh!important; width: 100%" >
+        </swiper> -->
+
+  <img src="/assets/bg_eventoslitoral2.png" alt="" style="max-width: 900px; align-self: center; height: auto" >
+  <!-- <img src="/assets/bg_eventoslitoral.jpg" alt="" style="height: 80vh!important; width: 100%" > -->
   </section><!-- Propaganda -->
   <div class="container-fluid container__select" v-if="discoveryBanner.length > 0">
     <div class="container p-0">
