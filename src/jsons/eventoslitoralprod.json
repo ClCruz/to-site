@@ -13,9 +13,12 @@
   "css": "/stylesheets/themes/ingressoslitoral.com.br/main.css",
   "template": "ticketHubVideo",
   "logo": "/assets/logo-eventoslitoralprod.png",
-  "favico": "/img/eventoslitoralprod/",
+  "favico": "/img/eventoslitoral/",
   "videos": {
-    "list": []
+    "list": [ 
+      { "order":1, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.webm", "type": "video/webm"  }, 
+      { "order":2, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.mp4", "type": "video/mp4"  }
+    ]
   },
   "meta": {
     "description": "eventos, litoral, pixote, evento, show",

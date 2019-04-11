@@ -1,9 +1,15 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main" style="top: 0; width: 99vw;z-index: -1;background: none!important" id="sectionVideo" data-block-type="call_to_action" data-id="2">
-    <video autoplay loop autobuffer muted playsinline id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
-      <source v-for="(item) in getconfig.info.videos.list" v-bind:key="item.order" :src="item.src" :type="item.type">
-    </video>
+  <section class="to-block to-viewport bg-dark bg__main row align-items-start justify-content-center" style="top: 0; width: 99vw;z-index: -1; background: none !important; padding: 0 !important;" id="sectionVideo" data-block-type="call_to_action" data-id="2">
+  <swiper :options="swiperOptionLitoral" class="col-md-6 col-lg-4" style="position: absolute; justify-content: center; top: 20%">
+          <swiper-slide class=" text-center justify-content-center">
+            <img src="/assets/pixote.png" alt=""  style="width: 90%">
+          </swiper-slide>
+          <swiper-slide class=" text-center justify-content-center">
+            <img src="/assets/sorrisomaroto.png" alt=""  style="width: 90%">
+          </swiper-slide>
+        </swiper>
+  <img src="/assets/bgeventoslitoral.png" alt="" style="height: 100vh!important; width: 100%" >
   </section><!-- Propaganda -->
   <div class="container-fluid container__select" v-if="discoveryBanner.length > 0">
     <div class="container p-0">
@@ -147,6 +153,26 @@ export default {
         text: ''
       },
 
+      swiperOptionLitoral: {
+        loop: true,
+        autoplay: true,
+        speed: 500,
+        loopedSlides: 1,
+        slidesPerView: 1,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next-litoral',
+          prevEl: '.swiper-button-prev-litoral'
+        },
+        breakpoints: {
+          800: {
+            slidesPerView: 1
+          }
+        },
+      },
       swiperOption: {
         // loop: true,
         // autoplay: true,
