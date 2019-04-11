@@ -156,7 +156,7 @@ export default {
       swiperOptionLitoral: {
         loop: true,
         autoplay: true,
-        speed: 500,
+        speed: 800,
         loopedSlides: 1,
         slidesPerView: 1,
         pagination: {
