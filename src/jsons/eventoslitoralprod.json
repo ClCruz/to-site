@@ -1,7 +1,7 @@
 {
   "env": "production",
-  "host": "ingressoslitoral.com.br",
-  "uri": "https://ingressoslitoral.com.br",
+  "host": "www.ingressoslitoral.com.br",
+  "uri": "https://www.ingressoslitoral.com.br",
   "api": "https://api.ingressoslitoral.com.br",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.ingressoslitoral.com.br",
@@ -10,7 +10,7 @@
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/eventoslitoralprod/main.scss",
-  "css": "/stylesheets/themes/ingressoslitoral.com.br/main.css",
+  "css": "/stylesheets/themes/www.ingressoslitoral.com.br/main.css",
   "template": "ticketHubVideo",
   "logo": "/assets/logo-eventoslitoralprod.png",
   "favico": "/img/eventoslitoral/",
@@ -31,7 +31,7 @@
   "info": {
     "title": "Eventos Litoral",
     "description": "eventos, litoral, pixote, evento, show",
-    "siteName": "ingressoslitoral.com.br",
+    "siteName": "www.ingressoslitoral.com.br",
     "CNPJ": "11.111.111/1111-11",
     "companyAddress": "",
     "companyName": "Eventos Litoral"
