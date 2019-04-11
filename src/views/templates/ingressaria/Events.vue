@@ -1,19 +1,23 @@
 <template>
 <div class="a">
   <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
-    <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub">
-      <div class="col-12 col-md-10 justify-content-center text-center">
-        <div v-if="siteName == 'ingressoparatodos.com.br'">
-          <h1 class="pb-0 mb-0" style="padding-bottom: -40px !important"><span style="color: ">I</span>NGRESSO PARA <span style="color: ">T</span>ODOS</h1>
-          <h3 class="pb-0 mb-0" style="color: white !important; padding-bottom: -40px !important">TICKETERIA DEMOCRATICA</h3>
-          <p class="pt-0 mt-0" style="color: white !important; margin-top: -20px !important ">
-
-            <br>
-Sem taxas - Preços Promocionais - Lugares Demarcados
-            <br>
-          </p>
+    <div class="container justify-content-center align-items-center d-flex container__search--tickethub" v-if="siteName == 'ingressoparatodos.com.br'">
+      <div class="col-12 col-md-10 justify-content-center text-center" style="height: 380px;" id="fundo_ingressaria">
+        <div>
         </div>
-        <div class="" style="" v-else>
+      </div>
+      <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br'">
+        <div class="" style="">
+          <h1>Pesquise experiências</h1>
+        </div>
+        <div class="input-group mt-0 mb-3 p-2 w-100">
+          <app-search></app-search>
+        </div>
+      </div>
+    </div>
+    <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub" v-else>
+      <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br'">
+        <div class="" style="">
           <h1>Pesquise experiências</h1>
         </div>
         <div class="input-group mt-0 mb-3 p-2 w-100">
@@ -22,6 +26,9 @@ Sem taxas - Preços Promocionais - Lugares Demarcados
       </div>
     </div>
   </section>
+  <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub mt-4"v-if="siteName == 'ingressoparatodos.com.br'">
+    <app-search></app-search>
+  </div>
   <div class="container-fluid container__select pb-0" style="border-bottom: 1px solid #e3e3e3" v-if="cityList.length > 1">
     <div class="row pb-0">
       <div class="col-6 text-right select__city" style="border-right: 1px solid #e3e3e3;">
@@ -42,113 +49,113 @@ Sem taxas - Preços Promocionais - Lugares Demarcados
           <div class="p-3">
             <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title">
           </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Destaque generos -->
-  <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
-    <div class="container">
-      <div class="row text-left pt-1 pb-1">
-        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-          <h3 class="">Nossos teatros <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-          <p class="mt-3 mb-0 pb-0">Descubra eventos específicos de cada teatro</p>
-        </div>
- <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
-          <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
-        </div>
-        <div @click="goto('local',item.ds_nome_teatro)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in localsList" :key='index' v-else>
-          <p>
-            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-              <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.ds_nome_teatro }}</span>
-            </div>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-<section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName !== 'ingressoparatodos.com.br'">
-    <div class="container">
-      <div class="row text-left pt-1 pb-1">
-        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-          <h3 class="">Explore nossos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-          <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
-        </div>
-
-        <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
-          <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
-        </div>
-        <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in genreList" :key='index' v-else>
-          <p>
-            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-              <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
-            </div>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Banner -->
-  <div class="container__select to-block container__features" id="banner">
-    <div class="container pt-2 pb-0 text-left">
-      <h3 class="">Experiências em destaque</h3>
-      <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</p>
-      <div class="container__arrows">
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-      </div>
-      <div class="row p-3">
-        <swiper :options="swiperOption" class="col-12 pb-0 mb-0">
-          <swiper-slide v-for="(item, index) in bannerEvents" :key='index' class="col-12 col-xl-6 col-md-6 p-0 pb-0 pt-0 text-left">
-            <div class="pr-1">
-              <div class="to-box p-0 ">
-                <div @click="goto('event',{ uri: item.uri})" class="img-fluid rounded-0" style="background-size: cover;height: 300px !important" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }">
-                </div>
-                <!-- <div class="ad__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div> -->
+    <!-- Destaque generos -->
+    <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
+      <div class="container">
+        <div class="row text-left pt-1 pb-1">
+          <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+            <h3 class="">Nossos teatros <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+            <p class="mt-3 mb-0 pb-0">Descubra eventos específicos de cada teatro</p>
+          </div>
+          <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
+            <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
+          </div>
+          <div @click="goto('local',item.ds_nome_teatro)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in localsList" :key='index' v-else>
+            <p>
+              <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
+                <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.ds_nome_teatro }}</span>
               </div>
-            </div>
-          </swiper-slide>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        </swiper>
+    <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName !== 'ingressoparatodos.com.br'">
+      <div class="container">
+        <div class="row text-left pt-1 pb-1">
+          <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+            <h3 class="">Explore nossos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+            <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
+          </div>
+
+          <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
+            <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
+          </div>
+          <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in genreList" :key='index' v-else>
+            <p>
+              <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
+                <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner -->
+    <div class="container__select to-block container__features" id="banner">
+      <div class="container pt-2 pb-0 text-left">
+        <h3 class="">Experiências em destaque</h3>
+        <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</p>
+        <div class="container__arrows">
+          <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div>
+        </div>
+        <div class="row p-3">
+          <swiper :options="swiperOption" class="col-12 pb-0 mb-0">
+            <swiper-slide v-for="(item, index) in bannerEvents" :key='index' class="col-12 col-xl-6 col-md-6 p-0 pb-0 pt-0 text-left">
+              <div class="pr-1">
+                <div class="to-box p-0 ">
+                  <div @click="goto('event',{ uri: item.uri})" class="img-fluid rounded-0" style="background-size: cover;height: 300px !important" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }">
+                  </div>
+                  <!-- <div class="ad__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div> -->
+                </div>
+              </div>
+            </swiper-slide>
+
+          </swiper>
+        </div>
       </div>
     </div>
+    <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
+      <div class="container">
+        <div class="row text-left pt-1 pb-1">
+          <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+            <h3 class="">Explore nossos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+            <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
+          </div>
+
+          <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
+            <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
+          </div>
+          <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in genreList" :key='index' v-else>
+            <p>
+              <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
+                <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="to-block team-1 mt-0 pt-0" id="events">
+      <div class="container">
+        <div class="row row__events">
+          <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+            <h3 class="">Próximos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+            <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Encontre um evento com toda a facilidade que você precisa</p>
+          </div>
+          <p style="font-size: 16px; font-weight: bold" class="mt-3" v-if="filteredData.length == 0">{{filteredData.length == 0 ? 'Nenhum evento encontrado' : ''}}</p>
+
+          <card-event v-for="(item, index) in computedFilteredData" :key='index' :item="item"></card-event>
+        </div>
+      </div>
+    </section>
   </div>
-<section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
-    <div class="container">
-      <div class="row text-left pt-1 pb-1">
-        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-          <h3 class="">Explore nossos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-          <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
-        </div>
-
-        <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
-          <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
-        </div>
-        <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in genreList" :key='index' v-else>
-          <p>
-            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-              <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
-            </div>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="to-block team-1 mt-0 pt-0" id="events">
-    <div class="container">
-      <div class="row row__events">
-        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-          <h3 class="">Próximos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-          <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Encontre um evento com toda a facilidade que você precisa</p>
-        </div>
-        <p style="font-size: 16px; font-weight: bold" class="mt-3" v-if="filteredData.length == 0">{{filteredData.length == 0 ? 'Nenhum evento encontrado' : ''}}</p>
-
-        <card-event v-for="(item, index) in computedFilteredData" :key='index' :item="item"></card-event>
-      </div>
-    </div>
-  </section>
-</div>
 </template>
 
 <script>
@@ -309,11 +316,10 @@ export default {
       if (data == null) return;
 
       this.date = new Date(data).toISOString().split('T')[0];
-      
+
       this.refreshEffect();
 
       this.getListResultsFiltered();
-
 
     },
     refreshEffect() {
