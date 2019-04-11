@@ -1,73 +1,10 @@
+@import './node_modules/bootstrap/scss/bootstrap.scss';
+@import "/../node_modules/bootstrap-vue/dist/bootstrap-vue.min.css";
+
 @import "settings.scss";
-@import "../../main.scss";
+
 @import "../../to-framework/main.scss";
 
-.slick-created {
-	transition: transform 0.3s linear;
-	transition-delay: 0.5s;
-}
-
-ul li:not(.slick-current) .content {
-	transform: scale(0.9);
-	transition-delay: 0s;
-}
-.swiper-container {
-}
-.swiper-wrapper {
-	float: left !important;
-	padding-bottom: 3ex;
-	padding-left: 1px;
-	-webkit-transition-timing-function: linear !important;
-	-o-transition-timing-function: linear !important;
-	transition-timing-function: linear !important;
-}
-.swiper-button-prev,
-.swiper-button-next {
-	right: 0;
-	background-color: transparent;
-	transition: 0.5s;
-	&:focus {
-		outline: none;
-	}
-
-	img {
-		height: 40px;
-		transition: 0.4s;
-		&:hover {
-			opacity: 0.9;
-		}
-	}
-}
-
-.swiper-button-prev,
-.swiper-container-rtl,
-.swiper-button-next {
-	background-image: none !important;
-}
-
-.swiper-button-next {
-	img {
-		&:focus {
-			transform: translateX(3px);
-			opacity: 0.7;
-		}
-		&:hover {
-			transform: translateX(2px);
-		}
-	}
-}
-
-.swiper-button-prev {
-	img {
-		&:focus {
-			transform: translateX(-2px);
-			opacity: 0.7;
-		}
-		&:hover {
-			transform: translateX(-2px);
-		}
-	}
-}
-.swiper-button-disabled {
-	display: none;
+body {
+	display: block !important;
 }

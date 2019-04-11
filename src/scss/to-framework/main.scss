@@ -6,24 +6,43 @@
 @import "../templates/ticketHubVideo/main.scss";
 @import "../templates/ticketHubSearchHeader/main.scss";
 @import "../templates/ingressaria/main.scss";
+@import "../templates/tixsme/main.scss";
 @import '../../../node_modules/pretty-checkbox/src/pretty-checkbox.scss';
 
-@if $template != 'tixs' {
+@if $template == 'tixsme' {
+	@include gridTixsme;
+	@include contentTixsme;
+	@include headerTixsme;
+	@include footerTixsme;
+	@include eventTixsme;
+	@include socialShare;
+}
+
+@if $template == 'ticketHub' {
 	@include grid;
 	@include header;
 	@include content;
 	@include footer;
-}
-
-@if $template == 'ticketHub' {
 	@include contentTicketHub;
 }
 @if $template == 'ticketHubVideo' {
+	@include grid;
+	@include header;
+	@include content;
+	@include footer;
 	@include contentTicketHubVideo;
 }
 @if $template == 'ticketHubSearchHeader' {
+	@include grid;
+	@include header;
+	@include content;
+	@include footer;
 	@include contentTicketHubSearchHeader;
 }
 @if $template == 'ingressaria' {
+	@include grid;
+	@include header;
+	@include content;
+	@include footer;
 	@include contentIngressaria;
 }

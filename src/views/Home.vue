@@ -6,6 +6,7 @@
     <!-- Template 3 (Fred) -->
     <ticket-hub-video-background v-else-if="template == 'ticketHubVideo'"></ticket-hub-video-background>
     <ingressaria v-else-if="template == 'ingressaria'"></ingressaria>
+    <tixsme v-else-if="template == 'tixsme'"></tixsme>
     <ticket-hub-search-header v-else></ticket-hub-search-header>
     <!-- Template 4 (Header com busca) -->
 </template>
@@ -20,6 +21,7 @@ import TicketHubEvents from "@/views/templates/ticketHub/Events.vue";
 import TicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Events.vue";
 import TicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Events.vue";
 import ingressaria from "@/views/templates/ingressaria/Events.vue";
+import tixsme from "@/views/templates/tixsme/Events.vue";
 import VueGeolocation from "vue-browser-geolocation";
 import VueResource from "vue-resource";
 import config from "@/config";
@@ -40,7 +42,8 @@ export default {
     TicketHubEvents,
     TicketHubSearchHeader,
     TicketHubVideoBackground,
-    ingressaria
+    ingressaria,
+    tixsme
   },
   head: {
     title: function () {

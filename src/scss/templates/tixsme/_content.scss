@@ -1,0 +1,12 @@
+@mixin contentTixsme {
+	body {
+		background: black;
+	}
+
+	.card_destaques {
+		img {
+			border-radius: 0 !important;
+			padding: 4px !important;
+		}
+	}
+}

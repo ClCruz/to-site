@@ -1,0 +1,64 @@
+@mixin socialShare {
+	/* container */
+
+	#share {
+		width: 100%;
+		margin: 10px auto;
+		justify-content: center;
+		text-align: center;
+	}
+
+	/* buttons */
+
+	#share a {
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		margin: 8px;
+		border-radius: 50%;
+		font-size: 14px;
+		color: #fff;
+		opacity: 0.75;
+		transition: opacity 0.15s linear;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#share a:hover {
+		opacity: 1;
+		text-decoration: none;
+	}
+
+	/* icons */
+
+	#share i {
+	}
+
+	/* colors */
+
+	.facebook {
+		background: #3b5998;
+	}
+
+	.twitter {
+		background: #55acee;
+	}
+
+	.googleplus {
+		background: #dd4b39;
+	}
+
+	.linkedin {
+		background: #0077b5;
+	}
+
+	.pinterest {
+		background: #cb2027;
+	}
+
+	.dark {
+		color: #444 !important;
+		font-size: 12px !important;
+	}
+}

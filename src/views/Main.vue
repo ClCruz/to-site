@@ -52,6 +52,14 @@
   </transition>
   <footer-ingressaria></footer-ingressaria>
 </div>
+<div v-else-if="template == 'tixsme'">
+  <div class="blankme" v-if="blankme"></div>
+  <header-tixsme :key="idappheader"></header-tixsme>
+  <transition name="component-fade" mode="out-in">
+    <router-view ref="rvroot" :key="$route.fullPath"></router-view>
+  </transition>
+  <footer-tixsme></footer-tixsme>
+</div>
 <div v-else>
   <div class="blankme" v-if="blankme"></div>
   <header-ticket-hub-search-header :key="idappheader"></header-ticket-hub-search-header>
@@ -68,6 +76,8 @@ import AppHeader from "@/components/App-header";
 import AppFooter from "@/components/App-footer";
 import HeaderTicketHub from "@/views/templates/ticketHub/Header"
 import FooterTicketHub from "@/views/templates/ticketHub/Footer"
+import HeaderTixsme from "@/views/templates/tixsme/Header"
+import FooterTixsme from "@/views/templates/tixsme/Footer"
 import HeaderIngressaria from "@/views/templates/ingressaria/Header"
 import FooterIngressaria from "@/views/templates/ingressaria/Footer"
 import HeaderTicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Header"
@@ -116,6 +126,8 @@ export default {
     AppFooter,
     HeaderTicketHub,
     FooterTicketHub,
+    HeaderTixsme,
+    FooterTixsme,
     HeaderIngressaria,
     FooterIngressaria,
     HeaderTicketHubSearchHeader,
