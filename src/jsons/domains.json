@@ -150,5 +150,9 @@
     "skauscombat.ticketoffice.me": "skauscombat",
     "api.skauscombat.ticketoffice.me": "skauscombat",
     "compra.skauscombat.ticketoffice.me": "skauscombat",
-    "admin.skauscombat.ticketoffice.me": "skauscombat"
+    "admin.skauscombat.ticketoffice.me": "skauscombat",
+    "ingressoslitoral.com.br": "eventoslitoralprod",
+    "api.ingressoslitoral.com.br": "eventoslitoralprod",
+    "compra.ingressoslitoral.com.br": "eventoslitoralprod",
+    "admin.ingressoslitoral.com.br": "eventoslitoralprod"
 }

@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "ingressoslitoral.com.br",
+  "uri": "https://ingressoslitoral.com.br",
+  "api": "https://api.ingressoslitoral.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.ingressoslitoral.com.br",
+  "admin": "https://admin.ingressoslitoral.com.br",
+  "apikey": "live_abac1519d4c24af6874ed7a85327634f204d5a2b9468423a93ebca8cfe1d55c2",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/eventoslitoralprod/main.scss",
+  "css": "/stylesheets/themes/ingressoslitoral.com.br/main.css",
+  "template": "ticketHubVideo",
+  "logo": "/assets/logo-eventoslitoralprod.png",
+  "favico": "/img/eventoslitoralprod/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "eventos, litoral, pixote, evento, show",
+    "keywords": "eventos, litoral, pixote, evento, show"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Eventos Litoral",
+    "description": "eventos, litoral, pixote, evento, show",
+    "siteName": "ingressoslitoral.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "",
+    "companyName": "Eventos Litoral"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_eventoslitoralprod/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_eventoslitoralprod/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_eventoslitoralprod/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_eventoslitoralprod/emailComprador.html",
+      "gift": "../comprar/templates/multi_eventoslitoralprod/emailPresente.html",
+      "signature": "../comprar/templates/multi_eventoslitoralprod/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_eventoslitoralprod/confirmacaoEmail.html"
+
+    }
+  }
+}
