@@ -52,6 +52,9 @@ header.bg-dark .navbar-nav a.nav-link,
 		color: white !important;
 	}
 
+	&:hover {
+		background: rgb(3, 63, 132) 47.7% !important;
+	}
 	.card__hour-icon {
 		// color: indianred !important;
 	}
@@ -77,6 +80,10 @@ header.bg-dark .navbar-nav a.nav-link,
 	*,
 	p.lead {
 		color: white !important;
+	}
+
+	&:hover {
+		background: rgb(3, 63, 132) 47.7% !important;
 	}
 }
 
