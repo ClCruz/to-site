@@ -1,7 +1,7 @@
 <template>
 <div class="a">
   <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
-    <div class="container justify-content-center align-items-center d-flex container__search--tickethub" v-if="siteName == 'ingressoparatodos.com.br'">
+    <div class="container justify-content-center align-items-center d-flex container__search--tickethub pt-5 pb-4" v-if="siteName == 'ingressoparatodos.com.br'">
       <div class="col-12 col-md-10 justify-content-center text-center" style="height: 380px;" id="fundo_ingressaria">
         <div>
         </div>
@@ -26,9 +26,6 @@
       </div>
     </div>
   </section>
-  <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub mt-4"v-if="siteName == 'ingressoparatodos.com.br'">
-    <app-search></app-search>
-  </div>
   <div class="container-fluid container__select pb-0" style="border-bottom: 1px solid #e3e3e3" v-if="cityList.length > 1">
     <div class="row pb-0">
       <div class="col-6 text-right select__city" style="border-right: 1px solid #e3e3e3;">

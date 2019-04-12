@@ -8,12 +8,13 @@ header.bg-dark {
 	background-color: none !important;
 }
 .header__logo .img {
-	height: 60px !important;
+	height: 40px !important;
+	padding: 10px !important;
 	width: 100%;
 }
 
 footer.bg-dark {
-	background: radial-gradient(circle farthest-corner at 10% 20%, #ffc576 0%, #fe6a67 47.7%, #f01717 92.3%) !important;
+	// background: radial-gradient(circle farthest-corner at 10% 20%, #ffc576 0%, #fe6a67 47.7%, #f01717 92.3%) !important;
 }
 
 // footer a,
@@ -74,15 +75,34 @@ $gradiente: $secundary !important;
 }
 
 .bg__main {
-	background: url('data:image/jpeg;base64,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') !important;
-	background-size: cover !important;
-
-	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
+	background: url('https://cdn.wallpapersafari.com/51/1/8KhBXE.jpg') !important;
+	background: url('/assets/bg-ingressoparatodos.jpg') !important;
+	// background-size: cover !important;
+	background-repeat: repeat;
+	background-size: auto 100% !important;
 	@include MQ(S) {
-		display: none !important;
+		display: block !important;
+		padding: 0 !important;
+	}
+
+	.container__search--tickethub {
+		@include MQ(S) {
+			height: 280px !important;
+			padding: 0 !important;
+		}
 	}
 }
 
+.a .bg__main {
+	@include MQ(S) {
+		padding-top: 20px !important;
+	}
+}
+
+.to-block .container {
+	@include MQ(S) {
+	}
+}
 #fundo_ingressaria {
 	background-image: url('/assets/marquee.png');
 	background-position: center;
@@ -90,71 +110,75 @@ $gradiente: $secundary !important;
 	background-size: contain;
 	padding: 0 !important;
 	margin-top: -30px !important;
+
+	@include MQ(S) {
+		margin-top: 0 !important;
+		background-position: top !important;
+	}
 }
 
-.eventHeader header.bg-dark,
+.eventHeader header.bg-dark {
+	background: $secundary !important;
+	background: url('https://cdn.wallpapersafari.com/51/1/8KhBXE.jpg') !important;
+
+	// background: #fff !important;
+}
 .header__mobile {
-	background-image: radial-gradient(
-		circle farthest-corner at 10% 20%,
-		rgba(255, 197, 118, 1) 0%,
-		rgba(254, 106, 103, 1) 47.7%,
-		rgba(240, 23, 23, 1) 92.3%
-	) !important;
+	background: $secundary !important;
 }
+// #modals-container .btn-success:hover,
+// #modals-container .btn-success:focus,
+// #modals-container .btn-success {
+// 	background-image: radial-gradient(
+// 		circle farthest-corner at 10% 20%,
+// 		rgba(255, 197, 118, 1) 0%,
+// 		rgba(254, 106, 103, 1) 47.7%,
+// 		rgba(240, 23, 23, 1) 92.3%
+// 	) !important;
+// }
 
-#modals-container .btn-success:hover,
-#modals-container .btn-success:focus,
-#modals-container .btn-success {
-	background-image: radial-gradient(
-		circle farthest-corner at 10% 20%,
-		rgba(255, 197, 118, 1) 0%,
-		rgba(254, 106, 103, 1) 47.7%,
-		rgba(240, 23, 23, 1) 92.3%
-	) !important;
-}
+// .to-block .to-touch,
+// .container__register form {
+// 	border-top-color: rgba(254, 106, 103, 1) !important;
+// }
 
-.to-block .to-touch,
-.container__register form {
-	border-top-color: rgba(254, 106, 103, 1) !important;
-}
+// .container__available-times .card__hour {
+// 	background-image: radial-gradient(
+// 		circle farthest-corner at 10% 20%,
+// 		rgba(255, 197, 118, 1) 0%,
+// 		rgba(254, 106, 103, 1) 47.7%,
+// 		rgba(240, 23, 23, 1) 92.3%
+// 	) !important;
+// 	* {
+// 		color: white !important;
+// 	}
+// }
 
-.container__available-times .card__hour {
-	background-image: radial-gradient(
-		circle farthest-corner at 10% 20%,
-		rgba(255, 197, 118, 1) 0%,
-		rgba(254, 106, 103, 1) 47.7%,
-		rgba(240, 23, 23, 1) 92.3%
-	) !important;
-	* {
-		color: white !important;
-	}
-}
+// .card__time {
+// 	&:hover {
+// 		background: rgba(254, 106, 103, 1) !important;
+// 		*,
+// 		p.lead {
+// 			color: white !important;
+// 		}
 
-.card__time {
-	&:hover {
-		background: rgba(254, 106, 103, 1) !important;
-		*,
-		p.lead {
-			color: white !important;
-		}
+// 		i {
+// 			color: rgba(254, 106, 103, 1) !important;
+// 		}
+// 	}
+// }
 
-		i {
-			color: rgba(254, 106, 103, 1) !important;
-		}
-	}
-}
+// .card__time-active {
+// 	background: rgba(254, 106, 103, 1) 47.7%;
+// 	*,
+// 	p.lead {
+// 		color: white !important;
+// 	}
+// }
 
-.card__time-active {
-	background: rgba(254, 106, 103, 1) 47.7%;
-	*,
-	p.lead {
-		color: white !important;
-	}
-}
-
-.icon-active {
-	color: rgba(254, 106, 103, 1) !important;
-}
+// .icon-active {
+// 	color: rgba(254, 106, 103, 1) !important;
+// }
 
 .eventHeader header.navbar-fixed-top {
 	background: white !important;
@@ -163,4 +187,40 @@ $gradiente: $secundary !important;
 
 .v--modal-overlay {
 	z-index: 999999 !important;
+}
+
+.team-1 {
+}
+
+.header__search {
+	display: block;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+}
+
+.header__search {
+	display: block !important;
+}
+
+.v-suggestions {
+	width: 70% !important;
+	box-shadow: none !important;
+}
+
+.nav__links {
+	display: none;
+}
+
+.v-suggestions input[type=text] {
+	height: 35px !important;
+	font-size: 13px !important;
+	background-size: 12px;
+	padding-left: 30px;
+
+	&:focus {
+		padding-left: 30px;
+	}
+}
+
+.suggestions {
+	top: 38px !important;
 }
