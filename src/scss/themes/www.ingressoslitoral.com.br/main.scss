@@ -42,7 +42,7 @@ header.bg-dark .navbar-nav a.nav-link,
 	font-size: 12px !important;
 
 	@include MQ(S) {
-		color: #fff !important;
+		color: #444 !important;
 	}
 }
 
@@ -162,4 +162,10 @@ nav {
 
 .header__mobile {
 	background: white !important;
+}
+
+footer a,
+footer p {
+	@include MQ(S) {
+	}
 }
