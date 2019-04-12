@@ -161,6 +161,10 @@ export default {
       this.idappheader = this.idappheader + 1;
 
       switch (this.gotoafterlogin) {
+          case "printafter":
+            this.blankme=true;
+            this.gotoLegacy(null,'printticket');
+          break;
           case "cardafter":
             this.blankme=true;
             this.gotoLegacy(null,'cardnow');
@@ -176,6 +180,10 @@ export default {
           return;
         }
         switch (this.gotoafterlogin) {
+            case "printafter":
+              this.blankme=true;
+              this.gotoLegacy(null,'printticket');
+            break;
             case "cardafter":
               this.blankme=true;
               this.gotoLegacy(null,'cardnow');
@@ -249,6 +257,10 @@ export default {
       let clickToClose = true;
       this.modals.login.name = "login";
       switch (this.gotoafterlogin) {
+          case "printafter":
+            clickToClose = false;
+            this.modals.login.name = "login_ns";
+          break;
           case "cardafter":
             clickToClose = false;
             this.modals.login.name = "login_ns";
@@ -257,6 +269,10 @@ export default {
 
       if (this.isLogged()) {
         switch (this.gotoafterlogin) {
+            case "printafter":
+              this.gotoLegacy(null,'printticket');
+              clickToClose = false;
+            break;
             case "cardafter":
               this.gotoLegacy(null,'cardnow');
               clickToClose = false;
@@ -301,12 +317,17 @@ export default {
       );
     },
     checkroute() {
+      console.log(window.location.pathname);
       switch (window.location.pathname) {
         case "/dologin":
           this.login();
         break;
         case "/loginandshopping/cardafter":
           this.gotoafterlogin = "cardafter";
+          this.login();
+        break;
+        case "/loginandshopping/printafter":
+          this.gotoafterlogin = "printafter";
           this.login();
         break;
         case "/createaccount":
