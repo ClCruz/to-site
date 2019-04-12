@@ -202,14 +202,14 @@
             <div class="btn__comprar" id="btn__comprar" @click="scrollTo()" title="Selecionar horários">
               <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
               <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
-              Selecionar horário
+              Comprar ingresso
             </div>
             <!-- Banner -->
             <div class="container pl-0 mt-5 pt-3 container__calendar">
               <div class="">
                 <div class="p-2">
                   <h3 class="" id="horario">Escolha de horário</h3>
-                  <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário</p>
+                  <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário para compra</p>
                   <div class="container__arrows">
                     <div class="swiper-button-prev" slot="button-prev"></div>
                     <div class="swiper-button-next" slot="button-next"></div>
@@ -237,7 +237,7 @@
                       <div>
                         <!-- <h3 class="">HORÁRIO</h3> -->
                         <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
-                        <p class="lead">{{item.ValPeca | money }}</p>
+                        <p class="lead"><span class="card__hour-icon"> R$ </span>{{item.ValPeca | moneyIngressaria }} -  <i class="card__hour-icon fa fa-shopping-cart"></i> <span class="text-comprar"> COMPRAR</span></p>
                       </div>
                     </div>
 
@@ -405,6 +405,14 @@ Vue.filter("money", function (value) {
     ret = helper.toFixed(2);
   }
   return `R$ ${ret}`;
+});
+Vue.filter("moneyIngressaria", function (value) {
+  let helper = parseFloat(value);
+  let ret = "0.00";
+  if (helper > 0) {
+    ret = helper.toFixed(2);
+  }
+  return `${ret}`;
 });
 
 export default {

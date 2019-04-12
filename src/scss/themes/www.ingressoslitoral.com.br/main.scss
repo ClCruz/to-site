@@ -46,6 +46,44 @@ header.bg-dark .navbar-nav a.nav-link,
 	}
 }
 
+.container__available-times .card__hour {
+	background: rgb(4, 54, 110) !important;
+	* {
+		color: white !important;
+	}
+
+	.card__hour-icon {
+		// color: indianred !important;
+	}
+}
+
+.card__time {
+	&:hover {
+		background: rgb(4, 54, 110) !important;
+		*,
+		p.lead {
+			color: white !important;
+			// font-size: 0.95rem !important;
+		}
+
+		i {
+			color: rgb(4, 54, 110) !important;
+		}
+	}
+}
+
+.card__time-active {
+	background: rgb(4, 54, 110) 47.7%;
+	*,
+	p.lead {
+		color: white !important;
+	}
+}
+
+.icon-active {
+	color: rgb(4, 54, 110) !important;
+}
+
 .swal2-styled {
 	font-size: 0.8rem;
 	padding-left: 20px;
@@ -168,4 +206,16 @@ footer a,
 footer p {
 	@include MQ(S) {
 	}
+}
+
+.card__hour-icon {
+	color: indianred !important;
+}
+
+.container__available-times .card__hour p.lead {
+	font-size: 1rem;
+}
+
+.btn__comprar {
+	background: linear-gradient(135deg, rgb(3, 59, 122) 30%, rgb(4, 54, 110)) !important;
 }
