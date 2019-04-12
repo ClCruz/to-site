@@ -815,7 +815,7 @@
 		}
 
 		@include MQ(S) {
-			display: none;
+			// display: none;
 		}
 
 		&:hover {
@@ -850,6 +850,13 @@
 		@include MQ(S) {
 			justify-content: center;
 			margin-top: 0;
+		}
+
+		.container__arrows {
+			@include MQ(S) {
+				margin-top: -45px !important;
+				padding-bottom: 30px !important;
+			}
 		}
 	}
 

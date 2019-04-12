@@ -58,6 +58,10 @@ header.bg-dark .navbar-nav a.nav-link,
 	.card__hour-icon {
 		// color: indianred !important;
 	}
+
+	@include MQ(S) {
+		padding: 10px 0 !important;
+	}
 }
 
 .card__time {
