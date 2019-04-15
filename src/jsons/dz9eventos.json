@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/dz9eventos/main.scss",
   "css": "/stylesheets/themes/dz9eventos.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-dz9eventos.png",
   "favico": "/img/dz9eventos/",
   "videos": {

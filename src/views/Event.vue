@@ -202,7 +202,7 @@
             <div class="btn__comprar" id="btn__comprar" @click="scrollTo()" title="Selecionar horários">
               <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
               <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
-              Comprar ingresso
+              Comprar ingressos
             </div>
             <!-- Banner -->
             <div class="container pl-0 mt-5 pt-3 container__calendar">

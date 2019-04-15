@@ -11,8 +11,8 @@
   "ga": "",
   "scss": "./src/scss/themes/topticket/main.scss",
   "css": "/stylesheets/themes/www.topticket.com.br/main.css",
-  "template": "ticketHubSearchHeader",
-  "logo": "/assets/logo-topticket.jpeg",
+  "template": "ingressaria",
+  "logo": "/assets/logo-topticket.jpg",
   "favico": "/img/topticket/",
   "videos": {
     "list": []

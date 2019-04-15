@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 
 gulp.task('sassLocal', function() {
 	gulp
-		.src('./src/scss/themes/*ingressoslitoral*/*.scss')
+		.src('./src/scss/themes/*topticket*/*.scss')
 		.pipe(
 			sass({
 				outputStyle: 'nested'

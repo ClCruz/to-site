@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/tremendao/main.scss",
   "css": "/stylesheets/themes/tremendao.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-tremendao.png",
   "favico": "/img/tremendao/",
   "videos": {

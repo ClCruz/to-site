@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/espacokalah/main.scss",
   "css": "/stylesheets/themes/espacokalah.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-espacokalah.jpeg",
   "favico": "/img/espacokalah/",
   "videos": {

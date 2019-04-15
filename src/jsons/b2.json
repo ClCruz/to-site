@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/b2/main.scss",
   "css": "/stylesheets/themes/b2agencia.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-b2.png",
   "favico": "/img/b2/",
   "videos": {
