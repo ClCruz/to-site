@@ -162,5 +162,9 @@
     "b2agencia.ticketoffice.me": "b2",
     "api.b2agencia.ticketoffice.me": "b2",
     "compra.b2agencia.ticketoffice.me": "b2",
-    "admin.b2agencia.ticketoffice.me": "b2"
+    "admin.b2agencia.ticketoffice.me": "b2",
+    "dz9eventos.ticketoffice.me": "dz9eventos",
+    "api.dz9eventos.ticketoffice.me": "dz9eventos",
+    "compra.dz9eventos.ticketoffice.me": "dz9eventos",
+    "admin.dz9eventos.ticketoffice.me": "dz9eventos"
 }
