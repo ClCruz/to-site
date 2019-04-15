@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "tremendao.ticketoffice.me",
+  "uri": "https://tremendao.ticketoffice.me",
+  "api": "https://api.tremendao.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.tremendao.ticketoffice.me",
+  "admin": "https://admin.tremendao.ticketoffice.me",
+  "apikey": "live_9f87fb7bc1bf400b8bf5dd4e1e5a39573664d80a2bfa4f599b0e8341151b6bb4",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/tremendao/main.scss",
+  "css": "/stylesheets/themes/tremendao.ticketoffice.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-tremendao.png",
+  "favico": "/img/tremendao/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "eventos",
+    "keywords": "eventos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Lounge Tremendão",
+    "description": "eventos",
+    "siteName": "tremendao.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "",
+    "companyName": "Lounge Tremendão"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_tremendao/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_tremendao/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_tremendao/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_tremendao/emailComprador.html",
+      "gift": "../comprar/templates/multi_tremendao/emailPresente.html",
+      "signature": "../comprar/templates/multi_tremendao/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_tremendao/confirmacaoEmail.html"
+
+    }
+  }
+}
