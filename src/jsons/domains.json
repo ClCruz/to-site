@@ -154,5 +154,9 @@
     "www.ingressoslitoral.com.br": "eventoslitoralprod",
     "api.ingressoslitoral.com.br": "eventoslitoralprod",
     "compra.ingressoslitoral.com.br": "eventoslitoralprod",
-    "admin.ingressoslitoral.com.br": "eventoslitoralprod"
+    "admin.ingressoslitoral.com.br": "eventoslitoralprod",
+    "www.topticket.com.br": "topticket",
+    "api.topticket.com.br": "topticket",
+    "compra.topticket.com.br": "topticket",
+    "admin.topticket.com.br": "topticket"
 }

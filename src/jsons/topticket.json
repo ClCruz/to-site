@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.topticket.com.br",
+  "uri": "https://www.topticket.com.br",
+  "api": "https://api.topticket.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.topticket.com.br",
+  "admin": "https://admin.topticket.com.br",
+  "apikey": "live_18c990abe4f24514811127f42e2f7cdce079db232d9044a19bb593fc5e215160",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/topticket/main.scss",
+  "css": "/stylesheets/themes/www.topticket.com.br/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-topticket.jpeg",
+  "favico": "/img/topticket/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "ingressos",
+    "keywords": "ingressos,tickets,topticket,eventos,ingressos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Top Ticket",
+    "description": "ingressos",
+    "siteName": "www.topticket.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "",
+    "companyName": "Top Ticket"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_topticket/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_topticket/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_topticket/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_topticket/emailComprador.html",
+      "gift": "../comprar/templates/multi_topticket/emailPresente.html",
+      "signature": "../comprar/templates/multi_topticket/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_topticket/confirmacaoEmail.html"
+
+    }
+  }
+}
