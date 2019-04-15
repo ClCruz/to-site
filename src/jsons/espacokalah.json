@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "espacokalah.ticketoffice.me",
+  "uri": "https://espacokalah.ticketoffice.me",
+  "api": "https://api.espacokalah.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.espacokalah.ticketoffice.me",
+  "admin": "https://admin.espacokalah.ticketoffice.me",
+  "apikey": "live_27df596619174432aed74bd7b81f2fc2871c67bcd22849c6becfb1ad2398b768",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/espacokalah/main.scss",
+  "css": "/stylesheets/themes/espacokalah.ticketoffice.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-espacokalah.jpeg",
+  "favico": "/img/espacokalah/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "eventos",
+    "keywords": "eventos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Espaço Kalah",
+    "description": "eventos",
+    "siteName": "espacokalah.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "",
+    "companyName": "Espaço Kalah"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_espacokalah/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_espacokalah/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_espacokalah/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_espacokalah/emailComprador.html",
+      "gift": "../comprar/templates/multi_espacokalah/emailPresente.html",
+      "signature": "../comprar/templates/multi_espacokalah/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_espacokalah/confirmacaoEmail.html"
+
+    }
+  }
+}
