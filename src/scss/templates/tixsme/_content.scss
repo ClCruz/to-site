@@ -8,5 +8,76 @@
 			border-radius: 0 !important;
 			padding: 4px !important;
 		}
+
+		cursor: pointer;
+
+		width: 250px !important;
+		height: 400px;
+		background-size: cover;
+		background-position: center;
+		box-sizing: border-box;
+		border: 2px solid black;
+	}
+
+	.card__eventos {
+		cursor: pointer;
+
+		height: 260px;
+		background-size: cover;
+		background-position: center;
+		box-sizing: border-box;
+		border: 2px solid black;
+		display: flex;
+		transition: background-color 1s;
+		transition: all .5s;
+
+		justify-content: center;
+		background-blend-mode: normal;
+
+		&:hover {
+			background-blend-mode: darken;
+			transition: all .5s;
+			transition: background-color 1s;
+
+			// transform: translateY(-1px);
+
+			// opacity: 0.6;
+
+			.card__eventos-nome,
+			.card__eventos-btn {
+				transition: all .5s;
+				display: flex;
+				opacity: 1;
+			}
+		}
+	}
+
+	.card__eventos-btn {
+		align-self: center;
+		text-align: center;
+		display: none;
+		border: 1px solid $secundary;
+		color: $secundary;
+		padding: 9px;
+		border-radius: 50%;
+	}
+
+	.card__eventos-nome {
+		transition: 3s;
+		position: absolute;
+		bottom: 0;
+		color: white;
+		transition: all .5s;
+		background: $secundary;
+		opacity: 0.9;
+		font-weight: bold;
+		font-size: 12px;
+		padding: 4px;
+		min-height: 55px;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		text-align: center;
 	}
 }

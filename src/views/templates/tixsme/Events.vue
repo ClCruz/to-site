@@ -1,65 +1,29 @@
 <template>
 <div>
-<section class="fdb-block team-6" data-block-type="teams" data-id="3" draggable="true">
-  <div class="container">
+  <section class="fdb-block team-6" data-block-type="teams" data-id="3" draggable="true">
+    <div class="container">
 
-    <div class="row text-center mt-5 p-0 m-0">
-      <div class="col-4 p-0 m-0 card_destaques">
-        <img alt="image" class="img-fluid rounded" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//people/9.jpg">
-       
-      </div>
+      <div class="row text-center p-0">
+        <div class="col-4 p-0 card_destaques" v-for="(item, index) in bannerEvents" :key='index' @click="goto('event',{ uri: item.uri})" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="">
 
-      <div class="col-4 p-0 m-0 card_destaques">
-        <img alt="image" class="img-fluid rounded" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//people/1.jpg">
-        
-      </div>
-
-      <div class="col-4 p-0 m-0 card_destaques">
-        <img alt="image" class="img-fluid rounded" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//people/3.jpg">
-        
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="fdb-block team-4" data-block-type="teams" data-id="4" draggable="true">
-  <div class="container">
-    <div class="row text-center justify-content-center">
-      <div class="col-8">
-        <h1>Team</h1>
+  </section>
+  <section class="fdb-block team-4" data-block-type="teams" data-id="4" draggable="true">
+    <div class="container">
+      <div class="row text-center mt-5">
+        <div class="col-3 p-0 card__eventos" v-for="(item, index) in computedFilteredData" :key='index' :item="item" @click="goto('event', item)" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + item.img + '\')' }" style="">
+         <div class="card__eventos-btn">
+           <i class="fa fa-cart-plus"></i>
+         </div>
+         <div class="card__eventos-nome">
+           {{item.ds_evento}}
+         </div>
+        </div>
       </div>
     </div>
-
-    <div class="row text-center mt-5">
-      <div class="col-3">
-        <img alt="image" class="img-fluid rounded" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//people/5.jpg">
-        <h3><strong>John Smith</strong></h3>
-        <p>Position</p>
-        <p>A wonderful serenity has taken possession of my entire soul.</p>
-      </div>
-
-      <div class="col-3">
-        <img alt="image" class="img-fluid rounded" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//people/6.jpg">
-        <h3><strong>John Smith</strong></h3>
-        <p>Position</p>
-        <p>Pityful a rethoric question ran over her cheek.</p>
-      </div>
-
-      <div class="col-3">
-        <img alt="image" class="img-fluid rounded" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//people/3.jpg">
-        <h3><strong>John Smith</strong></h3>
-        <p>Position</p>
-        <p>And if she hasn’t been rewritten, then they are still using her.</p>
-      </div>
-
-      <div class="col-3">
-        <img alt="image" class="img-fluid rounded" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//people/2.jpg">
-        <h3><strong>John Smith</strong></h3>
-        <p>Position</p>
-        <p>Wild Question Marks, but the Little Blind Text didn’t listen.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
 </template>
 
@@ -221,11 +185,10 @@ export default {
       if (data == null) return;
 
       this.date = new Date(data).toISOString().split('T')[0];
-      
+
       this.refreshEffect();
 
       this.getListResultsFiltered();
-
 
     },
     refreshEffect() {
@@ -330,8 +293,12 @@ export default {
     getBanner() {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
-          this.bannerEvents = response;
+          this.bannerEvents = response.slice(0, 3);
           this.slideLoaded = true;
+
+          console.log("banner v");
+          console.log(this.bannerEvents);
+
         },
         error => {
           this.hideWaitAboveAll();
