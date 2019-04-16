@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/hipocritas/main.scss",
   "css": "/stylesheets/themes/hipocritas.ticketoffice.wl/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-hipocritas.png",
   "favico": "/img/hipocritas/",
   "videos": {
