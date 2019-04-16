@@ -1,10 +1,10 @@
 <template>
-<div class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="window.location(item.link)" v-if="item.isdiscovery == 1">
+<div class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="goto('discovery', item.link)" v-if="item.isdiscovery == 1">
   <div class="to-box p-0">
     <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.imageURI + '\')' }" style="background-size: cover;"></div>
 
     <div class="content to-box p-2 pt-0 pb-1" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
-      <h4 class="event__title pb-1">
+      <h4 class="event__title pb-1" style="text-transform: uppercase !important">
         <strong>{{ item.title |  truncate(35, ' ...') }}</strong>
       </h4>
       <p class="p-0 pt-1 m-0 h-200 event__item" style="font-size: 13px">{{item.content | truncate(110, ' ...') }}</p>
@@ -53,6 +53,9 @@ export default {
           break;
         case "event":
           this.$router.push(item.uri);
+          break;
+        case "discovery":
+          window.location.href = item;
           break;
       }
     },},

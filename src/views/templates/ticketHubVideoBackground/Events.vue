@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-12 col-xl-12 text-left">
           <div class="p-3">
-            <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title">
+             <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title" @click="goto('discovery', discoveryBanner[0].link)">
             <!-- <div class="discovery" :style="{ backgroundImage: 'url(\'' + discoveryBanner[0].imageURI + '\')' }"> -->
             <!-- </div> -->
           </div>
@@ -260,6 +260,9 @@ export default {
           break;
         case "event":
           this.$router.push(item.uri);
+          break;
+        case "discovery":
+          window.location.href = item;
           break;
       }
     },

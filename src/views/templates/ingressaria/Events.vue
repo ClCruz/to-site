@@ -44,7 +44,7 @@
       <div class="row">
         <div class="col-12 col-xl-12 text-left">
           <div class="p-3">
-            <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title">
+            <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title" @click="goto('discovery', discoveryBanner[0].link)">
           </div>
           </div>
         </div>
@@ -303,6 +303,9 @@ export default {
         case "event":
           this.$router.push(item.uri);
           break;
+        case "discovery":
+          window.location.href = item;
+          break;
       }
     },
 
@@ -399,7 +402,7 @@ export default {
     getLocalsList() {
       this.localsList = this.removeDuplicatesBy(x => x.ds_nome_teatro, this.filteredData).slice(0, 6);
 
-      console.log(this.localsList);
+      // console.log(this.localsList);
     },
     getNextEvents() {
       this.nextEvents = this.slideData.slice(1, 5);
@@ -437,6 +440,8 @@ export default {
           // console.log(response);
           this.discovery = response.filter(x => x.type !== 'banner');
           this.discoveryBanner = response.filter(x => x.type == 'banner');
+
+          console.log(this.discoveryBanner);
         },
         error => {
           this.toastError("Falha na execução.");

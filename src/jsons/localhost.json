@@ -6,7 +6,7 @@
   "pinpad": "http://localhost:7001/api",
   "admin": "http://localhost:2000",
   "legacy": "http://localhost:2004",
-  "apikey": "live_578abaf329f84119bb7c1e55dfdc7e0f4f20e693cd2c4bc7a5bc0a0965fae322",
+  "apikey": "live_c02e42c0d2524044b12ec3c3ee77e5a7e6d56d5ccc274dd3ba4690137492741e",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/eventoslitoral/main.scss",
