@@ -9,6 +9,7 @@
 		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		background-repeat: no-repeat;
 		background-size: cover;
+		padding: 130px 0 !important;
 	}
 
 	img {
@@ -26,7 +27,7 @@
 		margin-top: 3px;
 		-ms-flex-item-align: center;
 		align-self: center;
-		width: 90%;
+		width: 70%;
 		@include MQ(S) {
 			width: 100%;
 			margin-top: 15px;
@@ -41,7 +42,7 @@
 			-webkit-appearance: textfield;
 			-webkit-box-sizing: content-box;
 			font-family: inherit;
-			font-size: 100%;
+			font-size: 90%;
 		}
 
 		input::-webkit-search-decoration,
@@ -268,7 +269,7 @@
 	// header menu
 
 	#header.bg-dark {
-		background: #000 !important;
+		background: #191919 !important;
 
 		.nav-link {
 			letter-spacing: .5px;

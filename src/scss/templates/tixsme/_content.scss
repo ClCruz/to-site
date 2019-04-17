@@ -10,44 +10,49 @@
 		}
 
 		cursor: pointer;
+		background-size: cover !important;
+		background-position: 75% !important;
 
-		width: 250px !important;
+		// width: 250px !important;
 		height: 400px;
-		background-size: cover;
-		background-position: center;
+		width: 100%;
 		box-sizing: border-box;
-		border: 2px solid black;
+	}
+
+	.card__eventos-container {
+		padding: 3px;
 	}
 
 	.card__eventos {
 		cursor: pointer;
 
-		height: 260px;
-		background-size: cover;
-		background-position: center;
+		height: 240px;
+		background-size: cover !important;
+		background-position: center !important;
 		box-sizing: border-box;
-		border: 2px solid black;
+		// border: 5px solid #191919;
 		display: flex;
-		transition: background-color 1s;
-		transition: all .5s;
 
+		// border-radius: 2px;
 		justify-content: center;
-		background-blend-mode: normal;
+
+		.card__eventos-img {
+		}
 
 		&:hover {
 			background-blend-mode: darken;
-			transition: all .5s;
-			transition: background-color 1s;
-
-			// transform: translateY(-1px);
-
-			// opacity: 0.6;
 
 			.card__eventos-nome,
 			.card__eventos-btn {
-				transition: all .5s;
-				display: flex;
+				transition: opacity .4s ease-out;
+				-moz-transition: opacity .4s ease-out;
+				-webkit-transition: opacity .4s ease-out;
+				-o-transition: opacity .4s ease-out;
 				opacity: 1;
+			}
+
+			.card__eventos-nome {
+				opacity: 0.8;
 			}
 		}
 	}
@@ -55,29 +60,172 @@
 	.card__eventos-btn {
 		align-self: center;
 		text-align: center;
-		display: none;
+		display: flex;
 		border: 1px solid $secundary;
 		color: $secundary;
 		padding: 9px;
 		border-radius: 50%;
+		opacity: 0;
 	}
 
 	.card__eventos-nome {
-		transition: 3s;
 		position: absolute;
 		bottom: 0;
 		color: white;
-		transition: all .5s;
 		background: $secundary;
-		opacity: 0.9;
 		font-weight: bold;
 		font-size: 12px;
+		width: 100%;
 		padding: 4px;
 		min-height: 55px;
-		display: none;
+		opacity: 0;
+		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 100%;
 		text-align: center;
+	}
+
+	#block_events,
+	#block_features,
+	#ad_container {
+		.container {
+			// background: #191919;
+			background: #191919;
+		}
+	}
+
+	.block_events-categories {
+		font-size: 20px;
+		color: white;
+		// font-weight: bold;
+		margin-bottom: 12px;
+		cursor: pointer;
+		.active {
+			color: $secundary;
+			// border-bottom: 2px solid $secundary;
+			padding-bottom: 5px;
+			border-radius: 1px;
+			box-shadow: inset 0 -8px 8px -8px $secundary;
+		}
+		.active-ego {
+			padding-bottom: 5px;
+			box-shadow: inset 0 -5px 8px -10px $secundary;
+		}
+		.active-ego-g {
+			padding-bottom: 5px;
+			box-shadow: inset 0 -3px 8px -13px $secundary;
+		}
+	}
+
+	.discovery {
+		// background-size: 100% auto;
+		// background-position: bottom;
+		// background: url('https://external-preview.redd.it/AU_vXWRMejWU49gXKdKZ4FMXUGIf3ajCGEn53hwZabg.png?width=640&crop=smart&auto=webp&s=8342925c47b3e35405e8146f2ea1b856f9c119c3');
+		// height: auto !important;
+		border-radius: 2px !important;
+		width: 100%;
+		height: 80px;
+	}
+
+	#block_calendar {
+		.container {
+			background: #191919;
+		}
+
+		h2 {
+			color: white;
+			font-weight: normal;
+			font-size: 22px;
+			margin-left: 50px;
+		}
+	}
+
+	.col_calendar_date {
+		height: 100%;
+	}
+
+	.calendar_date {
+		background: #000;
+		font-size: 16px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		color: #fff;
+		height: 60px;
+		width: 80px;
+	}
+
+	.calendar_date-day {
+		font-size: 20px;
+		font-weight: bold;
+		width: 100%;
+	}
+
+	.calendar_img {
+		height: 240px;
+		background-size: cover !important;
+		background-position: center !important;
+	}
+
+	.calendar_features {
+		background: #000;
+	}
+
+	.calendar_features-title {
+		font-size: 24px;
+		text-transform: uppercase;
+		color: $secundary;
+		font-weight: thin;
+	}
+
+	.calendar_features-text {
+		font-size: 12px;
+		color: #fff;
+	}
+
+	.calendar_features-social {
+		position: absolute;
+		bottom: 0;
+		p {
+			color: $secundary;
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		#share {
+			justify-content: flex-start !important;
+
+			a:first-of-type() {
+				margin-left: 0 !important;
+			}
+		}
+	}
+
+	.calendar_time_container {
+		display: flex;
+		text-align: center;
+		// justify-content: center;
+		align-items: center;
+		padding: 14px;
+		margin: 4px;
+		background: #000;
+	}
+
+	.calendar_time {
+		font-size: 30px;
+		color: $secundary;
+		font-weight: normal;
+		// text-align: left;
+		// position: absolute;
+		// left: 30px;
+	}
+
+	.calendar_text {
+		font-weight: bold;
+		color: white;
+		text-align: center;
+		margin-left: 20px;
 	}
 }

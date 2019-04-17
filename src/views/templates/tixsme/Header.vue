@@ -1,39 +1,38 @@
 <template>
 <div>
 
-  <section id="header_home" class="fdb-block p-5" style="" data-block-type="features" data-id="2" draggable="true">
-    <div class="container-fluid">
+  <section id="header_home" class="fdb-block p-5 container" style="" data-block-type="features" data-id="2" draggable="true">
+    <div class="container">
       <div class="row text-lg-right align-items-center">
-        <div class="col-12 col-sm-6 col-lg-5 text-left pt-sm-0">
+        <div class="col-12 col-sm-12 order-1 order-sm-3 order-md-3 order-lg-1 col-lg-5 text-left pt-sm-0">
           <div class="row" id="share">
             <span style="" class="social-text">Rede Social</span>
             <!-- facebook -->
-            <a class="facebook" :href="linkFacebook" target="blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="facebook" target="blank"><i class="fab fa-facebook-f"></i></a>
 
             <!-- twitter -->
-            <a class="twitter" :href="linkTwitter" target="blank"><i class="fab fa-twitter"></i></a>
+            <a class="twitter" target="blank"><i class="fab fa-twitter"></i></a>
 
             <!-- linkedin -->
             <!-- <a class="linkedin" :href="linkLinkedin" target="blank"><i class="fab fa-linkedin-in"></i></a> -->
 
             <!-- pinterest -->
-            <a class="pinterest" :href="linkPinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
+            <a class="pinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
 
           </div>
         </div>
-        <div class="col-5 col-sm-12 col-lg-2 m-auto pt-lg-0 text-center">
-          <img alt="image" class="img-fluid" src="https://www.tixs.me/assets/tixs (1).png">
-      </div>
+        <div class="col-5 col-sm-12 col-md-3 order-2 order-sm-2 order-md-2 order-lg-2 col-lg-2 m-auto pt-lg-0 text-center">
+          <img alt="image" class="img-fluid col-12 col-md-12" src="https://www.tixs.me/assets/tixs (1).png">
+        </div>
 
-          <div class="col-12 col-sm-6 col-lg-5">
-
+          <div class="col-12 order-3 order-md-1 order-lg-3 order-sm-0 mt-md-2 mt-sm-2 pb-md-4 pt-md-0 pb-sm-4 col-sm-12 mt-sm-2 col-lg-5">
             <app-search></app-search>
           </div>
 
         </div>
       </div>
   </section>
-  <header id="header" class="bg-dark align-items-center" data-block-type="headers" data-id="1" style="padding: 10px">
+  <header id="header" class="bg-dark align-items-center container" data-block-type="headers" data-id="1" style="padding: 10px">
     <div class="container">
       <nav class="navbar navbar-expand-md no-gutters text-right col-12">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav12" aria-controls="navbarNav12" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +40,7 @@
       </button>
 
         <div class="collapse navbar-collapse justify-content-center col-md-12" id="navbarNav12">
-        <!-- <img alt="image" class="img-fluid" src="https://www.tixs.me/assets/tixs (1).png" style="height: 50px; "> -->
+          <!-- <img alt="image" class="img-fluid" src="https://www.tixs.me/assets/tixs (1).png" style="height: 50px; "> -->
           <ul class="navbar-nav justify-content-center">
             <li class="nav-item active">
               <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>

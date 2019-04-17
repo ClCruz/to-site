@@ -1,30 +1,162 @@
 <template>
 <div>
-  <section class="fdb-block team-6" data-block-type="teams" data-id="3" draggable="true">
-    <div class="container">
-
-      <div class="row text-center p-0">
-        <div class="col-4 p-0 card_destaques" v-for="(item, index) in bannerEvents" :key='index' @click="goto('event',{ uri: item.uri})" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="">
-
+  <div class="container-fluid" id="ad_container">
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-6 pr-0 col-lg-6 text-left">
+          <div class="p-1 pr-0 mt-0 mb-0 pb-0">
+            <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
+            <img class="img-fluid rounded-0 discovery" src="https://designcontest-com-designcontest.netdna-ssl.com/blog/wp-content/themes/dcblog/images/xhow-it-works.jpg.pagespeed.ic.J5Oak4DPL_.webp">
+                  </div>
+          </div>
+          <div class="col-6 pl-0 col-lg-6 text-left">
+            <div class="p-1 pl-0 mt-0 mb-0 pb-0">
+              <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
+              <img class="img-fluid rounded-0 discovery" src="https://designcontest-com-designcontest.netdna-ssl.com/blog/wp-content/themes/dcblog/images/xhow-it-works.jpg.pagespeed.ic.J5Oak4DPL_.webp">
+                  </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="fdb-block team-4" data-block-type="teams" data-id="4" draggable="true">
-    <div class="container">
-      <div class="row text-center mt-5">
-        <div class="col-3 p-0 card__eventos" v-for="(item, index) in computedFilteredData" :key='index' :item="item" @click="goto('event', item)" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + item.img + '\')' }" style="">
-         <div class="card__eventos-btn">
-           <i class="fa fa-cart-plus"></i>
-         </div>
-         <div class="card__eventos-nome">
-           {{item.ds_evento}}
-         </div>
+      <section class="fdb-block team-6" data-block-type="teams" data-id="3" draggable="true" id="block_features">
+        <div class="container">
+          <div class="row text-center p-0">
+            <div class="col-12 col-md-4 p-1" v-for="(item, index) in bannerEvents" :key='index'>
+              <div class="col-12 card_destaques" @click="goto('event',{ uri: item.uri})" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="">
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-</div>
+      </section>
+      <section class="fdb-block" data-block-type="teams" data-id="3" draggable="false" id="block_calendar">
+        <div class="container">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-8">
+              <div class="row">
+                <h2 class="text-center ">
+                  Calendário de eventos
+
+                </h2>
+
+              </div>
+
+            </div>
+            <div class="col-3 row p-0">
+              <div class="row">
+                <h2 class="text-center justify-content-center">
+                  Horário exemplo
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row p-0">
+            <div class="col-1 col_calendar_date">
+              <div class="calendar_date text-center active">24 abr</div>
+              <div class="calendar_date text-center">25 abr</div>
+              <div class="calendar_date text-center">26 abr</div>
+              <div class="calendar_date text-center">ver <br> mais</div>
+              </div>
+              <div class="col-8">
+                <div class="row p-0">
+                  <div class="col-6 calendar_img" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + bannerEvents[0].img + '\')' }">
+
+                  </div>
+                  <div class="col-6 calendar_features">
+                    <div class="calendar_features-title">{{bannerEvents[0].ds_evento}}</div>
+                    <div class="calendar_features-text" v-html="bannerEvents[0].bannerDescription"></div>
+                    <div class="calendar_features-social">
+                      <p>Compartilhar</p>
+                      <div class="row text-left" id="share">
+
+                        <!-- facebook -->
+                        <a class="facebook" :href="linkFacebook" target="blank"><i class="fab fa-facebook-f"></i></a>
+
+                        <!-- twitter -->
+                        <a class="twitter" :href="linkTwitter" target="blank"><i class="fab fa-twitter"></i></a>
+
+                        <!-- linkedin -->
+                        <!-- <a class="linkedin" :href="linkLinkedin" target="blank"><i class="fab fa-linkedin-in"></i></a> -->
+
+                        <!-- pinterest -->
+                        <a class="pinterest" :href="linkPinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="row p-0">
+                  <div class="col-12">
+                    <div class="calendar_time_container">
+                    <span class="calendar_time">09:00</span>
+                    <span class="calendar_text">Texto</span>
+
+                    </div>
+                    <div class="calendar_time_container">
+                    <span class="calendar_time">11:00</span>
+                    <span class="calendar_text">Texto</span>
+
+                    </div>
+                    <div class="calendar_time_container">
+                    <span class="calendar_time">13:00</span>
+                    <span class="calendar_text">Texto</span>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </section>
+
+      <div class="container-fluid" id="ad_container">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col-12 col-xl-12 text-left">
+              <div class="p-1 mt-3 mb-0 pb-0">
+                <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
+                <img class="img-fluid rounded-0 discovery" src="https://designcontest-com-designcontest.netdna-ssl.com/blog/wp-content/themes/dcblog/images/xhow-it-works.jpg.pagespeed.ic.J5Oak4DPL_.webp">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="fdb-block team-4" id="block_events">
+          <div class="container pt-3">
+            <div class="row text-center mt-0">
+              <div class="col-3 block_events-categories"><span class="active">Cat<span class="active-ego">e<span class="active-ego-g">g</span>o</span>ria 1</span></div>
+              <div class="col-3 block_events-categories"><span>Categoria 2</span></div>
+              <div class="col-3 block_events-categories"><span>Categoria 3</span></div>
+              <div class="col-3 block_events-categories"><span>Categoria 4</span></div>
+              <div class="col-12 col-md-3 card__eventos-container" v-for="(item, index) in computedFilteredData" :key='index' :item="item" @click="goto('event', item)">
+                <div class="p-0 card__eventos" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + item.img + '\')' }">
+                  <div class="card__eventos-btn">
+                    <i class="fa fa-cart-plus"></i>
+                  </div>
+                  <div class="card__eventos-nome">
+                    {{item.ds_evento}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container-fluid" id="ad_container">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col-12 col-xl-12 text-left">
+                <div class="p-1 mt-3 mb-0 pb-0">
+                  <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
+                  <img class="img-fluid rounded-0 discovery" src="https://designcontest-com-designcontest.netdna-ssl.com/blog/wp-content/themes/dcblog/images/xhow-it-works.jpg.pagespeed.ic.J5Oak4DPL_.webp">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 </template>
 
 <script>
@@ -65,6 +197,10 @@ export default {
   mixins: [func],
   data() {
     return {
+      linkFacebook: '',
+      linkTwitter: '',
+      linkLinkedin: '',
+      linkPinterest: '',
       siteName: config.info.siteName,
       discoveryBanner: '',
       slideLoaded: false,
@@ -128,6 +264,17 @@ export default {
     Datepicker
   },
   methods: {
+    generateSocialLinks() {
+
+      let url = window.location;
+      let title = escape(this.event.NomPeca);
+      let media = this.event.img;
+
+      this.linkFacebook = "https://www.facebook.com/share.php?u=" + url + "&title=" + title;
+      this.linkLinkedin = "https://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title=" + title + "&source=source";
+      this.linkTwitter = "https://twitter.com/intent/tweet?text=" + title + "&url=" + url;
+      this.linkPinterest = "https://pinterest.com/pin/create/bookmarklet/?media=" + media + "&url=" + url + "&is_video=false&description=";
+    },
     capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     },
@@ -174,6 +321,9 @@ export default {
           break;
         case "event":
           this.$router.push(item.uri);
+          break;
+        case "search":
+          this.$router.push("/busca/evento/" + item)
           break;
       }
     },
@@ -271,7 +421,7 @@ export default {
     getLocalsList() {
       this.localsList = this.removeDuplicatesBy(x => x.ds_nome_teatro, this.filteredData).slice(0, 6);
 
-      console.log(this.localsList);
+      // console.log(this.localsList);
     },
     getNextEvents() {
       this.nextEvents = this.slideData.slice(1, 5);
@@ -296,8 +446,8 @@ export default {
           this.bannerEvents = response.slice(0, 3);
           this.slideLoaded = true;
 
-          console.log("banner v");
-          console.log(this.bannerEvents);
+          // console.log("banner v");
+          // console.log(this.bannerEkvents);
 
         },
         error => {
@@ -313,6 +463,7 @@ export default {
           // console.log(response);
           this.discovery = response.filter(x => x.type !== 'banner');
           this.discoveryBanner = response.filter(x => x.type == 'banner');
+          // console.log(this.discovery);
         },
         error => {
           this.toastError("Falha na execução.");
@@ -390,6 +541,8 @@ export default {
         navbar.removeClass('navbar-fixed-top');
       }
     });
+
+    this.generateSocialLinks();
 
   },
   beforeUpdate() {
