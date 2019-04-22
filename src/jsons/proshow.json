@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/proshow/main.scss",
   "css": "/stylesheets/themes/proshow.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-proshow.jpeg",
   "favico": "/img/proshow/",
   "videos": {

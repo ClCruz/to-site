@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 
 gulp.task('sassLocal', function() {
 	gulp
-		.src('./src/scss/themes/*hipo*/*.scss')
+		.src('./src/scss/themes/*proshow*/*.scss')
 		.pipe(
 			sass({
 				outputStyle: 'nested'
