@@ -13,15 +13,14 @@
   </div>
 </div>
 <div v-else class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="goto('event', item)">
-      <div class="ad__badge-it" v-if="item.minAmount !== '' && item.minAmount !== undefined">
-      <!-- <i class="far fa-money-bill-alt" style=""></i> -->
-      <span class="bold" style="margin-top: 6px">A partir de {{item.minAmount}}</span>
-      </div>
+  <div class="ad__badge-it" v-if="item.minAmount !== '' && item.minAmount !== undefined && item.minAmount !== null">
+    <!-- <i class="far fa-money-bill-alt" style=""></i> -->
+    <span class="bold" style="margin-top: 6px">A partir de {{item.minAmount}}</span>
+  </div>
   <div class="to-box p-0">
     <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;">
     </div>
 
-    
     <div class="content to-box p-2 pt-0 pb-1" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
       <h4 class="event__title pb-1">
         <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
