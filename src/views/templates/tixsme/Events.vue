@@ -31,40 +31,39 @@
       <section class="fdb-block" data-block-type="teams" data-id="3" draggable="false" id="block_calendar">
         <div class="container">
           <div class="row">
-            <div class="col-1"></div>
-            <div class="col-8">
-              <div class="row">
-                <h2 class="text-center ">
+            <!-- <div class="col-1"></div> -->
+            <div class="col-12">
+              <div class="row justify-content-center">
+                <h2 class="text-center">
                   Calendário de eventos
-
                 </h2>
 
               </div>
 
             </div>
             <div class="col-3 row p-0">
-              <div class="row">
+              <!-- <div class="row">
                 <h2 class="text-center justify-content-center">
                   Horário exemplo
                 </h2>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="row p-0">
             <div class="col-1 col_calendar_date">
-              <div class="calendar_date text-center active">24 abr</div>
-              <div class="calendar_date text-center">25 abr</div>
-              <div class="calendar_date text-center">26 abr</div>
+              <div class="calendar_date text-center active" @click="changeSelectedCalendar(filteredCalendar[0])">{{filteredCalendar[0].datas}}</div>
+              <div class="calendar_date text-center" @click="changeSelectedCalendar(filteredCalendar[1])">{{filteredCalendar[1].datas}}</div>
+              <div class="calendar_date text-center" @click="changeSelectedCalendar(filteredCalendar[2])">{{filteredCalendar[2].datas}}</div>
               <div class="calendar_date text-center">ver <br> mais</div>
               </div>
-              <div class="col-8">
+              <div class="col-11">
                 <div class="row p-0">
-                  <div class="col-6 calendar_img" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + bannerEvents[0].img + '\')' }">
+                  <div class="col-6 calendar_img" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + selectedCalendar.img + '\')' }">
 
                   </div>
                   <div class="col-6 calendar_features">
-                    <div class="calendar_features-title">{{bannerEvents[0].ds_evento}}</div>
-                    <div class="calendar_features-text" v-html="bannerEvents[0].bannerDescription"></div>
+                    <div class="calendar_features-title">{{selectedCalendar.ds_evento}}</div>
+                    <div class="calendar_features-text" v-html="selectedCalendar.bannerDescription"></div>
                     <div class="calendar_features-social">
                       <p>Compartilhar</p>
                       <div class="row text-left" id="share">
@@ -86,27 +85,27 @@
                   </div>
                 </div>
               </div>
-              <div class="col-3">
+              <!-- <div class="col-3">
                 <div class="row p-0">
                   <div class="col-12">
-                    <div class="calendar_time_container">
-                    <span class="calendar_time">09:00</span>
-                    <span class="calendar_text">Texto</span>
+                    <div class="calendar_time_container pl-0 pr-0">
+                      <span class="calendar_time">09:00</span>
+                      <span class="calendar_text">Texto</span>
 
                     </div>
-                    <div class="calendar_time_container">
-                    <span class="calendar_time">11:00</span>
-                    <span class="calendar_text">Texto</span>
+                    <div class="calendar_time_container pl-0 pr-0">
+                      <span class="calendar_time">11:00</span>
+                      <span class="calendar_text">Texto</span>
 
                     </div>
-                    <div class="calendar_time_container">
-                    <span class="calendar_time">13:00</span>
-                    <span class="calendar_text">Texto</span>
+                    <div class="calendar_time_container pl-0 pr-0">
+                      <span class="calendar_time">13:00</span>
+                      <span class="calendar_text">Texto</span>
 
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
 
           </div>
@@ -207,6 +206,8 @@ export default {
       genreListLoaded: false,
       discovery: [],
       slideData: [],
+      selectedCalendar: [],
+      filteredCalendar: [],
       ptBR: ptBR,
       format: "yyyy MM dd",
       cityList: [],
@@ -267,8 +268,10 @@ export default {
     generateSocialLinks() {
 
       let url = window.location;
-      let title = escape(this.event.NomPeca);
-      let media = this.event.img;
+      // let title = escape(this.event.NomPeca);
+      let title = 'teste';
+      // let media = this.event.img;
+      let media = 'teste';
 
       this.linkFacebook = "https://www.facebook.com/share.php?u=" + url + "&title=" + title;
       this.linkLinkedin = "https://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title=" + title + "&source=source";
@@ -388,6 +391,9 @@ export default {
         }
       );
     },
+    filterEventsCalendar() {
+
+    },
     getListResultAgain() {
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
@@ -440,11 +446,24 @@ export default {
         })
       });
     },
+    changeSelectedCalendar(event) {
+      this.selectedCalendar = event;
+    },
     getBanner() {
       eventService.banner(this.locale.city.name, this.locale.state.name).then(
         response => {
           this.bannerEvents = response.slice(0, 3);
           this.slideLoaded = true;
+
+          this.filteredCalendar = this.bannerEvents.slice(0, 3);
+          // debugge
+          this.filteredCalendar.map(x => {
+            x.datas = x.datas.split(' - ')[0];
+          });
+
+          console.log(this.filteredCalendar);
+
+          this.selectedCalendar = this.filteredCalendar[0];
 
           // console.log("banner v");
           // console.log(this.bannerEkvents);
@@ -490,10 +509,12 @@ export default {
 
           this.populateCityPicker();
 
+          this.filterEventsCalendar();
           // console.log(this.slideData);
 
           if (callback !== null && callback !== undefined) {
             callback();
+
           }
         },
         error => {
@@ -530,20 +551,19 @@ export default {
     this.getBanner();
 
     // Fixa navbar ao ultrapassa-lo
-    var navbar = $('#navbar'),
-      distance = navbar.offset().top,
-      $window = $(window);
+    // var navbar = $('#navbar'),
+    //   distance = navbar.offset().top,
+    //   $window = $(window);
 
-    $window.scroll(function () {
-      if ($window.scrollTop() >= 140) {
-        navbar.removeClass('navbar-fixed-top').addClass('navbar-fixed-top');
-      } else {
-        navbar.removeClass('navbar-fixed-top');
-      }
-    });
+    // $window.scroll(function () {
+    //   if ($window.scrollTop() >= 140) {
+    //     navbar.removeClass('navbar-fixed-top').addClass('navbar-fixed-top');
+    //   } else {
+    //     navbar.removeClass('navbar-fixed-top');
+    //   }
+    // });
 
     this.generateSocialLinks();
-
   },
   beforeUpdate() {
     //if (this.$refs.slick) {
@@ -571,6 +591,12 @@ export default {
       value = value.toString()
       value = value.toLowerCase();
       return value.charAt(0).toUpperCase() + value.slice(1)
+    },
+    filterFirstDate: function (value) {
+      debugger
+      if (!value) return ''
+      value = value.split(' - ').join('');
+      return value[0];
     }
   }
 

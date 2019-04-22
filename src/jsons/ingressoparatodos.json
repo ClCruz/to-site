@@ -1,7 +1,7 @@
 {
   "env": "production",
   "host": "ingressoparatodos.com.br",
-  "uri": "https://ingressoparatodos.com.br",
+  "uri": "https://www.ingressoparatodos.com.br",
   "api": "https://api.ingressoparatodos.com.br",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.ingressoparatodos.com.br",

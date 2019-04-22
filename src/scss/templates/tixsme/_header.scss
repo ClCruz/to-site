@@ -1,15 +1,21 @@
 @mixin headerTixsme {
 	#header_home {
-		background: #ff00cc; /* fallback for old browsers */
-		background: -webkit-linear-gradient(to right, #333399, #ff00cc); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(
-			to right,
-			#333399,
-			#ff00cc
-		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		background-repeat: no-repeat;
-		background-size: cover;
+		// background: #ff00cc; /* fallback for old browsers */
+		// background: -webkit-linear-gradient(to right, #333399, #ff00cc); /* Chrome 10-25, Safari 5.1-6 */
+		// background: linear-gradient(
+		// 	to right,
+		// 	#333399,
+		// 	#ff00cc
+		// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background-image: url('/assets/background/5.png');
+
+		background-repeat: repeat;
+		background-position: center;
+		// background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+
 		padding: 130px 0 !important;
+
+		box-shadow: 0 5px 5px rgba(0, 0, 0, 1), 0 5px 5px rgba(0, 0, 0, 1);
 	}
 
 	img {
@@ -269,7 +275,7 @@
 	// header menu
 
 	#header.bg-dark {
-		background: #191919 !important;
+		background: url('/assets/texture/texture_tixs_4.png') !important;
 
 		.nav-link {
 			letter-spacing: .5px;

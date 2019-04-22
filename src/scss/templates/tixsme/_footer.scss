@@ -1,2 +1,110 @@
 @mixin footerTixsme {
+	.footer__logo {
+	}
+
+	.footer__logo .img {
+		height: 80px;
+		width: 100%;
+		background-image: url('https://www.tixs.me/assets/tixs (1).png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover {
+			opacity: 0.8;
+		}
+
+		@include MQ(S) {
+			height: 40px;
+		}
+	}
+
+	footer {
+		h3 {
+			font-size: 0.9rem;
+			margin-top: 0px;
+		}
+		a,
+		p {
+			color: white;
+			font-size: 0.75rem;
+		}
+
+		.footer-name {
+			font-size: 0.55rem;
+		}
+
+		.img {
+			background-position: left center !important;
+
+			@include MQ(S) {
+				background-position: center center !important;
+				height: 80px;
+			}
+		}
+	}
+	footer.fdb-block {
+		padding: 3.1rem 0 1rem 0 !important;
+	}
+
+	.credit__cards {
+		img,
+		svg {
+			height: 22px;
+			width: 32px;
+			margin: 10px 5px 0 0;
+		}
+
+		@include MQ(S) {
+			width: 60%;
+			margin: 0 auto;
+		}
+
+		.credit__cards-elo {
+			border-radius: 2px;
+		}
+		.credit__cards-aura {
+			border-radius: 2px;
+		}
+		.credit__cards-hipercard {
+			height: 22px;
+		}
+	}
+
+	#disc-icon {
+		.st0 {
+			fill: #ffffff;
+		}
+		.st1 {
+			fill: #ff5e33;
+		}
+		.st2 {
+			fill: #1f1c1c;
+		}
+	}
+
+	.cc-sm svg {
+		width: 32px;
+	}
+
+	.event__description * {
+		color: white;
+	}
+	.swiper-pagination-bullet-active {
+	}
+
+	.bouton-contact {
+		background: $secundary !important;
+	}
+
+	.contentform {
+		font-size: 14px !important;
+	}
+
+	.icon-case {
+		background: none !important;
+
+		i {
+			font-size: 0.9em !important;
+		}
+	}
 }

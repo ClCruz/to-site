@@ -1,13 +1,13 @@
 <template>
 <div>
-  <div v-if="template == 'tixs'">
+  <div v-if="template == 'tixsme'" class="container" id="block_event">
     <div class="content__show container__new">
       <div class="row">
         <div class="col-md-6 container">
           <div class="row">
             <div class="col-md-12" style="">
               <div class="content__description">
-                <div class="card event__card">
+                <div class="card event__card p-2 bg-dark">
                   <div class="show__date">
                     <h2>{{event.NomPeca}}</h2>
                     <span class="event__badges">
@@ -27,8 +27,8 @@
 
                 </div>
               </div>
-              <div class="content__description">
-                <div class="card event__card card__container">
+              <div class="content__description mt-4">
+                <div class="card event__card card__container p-2 bg-dark">
                   <p class="event__card-holder">
                     <!-- <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader> -->
                     <span>
@@ -46,7 +46,7 @@
         <div class="col-md-6">
           <div class="row">
             <div class="col-md-12 time__card">
-              <div class="show__date show__date-disp">
+              <div class="show__date show__date-disp bg-dark p-2">
                 <div>
                   <h2>Escolha a data e o setor</h2>
                 </div>
@@ -63,9 +63,9 @@
                   </b-dropdown>
                 </div>
               </div>
-              <div class="container__time">
-                <EventTimeLoader class="container__placeholder" v-if="!roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 70px; border-radius: 5px"></EventTimeLoader>
-                <div class="time__placeholder" v-else>
+              <div class="container__time mt-3">
+                <!-- <EventTimeLoader class="container__placeholder" v-if="!roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 70px; border-radius: 5px"></EventTimeLoader> -->
+                <div class="time__placeholder">
                   <div class="card" v-if="filtered.length==0">
                     <div class="card-body row">
                       <div class="col col-md text-center card__date">
@@ -75,7 +75,7 @@
                   </div>
 
                   <transition-group name="fade">
-                    <div class="card" v-for="(item) in filtered" :key='item'>
+                    <div class="card bg-dark mt-2" v-for="(item) in filtered" :key='item'>
                       <div class="card-body row">
                         <div class="col-4 col-md-2 text-center card__date">
                           {{ item.weekdayName }} <br /> {{ item.day }} <br /> {{ item.HorSessao }}
@@ -97,7 +97,7 @@
       </div>
     </div>
   </div>
-  <div v-else-if="template == 'ingressaria' || template == 'ticketHubVideo'">
+  <div v-else-if="template == 'ingressaria' || template == 'ticketHubVideo'  || template == 'tixs'">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
