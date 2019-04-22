@@ -237,7 +237,7 @@
                       <div>
                         <!-- <h3 class="">HORÁRIO</h3> -->
                         <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
-                        <p class="lead"><span class="card__hour-icon"> R$ </span>{{item.ValPeca | moneyIngressaria }} -  <i class="card__hour-icon fa fa-shopping-cart"></i> <span class="text-comprar"> COMPRAR</span></p>
+                        <p class="lead"><span class="card__hour-icon"> R$ </span>{{item.ValPeca | moneyIngressaria }} - <i class="card__hour-icon fa fa-shopping-cart"></i> <span class="text-comprar"> COMPRAR</span></p>
                       </div>
                     </div>
 
@@ -864,7 +864,7 @@ export default {
             this.metaObj.twitter.image.alt = this.event.NomPeca;
             this.metaObj.og.title = this.event.NomPeca;
             this.metaObj.og.type = 'website';
-            this.metaObj.og.url = config.host + response.key;
+            this.metaObj.og.url = config.host.endsWith("/") ? config.host : (config.host + "/") + response.key;
             this.metaObj.og.description = this.event.meta_description;
             this.metaObj.og.site_name = config.info.siteName;
             this.metaObj.og.image.root = this.event.img;
@@ -946,14 +946,14 @@ export default {
         ret = ret.filter(x => x.day == day && x.year == year);
       }
 
-			// console.log("TCL: filtered -> ret", ret)
+      // console.log("TCL: filtered -> ret", ret)
       return ret;
     },
     filteredDays() {
       // debugger
       let ret = this.presentantion;
-      
-			// console.log("TCL: filteredDays -> ret", ret)
+
+      // console.log("TCL: filteredDays -> ret", ret)
 
       return this.removeDuplicatesBy(x => x.day, ret);
     },
