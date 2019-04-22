@@ -484,6 +484,40 @@
 			font-size: 12px;
 		}
 	}
+	.ad__badge-it {
+		position: absolute;
+		/* width: 80px; */
+		padding: 0 8px;
+		z-index: 1000;
+		color: #f3f3f3;
+		top: 20px;
+		right: 8px;
+		font-size: 13px;
+		font-weight: bold !important;
+		// background: url('https://cdn.wallpapersafari.com/51/1/8KhBXE.jpg') !important;
+		background: url('/assets/bg-ingressoparatodos.jpg') !important;
+		background-size: 30px !important;
+		// background-image: radial-gradient(
+		// 	circle farthest-corner at 10% 20%,
+		// 	rgba(254, 106, 103, 1),
+		// 	rgba(240, 23, 23, 1)
+		// ) !important;
+		padding-bottom: 4px;
+
+		// text-transform: capitalize;
+		align-items: center;
+		align-self: center;
+		display: flex;
+		border-bottom-left-radius: 5px;
+		border-top-left-radius: 5px;
+		font-weight: bold;
+		box-shadow: 0 6px 8px 0 rgba(0, 0, 0, .15);
+
+		i {
+			margin-right: 5px;
+			padding-top: 5.4px;
+		}
+	}
 
 	html {
 		overflow-x: hidden !important;
