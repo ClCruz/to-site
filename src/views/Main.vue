@@ -64,6 +64,7 @@
 
 <script>
 import Vue from "vue";
+import VueAnalytics from 'vue-analytics';
 import AppHeader from "@/components/App-header";
 import AppFooter from "@/components/App-footer";
 import HeaderTicketHub from "@/views/templates/ticketHub/Header"
@@ -83,13 +84,18 @@ import appresetpass from "@/components/App-resetpass.vue";
 import applogin from "@/components/App-login.vue";
 import appnewuser from "@/components/App-newuser.vue";
 
-import {
-  authService
-} from "@/components/common/services/auth";
+import { partnerService } from '@/components/common/services/partner';
+import { authService } from "@/components/common/services/auth";
 
 Vue.use(VModal, {
   dynamic: true,
   injectModalsContainer: true
+});
+
+Vue.use(VueAnalytics, {
+  id: () => partnerService.ga().then(response => {
+    return response.ga_id;
+  })
 });
 
 export default {
