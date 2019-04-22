@@ -178,5 +178,9 @@
     "hipocritas.ticketoffice.wl": "hipocritas",
     "api.hipocritas.ticketoffice.wl": "hipocritas",
     "compra.hipocritas.ticketoffice.wl": "hipocritas",
-    "admin.hipocritas.ticketoffice.wl": "hipocritas"
+    "admin.hipocritas.ticketoffice.wl": "hipocritas",
+    "proshow.ticketoffice.me": "proshow",
+    "api.proshow.ticketoffice.me": "proshow",
+    "compra.proshow.ticketoffice.me": "proshow",
+    "admin.proshow.ticketoffice.me": "proshow"
 }

@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "proshow.ticketoffice.me",
+  "uri": "https://proshow.ticketoffice.me",
+  "api": "https://api.proshow.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.proshow.ticketoffice.me",
+  "admin": "https://admin.proshow.ticketoffice.me",
+  "apikey": "live_75cf5e469de94423bf15fd424f0ec8ba244105dc3e0d40c9af8e206f62df18ed",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/proshow/main.scss",
+  "css": "/stylesheets/themes/proshow.ticketoffice.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-proshow.jpeg",
+  "favico": "/img/proshow/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "shows, eventos",
+    "keywords": "eventos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "ProShow Estruturas",
+    "description": "shows, eventos",
+    "siteName": "proshow.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "",
+    "companyName": "ProShow Estruturas"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_proshow/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_proshow/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_proshow/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_proshow/emailComprador.html",
+      "gift": "../comprar/templates/multi_proshow/emailPresente.html",
+      "signature": "../comprar/templates/multi_proshow/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_proshow/confirmacaoEmail.html"
+
+    }
+  }
+}
