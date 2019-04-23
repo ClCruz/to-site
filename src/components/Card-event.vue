@@ -15,7 +15,7 @@
 <div v-else class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="goto('event', item)">
   <div class="ad__badge-it" v-if="item.minAmount !== '' && item.minAmount !== undefined && item.minAmount !== null">
     <!-- <i class="far fa-money-bill-alt" style=""></i> -->
-    <span class="bold" style="margin-top: 6px">A partir de {{item.minAmount}}</span>
+    <span class="" style="margin-top: 6px">A partir de <span style="font-weight: bold !important; font-size: 16px !important">{{item.minAmount}}</span></span>
   </div>
   <div class="to-box p-0">
     <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;">
