@@ -1,5 +1,5 @@
 @mixin contentTixsme {
-	@import url('https://fonts.googleapis.com/css?family=Lato:100,300,500');
+	@import url('https://fonts.googleapis.com/css?family=Lato:100,300,500,700,900');
 
 	body {
 		background: #000;
@@ -17,7 +17,7 @@
 		background-size: cover !important;
 		background-position: 75% !important;
 		// width: 250px !important;
-		height: 400px;
+		height: 200px;
 		width: 100%;
 		box-sizing: border-box;
 	}
@@ -91,19 +91,36 @@
 		text-align: center;
 	}
 
+	#block_features {
+		background: #fff;
+
+		padding: 20px 0 40px 0;
+		h2 {
+			margin: 0 auto;
+			padding-top: 0;
+			margin-top: 0;
+			color: #222 !important;
+			letter-spacing: 3px;
+			font-weight: bold !important;
+			text-transform: uppercase;
+			border-bottom: 1px solid #777;
+			width: 80%;
+			margin-bottom: 10px;
+		}
+	}
+
 	#block_events,
-	#block_features,
 	#ad_container,
 	#block_calendar {
 		.container {
 			// background: #191919;
-			background: url('/assets/texture/texture_tixs_4.png');
+			// background: url('/assets/texture/texture_tixs_4.png');
 			background-size: 20px;
 			background-repeat: repeat;
 		}
 	}
 	#block_event {
-		background: url('/assets/texture/texture_tixs_4.png');
+		// background: url('/assets/texture/texture_tixs_4.png');
 		background-size: 10px;
 		background-repeat: repeat;
 		padding-top: 15px;
@@ -123,7 +140,8 @@
 		}
 	}
 	footer.bg-dark {
-		background: url('/assets/texture/texture_tixs_4.png') !important;
+		// background: url('/assets/texture/texture_tixs_4.png') !important;
+		background: #000 !important;
 		background-size: 20px;
 		// background-size: 20px;
 		background-repeat: repeat;

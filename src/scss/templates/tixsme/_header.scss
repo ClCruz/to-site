@@ -7,13 +7,15 @@
 		// 	#333399,
 		// 	#ff00cc
 		// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		background-image: url('/assets/background/5.png');
+		// background-image: url('/assets/background/5.png');
+		background-image: url('http://teatroprocopioferreira.com.br/wp-content/uploads/2019/01/banner-AZUSA-new.jpg');
 
-		background-repeat: repeat;
+		background-repeat: no-repeat;
+		background-size: cover;
 		background-position: center;
 		// background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 
-		padding: 130px 0 !important;
+		padding: 180px 0 !important;
 
 		box-shadow: 0 5px 5px rgba(0, 0, 0, 1), 0 5px 5px rgba(0, 0, 0, 1);
 	}
@@ -33,7 +35,7 @@
 		margin-top: 3px;
 		-ms-flex-item-align: center;
 		align-self: center;
-		width: 70%;
+		width: 100%;
 		@include MQ(S) {
 			width: 100%;
 			margin-top: 15px;
