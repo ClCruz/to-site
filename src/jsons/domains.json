@@ -186,5 +186,9 @@
     "arena.ticketoffice.me": "arenaclub",
     "api.arena.ticketoffice.me": "arenaclub",
     "compra.arena.ticketoffice.me": "arenaclub",
-    "admin.arena.ticketoffice.me": "arenaclub"
+    "admin.arena.ticketoffice.me": "arenaclub",
+    "megac.ticketoffice.me": "megac",
+    "api.megac.ticketoffice.me": "megac",
+    "compra.megac.ticketoffice.me": "megac",
+    "admin.megac.ticketoffice.me": "megac"
 }
