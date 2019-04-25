@@ -182,5 +182,9 @@
     "proshow.ticketoffice.me": "proshow",
     "api.proshow.ticketoffice.me": "proshow",
     "compra.proshow.ticketoffice.me": "proshow",
-    "admin.proshow.ticketoffice.me": "proshow"
+    "admin.proshow.ticketoffice.me": "proshow",
+    "arena.ticketoffice.me": "arenaclub",
+    "api.arena.ticketoffice.me": "arenaclub",
+    "compra.arena.ticketoffice.me": "arenaclub",
+    "admin.arena.ticketoffice.me": "arenaclub"
 }
