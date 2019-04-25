@@ -2,7 +2,9 @@
 	@import url('https://fonts.googleapis.com/css?family=Lato:100,300,500,700,900');
 
 	body {
-		background: #000;
+		background: url('/assets/texture/texture_tixs_4.png') !important;
+		background-repeat: repeat;
+		background-size: cover;
 	}
 
 	.card_destaques {
@@ -23,13 +25,13 @@
 	}
 
 	.card__eventos-container {
-		padding: 5px;
+		padding: 4px;
 	}
 
 	.card__eventos {
 		cursor: pointer;
 		position: relative;
-		height: 240px;
+		height: 145px;
 		background-size: cover !important;
 		background-position: center !important;
 		box-sizing: border-box;
@@ -38,9 +40,9 @@
 
 		// border-radius: 2px;
 		justify-content: center;
-		border-radius: 2px;
+		// border-radius: 2px;
 
-		box-shadow: 0 1px 6px rgba(0, 0, 0, 1), 0 3px 6px rgba(0, 0, 0, 1);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 1);
 
 		.card__eventos-img {
 		}
@@ -58,7 +60,7 @@
 			}
 
 			.card__eventos-nome {
-				opacity: 0.8;
+				opacity: 0.6s;
 			}
 		}
 	}
@@ -69,7 +71,7 @@
 		display: flex;
 		border: 1px solid $secundary;
 		color: $secundary;
-		padding: 9px;
+		padding: 6px;
 		border-radius: 50%;
 		opacity: 0;
 	}
@@ -79,11 +81,12 @@
 		bottom: 0;
 		color: white;
 		background: $secundary;
+		// background: rgb(22, 71, 15);
 		font-weight: bold;
-		font-size: 12px;
+		font-size: 10px;
 		width: 100%;
 		padding: 4px;
-		min-height: 55px;
+		min-height: 42px;
 		opacity: 0;
 		display: flex;
 		align-items: center;
@@ -92,7 +95,7 @@
 	}
 
 	#block_features {
-		background: #fff;
+		background: #eee;
 
 		padding: 20px 0 40px 0;
 		h2 {
@@ -125,7 +128,7 @@
 		background-repeat: repeat;
 		padding-top: 15px;
 		.bg-dark {
-			background: #000 !important;
+			background: none !important;
 			border: 1px solid #232323;
 			border-radius: 3px;
 
@@ -141,7 +144,7 @@
 	}
 	footer.bg-dark {
 		// background: url('/assets/texture/texture_tixs_4.png') !important;
-		background: #000 !important;
+		background: none !important;
 		background-size: 20px;
 		// background-size: 20px;
 		background-repeat: repeat;
@@ -153,20 +156,23 @@
 		// font-weight: bold;
 		margin-bottom: 12px;
 		cursor: pointer;
+
+		border-bottom: 8px solid transparent;
+		// padding-bottom: -4px;
+		// margin-bottom: -4px;
+		border-image: url('/assets/texture/texture-menu.png') 60 stretch;
+		border-image-repeat: no-repeat;
+
 		.active {
-			color: $secundary;
+			// color: $secundary;
+			font-weight: bold;
+
+			border-bottom: 12px solid transparent;
+			// padding-bottom: -4px;
+			// margin-bottom: -4px;
+			border-image: url('/assets/texture/texture-menu.png') 30 stretch;
+			border-image-repeat: no-repeat;
 			// border-bottom: 2px solid $secundary;
-			padding-bottom: 5px;
-			border-radius: 1px;
-			box-shadow: inset 0 -8px 8px -8px $secundary;
-		}
-		.active-ego {
-			padding-bottom: 5px;
-			box-shadow: inset 0 -5px 8px -10px $secundary;
-		}
-		.active-ego-g {
-			padding-bottom: 5px;
-			box-shadow: inset 0 -3px 8px -13px $secundary;
 		}
 	}
 
@@ -293,5 +299,9 @@
 		margin-left: 10px;
 		text-transform: uppercase;
 		font-size: 12px;
+	}
+
+	.event__card-img {
+		width: 90%;
 	}
 }

@@ -2,9 +2,9 @@
   <div>
     <section class="fdb-block team-6" data-block-type="teams" data-id="3" draggable="true" id="block_features">
       <div class="container">
-          <h2 class="justify-content-center text-center">Destaque</h2>
+          <h2 class="justify-content-center text-center pb-0 mb-0">Destaque</h2>
         <div class="row text-center p-0">
-          <div class="col-12 col-md-4 p-1" v-for="(item, index) in bannerEvents" :key='index'>
+          <div class="col-12 col-md-4 p-3" v-for="(item, index) in bannerEvents" :key='index'>
             <div class="col-12 card_destaques" @click="goto('event',{ uri: item.uri})" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="">
             </div>
           </div>
@@ -18,13 +18,13 @@
           <div class="col-6 pr-0 col-lg-6 text-left">
             <div class="p-1 pr-0 mt-0 mb-0 pb-0">
             
-              <img class="img-fluid rounded-0 discovery" src="https://designcontest-com-designcontest.netdna-ssl.com/blog/wp-content/themes/dcblog/images/xhow-it-works.jpg.pagespeed.ic.J5Oak4DPL_.webp">
+              <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
             </div>
           </div>
           <div class="col-6 pl-0 col-lg-6 text-left">
             <div class="p-1 pl-0 mt-0 mb-0 pb-0">
               
-              <img class="img-fluid rounded-0 discovery" src="https://designcontest-com-designcontest.netdna-ssl.com/blog/wp-content/themes/dcblog/images/xhow-it-works.jpg.pagespeed.ic.J5Oak4DPL_.webp">
+              <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
             </div>
           </div>
         </div>
@@ -77,13 +77,13 @@
       
         </div>
       </section> -->
-    <div class="container-fluid" id="ad_container">
+    <div class="container-fluid pt-0 mt-0" id="ad_container">
       <div class="container p-0">
         <div class="row">
           <div class="col-12 col-xl-12 text-left">
-            <div class="p-1 mt-3 mb-0 pb-0">
+            <div class="p-1 pt-0 mt-0 mb-0 pb-0">
               <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
-              <img class="img-fluid rounded-0 discovery" src="https://designcontest-com-designcontest.netdna-ssl.com/blog/wp-content/themes/dcblog/images/xhow-it-works.jpg.pagespeed.ic.J5Oak4DPL_.webp">
+              <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
             </div>
           </div>
         </div>
@@ -92,10 +92,9 @@
     <section class="fdb-block team-4" id="block_events">
       <div class="container pt-3">
         <div class="row text-center mt-0">
-          <div class="col-3 block_events-categories"><span class="active">Cat<span class="active-ego">e<span class="active-ego-g">g</span>o</span>ria 1</span></div>
-          <div class="col-3 block_events-categories"><span>Categoria 2</span></div>
-          <div class="col-3 block_events-categories"><span>Categoria 3</span></div>
-          <div class="col-3 block_events-categories"><span>Categoria 4</span></div>
+          <div class="col-4 block_events-categories"><span class="active">Cat<span class="active-ego">e<span class="active-ego-g">g</span>o</span>ria 1</span></div>
+          <div class="col-4 block_events-categories"><span>Categoria 2</span></div>
+          <div class="col-4 block_events-categories"><span>Categoria 3</span></div>
           <div class="col-12 col-md-3 card__eventos-container" v-for="(item, index) in computedFilteredData" :key='index' :item="item" @click="goto('event', item)">
             <div class="p-0 card__eventos" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + item.img + '\')' }">
               <div class="card__eventos-btn">
@@ -112,10 +111,10 @@
     <div class="container-fluid" id="ad_container">
       <div class="container p-0">
         <div class="row">
-          <div class="col-12 col-xl-12 text-left">
+          <div class="col-12 col-xl-12 text-left p-0">
             <div class="p-1 mt-3 mb-0 pb-0">
               <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
-              <img class="img-fluid rounded-0 discovery" src="https://designcontest-com-designcontest.netdna-ssl.com/blog/wp-content/themes/dcblog/images/xhow-it-works.jpg.pagespeed.ic.J5Oak4DPL_.webp">
+              <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
             </div>
           </div>
         </div>

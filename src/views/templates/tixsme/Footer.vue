@@ -3,8 +3,8 @@
   <footer class="fdb-block bg-dark container">
     <div class="">
       <div class="row align-items-top text-center text-md-left">
-        <div class="col-12 col-md">
-          <div class="footer__logo text-left mb-3">
+        <div class="col-12 justify-content-center">
+          <div class="footer__logo text-center mb-3">
             <router-link to="/">
               <div class="img" style=""></div>
             </router-link>

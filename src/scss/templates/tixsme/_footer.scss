@@ -1,11 +1,12 @@
 @mixin footerTixsme {
 	.footer__logo {
+		padding-bottom: 40px;
 	}
 
 	.footer__logo .img {
-		height: 80px;
+		height: 50px;
 		width: 100%;
-		background-image: url('https://www.tixs.me/assets/tixs (1).png');
+		background-image: url('/assets/texture/logo-vertical.png');
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -34,7 +35,7 @@
 		}
 
 		.img {
-			background-position: left center !important;
+			background-position: center !important;
 
 			@include MQ(S) {
 				background-position: center center !important;

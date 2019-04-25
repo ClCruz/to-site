@@ -1,5 +1,6 @@
 @mixin headerTixsme {
 	#header_home {
+		position: relative;
 		// background: #ff00cc; /* fallback for old browsers */
 		// background: -webkit-linear-gradient(to right, #333399, #ff00cc); /* Chrome 10-25, Safari 5.1-6 */
 		// background: linear-gradient(
@@ -8,20 +9,15 @@
 		// 	#ff00cc
 		// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		// background-image: url('/assets/background/5.png');
-		background-image: url('http://teatroprocopioferreira.com.br/wp-content/uploads/2019/01/banner-AZUSA-new.jpg');
 
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: center bottom;
 		// background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 
-		padding: 180px 0 !important;
+		padding: 80px 0 400px 0 !important;
 
 		box-shadow: 0 5px 5px rgba(0, 0, 0, 1), 0 5px 5px rgba(0, 0, 0, 1);
-	}
-
-	img {
-		height: 50px;
 	}
 
 	.social-text {
@@ -64,6 +60,8 @@
 			padding: 0px 0px 0px 32px;
 			color: #fff;
 			border-radius: 0.2em;
+
+			border-radius: 10px;
 
 			-webkit-transition: all .5s;
 			transition: all .5s;
@@ -277,12 +275,41 @@
 	// header menu
 
 	#header.bg-dark {
-		background: url('/assets/texture/texture_tixs_4.png') !important;
+		position: absolute;
+		// background: url('/assets/texture/texture_tixs_4.png') !important;
+		background: rgba(0, 0, 0, .5) !important;
+		bottom: 0;
+		.nav-item {
+			display: flex;
+			align-items: center;
+		}
+		.col-2 {
+			display: flex;
+			align-items: center;
+		}
 
+		img {
+			width: 70%;
+			align-self: center;
+		}
 		.nav-link {
 			letter-spacing: .5px;
 			text-transform: uppercase;
 			font-size: 12px;
 		}
+
+		.nav-link-active {
+			border-bottom: 4px solid transparent;
+			padding-bottom: -4px;
+			margin-bottom: -4px;
+			border-image: url('/assets/texture/texture-menu.png') 30 stretch;
+			border-image-repeat: no-repeat;
+		}
+	}
+
+	#navbar-header .row {
+		width: 100% !important;
+		max-width: 1100px !important;
+		padding: 0;
 	}
 }

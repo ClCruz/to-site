@@ -1,7 +1,7 @@
 <template>
 <div>
 
-  <section id="header_home" class="fdb-block p-5 container-fluid" style="" data-block-type="features" data-id="2" draggable="true">
+  <section id="header_home" class="fdb-block p-5 container-fluid" style="	background-image: url('http://teatroprocopioferreira.com.br/wp-content/uploads/2019/01/banner-AZUSA-new.jpg');" data-block-type="features" data-id="2" draggable="true" >
     <div class="container-fluid">
       <div class="row text-lg-right align-items-center">
         <div class="col-12 col-sm-12 order-1 order-sm-3 order-md-3 order-lg-1 col-lg-5 text-left pt-sm-0">
@@ -16,48 +16,52 @@
         <div class="col-5 col-sm-12 col-md-3 order-2 order-sm-2 order-md-2 order-lg-2 col-lg-2 m-auto pt-lg-0 text-center">
         </div>
 
-          <div class="col-12 order-3 order-md-1 order-lg-3 order-sm-0 mt-md-2 mt-sm-2 pb-md-4 pt-md-0 pb-sm-4 col-sm-12 mt-sm-2 col-lg-5">
-          </div>
-
+        <div class="col-12 order-3 order-md-1 order-lg-3 order-sm-0 mt-md-2 mt-sm-2 pb-md-4 pt-md-0 pb-sm-4 col-sm-12 mt-sm-2 col-lg-5">
         </div>
+
       </div>
-  </section>
-  <header id="header" class="bg-dark align-items-center container" data-block-type="headers" data-id="1" style="padding: 10px">
-    <div class="container">
+    </div>
+  <header id="header" class="bg-dark align-items-center container-fluid" data-block-type="headers" data-id="1" style="">
+    <div class="container-fluid">
       <nav class="navbar navbar-expand-md no-gutters text-right col-12">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav12" aria-controls="navbarNav12" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-        <div class="collapse navbar-collapse justify-content-center col-md-12" id="navbarNav12">
-          <div class="row p-0">
-          <!-- <img alt="image" class="img-fluid" src="https://www.tixs.me/assets/tixs (1).png" style="height: 50px; "> -->
-          <img alt="image" class="col-1" src="https://www.tixs.me/assets/tixs (1).png">
-
-          <ul class="col-8 navbar-nav justify-content-center">
-            <li class="nav-item active">
-              <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Teatro</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Música</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Diversão</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Outros</a>
-            </li>
-          </ul>
-            <app-search class="col-3"></app-search>
+        <div class="collapse navbar-collapse justify-content-center col-md-12" id="navbar-header">
+          <div class="row">
+            <!-- <img alt="image" class="img-fluid" src="https://www.tixs.me/assets/tixs (1).png" style="height: 50px; "> -->
+            <div class="col-3 p-0">
+              <img alt="image" src="/assets/texture/logo-vertical.png">
+          </div>
+              <ul class="col-6 navbar-nav justify-content-center">
+                <li class="nav-item active">
+                  <a class="nav-link nav-link-active" href="">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Teatro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Música</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Diversão</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Outros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Contato</a>
+                </li>
+              </ul>
+              <app-search class="col-3 p-0 w-100"></app-search>
             </div>
-        </div>
+          </div>
 
       </nav>
     </div>
   </header>
+  </section>
 </div>
 </template>
 
