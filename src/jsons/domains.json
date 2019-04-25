@@ -190,5 +190,9 @@
     "megac.ticketoffice.me": "megac",
     "api.megac.ticketoffice.me": "megac",
     "compra.megac.ticketoffice.me": "megac",
-    "admin.megac.ticketoffice.me": "megac"
+    "admin.megac.ticketoffice.me": "megac",
+    "bailedopresidente.ticketoffice.me": "bailedopresidente",
+    "api.bailedopresidente.ticketoffice.me": "bailedopresidente",
+    "compra.bailedopresidente.ticketoffice.me": "bailedopresidente",
+    "admin.bailedopresidente.ticketoffice.me": "bailedopresidente"
 }
