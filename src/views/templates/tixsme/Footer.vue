@@ -229,11 +229,6 @@ export default {
           "img": "/assets/logo-bringressos.svg"
         },
         {
-          "name": "www.ingresso.promo",
-          "url": "http://ingresso.promo",
-          "img": "/assets/logo-ingressopromo.png"
-        },
-        {
           "name": "www.ingresso.store",
           "url": "https://www.ingresso.store/",
           "img": "/assets/logo-ingressostore.png"
