@@ -36,25 +36,13 @@ gulp.task('sass', function() {
 
 gulp.task('sassLocal', function() {
 	gulp
-		.src('./src/scss/themes/*topticket*/*.scss')
+		.src(['./src/scss/themes/*megac*/*.scss','./src/scss/themes/*bailedopres*/*.scss', './src/scss/themes/*arena*/*.scss'])
 		.pipe(
 			sass({
 				outputStyle: 'nested'
 			}).on('error', sass.logError)
 		)
 		.pipe(gulp.dest('./public/assets/css/'))
-		.pipe(livereload());
-		gulp
-		.src('./src/scss/themes/www.teatroumc.com.br/main.scss')
-		.pipe(sourcemaps.init())
-		.pipe(
-			sass({
-				outputStyle: 'compressed'
-			}).on('error', sass.logError)
-		)
-		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./public/assets/css/www.teatroumc.tk/'))
 		.pipe(livereload());
 });
 

@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/megac/main.scss",
   "css": "/stylesheets/themes/megac.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-megac.jpeg",
   "favico": "/img/megac/",
   "videos": {

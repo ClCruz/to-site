@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/arenaclub/main.scss",
   "css": "/stylesheets/themes/arena.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-arenaclub.jpeg",
   "favico": "/img/arenaclub/",
   "videos": {
