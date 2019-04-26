@@ -803,19 +803,19 @@
 		cursor: pointer;
 		border-radius: 10px;
 		box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .25);
-		font-size: 12px;
+		font-size: 16px;
 		font-weight: bold;
 		z-index: 5000;
 		color: #fff !important;
 		transition: 0.4s;
 
 		i {
-			font-size: 12px;
+			font-size: 16px;
 			margin-right: 5px;
 		}
 
 		@include MQ(S) {
-			display: none;
+			// display: none;
 		}
 
 		&:hover {
@@ -850,6 +850,13 @@
 		@include MQ(S) {
 			justify-content: center;
 			margin-top: 0;
+		}
+
+		.container__arrows {
+			@include MQ(S) {
+				margin-top: -45px !important;
+				padding-bottom: 30px !important;
+			}
 		}
 	}
 
@@ -920,6 +927,7 @@
 			justify-content: center;
 			display: flex;
 
+			font-weight: bold;
 			transition: 0.5s;
 
 			h3 {
@@ -937,8 +945,9 @@
 
 			p.lead {
 				margin-bottom: 0;
-
-				font-size: 0.75em;
+				margin-top: 5px;
+				font-size: 0.85em;
+				font-weight: bold;
 			}
 
 			@include MQ(S) {
@@ -948,6 +957,17 @@
 			&:hover {
 				background: rgb(224, 237, 250);
 			}
+		}
+
+		.icon {
+			font-size: 8px;
+		}
+
+		.card__hour-icon {
+			color: indianred;
+		}
+
+		.text-comprar {
 		}
 	}
 

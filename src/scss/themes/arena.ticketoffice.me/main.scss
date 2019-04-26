@@ -1,0 +1,135 @@
+@import "settings.scss";
+@import "../../main.scss";
+@import "override.scss";
+@import "../../to-framework/main.scss";
+
+header.bg-dark {
+	// background-color: rgb(202, 8, 19) !important;
+	background-color: #000 !important;
+}
+.header__logo .img {
+	height: 55px;
+	width: 100%;
+}
+
+// footer.bg-dark {
+// 	background-color: rgb(255, 255, 255) !important;
+// 	color: black !important;
+// }
+
+// footer a,
+// footer p {
+// 	color: black !important;
+// }
+
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
+}
+
+.footer__logo .img {
+	height: 40px;
+}
+
+// footer.bg-dark a {
+// 	color: black !important;
+// }
+
+// footer .img {
+// 	// background: #fff;
+// 	// background-position: center !important;
+// 	// border-radius: 2px;
+// }
+
+$gradiente: $secundary !important;
+
+.header__logo .img {
+	height: 35px;
+	width: 100%;
+	background-position: left center;
+}
+
+.swal2-progresscircle {
+	background: $secundary !important;
+}
+
+.swal2-styled {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $secundary !important;
+	border: none;
+	color: white;
+	transition: 0.5s;
+
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
+	}
+}
+
+#ddown1 button {
+	color: black !important;
+}
+
+.bg__main {
+	background: url('/assets/bg-arenaclub.jpeg') !important;
+	background-position: center !important;
+	background-size: cover !important;
+	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
+	@include MQ(S) {
+		display: none !important;
+	}
+}
+
+.eventHeader header.bg-dark,
+.header__mobile {
+	background: #000 !important;
+}
+
+#modals-container .btn-success:hover,
+#modals-container .btn-success:focus,
+#modals-container .btn-success {
+	background: #fff !important;
+}
+.eventHeader header.navbar-fixed-top {
+}
+
+.v--modal-overlay {
+	z-index: 999999 !important;
+}
+
+.navbar-fixed-top {
+	background: #000 !important;
+}
+
+.to-btn {
+	font-size: 13px !important;
+}
+
+.navbar-fixed-top .to-btn {
+	font-size: 13px !important;
+	// font-weight: bold !important;
+	// color: #fff !important;
+}
+
+footer.bg-dark {
+	background-color: #000 !important;
+	color: #fff !important;
+}
+
+footer a,
+footer p,
+header.bg-dark .navbar-nav a.nav-link,
+.to-btn,
+.navbar-fixed-top .to-btn {
+	color: #fff !important;
+	font-weight: normal;
+
+	@include MQ(S) {
+		color: #fff !important;
+	}
+}

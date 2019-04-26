@@ -1,16 +1,28 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main" style="top: 0; width: 99vw;z-index: -1;background: none!important" id="sectionVideo" data-block-type="call_to_action" data-id="2">
-    <video autoplay loop autobuffer muted playsinline id="myVideo" style="max-height: 92vh; object-fit: cover; width: 100vw; overflow-x: hidden;">
-      <source v-for="(item) in getconfig.info.videos.list" v-bind:key="item.order" :src="item.src" :type="item.type">
-    </video>
+  <section class="to-block to-viewport bg-dark bg__main row align-items-start justify-content-center" style="top: 0; width: 99vw;z-index: -1; padding: 0 !important; " id="sectionVideo" data-block-type="call_to_action" data-id="2">
+  <!-- <img src="/assets/eventoslitoraldata.png" alt="" style="position: absolute; height: 100px; left: 200px; top: 65px" >
+  <img src="/assets/eventoslitorallogo.png" alt="" style="position: absolute; height: 150px; right: 240px; top: 50px" >
+  <img src="/assets/flecha_up.png" alt="" style="position: absolute; width: 200px; top: 0px; left: 5px" >
+  <img src="/assets/flecha_down.png" alt="" style="position: absolute; width: 200px; bottom: 0px; right: 5px" > -->
+  <!-- <swiper :options="swiperOptionLitoral" class="col-md-6 col-lg-4" style="position: absolute; justify-content: center; top: 20%">
+          <swiper-slide class=" text-center justify-content-center">
+            <img src="/assets/pixote.png" alt=""  style="width: 90%">
+          </swiper-slide>
+          <swiper-slide class=" text-center justify-content-center">
+            <img src="/assets/sorrisomaroto.png" alt=""  style="width: 90%">
+          </swiper-slide>
+        </swiper> -->
+
+  <img src="/assets/bg_eventoslitoral2.png" alt="" style="max-width: 900px; align-self: center; height: auto" >
+  <!-- <img src="/assets/bg_eventoslitoral.jpg" alt="" style="height: 80vh!important; width: 100%" > -->
   </section><!-- Propaganda -->
   <div class="container-fluid container__select" v-if="discoveryBanner.length > 0">
     <div class="container p-0">
       <div class="row">
         <div class="col-12 col-xl-12 text-left">
           <div class="p-3">
-            <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title">
+             <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title" @click="goto('discovery', discoveryBanner[0].link)">
             <!-- <div class="discovery" :style="{ backgroundImage: 'url(\'' + discoveryBanner[0].imageURI + '\')' }"> -->
             <!-- </div> -->
           </div>
@@ -147,6 +159,26 @@ export default {
         text: ''
       },
 
+      swiperOptionLitoral: {
+        loop: true,
+        autoplay: true,
+        speed: 800,
+        loopedSlides: 1,
+        slidesPerView: 1,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next-litoral',
+          prevEl: '.swiper-button-prev-litoral'
+        },
+        breakpoints: {
+          800: {
+            slidesPerView: 1
+          }
+        },
+      },
       swiperOption: {
         // loop: true,
         // autoplay: true,
@@ -228,6 +260,9 @@ export default {
           break;
         case "event":
           this.$router.push(item.uri);
+          break;
+        case "discovery":
+          window.location.href = item;
           break;
       }
     },

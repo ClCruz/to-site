@@ -483,6 +483,9 @@
 		&:hover {
 			box-shadow: 0 0rem 0.9rem rgba(140, 140, 140, 0.8) !important;
 			transform: translateY(-1px);
+
+			.ad__badge-it {
+			}
 		}
 	}
 
@@ -1396,4 +1399,17 @@ input:disabled {
 }
 .sac__card p > br {
 	padding: 30px;
+}
+.ql-align-center {
+	text-align: center;
+}
+
+.discovery {
+	cursor: pointer;
+}
+
+#ddown1 button {
+	color: #333 !important;
+	font-weight: bold;
+	padding-top: 5px;
 }

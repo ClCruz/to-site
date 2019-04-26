@@ -121,7 +121,7 @@
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
                     </span>
-                    <h3 class="mt-3">Detalhes do eventos</h3>
+                    <h3 class="mt-3">Detalhes do evento</h3>
 
                     <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
                     <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
@@ -202,14 +202,14 @@
             <div class="btn__comprar" id="btn__comprar" @click="scrollTo()" title="Selecionar horários">
               <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
               <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
-              Selecionar horário
+              Comprar ingressos
             </div>
             <!-- Banner -->
             <div class="container pl-0 mt-5 pt-3 container__calendar">
               <div class="">
                 <div class="p-2">
                   <h3 class="" id="horario">Escolha de horário</h3>
-                  <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário</p>
+                  <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário para compra</p>
                   <div class="container__arrows">
                     <div class="swiper-button-prev" slot="button-prev"></div>
                     <div class="swiper-button-next" slot="button-next"></div>
@@ -237,7 +237,7 @@
                       <div>
                         <!-- <h3 class="">HORÁRIO</h3> -->
                         <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
-                        <p class="lead">{{item.ValPeca | money }}</p>
+                        <p class="lead"><span class="card__hour-icon"> R$ </span>{{item.ValPeca | moneyIngressaria }} - <i class="card__hour-icon fa fa-shopping-cart"></i> <span class="text-comprar"> COMPRAR</span></p>
                       </div>
                     </div>
 
@@ -405,6 +405,14 @@ Vue.filter("money", function (value) {
     ret = helper.toFixed(2);
   }
   return `R$ ${ret}`;
+});
+Vue.filter("moneyIngressaria", function (value) {
+  let helper = parseFloat(value);
+  let ret = "0.00";
+  if (helper > 0) {
+    ret = helper.toFixed(2);
+  }
+  return `${ret}`;
 });
 
 export default {
@@ -856,7 +864,7 @@ export default {
             this.metaObj.twitter.image.alt = this.event.NomPeca;
             this.metaObj.og.title = this.event.NomPeca;
             this.metaObj.og.type = 'website';
-            this.metaObj.og.url = config.host + response.key;
+            this.metaObj.og.url = config.host.endsWith("/") ? config.host : (config.host + "/") + response.key;
             this.metaObj.og.description = this.event.meta_description;
             this.metaObj.og.site_name = config.info.siteName;
             this.metaObj.og.image.root = this.event.img;
@@ -938,14 +946,14 @@ export default {
         ret = ret.filter(x => x.day == day && x.year == year);
       }
 
-			// console.log("TCL: filtered -> ret", ret)
+      // console.log("TCL: filtered -> ret", ret)
       return ret;
     },
     filteredDays() {
       // debugger
       let ret = this.presentantion;
-      
-			// console.log("TCL: filteredDays -> ret", ret)
+
+      // console.log("TCL: filteredDays -> ret", ret)
 
       return this.removeDuplicatesBy(x => x.day, ret);
     },

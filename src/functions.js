@@ -188,6 +188,9 @@ export const func = {
                 token = client.token;
             }
             switch (type) {
+                case "printticket":
+                    window.location = `${config.legacy}/comprar/gotoprint.php?token=${token}&id=`+this.queryString("pedido");
+                break;
                 case "cardnow":
                     window.location = `${config.legacy}/comprar/gotocard.php?token=${token}`;
                 break;

@@ -1,0 +1,232 @@
+@import "settings.scss";
+@import "../../main.scss";
+@import "override.scss";
+@import "../../to-framework/main.scss";
+
+.navbar-fixed-top {
+	background: #fff !important;
+}
+
+.header__logo .img {
+	height: 40px;
+	width: 100%;
+}
+
+.navbar-fixed-top {
+	.header__logo .img {
+		height: 40px !important;
+	}
+}
+
+.bg-dark {
+	background-color: #fff !important;
+}
+
+$gradiente: $secundary !important;
+
+.swal2-progresscircle {
+	background: $secundary !important;
+}
+
+footer.bg-dark {
+	background-color: rgb(255, 255, 255) !important;
+	color: black !important;
+}
+
+footer a,
+footer p,
+header.bg-dark .navbar-nav a.nav-link,
+.to-btn {
+	color: #444 !important;
+	font-weight: normal;
+	font-size: 12px !important;
+
+	@include MQ(S) {
+		color: #444 !important;
+	}
+}
+
+.container__available-times .card__hour {
+	background: rgb(4, 54, 110) !important;
+	* {
+		color: white !important;
+	}
+
+	&:hover {
+		background: rgb(3, 63, 132) 47.7% !important;
+	}
+	.card__hour-icon {
+		// color: indianred !important;
+	}
+
+	@include MQ(S) {
+		padding: 10px 0 !important;
+	}
+}
+
+.card__time {
+	&:hover {
+		background: rgb(4, 54, 110) !important;
+		*,
+		p.lead {
+			color: white !important;
+			// font-size: 0.95rem !important;
+		}
+
+		i {
+			color: rgb(4, 54, 110) !important;
+		}
+	}
+}
+
+.card__time-active {
+	background: rgb(4, 54, 110) 47.7%;
+	*,
+	p.lead {
+		color: white !important;
+	}
+
+	&:hover {
+		background: rgb(3, 63, 132) 47.7% !important;
+	}
+}
+
+.icon-active {
+	color: rgb(4, 54, 110) !important;
+}
+
+.swal2-styled {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $secundary !important;
+	border: none;
+	color: white;
+	transition: 0.5s;
+
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
+	}
+}
+
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
+}
+
+#ddown1 button {
+	color: black !important;
+}
+
+.container-fluid {
+	@include MQ(NS) {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}
+
+body {
+	background: #eee !important;
+}
+
+#sectionVideo {
+	// background: url('/assets/bgeventoslitoral.png') !important;
+	// height: 90vh;
+	// background-size: contain !important;
+	// background-repeat: no-repeat !important;
+
+	background: url(https://cdn.guicheweb.com.br/gw-bucket/imagenseventos/27-02-2019_19-24-03.jpg) center top no-repeat !important;
+	height: 450px;
+}
+
+header {
+	// display: none;
+}
+
+.eventHeader header {
+	display: block;
+}
+
+header.navbar-fixed-top {
+	display: unset !important;
+}
+
+.bg__main {
+}
+
+.nav__links {
+	display: none;
+}
+nav {
+	padding: 10px !important;
+}
+
+.btn {
+	padding: .15rem 1.3rem !important;
+}
+
+.header__logo .img {
+	width: 100%;
+	background-position: left !important;
+}
+.to-btn {
+	color: #666 !important;
+	font-weight: normal !important;
+	font-size: 13px !important;
+}
+
+.header__search {
+	display: block !important;
+}
+
+.v-suggestions {
+	width: 70% !important;
+	box-shadow: none !important;
+}
+
+.v-suggestions input[type=text] {
+	height: 35px !important;
+	font-size: 13px !important;
+	background-size: 12px;
+	padding-left: 30px;
+
+	&:focus {
+		padding-left: 30px;
+	}
+}
+
+.suggestions {
+	top: 38px !important;
+}
+
+#ddown1 button {
+	font-size: 12px;
+	color: #333 !important;
+	margin-top: 4px;
+}
+
+.header__mobile {
+	background: white !important;
+}
+
+footer a,
+footer p {
+	@include MQ(S) {
+	}
+}
+
+.card__hour-icon {
+	color: indianred !important;
+}
+
+.container__available-times .card__hour p.lead {
+	font-size: 1rem;
+}
+
+.btn__comprar {
+	background: linear-gradient(135deg, rgb(3, 59, 122) 30%, rgb(4, 54, 110)) !important;
+}

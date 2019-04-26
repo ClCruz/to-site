@@ -1,10 +1,10 @@
 <template>
-<div class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="window.location(item.link)" v-if="item.isdiscovery == 1">
+<div class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="goto('discovery', item.link)" v-if="item.isdiscovery == 1">
   <div class="to-box p-0">
     <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.imageURI + '\')' }" style="background-size: cover;"></div>
 
     <div class="content to-box p-2 pt-0 pb-1" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
-      <h4 class="event__title pb-1">
+      <h4 class="event__title pb-1" style="text-transform: uppercase !important">
         <strong>{{ item.title |  truncate(35, ' ...') }}</strong>
       </h4>
       <p class="p-0 pt-1 m-0 h-200 event__item" style="font-size: 13px">{{item.content | truncate(110, ' ...') }}</p>
@@ -13,15 +13,25 @@
   </div>
 </div>
 <div v-else class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="goto('event', item)">
+  <div class="ad__badge-it" v-if="item.minAmount !== '' && item.minAmount !== undefined && item.minAmount !== null">
+    <!-- <i class="far fa-money-bill-alt" style=""></i> -->
+    <span class="" style="margin-top: 6px">A partir de <span style="font-weight: bold !important; font-size: 16px !important">{{item.minAmount}}</span></span>
+  </div>
   <div class="to-box p-0">
-    <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;"></div>
+    <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;">
+    </div>
 
     <div class="content to-box p-2 pt-0 pb-1" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
       <h4 class="event__title pb-1">
         <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
       </h4>
-      <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}}</span></p>
+      <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}} </span></p>
       <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
+      <!-- <p class="p-0 m-0 mt-0 event__item"  style="font-size: 13px">
+        <i class="far fa-money-bill-alt" style="margin-right: 6px; margin-top: 4px;"></i>
+        
+        <span class="bold" style="margin-top: 6px">{{item.valores}}</span>
+      </p> -->
 
     </div>
   </div>
@@ -54,12 +64,16 @@ export default {
         case "event":
           this.$router.push(item.uri);
           break;
+        case "discovery":
+          window.location.href = item;
+          break;
       }
-    },},
+    },
+  },
   props: ['item'],
 
   filters: {
-     truncate: function (text, length, clamp) {
+    truncate: function (text, length, clamp) {
       if (text == null || text == undefined) return;
 
       clamp = clamp || '...';
@@ -76,7 +90,6 @@ export default {
       if (value == null || value == undefined) return;
 
       if (!value) return ''
-
 
       value = value.toString()
       value = value.toLowerCase();

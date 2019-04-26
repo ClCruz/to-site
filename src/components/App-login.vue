@@ -44,7 +44,7 @@
 
                         <hr>
 
-                        <div class="row">
+                        <div class="row" v-if="iscreatedvisible">
                           <div class="col-12" style="font-size: 14px;">
                             Você ainda não tem uma conta?
                             <a href="#" id="forgot_pswd"  @click="signup" style="font-weight: bold">Cadastre-se</a>
@@ -297,6 +297,7 @@ export default {
       processing: false,
       loaded: false,
       showwatch: 'login',
+      iscreatedvisible: true,
       hasfb: false,
       token: "",
       validateinfo: {
@@ -314,6 +315,13 @@ export default {
   created() {
     this.ls_remove("fb_connect");
     this.getinfo();
+
+    switch (window.location.pathname) {
+      case "/loginandshopping/printafter":
+        this.iscreatedvisible = false;
+      break;
+    }
+
 
     // this.getWindow.fbAsyncInit = function() {
     // }
