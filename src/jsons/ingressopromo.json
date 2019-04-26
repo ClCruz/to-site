@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/ingressopromo/main.scss",
   "css": "/stylesheets/themes/www.ingresso.promo/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "tixsme",
   "logo": "/assets/logo-ingressopromo.png",
   "favico": "/img/ingressopromo/",
   "videos": {
