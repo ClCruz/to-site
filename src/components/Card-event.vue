@@ -13,7 +13,7 @@
   </div>
 </div>
 <div v-else class="col-12 col-xl-4 col-md-6 p-2 text-left" @click="goto('event', item)">
-  <div class="ad__badge-it" v-if="item.minAmount !== '' && item.minAmount !== undefined && item.minAmount !== null">
+  <div class="ad__badge-it" v-if="item.minAmount !== '' && item.minAmount !== undefined && item.minAmount !== null && siteName == 'ingressoparatodos.com.br'">
     <!-- <i class="far fa-money-bill-alt" style=""></i> -->
     <span class="" style="margin-top: 6px">A partir de <span style="font-weight: bold !important; font-size: 16px !important">{{item.minAmount}}</span></span>
   </div>
@@ -39,9 +39,15 @@
 </template>
 
 <script>
+import config from '@/config';
+
 export default {
   name: "CardEvent",
-  computed: {},
+  computed: {
+    siteName() {
+      return config.info.siteName;
+    }
+  },
   methods: {
     goto(type, item) {
       if (item.notselectable != undefined && item.notselectable == 1) return;
