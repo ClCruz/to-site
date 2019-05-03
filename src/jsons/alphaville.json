@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "ingressos.teatroalphaville.com.br",
+  "uri": "https://ingressos.teatroalphaville.com.br",
+  "api": "https://api.ingressos.teatroalphaville.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.ingressos.teatroalphaville.com.br",
+  "admin": "https://admin.ingressos.teatroalphaville.com.br",
+  "apikey": "live_38d3862391514168949ad84594e1724a3d412a382e04412eb3f4570d740baf5a",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/alphaville/main.scss",
+  "css": "/stylesheets/themes/ingressos.teatroalphaville.com.br/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-alphaville.png",
+  "favico": "/img/alphaville/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "teatro",
+    "keywords": "teatro, alphaville"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Teatro Alphaville",
+    "description": "teatro",
+    "siteName": "ingressos.teatroalphaville.com.br",
+    "CNPJ": "12.953.673/0001-45",
+    "companyAddress": "Calçada Flór de Lótus, 78 – Alphaville – Barueri",
+    "companyName": "MOV PRODUCOES CULTURAIS LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_alphaville/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_alphaville/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_alphaville/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_alphaville/emailComprador.html",
+      "gift": "../comprar/templates/multi_alphaville/emailPresente.html",
+      "signature": "../comprar/templates/multi_alphaville/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_alphaville/confirmacaoEmail.html"
+
+    }
+  }
+}
