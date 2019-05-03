@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <section class="fdb-block team-6" data-block-type="teams" data-id="3" draggable="true" id="block_features">
-      <div class="container">
-          <h2 class="justify-content-center text-center pb-0 mb-0">Destaque</h2>
-        <div class="row text-center p-0">
-          <div class="col-12 col-md-4 p-3" v-for="(item, index) in bannerEvents" :key='index'>
-            <div class="col-12 card_destaques" @click="goto('event',{ uri: item.uri})" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="">
-            </div>
+<div>
+  <section class="fdb-block team-6" data-block-type="teams" data-id="3" draggable="true" id="block_features">
+    <div class="container">
+      <h2 class="justify-content-center text-center pb-0 mb-0">Destaque</h2>
+      <div class="row text-center p-0">
+        <div class="col-12 col-md-4 p-3" v-for="(item, index) in bannerEvents" :key='index'>
+          <div class="col-12 card_destaques" @click="goto('event',{ uri: item.uri})" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="">
           </div>
         </div>
       </div>
-    </section>
-<!--
+    </div>
+  </section>
+  <!--
     <div class="container-fluid" id="ad_container">
       <div class="container p-0">
         <div class="row">
@@ -31,7 +31,7 @@
       </div>
     </div>
     -->
-    <!-- <section class="fdb-block" data-block-type="teams" data-id="3" draggable="false" id="block_calendar">
+  <!-- <section class="fdb-block" data-block-type="teams" data-id="3" draggable="false" id="block_calendar">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -77,13 +77,13 @@
       
         </div>
       </section> -->
-    <div class="container-fluid pt-0 mt-0" id="ad_container">
-      <div class="container p-0">
-        <div class="row">
-          <div class="col-12 col-xl-12 text-left">
-            <div class="p-1 pt-0 mt-0 mb-0 pb-0">
-              <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
-              <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
+  <div class="container-fluid pt-0 mt-0" id="ad_container">
+    <div class="container p-0">
+      <div class="row">
+        <div class="col-12 col-xl-12 text-left">
+          <div class="p-1 pt-0 mt-0 mb-0 pb-0">
+            <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
+            <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
             </div>
           </div>
         </div>
@@ -92,10 +92,30 @@
     <section class="fdb-block team-4" id="block_events">
       <div class="container pt-3">
         <div class="row text-center mt-0">
-          <div class="col-4 block_events-categories"><span class="active">Cat<span class="active-ego">e<span class="active-ego-g">g</span>o</span>ria 1</span></div>
-          <div class="col-4 block_events-categories"><span>Categoria 2</span></div>
-          <div class="col-4 block_events-categories"><span>Categoria 3</span></div>
-          <div class="col-12 col-md-3 card__eventos-container" v-for="(item, index) in computedFilteredData" :key='index' :item="item" @click="goto('event', item)">
+          <div class="col-4 block_events-categories" @click="getFeaturedEvents"><span :class="[{active: activeCategory == 1}]"  >Próximos eventos</span></div>
+          <div class="col-4 block_events-categories"  @click="getListNext"><span :class="[{active: activeCategory == 2}]">Lançamentos</span></div>
+          <div class="col-4 block_events-categories" @click="getLastChance"><span :class="[{active: activeCategory == 3}]" >Ultimas chances</span></div>
+
+          <div class="col-12 col-md-4 card__eventos-container" v-for="(item, index) in featuredData" :key='index' :item="item" v-if="item.isdiscovery == 0" @click="goto('event', item)">
+            <div class="p-0 card__eventos" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + item.img + '\')' }">
+              <div class="card__eventos-btn">
+                <i class="fa fa-cart-plus"></i>
+              </div>
+              <div class="card__eventos-nome">
+                {{item.ds_evento}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fdb-block team-4" id="block_events">
+      <div class="container pt-3">
+        
+      <h2 class="justify-content-center text-center pb-0 mb-2 white--text" style="color: white">Todos os eventos</h2>
+        <div class="row text-center mt-0">
+        
+          <div class="col-12 col-md-4 card__eventos-container" v-for="(item, index) in computedFilteredData" :key='index' :item="item" v-if="item.isdiscovery == 0" @click="goto('event', item)">
             <div class="p-0 card__eventos" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + item.img + '\')' }">
               <div class="card__eventos-btn">
                 <i class="fa fa-cart-plus"></i>
@@ -116,11 +136,11 @@
               <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
               <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
             </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -161,6 +181,7 @@ export default {
   mixins: [func],
   data() {
     return {
+      featuredData: [],
       linkFacebook: '',
       linkTwitter: '',
       linkLinkedin: '',
@@ -170,6 +191,7 @@ export default {
       slideLoaded: false,
       genreListLoaded: false,
       discovery: [],
+      activeCategory: 1,
       slideData: [],
       selectedCalendar: [],
       filteredCalendar: [],
@@ -364,6 +386,8 @@ export default {
         response => {
           this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
           this.hideWaitAboveAll();
+
+          this.activeCategory = 1;
         },
         error => {
           this.hideWaitAboveAll();
@@ -426,7 +450,7 @@ export default {
             x.datas = x.datas.split(' - ')[0];
           });
 
-          console.log(this.filteredCalendar);
+          // console.log(this.filteredCalendar);
 
           this.selectedCalendar = this.filteredCalendar[0];
 
@@ -454,6 +478,71 @@ export default {
         }
       );
     },
+    getLastChance() {
+      eventService.list(null, null, null, 'created').then(
+        response => {
+          this.isLoaded = false;
+
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null && x.datas.split(' - ')[1] == undefined);
+
+
+          this.featuredData = this.slideData.slice(0,9);
+
+          this.hideWaitAboveAll();
+          this.isLoaded = true;
+
+          console.log(this.slideData);
+          this.activeCategory = 3;
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getFeaturedEvents() {
+      eventService.list().then(
+        response => {
+          this.isLoaded = false;
+
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+
+          this.featuredData = this.slideData.slice(0,9);
+
+          this.hideWaitAboveAll();
+          this.isLoaded = true;
+
+          // console.log(this.slideData);
+          this.activeCategory = 1;
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getListNext() {
+
+      eventService.list(null, null, null, 'created').then(
+        response => {
+          this.isLoaded = false;
+
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+
+          this.featuredData = this.slideData.slice(0,9);
+
+          this.hideWaitAboveAll();
+          this.isLoaded = true;
+
+          this.activeCategory = 2;
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    
     getListResults(callback) {
 
       this.getLocation(this.getListResultAgain);
@@ -462,7 +551,8 @@ export default {
         response => {
           this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
 
-          this.filteredData = this.slideData
+          this.filteredData = this.slideData;
+          this.featuredData = this.slideData.slice(0,9);
 
           this.hideWaitAboveAll();
           this.isLoaded = true;
@@ -474,7 +564,10 @@ export default {
 
           this.populateCityPicker();
 
-          this.filterEventsCalendar();
+          // this.filterEventsCalendar();
+
+          this.activeCategory = 1;
+
           // console.log(this.slideData);
 
           if (callback !== null && callback !== undefined) {

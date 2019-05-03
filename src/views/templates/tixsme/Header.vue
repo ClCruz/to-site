@@ -32,27 +32,24 @@
           <div class="row">
             <!-- <img alt="image" class="img-fluid" src="https://www.tixs.me/assets/tixs (1).png" style="height: 50px; "> -->
             <div class="col-3 p-0">
-              <img alt="image" src="/assets/texture/logo-vertical.png">
+              <img class="header__logo" @click="goto('home')" alt="image" src="/assets/texture/logo-vertical.png">
           </div>
               <ul class="col-6 navbar-nav justify-content-center">
-                <li class="nav-item active">
+                <!-- <li class="nav-item active">
                   <a class="nav-link nav-link-active" href="">Home <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item">
+                  <span class="nav-link" @click="gotoMenu('genre', 'Teatro')">Teatro</span>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">Teatro</a>
+                  <span class="nav-link" @click="gotoMenu('genre', 'Shows')">Shows</span>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">Música</a>
+                  <span class="nav-link" @click="gotoMenu('genre', 'Diversão')">Diversão</span>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">Diversão</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">Outros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="">Contato</a>
-                </li>
+                <!-- <li class="nav-item">
+                  <span class="nav-link" @click="gotoMenu">Outros</span>
+                </li> -->
               </ul>
               <app-search class="col-3 p-0 w-100"></app-search>
             </div>
@@ -140,6 +137,33 @@ export default {
           break;
       }
     },
+
+    gotoMenu(type, item) {
+      if (item.notselectable != undefined && item.notselectable == 1) return;
+
+      let where = item.type != undefined ? item.type : type;
+
+      switch (where) {
+        case "local":
+          this.$router.push("/busca/local/" + item);
+          break;
+        case "genre":
+          this.$router.push("/busca/genero/" + item);
+          break;
+        case "city":
+          this.$router.push("/busca/cidade/" + item);
+          break;
+        case "state":
+          this.$router.push("/busca/estado/" + item);
+          break;
+        case "event":
+          this.$router.push(item.uri);
+          break;
+        case "search":
+          this.$router.push("/busca/evento/" + item)
+          break;
+      }
+    },
     goto(to, item = null) {
       switch (to) {
         case "legacy:my_account":
@@ -147,6 +171,9 @@ export default {
           break;
         case "system:logout":
           this.$store.dispatch('logout');
+          break;
+        case "home":
+          this.$router.push("/");
           break;
       }
     },

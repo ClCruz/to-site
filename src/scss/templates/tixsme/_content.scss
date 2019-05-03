@@ -7,6 +7,11 @@
 		background-size: cover;
 	}
 
+	#block_search {
+		background: url('/assets/texture/texture_tixs_4.png') !important;
+		padding-top: 30px;
+	}
+
 	.card_destaques {
 		img {
 			border-radius: 0 !important;
@@ -31,7 +36,7 @@
 	.card__eventos {
 		cursor: pointer;
 		position: relative;
-		height: 145px;
+		height: 200px;
 		background-size: cover !important;
 		background-position: center !important;
 		box-sizing: border-box;
@@ -95,18 +100,25 @@
 	}
 
 	#block_features {
-		background: #eee;
+		// background: #eee;
 
 		padding: 20px 0 40px 0;
 		h2 {
 			margin: 0 auto;
 			padding-top: 0;
 			margin-top: 0;
-			color: #222 !important;
+			color: #fff !important;
 			letter-spacing: 3px;
 			font-weight: bold !important;
 			text-transform: uppercase;
-			border-bottom: 1px solid #777;
+			text-shadow: 0 0 10px #888;
+			// text-shadow: 2px 2px 13px white;
+
+			border-bottom: 12px solid transparent;
+			// padding-bottom: -4px;
+			// margin-bottom: -4px;
+			border-image: url('/assets/texture/texture-menu.png') 30 stretch;
+			border-image-repeat: no-repeat;
 			width: 80%;
 			margin-bottom: 10px;
 		}
@@ -127,6 +139,26 @@
 		background-size: 10px;
 		background-repeat: repeat;
 		padding-top: 15px;
+
+		h2 {
+			margin: 0 auto;
+			padding-top: 0;
+			margin-top: 0;
+			color: #fff !important;
+			letter-spacing: 3px;
+			font-weight: bold !important;
+			text-transform: uppercase;
+			text-shadow: 0 0 10px #888;
+			// text-shadow: 2px 2px 13px white;
+
+			border-bottom: 12px solid transparent;
+			// padding-bottom: -4px;
+			// margin-bottom: -4px;
+			border-image: url('/assets/texture/texture-menu.png') 30 stretch;
+			border-image-repeat: no-repeat;
+			width: 80%;
+			margin-bottom: 10px;
+		}
 		.bg-dark {
 			background: none !important;
 			border: 1px solid #232323;
@@ -153,8 +185,13 @@
 	.block_events-categories {
 		font-size: 20px;
 		color: white;
+		// text-shadow: 2px 2px 8px white;
+		text-shadow: 0 0 px #555;
+		transition: 1s;
+
 		// font-weight: bold;
 		margin-bottom: 12px;
+		padding-bottom: 4px;
 		cursor: pointer;
 
 		border-bottom: 8px solid transparent;
@@ -162,6 +199,10 @@
 		// margin-bottom: -4px;
 		border-image: url('/assets/texture/texture-menu.png') 60 stretch;
 		border-image-repeat: no-repeat;
+
+		span {
+			text-shadow: 0 0 10px #888;
+		}
 
 		.active {
 			// color: $secundary;

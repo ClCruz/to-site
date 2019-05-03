@@ -115,7 +115,36 @@
       </div>
     </section>
   </div>
-  <div v-else>
+    <div v-else-if="template == 'tixsme'">
+    
+    <section class="to-block fdb_result" id="block_search">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 pb-1 text-left mt-0">
+            <h3 class="result__container mb-1">Resultados encontrados para:
+              <span class="result__description">"{{ searchValue }}"</span>
+              <br>
+            </h3>
+              <p><span class="mt-3 pt-3">{{ countEvents }} {{textForCount}}</span></p>
+          </div>
+        </div>
+        <div class="row">
+         
+          <div class="col-12 col-md-4 card__eventos-container" v-for="(item, index) in searchResults" :key='index' :item="item" @click="goto('event', item)">
+            <div class="p-0 card__eventos" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + item.img + '\')' }">
+              <div class="card__eventos-btn">
+                <i class="fa fa-cart-plus"></i>
+              </div>
+              <div class="card__eventos-nome">
+                {{item.ds_evento}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div v-else >
     <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2"  v-if="template == 'ticketHub'">
       <div class="container justify-content-center align-items-center d-flex pt-5 pb-0 mb-0 h-25">
         <div class="col-10 justify-content-center text-center">

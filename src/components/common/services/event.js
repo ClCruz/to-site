@@ -15,17 +15,18 @@ export const eventService = {
   banner
 }
 
-function list(city,state,date) {
+function list(city,state,date,filter) {
   if (city == null) city = "";
   if (state == null) state = "";
   if (date == null) date = "";
+  if (filter == null) filter = "";
   
   let url = config.api + `/v1/home/card`;
 
   console.log(url);
 
   let obj = {
-    city,state,date
+    city,state,date,filter
   };
 
   // console.log(obj);
