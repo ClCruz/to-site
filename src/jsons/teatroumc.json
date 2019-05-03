@@ -1,16 +1,16 @@
 {
   "env": "production",
-  "host": "teatroumc.tk",
-  "uri": "https://www.teatroumc.tk",
-  "api": "https://api.teatroumc.tk",
+  "host": "teatroumc.com.br",
+  "uri": "https://ingressos.teatroumc.com.br",
+  "api": "https://api.teatroumc.com.br",
   "pinpad": "http://localhost:7001/api",
-  "admin": "https://admin.teatroumc.tk",
-  "legacy": "https://compra.teatroumc.tk",
+  "admin": "https://admin.teatroumc.com.br",
+  "legacy": "https://compra.teatroumc.com.br",
   "apikey": "live_6f709463b3b84943a7c0b379067c6e108fa8df6ff0b44551aff7e71e65a32be0",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "scss": "./src/scss/themes/www.teatroumc.tk/main.scss",
-  "css": "/stylesheets/themes/www.teatroumc.tk/main.css",
+  "scss": "./src/scss/themes/ingressos.teatroumc.com.br/main.scss",
+  "css": "/stylesheets/themes/ingressos.teatroumc.com.br/main.css",
   "template": "ingressaria",
   "logo": "https://media.tixs.me/logos/teatroumc.png",
   "favico": "/img/teatroumc/",
@@ -26,12 +26,12 @@
     "public": ""
   },
   "info": {
-    "title": "teatroumc.tk | Venda de Ingressos",
+    "title": "teatroumc.com.br | Venda de Ingressos",
     "description": "Venda de Ingressos",
-    "siteName": "teatroumc.tk",
-    "companyAddress": "Teatro UMC",
-    "CNPJ": "11.111.111/1111-11",
-    "companyName": ""
+    "siteName": "Teatro UMC",
+    "companyAddress": "Av. Imperatriz Leopoldina, 550 - Vila Leopoldina, São Paulo - SP, 05305-000",
+    "CNPJ": "12.965.673/0001-45",
+    "companyName": "MOV PRODUCOES CULTURAIS LTDA"
   },
   "templates": {
     "print": {

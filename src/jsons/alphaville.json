@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/alphaville/main.scss",
   "css": "/stylesheets/themes/ingressos.teatroalphaville.com.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-alphaville.png",
   "favico": "/img/alphaville/",
   "videos": {

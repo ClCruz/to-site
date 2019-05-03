@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 
 gulp.task('sassLocal', function() {
 	gulp
-		.src('./src/scss/themes/*promo*/*.scss')
+		.src('./src/scss/themes/*alpha*/*.scss')
 		.pipe(
 			sass({
 				outputStyle: 'nested'
@@ -79,7 +79,7 @@ gulp.task('sassLocalhost', function() {
 		)
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./public/assets/css/www.teatroumc.tk/'));
+		.pipe(gulp.dest('./public/assets/css/ingressos.teatroumc.com.br/'));
 	gulp
 		.src('./src/scss/themes/www.xwxy.com.br/main.scss')
 		.pipe(sourcemaps.init())
