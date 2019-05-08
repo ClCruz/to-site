@@ -14,8 +14,9 @@
 		background-size: cover;
 		background-position: center bottom;
 		// background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-
-		padding: 80px 0 400px 0 !important;
+		@include MQ(NS) {
+			padding: 80px 0 400px 0 !important;
+		}
 
 		box-shadow: 0 5px 5px rgba(0, 0, 0, 1), 0 5px 5px rgba(0, 0, 0, 1);
 
