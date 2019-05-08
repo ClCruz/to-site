@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/spacemooneduca/main.scss",
   "css": "/stylesheets/themes/educa.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-spacemooneduca.jpeg",
   "favico": "/img/spacemooneduca/",
   "videos": {
