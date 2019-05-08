@@ -92,8 +92,8 @@
     <section class="fdb-block team-4" id="block_events">
       <div class="container pt-3">
         <div class="row text-center mt-0">
-          <div class="col-4 block_events-categories" @click="getFeaturedEvents"><span :class="[{active: activeCategory == 1}]"  >Próximos eventos</span></div>
-          <div class="col-4 block_events-categories"  @click="getListNext"><span :class="[{active: activeCategory == 2}]">Lançamentos</span></div>
+          <div class="col-4 block_events-categories" @click="getListNext"><span :class="[{active: activeCategory == 1}]"  >Próximos eventos</span></div>
+          <div class="col-4 block_events-categories"  @click="getListCreated"><span :class="[{active: activeCategory == 2}]">Lançamentos</span></div>
           <div class="col-4 block_events-categories" @click="getLastChance"><span :class="[{active: activeCategory == 3}]" >Ultimas chances</span></div>
 
           <div class="col-12 col-md-4 card__eventos-container" v-for="(item, index) in featuredData" :key='index' :item="item" v-if="item.isdiscovery == 0" @click="goto('event', item)">
@@ -485,7 +485,6 @@ export default {
 
           this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null && x.datas.split(' - ')[1] == undefined);
 
-
           this.featuredData = this.slideData.slice(0,9);
 
           this.hideWaitAboveAll();
@@ -521,9 +520,30 @@ export default {
         }
       );
     },
-    getListNext() {
+    getListCreated() {
 
       eventService.list(null, null, null, 'created').then(
+        response => {
+          this.isLoaded = false;
+
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+
+          this.featuredData = this.slideData.slice(0,9);
+
+          this.hideWaitAboveAll();
+          this.isLoaded = true;
+
+          this.activeCategory = 2;
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getListNext() {
+
+      eventService.list(null, null, null, 'next').then(
         response => {
           this.isLoaded = false;
 
