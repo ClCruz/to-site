@@ -1,7 +1,7 @@
 <template>
 <div>
 
-  <section id="header_home" class="fdb-block p-5 container-fluid" style="	background-image: url('http://teatroprocopioferreira.com.br/wp-content/uploads/2019/01/banner-AZUSA-new.jpg');" data-block-type="features" data-id="2" draggable="true" >
+  <section id="header_home" class="fdb-block p-5 container-fluid" style="	background-image: url('/assets/bg-azusa.jpg');" data-block-type="features" data-id="2" draggable="true" >
     <div class="container-fluid">
       <div class="row text-lg-right align-items-center">
         <div class="col-12 col-sm-12 order-1 order-sm-3 order-md-3 order-lg-1 col-lg-5 text-left pt-sm-0">
