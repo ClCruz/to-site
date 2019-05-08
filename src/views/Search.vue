@@ -6,7 +6,7 @@
       <div class="col-md-10 col-xs-12">
         <div class="row search__title">
           <div class="col-md-6">
-            <p class="result__container">Resultados encontrados para:
+            <p class="result__container" v-if="siteName !== 'Tixs.ME'">Resultados encontrados para:
               <span class="result__description">"{{ searchValue }}"</span>
               <br>
               <span class="result__count">{{ countEvents }} {{textForCount}}</span>
@@ -121,11 +121,8 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 pb-1 text-left mt-0">
-            <h3 class="result__container mb-1">Resultados encontrados para:
-              <span class="result__description">"{{ searchValue }}"</span>
-              <br>
+            <h3 class="result__container mb-1">Quantidade de eventos: {{ countEvents }}
             </h3>
-              <p><span class="mt-3 pt-3">{{ countEvents }} {{textForCount}}</span></p>
           </div>
         </div>
         <div class="row">

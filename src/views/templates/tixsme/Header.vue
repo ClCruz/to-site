@@ -46,7 +46,16 @@
                 </li>
                 <li class="nav-item">
                   <span class="nav-link" @click="gotoMenu('genre', 'Diversão')">Diversão</span>
-                </li>
+                  </li>
+                  <li class="nav-item">
+        <span v-if="!isLogged" class="nav-link hidden-xs hidden-sm" @click="login" style="float: right; font-weight: bold">Entrar</span>
+                  </li>
+        <!-- <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="" alt=""></span> -->
+        <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName" no-caret :variant="dark">
+          <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
+          <b-dropdown-item @click="modifyme">Meu cadastro</b-dropdown-item>
+          <b-dropdown-item @click="goto('system:logout')">Sair</b-dropdown-item>
+        </b-dropdown>
                 <!-- <li class="nav-item">
                   <span class="nav-link" @click="gotoMenu">Outros</span>
                 </li> -->

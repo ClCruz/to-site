@@ -383,7 +383,7 @@ i {
   font-size: 18px !important;
   font-weight: 600 !important;
   line-height: 1.28571em !important;
-  color: rgb(72, 72, 72) !important;
+  color: rgb(72, 72, 72);
 }
 
 }
