@@ -1,8 +1,8 @@
 <template>
 <div>
 
-  <section id="header_home" class="fdb-block p-5 container-fluid" style="	background-image: url('/assets/bg-azusa.jpg');" data-block-type="features" data-id="2" draggable="true" >
-    <div class="container-fluid">
+  <section id="header_home" class="fdb-block p-5 container" style="	background-image: url('/assets/bg-azusa.jpg');" data-block-type="features" data-id="2" draggable="true" >
+    <div class="container">
       <div class="row text-lg-right align-items-center">
         <div class="col-12 col-sm-12 order-1 order-sm-3 order-md-3 order-lg-1 col-lg-5 text-left pt-sm-0">
           <!-- <div class="row" id="share">

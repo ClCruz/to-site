@@ -11,11 +11,11 @@
 		// background-image: url('/assets/background/5.png');
 
 		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center bottom;
+		background-size: contain;
+		background-position: top;
 		// background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 
-		padding: 80px 0 400px 0 !important;
+		padding: 80px 0 230px 0 !important;
 
 		@include MQ(S) {
 			padding: 0px 0 200px 0 !important;
