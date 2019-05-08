@@ -115,7 +115,7 @@
       </div>
     </section>
   </div>
-    <div v-else-if="template == 'tixsme'">
+  <div v-else-if="template == 'tixsme'">
     
     <section class="to-block fdb_result" id="block_search">
       <div class="container">
@@ -127,7 +127,7 @@
         </div>
         <div class="row">
          
-          <div class="col-12 col-md-4 card__eventos-container" v-for="(item, index) in searchResults" :key='index' :item="item" @click="goto('event', item)">
+          <div class="col-12 col-md-4 card__eventos-container" v-for="(item, index) in searchResults" :key='index' :item="item" @click="goto(item)">
             <div class="p-0 card__eventos" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + item.img + '\')' }">
               <div class="card__eventos-btn">
                 <i class="fa fa-cart-plus"></i>

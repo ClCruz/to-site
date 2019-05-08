@@ -554,7 +554,7 @@ export default {
           this.hideWaitAboveAll();
           this.isLoaded = true;
 
-          this.activeCategory = 2;
+          this.activeCategory = 1;
         },
         error => {
           this.hideWaitAboveAll();
@@ -583,7 +583,7 @@ export default {
           this.getNextEvents();
 
           this.populateCityPicker();
-
+this.getListNext();
           // this.filterEventsCalendar();
 
           this.activeCategory = 1;
