@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "educa.ticketoffice.me",
+  "uri": "https://educa.ticketoffice.me",
+  "api": "https://api.educa.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.educa.ticketoffice.me",
+  "admin": "https://admin.educa.ticketoffice.me",
+  "apikey": "live_fd714c6f2f0b40fa991a18a77b02c340347365931add47c99109f8454696ce92",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/spacemooneduca/main.scss",
+  "css": "/stylesheets/themes/educa.ticketoffice.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-spacemooneduca.jpeg",
+  "favico": "/img/spacemooneduca/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "educa",
+    "keywords": "educa"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Spacemoon Educa",
+    "description": "educa",
+    "siteName": "educa.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua guaiaós",
+    "companyName": "Spacemoon"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_spacemooneduca/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_spacemooneduca/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_spacemooneduca/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_spacemooneduca/emailComprador.html",
+      "gift": "../comprar/templates/multi_spacemooneduca/emailPresente.html",
+      "signature": "../comprar/templates/multi_spacemooneduca/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_spacemooneduca/confirmacaoEmail.html"
+
+    }
+  }
+}

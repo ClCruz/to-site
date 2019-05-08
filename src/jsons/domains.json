@@ -42,8 +42,6 @@
     "api.teatroumc.com.br": "teatroumc",
     "compra.teatroumc.com.br": "teatroumc",
     "ingressos.teatroumc.com.br": "teatroumc",
-    "api.teatroumc.com.br": "teatroumc",
-    "compra.teatroumc.com.br": "teatroumc",
     "www.viveremsantosdemo.tk": "viveremsantos",
     "api.viveremsantosdemo.tk": "viveremsantos",
     "compra.viveremsantosdemo.tk": "viveremsantos",
@@ -198,5 +196,9 @@
     "ingressos.teatroalphaville.com.br": "alphaville",
     "api.ingressos.teatroalphaville.com.br": "alphaville",
     "compra.ingressos.teatroalphaville.com.br": "alphaville",
-    "admin.ingressos.teatroalphaville.com.br": "alphaville"
+    "admin.ingressos.teatroalphaville.com.br": "alphaville",
+    "educa.ticketoffice.me": "spacemooneduca",
+    "api.educa.ticketoffice.me": "spacemooneduca",
+    "compra.educa.ticketoffice.me": "spacemooneduca",
+    "admin.educa.ticketoffice.me": "spacemooneduca"
 }
