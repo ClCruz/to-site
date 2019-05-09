@@ -91,6 +91,11 @@ $gradiente: $secundary !important;
 			padding: 0 !important;
 		}
 	}
+
+	.v-suggestions,
+	h2 {
+		display: none;
+	}
 }
 
 .a .bg__main {

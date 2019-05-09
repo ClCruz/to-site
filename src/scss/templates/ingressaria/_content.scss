@@ -512,6 +512,7 @@
 		// ) !important;
 		padding-bottom: 4px;
 
+		padding-right: 21px;
 		// text-transform: capitalize;
 		align-items: center;
 		align-self: center;
@@ -525,6 +526,35 @@
 			margin-right: 5px;
 			padding-top: 5.4px;
 		}
+	}
+
+	.ad__badge-it:after {
+		content: " ";
+		z-index: 0;
+		height: 26px;
+		width: 26px;
+		background: linear-gradient(to right, #ff416c, #ff4b2b) !important;
+		position: absolute;
+		top: 4px;
+		right: -9px;
+		border-radius: 4px;
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.ad__badge-it:before {
+		content: "";
+		width: 7px;
+		height: 7px;
+		background: #fff;
+		position: absolute;
+		top: 14px;
+		right: 0px;
+		z-index: 2;
+		border-radius: 10px;
 	}
 
 	html {
