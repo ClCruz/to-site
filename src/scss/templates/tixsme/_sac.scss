@@ -1,0 +1,18 @@
+@mixin sacTixsme {
+	.container__sac {
+		margin-top: 50px !important;
+
+		.card {
+			background: #000 !important;
+		}
+
+		.sac__card p {
+			padding-left: 0 !important;
+			margin-top: 5px;
+		}
+
+		.sac__card h3 {
+			color: white;
+		}
+	}
+}

@@ -16,6 +16,7 @@
 	@include footerTixsme;
 	@include eventTixsme;
 	@include socialShare;
+	@include sacTixsme;
 }
 
 @if $template == 'ticketHub' {
