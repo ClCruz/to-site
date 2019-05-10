@@ -1,53 +1,52 @@
 {
-  "env": "dev",
-  "host": "www.marketplay.club",
-  "uri": "http://localhost:8080",
-  "api": "http://localhost:2002",
-  "pinpad": "http://localhost:7001/api",
-  "admin": "http://localhost:2000",
-  "legacy": "http://localhost:2004",
-  "apikey": "live_c02e42c0d2524044b12ec3c3ee77e5a7e6d56d5ccc274dd3ba4690137492741e",
-  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
-  "ga": "",
-  "scss": "./src/scss/themes/eventoslitoral/main.scss",
-  "css": "/stylesheets/themes/www.eventoslitoraldemo.tk/main.css",
-  "template": "tixsme",
-  "logo": "https://media.tixs.me/logos/logo-eventoslitoral.jpg",
-  "favico": "/img/eventoslitoral/",
-  "videos": {
-    "list": [ 
-      { "order":1, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.webm", "type": "video/webm"  }, 
-      { "order":2, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.mp4", "type": "video/mp4"  }
-    ]
-  },
-  "meta": {
-    "description": "Venda de Ingressos",
-    "keywords": "venda,ingresssos,eventoslitoral,br,me"
-  },
-  "recaptcha": {
-    "private": "",
-    "public": ""
-  },
-  "info": {
-    "title": "Ingressaria",
-    "description": "Venda de Ingressos",
-    "siteName": "ingressoparatodos.com.br",
-    "CNPJ": "11.111.111/1111-111",
-    "companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
-    "companyName": "Eventos Litoral"
-  },
-  "templates": {
-    "print": {
-      "voucher": "../comprar/templates/multi_eventoslitoral/impressaoComprador.html",
-      "gift": "../comprar/templates/multi_eventoslitoral/impressaoPresente.html"
-    },
-    "email": {
-      "recover": "../comprar/templates/multi_eventoslitoral/solicitarSenha.html",
-      "buyer": "../comprar/templates/multi_eventoslitoral/emailComprador.html",
-      "gift": "../comprar/templates/multi_eventoslitoral/emailPresente.html",
-      "signature": "../comprar/templates/multi_eventoslitoral/confirmacaoEmailAssinatura.html",
-      "confirmation": "../comprar/templates/multi_eventoslitoral/confirmacaoEmail.html"
-
-    }
-  }
+	"env": "dev",
+	"host": "www.marketplay.club",
+	"uri": "http://localhost:8080",
+	"api": "http://localhost:2002",
+	"pinpad": "http://localhost:7001/api",
+	"admin": "http://localhost:2000",
+	"legacy": "http://localhost:2004",
+	"apikey": "live_c02e42c0d2524044b12ec3c3ee77e5a7e6d56d5ccc274dd3ba4690137492741e",
+	"geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+	"ga": "",
+	"scss": "./src/scss/themes/eventoslitoral/main.scss",
+	"css": "/stylesheets/themes/www.eventoslitoraldemo.tk/main.css",
+	"template": "ingressaria",
+	"logo": "https://media.tixs.me/logos/logo-eventoslitoral.jpg",
+	"favico": "/img/eventoslitoral/",
+	"videos": {
+		"list": [
+			{ "order": 1, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.webm", "type": "video/webm" },
+			{ "order": 2, "src": "https://media.tixs.me/videos/eventoslitoral/demo1.mp4", "type": "video/mp4" }
+		]
+	},
+	"meta": {
+		"description": "Venda de Ingressos",
+		"keywords": "venda,ingresssos,eventoslitoral,br,me"
+	},
+	"recaptcha": {
+		"private": "",
+		"public": ""
+	},
+	"info": {
+		"title": "Ingressaria",
+		"description": "Venda de Ingressos",
+		"siteName": "ingressoparatoos.com.br",
+		"CNPJ": "11.111.111/1111-111",
+		"companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
+		"companyName": "Eventos Litoral"
+	},
+	"templates": {
+		"print": {
+			"voucher": "../comprar/templates/multi_eventoslitoral/impressaoComprador.html",
+			"gift": "../comprar/templates/multi_eventoslitoral/impressaoPresente.html"
+		},
+		"email": {
+			"recover": "../comprar/templates/multi_eventoslitoral/solicitarSenha.html",
+			"buyer": "../comprar/templates/multi_eventoslitoral/emailComprador.html",
+			"gift": "../comprar/templates/multi_eventoslitoral/emailPresente.html",
+			"signature": "../comprar/templates/multi_eventoslitoral/confirmacaoEmailAssinatura.html",
+			"confirmation": "../comprar/templates/multi_eventoslitoral/confirmacaoEmail.html"
+		}
+	}
 }

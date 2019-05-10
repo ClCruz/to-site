@@ -6,18 +6,18 @@ var sourcemaps = require('gulp-sourcemaps');
 var favicons = require('favicons').stream,
 	log = require('fancy-log');
 var minimist = require('minimist');
-const purgecss = require('gulp-purgecss')
+const purgecss = require('gulp-purgecss');
 
 gulp.task('purgecss', () => {
-  return gulp
-    .src('./public/assets/css/*.css')
-    .pipe(
-      purgecss({
-        content: ['./src/**/*.vue', './src/**/*.js', './src/index.html']
-      })
-    )
-    .pipe(gulp.dest('./test/'))
-})
+	return gulp
+		.src('./public/assets/css/*.css')
+		.pipe(
+			purgecss({
+				content: [ './src/**/*.vue', './src/**/*.js', './src/index.html' ]
+			})
+		)
+		.pipe(gulp.dest('./test/'));
+});
 
 gulp.task('sass', function() {
 	gulp
@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 
 gulp.task('sassLocal', function() {
 	gulp
-		.src('./src/scss/themes/*.promo*/*.scss')
+		.src('./src/scss/themes/*marketpla*/*.scss')
 		.pipe(
 			sass({
 				outputStyle: 'nested'
@@ -104,7 +104,7 @@ gulp.task('watch', function() {
 
 var params = {
 	string: 'whitelabel',
-	default: { whitelabel: "tixsme"}
+	default: { whitelabel: 'tixsme' }
 };
 
 var options = minimist(process.argv.slice(2), params);
@@ -119,7 +119,7 @@ gulp.task('scripts', function() {
 //gulp favicon --whitelabel bringressos
 gulp.task('favicon', function() {
 	return gulp
-		.src('public/assets/logo-' + options.whitelabel + "*")
+		.src('public/assets/logo-' + options.whitelabel + '*')
 		.pipe(
 			favicons({
 				background: '#fff',
