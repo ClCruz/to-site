@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.festaprasempre.com",
+  "uri": "https://www.festaprasempre.com",
+  "api": "https://api.festaprasempre.com",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.festaprasempre.com",
+  "admin": "https://admin.festaprasempre.com",
+  "apikey": "live_3a876501d0744d0b9790c0d057a2ba36c2dcaeee78434d9383842b15e0ef73c4",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/festaprasempre/main.scss",
+  "css": "/stylesheets/themes/www.festaprasempre.com/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-festaprasempre.png",
+  "favico": "/img/festaprasempre/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "fest",
+    "keywords": "festa"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Festa pra sempre",
+    "description": "fest",
+    "siteName": "www.festaprasempre.com",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Endereço",
+    "companyName": "Festa pra Sempre"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_festaprasempre/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_festaprasempre/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_festaprasempre/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_festaprasempre/emailComprador.html",
+      "gift": "../comprar/templates/multi_festaprasempre/emailPresente.html",
+      "signature": "../comprar/templates/multi_festaprasempre/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_festaprasempre/confirmacaoEmail.html"
+
+    }
+  }
+}
