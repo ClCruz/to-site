@@ -77,8 +77,8 @@ $gradiente: $secundary !important;
 }
 
 .bg__main {
-	background: url('/assets/bg-dz9.jpg') !important;
-	background-position: 20% !important;
+	background: url('https://scontent.fssz1-1.fna.fbcdn.net/v/t1.0-9/53142132_1217561878418261_7694160888302927872_o.jpg?_nc_cat=102&_nc_ht=scontent.fssz1-1.fna&oh=6526af6feba2e7863e1ff65126becbd1&oe=5D63DEF0') !important;
+	background-position: top !important;
 	background-size: cover !important;
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
 	@include MQ(S) {
@@ -132,4 +132,61 @@ header.bg-dark .navbar-nav a.nav-link,
 footer a,
 footer p {
 	color: #444 !important;
+}
+
+.header__search {
+	display: block;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+}
+
+.header__search {
+	display: block !important;
+}
+
+.v-suggestions {
+	width: 70% !important;
+	box-shadow: none !important;
+}
+
+.nav__links {
+	display: none;
+}
+
+.v-suggestions input[type=text] {
+	height: 35px !important;
+	font-size: 13px !important;
+	background-size: 12px;
+	padding-left: 30px;
+
+	&:focus {
+		padding-left: 30px;
+	}
+}
+
+.suggestions {
+	top: 38px !important;
+}
+
+.bg__main {
+	@include MQ(S) {
+		display: block !important;
+		padding: 0 !important;
+	}
+	height: 400px !important;
+
+	.container__search--tickethub {
+		@include MQ(S) {
+			height: 260px !important;
+			padding: 0 !important;
+		}
+	}
+
+	.v-suggestions,
+	h2 {
+		display: none;
+	}
+}
+
+.container__search--tickethub h1 {
+	display: none;
 }
