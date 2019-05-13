@@ -114,8 +114,7 @@ $gradiente: $secundary !important;
 }
 
 footer.bg-dark {
-	background-color: rgb(255, 255, 255) !important;
-	color: black !important;
+	background: rgb(155, 26, 36) !important;
 }
 
 header.bg-dark .navbar-nav a.nav-link,
@@ -131,7 +130,7 @@ header.bg-dark .navbar-nav a.nav-link,
 
 footer a,
 footer p {
-	color: #444 !important;
+	// color: #444 !important;
 }
 
 .header__search {
