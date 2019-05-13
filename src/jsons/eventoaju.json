@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/eventoaju/main.scss",
   "css": "/stylesheets/themes/www.eventoaju.com.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-eventoaju.png",
   "favico": "/img/eventoaju/",
   "videos": {
