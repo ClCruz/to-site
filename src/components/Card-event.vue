@@ -18,16 +18,20 @@
     <span class="" style="margin-top: 6px">A partir de <span style="font-weight: bold !important; font-size: 16px !important">{{item.minAmount}}</span></span>
   </div>
   <div class="to-box p-0">
-    <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover;">
+    <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover; position: relative">
+                  <!-- <div class="partner__badge"><i class="fa fa-lg fa-handshake"></i>Teatro Antonio Fagundes</div> -->
     </div>
 
     <div class="content to-box p-2 pt-0 pb-1" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
       <h4 class="event__title pb-1">
         <strong>{{ item.ds_evento |  truncate(35, ' ...') }}</strong>
       </h4>
-                  <div class="ad__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div>
 
-      <p class="p-0 m-0 event__item event__item-date"><span class="bold">{{item.datas |  replace('-', 'á')}} </span></p>
+      <p class="p-0 m-0 event__item event__item-date">
+        <span class="bold">{{item.datas |  replace('-', 'á')}} </span>
+        <span class="ml-1 mr-2">-</span>
+        <span class=""><i class="far fa-handshake" style="padding-right: 6px"></i>Teatro Antonio Fagundes</span>
+      </p>
       <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
       
       <!-- <p class="p-0 m-0 mt-0 event__item"  style="font-size: 13px">
