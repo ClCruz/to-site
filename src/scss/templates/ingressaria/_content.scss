@@ -1020,9 +1020,16 @@
 			font-size: 8px;
 		}
 
-		.card__hour-icon {
-			// color: indianred;
-			font-size: 12px;
+		.cart__icon {
+			border: 0 !important;
+		box-shadow: none !important;
+		background: url('/assets/icons/shopping-cart.svg') no-repeat left !important;
+		padding-left: 19px;
+		background-repeat: no-repeat;
+		display: inline-block;
+		background-position: 0px 3px !important;
+		position: relative;
+		background-size: 13px !important;
 		}
 
 		.text-comprar {

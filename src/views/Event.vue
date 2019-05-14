@@ -158,118 +158,125 @@
 
                   </div>
                   <!-- Produtor -->
-                  <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
-                    <h3 class="mt-3">Sobre o parceiro</h3>
+
+                  <!-- <h3 class="mt-3">Sobre o parceiro</h3>
                     <div class="row align-items-center ">
                       <div class="col-4 ">
                       </div>
 
                       <div class="col-12">
                         <h4>Cia de Ingressos</h4>
-                        <p class="lead">A cia de ingressos fornece aos nossos clientes uma prestação de serviço diferenciada e específica para controle de venda de ingressos para todo o tipo de evento</p>
+                        
                         <a href="#" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-link"></i>Ir para o site do parceiro</a>
                       </div>
+                    </div>
+                  </div> -->
+                  <div class="col-md-12 col-10 m-sm-auto p-0 pt-4" style="max-width: 460px;">
+                    <!-- <div class="mt-3 mb-3"><h3>Sobre o evento:</h3></div> -->
+                    <div class="row align-items-center ">
+                      <div class="col-4 ">
+                      </div>
+
                     </div>
                   </div>
                   <!-- Local do evento -->
                   <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
                     <LineLoader v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true"></LineLoader>
                     <span v-else>
-                    <h3 class="mt-3">Local do evento</h3>
-                    <div class="row align-items-center ">
-                      <div class="col-4 ">
-                      </div>
-
-                      <div class="col-12">
+                    <h3 class="mt-3 pb-0 mb-0">Informações extra:</h3>
+                    <div class="row align-items-center pt-3">
+                   
+                      <div class="col-12" style="display: flex">
                         
-                        <p class="lead">{{this.event.address}}</p>
-                        <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-map"></i>Ver mapa</a>
-                      </div>
-                    </div>
-                      </span>
+                        <!-- <p class="lead">{{this.event.address}}</p> -->
+                        <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-map"></i>Ver evento no mapa</a>
+                        <a href="#" class="btn to-btn dark ml-2"><i class="fa fa-sm mr-2 fa-link"></i><span style="font-size: 14px;"> Vendido e entregue por </span> <span style="font-weight: bold;"> Cia de Ingressos</span></a>
                   </div>
+                </div>
+                </span>
+              </div>
 
-                  <!-- Horários -->
-                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;" v-if="imageLoaded && roomLoaded && timeLoaded">
+              <!-- Horários -->
+              <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;" v-if="imageLoaded && roomLoaded && timeLoaded">
                       <iframe class="map" :src="returnMap()"
           width="100%" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 
                   </div> -->
-                </div>
-              </div>
             </div>
-
-            <div class="btn__comprar" id="btn__comprar" @click="scrollTo()" title="Selecionar horários">
-              <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
-              <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
-              Comprar ingressos
-            </div>
-            <!-- Banner -->
-            <div class="container pl-0 mt-5 pt-3 container__calendar">
-              <div class="">
-                <div class="p-2">
-                  <h3 class="" id="horario">Escolha de horário</h3>
-                  <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário para compra</p>
-                  <div class="container__arrows">
-                    <div class="swiper-button-prev" slot="button-prev"></div>
-                    <div class="swiper-button-next" slot="button-next"></div>
-                  </div>
-                  <swiper :options="swiperOption" class="">
-                    <swiper-slide class="p-0" v-for="(item, index) in filteredDays" :key='item.HorSessao + item.day'>
-                      <div class="c">
-                        <!-- :class="{ 'card__time-active': index == 0 }" -->
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center " style="" @click='filteredHours(item.day), selected = item.id_apresentacao' v-bind:class="{'card__time-active':selected == undefined ? selected = item.id_apresentacao : item.id_apresentacao == selected}">
-                          <div>
-                            <h3 v-if="item.istoday == 1" class="" style="text-transform: uppercase">HOJE</h3>
-                            <h3 v-else-if="item.istomorrow == 1" class="" style="text-transform: uppercase">AMANHÃ</h3>
-                            <h3 v-else class="" style="text-transform: uppercase">{{item.weekdayName }}</h3>
-                            <p class="lead">{{ item.day }}</p>
-                          </div>
-                          <i style="visibility: hidden" class="icon-active fa fa-caret-down"></i>
-                          <div>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                  </swiper>
-                  <div class="container__available-times pl-3 row">
-                    <div class="card__hour text-center align-items-center" style="" v-for="(item) in listOfHours" :key='item.HorSessao + item.day' @click="buy(item.id_apresentacao)">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
-                        <p class="lead"><span class="card__hour-icon"> R$ </span>{{item.ValPeca | moneyIngressaria }} - <i class="card__hour-icon fa fa-shopping-cart"></i> <span class="text-comprar"> COMPRAR</span></p>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
         </div>
+      </div>
 
-        <!-- <div class="col-3">
+      <div class="btn__comprar" id="btn__comprar" @click="scrollTo()" title="Selecionar horários">
+        <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
+        <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
+        Comprar ingressos
+      </div>
+      <!-- Banner -->
+      <div class="container pl-0 mt-5 pt-3 container__calendar">
+        <div class="">
+          <div class="p-2">
+            <h3 class="" id="horario">Escolha de horário</h3>
+            <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário para compra</p>
+            <div class="container__arrows">
+              <div class="swiper-button-prev" slot="button-prev"></div>
+              <div class="swiper-button-next" slot="button-next"></div>
+            </div>
+            <swiper :options="swiperOption" class="">
+              <swiper-slide class="p-0" v-for="(item, index) in filteredDays" :key='item.HorSessao + item.day'>
+                <div class="c">
+                  <!-- :class="{ 'card__time-active': index == 0 }" -->
+                  <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center " style="" @click='filteredHours(item.day), selected = item.id_apresentacao' v-bind:class="{'card__time-active':selected == undefined ? selected = item.id_apresentacao : item.id_apresentacao == selected}">
+                    <div>
+                      <h3 v-if="item.istoday == 1" class="" style="text-transform: uppercase">HOJE</h3>
+                      <h3 v-else-if="item.istomorrow == 1" class="" style="text-transform: uppercase">AMANHÃ</h3>
+                      <h3 v-else class="" style="text-transform: uppercase">{{item.weekdayName }}</h3>
+                      <p class="lead">{{ item.day }}</p>
+                    </div>
+                    <i style="visibility: hidden" class="icon-active fa fa-caret-down"></i>
+                    <div>
+                    </div>
+                  </div>
+                </div>
+              </swiper-slide>
+            </swiper>
+            <div class="container__available-times pl-3 row">
+              <div class="card__hour text-center align-items-center" style="" v-for="(item) in listOfHours" :key='item.HorSessao + item.day' @click="buy(item.id_apresentacao)">
+                <div>
+                  <!-- <h3 class="">HORÁRIO</h3> -->
+                  <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
+                  <p class="lead"><span class="card__hour-icon"> R$ </span>{{item.ValPeca | moneyIngressaria }} - <span class="cart__icon"><span class="text-comprar"> COMPRAR</span></span></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </div>
+
+    <!-- <div class="col-3">
           a
         </div> -->
 
-      </div>
-    </div>
-
   </div>
-  <div v-else>
-    <section class="to-block to-viewport bg-dark bg__main" style="height: 500px;" data-block-type="call_to_action" data-id="2">
+</div>
 
-    </section>
-    <div class="content__show container__new" style="margin-top: -500px !important">
-      <div class="row">
-        <div class="col-md-6 container">
-          <div class="row">
-            <div class="col-md-12" style="">
-              <div class="content__description">
-                <div class="card event__card">
-                  <div class="show__date">
-                    <h2>{{event.NomPeca}}</h2>
-                    <span class="event__badges">
+</div>
+<div v-else>
+  <section class="to-block to-viewport bg-dark bg__main" style="height: 500px;" data-block-type="call_to_action" data-id="2">
+
+  </section>
+  <div class="content__show container__new" style="margin-top: -500px !important">
+    <div class="row">
+      <div class="col-md-6 container">
+        <div class="row">
+          <div class="col-md-12" style="">
+            <div class="content__description">
+              <div class="card event__card">
+                <div class="show__date">
+                  <h2>{{event.NomPeca}}</h2>
+                  <span class="event__badges">
                         <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
                         <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
                         <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
@@ -281,87 +288,86 @@
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
 
-                    </span>
-                  </div>
-
+                  </span>
                 </div>
+
               </div>
-              <div class="content__description">
-                <div class="card 
+            </div>
+            <div class="content__description">
+              <div class="card 
                    card__container">
-                  <p class="event__card-holder">
-                    <span>
+                <p class="event__card-holder">
+                  <span>
                         <EventImageLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 200px; border-radius: 5px"></EventImageLoader> 
                         <img  v-else class="event__card-img" :src="event.img" alt="" style="">
                       </span>
-                  </p>
-                  <h3 style="padding-left: 10px">Descrição</h3>
-                  <span class="event__description" v-html="event.description">
+                </p>
+                <h3 style="padding-left: 10px">Descrição</h3>
+                <span class="event__description" v-html="event.description">
                       </span>
-                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-12 time__card">
-              <div class="show__date show__date-disp">
-                <div>
-                  <h2>Escolha a data e a opção</h2>
-                </div>
-                <div class="result__button-group" v-if="!roomLoaded && !timeLoaded">
-                  <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
-                </div>
-                <div class="result__button-group" v-else>
-                  <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
-                    <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
-                  </b-dropdown>
-                  <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
-                    <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as opções'})">Todas as opções</b-dropdown-item-button>
-                    <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
-                  </b-dropdown>
-                </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12 time__card">
+            <div class="show__date show__date-disp">
+              <div>
+                <h2>Escolha a data e a opção</h2>
               </div>
-              <div class="container__time">
-                <EventTimeLoader class="container__placeholder" v-if="!roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 70px; border-radius: 5px"></EventTimeLoader>
-                <div class="time__placeholder" v-else>
-                  <div class="card" v-if="filtered.length==0">
-                    <div class="card-body row">
-                      <div class="col col-md text-center card__date">
-                        Não há mais dias para esse evento.
-                      </div>
+              <div class="result__button-group" v-if="!roomLoaded && !timeLoaded">
+                <EventRoomLoader class="container__placeholder" :speed="2" :animate="true" style="height: 23px; border-radius: 5px; margin-top: 5px"></EventRoomLoader>
+              </div>
+              <div class="result__button-group" v-else>
+                <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
+                  <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
+                </b-dropdown>
+                <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
+                  <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as opções'})">Todas as opções</b-dropdown-item-button>
+                  <b-dropdown-item-button style="border-color: transparent!important" v-for="(item) in salasDisponiveis" @click="selectedRoom(item)" :key="item.CodSala">{{item.NomSala}}</b-dropdown-item-button>
+                </b-dropdown>
+              </div>
+            </div>
+            <div class="container__time">
+              <EventTimeLoader class="container__placeholder" v-if="!roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 70px; border-radius: 5px"></EventTimeLoader>
+              <div class="time__placeholder" v-else>
+                <div class="card" v-if="filtered.length==0">
+                  <div class="card-body row">
+                    <div class="col col-md text-center card__date">
+                      Não há mais dias para esse evento.
                     </div>
                   </div>
+                </div>
 
-                  <transition-group name="fade">
-                    <div class="card" v-for="(item) in filtered" :key='item'>
-                      <div class="card-body row">
-                        <div class="col-3 col-md-2 text-center card__date p-0">
-                          <span style="font-size: 12px">
+                <transition-group name="fade">
+                  <div class="card" v-for="(item) in filtered" :key='item'>
+                    <div class="card-body row">
+                      <div class="col-3 col-md-2 text-center card__date p-0">
+                        <span style="font-size: 12px">
                           {{ item.weekdayName }} 
                         </span>
-                          <br />
-                          <span style="font-weight: bold; font-size: 14px">
+                        <br />
+                        <span style="font-weight: bold; font-size: 14px">
                           {{ item.day }} 
                         </span>
-                          <br />
-                          <span style="font-size: 12px">
+                        <br />
+                        <span style="font-size: 12px">
                           {{ item.HorSessao }}
                         </span>
-                        </div>
-                        <div class="col-8 col-md-7 card__description" style="border-left: 1px solid #777;padding-left: 15px;">
-                          <span class="">
-                        {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} </span> <br> <span class="pt-1">{{ item.ds_municipio }}/{{item.sg_estado}}</span>
-                        </div>
-                        <div class="col-10 col-md-3 card__btn">
-                          <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
-                        </div>
                       </div>
-
+                      <div class="col-8 col-md-7 card__description" style="border-left: 1px solid #777;padding-left: 15px;">
+                        <span class="">
+                        {{ item.NomPeca }} - {{item.NomSala}} - {{ item.ValPeca | money}} </span> <br> <span class="pt-1">{{ item.ds_municipio }}/{{item.sg_estado}}</span>
+                      </div>
+                      <div class="col-10 col-md-3 card__btn">
+                        <button type="button" class="btn btn-outline-light btn-sm float-right" @click="buy(item.id_apresentacao)">Comprar</button>
+                      </div>
                     </div>
-                  </transition-group>
-                </div>
+
+                  </div>
+                </transition-group>
               </div>
             </div>
           </div>
@@ -369,6 +375,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 </template>
 
