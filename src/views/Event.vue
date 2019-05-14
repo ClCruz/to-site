@@ -158,7 +158,7 @@
 
                   </div>
                   <!-- Produtor -->
-                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
+                  <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
                     <h3 class="mt-3">Sobre o parceiro</h3>
                     <div class="row align-items-center ">
                       <div class="col-4 ">
@@ -170,7 +170,7 @@
                         <a href="#" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-link"></i>Ir para o site do parceiro</a>
                       </div>
                     </div>
-                  </div> -->
+                  </div>
                   <!-- Local do evento -->
                   <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
                     <LineLoader v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true"></LineLoader>

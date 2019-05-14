@@ -109,7 +109,7 @@
                 <div class="to-box p-0 ">
                   <div @click="goto('event',{ uri: item.uri})" class="img-fluid rounded-0" style="background-size: cover;height: 300px !important" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }">
                   </div>
-                  <!-- <div class="ad__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div> -->
+                  <div class="ad__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div>
                 </div>
               </div>
             </swiper-slide>
