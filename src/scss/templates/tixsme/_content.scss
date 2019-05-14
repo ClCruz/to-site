@@ -289,4 +289,11 @@
 		padding: 0 !important;
 		border: none;
 	}
+
+	.v--modal-overlay[data-modal="login_ns"] {
+    background: black !important;
+  }
+  .v--modal-overlay[data-modal="newuser_ns"] {
+    background: black !important;
+  }
 }

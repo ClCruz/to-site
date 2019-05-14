@@ -168,7 +168,7 @@ export default {
               this.setClient(response);
               this.closeloginfather();
             } else {
-              this.closeloginfather();
+              // this.closeloginfather();
               this.ls_add("fb_connect", JSON.stringify({
                 id,
                 success: true
@@ -211,7 +211,7 @@ export default {
         this.closeloginfather();
         this.toastSuccess(`Seja bem vindo ${obj.name}.`);
       } else {
-        this.toastError(obj.msg);
+       this.toastError(obj.msg);
       }
     },
     signin() {
@@ -245,7 +245,6 @@ export default {
               this.toastError(response.msg);
             }
             // console.log(this.$parent);
-            this.closeloginfather();
           }
         },
         error => {
