@@ -25,6 +25,7 @@
 	position: relative;
 	background-position: 4px;
 	background-size: 10px;
+	text-transform: capitalize;
 }
 
 .badge__event {
@@ -47,9 +48,21 @@
 	background-image: url('/assets/icons/tag-white.svg');
 }
 
+.badge__partner {
+	background-image: url('/assets/icons/handshake-regular.svg');
+
+	cursor: initial !important;
+	&:hover {
+		transform: none !important;
+		cursor: default !important;
+	}
+}
+
 .badge__money {
-	background-image: url('/assets/icons/dollar-sign-white.svg');
-	background-size: 12px;
+	// background-image: url('/assets/icons/dollar-sign-white.svg');
+	// background-size: 12px;
+	padding-left: 3px;
+
 	cursor: initial !important;
 	&:hover {
 		transform: none !important;
