@@ -1,7 +1,7 @@
 {
   "env": "production",
-  "host": "www.teatrocec.tk",
-  "uri": "https://www.teatrocec.tk",
+  "host": "www.teatroantoniofagundes.com.br",
+  "uri": "https://www.teatroantoniofagundes.com.br",
   "api": "https://api.teatrocec.tk",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.teatrocec.tk",
@@ -10,7 +10,7 @@
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/teatrocec/main.scss",
-  "css": "/stylesheets/themes/www.teatrocec.tk/main.css",
+  "css": "/stylesheets/themes/www.teatroantoniofagundes.com.br/main.css",
   "template": "ticketHubSearchHeader",
   "logo": "/assets/logo-teatrocec.jpeg",
   "favico": "/img/teatrocec/",
@@ -28,7 +28,7 @@
   "info": {
     "title": "Teatro Antonio Fagundes",
     "description": "teatro",
-    "siteName": "www.teatrocec.tk",
+    "siteName": "www.teatroantoniofagundes.com.br",
     "CNPJ": "11.111.111/1111-11",
     "companyAddress": "",
     "companyName": "Teatro Antonio Fagundes"
