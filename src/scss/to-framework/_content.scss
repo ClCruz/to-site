@@ -502,13 +502,15 @@
 			transition: 0.5s;
 
 			.img-fluid {
-				height: 182px;
+				// height: 203px;
+				height: calc(105px * (600 / 314));
 				background-position: center;
-
+				
 				// box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2) !important;
-
+				
 				@include MQ(M) {
 					height: 240px;
+					height: calc(100px * (600 / 314));
 				}
 
 				@include MQ(NS) {
