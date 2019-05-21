@@ -105,6 +105,10 @@
 		// background: #eee;
 
 		padding: 20px 0 40px 0;
+
+		@include MQ(S) {
+			padding-top: 0px !important;
+		 }
 		h2 {
 			margin: 0 auto;
 			padding-top: 0;

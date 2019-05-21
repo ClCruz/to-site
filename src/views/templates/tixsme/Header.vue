@@ -1,6 +1,72 @@
 <template>
 <div>
+ <b-navbar class="header__mobile" style="display: none">
 
+    <div class="col-4 nav__mobile">
+      <div id="nav-icon3" class="toggle nav__hamburger" @click="toggleNavMobile()" @keyup.esc="toggleNavMobile()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="col-4 text-center mx-0 mx-auto">
+      <div class="footer__logo pb-0">
+        <router-link to="/">
+          <div class="img"></div>
+        </router-link>
+      </div>
+    </div>
+    <div class="col-4" style="display: flex; align-items: center"> 
+      <div class="icon"></div>
+      <span v-if="!isLogged" class="btn btn-dark to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
+      <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="" alt=""></span>
+      <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName" no-caret>
+        <template slot="button-content">
+          <img src="" alt=""><span class="sr-only">Search</span>
+        </template>
+        <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
+        <b-dropdown-item @click="modifyme">Meu cadastro</b-dropdown-item>
+        <b-dropdown-item @click="goto('system:logout')">Sair</b-dropdown-item>
+      </b-dropdown>
+    </div>
+    <div class="col-12">
+      <app-search></app-search>
+    </div>
+    <b-collapse is-nav id="nav_collapse">
+
+      <b-navbar-nav>
+        <b-nav-item href="#">Link</b-nav-item>
+        <b-nav-item href="#" disabled>Disabled</b-nav-item>
+      </b-navbar-nav>
+
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="ml-auto">
+
+        <b-nav-form>
+          <b-form-input size="sm" class="mr-sm-2" type="text" placeholder="Search" />
+          <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
+        </b-nav-form>
+
+        <b-nav-item-dropdown text="Lang" right>
+          <b-dropdown-item href="#">EN</b-dropdown-item>
+          <b-dropdown-item href="#">ES</b-dropdown-item>
+          <b-dropdown-item href="#">RU</b-dropdown-item>
+          <b-dropdown-item href="#">FA</b-dropdown-item>
+        </b-nav-item-dropdown>
+
+        <b-nav-item-dropdown right>
+          <!-- Using button-content slot -->
+          <template slot="button-content">
+            <em>User</em>
+          </template>
+          <b-dropdown-item href="#">Profile</b-dropdown-item>
+          <b-dropdown-item href="#">Signout</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
+
+    </b-collapse>
+  </b-navbar>
   <section id="header_home" class="fdb-block p-1 container" style="	background-image: black;padding-bottom: 20px !important" data-block-type="features" data-id="2" draggable="true" >
   <header id="header" class="bg-dark align-items-center container-fluid" data-block-type="headers" data-id="1" style="">
     <div class="container-fluid">
