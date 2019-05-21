@@ -93,7 +93,7 @@
         <div class="row text-center mt-0">
           <div class="col-4 block_events-categories" @click="getListNext"><span :class="[{active: activeCategory == 1}]"  >Próximos eventos</span></div>
           <div class="col-4 block_events-categories"  @click="getListCreated"><span :class="[{active: activeCategory == 2}]">Lançamentos</span></div>
-          <div class="col-4 block_events-categories" @click="getLastChance"><span :class="[{active: activeCategory == 3}]" >Ultimas chances</span></div>
+          <div class="col-4 block_events-categories" @click="getLastChance"><span :class="[{active: activeCategory == 3}]" >Última chance</span></div>
 
           <div class="col-12 col-md-4 card__eventos-container" v-for="(item, index) in featuredData" :key='index' :item="item" v-if="item.isdiscovery == 0" @click="goto('event', item)">
             <div class="p-0 card__eventos" :style="{ background: 'rgba(0, 0, 0, .65) url(\'' + item.img + '\')' }">
