@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.compreingressos.com",
+  "uri": "https://www.compreingressos.com",
+  "api": "https://api.compreingressos.com",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.compreingressos.com",
+  "admin": "https://admin.compreingressos.com",
+  "apikey": "live_b9ac22c87db04e5aa888c10023a785abb51709f099ae4123924dc02b6dd4814d",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/compreingressos/main.scss",
+  "css": "/stylesheets/themes/www.compreingressos.com/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-compreingressos.png",
+  "favico": "/img/compreingressos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Eventos",
+    "keywords": "Eventos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Compreingressos.com",
+    "description": "Eventos",
+    "siteName": "www.compreingressos.com",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Compreingressos",
+    "companyName": "Compreingressos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_compreingressos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_compreingressos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_compreingressos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_compreingressos/emailComprador.html",
+      "gift": "../comprar/templates/multi_compreingressos/emailPresente.html",
+      "signature": "../comprar/templates/multi_compreingressos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_compreingressos/confirmacaoEmail.html"
+
+    }
+  }
+}
