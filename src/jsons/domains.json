@@ -212,5 +212,9 @@
     "www.compreingressos.com": "compreingressos",
     "api.compreingressos.com": "compreingressos",
     "compra.compreingressos.com": "compreingressos",
-    "admin.compreingressos.com": "compreingressos"
+    "admin.compreingressos.com": "compreingressos",
+    "parteventos.ticketoffice.me": "parteventos",
+    "api.parteventos.ticketoffice.me": "parteventos",
+    "compra.parteventos.ticketoffice.me": "parteventos",
+    "admin.parteventos.ticketoffice.me": "parteventos"
 }

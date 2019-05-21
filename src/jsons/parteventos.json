@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "parteventos.ticketoffice.me",
+  "uri": "https://parteventos.ticketoffice.me",
+  "api": "https://api.parteventos.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.parteventos.ticketoffice.me",
+  "admin": "https://admin.parteventos.ticketoffice.me",
+  "apikey": "live_2b80b3223bfc45879b2d3bbe70ca66c5ce871095eb7a4ed89574dcd2ad32e275",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/parteventos/main.scss",
+  "css": "/stylesheets/themes/parteventos.ticketoffice.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-parteventos.jpeg",
+  "favico": "/img/parteventos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "eventos",
+    "keywords": "eventos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "PartEventos",
+    "description": "eventos",
+    "siteName": "parteventos.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": " ",
+    "companyName": "PartEventos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_parteventos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_parteventos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_parteventos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_parteventos/emailComprador.html",
+      "gift": "../comprar/templates/multi_parteventos/emailPresente.html",
+      "signature": "../comprar/templates/multi_parteventos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_parteventos/confirmacaoEmail.html"
+
+    }
+  }
+}
