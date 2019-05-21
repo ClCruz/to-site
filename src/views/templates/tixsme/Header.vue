@@ -1,26 +1,7 @@
 <template>
 <div>
 
-  <section id="header_home" class="fdb-block p-5 container" style="	background-image: url('/assets/bg-azusa.jpg');" data-block-type="features" data-id="2" draggable="true" >
-    <div class="container">
-      <div class="row text-lg-right align-items-center">
-        <div class="col-12 col-sm-12 order-1 order-sm-3 order-md-3 order-lg-1 col-lg-5 text-left pt-sm-0">
-          <!-- <div class="row" id="share">
-            <span style="" class="social-text">Rede Social</span>
-            <a class="facebook" target="blank"><i class="fab fa-facebook-f"></i></a>
-            <a class="twitter" target="blank"><i class="fab fa-twitter"></i></a>
-            <a class="pinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
-
-          </div> -->
-        </div>
-        <div class="col-5 col-sm-12 col-md-3 order-2 order-sm-2 order-md-2 order-lg-2 col-lg-2 m-auto pt-lg-0 text-center">
-        </div>
-
-        <div class="col-12 order-3 order-md-1 order-lg-3 order-sm-0 mt-md-2 mt-sm-2 pb-md-4 pt-md-0 pb-sm-4 col-sm-12 mt-sm-2 col-lg-5">
-        </div>
-
-      </div>
-    </div>
+  <section id="header_home" class="fdb-block p-1 container" style="	background-image: black;padding-bottom: 20px !important" data-block-type="features" data-id="2" draggable="true" >
   <header id="header" class="bg-dark align-items-center container-fluid" data-block-type="headers" data-id="1" style="">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-md no-gutters text-right col-12">

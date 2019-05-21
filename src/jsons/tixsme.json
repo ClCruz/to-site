@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/www.tixs.me/main.scss",
   "css": "/stylesheets/themes/tixsme/main.css",
-  "template": "ingressaria",
+  "template": "tixsme",
   "logo": "https://media.tixs.me/logos/logo-tixsme.png",
   "favico": "/img/tixsme/",
   "videos": {

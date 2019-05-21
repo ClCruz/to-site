@@ -1,6 +1,6 @@
 <template>
 <div>
-  <section class="fdb-block team-6" data-block-type="teams" data-id="3" draggable="true" id="block_features">
+  <section class="fdb-block team-6 pt-5" data-block-type="teams" data-id="3" draggable="true" id="block_features">
     <div class="container">
       <h2 class="justify-content-center text-center pb-0 mb-0">Destaque</h2>
       <div class="row text-center p-0">
@@ -77,18 +77,17 @@
       
         </div>
       </section> -->
-  <div class="container-fluid pt-0 mt-0" id="ad_container">
+  <!-- <div class="container-fluid pt-0 mt-0" id="ad_container">
     <div class="container p-0">
       <div class="row">
         <div class="col-12 col-xl-12 text-left">
           <div class="p-1 pt-0 mt-0 mb-0 pb-0">
-            <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
             <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <section class="fdb-block team-4" id="block_events">
       <div class="container pt-3">
         <div class="row text-center mt-0">
@@ -128,18 +127,17 @@
         </div>
       </div>
     </section>
-    <div class="container-fluid" id="ad_container">
+    <!-- <div class="container-fluid" id="ad_container">
       <div class="container p-0">
         <div class="row">
           <div class="col-12 col-xl-12 text-left p-0">
             <div class="p-1 mt-3 mb-0 pb-0">
-              <!-- <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title"> -->
               <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
             </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 </template>
 
