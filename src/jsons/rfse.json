@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.rfse.com.br",
+  "uri": "https://www.rfse.com.br",
+  "api": "https://api.rfse.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.rfse.com.br",
+  "admin": "https://admin.rfse.com.br",
+  "apikey": "live_73fc6da1e5814ad7a8dee52b39a20a20825227ff2c34412cb39414131fe32353",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/rfse/main.scss",
+  "css": "/stylesheets/themes/www.rfse.com.br/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-rfse.png",
+  "favico": "/img/rfse/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "venda de ingressos, copa do brasil",
+    "keywords": "venda de ingressos, copa do brasil"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "RF Sports & Entertainment",
+    "description": "venda de ingressos, copa do brasil",
+    "siteName": "www.rfse.com.br",
+    "CNPJ": "",
+    "companyAddress": "(13) 99685-7894",
+    "companyName": "RF Sports & Entertainment"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_rfse/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_rfse/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_rfse/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_rfse/emailComprador.html",
+      "gift": "../comprar/templates/multi_rfse/emailPresente.html",
+      "signature": "../comprar/templates/multi_rfse/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_rfse/confirmacaoEmail.html"
+
+    }
+  }
+}
