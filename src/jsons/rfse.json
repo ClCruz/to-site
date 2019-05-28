@@ -1,7 +1,7 @@
 {
   "env": "production",
-  "host": "www.rfse.com.br",
-  "uri": "https://www.rfse.com.br",
+  "host": "ingressos.rfse.com.br",
+  "uri": "https://ingressos.rfse.com.br",
   "api": "https://api.rfse.com.br",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.rfse.com.br",
@@ -10,7 +10,7 @@
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/rfse/main.scss",
-  "css": "/stylesheets/themes/www.rfse.com.br/main.css",
+  "css": "/stylesheets/themes/ingressos.rfse.com.br/main.css",
   "template": "ticketHubSearchHeader",
   "logo": "/assets/logo-rfse.png",
   "favico": "/img/rfse/",
@@ -28,7 +28,7 @@
   "info": {
     "title": "RF Sports & Entertainment",
     "description": "venda de ingressos, copa do brasil",
-    "siteName": "www.rfse.com.br",
+    "siteName": "ingressos.rfse.com.br",
     "CNPJ": "",
     "companyAddress": "(13) 99685-7894",
     "companyName": "RF Sports & Entertainment"
