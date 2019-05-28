@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/rfse/main.scss",
   "css": "/stylesheets/themes/ingressos.rfse.com.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-rfse.png",
   "favico": "/img/rfse/",
   "videos": {
