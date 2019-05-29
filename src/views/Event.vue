@@ -97,7 +97,7 @@
       </div>
     </div>
   </div>
-  <div v-else-if="template == 'ingressaria' || template == 'ticketHubVideo'  || template == 'tixs'">
+  <div v-else-if="template == 'ingressaria' || template == 'ticketHubVideo'  || template == 'tixs' || template == 'compreingressos'">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
