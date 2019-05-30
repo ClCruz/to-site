@@ -55,7 +55,7 @@
                 </div>
                 <div class="result__button-group" v-else>
                   <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByDate" bin class="btn__datas m-2">
-                    <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item.date">{{item.date}}</b-dropdown-item-button>
+                    <b-dropdown-item-button variant="dark" v-for="(item) in dates" @click="selectedDate(item)" :key="item">{{item.date}}</b-dropdown-item-button>
                   </b-dropdown>
                   <b-dropdown variant="dark" id="ddown-sm-split" size="sm" split :text="filterByRoom" bin class="btn__salas m-2">
                     <b-dropdown-item-button style="border-color: transparent!important" @click="selectedRoom({ CodSala: 0, NomSala: 'Todas as salas'})">Todas as salas</b-dropdown-item-button>
@@ -900,9 +900,9 @@ export default {
 
     },
     fillFirstHour() {
-      this.selectedDate = this.presentantion[0];
+      let selectedDate = this.presentantion[0];
       // console.log(this.presentantion);
-      this.filteredHours(this.selectedDate.day);
+      this.filteredHours(selectedDate.day);
     },
     removeDuplicatesBy(keyFn, array) {
       var mySet = new Set();
