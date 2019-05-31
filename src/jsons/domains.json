@@ -216,5 +216,9 @@
     "parteventos.ticketoffice.me": "parteventos",
     "api.parteventos.ticketoffice.me": "parteventos",
     "compra.parteventos.ticketoffice.me": "parteventos",
-    "admin.parteventos.ticketoffice.me": "parteventos"
+    "admin.parteventos.ticketoffice.me": "parteventos",
+    "ingressos.rfse.com.br": "rfse",
+    "api.ingressos.rfse.com.br": "rfse",
+    "compra.ingressos.rfse.com.br": "rfse",
+    "admin.ingressos.rfse.com.br": "rfse"
 }
