@@ -52,6 +52,14 @@
   </transition>
   <footer-ingressaria></footer-ingressaria>
 </div>
+<div v-else-if="template == 'compreingressos'">
+  <div class="blankme" v-if="blankme"></div>
+  <header-compreingressos :key="idappheader"></header-compreingressos>
+  <transition name="component-fade" mode="out-in">
+    <router-view ref="rvroot" :key="$route.fullPath"></router-view>
+  </transition>
+  <footer-compreingressos></footer-compreingressos>
+</div>
 <div v-else-if="template == 'tixsme'">
   <div class="blankme" v-if="blankme"></div>
   <header-tixsme :key="idappheader"></header-tixsme>
@@ -81,6 +89,8 @@ import HeaderTixsme from "@/views/templates/tixsme/Header"
 import FooterTixsme from "@/views/templates/tixsme/Footer"
 import HeaderIngressaria from "@/views/templates/ingressaria/Header"
 import FooterIngressaria from "@/views/templates/ingressaria/Footer"
+import HeaderCompreingressos from "@/views/templates/compreingressos/Header"
+import FooterCompreingressos from "@/views/templates/compreingressos/Footer"
 import HeaderTicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Header"
 import FooterTicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Footer"
 import HeaderTicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Header"
@@ -129,6 +139,8 @@ export default {
     FooterTixsme,
     HeaderIngressaria,
     FooterIngressaria,
+    HeaderCompreingressos,
+    FooterCompreingressos,
     HeaderTicketHubSearchHeader,
     FooterTicketHubSearchHeader,
     HeaderTicketHubVideoBackground,
