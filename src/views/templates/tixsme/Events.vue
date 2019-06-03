@@ -11,26 +11,26 @@
       </div>
     </div>
   </section>
-  <!--
+  
     <div class="container-fluid" id="ad_container">
       <div class="container p-0">
         <div class="row">
           <div class="col-6 pr-0 col-lg-6 text-left">
             <div class="p-1 pr-0 mt-0 mb-0 pb-0">
             
-              <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
+              <img class="img-fluid rounded-0 discovery" src="/assets/ad/ad-ruby.png">
             </div>
           </div>
           <div class="col-6 pl-0 col-lg-6 text-left">
             <div class="p-1 pl-0 mt-0 mb-0 pb-0">
               
-              <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
+              <img class="img-fluid rounded-0 discovery" src="/assets/ad/ad-ciadeingressos.png">
             </div>
           </div>
         </div>
       </div>
     </div>
-    -->
+
   <!-- <section class="fdb-block" data-block-type="teams" data-id="3" draggable="false" id="block_calendar">
       <div class="container">
         <div class="row">
@@ -127,17 +127,17 @@
         </div>
       </div>
     </section>
-    <!-- <div class="container-fluid" id="ad_container">
+    <div class="container-fluid" id="ad_container">
       <div class="container p-0">
         <div class="row">
           <div class="col-12 col-xl-12 text-left p-0">
             <div class="p-1 mt-3 mb-0 pb-0">
-              <img class="img-fluid rounded-0 discovery" src="/assets/texture/ad-1.jpg">
+              <img class="img-fluid rounded-0 discovery" src="/assets/ad/ad-ruby.png"  style="height: 120px !important">
             </div>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
 </template>
 
