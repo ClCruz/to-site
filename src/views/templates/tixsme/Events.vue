@@ -18,13 +18,13 @@
           <div class="col-6 pr-0 col-lg-6 text-left">
             <div class="p-1 pr-0 mt-0 mb-0 pb-0">
             
-              <img class="img-fluid rounded-0 discovery" src="/assets/ad/ad-ruby.png">
+              <img class="img-fluid rounded-0 discovery" src="/assets/discovery/discovery-ruby.png">
             </div>
           </div>
           <div class="col-6 pl-0 col-lg-6 text-left">
             <div class="p-1 pl-0 mt-0 mb-0 pb-0">
               
-              <img class="img-fluid rounded-0 discovery" src="/assets/ad/ad-ciadeingressos.png">
+              <img class="img-fluid rounded-0 discovery" src="/assets/discovery/discovery-ciadeingressos.png">
             </div>
           </div>
         </div>
@@ -132,7 +132,7 @@
         <div class="row">
           <div class="col-12 col-xl-12 text-left p-0">
             <div class="p-1 mt-3 mb-0 pb-0">
-              <img class="img-fluid rounded-0 discovery" src="/assets/ad/ad-ruby.png"  style="height: 120px !important">
+              <img class="img-fluid rounded-0 discovery" src="/assets/discovery/discovery-ruby.png"  style="height: 120px !important">
             </div>
             </div>
           </div>
