@@ -17,7 +17,7 @@
         </div>
       </div>
       <span v-else>
-        <span v-if="siteName == 'itaucard.compreingressos.com'">
+        <span v-if="siteName == 'teatro.compreingressos.com'">
           <swiper>
             <swiper-slide>
               <div class="p-0" style="width: 100%">
@@ -42,7 +42,7 @@
   <!-- <card-city-list title="Cidades em Destaque" :cityList="cityList"></card-city-list> -->
   <card-genre-list title="Gêneros em Destaque" :genreList="genreList"></card-genre-list>
   <section class="to-block team-1">
-    <div class="container" v-if="siteName == 'itaucard.compreingressos.com'">
+    <div class="container" v-if="siteName == 'teatro.compreingressos.com'">
           <card-event-itau :slideData='slideData'></card-event-itau>
     </div>
     <div class="container" v-else>
