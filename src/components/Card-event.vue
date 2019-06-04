@@ -28,7 +28,7 @@
 
       <p class="p-0 m-0 event__item event__item-date">
         <span class="bold">{{item.datas |  replace('-', 'á')}} </span>
-        <span class="ml-1 mr-2">-</span>
+        <span class="ml-1 mr-2" v-if="item.showPartnerInfo == 1">-</span>
         <span class="" v-if="item.showPartnerInfo == 1"><i class="far fa-handshake" style="padding-right: 6px;"></i>{{item.partner}}</span>
       </p>
       <p class="p-0 pt-1 m-0 h-200 event__item event__item-local"><span class="bold" style="text-transform: capitalize !important">{{ item.ds_nome_teatro | capitalize() }} - {{ item.ds_municipio | capitalize() }},</span> {{ item.sg_estado }} </p>
