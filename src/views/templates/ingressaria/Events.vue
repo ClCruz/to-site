@@ -1,6 +1,8 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
+  <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2" v-if="siteName == 'www.santosrockfestival.com.br'" @click="goto('event',{ uri: '/evento/cia_do_stand_up_teatro_west_plaza_33022'})">
+  </section>
+  <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2" v-else>
     <div class="container justify-content-center align-items-center d-flex container__search--tickethub pt-5 pb-4" v-if="siteName == 'ingressoparatodos.com.br'">
       <div class="col-12 col-md-10 justify-content-center text-center" style="height: 380px;" id="fundo_ingressaria">
         <div>
@@ -358,8 +360,10 @@ export default {
       this.getListResultsFiltered();
     },
     getListResultsFiltered() {
+      console.log('aqui', this.searchTerm);
       eventService.list(this.searchTerm, this.locale.state.name, this.date).then(
         response => {
+          // debugger
           this.filteredData = response;
           this.hideWaitAboveAll();
         },

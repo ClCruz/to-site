@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/santosrockfestival/main.scss",
   "css": "/stylesheets/themes/www.santosrockfestival.com.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-santosrockfestival.jpeg",
   "favico": "/img/santosrockfestival/",
   "videos": {
