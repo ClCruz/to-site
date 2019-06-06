@@ -42,6 +42,7 @@
     "api.ingressos.teatroumc.com.br": "teatroumc",
     "compra.ingressos.teatroumc.com.br": "teatroumc",
     "ingressos.teatroumc.com.br": "teatroumc",
+    "admin.ingressos.teatroumc.com.br": "teatroumc",
     "www.viveremsantosdemo.tk": "viveremsantos",
     "api.viveremsantosdemo.tk": "viveremsantos",
     "compra.viveremsantosdemo.tk": "viveremsantos",
@@ -121,10 +122,10 @@
     "api.ingressosnestle.tk": "nestle",
     "compra.ingressosnestle.tk": "nestle",
     "admin.ingressosnestle.tk": "nestle",
-    "itaucard.compreingressos.com": "itaucard",
-    "api.itaucard.compreingressos.com": "itaucard",
-    "compra.itaucard.compreingressos.com": "itaucard",
-    "admin.itaucard.compreingressos.com": "itaucard",
+    "teatro.compreingressos.com": "itaucard",
+    "api.teatro.compreingressos.com": "itaucard",
+    "compra.teatro.compreingressos.com": "itaucard",
+    "admin.teatro.compreingressos.com": "itaucard",
     "www.ingressoparatodos.com.br": "ingressoparatodos",
     "api.ingressoparatodos.com.br": "ingressoparatodos",
     "compra.ingressoparatodos.com.br": "ingressoparatodos",
@@ -220,5 +221,9 @@
     "ingressos.rfse.com.br": "rfse",
     "api.ingressos.rfse.com.br": "rfse",
     "compra.ingressos.rfse.com.br": "rfse",
-    "admin.ingressos.rfse.com.br": "rfse"
+    "admin.ingressos.rfse.com.br": "rfse",
+    "www.santosrockfestival.com.br": "santosrockfestival",
+    "api.santosrockfestival.com.br": "santosrockfestival",
+    "compra.santosrockfestival.com.br": "santosrockfestival",
+    "admin.santosrockfestival.com.br": "santosrockfestival"
 }

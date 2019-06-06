@@ -1,26 +1,16 @@
 <template>
 <div class="a">
-  <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2" v-if="siteName == 'www.santosrockfestival.com.br'" @click="goto('event',{ uri: '/evento/cia_do_stand_up_teatro_west_plaza_33022'})">
-  </section>
-  <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2" v-else>
+  <section class="to-block to-viewport bg-dark bg__main" style="" data-block-type="call_to_action" data-id="2">
     <div class="container justify-content-center align-items-center d-flex container__search--tickethub pt-5 pb-4" v-if="siteName == 'ingressoparatodos.com.br'">
       <div class="col-12 col-md-10 justify-content-center text-center" style="height: 380px;" id="fundo_ingressaria">
         <div>
-        </div>
-      </div>
-      <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br'">
-        <div class="" style="">
-          <h1>Procure eventos</h1>
-        </div>
-        <div class="input-group mt-0 mb-3 p-2 w-100">
-          <app-search></app-search>
         </div>
       </div>
     </div>
     <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub" v-else>
       <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br'">
         <div class="" style="">
-          <h2>Procure por experiências únicas.</h2>
+          <h1>Procure espetáculos</h1>
         </div>
         <div class="input-group mt-0 mb-3 p-2 w-100">
           <app-search></app-search>
@@ -360,10 +350,8 @@ export default {
       this.getListResultsFiltered();
     },
     getListResultsFiltered() {
-      console.log('aqui', this.searchTerm);
       eventService.list(this.searchTerm, this.locale.state.name, this.date).then(
         response => {
-          // debugger
           this.filteredData = response;
           this.hideWaitAboveAll();
         },

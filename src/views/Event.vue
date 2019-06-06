@@ -97,7 +97,7 @@
       </div>
     </div>
   </div>
-  <div v-else-if="template == 'ingressaria' || template == 'ticketHubVideo'  || template == 'tixs'">
+  <div v-else-if="template == 'ingressaria' || template == 'ticketHubVideo'  || template == 'tixs' || template == 'compreingressos'">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
@@ -115,6 +115,7 @@
                         <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
                         <a href="#" class="badge badge__icon badge__city badge-secondary" id="badge__city" @click="gotoSearch(event.city, 'city')">{{event.cityBadgeText}}</a>
                         <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
+                        <a href="#" class="badge badge__icon badge__partner badge-info noClick" v-if="event.showPartnerInfo === 1" id="badge__price">Vendido por {{event.nameSite}}</a>
                         <!-- <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a> -->
                         <span class="flag" id="">
                           <img v-for="(item) in event.badge" v-bind:key="item.tag" :id="item.tag" :title="item.tag" :src="item.img" alt="">
@@ -846,6 +847,8 @@ export default {
             this.event.city = response.ds_municipio;
             this.event.state = response.sg_estado;
             this.event.cityBadgeText = response.badge_city_text;
+            this.event.nameSite = response.name_site;
+            this.event.showPartnerInfo = response.show_partner_info;
             this.getRooms();
             this.getPresentation(this.fillFirstHour);
 
