@@ -553,6 +553,7 @@ export default {
 
   data() {
     return {
+      siteName: config.info.siteName,
       linkFacebook: '',
       linkTwitter: '',
       linkLinkedin: '',
@@ -814,19 +815,34 @@ export default {
         );
       });
     },
+    checkIfCompre() {
+      return this.siteName == 'www.compreingressos.com';
+    },
+    trimKeyForId(key) {
+      return key.replace(/\D/g, "");
+    },
     getEvent() {
       this.showWaitAboveAll();
       this.processing = true;
+      let isCI = false;
+      let eventKey = this.key;
 
-      eventService.description(this.key).then(
+      if (this.checkIfCompre()) {
+        isCI = true;
+        eventKey = this.trimKeyForId(this.key);
+      }
+
+      eventService.description(eventKey, isCI).then(
         response => {
+
           this.hideWaitAboveAll();
           this.processing = false;
 
           if (response.error) {
             this.toastError(response.msg);
-            if (response.goto == "home")
-              window.location = "/";
+            console.log(response.msg);
+            // if (response.goto == "home")
+            //   window.location = "/";
             return;
           }
           if (this.validateJSON(response)) {
@@ -858,7 +874,6 @@ export default {
             this.setdescription();
 
             this.generateSocialLinks();
-
             this.metaObj.appName = config.info.siteName;
             this.metaObj.description = this.event.meta_description;
             this.metaObj.keywords = this.event.meta_keyword;
