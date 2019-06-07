@@ -582,6 +582,7 @@ export default {
         city: null,
         state: null,
         cityBadgeText: null,
+        ontixsme: false,
       },
       listOfHours: [],
       selectedDay: [],
@@ -711,8 +712,8 @@ export default {
     toggleFilter(code) {
       this.filterBy = code;
     },
-    buy(id_apresentacao) {
-      this.gotoLegacy(id_apresentacao, "shopping");
+    buy(id_apresentacao, changetotixsme) {
+      this.gotoLegacy(id_apresentacao, "shopping", changetotixsme);
     },
     map(event) {
       if (event) event.preventDefault();
@@ -849,6 +850,7 @@ export default {
             this.event.cityBadgeText = response.badge_city_text;
             this.event.nameSite = response.name_site;
             this.event.showPartnerInfo = response.show_partner_info;
+            this.event.ontixsme = response.ontixsme;
             this.getRooms();
             this.getPresentation(this.fillFirstHour);
 
