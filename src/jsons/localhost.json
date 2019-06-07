@@ -6,7 +6,7 @@
 	"pinpad": "http://localhost:7001/api",
 	"admin": "http://localhost:2000",
 	"legacy": "http://localhost:2004",
-	"apikey": "live_279e0f576f1547faa1ac5600d7802778f3754aa3f6d44f9aabbdbb709b2ed442",
+	"apikey": "live_578abaf329f84119bb7c1e55dfdc7e0f4f20e693cd2c4bc7a5bc0a0965fae322",
 	"geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
 	"ga": "",
 	"scss": "./src/scss/themes/eventoslitoral/main.scss",
@@ -31,7 +31,7 @@
 	"info": {
 		"title": "Ingressaria",
 		"description": "Venda de Ingressos",
-		"siteName": "www.compreingressos.com",
+		"siteName": "www.compreinressos.com",
 		"CNPJ": "11.111.111/1111-111",
 		"companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
 		"companyName": "Eventos Litoral"

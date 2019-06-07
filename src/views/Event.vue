@@ -818,7 +818,7 @@ export default {
       return this.siteName == 'www.compreingressos.com';
     },
     trimKeyForId(key) {
-      return key.replace(/\D/g, "");
+      return key.split('-')[0];
     },
     getEvent() {
       this.showWaitAboveAll();
@@ -839,9 +839,9 @@ export default {
 
           if (response.error) {
             this.toastError(response.msg);
-            console.log(response.msg);
-            // if (response.goto == "home")
-            //   window.location = "/";
+            // console.log(response.msg);
+            if (response.goto == "home")
+               window.location = "/";
             return;
           }
           if (this.validateJSON(response)) {
