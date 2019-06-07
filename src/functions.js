@@ -183,10 +183,13 @@ export const func = {
         },
         gettixsmeobj() {
             let json = require(`./jsons/tixsme.json`);
-            return json;
+            // console.log(json);
+            return Object.assign({}, json);
         },
         gotoLegacy(id, type, changetotixsme) {
-            if (changetotixsme == undefined || changetotixsme == null) changetotixsme = false;
+            if (changetotixsme == 1) {
+                changetotixsme = true;
+            }
 
             let token = "";
             if (this.ls_get("client")) {
@@ -201,9 +204,8 @@ export const func = {
                     window.location = `${config.legacy}/comprar/gotocard.php?token=${token}`;
                 break;
                 case "shopping":
-                    debugger;
-                    if (changetotixsme == true) {
-                        window.location = `${this.gettixsmeobj.legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`;
+                    if (changetotixsme == true || changetotixsme == 1) {
+                        window.location = `${this.gettixsmeobj().legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`;
                     }
                     else {
                         window.location = `${config.legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`;

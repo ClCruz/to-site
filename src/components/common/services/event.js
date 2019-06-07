@@ -76,7 +76,7 @@ function description(key, isCI) {
   if (isCI == 0) {
     url = config.api + `/v1/event/get?key=${key}`;
   } else {
-    url = config.api + `/v1/event/getCompreingressos?key=${key}`;
+    url = config.api + `/v1/event/getci?key=${key}`;
   }
 
   var ret = new Promise(
