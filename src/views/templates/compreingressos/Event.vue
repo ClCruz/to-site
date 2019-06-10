@@ -455,7 +455,8 @@ export default {
       this.filterBy = code;
     },
     gotostore() {
-      window.location = this.event.gotouri;
+      window.open(this.event.gotouri);
+      // window.location = this.event.gotouri;
     },
     map(event) {
       if (event) event.preventDefault();
