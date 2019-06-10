@@ -32,24 +32,14 @@
                   <router-link class="nav-link" to="/busca/genero/Infantil">Infantil
                   </router-link>
                 </li> -->
-                <li class="nav-item">
-                  <router-link class="nav-link" to="/sac/empresa/sobre">Ajuda
-                  </router-link>
-                </li>
               </ul>
             </div>
             <app-search class="header__search"></app-search>
           </div>
 
           <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex">
-            <span v-if="!isLogged" class="btn   btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
-            <span v-if="!isLogged" class="header__signin-mobile" @click="login"><img src="" alt=""></span>
-
-            <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName">
-              <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
-              <b-dropdown-item @click="modifyme">Meu cadastro</b-dropdown-item>
-              <b-dropdown-item @click="goto('system:logout')">Sair</b-dropdown-item>
-            </b-dropdown>
+                  <router-link class="nav-link" to="/sac/empresa/sobre">Ajuda
+                  </router-link>
 
           </ul>
         </nav>

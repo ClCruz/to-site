@@ -234,7 +234,7 @@
                     </swiper-slide>
                   </swiper>
                   <div class="container__available-times pl-3 row">
-                    <div class="card__hour text-center align-items-center" style="" v-for="(item) in listOfHours" :key='item.HorSessao + item.day' @click="buy(item.id_apresentacao)">
+                    <div class="card__hour text-center align-items-center" style="" v-for="(item) in listOfHours" :key='item.HorSessao + item.day' @click="buy(item.id_apresentacao,event.ontixsme)">
                       <div>
                         <!-- <h3 class="">HORÁRIO</h3> -->
                         <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
