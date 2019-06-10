@@ -26,7 +26,7 @@
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
                     </span>
-                    <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
+                    <a href="#" @click="gotostore($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
 
                     <h3 class="mt-3">Detalhes do evento</h3>
 
@@ -329,7 +329,6 @@ export default {
         city: null,
         state: null,
         cityBadgeText: null,
-        ontixsme: false,
         dates: '',
       },
       listOfHours: [],
@@ -461,11 +460,7 @@ export default {
       this.filterBy = code;
     },
     gotostore() {
-      console.log(changetotixsme);
-
-    },
-    buy(id_apresentacao, changetotixsme) {
-      this.gotoLegacy(id_apresentacao, "shopping", changetotixsme);
+      window.location = this.event.gotouri;
     },
     map(event) {
       if (event) event.preventDefault();
@@ -619,7 +614,7 @@ export default {
             this.event.nameSite = response.name_site;
             this.event.dates = response.dates;
             this.event.showPartnerInfo = response.show_partner_info;
-            this.event.ontixsme = response.ontixsme;
+            this.event.gotouri = response.gotouri;
             // this.getRooms();
             // this.getPresentation(this.fillFirstHour);
 
