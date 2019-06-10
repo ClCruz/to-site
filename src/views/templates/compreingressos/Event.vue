@@ -18,6 +18,7 @@
                         <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
                         <a href="#" class="badge badge__icon badge__city badge-secondary" id="badge__city" @click="gotoSearch(event.city, 'city')">{{event.cityBadgeText}}</a>
                         <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
+                        <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.dates}}</a>
                         <a href="#" class="badge badge__icon badge__partner badge-info noClick" v-if="event.showPartnerInfo === 1" id="badge__price">Vendido por {{event.nameSite}}</a>
                         <!-- <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a> -->
                         <span class="flag" id="">
@@ -25,6 +26,8 @@
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
                     </span>
+                    <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
+
                     <h3 class="mt-3">Detalhes do evento</h3>
 
                     <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
@@ -99,53 +102,6 @@
           width="100%" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 
                   </div> -->
-                </div>
-              </div>
-            </div>
-
-            <div class="btn__comprar" id="btn__comprar" @click="scrollTo()" title="Selecionar horários">
-              <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
-              <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
-              Comprar ingressos
-            </div>
-            <!-- Banner -->
-            <div class="container pl-0 mt-5 pt-3 container__calendar">
-              <div class="">
-                <div class="p-2">
-                  <h3 class="" id="horario">Escolha de horário</h3>
-                  <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário para compra</p>
-                  <div class="container__arrows">
-                    <div class="swiper-button-prev" slot="button-prev"></div>
-                    <div class="swiper-button-next" slot="button-next"></div>
-                  </div>
-                  <swiper :options="swiperOption" class="">
-                    <swiper-slide class="p-0" v-for="(item, index) in filteredDays" :key='item.HorSessao + item.day'>
-                      <div class="c">
-                        <!-- :class="{ 'card__time-active': index == 0 }" -->
-                        <div class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center " style="" @click='filteredHours(item.day), selected = item.id_apresentacao' v-bind:class="{'card__time-active':selected == undefined ? selected = item.id_apresentacao : item.id_apresentacao == selected}">
-                          <div>
-                            <h3 v-if="item.istoday == 1" class="" style="text-transform: uppercase">HOJE</h3>
-                            <h3 v-else-if="item.istomorrow == 1" class="" style="text-transform: uppercase">AMANHÃ</h3>
-                            <h3 v-else class="" style="text-transform: uppercase">{{item.weekdayName }}</h3>
-                            <p class="lead">{{ item.day }}</p>
-                          </div>
-                          <i style="visibility: hidden" class="icon-active fa fa-caret-down"></i>
-                          <div>
-                          </div>
-                        </div>
-                      </div>
-                    </swiper-slide>
-                  </swiper>
-                  <div class="container__available-times pl-3 row">
-                    <div class="card__hour text-center align-items-center" style="" v-for="(item) in listOfHours" :key='item.HorSessao + item.day' @click="buy(item.id_apresentacao,event.ontixsme)">
-                      <div>
-                        <!-- <h3 class="">HORÁRIO</h3> -->
-                        <h3 class="lead"><i class="far fa-sm fa-clock" style="margin-right: 5px; font-size: 15px" ></i>{{item.HorSessao}}</h3>
-                        <p class="lead"><span class="card__hour-icon"> R$ </span>{{item.ValPeca | moneyIngressaria }} - <i class="card__hour-icon fa fa-shopping-cart"></i> <span class="text-comprar"> COMPRAR</span></p>
-                      </div>
-                    </div>
-
-                  </div>
                 </div>
               </div>
             </div>
@@ -374,6 +330,7 @@ export default {
         state: null,
         cityBadgeText: null,
         ontixsme: false,
+        dates: '',
       },
       listOfHours: [],
       selectedDay: [],
@@ -502,6 +459,10 @@ export default {
     },
     toggleFilter(code) {
       this.filterBy = code;
+    },
+    gotostore() {
+      console.log(changetotixsme);
+
     },
     buy(id_apresentacao, changetotixsme) {
       this.gotoLegacy(id_apresentacao, "shopping", changetotixsme);
@@ -656,12 +617,13 @@ export default {
             this.event.state = response.sg_estado;
             this.event.cityBadgeText = response.badge_city_text;
             this.event.nameSite = response.name_site;
+            this.event.dates = response.dates;
             this.event.showPartnerInfo = response.show_partner_info;
             this.event.ontixsme = response.ontixsme;
-            this.getRooms();
-            this.getPresentation(this.fillFirstHour);
+            // this.getRooms();
+            // this.getPresentation(this.fillFirstHour);
 
-            this.getDates();
+            // this.getDates();
             this.setdescription();
 
             this.generateSocialLinks();
@@ -701,12 +663,12 @@ export default {
       // let ret2 = this.presentantion;
       let hours = this.presentantion.filter(x => x.day == day);
 
-      document.querySelector('.container__available-times').style.opacity = 0;
+      //document.querySelector('.container__available-times').style.opacity = 0;
       // console.log(hours);
       this.listOfHours = this.removeDuplicatesBy(x => x.HorSessao, hours);
 
       setTimeout(function () {
-        document.querySelector('.container__available-times').style.opacity = 1;
+        //document.querySelector('.container__available-times').style.opacity = 1;
 
       }, 200);
 
