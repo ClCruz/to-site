@@ -181,7 +181,16 @@ export const func = {
         localStorageInfo() {
             console.log(getInfo());
         },
-        gotoLegacy(id, type) {
+        gettixsmeobj() {
+            let json = require(`./jsons/tixsme.json`);
+            // console.log(json);
+            return Object.assign({}, json);
+        },
+        gotoLegacy(id, type, changetotixsme) {
+            if (changetotixsme == 1) {
+                changetotixsme = true;
+            }
+
             let token = "";
             if (this.ls_get("client")) {
                 let client = JSON.parse(this.ls_get("client"));
@@ -195,8 +204,13 @@ export const func = {
                     window.location = `${config.legacy}/comprar/gotocard.php?token=${token}`;
                 break;
                 case "shopping":
+                    if (changetotixsme == true || changetotixsme == 1) {
+                        window.location = `${this.gettixsmeobj().legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`;
+                    }
+                    else {
+                        window.location = `${config.legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`;
+                    }
                     //alert(""+`${config.legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`);
-                    window.location = `${config.legacy}/comprar/gotoshopping.php?token=${token}&id=${id}`;
                 break;
                 case "myaccount":
                     //console.log(`${config.legacy}/comprar/gotomyaccount.php?token=${token}`);

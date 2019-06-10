@@ -8,7 +8,7 @@ header.bg-dark {
 	background-color: $secundary !important;
 }
 .header__logo .img {
-	height: 55px;
+	height: 80px;
 	width: 100%;
 }
 
@@ -45,7 +45,7 @@ header.bg-dark {
 $gradiente: $secundary !important;
 
 .header__logo .img {
-	height: 45px;
+	height: 65px !important;
 	width: 100%;
 	background-position: left center;
 }
@@ -75,20 +75,131 @@ $gradiente: $secundary !important;
 	color: black !important;
 }
 
+.team-1,
+.features,
+#section__slider,
+.container__select {
+	background: transparent !important;
+	background-size: cover;
+
+	h3 {
+		color: white !important;
+	}
+}
+
+.bg__ingressaria {
+	background: none !important;
+	p,
+	h1,
+	h2,
+	h3,
+	em,
+	strong,
+	span {
+		color: white !important;
+	}
+}
+
+.to-btn.dark {
+	border: 1px solid white !important;
+}
+
+#read-more,
+#read-less {
+	cursor: pointer;
+	text-align: center;
+	width: 100%;
+	background: linear-gradient(rgba(255, 255, 255, 0) 0%, black 70%);
+
+	.btn:not(:disabled):not(.disabled),
+	summary {
+		border: none !important;
+	}
+}
+
+#app {
+	background: url('/assets/bg-comprebody.jpg') !important;
+}
+
+.a p.mt-3,
+.ui.dropdown:not(.button) > .default.text[data-v-3a0c7bea],
+.ui.default.dropdown:not(.button) > .text[data-v-3a0c7bea],
+.vdp-datepicker .input-group > .form-control,
+.vdp-datepicker .input-group > .custom-select,
+.vdp-datepicker .input-group > .custom-file {
+	color: white !important;
+
+	&::placeholder {
+		color: white !important;
+	}
+}
+
 .bg__main {
-	background: url('/assets/bg-bailedopresidente.jpg') !important;
-	background-position: 20% !important;
+	background: url('/assets/bg-compreingressos.png') !important;
+	background-position: center !important;
 	background-size: cover !important;
+	height: 450px;
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
+
 	@include MQ(S) {
-		display: none !important;
+		display: block !important;
+		padding: 0 !important;
+		height: 300px;
+		padding-top: 0px !important;
+	}
+
+	.container__search--tickethub h1 {
+		@include MQ(S) {
+			display: none;
+		}
+	}
+
+	.v-suggestions input[type=text] {
+		border-radius: 16px !important;
+	}
+
+	.p-2 {
+		padding-left: 0 !important;
+	}
+	.v-suggestions {
+		border-radius: 16px !important;
+		width: 80% !important;
+		font-size: 1.1em;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+		margin: 0;
+		@include MQ(NS) {
+		}
+	}
+
+	.container__search--tickethub {
+		padding-top: 110px !important;
+		h2 {
+			text-align: left;
+			font-size: 2.3rem;
+			font-weight: bold;
+		}
+		@include MQ(S) {
+			height: 60px !important;
+			padding: 0 !important;
+		}
+	}
+
+	.container__search--tickethub {
+		@include MQ(S) {
+			height: 280px !important;
+			padding: 0 !important;
+		}
+	}
+
+	.v-suggestions,
+	h2 {
+		display: none;
 	}
 }
 
 .eventHeader header.bg-dark,
 .header__mobile {
 	background: $secundary !important;
-	
 }
 
 .eventHeader header.navbar-fixed-top {
@@ -114,7 +225,6 @@ $gradiente: $secundary !important;
 
 footer.bg-dark {
 	background-color: $secundary !important;
-
 }
 
 footer a,
@@ -128,4 +238,52 @@ header.bg-dark .navbar-nav a.nav-link,
 	@include MQ(S) {
 		color: #fff !important;
 	}
+}
+
+.v--modal-overlay {
+	z-index: 999999 !important;
+}
+
+.team-1 {
+}
+
+.header__search {
+	display: block;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+}
+
+.header__search {
+	display: block !important;
+}
+
+.v-suggestions {
+	width: 70% !important;
+	box-shadow: none !important;
+}
+
+.nav__links {
+	display: none;
+}
+
+.v-suggestions input[type=text] {
+	height: 35px !important;
+	font-size: 13px !important;
+	background-size: 12px;
+	padding-left: 30px;
+
+	&:focus {
+		padding-left: 30px;
+	}
+}
+
+.suggestions {
+	top: 38px !important;
+}
+
+.divider:after {
+	background: none !important;
+}
+
+.divider:before {
+	background: #000;
 }

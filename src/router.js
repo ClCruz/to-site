@@ -63,8 +63,8 @@ export default new Router({
     },
     {
       path: '/espetaculos/:key',
-      name: 'event',
       props: true,
+      name: 'espetaculos',
       component: () => import( /* webpackChunkName: "about" */ './views/Event.vue')
     },
     {

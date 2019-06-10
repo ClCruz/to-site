@@ -68,8 +68,16 @@ function banner(city,state) {
   return ret;
 }
 
-function description(key) {
-  let url = config.api + `/v1/event/get?key=${key}`;
+function description(key, isCI) {
+  if (isCI == null || isCI == undefined) isCI = 0;
+
+  let url = '';
+
+  if (isCI == 0) {
+    url = config.api + `/v1/event/get?key=${key}`;
+  } else {
+    url = config.api + `/v1/event/getci?key=${key}`;
+  }
 
   var ret = new Promise(
     function (resolve, reject) {
