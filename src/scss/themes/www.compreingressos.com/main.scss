@@ -279,3 +279,11 @@ header.bg-dark .navbar-nav a.nav-link,
 .suggestions {
 	top: 38px !important;
 }
+
+.divider:after {
+	background: none !important;
+}
+
+.divider:before {
+	background: #000;
+}

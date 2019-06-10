@@ -10,7 +10,6 @@
     <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub" v-else>
       <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br'">
         <div class="" style="">
-          <h1>Procure espetáculos</h1>
         </div>
         <div class="input-group mt-0 mb-3 p-2 w-100">
           <app-search></app-search>

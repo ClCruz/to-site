@@ -4,15 +4,21 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <section class="to-block bg__ingressaria to-block-mobile" style="">
+          <section class="to-block bg__ingressaria to-block-mobile" style="padding-top: 90px !important">
             <div class="container">
-              <div class="row">
-                <div class="col-12 col-md-8 col-lg-6">
-                  <img class="event__card-img img__mobile" :src="event.img" alt="" style="">
-                  <EventTitleLoader v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true"></EventTitleLoader>
-                  <div v-else>
-                    <h1 class="title mb-2 mt-0">{{event.NomPeca}}</h1>
-                    <span class="event__badges">
+              <div class="row pb-5 pt-0 mt-0">
+                <div class="col-12" style="background: rgba(0,0,0,0.3); border-radius: 5px">
+                  <EventImageIngressariaLoade class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 360px; border-radius: 5px; box-shadow: none!important"></EventImageIngressariaLoade>
+                  <img class="event__card-img" :src="event.img" alt="" style="height: 320px !important; max-width: 568px !important" v-else>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-2"></div>
+                  <div class="col-12 col-md-12 col-lg-8 text-center">
+                    <img class="event__card-img img__mobile" :src="event.img" alt="" style="">
+                    <div>
+                      <h1 class="title mb-2 mt-0">{{event.NomPeca}}</h1>
+                      <span class="event__badges">
                         <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
                         <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
                         <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
@@ -20,52 +26,55 @@
                         <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
                         <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.dates}}</a>
                         <a href="#" class="badge badge__icon badge__partner badge-info noClick" v-if="event.showPartnerInfo === 1" id="badge__price">Vendido por {{event.nameSite}}</a>
-                        <!-- <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a> -->
+                        <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a>
                         <span class="flag" id="">
                           <img v-for="(item) in event.badge" v-bind:key="item.tag" :id="item.tag" :title="item.tag" :src="item.img" alt="">
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
-                    </span>
-                    <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
+                      </span>
 
-                    <h3 class="mt-3">Detalhes do evento</h3>
+                      <hr data-content="Compartilhar" class="divider mb-0 mt-2" style="max-width: 460px; background: none">
+                      <div class="row" id="share">
 
-                    <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
-                    <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
-                      <div class="btn to-btn dark">
-                        LER MAIS
+                        <!-- facebook -->
+                        <a class="facebook" :href="linkFacebook" target="blank"><i class="fab fa-facebook-f"></i></a>
+
+                        <!-- twitter -->
+                        <a class="twitter" :href="linkTwitter" target="blank"><i class="fab fa-twitter"></i></a>
+
+                        <!-- linkedin -->
+                        <!-- <a class="linkedin" :href="linkLinkedin" target="blank"><i class="fab fa-linkedin-in"></i></a> -->
+
+                        <!-- pinterest -->
+                        <a class="pinterest" :href="linkPinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
+
+                      </div>
+
+                      <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
+
+
+                      <h3 class="mt-3">Detalhes do evento</h3>
+
+                      <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
+                      <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
+                        <div class="btn to-btn dark">
+                          LER MAIS
+                        </div>
+                      </div>
+                      <div id='read-less' @click="showreadmoreclick" v-if="showreadandless && !showreadmore">
+                        <div class="btn to-btn dark">
+                          LER MENOS
+                        </div>
                       </div>
                     </div>
-                    <div id='read-less' @click="showreadmoreclick" v-if="showreadandless && !showreadmore">
-                      <div class="btn to-btn dark">
-                        LER MENOS
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
-                  <EventImageIngressariaLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 240px; border-radius: 5px; box-shadow: none!important"></EventImageIngressariaLoader>
-                  <img class="event__card-img" :src="event.img" alt="" style="" v-else>
-                  <!-- Share -->
-                  <hr data-content="Compartilhar" class="divider mb-0 mt-2" style="max-width: 460px">
-                  <div class="row" id="share">
-
-                    <!-- facebook -->
-                    <a class="facebook" :href="linkFacebook" target="blank"><i class="fab fa-facebook-f"></i></a>
-
-                    <!-- twitter -->
-                    <a class="twitter" :href="linkTwitter" target="blank"><i class="fab fa-twitter"></i></a>
-
-                    <!-- linkedin -->
-                    <!-- <a class="linkedin" :href="linkLinkedin" target="blank"><i class="fab fa-linkedin-in"></i></a> -->
-
-                    <!-- pinterest -->
-                    <a class="pinterest" :href="linkPinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
 
                   </div>
-                  <!-- Produtor -->
-                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
+                  <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
+
+                    <!-- Share -->
+
+                    <!-- Produtor -->
+                    <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
                     <h3 class="mt-3">Sobre o parceiro</h3>
                     <div class="row align-items-center ">
                       <div class="col-4 ">
@@ -78,33 +87,20 @@
                       </div>
                     </div>
                   </div> -->
-                  <!-- Local do evento -->
-                  <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
-                    <LineLoader v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true"></LineLoader>
-                    <span v-else>
-                    <h3 class="mt-3">Local do evento</h3>
-                    <div class="row align-items-center ">
-                      <div class="col-4 ">
-                      </div>
+                    <!-- Local do evento -->
+                    <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
 
-                      <div class="col-12">
-                        
-                        <p class="lead">{{this.event.address}}</p>
-                        <a href="#" @click="map($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-map"></i>Ver mapa</a>
-                      </div>
                     </div>
-                      </span>
-                  </div>
 
-                  <!-- Horários -->
-                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;" v-if="imageLoaded && roomLoaded && timeLoaded">
+                    <!-- Horários -->
+                    <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;" v-if="imageLoaded && roomLoaded && timeLoaded">
                       <iframe class="map" :src="returnMap()"
           width="100%" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 
                   </div> -->
+                  </div>
                 </div>
               </div>
-            </div>
           </section>
         </div>
 
@@ -594,7 +590,7 @@ export default {
             this.toastError(response.msg);
             // console.log(response.msg);
             if (response.goto == "home")
-                window.location = "/";
+              window.location = "/";
             return;
           }
           if (this.validateJSON(response)) {
