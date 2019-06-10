@@ -605,9 +605,6 @@ export default {
         );
       });
     },
-    checkIfCompre() {
-      return this.siteName == 'www.compreingressos.com';
-    },
     trimKeyForId(key) {
       return key.split('-')[0];
     },
@@ -617,10 +614,6 @@ export default {
       let isCI = false;
       let eventKey = this.key;
 
-      if (this.checkIfCompre()) {
-        isCI = true;
-        eventKey = this.trimKeyForId(this.key);
-      }
 
       eventService.description(eventKey, isCI).then(
         response => {
