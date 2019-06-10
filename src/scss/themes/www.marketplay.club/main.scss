@@ -98,15 +98,6 @@ $gradiente: $secundary !important;
 	.p-2 {
 		padding-left: 0 !important;
 	}
-	.v-suggestions {
-		border-radius: 16px !important;
-		width: 80% !important;
-		font-size: 1.1em;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-		margin: 0;
-		@include MQ(NS) {
-		}
-	}
 
 	.container__search--tickethub {
 		padding-top: 110px !important;

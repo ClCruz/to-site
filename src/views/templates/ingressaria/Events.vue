@@ -360,7 +360,7 @@ export default {
       this.getListResultsFiltered();
     },
     getListResultsFiltered() {
-      console.log('aqui', this.searchTerm);
+      // console.log('aqui', this.searchTerm);
       eventService.list(this.searchTerm, this.locale.state.name, this.date).then(
         response => {
           // debugger
@@ -445,7 +445,7 @@ export default {
           this.discovery = response.filter(x => x.type !== 'banner');
           this.discoveryBanner = response.filter(x => x.type == 'banner');
 
-          console.log(this.discoveryBanner);
+          // console.log(this.discoveryBanner);
         },
         error => {
           this.toastError("Falha na execução.");
@@ -472,7 +472,7 @@ export default {
 
           this.populateCityPicker();
 
-          console.log(this.slideData);
+          // console.log(this.slideData);
 
           if (callback !== null && callback !== undefined) {
             callback();
