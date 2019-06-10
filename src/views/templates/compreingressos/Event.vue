@@ -606,7 +606,8 @@ export default {
       });
     },
     checkIfCompre() {
-      return this.siteName == 'www.compreingressos.com';
+      console.log(this.$route);
+      return (this.siteName == 'www.compreingressos.com' && this.$route.name == 'espetaculos');
     },
     trimKeyForId(key) {
       return key.split('-')[0];
@@ -631,8 +632,8 @@ export default {
           if (response.error) {
             this.toastError(response.msg);
             // console.log(response.msg);
-            if (response.goto == "home")
-               window.location = "/";
+            // if (response.goto == "home")
+              //  window.location = "/";
             return;
           }
           if (this.validateJSON(response)) {
