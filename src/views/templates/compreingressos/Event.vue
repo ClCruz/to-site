@@ -4,12 +4,12 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <section class="to-block bg__ingressaria to-block-mobile" style="padding-top: 90px !important">
+          <section class="to-block bg__ingressaria to-block-mobile" style="">
             <div class="container">
               <div class="row pb-5 pt-0 mt-0">
                 <div class="col-12" style="background: rgba(0,0,0,0.3); border-radius: 5px">
-                  <EventImageIngressariaLoade class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 360px; border-radius: 5px; box-shadow: none!important"></EventImageIngressariaLoade>
-                  <img class="event__card-img" :src="event.img" alt="" style="height: 320px !important; max-width: 568px !important" v-else>
+                  <EventImageIngressariaLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 320px !important; max-width: 568px !important; box-shadow: none!important"></EventImageIngressariaLoader>
+                  <img class="event__card-img" :src="event.img" alt="" style="height: 360px !important; max-width: 800px !important" v-else>
                   </div>
                 </div>
                 <div class="row">
@@ -32,7 +32,6 @@
                           <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
                         </span>
                     </span>
-                    <a href="#" @click="gotostore($event)" class="btn to-btn dark"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
 
                       <hr data-content="Compartilhar" class="divider mb-0 mt-2" style="max-width: 460px; background: none">
                       <div class="row" id="share">
@@ -52,9 +51,12 @@
                       </div>
 
 
-                      <h3 class="mt-3">Detalhes do evento</h3>
+                    <a href="#" @click="gotostore($event)" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
 
-                      <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0" v-html="event.description"></span></p>
+
+                      <h3 class="mt-3 pb-4">Detalhes do evento</h3>
+
+                      <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0 text-left mt-2 pt-2" v-html="event.description"></span></p>
                       <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
                         <div class="btn to-btn dark">
                           LER MAIS
@@ -66,6 +68,7 @@
                         </div>
                       </div>
                     </div>
+                    <a href="#" @click="gotostore($event)" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
 
                   </div>
                   <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
@@ -410,10 +413,6 @@ export default {
       }
     },
     setdescription() {
-      Vue.nextTick().then(response => {
-        this.showreadandless = this.$refs.eventdesc.clientHeight > 400;
-        this.showreadmore = this.showreadandless;
-      });
     },
     scrollTo() {
       var element = document.getElementById("horario");

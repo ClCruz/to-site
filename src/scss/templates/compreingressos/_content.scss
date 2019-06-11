@@ -831,10 +831,8 @@
 
 	#read-more,
 	#read-less {
-		background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
-		background: -moz-linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
-		background: -o-linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
-		background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%);
+		border: none;
+		background: linear-gradient(rgba(255, 255, 255, 0) 70%, #ca1835 100%) !important;
 
 		cursor: pointer;
 		width: 90%;
@@ -1022,14 +1020,14 @@
 
 		.cart__icon {
 			border: 0 !important;
-		box-shadow: none !important;
-		background: url('/assets/icons/shopping-cart.svg') no-repeat left !important;
-		padding-left: 19px;
-		background-repeat: no-repeat;
-		display: inline-block;
-		background-position: 0px 3px !important;
-		position: relative;
-		background-size: 13px !important;
+			box-shadow: none !important;
+			background: url('/assets/icons/shopping-cart.svg') no-repeat left !important;
+			padding-left: 19px;
+			background-repeat: no-repeat;
+			display: inline-block;
+			background-position: 0px 3px !important;
+			position: relative;
+			background-size: 13px !important;
 		}
 
 		.text-comprar {

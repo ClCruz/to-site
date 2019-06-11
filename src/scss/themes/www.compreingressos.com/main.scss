@@ -106,19 +106,21 @@ $gradiente: $secundary !important;
 
 #read-more,
 #read-less {
+	display: none;
 	cursor: pointer;
 	text-align: center;
 	width: 100%;
-	background: linear-gradient(rgba(255, 255, 255, 0) 0%, black 70%);
-
+	background: linear-gradient(rgba(255, 255, 255, 0) 70%, #ca1835 100%);
 	.btn:not(:disabled):not(.disabled),
 	summary {
+		box-shadow: none !important;
 		border: none !important;
 	}
 }
 
 #app {
 	background: url('/assets/bg-comprebody.jpg') !important;
+	background-size: cover !important;
 }
 
 .a p.mt-3,
@@ -133,6 +135,10 @@ $gradiente: $secundary !important;
 		color: white !important;
 	}
 }
+
+.to-block {
+	background: none !important;
+} 
 
 .bg__main {
 	background: url('/assets/bg-compreingressos.png') !important;
@@ -285,5 +291,40 @@ header.bg-dark .navbar-nav a.nav-link,
 }
 
 .divider:before {
-	background: #000;
+	background: none;
+}
+
+
+.to-block-mobile {
+	padding-top: 90px !important;
+
+	
+	@include MQ(S) {
+		padding-top: 0px !important;
+	}
+}
+
+.to-block .to-box {
+	background: #111;
+	border: 1px solid #000;
+
+	h4, p {
+		color: white;
+	}
+}
+
+.event__item-date {
+	background-image: url(/assets/icons/calendar-white.svg);
+}
+
+.event__item-local {
+	background-image: url(/assets/icons/map-pin-white.svg);
+}
+
+.col-12 > .to-box:hover {
+	box-shadow: 0 0rem 0.9rem rgba(0, 0, 0, 0.9) !important;
+}
+
+.fdb_result {
+	// margin-top: -380px !important;
 }
