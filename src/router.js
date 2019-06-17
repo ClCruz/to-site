@@ -35,17 +35,29 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Home.vue'),
     },
     {
+      path: '/teatros/',
+      props: true,
+      name: 'teatros',
+      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
+    },
+    {
       path: '/teatros/:input',
       props: true,
       name: 'teatros_search',
       beforeEnter: (to, from, next) => {
         let split = to.params.input.split("-");
         let tosearch = "";
+        let removed = "";
+        let stringToSearch = "";
         if (split.length == 1) {
           tosearch = to.params.input;
         }
         else {
-          tosearch = to.params.input.replace(split[0]+"-","");
+          for (var i = 0; i < split.length; i++) {
+            if (i > 0) tosearch += split[i] + " ";
+          }
+
+          stringToSearch = split[1] + " " + split[2];
         }
 
         next({ path: `/local/${tosearch}`, replace: true });
@@ -99,6 +111,12 @@ export default new Router({
       name: 'event',
       props: true,
       component: () => import( /* webpackChunkName: "about" */ './views/Event.vue')
+    },
+    {
+      path: '/venue/:key',
+      name: 'venue',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Venue.vue')
     },
     {
       path: '/busca/:input',
