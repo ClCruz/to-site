@@ -23,16 +23,8 @@ export default new Router({
     {
       path: '/espetaculos',
       props: true,
-      name: 'espetaculos_home',
-      beforeEnter: (to, from, next) => {
-        if (to.query != null && to.query != undefined && to.query.cidade != null && to.query.cidade != undefined) {
-          next({ path: `/cidade/${to.query.cidade}`, replace: true });
-        }
-        else {
-          next();
-        }
-      },
-      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue'),
+      name: 'espetaculos_ci',
+      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue'),
     },
     {
       path: '/admin',
