@@ -13,6 +13,45 @@ export default new Router({
       name: 'home',
       component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
     },
+    //compatibility
+    {
+      path: '/espetaculos/:key',
+      props: true,
+      name: 'espetaculos',
+      component: () => import( /* webpackChunkName: "about" */ './views/Event.vue')
+    },
+    {
+      path: '/espetaculos',
+      props: true,
+      name: 'espetaculos_home',
+      beforeEnter: (to, from, next) => {
+        if (to.query != null && to.query != undefined && to.query.cidade != null && to.query.cidade != undefined) {
+          next({ path: `/cidade/${to.query.cidade}`, replace: true });
+        }
+        else {
+          next();
+        }
+      },
+      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue'),
+    },
+    {
+      path: '/teatros/:input',
+      props: true,
+      name: 'teatros_search',
+      beforeEnter: (to, from, next) => {
+        let split = to.params.input.split("-");
+        let tosearch = "";
+        if (split.length == 1) {
+          tosearch = to.params.input;
+        }
+        else {
+          tosearch = to.params.input.replace(split[0]+"-","");
+        }
+
+        next({ path: `/local/${tosearch}`, replace: true });
+      },
+      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue'),
+    },
     {
       path: '/admin',
       name: 'admin',
@@ -62,12 +101,6 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Event.vue')
     },
     {
-      path: '/espetaculos/:key',
-      props: true,
-      name: 'espetaculos',
-      component: () => import( /* webpackChunkName: "about" */ './views/Event.vue')
-    },
-    {
       path: '/busca/:input',
       name: 'search',
       props: true,
@@ -79,13 +112,19 @@ export default new Router({
       props: true,
       component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
     },
-      {
-        path: '/busca/cidade/:input',
-        name: 'search_bycity',
-        props: true,
-        component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
-      },
     {
+      path: '/busca/cidade/:input',
+      name: 'search_bycity',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
+    },
+    {
+      path: '/cidade/:input',
+      name: 'search_bycity_without_search',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
+    },
+{
       path: '/busca/estado/:input',
       name: 'search_bystate',
       props: true,
@@ -94,6 +133,12 @@ export default new Router({
     {
       path: '/busca/local/:input',
       name: 'search_bylocal',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
+    },
+    {
+      path: '/local/:input',
+      name: 'search_bylocal_without_search',
       props: true,
       component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
     },

@@ -351,12 +351,14 @@ export default {
           type = "Busca";
           break;
         case "search_bycity":
+        case "search_bycity_without_search":
           type = "Busca por Cidade";
           break;
         case "search_bystate":
           type = "Busca por Estado";
           break;
         case "search_bylocal":
+        case "search_bylocal_without_search":
           type = "Busca por Local"
           break;
         case "search_bygenre":
