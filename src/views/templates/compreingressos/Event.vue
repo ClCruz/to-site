@@ -51,7 +51,7 @@
                       </div>
 
 
-                    <a href="#" @click="gotostore($event)" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
+                    <a :href="this.event.gotouri" v-if="this.dates.length > 0" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
 
 
                       <h3 class="mt-3 pb-4">Detalhes do evento</h3>
@@ -68,7 +68,7 @@
                         </div>
                       </div>
                     </div>
-                    <a href="#" @click="gotostore($event)" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
+                    <a :href="this.event.gotouri" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold" v-if="this.dates.length > 0"><i class="fa fa-sm mr-2 fa-running" ></i>Ir para a loja</a>
 
                   </div>
                   <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
@@ -510,7 +510,7 @@ export default {
           response => {
             this.hideWaitAboveAll();
             if (this.validateJSON(response)) {
-              // console.log(response);
+              console.log(response);
               this.dates = response;
               this.dateLoaded = true;
               this.filterByDate = "Datas";
@@ -613,7 +613,7 @@ export default {
             // this.getRooms();
             // this.getPresentation(this.fillFirstHour);
 
-            // this.getDates();
+            this.getDates();
             this.setdescription();
 
             this.generateSocialLinks();

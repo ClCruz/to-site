@@ -74,11 +74,17 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
     },
     {
-      path: '/busca/cidade/:input',
-      name: 'search_bycity',
+      path: '/teatro/:input',
+      name: 'search',
       props: true,
       component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
     },
+      {
+        path: '/busca/cidade/:input',
+        name: 'search_bycity',
+        props: true,
+        component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
+      },
     {
       path: '/busca/estado/:input',
       name: 'search_bystate',
