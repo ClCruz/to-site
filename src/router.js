@@ -35,36 +35,6 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Home.vue'),
     },
     {
-      path: '/teatros/',
-      props: true,
-      name: 'teatros',
-      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
-    },
-    {
-      path: '/teatros/:input',
-      props: true,
-      name: 'teatros_search',
-      beforeEnter: (to, from, next) => {
-        let split = to.params.input.split("-");
-        let tosearch = "";
-        let removed = "";
-        let stringToSearch = "";
-        if (split.length == 1) {
-          tosearch = to.params.input;
-        }
-        else {
-          for (var i = 0; i < split.length; i++) {
-            if (i > 0) tosearch += split[i] + " ";
-          }
-
-          stringToSearch = split[1] + " " + split[2];
-        }
-
-        next({ path: `/local/${tosearch}`, replace: true });
-      },
-      component: () => import( /* webpackChunkName: "about" */ './views/Home.vue'),
-    },
-    {
       path: '/admin',
       name: 'admin',
       redirect: to => {
@@ -125,10 +95,10 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
     },
     {
-      path: '/teatro/:input',
-      name: 'search',
+      path: '/teatros/:key',
+      name: 'teatro',
       props: true,
-      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
+      component: () => import( /* webpackChunkName: "about" */ './views/Venue.vue')
     },
     {
       path: '/busca/cidade/:input',
