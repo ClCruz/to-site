@@ -38,9 +38,7 @@
           </div>
 
           <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex">
-                  <router-link class="nav-link" to="/sac/empresa/sobre">Ajuda
-                  </router-link>
-
+            
           </ul>
         </nav>
       </div>

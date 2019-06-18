@@ -4,105 +4,28 @@
     <div class="container">
       <div class="row align-items-top text-center text-md-left">
         <div class="col-12 col-md">
-          <div class="footer__logo text-left mb-3">
+         
+        </div>
+
+      </div>
+      <div v-if="siteName == 'ingressoparatodos.com.br'" class="col-12 col-md mt-5 mt-md-0 text-md-left">
+        <h3><strong>Realização:</strong></h3>
+
+        <img style="width: 80%;" src="/assets/logo-parceiro-construcao.png" alt="">
+
+          </div>
+
+      </div>
+         <div class="footer__logo text-center mb-3">
             <router-link to="/">
-              <div class="img" style=""></div>
+              <div class="img" style="    height: 90px !important; background-position: center !important;"></div>
             </router-link>
           </div>
+      <div class="row mt-5 footer-name nopadding">
+        <div class="col text-center">
+          <p>{{companyName}} </p>
         </div>
-
-        <div class="col-12 col-md mt-4 mt-sm-0">
-          <h3><strong>Institucional</strong></h3>
-          <template>
-            <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
-            <br>
-          </template>
-          <template v-if="checkSAC[0] != undefined && checkSAC[0].isvisible == 1">
-            <a href="#" @click="loadSACPage('company','sobre')">
-                  Sobre a empresa
-            </a>
-            <br>
-          </template>
-          <template v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">
-            <a href="#" @click="loadSACPage('partner','sejaParceiro')">
-                  Seja nosso Parceiro
-            </a>
-          </template>
-        </div>
-
-        <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
-          <h3><strong>Políticas</strong></h3>
-          <template v-if="checkSAC[1] != undefined && checkSAC[1].isvisible == 1">
-            <a href="#" @click="loadSACPage('policy','venda')">
-                  Politica de Venda
-            </a>
-            <br>
-          </template>
-          <template v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
-            <a href="#" @click="loadSACPage('policy','desconto')">
-                  Política de Meia Entrada
-            </a>
-            <br>
-          </template>
-          <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
-            <a href="#" @click="loadSACPage('policy','privacidade')">
-                  Politica de Privacidade
-            </a>
-          </template>
-        </div>
-        <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
-          <h3><strong>Formas de Pagamento</strong></h3>
-          <div class="credit__cards col-10 nopadding p-0">
-            <img src="/assets/images/logo-visa.png" alt="">
-            <img src="/assets/images/logo-mastercard.png" alt="">
-            <img src="/assets/images/logo-amex.png" alt="">
-            <img src="/assets/images/logo-discover.png" alt="">
-            <img src="/assets/images/logo-elo.png" alt="" class="credit__cards-elo">
-            <img src="/assets/images/logo-hipercard.png" class="credit__cards-hipercard" alt="">
-            <img src="/assets/images/logo-diners.png" alt="">
-            <img src="/assets/images/logo-aura.png" alt="" class="credit__cards-aura">
-            <img src="/assets/images/logo-jcb.png" alt="">
-            <img src="/assets/images/logo-boleto.png" alt="">
-
-            </div>
-          </div>
-          <div v-if="isPartner()" class="col-12 col-md mt-5 mt-md-0 text-md-left">
-            <h3 style=""><strong>Parceiros</strong></h3>
-            <div class="row nopadding mt-4" style="justify-content: center!important" v-if="isPartner()">
-              <ul class="nav justify-content-center mx-0 nopadding text-center">
-                <li v-for="(item) in listPartners" v-bind:key="item.url" class="m-0 pr-2 nav-item text-center mx-0 mx-auto" style="margin-top: 2px !important; margin-bottom: 2px !important">
-
-                  <a :href="item.url" v-if="item.name != 'Localhost'">
-               <img :src="item.img" style="width: 80px"> 
-
-             </a>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
-          <div v-if="siteName == 'ingressoparatodos.com.br'" class="col-12 col-md mt-5 mt-md-0 text-md-left">
-          <h3><strong>Realização:</strong></h3>
-
-           <img style="width: 80%;" src="/assets/logo-parceiro-construcao.png" alt="">
-
-          </div>
-
-        </div>
-        <div class="row mt-5 footer-name nopadding">
-          <div class="col text-center">
-            <p>{{companyName}} </p>
-          </div>
-        </div>
-        <div class="row mt-0 nopadding mb-0 pb-0">
-          <div class="col text-center">
-            <p>
-              {{companyAddress}} <span v-if="companyAddress != ''">-</span> CNPJ: {{CNPJ}}
-            </p>
-          </div>
-        </div>
-      </div>
+    </div>
   </footer>
 </div>
 </template>
@@ -138,7 +61,7 @@ export default {
     getSACContent() {
       for (var i = 1; i <= 5; i++) {
         staticPageService.get(i).then(
-      
+
           response => {
             this.getSAC.push(response);
           },
@@ -148,7 +71,7 @@ export default {
           }
         );
       }
-            // console.log(this.getSAC);
+      // console.log(this.getSAC);
 
     },
 
@@ -267,10 +190,10 @@ export default {
     }
   },
   mounted() {
-     this.$nextTick(() => {
-       this.checkSACPages();
-        //this.$refs.slick.reSlick();
-      });
+    this.$nextTick(() => {
+      this.checkSACPages();
+      //this.$refs.slick.reSlick();
+    });
     // this.getSACContent();
   },
 };
