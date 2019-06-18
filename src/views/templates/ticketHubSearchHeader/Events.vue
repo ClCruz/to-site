@@ -24,7 +24,7 @@
                 <div class="row">
                   <div class="col-md-12 col-xs-12 nopadding">
                     <span style="cursor: pointer">
-                      <img  src="https://www.compreingressos.com/images/pagina_especial_visores/69/visor.jpg?1541728042" class="" alt="" style="width:100%;">
+                      <img  src="https://media.tixs.me/ci/visor.jpg?1541728042" class="" alt="" style="width:100%;">
                     </span>
                   </div>
                 </div>
