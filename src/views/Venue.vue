@@ -16,7 +16,7 @@
                     <p class="mt-3 pb-0 lead">{{this.venue.ds_googlemaps}}</p>
                     <p class="mt-3 pb-4 pt-0 lead">{{this.venue.ds_municipio}} - {{this.venue.sg_estado}} - {{this.venue.ds_estado}}</p>
 
-                    <a :href="this.venue.url" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Site do teatro</a>
+                    <a v-if="this.venue.url!=''" :href="this.venue.url" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Site do teatro</a>
 
                     <h3 class="mt-3 pb-4"></h3>
                     <div class="row">
@@ -129,9 +129,9 @@ export default {
   head: {
     title: function () {
       return {
-        inner: (this.event.loaded ? `${this.event.NomPeca} - ${this.event.ds_local_evento} - ${this.event.TipPeca}` : "Carregando..."),
-        separator: " - ",
-        complement: this.event.loaded ? config.info.title : "",
+        inner: (this.venue.loaded == true ? `${this.venue.ds_local_evento} - ${this.venue.ds_municipio}/${this.venue.sg_estado}` : "Carregando..."),
+        separator: " ",
+        complement: " ",
       }
     },
     meta: function () {
@@ -240,6 +240,7 @@ export default {
       siteName: config.info.siteName,
       metaObj: this.metatag_getObj(),
       venue: {
+        loaded: false,
         id: '',
         ds_local_evento: '',
         id_tipo_local: null,
@@ -343,6 +344,7 @@ export default {
             this.toastError(response.msg);
           }
           if (this.validateJSON(response)) {
+            this.venue.loaded = true;
             this.venue.id = response.id_local_evento;
             this.venue.ds_local_evento = response.ds_local_evento;
             this.venue.id_tipo_local = response.id_tipo_local;
