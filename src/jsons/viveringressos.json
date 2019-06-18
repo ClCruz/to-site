@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.viveringressos.com.br",
+  "uri": "https://www.viveringressos.com.br",
+  "api": "https://api.viveringressos.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.viveringressos.com.br",
+  "admin": "https://admin.viveringressos.com.br",
+  "apikey": "live_51b3b134fb4c436fb13a8b325e19af51a65a23f7fa96400695288185b48edeb2",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/viveringressos/main.scss",
+  "css": "/stylesheets/themes/www.viveringressos.com.br/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-viveringressos.png",
+  "favico": "/img/viveringressos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "shows em santos, festival",
+    "keywords": "festival"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Viver em Santos",
+    "description": "shows em santos, festival",
+    "siteName": "www.viveringressos.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Viver Ingressos",
+    "companyName": "Viver Ingressos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_viveringressos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_viveringressos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_viveringressos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_viveringressos/emailComprador.html",
+      "gift": "../comprar/templates/multi_viveringressos/emailPresente.html",
+      "signature": "../comprar/templates/multi_viveringressos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_viveringressos/confirmacaoEmail.html"
+
+    }
+  }
+}
