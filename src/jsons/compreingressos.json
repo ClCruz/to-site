@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/compreingressos/main.scss",
   "css": "/stylesheets/themes/www.compreingressos.com/main.css",
-  "template": "ingressaria",
+  "template": "compreingressos",
   "logo": "/assets/logo-compreingressos.png",
   "favico": "/img/compreingressos/",
   "videos": {
