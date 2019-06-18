@@ -294,7 +294,13 @@ header.bg-dark .navbar-nav a.nav-link,
 	background: none;
 }
 
-
+.fdb_result {
+	.col-sm-12 {
+		h3,p {
+			color: white;
+		}
+	}
+}
 .to-block-mobile {
 	padding-top: 90px !important;
 
