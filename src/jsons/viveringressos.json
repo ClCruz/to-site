@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/viveringressos/main.scss",
   "css": "/stylesheets/themes/www.viveringressos.com.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-viveringressos.png",
   "favico": "/img/viveringressos/",
   "videos": {
