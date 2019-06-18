@@ -16,7 +16,7 @@
                     <p class="mt-3 pb-0 lead">{{this.venue.ds_googlemaps}}</p>
                     <p class="mt-3 pb-4 pt-0 lead">{{this.venue.ds_municipio}} - {{this.venue.sg_estado}} - {{this.venue.ds_estado}}</p>
 
-                    <a :href="this.venue.url" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Site do teatro</a>
+                    <a v-if="this.venue.url!=''" :href="this.venue.url" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Site do teatro</a>
 
                     <h3 class="mt-3 pb-4"></h3>
                     <div class="row">
