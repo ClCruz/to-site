@@ -167,6 +167,11 @@ export default {
           "img": "/assets/logo-ingressosstore.jpeg"
         },
         {
+          "name": "www.ingressos.store",
+          "url": "https://www.ingressos.store/",
+          "img": "/assets/logo-ingressosstore.jpeg"
+        },
+        {
           "name": "www.meuingresso.promo",
           "url": "https://meuingresso.promo",
           "img": "/assets/logo-meuingressopromo.png"
