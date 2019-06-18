@@ -60,6 +60,10 @@ self.addEventListener('message', (e) => {
     "url": "/assets/images/logo-mastercard.png"
   },
   {
+    "revision": "06203b27757d57575f6a129af83dfde2",
+    "url": "/assets/images/bg-compreingressos.png"
+  },
+  {
     "revision": "edd1d246e6d2fe0b9511b38dbba5573e",
     "url": "/assets/images/logo-visa.png"
   },

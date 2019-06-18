@@ -17,18 +17,8 @@
       </div>
     </div>
   </section>
-  <div class="container-fluid container__select pb-0" style="border-bottom: 1px solid #e3e3e3" v-if="cityList.length > 1">
-    <div class="row pb-0">
-      <div class="col-6 text-right select__city" style="border-right: 1px solid #e3e3e3;">
-        <model-select :options="options" v-model="item" placeholder="Selecionar Cidade" @input="handleOnInput">
-        </model-select>
-      </div>
-      <div class="col-6">
-        <datepicker :clear-button=true :language="ptBR" @selected="selectDate" @cleared="resetEvents" placeholder="Data" :bootstrap-styling=true clear-button-icon="fa fa-sm fa-times-circle"></datepicker>
-      </div>
-    </div>
-  </div>
-  <div class="p-2 container-fluid container__select" v-else></div>
+ 
+  <div class="p-2 container-fluid container__select" ></div>
   <!-- Propaganda -->
   <div class="container-fluid container__select" v-if="discoveryBanner.length > 0">
     <div class="container p-0">

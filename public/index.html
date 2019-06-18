@@ -42,7 +42,7 @@
   <!-- built files will be auto injected -->
 
 
-
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
 var link = document.createElement('link');
 link.rel = "stylesheet";
@@ -53,6 +53,13 @@ if (window.location.hostname.startsWith("localhost")) {
   link.href = "/assets/css/" + window.location.hostname + "/main.css";
 }
 document.head.appendChild(link);
+
+if (window.location.hostname == "www.compreingressos.com") {
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2648386442576348",
+    enable_page_level_ads: true
+  });
+}
 //document.querySelector('body').style.display = 'unset';
 
 if (!window.location.hostname.startsWith("www")) {

@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/compreingressos/main.scss",
   "css": "/stylesheets/themes/www.compreingressos.com/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "compreingressos",
   "logo": "/assets/logo-compreingressos.png",
   "favico": "/img/compreingressos/",
   "videos": {
@@ -29,9 +29,9 @@
     "title": "Compreingressos.com",
     "description": "Eventos",
     "siteName": "www.compreingressos.com",
-    "CNPJ": "11.111.111/1111-11",
-    "companyAddress": "Compreingressos",
-    "companyName": "Compreingressos"
+    "CNPJ": "",
+    "companyAddress": "",
+    "companyName": "CompreIngressos"
   },
   "templates": {
     "print": {

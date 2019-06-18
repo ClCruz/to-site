@@ -13,6 +13,19 @@ export default new Router({
       name: 'home',
       component: () => import( /* webpackChunkName: "about" */ './views/Home.vue')
     },
+    //compatibility
+    {
+      path: '/espetaculos/:key',
+      props: true,
+      name: 'espetaculos',
+      component: () => import( /* webpackChunkName: "about" */ './views/Event.vue')
+    },
+    {
+      path: '/espetaculos',
+      props: true,
+      name: 'espetaculos_ci',
+      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue'),
+    },
     {
       path: '/admin',
       name: 'admin',
@@ -62,10 +75,10 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Event.vue')
     },
     {
-      path: '/espetaculos/:key',
+      path: '/venue/:key',
+      name: 'venue',
       props: true,
-      name: 'espetaculos',
-      component: () => import( /* webpackChunkName: "about" */ './views/Event.vue')
+      component: () => import( /* webpackChunkName: "about" */ './views/Venue.vue')
     },
     {
       path: '/busca/:input',
@@ -74,12 +87,24 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
     },
     {
+      path: '/teatros/:key',
+      name: 'teatro',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Venue.vue')
+    },
+    {
       path: '/busca/cidade/:input',
       name: 'search_bycity',
       props: true,
       component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
     },
     {
+      path: '/cidade/:input',
+      name: 'search_bycity_without_search',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
+    },
+{
       path: '/busca/estado/:input',
       name: 'search_bystate',
       props: true,
@@ -88,6 +113,12 @@ export default new Router({
     {
       path: '/busca/local/:input',
       name: 'search_bylocal',
+      props: true,
+      component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
+    },
+    {
+      path: '/local/:input',
+      name: 'search_bylocal_without_search',
       props: true,
       component: () => import( /* webpackChunkName: "about" */ './views/Search.vue')
     },

@@ -12,7 +12,7 @@ export const searchService = {
 }
 
 function autocomplete(input) {
-  let url = config.api + `/v1/search/autocomplete.php?input=${input}`;
+  let url = config.api + `/v1/search/autocomplete?input=${input}`;
   var ret = new Promise(
     function (resolve, reject) {
       Vue.http.get(url).then(res => {
@@ -29,7 +29,7 @@ function autocomplete(input) {
 }
 
 function searchPage(type, input, startAt, howMany, city, state) {
-  let url = config.api + `/v1/search/result.php?input=${input}&type=${type}`;
+  let url = config.api + `/v1/search/result?input=${input}&type=${type}`;
   var ret = new Promise(
     function (resolve, reject) {
       Vue.http.get(url).then(res => {
