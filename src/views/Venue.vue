@@ -129,9 +129,9 @@ export default {
   head: {
     title: function () {
       return {
-        inner: (this.event.loaded ? `${this.event.NomPeca} - ${this.event.ds_local_evento} - ${this.event.TipPeca}` : "Carregando..."),
-        separator: " - ",
-        complement: this.event.loaded ? config.info.title : "",
+        inner: (this.venue.loaded == true ? `${this.venue.ds_local_evento} - ${this.venue.ds_municipio}/${this.venue.sg_estado}` : "Carregando..."),
+        separator: " ",
+        complement: " ",
       }
     },
     meta: function () {
@@ -240,6 +240,7 @@ export default {
       siteName: config.info.siteName,
       metaObj: this.metatag_getObj(),
       venue: {
+        loaded: false,
         id: '',
         ds_local_evento: '',
         id_tipo_local: null,
@@ -343,6 +344,7 @@ export default {
             this.toastError(response.msg);
           }
           if (this.validateJSON(response)) {
+            this.venue.loaded = true;
             this.venue.id = response.id_local_evento;
             this.venue.ds_local_evento = response.ds_local_evento;
             this.venue.id_tipo_local = response.id_tipo_local;
