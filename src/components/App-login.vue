@@ -168,7 +168,7 @@ export default {
               this.setClient(response);
               this.closeloginfather();
             } else {
-              // this.closeloginfather();
+              this.closeloginfather();
               this.ls_add("fb_connect", JSON.stringify({
                 id,
                 success: true
