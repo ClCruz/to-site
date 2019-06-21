@@ -15,16 +15,10 @@
     <div class="container-fluid" id="ad_container">
       <div class="container p-0">
         <div class="row">
-          <div class="col-6 pr-0 col-lg-6 text-left">
-            <div class="p-1 pr-0 mt-0 mb-0 pb-0">
+          <div class="col-12 pr-0 col-lg-12 text-left">
+            <div class="p-1 pr-0 mt-0 mb-0 pb-0 text-center">
             
-              <img class="img-fluid rounded-0 discovery" src="/assets/discovery/discovery-ruby.png">
-            </div>
-          </div>
-          <div class="col-6 pl-0 col-lg-6 text-left">
-            <div class="p-1 pl-0 mt-0 mb-0 pb-0">
-              
-              <img class="img-fluid rounded-0 discovery" src="/assets/discovery/discovery-ciadeingressos.png">
+              <img class="img-fluid rounded-0 discovery" src="/assets/discovery/SITE-1-1.png" style="height: 120px; width: 97%">
             </div>
           </div>
         </div>
@@ -108,6 +102,17 @@
         </div>
       </div>
     </section>
+      <div class="container-fluid" id="ad_container">
+      <div class="container p-0">
+        <div class="row">
+          <div class="col-12 col-xl-12 text-left p-0">
+            <div class="p-1 mt-3 mb-0 pb-0 text-center">
+            <img class="img-fluid rounded-0 discovery" src="/assets/discovery/SITE-4-4.png" style="height: 120px; width: 97%;">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <section class="fdb-block team-4" id="block_events">
       <div class="container pt-3">
         
@@ -131,8 +136,8 @@
       <div class="container p-0">
         <div class="row">
           <div class="col-12 col-xl-12 text-left p-0">
-            <div class="p-1 mt-3 mb-0 pb-0">
-              <img class="img-fluid rounded-0 discovery" src="/assets/discovery/discovery-ruby.png"  style="height: 120px !important">
+            <div class="p-1 mt-3 mb-0 pb-0 text-center">
+            <img class="img-fluid rounded-0 discovery" src="/assets/discovery/SITE-3-3.png" style="height: 120px; width: 97%">
             </div>
             </div>
           </div>
