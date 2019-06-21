@@ -477,7 +477,7 @@ export default {
       );
     },
     getLastChance() {
-      eventService.list(null, null, null, 'created').then(
+      eventService.list(null, null, null, 'next').then(
         response => {
           this.isLoaded = false;
 
@@ -488,7 +488,6 @@ export default {
           this.hideWaitAboveAll();
           this.isLoaded = true;
 
-          console.log(this.slideData);
           this.activeCategory = 3;
         },
         error => {
