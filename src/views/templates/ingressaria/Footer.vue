@@ -63,8 +63,10 @@
             <img src="/assets/images/logo-aura.png" alt="" class="credit__cards-aura">
             <img src="/assets/images/logo-jcb.png" alt="">
             <img src="/assets/images/logo-boleto.png" alt="">
-
+            <br>
             </div>
+            <img src="/assets/images/logo-pagarme.svg" class="mt-3 p-1" style="width: 120px; background: white; border-radius: 3px;" alt="">
+            
           </div>
           <div v-if="isPartner()" class="col-12 col-md mt-5 mt-md-0 text-md-left">
             <h3 style=""><strong>Parceiros</strong></h3>
