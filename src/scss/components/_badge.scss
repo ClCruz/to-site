@@ -1,5 +1,5 @@
 .event__badges {
-	font-size: 1rem;
+	font-size: 1.1rem;
 	padding-bottom: 20px;
 
 	a {
@@ -38,6 +38,9 @@
 
 .badge__city {
 	background-image: url('/assets/icons/map-white.svg');
+}
+.badge__calendar {
+	background-image: url('/assets/icons/calendar-white.svg');
 }
 
 .badge__state {

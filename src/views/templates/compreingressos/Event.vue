@@ -22,9 +22,11 @@
                         <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
                         <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
                         <a :href="'/busca/local/' + event.ds_local_evento"  class="badge badge__icon badge__state badge-light" id="badge__address">{{event.ds_local_evento}}</a>
-                        <a :href="'/busca/cidade/' + event.city" class="badge badge__icon badge__city badge-secondary" id="badge__city">{{event.cityBadgeText}}</a>
+                        <a :href="'/busca/cidade/' + event.city" class="badge badge__icon badge__city badge-secondary" id="badge__city">{{event.cityBadgeText}}</a
+                        >
+                        <a href="#" class="badge badge__icon badge__calendar badge-success" id="badge__calendar">{{event.dates}}</a>
+
                         <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
-                        <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.dates}}</a>
                         <a href="#" class="badge badge__icon badge__partner badge-info noClick" v-if="event.showPartnerInfo === 1" id="badge__price">Vendido por {{event.nameSite}}</a>
                         <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a>
                         <span class="flag" id="">
