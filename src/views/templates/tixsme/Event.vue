@@ -13,8 +13,8 @@
                     <span class="event__badges">
                         <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
                         <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
-                        <a href="#" class="badge badge__icon badge__state badge-light" id="badge__address" @click="gotoSearch(event.ds_local_evento, 'local')">{{event.ds_local_evento}}</a>
-                        <a href="#" class="badge badge__icon badge__city badge-secondary" id="badge__city" @click="gotoSearch(event.city, 'city')">{{event.cityBadgeText}}</a>
+                       <a :href="'/busca/local/' + event.ds_local_evento"  class="badge badge__icon badge__state badge-light" id="badge__address">{{event.ds_local_evento}}</a>
+                        <a :href="'/busca/cidade/' + event.city" class="badge badge__icon badge__city badge-secondary" id="badge__city">{{event.cityBadgeText}}</a>
                         <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
                         <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a>
                         <span class="flag" id="">
@@ -561,7 +561,7 @@ export default {
             this.toastError(response.msg);
             // console.log(response.msg);
             if (response.goto == "home")
-               window.location = "/";
+              window.location = "/";
             return;
           }
           if (this.validateJSON(response)) {
