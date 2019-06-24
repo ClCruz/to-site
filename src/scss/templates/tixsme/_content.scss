@@ -140,6 +140,16 @@
 			background-repeat: repeat;
 		}
 	}
+	#ad_container {
+		img {
+			height: auto !important;
+			@include MQ(S) {
+				width: 100%!important;
+				height: auto !important;
+			
+			}
+		}
+	}
 	#block_event {
 		// background: $texture-bg;
 		background-size: 10px;
