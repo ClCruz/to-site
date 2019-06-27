@@ -24,7 +24,7 @@
             <span v-if="!isLogged" class="btn   btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
             <span v-if="!isLogged" class="" @click="login"><img src="" alt=""></span>
 
-            <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName">
+            <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="'Minha conta'" style="color: white !important">
               <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
               <b-dropdown-item @click="modifyme">Meu cadastro</b-dropdown-item>
               <b-dropdown-item @click="goto('system:logout')">Sair</b-dropdown-item>
@@ -75,14 +75,11 @@
         </router-link>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-4" style="color: white !important">
       <div class="icon"></div>
       <span v-if="!isLogged" class="btn    btn-light to-btn hidden-xs hidden-sm" @click="login">Entrar</span>
       <span v-if="!isLogged" class="" @click="login"><img src="" alt=""></span>
-      <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName" no-caret>
-        <template slot="button-content">
-          <img src="" alt=""><span class="sr-only">Search</span>
-        </template>
+      <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="'Minha conta'" style="color: white !important" no-caret>
         <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
         <b-dropdown-item @click="modifyme">Meu cadastro</b-dropdown-item>
         <b-dropdown-item @click="goto('system:logout')">Sair</b-dropdown-item>
