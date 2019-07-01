@@ -1224,3 +1224,14 @@
 		border-radius: 5px;
 	}
 }
+
+#ad_container {
+	img {
+		height: auto !important;
+		@include MQ(S) {
+			width: 97%!important;
+			height: auto !important;
+		
+		}
+	}
+}
