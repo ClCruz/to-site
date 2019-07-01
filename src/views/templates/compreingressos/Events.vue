@@ -52,10 +52,11 @@
       <div class="container p-0">
         <div class="row">
           <div class="col-12 pr-0 col-lg-12 text-left">
+            <a href="https://compreingressos.com/itaucard">
             <div class="p-1 pr-0 mt-0 mb-0 pb-0 text-center" style="background: #001b50 url(https://media.tixs.me/ci/visor2.jpg?1541791907) top center no-repeat; width: 100%">
-            <a href="compreingressos.com/itaucard"></a>
               <img class="img-fluid rounded-0 discovery" src="https://media.tixs.me/ci/visor.jpg?1541728042" style="height: 130px; width: auto">
             </div>
+            </a>
           </div>
         </div>
       </div>
@@ -103,7 +104,7 @@
           <div class="col-12 pr-0 col-lg-12 text-left">
             <div class="p-1 pr-0 mt-0 mb-0 pb-0 text-center" style="">
             <p style="color: white" class="pb-0 mb-0 text-left">Patrocinado: </p>
-              <a href="www.tixs.me">
+              <a href="https://www.tixs.me" target="_blank">
               <img class="img-fluid rounded-0 discovery" src="/assets/discovery/SITE-1-1.png" style="height: 120px; width: 100%">
               </a>
             </div>
