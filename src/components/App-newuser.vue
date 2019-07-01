@@ -19,18 +19,7 @@
           <span class="icon-case" title="Sobrenome"><i class="fa fa-male"></i></span>
           <input type="text" data-rule="required" maxlength="50" v-model="form.lastname" placeholder="Sobrenome *" data-errormsg="O sobrenome deve ser preenchido."/>
         </div>
-        <div v-bind:class="{ errorinputuser: (!validateinfo.birthdate), formgroup: true }">
-          <span class="icon-case" title="Data de Nascimento"><i class="fa fa-birthday-cake"></i></span>
-          <input type="text" v-mask="'##/##/####'" data-rule="required" v-model="form.birthdate" placeholder="Data de nascimento *" />
-        </div>
-        <div v-bind:class="{ errorinputuser: (!validateinfo.gender), formgroup: true }">
-          <span class="icon-case" title="Sexo"><i class="fa fa-transgender"></i></span>
-          <select class="form-control" v-model='form.gender' style="max-width:262px">
-            <option value="" selected class="firstoption">Gênero</option>
-            <option value="M">Masculino</option>
-            <option value="F">Feminino</option>
-          </select>
-        </div>
+      
         <div v-bind:class="{ errorinputuser: (!validateinfo.login), formgroup: true }" :title="!form.canchangeemail ? 'Cadastro por Facebook' : ''">
           <span class="icon-case" title="E-mail"><i class="fa fa fa-envelope"></i></span>
           <input type="email" data-rule="required" :disabled="!form.canchangeemail" maxlength="100" v-on:keyup="setemailconfirm" v-model="form.login" placeholder="E-mail *" data-errormsg="O e-mail deve ser preenchido."/>
@@ -49,21 +38,9 @@
             </span>
           </div>
         </div>
-        <div v-bind:class="{ errorinputuser: (!validateinfo.documenttype), formgroup: true }">
-          <span class="icon-case" title="Tipo do documento"><i class="fa fa fa-info"></i></span>
-          <select class="form-control" v-model='form.documenttype' style="max-width:262px">
-            <option v-for="item in selects.documenttype" :value="item.value" v-bind:key="item.value">
-              {{ item.text }}
-            </option>
-          </select>
-        </div>
         <div v-bind:class="{ errorinputuser: (!validateinfo.document), formgroup: true }">
           <span class="icon-case" :title="labeldocument"><i class="fa fa fa-id-card"></i></span>
           <input type="text" v-mask="getmask" data-rule="required" v-model="form.document" :placeholder="placeholderdocument+' *'" :data-errormsg="validationdocument"/>
-        </div>
-        <div v-bind:class="{ errorinputuser: (!validateinfo.brazilian_rg), formgroup: true }" v-if="!isforeign">
-          <span class="icon-case" title="RG"><i class="fa fa fa-id-card"></i></span>
-          <input type="text" maxlength="22" data-rule="required" v-model="form.brazilian_rg" placeholder="Digite seu RG *" data-errormsg="O RG deve ser preenchido."/>
         </div>
         <div v-bind:class="{ errorinputuser: (!validateinfo.phone_ddd || !validateinfo.phone_number), formgroup: true }">
           <span class="icon-case" title="Celular"><i class="fa fa fa-phone"></i></span>
@@ -276,7 +253,7 @@ export default {
                 this.form.birthdate = response.dt_nascimento;
                 this.form.document = response.cd_cpf;
                 this.form.documenttype = '0';
-                this.form.brazilian_rg = response.cd_rg;
+                // this.form.brazilian_rg = response.cd_rg;
                 this.form.phone_ddd = response.ds_ddd_celular;
                 this.form.phone_number = response.ds_celular;
                 this.form.zipcode = response.cd_cep;
@@ -419,11 +396,11 @@ export default {
     validate() {
       this.validateinfo.firstname = true;
       this.validateinfo.lastname = true;
-      this.validateinfo.gender = true;
-      this.validateinfo.birthdate = true;
+      // this.validateinfo.gender = true;
+      // this.validateinfo.birthdate = true;
       this.validateinfo.document = true;
       this.validateinfo.documenttype = true;
-      this.validateinfo.brazilian_rg = true;
+      // this.validateinfo.brazilian_rg = true;
       this.validateinfo.phone_ddd = true;
       this.validateinfo.phone_number = true;
       this.validateinfo.zipcode = true;
@@ -450,16 +427,6 @@ export default {
         this.validateinfo.lastname = false;
       }
 
-      if (this.form.gender.trim().length == 0) {
-        ret = false;
-        this.validateinfo.gender = false;
-      }
-
-      if (this.form.birthdate.trim().length == 0) {
-        ret = false;
-        this.validateinfo.birthdate = false;
-      }
-
       if (this.form.document.trim().length == 0) {
         ret = false;
         this.validateinfo.document = false;
@@ -470,11 +437,6 @@ export default {
           ret = false;
           this.validateinfo.document = false;
         }
-      }
-
-      if (this.form.brazilian_rg.trim().length == 0 && !this.isforeign) {
-        ret = false;
-        this.validateinfo.brazilian_rg = false;
       }
 
       if (this.form.phone_ddd.trim().length == 0) {
