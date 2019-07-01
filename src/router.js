@@ -21,6 +21,12 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/Event.vue')
     },
     {
+      path: '/especiais/4-Itaucard-Bilheterias-Participantes',
+      props: true,
+      name: 'bilheterias-participantes',
+      component: () => import( /* webpackChunkName: "about" */ './views/compreingressos/bilheterias-participantes.vue')
+    },
+    {
       path: '/espetaculos',
       props: true,
       name: 'espetaculos_ci',

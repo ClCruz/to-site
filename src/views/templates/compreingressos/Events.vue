@@ -47,6 +47,19 @@
         </div>
       </div>
     </section>
+
+    <div class="container" id="ad_container">
+      <div class="container p-0">
+        <div class="row">
+          <div class="col-12 pr-0 col-lg-12 text-left">
+            <div class="p-1 pr-0 mt-0 mb-0 pb-0 text-center" style="background: #001b50 url(https://media.tixs.me/ci/visor2.jpg?1541791907) top center no-repeat; width: 100%">
+            <a href="compreingressos.com/itaucard"></a>
+              <img class="img-fluid rounded-0 discovery" src="https://media.tixs.me/ci/visor.jpg?1541728042" style="height: 130px; width: auto">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Banner -->
     <div class="container__select to-block container__features" id="banner">
       <div class="container pt-2 pb-0 text-left">
@@ -84,6 +97,20 @@
           <card-event v-for="(item, index) in computedFilteredData" :key='index' :item="item"></card-event>
         </div>
       </div>
+       <div class="container" id="ad_container">
+      <div class="container p-0">
+        <div class="row">
+          <div class="col-12 pr-0 col-lg-12 text-left">
+            <div class="p-1 pr-0 mt-0 mb-0 pb-0 text-center" style="">
+            <p style="color: white" class="pb-0 mb-0 text-left">Patrocinado: </p>
+              <a href="www.tixs.me">
+              <img class="img-fluid rounded-0 discovery" src="/assets/discovery/SITE-1-1.png" style="height: 120px; width: 100%">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
   </div>
 </template>
