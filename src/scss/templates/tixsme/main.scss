@@ -5,3 +5,12 @@
 @import "_footer.scss";
 @import "_share.scss";
 @import "_sac.scss";
+
+
+.v--modal-overlay[data-modal="login_ns"] {
+  background: black !important;
+}
+.v--modal-overlay[data-modal="newuser_ns"] {
+  background: black !important;
+}
+
