@@ -11,11 +11,11 @@
   </section>
   <section class="main main__tixsme" :style='{ vItau: itau }' v-else>
     <v-wait for="loadingAboveAll" v-if="!isTicketOffice">
-        <template slot="waiting">
-            <div id="aboveAll">
-              <!-- <img src="../assets/loading.gif" alt=""> -->
-            </div>
-        </template>
+      <template slot="waiting">
+        <div id="aboveAll">
+          <!-- <img src="../assets/loading.gif" alt=""> -->
+        </div>
+      </template>
     </v-wait>
     <app-header :key="idappheader" v-if="!isTicketOffice"></app-header>
     <div style="">
@@ -95,7 +95,9 @@ import HeaderTicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader
 import FooterTicketHubSearchHeader from "@/views/templates/ticketHubSearchHeader/Footer"
 import HeaderTicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Header"
 import FooterTicketHubVideoBackground from "@/views/templates/ticketHubVideoBackground/Footer"
-import { func } from '@/functions';
+import {
+  func
+} from '@/functions';
 import config from '@/config';
 
 import VModal from 'vue-js-modal';
@@ -103,8 +105,11 @@ import VModal from 'vue-js-modal';
 import appresetpass from "@/components/App-resetpass.vue";
 import applogin from "@/components/App-login.vue";
 import appnewuser from "@/components/App-newuser.vue";
+import appnewusertixsme from "@/components/App-newuser-tixsme.vue";
 
-import { authService } from "@/components/common/services/auth";
+import {
+  authService
+} from "@/components/common/services/auth";
 
 Vue.use(VModal, {
   dynamic: true,
@@ -163,7 +168,7 @@ export default {
           this.toastError("Falha na execução.");
         }
       );
-// 
+      // 
     },
     modalloginclosed() {
       if (this.ls_get("fb_connect") != "" && this.ls_get("fb_connect") != undefined && this.ls_get("fb_connect") != null) {
@@ -184,13 +189,13 @@ export default {
       this.idappheader = this.idappheader + 1;
 
       switch (this.gotoafterlogin) {
-          case "printafter":
-            this.blankme=true;
-            this.gotoLegacy(null,'printticket');
+        case "printafter":
+          this.blankme = true;
+          this.gotoLegacy(null, 'printticket');
           break;
-          case "cardafter":
-            this.blankme=true;
-            this.gotoLegacy(null,'cardnow');
+        case "cardafter":
+          this.blankme = true;
+          this.gotoLegacy(null, 'cardnow');
           break;
       }
     },
@@ -203,13 +208,13 @@ export default {
           return;
         }
         switch (this.gotoafterlogin) {
-            case "printafter":
-              this.blankme=true;
-              this.gotoLegacy(null,'printticket');
+          case "printafter":
+            this.blankme = true;
+            this.gotoLegacy(null, 'printticket');
             break;
-            case "cardafter":
-              this.blankme=true;
-              this.gotoLegacy(null,'cardnow');
+          case "cardafter":
+            this.blankme = true;
+            this.gotoLegacy(null, 'cardnow');
             break;
         }
       });
@@ -217,7 +222,7 @@ export default {
     modal_close_login() {
       // console.log("modal_close_login");
       this.$modal.hide(this.modals.login.name);
-    }, 
+    },
     //this.$parent.$refs.rvroot.modal_close_newuser();
     //this.$parent.$refs.rvroot.modal_close_login();
     modal_close_newuser() {
@@ -228,10 +233,11 @@ export default {
       let clickToClose = true;
       if (!this.isLogged()) return;
 
-      this.$modal.show(appnewuser, { }, 
-        {
+      if (template == 'tixsme') {
+
+        this.$modal.show(appnewusertixsme, {}, {
           draggable: false,
-          name: this.modals.add.name,//'newuser',
+          name: this.modals.add.name, //'newuser',
           classes: 'addusermodal',
           resizable: false,
           width: 800,
@@ -239,39 +245,68 @@ export default {
           height: "auto",
           scrollable: true,
           clickToClose: clickToClose,
-        },
-        {
+        }, {
           'closed': this.modalnewuserclosed,
+        });
+      } else {
+        if (template == 'tixsme') {
+
+          this.$modal.show(appnewusertixsme, {}, {
+            draggable: false,
+            name: this.modals.add.name, //'newuser',
+            classes: 'addusermodal',
+            resizable: false,
+            width: 800,
+            adaptive: false,
+            height: "auto",
+            scrollable: true,
+            clickToClose: clickToClose,
+          }, {
+            'closed': this.modalnewuserclosed,
+          });
+
+        } else {
+
+          this.$modal.show(appnewuser, {}, {
+            draggable: false,
+            name: this.modals.add.name, //'newuser',
+            classes: 'addusermodal',
+            resizable: false,
+            width: 800,
+            adaptive: false,
+            height: "auto",
+            scrollable: true,
+            clickToClose: clickToClose,
+          }, {
+            'closed': this.modalnewuserclosed,
+          });
         }
-      );
+      }
     },
     adduser() {
       let clickToClose = true;
       if (this.isLogged()) return;
 
       switch (this.gotoafterlogin) {
-          case "cardafter":
-            clickToClose = false;
-            this.modals.add.name = "newuser_ns";
+        case "cardafter":
+          clickToClose = false;
+          this.modals.add.name = "newuser_ns";
           break;
       }
 
-      this.$modal.show(appnewuser, { }, 
-        {
-          draggable: false,
-          name: this.modals.add.name,//'newuser',
-          classes: 'addusermodal',
-          resizable: false,
-          width: 800,
-          adaptive: false,
-          height: "auto",
-          scrollable: true,
-          clickToClose: clickToClose,
-        },
-        {
-          'closed': this.modalnewuserclosed,
-        }
-      );
+      this.$modal.show(appnewuser, {}, {
+        draggable: false,
+        name: this.modals.add.name, //'newuser',
+        classes: 'addusermodal',
+        resizable: false,
+        width: 800,
+        adaptive: false,
+        height: "auto",
+        scrollable: true,
+        clickToClose: clickToClose,
+      }, {
+        'closed': this.modalnewuserclosed,
+      });
     },
     modifyme() {
       this.changeuser();
@@ -280,87 +315,83 @@ export default {
       let clickToClose = true;
       this.modals.login.name = "login";
       switch (this.gotoafterlogin) {
-          case "printafter":
-            clickToClose = false;
-            this.modals.login.name = "login_ns";
+        case "printafter":
+          clickToClose = false;
+          this.modals.login.name = "login_ns";
           break;
-          case "cardafter":
-            clickToClose = false;
-            this.modals.login.name = "login_ns";
+        case "cardafter":
+          clickToClose = false;
+          this.modals.login.name = "login_ns";
           break;
       }
 
       if (this.isLogged()) {
         switch (this.gotoafterlogin) {
-            case "printafter":
-              this.gotoLegacy(null,'printticket');
-              clickToClose = false;
+          case "printafter":
+            this.gotoLegacy(null, 'printticket');
+            clickToClose = false;
             break;
-            case "cardafter":
-              this.gotoLegacy(null,'cardnow');
-              clickToClose = false;
+          case "cardafter":
+            this.gotoLegacy(null, 'cardnow');
+            clickToClose = false;
             break;
         }
         return;
       }
-      this.$modal.show(applogin, { }, 
-        {
-          draggable: false,
-          name: this.modals.login.name,//'login',
-          resizable: true,
-          adaptive: true,
-          height: "auto",
-          scrollable: true,
-          classes: '',
-          clickToClose: clickToClose,
-        },
-        {
-          'closed': this.modalloginclosed,
-        }
-      );
+      this.$modal.show(applogin, {}, {
+        draggable: false,
+        name: this.modals.login.name, //'login',
+        resizable: true,
+        adaptive: true,
+        height: "auto",
+        scrollable: true,
+        classes: '',
+        clickToClose: clickToClose,
+      }, {
+        'closed': this.modalloginclosed,
+      });
     },
     modalresetpassclosed() {
       window.location = "/";
     },
     openresetpass() {
-      this.$modal.show(appresetpass, { code: window.location.pathname.replace("/resetpass/","") }, 
-        {
-          draggable: false,
-          name: 'resetpass',
-          classes: 'resetpass',
-          resizable: false,
-          width: 400,
-          adaptive: false,
-          height: "auto",
-          scrollable: true,
-        },
-        {
-          'closed': this.modalresetpassclosed,
-        }
-      );
+      this.$modal.show(appresetpass, {
+        code: window.location.pathname.replace("/resetpass/", "")
+      }, {
+        draggable: false,
+        name: 'resetpass',
+        classes: 'resetpass',
+        resizable: false,
+        width: 400,
+        adaptive: false,
+        height: "auto",
+        scrollable: true,
+      }, {
+        'closed': this.modalresetpassclosed,
+      });
     },
     checkroute() {
       console.log(window.location.pathname);
       switch (window.location.pathname) {
         case "/dologin":
           this.login();
-        break;
+          break;
         case "/loginandshopping/cardafter":
           this.gotoafterlogin = "cardafter";
           this.login();
-        break;
+          break;
         case "/loginandshopping/printafter":
           this.gotoafterlogin = "printafter";
           this.login();
-        break;
+          break;
         case "/createaccount":
           this.adduser();
-        break;
+          break;
         default:
           if (window.location.pathname.startsWith("/resetpass/")) {
             this.openresetpass();
           }
-        break;
+          break;
       }
     },
     isLogged() {
@@ -386,48 +417,54 @@ export default {
     },
   },
   watch: {
-    '$route' (to, from) {
-    const toDepth = to.path.split('/').length
-    const fromDepth = from.path.split('/').length
-    this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    '$route'(to, from) {
+      const toDepth = to.path.split('/').length
+      const fromDepth = from.path.split('/').length
+      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    }
   }
-}
 };
 </script>
 
 <style lang="scss">
-.component-fade-enter-active, .component-fade-leave-active {
+.component-fade-enter-active,
+.component-fade-leave-active {
   transition: opacity .3s ease;
 }
-.component-fade-enter, .component-fade-leave-to
-/* .component-fade-leave-active below version 2.1.8 */ {
+
+.component-fade-enter,
+.component-fade-leave-to
+
+/* .component-fade-leave-active below version 2.1.8 */
+  {
   opacity: 0;
 }
 </style>
 <style>
-  #aboveAll {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index:6000;
-  }
-  .blankme {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index:5999;
-      background: white;
-  }
-  .v--modal-overlay[data-modal="login_ns"] {
-    background: white;
-  }
-  .v--modal-overlay[data-modal="newuser_ns"] {
-    background: white;
-  }
-  
+#aboveAll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6000;
+}
 
+.blankme {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5999;
+  background: white;
+}
+
+.v--modal-overlay[data-modal="login_ns"] {
+  background: white;
+}
+
+.v--modal-overlay[data-modal="newuser_ns"] {
+  background: white;
+}
 </style>
