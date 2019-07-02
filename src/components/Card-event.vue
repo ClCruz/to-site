@@ -98,7 +98,8 @@ export default {
       var node = document.createElement('div');
       node.innerHTML = text;
       var content = node.textContent;
-      return content.length > length ? content.slice(0, length) + clamp : content;
+      return content;
+      // return content.length > length ? content.slice(0, length) + clamp : content;
     },
     replace: function (message, toReplace, replacement) {
       if (message == null || message == undefined) return;
