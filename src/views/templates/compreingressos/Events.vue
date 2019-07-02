@@ -53,8 +53,8 @@
         <div class="row">
           <div class="col-12 pr-0 col-lg-12 text-left">
             <a href="https://compreingressos.com/itaucard">
-            <div class="p-1 pr-0 mt-0 mb-0 pb-0 text-center" style="background: #001b50 url(https://media.tixs.me/ci/visor2.jpg?1541791907) top center no-repeat; width: 100%">
-              <img class="img-fluid rounded-0 discovery" src="https://media.tixs.me/ci/visor.jpg?1541728042" style="height: 130px; width: auto">
+            <div class="p-1 pr-0 mt-0 mb-0 pb-0 pt-0 text-center" style="background: #001b50 url(https://media.tixs.me/ci/visor2.jpg?1541791907) top center no-repeat; width: 100%">
+              <img class="img-fluid rounded-0 discovery p-0" src="https://media.tixs.me/ci/visor.jpg?1541728042" style="height: 160px !important; width: auto">
             </div>
             </a>
           </div>
