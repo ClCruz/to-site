@@ -103,6 +103,19 @@
                   </div>
                 </div>
               </div>
+
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12 pb-1 text-left mt-4">
+
+                        <h3 style="font-size: 17px" class="result__container mb-1">Outros eventos na sua região:
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <card-recommended v-for="(item, index) in slideData.slice(0,3)" :key='index' :item="item"></card-recommended>
+                    </div>
+                  </div>
           </section>
         </div>
 
@@ -140,6 +153,7 @@ import 'swiper/dist/css/swiper.css';
 import {
   eventService
 } from "@/components/common/services/event";
+import CardRecommended from "@/components/Card-recommended.vue";
 
 Vue.use(VueHead);
 
@@ -170,7 +184,8 @@ export default {
     EventImageLoader,
     EventImageIngressariaLoader,
     LineLoader,
-    AppSearch
+    AppSearch,
+    CardRecommended
   },
   head: {
     title: function () {
@@ -303,6 +318,7 @@ export default {
       linkLinkedin: '',
       linkPinterest: '',
       processing: true,
+      slideData: [],
       filterBy: 0,
       filterByDate: '',
       filterByRoom: 'Todas as opções',
@@ -381,6 +397,42 @@ export default {
     });
   },
   methods: {
+
+    getListResultAgain() {
+      eventService.list(this.event.city, this.locale.state.name).then(
+        response => {
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+          this.hideWaitAboveAll();
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getListResults(callback) {
+
+      this.getLocation(this.getListResultAgain);
+
+      // console.log(this.event.city);
+      eventService.list(this.event.city, this.event.state).then(
+        response => {
+          console.log(this.event.ds_evento);
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null && x.ds_evento !== this.event.NomPeca);
+
+          this.hideWaitAboveAll();
+          this.isLoaded = true;
+
+          if (callback !== null && callback !== undefined) {
+            callback();
+          }
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
     escapeHtml(text) {
       var map = {
         '&': '&amp;',
@@ -542,6 +594,7 @@ export default {
             if (this.validateJSON(response)) {
               this.presentantion = response;
               this.timeLoaded = true;
+              
 
               if (callback !== null && callback !== undefined) {
                 callback();
@@ -576,6 +629,8 @@ export default {
 
       eventService.description(eventKey, isCI).then(
         response => {
+
+
 
           this.hideWaitAboveAll();
           this.processing = false;
@@ -639,6 +694,9 @@ export default {
             this.$emit('updateHead');
 
             this.imageLoaded = true;
+
+                this.getListResults();
+
           }
         },
         error => {

@@ -31,6 +31,21 @@
 
         </div>
       </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 pb-1 text-left mt-4">
+            <h3 style="font-size: 17px" class="result__container mb-1" v-if="countEvents > 0">Confira também esses eventos:
+            </h3>
+            <h3 style="font-size: 17px" class="result__container mb-1" v-else>Confira também esses eventos:
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+           <card-recommended v-for="(item, index) in slideData.slice(0,3)" :key='index' :item="item"></card-recommended>
+        </div>
+      </div>
+
     </section>
   </div>
 </div>
@@ -51,6 +66,10 @@ import SearchItemLoader from '@/components/loaders/SearchItemLoader.vue';
 import AppSearch from "@/components/App-search.vue";
 import CardEvent from "@/components/Card-event.vue";
 
+import CardRecommended from "@/components/Card-recommended.vue";
+import {
+  eventService
+} from "@/components/common/services/event";
 Vue.use(VueHead);
 
 export default {
@@ -59,7 +78,9 @@ export default {
     SearchItemLoader,
     Logo,
     AppSearch,
-    CardEvent
+    CardEvent,
+    CardRecommended
+
   },
   head: {
     title: function () {
@@ -191,7 +212,8 @@ export default {
       searchResults: [],
       searchValue: this.$route.params.input,
       isLoaded: false,
-      itau: false
+      itau: false,
+      slideData: []
     };
   },
   mixins: [func],
@@ -231,6 +253,40 @@ export default {
     },
   },
   methods: {
+
+    getListResultAgain() {
+      eventService.list(this.locale.city.name, this.locale.state.name).then(
+        response => {
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+          this.hideWaitAboveAll();
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getListResults(callback) {
+
+      this.getLocation(this.getListResultAgain);
+
+      eventService.list(this.locale.city.name, this.locale.state.name).then(
+        response => {
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+
+          this.hideWaitAboveAll();
+          this.isLoaded = true;
+
+          if (callback !== null && callback !== undefined) {
+            callback();
+          }
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
     toggleFilter: function (type) {
       if (type === "lists") {
         this.filterCards = true;
@@ -283,6 +339,7 @@ export default {
     //console.log(this.$route.params.input);
     this.createMetaObj();
     this.getSearchResults(this.$router.currentRoute.name, this.searchValue);
+    this.getListResults();
   },
   filters: {
     truncate: function (text, length, clamp) {

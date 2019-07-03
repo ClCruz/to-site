@@ -26,9 +26,23 @@
           </div>
         </div>
         <div class="row">
-          
+
           <card-event v-for="(item, index) in searchResults" :key='index' :item="item"></card-event>
 
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 pb-1 text-left mt-4">
+            <h3 style="font-size: 17px" class="result__container mb-1" v-if="countEvents > 0">Confira também esses eventos:
+            </h3>
+            <h3 style="font-size: 17px" class="result__container mb-1" v-else>Confira também esses eventos:
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+           <card-recommended v-for="(item, index) in slideData.slice(0,3)" :key='index' :item="item"></card-recommended>
         </div>
       </div>
     </section>
@@ -50,6 +64,10 @@ import {
 import SearchItemLoader from '@/components/loaders/SearchItemLoader.vue';
 import AppSearch from "@/components/App-search.vue";
 import CardEvent from "@/components/Card-event.vue";
+import CardRecommended from "@/components/Card-recommended.vue";
+import {
+  eventService
+} from "@/components/common/services/event";
 
 Vue.use(VueHead);
 
@@ -59,7 +77,8 @@ export default {
     SearchItemLoader,
     Logo,
     AppSearch,
-    CardEvent
+    CardEvent,
+    CardRecommended
   },
   head: {
     title: function () {
@@ -190,7 +209,8 @@ export default {
       filterLists: true,
       searchResults: [],
       isLoaded: false,
-      itau: false
+      itau: false,
+      slideData: []
     };
   },
   mixins: [func],
@@ -199,8 +219,7 @@ export default {
       let ret = "";
       if (this.$route.params.input != undefined && this.$route.params.input != null) {
         ret = this.$route.params.input;
-      }
-      else {
+      } else {
         if (this.$route.query.cidade != null && this.$route.query.cidade != undefined) {
           ret = this.$route.query.cidade;
         }
@@ -226,8 +245,7 @@ export default {
         case "espetaculos_ci":
           if (this.$route.query.cidade != null || this.$route.query.cidade != undefined) {
             type = "Busca por Cidade";
-          }
-          else {
+          } else {
             type = "Busca por Gênero";
           }
           break;
@@ -253,6 +271,39 @@ export default {
     },
   },
   methods: {
+    getListResultAgain() {
+      eventService.list(this.locale.city.name, this.locale.state.name).then(
+        response => {
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+          this.hideWaitAboveAll();
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getListResults(callback) {
+
+      this.getLocation(this.getListResultAgain);
+
+      eventService.list(this.locale.city.name, this.locale.state.name).then(
+        response => {
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+
+          this.hideWaitAboveAll();
+          this.isLoaded = true;
+
+          if (callback !== null && callback !== undefined) {
+            callback();
+          }
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
     toggleFilter: function (type) {
       if (type === "lists") {
         this.filterCards = true;
@@ -302,14 +353,13 @@ export default {
     },
   },
   created() {
-    debugger;
+    // debugger;
     //console.log(this.$route.params.input);
     this.createMetaObj();
     let routeName = "search_bycity";
     if (this.$route.query.cidade != null || this.$route.query.cidade != undefined) {
       routeName = "search_bycity";
-    }
-    else {
+    } else {
       routeName = "search_bygenre";
     }
 
@@ -317,6 +367,7 @@ export default {
       routeName = this.$router.currentRoute.name;
     }
     this.getSearchResults(routeName, this.searchValue);
+    this.getListResults();
   },
   filters: {
     truncate: function (text, length, clamp) {

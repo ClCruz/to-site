@@ -5,6 +5,7 @@
       <div class="row">
         <div class="col-12">
           <section class="to-block bg__ingressaria to-block-mobile" style="">
+
             <div class="container">
               <div class="row">
                 <div class="col-12 col-md-8 col-lg-6">
@@ -146,9 +147,26 @@
                     </div>
 
                   </div>
+
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12 pb-1 text-left mt-4">
+
+                        <h3 style="font-size: 17px" class="result__container mb-1">Outros eventos na sua região:
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <card-recommended v-for="(item, index) in slideData.slice(0,3)" :key='index' :item="item"></card-recommended>
+                    </div>
+                  </div>
+
                 </div>
+
               </div>
+
             </div>
+
           </section>
         </div>
 
@@ -187,6 +205,8 @@ import {
   eventService
 } from "@/components/common/services/event";
 
+import CardRecommended from "@/components/Card-recommended.vue";
+
 Vue.use(VueHead);
 
 Vue.filter("money", function (value) {
@@ -216,7 +236,8 @@ export default {
     EventImageLoader,
     EventImageIngressariaLoader,
     LineLoader,
-    AppSearch
+    AppSearch,
+    CardRecommended
   },
   head: {
     title: function () {
@@ -356,6 +377,7 @@ export default {
       selected: undefined,
       showreadandless: false,
       showreadmore: false,
+      slideData: [],
       event: {
         loaded: false,
         NomPeca: null,
@@ -425,8 +447,45 @@ export default {
         $('#btn__comprar').css("opacity", 1 + $(window).scrollTop() / 250);
       }
     });
+
   },
   methods: {
+
+    getListResultAgain() {
+      eventService.list(this.event.city, this.locale.state.name).then(
+        response => {
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+          this.hideWaitAboveAll();
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getListResults(callback) {
+
+      this.getLocation(this.getListResultAgain);
+
+      console.log(this.event.city);
+      eventService.list(this.event.city, this.event.state).then(
+        response => {
+          console.log(this.event.ds_evento);
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null && x.ds_evento !== this.event.NomPeca);
+
+          this.hideWaitAboveAll();
+          this.isLoaded = true;
+
+          if (callback !== null && callback !== undefined) {
+            callback();
+          }
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
     escapeHtml(text) {
       var map = {
         '&': '&amp;',
@@ -594,6 +653,9 @@ export default {
 
               if (callback !== null && callback !== undefined) {
                 callback();
+
+                this.getListResults();
+
               }
             }
           },
@@ -614,7 +676,6 @@ export default {
       let isCI = false;
       let eventKey = this.key;
 
-
       eventService.description(eventKey, isCI).then(
         response => {
 
@@ -625,7 +686,7 @@ export default {
             this.toastError(response.msg);
             // console.log(response.msg);
             if (response.goto == "home")
-               window.location = "/";
+              window.location = "/";
             return;
           }
           if (this.validateJSON(response)) {
