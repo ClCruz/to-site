@@ -9,6 +9,7 @@ import vueAlert from 'vue-sweetalert2';
 import VueHead from 'vue-head';
 import VueAnalytics from 'vue-analytics';
 import { partnerService } from '@/components/common/services/partner';
+import VueLazyload from 'vue-lazyload'
 
 import './registerServiceWorker';
 
@@ -16,6 +17,14 @@ import './registerServiceWorker';
 Vue.use(VueHead);
 Vue.use(VueWait);
 Vue.use(vueAlert);
+Vue.use(VueLazyload, {
+  preLoad: 1.8,
+  error: 'dist/error.png',
+  loading: 'dist/loading.gif',
+  attempt: 1,
+  // the default is ['scroll', 'wheel', 'mousewheel', 'resize', 'animationend', 'transitionend']
+  listenEvents: [ 'scroll' ]
+})
 
 // Global Components
 Vue.component('Appheader', Appheader);

@@ -19,7 +19,7 @@
   </div>
   <div class="to-box p-0">
   <a :href="item.uri" style="text-decoration: none">
-    <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img  + '?' + getDayForCache + '\')' }" style="background-size: cover;">
+    <div class="img-fluid rounded-0" v-lazy:background-image="item.img  + '?' + getDayForCache" style="background-size: cover;">
     </div>
 
     <div class="content to-box p-2 pt-0 pb-1" style="position: relative; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
