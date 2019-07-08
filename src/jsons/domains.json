@@ -233,5 +233,9 @@
     "afrac.ticketoffice.me": "afrac",
     "api.afrac.ticketoffice.me": "afrac",
     "compra.afrac.ticketoffice.me": "afrac",
-    "admin.afrac.ticketoffice.me": "afrac"
+    "admin.afrac.ticketoffice.me": "afrac",
+    "theatromunicipal.ticketoffice.me": "theatromunicipal",
+    "api.theatromunicipal.ticketoffice.me": "theatromunicipal",
+    "compra.theatromunicipal.ticketoffice.me": "theatromunicipal",
+    "admin.theatromunicipal.ticketoffice.me": "theatromunicipal"
 }
