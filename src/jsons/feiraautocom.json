@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "feiraautocom.ticketoffice.me",
+  "uri": "https://feiraautocom.ticketoffice.me",
+  "api": "https://api.feiraautocom.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.feiraautocom.ticketoffice.me",
+  "admin": "https://admin.feiraautocom.ticketoffice.me",
+  "apikey": "live_fbac4aa6b13d4f26bedee338ccc925d0b4b217031a8a48d4930feaea6e19a5e9",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/feiraautocom/main.scss",
+  "css": "/stylesheets/themes/feiraautocom.ticketoffice.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-feiraautocom.png",
+  "favico": "/img/feiraautocom/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Autocom",
+    "keywords": "Autocom"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Feira Autocom",
+    "description": "Autocom",
+    "siteName": "feiraautocom.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Feira Autocom",
+    "companyName": "Feira Autocom"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_feiraautocom/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_feiraautocom/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_feiraautocom/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_feiraautocom/emailComprador.html",
+      "gift": "../comprar/templates/multi_feiraautocom/emailPresente.html",
+      "signature": "../comprar/templates/multi_feiraautocom/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_feiraautocom/confirmacaoEmail.html"
+
+    }
+  }
+}
