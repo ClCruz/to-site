@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "afrac.ticketoffice.me",
+  "uri": "https://afrac.ticketoffice.me",
+  "api": "https://api.afrac.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.afrac.ticketoffice.me",
+  "admin": "https://admin.afrac.ticketoffice.me",
+  "apikey": "live_4159e4024d0541eda4865af0c5f1e79b209a59f441f24e4c93476fff6002dd54",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/afrac/main.scss",
+  "css": "/stylesheets/themes/afrac.ticketoffice.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-afrac.png",
+  "favico": "/img/afrac/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "afrac",
+    "keywords": "afrac"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Afrac",
+    "description": "afrac",
+    "siteName": "afrac.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Afrac",
+    "companyName": "Afrac"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_afrac/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_afrac/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_afrac/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_afrac/emailComprador.html",
+      "gift": "../comprar/templates/multi_afrac/emailPresente.html",
+      "signature": "../comprar/templates/multi_afrac/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_afrac/confirmacaoEmail.html"
+
+    }
+  }
+}

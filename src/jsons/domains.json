@@ -229,5 +229,9 @@
     "www.viveringressos.com.br": "viveringressos",
     "api.viveringressos.com.br": "viveringressos",
     "compra.viveringressos.com.br": "viveringressos",
-    "admin.viveringressos.com.br": "viveringressos"
+    "admin.viveringressos.com.br": "viveringressos",
+    "afrac.ticketoffice.me": "afrac",
+    "api.afrac.ticketoffice.me": "afrac",
+    "compra.afrac.ticketoffice.me": "afrac",
+    "admin.afrac.ticketoffice.me": "afrac"
 }
