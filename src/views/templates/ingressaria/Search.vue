@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="row">
-           <card-recommended v-for="(item, index) in slideData.slice(0,3)" :key='index' :item="item"></card-recommended>
+           <card-recommended v-for="(item, index) in slideData.slice(0,9)" :key='index' :item="item"></card-recommended>
         </div>
       </div>
 
