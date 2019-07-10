@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/feiraautocom/main.scss",
   "css": "/stylesheets/themes/feiraautocom.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-feiraautocom.png",
   "favico": "/img/feiraautocom/",
   "videos": {

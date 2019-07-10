@@ -5,18 +5,55 @@
 
 header.bg-dark {
 	// background-color: rgb(202, 8, 19) !important;
-	background-color: rgb(255, 255, 255) !important;
+	background-color: #274472 !important;
 }
 .header__logo .img {
 	height: 55px;
 	width: 100%;
 }
 
-.bg-dark {
-	background-color: $secondary !important;
+footer.bg-dark {
+	background-color: #274472 !important;
+	color: black !important;
 }
 
+footer a,
+footer p,
+footer h3 {
+	color: #fff !important;
+}
+
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
+}
+
+.footer__logo .img {
+	height: 40px;
+}
+
+// footer.bg-dark a {
+// 	color: black !important;
+// }
+
+// footer .img {
+// 	// background: #fff;
+// 	// background-position: center !important;
+// 	// border-radius: 2px;
+// }
+
 $gradiente: $secundary !important;
+
+.header__logo {
+}
+
+.header__logo .img {
+	padding: 10px !important;
+	width: 100%;
+	border-radius: 4px;
+	height: 55px !important;
+}
 
 .swal2-progresscircle {
 	background: $secundary !important;
@@ -39,6 +76,54 @@ $gradiente: $secundary !important;
 	}
 }
 
-.header__signin {
-	color: #333;
+#ddown1 button {
+	color: black !important;
+}
+
+.bg__main {
+	background: url('https://images.pexels.com/photos/753876/pexels-photo-753876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') !important;
+	background-position: top !important;
+	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
+	@include MQ(S) {
+		display: none !important;
+	}
+}
+
+.eventHeader header.bg-dark,
+.header__mobile {
+	background: #274472 !important;
+}
+
+#modals-container .btn-success:hover,
+#modals-container .btn-success:focus,
+#modals-container .btn-success {
+	background: #274472 !important;
+}
+
+.navbar-fixed-top .header__logo .img,
+.eventHeader .header__logo .img {
+}
+.footer__logo .img {
+}
+.eventHeader header.navbar-fixed-top {
+	.img {
+	}
+}
+
+.v--modal-overlay {
+	z-index: 999999 !important;
+}
+
+.navbar-fixed-top {
+	background: #274472 !important;
+}
+
+.to-btn {
+	font-size: 13px !important;
+}
+
+.navbar-fixed-top .to-btn {
+	font-size: 13px !important;
+	font-weight: bold !important;
+	color: #fff !important;
 }

@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/afrac/main.scss",
   "css": "/stylesheets/themes/afrac.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-afrac.png",
   "favico": "/img/afrac/",
   "videos": {

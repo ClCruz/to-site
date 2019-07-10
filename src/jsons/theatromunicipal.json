@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/theatromunicipal/main.scss",
   "css": "/stylesheets/themes/theatromunicipal.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-theatromunicipal.png",
   "favico": "/img/theatromunicipal/",
   "videos": {
