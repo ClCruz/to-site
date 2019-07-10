@@ -70,6 +70,7 @@ import CardRecommended from "@/components/Card-recommended.vue";
 import {
   eventService
 } from "@/components/common/services/event";
+
 Vue.use(VueHead);
 
 export default {

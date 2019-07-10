@@ -43,7 +43,7 @@
                     <h3 class="mt-3 pb-4">Espetáculos em cartaz</h3>
 
                   </div>
-                  <div class="row" >
+                  <div class="row">
                     <div class="col-12 col-xl-4 col-md-4 p-2 text-left" v-for="(item, index) in this.venue.events" :key='index' :item="item">
                       <div class="to-box p-0" style="height: 260px;" @click="goto('event', item)">
                         <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover ; background-position: center!important;height: 130px !important;">
@@ -67,6 +67,16 @@
                   </div>
 
                 </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 pb-1 text-left mt-4">
+
+                  <h3 style="font-size: 17px" class="result__container mb-1">Outros eventos na sua região:
+                  </h3>
+                </div>
+              </div>
+              <div class="row">
+                <card-recommended v-for="(item, index) in slideData.slice(0,3)" :key='index' :item="item"></card-recommended>
               </div>
             </div>
           </section>
@@ -102,6 +112,7 @@ import AppSearch from "@/components/App-search.vue";
 
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
+import CardRecommended from "@/components/Card-recommended.vue";
 
 import {
   eventService
@@ -124,7 +135,9 @@ export default {
     EventImageIngressariaLoader,
     LineLoader,
     AppSearch,
-    CardEvent
+    CardEvent,
+    CardRecommended
+
   },
   head: {
     title: function () {
@@ -276,13 +289,51 @@ export default {
         cityBadgeText: null,
         dates: '',
       },
+      slideData: []
 
     }
   },
   created() {
+    // console.log('oi');
     this.getVenue();
   },
   methods: {
+
+    getListResultAgain() {
+      eventService.list(this.venue.city, this.locale.state.name).then(
+        response => {
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null);
+          this.hideWaitAboveAll();
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
+    getListResults(callback) {
+
+      this.getLocation(this.getListResultAgain);
+
+      // console.log(this.venue.city);
+      eventService.list(this.venue.city, this.venue.state).then(
+        response => {
+          // console.log(this.venue.ds_evento);
+          this.slideData = response.filter(x => x.id_genre !== undefined && x.id_genre !== null && x.ds_evento !== this.venue.NomPeca);
+
+          this.hideWaitAboveAll();
+          this.isLoaded = true;
+
+          if (callback !== null && callback !== undefined) {
+            callback();
+          }
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
     goto(type, item) {
       if (item.notselectable != undefined && item.notselectable == 1) return;
 
@@ -310,9 +361,7 @@ export default {
       }
     },
     prepareNameForVenue(name) {
-      let split = name.replace('c','_');
-  
-
+      let split = name.replace('c', '_');
 
       split = split.split("-");
       let tosearch = "";
@@ -365,6 +414,9 @@ export default {
             this.metaObj.keywords = this.venue.meta_keywords;
 
             this.$emit('updateHead');
+            // console.log('here');
+            this.getListResults();
+
           }
         },
         error => {
@@ -378,7 +430,7 @@ export default {
   mounted() {
     this.keepalive();
 
-    // console.log(this.event)
+    // console.log(this.venue)
 
   },
   computed: {
