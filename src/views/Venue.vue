@@ -42,8 +42,11 @@
 
                     <h3 class="mt-3 pb-4">Espetáculos em cartaz</h3>
 
+
                   </div>
                   <div class="row">
+                    <div v-if="this.venue.events.length == 0">
+                    <p>Nenhum espetáculo encontrado</p></div>
                     <div class="col-12 col-xl-4 col-md-4 p-2 text-left" v-for="(item, index) in this.venue.events" :key='index' :item="item">
                       <div class="to-box p-0" style="height: 260px;" @click="goto('event', item)">
                         <div class="img-fluid rounded-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }" style="background-size: cover ; background-position: center!important;height: 130px !important;">
