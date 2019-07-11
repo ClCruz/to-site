@@ -28,7 +28,7 @@
       </div>
     </div>
   </section>
-  <div class="container-fluid container__select pb-0" style="border-bottom: 1px solid #e3e3e3" v-if="cityList.length > 1">
+  <div class="container-fluid container__select pb-0" style="border-bottom: 1px solid #e3e3e3" v-if="cityList.length > 1 && ( siteName == 'ingressoparatodos.com.br' || siteName == 'www.ingressaria.com.br')">
     <div class="row pb-0">
       <div class="col-6 text-right select__city" style="border-right: 1px solid #e3e3e3;">
         <model-select :options="options" v-model="item" placeholder="Selecionar Cidade" @input="handleOnInput">
