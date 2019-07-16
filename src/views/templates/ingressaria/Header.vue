@@ -31,7 +31,7 @@
                   <router-link class="nav-link" to="/busca/genero/Infantil">Infantil
                   </router-link>
                 </li> -->
-                <city-list-header></city-list-header>
+                <!-- <city-list-header></city-list-header> -->
                 
                 <li class="nav-item">
                   <router-link class="nav-link" to="/sac/empresa/sobre">Ajuda
