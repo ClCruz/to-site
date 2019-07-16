@@ -11,10 +11,9 @@
             </router-link>
           </div>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav12" aria-controls="navbarNav12"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav12" aria-controls="navbarNav12" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
           <div class="collapse navbar-collapse col-md-8">
             <div class="nav__links navbar-nav ml-auto">
@@ -32,6 +31,8 @@
                   <router-link class="nav-link" to="/busca/genero/Infantil">Infantil
                   </router-link>
                 </li> -->
+                <city-list-header></city-list-header>
+                
                 <li class="nav-item">
                   <router-link class="nav-link" to="/sac/empresa/sobre">Ajuda
                   </router-link>
@@ -160,12 +161,14 @@ import {
 } from '@/functions';
 
 import AppSearch from "@/components/App-search.vue";
+import CityListHeader from "@/components/City-list-header.vue";
 import $ from "jquery";
 
 export default {
   name: "HeaderTicketHub",
   components: {
-    AppSearch
+    AppSearch,
+    CityListHeader,
   },
   mixins: [func],
   data: function () {
@@ -266,4 +269,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>

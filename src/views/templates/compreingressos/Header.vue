@@ -38,6 +38,7 @@
           </div>
 
           <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex">
+                <city-list-header></city-list-header>
             
           </ul>
         </nav>
@@ -139,12 +140,14 @@ import {
 } from '@/functions';
 
 import AppSearch from "@/components/App-search.vue";
+import CityListHeader from "@/components/City-list-header.vue";
 import $ from "jquery";
 
 export default {
   name: "HeaderTicketHub",
   components: {
-    AppSearch
+    AppSearch,
+    CityListHeader
   },
   mixins: [func],
   data: function () {
@@ -245,4 +248,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>

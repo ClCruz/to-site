@@ -13,6 +13,8 @@ import VueLazyload from 'vue-lazyload'
 
 import './registerServiceWorker';
 
+export const serverBus = new Vue();
+
 //Vue.config.productionTip = false;
 Vue.use(VueHead);
 Vue.use(VueWait);

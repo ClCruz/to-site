@@ -11,7 +11,7 @@
 	"ga": "",
 	"scss": "./src/scss/themes/eventoslitoral/main.scss",
 	"css": "/stylesheets/themes/www.eventoslitoraldemo.tk/main.css",
-	"template": "ingressaria",
+	"template": "compreingressos",
 	"logo": "https://media.tixs.me/logos/logo-eventoslitoral.jpg",
 	"favico": "/img/eventoslitoral/",
 	"videos": {
@@ -31,7 +31,7 @@
 	"info": {
 		"title": "Ingressaria",
 		"description": "Venda de Ingressos",
-		"siteName": "www.ingressaria.com.br",
+		"siteName": "www.compreingressos.com",
 		"CNPJ": "11.111.111/1111-111",
 		"companyAddress": "Rua das rosas, 504 - 31 Andar - Santos, São Paulo",
 		"companyName": "Eventos Litoral"

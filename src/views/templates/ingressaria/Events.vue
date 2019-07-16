@@ -166,6 +166,7 @@ import {
 import {
   ModelSelect
 } from 'vue-search-select'
+import { serverBus } from '@/main';
 
 import AppSearch from "@/components/App-search.vue";
 import config from '@/config';
@@ -363,9 +364,10 @@ export default {
       // console.log('aqui', this.searchTerm);
       eventService.list(this.searchTerm, this.locale.state.name, this.date).then(
         response => {
-          // debugger
           this.filteredData = response;
           this.hideWaitAboveAll();
+          
+
         },
         error => {
           this.hideWaitAboveAll();
@@ -396,7 +398,6 @@ export default {
     },
     getCityList() {
       this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, this.slideData);
-
     },
     getGenreList() {
       this.genreList = this.removeDuplicatesBy(x => x.genreName, this.filteredData).slice(0, 6);
@@ -474,6 +475,7 @@ export default {
 
           // console.log(this.slideData);
 
+
           if (callback !== null && callback !== undefined) {
             callback();
           }
@@ -503,6 +505,7 @@ export default {
       });
 
       // console.log(ret);
+
 
       return ret;
     },

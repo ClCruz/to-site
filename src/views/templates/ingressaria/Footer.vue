@@ -17,36 +17,41 @@
             <a @click="contact" style="cursor: pointer">Atendimento ao cliente</a>
             <br>
           </template>
+       
           <template v-if="checkSAC[0] != undefined && checkSAC[0].isvisible == 1">
             <a href="#" @click="loadSACPage('company','sobre')">
-                  Sobre a empresa
+              Sobre a empresa
             </a>
             <br>
           </template>
           <template v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">
             <a href="#" @click="loadSACPage('partner','sejaParceiro')">
-                  Seja nosso Parceiro
+              Seja nosso Parceiro
             </a>
           </template>
+             <div class="mt-3">
+
+            <City-list></City-list>
+          </div>
         </div>
 
         <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
           <h3><strong>Políticas</strong></h3>
           <template v-if="checkSAC[1] != undefined && checkSAC[1].isvisible == 1">
             <a href="#" @click="loadSACPage('policy','venda')">
-                  Politica de Venda
+              Politica de Venda
             </a>
             <br>
           </template>
           <template v-if="checkSAC[3] != undefined && checkSAC[3].isvisible == 1">
             <a href="#" @click="loadSACPage('policy','desconto')">
-                  Política de Meia Entrada
+              Política de Meia Entrada
             </a>
             <br>
           </template>
           <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
             <a href="#" @click="loadSACPage('policy','privacidade')">
-                  Politica de Privacidade
+              Politica de Privacidade
             </a>
           </template>
         </div>
@@ -64,47 +69,47 @@
             <img src="/assets/images/logo-jcb.png" alt="">
             <img src="/assets/images/logo-boleto.png" alt="">
             <br>
-            </div>
-            <img src="/assets/images/logo-pagarme.svg" class="mt-3 p-1" style="width: 120px; background: white; border-radius: 3px;" alt="">
-            
           </div>
-          <div v-if="isPartner()" class="col-12 col-md mt-5 mt-md-0 text-md-left">
-            <h3 style=""><strong>Parceiros</strong></h3>
-            <div class="row nopadding mt-4" style="justify-content: center!important" v-if="isPartner()">
-              <ul class="nav justify-content-center mx-0 nopadding text-center">
-                <li v-for="(item) in listPartners" v-bind:key="item.url" class="m-0 pr-2 nav-item text-center mx-0 mx-auto" style="margin-top: 2px !important; margin-bottom: 2px !important">
+          <img src="/assets/images/logo-pagarme.svg" class="mt-3 p-1" style="width: 120px; background: white; border-radius: 3px;" alt="">
 
-                  <a :href="item.url" v-if="item.name != 'Localhost'">
-               <img :src="item.img" style="width: 80px"> 
+        </div>
+        <div v-if="isPartner()" class="col-12 col-md mt-5 mt-md-0 text-md-left">
+          <h3 style=""><strong>Parceiros</strong></h3>
+          <div class="row nopadding mt-4" style="justify-content: center!important" v-if="isPartner()">
+            <ul class="nav justify-content-center mx-0 nopadding text-center">
+              <li v-for="(item) in listPartners" v-bind:key="item.url" class="m-0 pr-2 nav-item text-center mx-0 mx-auto" style="margin-top: 2px !important; margin-bottom: 2px !important">
 
-             </a>
-                </li>
+                <a :href="item.url" v-if="item.name != 'Localhost'">
+                  <img :src="item.img" style="width: 80px">
 
-              </ul>
-            </div>
+                </a>
+              </li>
 
+            </ul>
           </div>
-          <div v-if="siteName == 'ingressoparatodos.com.br'" class="col-12 col-md mt-5 mt-md-0 text-md-left">
+
+        </div>
+        <div v-if="siteName == 'ingressoparatodos.com.br'" class="col-12 col-md mt-5 mt-md-0 text-md-left">
           <h3><strong>Realização:</strong></h3>
 
-           <img style="width: 80%;" src="/assets/logo-parceiro-construcao.png" alt="">
-
-          </div>
+          <img style="width: 80%;" src="/assets/logo-parceiro-construcao.png" alt="">
 
         </div>
-        <div class="row mt-5 footer-name nopadding">
-          <div class="col text-center">
-            <p>{{companyName}} </p>
-          </div>
-        </div>
-        <div class="row mt-0 nopadding mb-0 pb-0">
-          <div class="col text-center">
-            <p>
-              {{companyAddress}} <span v-if="companyAddress != ''">-</span> CNPJ: {{CNPJ}}
-            </p>
-          </div>
+
+      </div>
+      <div class="row mt-5 footer-name nopadding">
+        <div class="col text-center">
+          <p>{{companyName}} </p>
         </div>
       </div>
+      <div class="row mt-0 nopadding mb-0 pb-0">
+        <div class="col text-center">
+          <p>
+            {{companyAddress}} <span v-if="companyAddress != ''">-</span> CNPJ: {{CNPJ}}
+          </p>
+        </div>
+      </div>
+    </div>
   </footer>
 </div>
 </template>
@@ -120,11 +125,23 @@ import {
 import {
   staticPageService
 } from "@/components/common/services/static_page.js";
+import CityList from '@/components/City-list.vue';
+
+
+import {
+  serverBus
+} from '@/main';
 
 export default {
   name: "Footer",
+  created() {
+  },
+  components: {
+    CityList
+  },
   computed: {},
   methods: {
+    
     checkSACPages() {
       staticPageService.check().then(
         response => {
@@ -140,7 +157,7 @@ export default {
     getSACContent() {
       for (var i = 1; i <= 5; i++) {
         staticPageService.get(i).then(
-      
+
           response => {
             this.getSAC.push(response);
           },
@@ -150,7 +167,7 @@ export default {
           }
         );
       }
-            // console.log(this.getSAC);
+      // console.log(this.getSAC);
 
     },
 
@@ -214,8 +231,10 @@ export default {
 
   data: function () {
     return {
+      events: [],
       getSAC: [],
       checkSAC: [],
+    
       siteName: config.info.siteName,
       CNPJ: config.info.CNPJ,
       companyName: config.info.companyName,
@@ -269,14 +288,18 @@ export default {
     }
   },
   mounted() {
-     this.$nextTick(() => {
-       this.checkSACPages();
-        //this.$refs.slick.reSlick();
-      });
+    this.$nextTick(() => {
+      this.checkSACPages();
+      //this.$refs.slick.reSlick();
+    });
     // this.getSACContent();
   },
 };
 </script>
 
 <style lang="scss">
+  footer h3 {
+    text-transform: uppercase;
+    font-size: 11px;
+  }
 </style>

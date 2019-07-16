@@ -4,27 +4,30 @@
     <div class="container">
       <div class="row align-items-top text-center text-md-left">
         <div class="col-12 col-md">
-         
-        </div>
 
+        </div>
       </div>
       <div v-if="siteName == 'ingressoparatodos.com.br'" class="col-12 col-md mt-5 mt-md-0 text-md-left">
         <h3><strong>Realização:</strong></h3>
 
         <img style="width: 80%;" src="/assets/logo-parceiro-construcao.png" alt="">
 
-          </div>
-
       </div>
-         <div class="footer__logo text-center mb-3">
-            <router-link to="/">
-              <div class="img" style="    height: 90px !important; background-position: center !important;"></div>
-            </router-link>
-          </div>
-      <div class="row mt-5 footer-name nopadding">
-        <div class="col text-center">
-          <p>{{companyName}} </p>
-        </div>
+
+    </div>
+    <div class="footer__logo text-center mb-3">
+      <div class="mt-3 mb-3">
+        <City-list class="pb-3"></City-list>
+      </div>
+      <router-link to="/">
+        <div class="img" style="    height: 90px !important; background-position: center !important;"></div>
+      </router-link>
+    </div>
+
+    <div class="row mt-5 footer-name nopadding">
+      <div class="col text-center">
+        <p>{{companyName}} </p>
+      </div>
     </div>
   </footer>
 </div>
@@ -38,6 +41,7 @@ import {
 import {
   func
 } from '@/functions';
+  import CityList from '@/components/City-list.vue';
 import {
   staticPageService
 } from "@/components/common/services/static_page.js";
@@ -45,6 +49,9 @@ import {
 export default {
   name: "Footer",
   computed: {},
+  components: {
+    CityList
+  },
   methods: {
     checkSACPages() {
       staticPageService.check().then(

@@ -429,7 +429,7 @@ export default {
 
           this.populateCityPicker();
 
-          console.log(this.slideData);
+          // console.log(this.slideData);
 
           if (callback !== null && callback !== undefined) {
             callback();

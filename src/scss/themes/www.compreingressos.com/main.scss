@@ -71,10 +71,6 @@ $gradiente: $secundary !important;
 	}
 }
 
-#ddown1 button {
-	color: black !important;
-}
-
 .team-1,
 .features,
 #section__slider,
@@ -333,4 +329,17 @@ header.bg-dark .navbar-nav a.nav-link,
 
 .fdb_result {
 	// margin-top: -380px !important;
+}
+
+.navbar-nav {
+
+  #ddown1 button {
+    color: #fff !important;
+    font-weight: normal;
+  }
+
+  .dropdown {
+    width: 80px;
+  }
+
 }
