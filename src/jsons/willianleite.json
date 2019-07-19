@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/willianleite/main.scss",
   "css": "/stylesheets/themes/willianleite.tixs.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-willianleite.png",
   "favico": "/img/willianleite/",
   "videos": {
