@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/equiperevival/main.scss",
   "css": "/stylesheets/themes/equiperevival.ticketoffice.me/main.css",
-  "template": "ticketHub",
+  "template": "ingressaria",
   "logo": "/assets/logo-equiperevival.png",
   "favico": "/img/equiperevival/",
   "videos": {
