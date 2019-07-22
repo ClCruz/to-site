@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "equiperevival.ticketoffice.me",
+  "uri": "https://equiperevival.ticketoffice.me",
+  "api": "https://api.equiperevival.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.equiperevival.ticketoffice.me",
+  "admin": "https://admin.equiperevival.ticketoffice.me",
+  "apikey": "live_c95fad4a82b44f7783ea969d4e484e0a003c203b44824f06ba794a7da018c354",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/equiperevival/main.scss",
+  "css": "/stylesheets/themes/equiperevival.ticketoffice.me/main.css",
+  "template": "ticketHub",
+  "logo": "/assets/logo-equiperevival.png",
+  "favico": "/img/equiperevival/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Somos a Equipe Revival. Organizamos festas temáticas para o público adulto há mais de 10 anos na Baixada Santista. Entretenimento com qualidade, conforto e segurança é a nossa meta. ",
+    "keywords": "ingressos,equipe,revival,baixada,santista,adulto"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Equipe Revival",
+    "description": "Somos a Equipe Revival. Organizamos festas temáticas para o público adulto há mais de 10 anos na Baixada Santista. Entretenimento com qualidade, conforto e segurança é a nossa meta. ",
+    "siteName": "equiperevival.ticketoffice.me",
+    "CNPJ": "",
+    "companyAddress": "",
+    "companyName": "Equipe Revival"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_equiperevival/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_equiperevival/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_equiperevival/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_equiperevival/emailComprador.html",
+      "gift": "../comprar/templates/multi_equiperevival/emailPresente.html",
+      "signature": "../comprar/templates/multi_equiperevival/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_equiperevival/confirmacaoEmail.html"
+
+    }
+  }
+}
