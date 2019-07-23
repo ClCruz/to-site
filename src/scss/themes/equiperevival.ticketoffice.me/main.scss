@@ -5,7 +5,7 @@
 
 header.bg-dark {
 	// background-color: rgb(202, 8, 19) !important;
-	background-color: #8f335e !important;
+	background-color: #000000 !important;
 }
 .header__logo .img {
 	height: 70px;
@@ -45,7 +45,7 @@ header.bg-dark {
 $gradiente: $secundary !important;
 
 .header__logo .img {
-	height: 35px;
+	height: 70px;
 	width: 100%;
 	background-position: left center;
 }
@@ -87,7 +87,7 @@ $gradiente: $secundary !important;
 
 .eventHeader header.bg-dark,
 .header__mobile {
-	background: #fff !important;
+	background: #000 !important;
 }
 
 .eventHeader header.navbar-fixed-top {
