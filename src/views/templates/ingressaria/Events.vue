@@ -511,7 +511,6 @@ export default {
     },
   },
   created() {
-    this.getListResults(this.getDiscovery);
     this.getBanner();
 
     // Fixa navbar ao ultrapassa-lo
