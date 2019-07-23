@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/oqueteinspira/main.scss",
   "css": "/stylesheets/themes/www.oqueteinspira.net.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-oqueteinspira.png",
   "favico": "/img/oqueteinspira/",
   "videos": {
