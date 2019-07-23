@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.oqueteinspira.net.br",
+  "uri": "https://www.oqueteinspira.net.br",
+  "api": "https://api.oqueteinspira.net.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.oqueteinspira.net.br",
+  "admin": "https://admin.oqueteinspira.net.br",
+  "apikey": "live_ce07d8a555e6477093d533f5c623a9b08dd11e7a150c4f229288d506bef94186",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/oqueteinspira/main.scss",
+  "css": "/stylesheets/themes/www.oqueteinspira.net.br/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-oqueteinspira.png",
+  "favico": "/img/oqueteinspira/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Mais de 90% do que acontece conosco é nossa responsabilidade! Do que fizemos e do que não fizemos. Mas como lidar com essas afirmações? Como enfrentar sem cair num “mar de culpas”? E mais: como lidar com situações adversas e, mesmo assim, seguir em frente? Não são respostas fáceis, mas todas elas têm respostas. Você poderia responder claramente onde está nesse momento? Qual a sua situação atual? Se você não sabe a resposta quero te convidar pra virar a chave. É mesmo que saiba, mas está sem meta",
+    "keywords": "willian,leite,balanço,geral,coach,ingresso"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Willian Leite - O que te inspira",
+    "description": "Mais de 90% do que acontece conosco é nossa responsabilidade! Do que fizemos e do que não fizemos. Mas como lidar com essas afirmações? Como enfrentar sem cair num “mar de culpas”? E mais: como lidar com situações adversas e, mesmo assim, seguir em frente? Não são respostas fáceis, mas todas elas têm respostas. Você poderia responder claramente onde está nesse momento? Qual a sua situação atual? Se você não sabe a resposta quero te convidar pra virar a chave. É mesmo que saiba, mas está sem meta",
+    "siteName": "www.oqueteinspira.net.br",
+    "CNPJ": "28.427.697/0001-09",
+    "companyAddress": "",
+    "companyName": "Willian Leite "
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_oqueteinspira/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_oqueteinspira/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_oqueteinspira/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_oqueteinspira/emailComprador.html",
+      "gift": "../comprar/templates/multi_oqueteinspira/emailPresente.html",
+      "signature": "../comprar/templates/multi_oqueteinspira/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_oqueteinspira/confirmacaoEmail.html"
+
+    }
+  }
+}
