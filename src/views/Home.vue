@@ -51,9 +51,9 @@ export default {
   head: {
     title: function () {
       return { 
-        inner: ``,
-        separator: "",
-        complement: config.info.title,
+        inner: config.info.title,
+        separator: " - ",
+        complement: "Venda de ingressos online",
       }
     },
     meta: function () { 
