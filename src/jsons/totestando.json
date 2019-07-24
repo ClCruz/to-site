@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/totestando/main.scss",
   "css": "/stylesheets/themes/www.testelocal.com.br/main.css",
   "template": "ticketHub",
-  "logo": "/assets/logo-totestando.png",
+  "logo": "/assets/logo-totestando.jpeg",
   "favico": "/img/totestando/",
   "videos": {
     "list": []
