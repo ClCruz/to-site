@@ -3,24 +3,16 @@
 @import "override.scss";
 @import "../../to-framework/main.scss";
 
+$cor-fundo: $primary;
+$cor-texto: $secundary;
+$tamanho-header: 45px;
+$gradiente: $secundary !important;
+// colocar imagem dentro de url ou cor hex
+$fundo: url('/assets/bg-dz9.jpg');
+
 header.bg-dark {
-	// background-color: rgb(202, 8, 19) !important;
-	background-color: #fff !important;
+	background-color: $cor-fundo !important;
 }
-.header__logo .img {
-	height: 55px;
-	width: 100%;
-}
-
-// footer.bg-dark {
-// 	background-color: rgb(255, 255, 255) !important;
-// 	color: black !important;
-// }
-
-// footer a,
-// footer p {
-// 	color: black !important;
-// }
 
 .team-1,
 .features,
@@ -32,51 +24,19 @@ header.bg-dark {
 	height: 40px;
 }
 
-// footer.bg-dark a {
-// 	color: black !important;
-// }
-
-// footer .img {
-// 	// background: #fff;
-// 	// background-position: center !important;
-// 	// border-radius: 2px;
-// }
-
-$gradiente: $secundary !important;
-
 .header__logo .img {
-	height: 35px;
+	height: $tamanho-header;
 	width: 100%;
 	background-position: left center;
 }
 
-.swal2-progresscircle {
-	background: $secundary !important;
-}
-
-.swal2-styled {
-	font-size: 0.8rem;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-top: 5px;
-	background: $secundary !important;
-	border: none;
-	color: white;
-	transition: 0.5s;
-
-	&:hover {
-		-webkit-transform: translateY(-2px);
-		transform: translateY(-2px);
-		@include box-shadow();
-	}
-}
-
 #ddown1 button {
-	color: black !important;
+	color: #000 !important;
 }
+
 
 .bg__main {
-	background: url('/assets/bg-dz9.jpg') !important;
+	background: $fundo !important;
 	background-position: 20% !important;
 	background-size: cover !important;
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
@@ -87,10 +47,7 @@ $gradiente: $secundary !important;
 
 .eventHeader header.bg-dark,
 .header__mobile {
-	background: #fff !important;
-}
-
-.eventHeader header.navbar-fixed-top {
+	background: $cor-fundo !important;
 }
 
 .v--modal-overlay {
@@ -98,7 +55,7 @@ $gradiente: $secundary !important;
 }
 
 .navbar-fixed-top {
-	background: #fff !important;
+	background: $cor-fundo !important;
 }
 
 .to-btn {
@@ -107,13 +64,11 @@ $gradiente: $secundary !important;
 
 .navbar-fixed-top .to-btn {
 	font-size: 13px !important;
-	// font-weight: bold !important;
-	// color: #fff !important;
 }
 
 footer.bg-dark {
-	background-color: rgb(255, 255, 255) !important;
-	color: black !important;
+	background-color: $cor-fundo !important;
+	color: $cor-texto !important;
 }
 
 footer a,
@@ -121,10 +76,10 @@ footer p,
 header.bg-dark .navbar-nav a.nav-link,
 .to-btn,
 .navbar-fixed-top .to-btn {
-	color: #444 !important;
+	color: $cor-texto !important;
 	font-weight: normal;
 
 	@include MQ(S) {
-		color: #444 !important;
+		color: $cor-texto !important;
 	}
 }

@@ -51,6 +51,8 @@
                         <a class="pinterest" :href="linkPinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
 
                       </div>
+                    
+                    
                     <a :href="this.event.gotouri" target="_blank" rel="noopener" v-if="this.dates.length > 0" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
 
 
@@ -113,7 +115,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <card-recommended v-for="(item, index) in slideData.slice(0,3)" :key='index' :item="item"></card-recommended>
+                      <card-recommended v-for="(item, index) in slideData.slice(0,9)" :key='index' :item="item"></card-recommended>
                     </div>
                   </div>
           </section>
