@@ -4,7 +4,7 @@
     <swiper-slide v-for="(item, index) in cityList" :key='index' class="col-12 col-xl-3 col-md-4 pr-2  pb-0 pt-0 text-left">
       <div class="pr-2">
         <div class="to-box p-0">
-          <div @click="goto('city',{ uri: item.ds_municipio})" class="cities__container img-fluid rounded-0" style="background-size: cover;height: 300px !important;" :style="{ backgroundImage: 'url(\'' + returnRandomImage(item) + '\')' }" >
+          <div @click="goto('city', item.ds_municipio)" class="cities__container img-fluid rounded-0" style="background-size: cover;height: 300px !important;" :style="{ backgroundImage: 'url(\'' + returnRandomImage(item) + '\')' }" >
             <div class=" cities__featured">
             </div>
           <!--  -->
@@ -95,7 +95,7 @@ export default {
           this.$router.push("/busca/genero/" + item);
           break;
         case "city":
-          this.$router.push("/busca/cidade/" + item);
+          this.$router.push("/cidade/" + item);
           break;
         case "state":
           this.$router.push("/busca/estado/" + item);

@@ -109,7 +109,7 @@
     </div>
     <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1">
       <div class="container pt-2 pb-0 text-left">
-        <h3 class="">Recomendado para você</h3>
+        <h3 class="">Muito mais para você</h3>
        
         <div class="container__arrows">
           <div class="swiper-button-prev swiper-button-prev-cities" slot="button-prev"></div>
@@ -255,7 +255,7 @@ export default {
         // autoplay: true,
         // speed: 1000,
         // loopedSlides: 1,
-        slidesPerView: 2,
+        slidesPerView: 4,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
