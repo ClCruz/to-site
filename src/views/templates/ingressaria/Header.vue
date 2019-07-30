@@ -17,7 +17,7 @@
 
           <div class="collapse navbar-collapse col-md-8 light">
             <div class="nav__links navbar-nav ml-auto">
-                <city-list-header></city-list-header>
+                <!-- <city-list-header></city-list-header> -->
 
               <ul class="navbar-nav">
                 <!-- <li class="nav-item">
