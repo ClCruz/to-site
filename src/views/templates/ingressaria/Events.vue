@@ -99,25 +99,23 @@
     <div class="container__select to-block container__features" id="banner">
       <div class="container pt-2 pb-0 text-left">
         <h3 class="">Experiências em destaque</h3>
-        <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</p>
+        <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</pre>
         <div class="container__arrows">
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
+          <div class="swiper-button-prev swiper-button-prev-featured" slot="button-prev"></div>
+          <div class="swiper-button-next swiper-button-next-featured" slot="button-next"></div>
         </div>
-        <div class="row p-3">
-          <swiper :options="swiperOption" class="col-12 pb-0 mb-0">
-            <swiper-slide v-for="(item, index) in bannerEvents" :key='index' class="col-12 col-xl-6 col-md-6 p-0 pb-0 pt-0 text-left">
-              <div class="pr-1">
-                <div class="to-box p-0 ">
-                  <div @click="goto('event',{ uri: item.uri})" class="img-fluid rounded-0" style="background-size: cover;height: 300px !important" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }">
-                  </div>
-                  <!-- <div class="partner__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div> -->
-                </div>
-              </div>
-            </swiper-slide>
-
-          </swiper>
+       <card-event-featured  :bannerEvents="bannerEvents" :swiperOption="swiperOption"></card-event-featured>
+      </div>
+    </div>
+    <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1">
+      <div class="container pt-2 pb-0 text-left">
+        <h3 class="">Recomendado para você</h3>
+       
+        <div class="container__arrows">
+          <div class="swiper-button-prev swiper-button-prev-cities" slot="button-prev"></div>
+          <div class="swiper-button-next swiper-button-next-cities" slot="button-next"></div>
         </div>
+       <card-cities  :bannerEvents="bannerEvents" :swiperOption="swiperOptionCities"></card-cities>
       </div>
     </div>
     <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
@@ -163,6 +161,10 @@ import Logo from "@/components/App-logo.vue";
 import {
   func
 } from '@/functions';
+
+import {
+  citiesService
+} from "@/components/common/services/cities";
 import {
   ModelSelect
 } from 'vue-search-select'
@@ -177,6 +179,8 @@ import GenreFeaturesLoader from '@/components/loaders/GenreFeaturesLoader.vue';
 import CardEvent from "@/components/Card-event.vue";
 import CardGenreList from "@/components/Card-genreList.vue";
 import CardCityList from "@/components/Card-cityList.vue";
+import CardCities from "@/components/Card-cities.vue";
+import CardEventFeatured from "@/components/Card-eventFeatured.vue";
 import BannerSlide from "@/components/Banner-slide.vue";
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
@@ -196,9 +200,11 @@ export default {
   mixins: [func],
   data() {
     return {
+      desc: '<h1>Teste</h1>',
       siteName: config.info.siteName,
       discoveryBanner: '',
       slideLoaded: false,
+      cityList: [],
       genreListLoaded: false,
       discovery: [],
       slideData: [],
@@ -235,8 +241,28 @@ export default {
           clickable: true
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          nextEl: '.swiper-button-next-featured',
+          prevEl: '.swiper-button-prev-featured'
+        },
+        breakpoints: {
+          800: {
+            slidesPerView: 1
+          }
+        },
+      },
+      swiperOptionCities: {
+        // loop: true,
+        // autoplay: true,
+        // speed: 1000,
+        // loopedSlides: 1,
+        slidesPerView: 2,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next-cities',
+          prevEl: '.swiper-button-prev-cities'
         },
         breakpoints: {
           800: {
@@ -256,7 +282,9 @@ export default {
     GenreFeaturesLoader,
     CardGenreList,
     CardCityList,
-    Datepicker
+    Datepicker,
+    CardCities,
+    CardEventFeatured
   },
   
   methods: {
@@ -397,6 +425,22 @@ export default {
         return isNew;
       });
     },
+    getCities() {
+      citiesService.get().then(
+        response => {
+          if (response !== null) {
+          let temp = response.filter(x => x.img !== undefined && x.img !== null && x.img !== '');
+
+          this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, temp);
+          }
+         
+        },
+        error => {
+          this.hideWaitAboveAll();
+          this.toastError("Falha na execução.");
+        }
+      );
+    },
     getCityList() {
       this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, this.slideData);
     },
@@ -514,6 +558,7 @@ export default {
   created() {
     this.getListResults(this.getDiscovery);
     this.getBanner();
+    this.getCities();
 
     // Fixa navbar ao ultrapassa-lo
     var navbar = $('#navbar'),

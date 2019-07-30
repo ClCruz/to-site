@@ -16,7 +16,7 @@ import {
 export default {
   name: "CityList",
   mounted() {
-    console.log('oi');
+    //console.log('oi');
     this.getListResults();
   },
   data: function () {

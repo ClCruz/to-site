@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/peixeurbano/main.scss",
   "css": "/stylesheets/themes/peixeurbano.ticketoffice.me/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "/assets/logo-peixeurbano.png",
   "favico": "/img/peixeurbano/",
   "videos": {

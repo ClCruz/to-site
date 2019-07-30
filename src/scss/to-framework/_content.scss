@@ -877,6 +877,9 @@
 			color: #444;
 			padding-left: 0;
 		}
+
+		p {
+		}
 	}
 
 	body {
@@ -958,8 +961,6 @@
 		padding-top: 0;
 	}
 
-	.event__item {
-	}
 
 	.event__date {
 		position: absolute;
@@ -1045,7 +1046,6 @@
 			font-size: 12px;
 		}
 	}
-
 	.event__item-date {
 		background: url('/assets/icons/calendar.svg') no-repeat 5px center;
 		background-size: 16px;
@@ -1054,7 +1054,6 @@
 		margin-top: 4px !important;
 		padding-left: 28px !important;
 		transition: 0.5s;
-
 		// color: #333;
 	}
 	.event__item-local {
@@ -1434,4 +1433,93 @@ input:disabled {
 	font-weight: 600 !important;
 	line-height: 1.28571em !important;
 	color: rgb(72, 72, 72) !important;
+}
+
+
+
+	.event__title-featured {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+		line-height: 1.28571em !important;
+		}
+
+	.event__item {
+	}
+
+	.event__item-featured {
+		font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.28571em !important;
+	}
+
+	.card__featured-item {
+		font-size: 12px;
+		font-weight: bold !important;
+		color: white !important;
+		text-transform: uppercase !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-top: 2px !important;
+    padding-bottom: 1px !important;
+    background-color: $secundary !important;
+    border-radius: 4px !important;
+	}
+
+
+.team-1,
+.features,
+#section__slider {
+	p {
+	}
+}
+
+.cities__container {
+	position: relative;
+}
+
+.cities__featured {
+	background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 3%, rgb(0, 0, 0) 100%) !important;
+	opacity: 0.6 !important;
+	position: absolute !important;
+	height: 60% !important;
+	width: 100% !important;
+	left: 0px !important;
+	bottom: 0px !important;
+}
+
+.cities__featured-text {
+	position: absolute !important;
+	bottom: 0px !important;
+	left: 0px !important;
+	right: 0px !important;
+	padding-bottom: 32px !important;
+	text-align: center;
+	color: white !important;
+	span {
+		font-size: 22px !important;
+    font-weight: 800 !important;
+    line-height: 1.44444em !important;
+    color: rgb(255, 255, 255) !important;
+    text-align: center !important;
+		margin: 0px !important;
+		padding: 0 !important;
+	}
+
+}
+
+
+
+.card__featured-item {
+	color: white !important;
+	background-color: #666 !important;
+	&:before {
+		font-family: FontAwesome;
+
+    content: "\f005";
+    display: inline-block;
+    color: #ffd800;
+    font-size: 12px;
+	}
 }
