@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "peixeurbano.ticketoffice.me",
+  "uri": "https://peixeurbano.ticketoffice.me",
+  "api": "https://api.peixeurbano.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.peixeurbano.ticketoffice.me",
+  "admin": "https://admin.peixeurbano.ticketoffice.me",
+  "apikey": "live_5df957e7b83a4833ac36854527f9b2023a1ea4e4de6b4019aa2f52060f3cf70b",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/peixeurbano/main.scss",
+  "css": "/stylesheets/themes/peixeurbano.ticketoffice.me/main.css",
+  "template": "ticketHubSearchHeader",
+  "logo": "/assets/logo-peixeurbano.png",
+  "favico": "/img/peixeurbano/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Peixe urbano",
+    "keywords": "Peixe urbano"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Peixe Urbano",
+    "description": "Peixe urbano",
+    "siteName": "peixeurbano.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Demonstrativo",
+    "companyName": "Peixe Urbano"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_peixeurbano/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_peixeurbano/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_peixeurbano/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_peixeurbano/emailComprador.html",
+      "gift": "../comprar/templates/multi_peixeurbano/emailPresente.html",
+      "signature": "../comprar/templates/multi_peixeurbano/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_peixeurbano/confirmacaoEmail.html"
+
+    }
+  }
+}
