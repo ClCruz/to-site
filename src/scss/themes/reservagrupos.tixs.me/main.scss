@@ -37,9 +37,9 @@ header.bg-dark {
 
 .bg__main {
 	background: $fundo !important;
-	background-position: top !important;
+	background-position: bottom !important;
 	background-size: cover !important;
-	height: 350px !important;
+	height: 510px !important;
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
 	@include MQ(S) {
 		display: none !important;
@@ -82,5 +82,67 @@ header.bg-dark .navbar-nav a.nav-link,
 
 	@include MQ(S) {
 		color: $cor-texto !important;
+	}
+}
+
+
+
+.v--modal-overlay {
+	z-index: 999999 !important;
+}
+
+.team-1 {
+}
+
+.header__search {
+	display: block;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+}
+
+.header__search {
+	display: block !important;
+}
+
+.v-suggestions {
+	width: 70% !important;
+	box-shadow: none !important;
+}
+
+.nav__links {
+	display: none;
+}
+
+.v-suggestions input[type=text] {
+	height: 35px !important;
+	font-size: 13px !important;
+	background-size: 12px;
+	padding-left: 30px;
+
+	&:focus {
+		padding-left: 30px;
+	}
+}
+
+.suggestions {
+	top: 38px !important;
+}
+
+
+.bg__main {
+	@include MQ(S) {
+		display: block !important;
+		padding: 0 !important;
+	}
+
+	.container__search--tickethub {
+		@include MQ(S) {
+			height: 280px !important;
+			padding: 0 !important;
+		}
+	}
+
+	.v-suggestions,
+	h2 {
+		display: none;
 	}
 }
