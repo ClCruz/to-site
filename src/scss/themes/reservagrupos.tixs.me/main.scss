@@ -37,8 +37,9 @@ header.bg-dark {
 
 .bg__main {
 	background: $fundo !important;
-	background-position: 20% !important;
+	background-position: top !important;
 	background-size: cover !important;
+	height: 350px !important;
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
 	@include MQ(S) {
 		display: none !important;
