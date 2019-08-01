@@ -4,9 +4,10 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <section class="to-block bg__ingressaria to-block-mobile" style="">
+          <section class="to-block bg__ingressaria to-block-mobile mt-0 pt-1" style="padding-top: 80px !important;">
+          <!-- Banner -->
 
-            <div class="container">
+            <div class="container mt-5">
               <div class="row">
                 <div class="col-12 col-md-8 col-lg-6">
                   <img class="event__card-img img__mobile" :src="event.img" alt="" style="">
@@ -109,8 +110,7 @@
               <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
               Comprar ingressos
             </div>
-            <!-- Banner -->
-            <div class="container pl-0 mt-5 pt-3 container__calendar">
+             <div class="container pl-0 mt-0 pt-0 container__calendar">
               <div class="">
                 <div class="p-2">
                   <h3 class="" id="horario">Escolha de horário</h3>
@@ -148,6 +148,13 @@
 
                   </div>
 
+
+                </div>
+
+              </div>
+
+            </div>
+
                   <div class="container">
                     <div class="row">
                       <div class="col-sm-12 pb-1 text-left mt-4">
@@ -160,13 +167,6 @@
                       <card-recommended v-for="(item, index) in slideData.slice(0,9)" :key='index' :item="item"></card-recommended>
                     </div>
                   </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
           </section>
         </div>
 

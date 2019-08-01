@@ -454,6 +454,10 @@
 		display: flex;
 		margin-top: -20px;
 		justify-content: flex-end;
+
+		@include MQ(S) {
+			margin-top: 0;
+		}
 	}
 	.swiper-button-disabled {
 		display: block;
@@ -856,7 +860,7 @@
 		position: fixed;
 		right: 20px;
 		bottom: 20px;
-		background: linear-gradient(135deg, #52abd1 10%, #04a6ec);
+				background: $secundary !important;
 		padding: 10px 20px;
 		cursor: pointer;
 		border-radius: 10px;
@@ -869,6 +873,37 @@
 
 		i {
 			font-size: 16px;
+			margin-right: 5px;
+		}
+
+		@include MQ(S) {
+		}
+
+		&:hover {
+			transform: translateY(-1px);
+		}
+	}
+
+
+	.btn__scroll {
+		position: fixed;
+		right: 20px;
+		bottom: 20px;
+		opacity: 0;
+		// background: linear-gradient(135deg, #52abd1 10%, #04a6ec);
+		background: white;
+		padding: 10px 20px;
+		cursor: pointer;
+		border-radius: 10px;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .15);
+		font-size: 13px;
+		font-weight: bold;
+		z-index: 5000;
+		color: #444 !important;
+		transition: 0.4s;
+
+		i {
+			font-size: 14px;
 			margin-right: 5px;
 		}
 

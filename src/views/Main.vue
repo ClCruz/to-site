@@ -399,7 +399,6 @@ export default {
     this.validatetoken();
   },
   created() {
-    console.log(this.template);
     if (this.queryString("logout")) {
       this.$store.dispatch('logout');
     }

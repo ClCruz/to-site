@@ -1523,3 +1523,129 @@ input:disabled {
     font-size: 12px;
 	}
 }
+
+.card__genre-container {
+	display: flex;
+	height: 88px;
+	box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px !important;
+	border-width: 1.3px !important;
+	border-style: solid !important;
+	border-color: rgba(0, 0, 0, 0.1) !important;
+	border-image: initial !important;
+	border-radius: 3px !important;
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+	cursor: pointer;
+	transition: 0.8s;
+	background: #f3f3f3;
+	
+	&:hover {
+		transform: translateY(-1px);
+	}
+}
+
+.card__genre-img {
+	height: 100%;
+	background-size: cover !important;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
+		padding: 0 !important;
+}
+.card__genre-text {
+    padding-left: 12px !important;
+    padding-right: 6px !important;
+    padding-top: 12px !important;
+    padding-bottom: 8px !important;
+
+		h3 {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    line-height: 1.28571em !important;
+		
+    color: rgb(72, 72, 72) !important;
+    margin: 0px !important;
+		letter-spacing: 0.5px;
+			color: hsl(231, 10%, 20%) !important;
+		}
+
+		p {
+			padding-top: 5px;
+			font-size: 10px !important;
+			font-weight: 400 !important;
+			line-height: 1.33333em !important;
+			color: rgb(118, 118, 118) !important;
+			color: hsl(203, 15%, 47%) !important;
+			margin: 0px !important;
+			padding-right: 0 !important;
+		}
+
+		.destaque {
+			font-weight: bold !important;
+			color: hsl(231, 23%, 24%) !important;
+			margin-top: 5px;
+		}
+}
+
+.container__available-times .card__hour {
+	background: $secundary !important;
+	* {
+		color: white !important;
+	}
+
+	&:hover {
+		background: $secundary !important;
+		opacity: 0.9 !important;
+	}
+	.card__hour-icon {
+		// color: indianred !important;
+	}
+
+	@include MQ(S) {
+		padding: 10px 0 !important;
+	}
+}
+
+
+
+.card__hour-icon {
+	color: indianred !important;
+}
+
+.container__available-times .card__hour p.lead {
+	font-size: 1rem;
+}
+
+.card__time {
+	&:hover {
+		background: $secundary !important;
+		opacity: 0.9 !important;
+		*,
+		p.lead {
+			color: white !important;
+			// font-size: 0.95rem !important;
+		}
+
+		i {
+			color: $secundary !important;
+		}
+	}
+}
+
+.card__time-active {
+	background: $secundary !important;
+	*,
+	p.lead {
+		color: white !important;
+	}
+
+	&:hover {
+		background: $secundary !important;
+		opacity: 0.9 !important;
+	}
+}
+
+.icon-active {
+	color: $secundary !important;
+	bottom: -8px !important;
+}
+

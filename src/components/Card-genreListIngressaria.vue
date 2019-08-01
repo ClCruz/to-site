@@ -1,18 +1,19 @@
 <template>
 <div class="row p-3">
   <swiper :options="swiperOption" class="col-12 pb-0 mb-0">
-    <swiper-slide v-for="(item, index) in cityList" :key='index' class="col-12 col-xl-3 col-md-4 pr-2  pb-0 pt-0 text-left">
-      <div class="pr-2">
-        <div class="to-box p-0">
-          <div @click="goto('city', item.ds_municipio)" class="cities__container img-fluid rounded-0" style="background-size: cover;height: 300px !important;" v-lazy:background-image="returnRandomImage(item)">
-            <div class=" cities__featured">
-            </div>
-          <!--  -->
-              <h1 class="cities__featured-text"><span>{{item.ds_municipio  | capitalize()}}</span></h1>
+    <swiper-slide v-for="(item, index) in genreList" @click="goto('genre',item.genreName)" :key='index' class="col-12 col-xl-4 col-md-4 pr-0 pb-0 pt-0 text-left m-0">
+      <a :href="'/busca/genero/' + item.genreName" style="text-decoration: none">
+
+        <div class="card__genre-container col-12 m-2">
+          <div class="card__genre-img col-5 text-left p-0 m-0" :style="{ backgroundImage: 'url(\'' + item.img + '\')' }"></div>
+          <div class="card__genre-text col-7 p-0 m-0">
+
+            <h3 class="">{{ item.genreName | capitalize }}</h3>
+            <p class="">Evento em destaque: </p>
+            <p class="destaque mt-0 pt-0">{{ item.ds_evento | capitalize }}</p>
           </div>
-          <!-- <div class="partner__badge"><i class="fa fa-lg fa-handshake"></i>Compreingressos</div> -->
         </div>
-      </div>
+      </a>
     </swiper-slide>
 
   </swiper>
@@ -28,9 +29,7 @@ import {
 
 export default {
   name: "CardEvent",
-  mounted() {
-    this.getCities();
-  },
+  mounted() {},
   computed: {
     siteName() {
       return config.info.siteName;
@@ -69,12 +68,12 @@ export default {
       citiesService.get().then(
         response => {
           if (response !== null) {
-          let temp = response.filter(x => x.img !== undefined && x.img !== null && x.img !== '');
+            let temp = response.filter(x => x.img !== undefined && x.img !== null && x.img !== '');
 
-          this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, temp);
+            this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, temp);
 
           }
-         
+
         },
         error => {
           this.hideWaitAboveAll();
@@ -109,7 +108,7 @@ export default {
       }
     },
   },
-  props: ['bannerEvents', 'swiperOption'],
+  props: ['genreList', 'swiperOption'],
 
   filters: {
     truncate: function (text, length, clamp) {
@@ -131,9 +130,9 @@ export default {
 
       if (!value) return ''
 
-      return value.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-      });
+      value = value.toString()
+      value = value.toLowerCase();
+      return value.charAt(0).toUpperCase() + value.slice(1)
     }
   }
 };

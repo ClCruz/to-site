@@ -48,111 +48,92 @@
           <div class="p-3">
             <img class="img-fluid rounded-0 discovery" v-bind:src="discoveryBanner[0].imageURI" :alt="discoveryBanner[0].title" @click="goto('discovery', discoveryBanner[0].link)">
           </div>
-          </div>
         </div>
       </div>
     </div>
-    <!-- Destaque generos -->
-    <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
-      <div class="container">
-        <div class="row text-left pt-1 pb-1">
-          <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-            <h3 class="">Nossos teatros <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-            <p class="mt-3 mb-0 pb-0">Descubra eventos específicos de cada teatro</p>
-          </div>
-          <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
-            <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
-          </div>
-          <div @click="goto('local',item.ds_nome_teatro)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in localsList" :key='index' v-else>
-            <p>
-              <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-                <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.ds_nome_teatro }}</span>
-              </div>
-            </p>
-          </div>
+  </div>
+  <!-- Destaque generos -->
+  <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
+    <div class="container">
+      <div class="row text-left pt-1 pb-1">
+        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+          <h3 class="">Nossos teatros <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+          <p class="mt-3 mb-0 pb-0">Descubra eventos específicos de cada teatro</p>
+        </div>
+        <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
+          <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
+        </div>
+        <div @click="goto('local',item.ds_nome_teatro)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in localsList" :key='index' v-else>
+          <p>
+            <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
+              <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.ds_nome_teatro }}</span>
+            </div>
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName !== 'ingressoparatodos.com.br'">
-      <div class="container">
-        <div class="row text-left pt-1 pb-1">
-          <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-            <h3 class="">Explore nossos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-            <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
-          </div>
-
-          <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
-            <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
-          </div>
-          <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in genreList" :key='index' v-else>
-            <p>
-              <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-                <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
-              </div>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Banner -->
-    <div class="container__select to-block container__features" id="banner">
-      <div class="container pt-2 pb-0 text-left">
-        <h3 class="">Experiências em destaque</h3>
-        <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</pre>
+  <!-- Banner -->
+  <div class="container__select to-block container__features" id="banner">
+    <div class="container pt-2 pb-0 text-left">
+      <h3 class="">Experiências em destaque</h3>
+      <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</pre>
         <div class="container__arrows">
           <div class="swiper-button-prev swiper-button-prev-featured" slot="button-prev"></div>
           <div class="swiper-button-next swiper-button-next-featured" slot="button-next"></div>
         </div>
-       <card-event-featured  :bannerEvents="bannerEvents" :swiperOption="swiperOption"></card-event-featured>
-      </div>
+        <card-event-featured :bannerEvents="bannerEvents" :swiperOption="swiperOption"></card-event-featured>
     </div>
-    <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1">
-      <div class="container pt-2 pb-0 text-left">
-        <h3 class="">Muito mais para você</h3>
-       
-        <div class="container__arrows">
-          <div class="swiper-button-prev swiper-button-prev-cities" slot="button-prev"></div>
-          <div class="swiper-button-next swiper-button-next-cities" slot="button-next"></div>
-        </div>
-       <card-cities  :bannerEvents="bannerEvents" :swiperOption="swiperOptionCities"></card-cities>
-      </div>
-    </div>
-    <section class="features" style="background: white" data-block-type="features" data-id="3" id="features" v-if="siteName == 'ingressoparatodos.com.br'">
-      <div class="container">
-        <div class="row text-left pt-1 pb-1">
-          <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-            <h3 class="">Explore nossos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-            <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
-          </div>
-
-          <div class="col-12 p-0 mt-2 pt-3" style="" v-if="!genreListLoaded">
-            <GenreFeaturesLoader :speed="2" :animate="true"></GenreFeaturesLoader>
-          </div>
-          <div @click="goto('genre',item.genreName)" class="col-6 col-md-2 col-sm-2 p-0 card__container mt-0" style="" v-for="(item, index) in genreList" :key='index' v-else>
-            <p>
-              <div alt="image" class="img-fluid rounded card__home" :class="['card__home-' + index]">
-                <span class="genre__ingressaria" style="text-transform: uppercase">{{ item.genreName }}</span>
-              </div>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="to-block team-1 mt-0 pt-0" id="events">
-      <div class="container">
-        <div class="row row__events">
-          <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-            <h3 class="">Próximos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-            <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Encontre um evento com toda a facilidade que você precisa</p>
-          </div>
-          <p style="font-size: 16px; font-weight: bold" class="mt-3" v-if="filteredData.length == 0">{{filteredData.length == 0 ? 'Nenhum evento encontrado' : ''}}</p>
-
-          <card-event v-for="(item, index) in computedFilteredData" :key='index' :item="item"></card-event>
-        </div>
-      </div>
-    </section>
   </div>
+  <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1">
+    <div class="container pt-2 pb-0 text-left">
+      <h3 class="">Muito mais para você</h3>
+
+      <div class="container__arrows">
+        <div class="swiper-button-prev swiper-button-prev-cities" slot="button-prev"></div>
+        <div class="swiper-button-next swiper-button-next-cities" slot="button-next"></div>
+      </div>
+      <card-cities :bannerEvents="bannerEvents" :swiperOption="swiperOptionCities"></card-cities>
+    </div>
+  </div>
+
+  <!-- Genêros em destaque -->
+  <div class="container__select to-block container__features" id="banner">
+    <div class="container pt-2 pb-0 text-left">
+      <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+        <h3 class="">Explore nossas categorias <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+        <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
+
+        <div class="container__arrows">
+          <div class="swiper-button-prev swiper-button-prev-genres" slot="button-prev"></div>
+          <div class="swiper-button-next swiper-button-next-genres" slot="button-next"></div>
+        </div>
+      </div>
+      <card-genre-list-ingressaria :genreList="genreList" :swiperOption="swiperOptionGenres"></card-genre-list-ingressaria>
+    </div>
+  </div>
+  
+  <section class="to-block team-1 mt-0 pt-0" id="events">
+    <div class="container">
+      <div class="row row__events">
+        <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+          <h3 class="">Próximos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+          <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Encontre um evento com toda a facilidade que você precisa</p>
+        </div>
+        <p style="font-size: 16px; font-weight: bold" class="mt-3" v-if="filteredData.length == 0">{{filteredData.length == 0 ? 'Nenhum evento encontrado' : ''}}</p>
+
+        <card-event v-for="(item, index) in computedFilteredData" :key='index' :item="item"></card-event>
+      </div>
+    </div>
+  </section>
+
+  <div class="btn__scroll" id="btn__scroll" @click="scrollToTop()" title="Selecionar horários">
+    <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
+    <i class="fa fa-sm fa-arrow-up" title="Visualizar opções de compra"></i>
+    Retornar ao topo
+  </div>
+</div>
 </template>
 
 <script>
@@ -168,7 +149,9 @@ import {
 import {
   ModelSelect
 } from 'vue-search-select'
-import { serverBus } from '@/main';
+import {
+  serverBus
+} from '@/main';
 
 import AppSearch from "@/components/App-search.vue";
 import config from '@/config';
@@ -178,6 +161,7 @@ import GenreFeaturesLoader from '@/components/loaders/GenreFeaturesLoader.vue';
 
 import CardEvent from "@/components/Card-event.vue";
 import CardGenreList from "@/components/Card-genreList.vue";
+import CardGenreListIngressaria from "@/components/Card-genreListIngressaria.vue";
 import CardCityList from "@/components/Card-cityList.vue";
 import CardCities from "@/components/Card-cities.vue";
 import CardEventFeatured from "@/components/Card-eventFeatured.vue";
@@ -250,6 +234,26 @@ export default {
           }
         },
       },
+      swiperOptionGenres: {
+        // loop: true,
+        autoplay: true,
+        // speed: 000,
+        // loopedSlides: 1,
+        slidesPerView: 3,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next-genres',
+          prevEl: '.swiper-button-prev-genres'
+        },
+        breakpoints: {
+          800: {
+            slidesPerView: 1
+          }
+        },
+      },
       swiperOptionCities: {
         // loop: true,
         // autoplay: true,
@@ -281,13 +285,32 @@ export default {
     BannerSlide,
     GenreFeaturesLoader,
     CardGenreList,
+    CardGenreListIngressaria,
     CardCityList,
     Datepicker,
     CardCities,
     CardEventFeatured
   },
-  
+
   methods: {
+    shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+},
     capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     },
@@ -395,7 +418,6 @@ export default {
         response => {
           this.filteredData = response;
           this.hideWaitAboveAll();
-          
 
         },
         error => {
@@ -429,11 +451,11 @@ export default {
       citiesService.get().then(
         response => {
           if (response !== null) {
-          let temp = response.filter(x => x.img !== undefined && x.img !== null && x.img !== '');
+            let temp = response.filter(x => x.img !== undefined && x.img !== null && x.img !== '');
 
-          this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, temp);
+            this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, temp);
           }
-         
+
         },
         error => {
           this.hideWaitAboveAll();
@@ -445,7 +467,9 @@ export default {
       this.cityList = this.removeDuplicatesBy(x => x.ds_municipio, this.slideData);
     },
     getGenreList() {
-      this.genreList = this.removeDuplicatesBy(x => x.genreName, this.filteredData).slice(0, 6);
+      let temp = this.removeDuplicatesBy(x => x.genreName, this.filteredData);
+
+      this.genreList = this.shuffle(temp);
 
       this.genreListLoaded = true;
     },
@@ -520,7 +544,6 @@ export default {
 
           // console.log(this.slideData);
 
-
           if (callback !== null && callback !== undefined) {
             callback();
           }
@@ -531,6 +554,11 @@ export default {
         }
       );
     },
+    scrollToTop() {
+ // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);    }
   },
   computed: {
     computedFilteredData() {
@@ -551,7 +579,6 @@ export default {
 
       // console.log(ret);
 
-
       return ret;
     },
   },
@@ -571,7 +598,14 @@ export default {
       } else {
         navbar.removeClass('navbar-fixed-top');
       }
+
+      if ($window.scrollTop() > 400) {
+        $('#btn__scroll').css("opacity", 1);
+      } else {
+        $('#btn__scroll').css("opacity", 0);
+      }
     });
+    
 
   },
   beforeUpdate() {
@@ -597,9 +631,10 @@ export default {
     },
     capitalize: function (value) {
       if (!value) return ''
-      value = value.toString()
-      value = value.toLowerCase();
-      return value.charAt(0).toUpperCase() + value.slice(1)
+      
+      return value.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      });
     }
   }
 

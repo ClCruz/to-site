@@ -80,7 +80,7 @@ header.bg-dark .navbar-nav a.nav-link,
 }
 
 .card__time-active {
-	background: rgb(4, 54, 110) 47.7%;
+	background: rgb(4, 54, 110) 47.7% !important;
 	*,
 	p.lead {
 		color: white !important;
@@ -228,5 +228,5 @@ footer p {
 }
 
 .btn__comprar {
-	background: linear-gradient(135deg, rgb(3, 59, 122) 30%, rgb(4, 54, 110)) !important;
+			background: $secundary !important;
 }
