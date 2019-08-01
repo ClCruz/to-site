@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "ingressos.sobchuvas.com",
+  "uri": "https://ingressos.sobchuvas.com",
+  "api": "https://api.ingressos.sobchuvas.com",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.ingressos.sobchuvas.com",
+  "admin": "https://admin.ingressos.sobchuvas.com",
+  "apikey": "live_4b365b5dab6a45c1b3229081252af227914e665ffc974eaa86ea4b89e073225a",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/sobchuvas/main.scss",
+  "css": "/stylesheets/themes/ingressos.sobchuvas.com/main.css",
+  "template": "Ingressaria",
+  "logo": "/assets/logo-sobchuvas.png",
+  "favico": "/img/sobchuvas/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "teatro, sob chuvas",
+    "keywords": "sob chuvas, teatro"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "sob chuvas",
+    "description": "teatro, sob chuvas",
+    "siteName": "ingressos.sobchuvas.com",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": " ",
+    "companyName": "Sob Chuvas"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_sobchuvas/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_sobchuvas/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_sobchuvas/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_sobchuvas/emailComprador.html",
+      "gift": "../comprar/templates/multi_sobchuvas/emailPresente.html",
+      "signature": "../comprar/templates/multi_sobchuvas/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_sobchuvas/confirmacaoEmail.html"
+
+    }
+  }
+}
