@@ -98,21 +98,7 @@
           <card-event v-for="(item, index) in computedFilteredData" :key='index' :item="item"></card-event>
         </div>
       </div>
-       <div class="container" id="ad_container">
-      <div class="container p-0">
-        <div class="row">
-          <div class="col-12 pr-0 col-lg-12 text-left">
-            <div class="p-1 pr-0 mt-0 mb-0 pb-0 text-center" style="">
-            <p style="color: white" class="pb-0 mb-0 text-left">Patrocinado: </p>
-              <a href="https://www.tixs.me" target="_blank">
-              <img class="img-fluid rounded-0 discovery" src="/assets/discovery/SITE-1-1.png" style="height: 120px; width: 100%">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </section>
+     </section>
   </div>
 </template>
 
