@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/sobchuvas/main.scss",
   "css": "/stylesheets/themes/ingressos.sobchuvas.com/main.css",
-  "template": "Ingressaria",
+  "template": "ingressaria",
   "logo": "/assets/logo-sobchuvas.png",
   "favico": "/img/sobchuvas/",
   "videos": {
