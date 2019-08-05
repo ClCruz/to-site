@@ -1255,9 +1255,14 @@
 
 	body.swal2-toast-shown .swal2-container.swal2-top-end,
 	body.swal2-toast-shown .swal2-container.swal2-top-right {
-		z-index: 9999 !important;
+		z-index: 999999 !important;
 		padding: 0;
 		margin: 10px;
 		border-radius: 5px;
 	}
+}
+
+
+.swal2-container {
+	z-index: 9999999 !important;
 }
