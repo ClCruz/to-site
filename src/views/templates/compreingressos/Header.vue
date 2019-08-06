@@ -38,9 +38,9 @@
           </div>
 
           <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex">
-                <city-list-header></city-list-header>
-            
+            <city-list-header></city-list-header>
           </ul>
+            <a href="http://teatro.compreingressos.com/dologin" class="btn btn-light to-btn hidden-xs hidden-sm"><span  class="" > Minha Conta</span></a>
         </nav>
       </div>
     </header>
@@ -87,11 +87,13 @@
     </div>
     <div class="col-4">
       <div class="icon"></div>
+       <a href="http://teatro.compreingressos.com/dologin" class="btn btn-light to-btn hidden-xs hidden-sm"><span  class="" >Itaucard</span></a>
      
     </div>
     <div class="col-12">
       <app-search></app-search>
     </div>
+
     <b-collapse is-nav id="nav_collapse">
 
       <b-navbar-nav>

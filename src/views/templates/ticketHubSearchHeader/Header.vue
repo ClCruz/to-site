@@ -180,6 +180,7 @@ export default {
     },
   },
   created() {
+    // this.login()
   },
   methods: {
     login() {

@@ -347,3 +347,42 @@ header.bg-dark .navbar-nav a.nav-link,
   }
 
 }
+
+
+.navbar-fixed-top .to-btn,
+.to-btn {
+	font-size: 13px !important;
+	color: #fff !important;
+    border: solid 2px #fff !important;
+    background: 0 0 !important;
+    border-radius: 3px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+		vertical-align: middle !important;
+		
+		a {
+			color: #fff !important;
+			text-decoration: none;
+
+
+		&:hover{
+			color: $secundary !important;
+				}
+		}
+
+		&:hover{
+	color: $secundary !important;
+    border: solid 2px #fff !important;
+		background: #fff !important;
+		
+
+		a {
+			color: $secundary !important;
+			text-decoration: none;
+
+		}
+}}
