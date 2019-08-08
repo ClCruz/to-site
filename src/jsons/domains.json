@@ -265,5 +265,9 @@
     "ingressos.sobchuvas.com": "sobchuvas",
     "api.ingressos.sobchuvas.com": "sobchuvas",
     "compra.ingressos.sobchuvas.com": "sobchuvas",
-    "admin.ingressos.sobchuvas.com": "sobchuvas"
+    "admin.ingressos.sobchuvas.com": "sobchuvas",
+    "demo.ticketoffice.me": "demo",
+    "api.demo.ticketoffice.me": "demo",
+    "compra.demo.ticketoffice.me": "demo",
+    "admin.demo.ticketoffice.me": "demo"
 }
