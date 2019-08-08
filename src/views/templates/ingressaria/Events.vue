@@ -524,7 +524,7 @@ export default {
     },
     getListResults(callback) {
 
-      this.getLocation(this.getListResultAgain);
+      // this.getLocation(this.getListResultAgain);
 
       eventService.list(this.locale.city.name, this.locale.state.name).then(
         response => {
