@@ -10,75 +10,87 @@
                 <div class="col-12" style="background: rgba(0,0,0,0.3); border-radius: 5px">
                   <EventImageIngressariaLoader class="event__card-img" v-if="!imageLoaded && !roomLoaded && !timeLoaded" :speed="2" :animate="true" style="height: 320px !important; max-width: 568px !important; box-shadow: none!important"></EventImageIngressariaLoader>
                   <img class="event__card-img" :src="event.img" alt="" style="height: 360px !important; max-width: 800px !important" v-else>
-                  </div>
                 </div>
-                <div class="row">
-                  <div class="col-lg-2"></div>
-                  <div class="col-12 col-md-12 col-lg-8 text-center">
-                    <img class="event__card-img img__mobile" :src="event.img" alt="" style="">
-                    <div>
-                      <h1 class="title mb-2 mt-0">{{event.NomPeca}}</h1>
-                      <span class="event__badges">
-                        <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
-                        <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
-                        <a :href="'/busca/local/' + event.ds_local_evento"  class="badge badge__icon badge__state badge-light" id="badge__address">{{event.ds_local_evento}}</a>
-                        <a :href="'/busca/cidade/' + event.city" class="badge badge__icon badge__city badge-secondary" id="badge__city">{{event.cityBadgeText}}</a
-                        >
-                        <a href="#" class="badge badge__icon badge__calendar badge-success" id="badge__calendar">{{event.dates}}</a>
+              </div>
+              <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-12 col-md-12 col-lg-8 text-center">
+                  <img class="event__card-img img__mobile" :src="event.img" alt="" style="">
+                  <div>
+                    <h1 class="title mb-2 mt-0">{{event.NomPeca}}</h1>
+                    <span class="event__badges">
+                      <a href="#" class="badge badge__icon badge__genre badge-danger noClick" id="badge__gender" @click="gotoSearch(event.TipPeca, 'genre')">{{event.TipPeca}}</a>
+                      <a href="#" :class="parentalrating(event)" id="badge__age">{{event.CenPeca}}</a>
+                      <a :href="'/busca/local/' + event.ds_local_evento" class="badge badge__icon badge__state badge-light" id="badge__address">{{event.ds_local_evento}}</a>
+                      <a :href="'/busca/cidade/' + event.city" class="badge badge__icon badge__city badge-secondary" id="badge__city">{{event.cityBadgeText}}</a>
+                      <a href="#" class="badge badge__icon badge__calendar badge-success" id="badge__calendar">{{event.dates}}</a>
 
-                        <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
-                        <a href="#" class="badge badge__icon badge__partner badge-info noClick" v-if="event.showPartnerInfo === 1" id="badge__price">Vendido por {{event.nameSite}}</a>
-                        <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a>
-                        <span class="flag" id="">
-                          <img v-for="(item) in event.badge" v-bind:key="item.tag" :id="item.tag" :title="item.tag" :src="item.img" alt="">
-                          <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
-                        </span>
+                      <a href="#" class="badge badge__icon badge__money badge-success noClick" id="badge__price">{{event.valores}}</a>
+                      <a href="#" class="badge badge__icon badge__partner badge-info noClick" v-if="event.showPartnerInfo === 1" id="badge__price">Vendido por {{event.nameSite}}</a>
+                      <a href="#" v-if="imageLoaded" class="badge badge__icon badge__local badge-info" id="badge__map" @click="map($event)">Ver no mapa</a>
+                      <span class="flag" id="">
+                        <img v-for="(item) in event.badge" v-bind:key="item.tag" :id="item.tag" :title="item.tag" :src="item.img" alt="">
+                        <img v-for="(ipromo, index) in event.promo" :key="index" :src="ipromo.img" :title="ipromo.tag" :alt="ipromo.tag">
+                      </span>
                     </span>
 
-                      <hr data-content="Compartilhar" class="divider mb-0 mt-2" style="max-width: 460px; background: none">
-                      <div class="row" id="share">
+                    <hr data-content="Compartilhar" class="divider mb-0 mt-2" style="max-width: 460px; background: none">
+                    <div class="row" id="share">
 
-                        <!-- facebook -->
-                        <a class="facebook" :href="linkFacebook" target="blank"><i class="fab fa-facebook-f"></i></a>
+                      <!-- facebook -->
+                      <a class="facebook" :href="linkFacebook" target="blank"><i class="fab fa-facebook-f"></i></a>
 
-                        <!-- twitter -->
-                        <a class="twitter" :href="linkTwitter" target="blank"><i class="fab fa-twitter"></i></a>
+                      <!-- twitter -->
+                      <a class="twitter" :href="linkTwitter" target="blank"><i class="fab fa-twitter"></i></a>
 
-                        <!-- linkedin -->
-                        <!-- <a class="linkedin" :href="linkLinkedin" target="blank"><i class="fab fa-linkedin-in"></i></a> -->
+                      <!-- linkedin -->
+                      <!-- <a class="linkedin" :href="linkLinkedin" target="blank"><i class="fab fa-linkedin-in"></i></a> -->
 
-                        <!-- pinterest -->
-                        <a class="pinterest" :href="linkPinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
+                      <!-- pinterest -->
+                      <a class="pinterest" :href="linkPinterest" target="blank"><i class="fab fa-pinterest-p"></i></a>
 
-                      </div>
-                    
-                    
-                    <a :href="this.event.gotouri" target="_blank" rel="noopener" v-if="this.dates.length > 0" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
+                    </div>
 
+                    <a v-b-modal.modal-1 v-if="this.dates.length > 0" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
 
-                      <h3 class="mt-3 pb-4">Detalhes do evento</h3>
+                    <h3 class="mt-3 pb-4">Detalhes do evento</h3>
 
-                      <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0 text-left mt-2 pt-2" v-html="event.description"></span></p>
-                      <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
-                        <div class="btn to-btn dark">
-                          LER MAIS
-                        </div>
-                      </div>
-                      <div id='read-less' @click="showreadmoreclick" v-if="showreadandless && !showreadmore">
-                        <div class="btn to-btn dark">
-                          LER MENOS
-                        </div>
+                    <p id='read-more-p' v-if="event.loaded" class="lead mt-0 pt-0" v-bind:class="{ 'read-more-p-limited': showreadmore }" ref="eventdesc"><span class="event__description mt-0 p-0 text-left mt-2 pt-2" v-html="event.description"></span></p>
+                    <div id='read-more' @click="showreadmoreclick" v-if="showreadandless && showreadmore">
+                      <div class="btn to-btn dark">
+                        LER MAIS
                       </div>
                     </div>
-                    <a :href="this.event.gotouri" target="_blank" rel="noopener" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold" v-if="this.dates.length > 0"><i class="fa fa-sm mr-2 fa-running" ></i>Ir para a loja</a>
-
+                    <div id='read-less' @click="showreadmoreclick" v-if="showreadandless && !showreadmore">
+                      <div class="btn to-btn dark">
+                        LER MENOS
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
+                  
+                    <a v-b-modal.modal-1 v-if="this.dates.length > 0" class="btn to-btn dark" style="background: #ca1835 !important; border: none !important; font-weight: bold"><i class="fa fa-sm mr-2 fa-running"></i>Ir para a loja</a>
 
-                    <!-- Share -->
+                </div>
+                <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
 
-                    <!-- Produtor -->
-                    <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
+                  <b-modal id="modal-1" centered size="xl" v-model="show" :header-bg-variant="dark" :header-text-variant="headerTextVariant" :body-bg-variant="dark" :body-text-variant="bodyTextVariant" :footer-bg-variant="dark" :footer-text-variant="footerTextVariant" title="Atenção">
+                    <p>VOCÊ SERÁ DIRECIONADO PARA O SITE OFICIAL DE VENDA DE INGRESSOS DESTE EVENTO</p>
+                    <p>A responsabilidade pela qualidade e entrega do espetáculo e suas condições, horário, local e elenco são exclusivas da produção do espetáculo.</p>
+                    <p>Esse site apenas divulga os eventos.</p>
+                    <div slot="modal-footer" class="w-100 pr-3 text-right">
+                      <!-- <p class="float-left">Modal Footer Content</p> -->
+                      <b-button variant="dark" size="sm" class=" mr-2" @click="show=false">
+                        Fechar
+                      </b-button>
+                      <b-button variant="danger" size="sm" class=""  :href="this.event.gotouri" target="_blank" rel="noopener" >
+                        Prosseguir
+                      </b-button>
+                    </div>
+                  </b-modal>
+                  <!-- Share -->
+
+                  <!-- Produtor -->
+                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;">
                     <h3 class="mt-3">Sobre o parceiro</h3>
                     <div class="row align-items-center ">
                       <div class="col-4 ">
@@ -91,33 +103,33 @@
                       </div>
                     </div>
                   </div> -->
-                    <!-- Local do evento -->
-                    <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
+                  <!-- Local do evento -->
+                  <div class="col-md-12 col-10 m-sm-auto p-0 pt-3 mb-0" style="max-width: 460px;">
 
-                    </div>
+                  </div>
 
-                    <!-- Horários -->
-                    <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;" v-if="imageLoaded && roomLoaded && timeLoaded">
+                  <!-- Horários -->
+                  <!-- <div class="col-md-12 col-10 m-sm-auto p-0" style="max-width: 460px;" v-if="imageLoaded && roomLoaded && timeLoaded">
                       <iframe class="map" :src="returnMap()"
           width="100%" height="300" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 
                   </div> -->
-                  </div>
                 </div>
               </div>
+            </div>
 
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-12 pb-1 text-left mt-4">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 pb-1 text-left mt-4">
 
-                        <h3 style="font-size: 17px" class="result__container mb-1">Outros eventos na sua região:
-                        </h3>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <card-recommended v-for="(item, index) in slideData.slice(0,9)" :key='index' :item="item"></card-recommended>
-                    </div>
-                  </div>
+                  <h3 style="font-size: 17px" class="result__container mb-1">Outros eventos na sua região:
+                  </h3>
+                </div>
+              </div>
+              <div class="row">
+                <card-recommended v-for="(item, index) in slideData.slice(0,9)" :key='index' :item="item"></card-recommended>
+              </div>
+            </div>
           </section>
         </div>
 
@@ -314,6 +326,14 @@ export default {
 
   data() {
     return {
+      variants: ['light', 'dark'],
+      headerBgVariant: 'dark',
+      headerTextVariant: 'light',
+      bodyBgVariant: 'dark',
+      bodyTextVariant: 'light',
+      footerBgVariant: 'dark',
+      footerTextVariant: 'light',
+      show: false,
       siteName: config.info.siteName,
       linkFacebook: '',
       linkTwitter: '',
@@ -466,8 +486,7 @@ export default {
         this.showreadmore = true;
       }
     },
-    setdescription() {
-    },
+    setdescription() {},
     scrollTo() {
       var element = document.getElementById("horario");
       var top = element.offsetTop;
@@ -596,7 +615,6 @@ export default {
             if (this.validateJSON(response)) {
               this.presentantion = response;
               this.timeLoaded = true;
-              
 
               if (callback !== null && callback !== undefined) {
                 callback();
@@ -631,8 +649,6 @@ export default {
 
       eventService.description(eventKey, isCI).then(
         response => {
-
-
 
           this.hideWaitAboveAll();
           this.processing = false;
@@ -697,7 +713,7 @@ export default {
 
             this.imageLoaded = true;
 
-                this.getListResults();
+            this.getListResults();
 
           }
         },

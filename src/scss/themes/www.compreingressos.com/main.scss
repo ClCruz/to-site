@@ -348,7 +348,23 @@ header.bg-dark .navbar-nav a.nav-link,
 
 }
 
+.modal-dialog {
+}
 
+.modal-header {
+	background-color: #222;
+	color: white;
+}
+
+	.modal-content {
+		background-color: #222;
+		// margin-top: 150px;
+
+			p {
+				margin-top: 0;
+				font-size: 13px;
+			}
+	}
 .navbar-fixed-top .to-btn,
 .to-btn {
 	font-size: 13px !important;
