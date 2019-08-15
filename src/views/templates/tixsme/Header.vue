@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="ad-tixsme container-fluid pt-0 mt-0" style="width: 100% !important;); background-size: contain; background-repeat: no-repeat; background-position: center top" v-bind:style="{ backgroundImage: 'url(' + getImage() + ')' }" >
+    <div class="ad-tixsme container-fluid pt-0 mt-0" style="width: 100% !important;); background-size: contain; background-repeat: no-repeat; background-position: center top; " v-bind:style="{ backgroundImage: 'url(' + getImage() + ')' }" >
     </div>
  <b-navbar class="header__mobile" style="display: none">
 
@@ -179,7 +179,7 @@ export default {
     getImage() {
       var random = Math.floor(Math.random() * (4 - 1)) + 1;
 
-      return '/assets/discovery/' + random + '.png';
+      return '/assets/discovery/' + random + '-1.png';
     },
     login() {
       this.$route.matched[0].instances.default.$parent.login();
@@ -273,19 +273,19 @@ export default {
 <style lang="scss" scoped>
 .ad-tixsme {
   @media (min-width: 2000px) {
-    height: 240px;
+    height: 600px;
     padding: 0 !important;
   }
   @media (max-width: 2000px) {
-    height: 160px;
+    height: 600px;
     padding: 0 !important;
   }
   @media (max-width: 1400px) {
-    height: 140px;
+    height: 600px;
     padding: 0 !important;
   }
   @media (max-width: 960px) {
-    height: 80px;
+    height: 180px;
   }
 }
 </style>
