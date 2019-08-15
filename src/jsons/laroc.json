@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "laroc.ticketoffice.me",
+  "uri": "https://laroc.ticketoffice.me",
+  "api": "https://api.laroc.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.laroc.ticketoffice.me",
+  "admin": "https://admin.laroc.ticketoffice.me",
+  "apikey": "live_b00fed6edfb84448b9536caa9f52e2628027bf63c7124779860520e65a6539d5",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/laroc/main.scss",
+  "css": "/stylesheets/themes/laroc.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-laroc.jpeg",
+  "favico": "/img/laroc/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Laroc",
+    "keywords": "Laroc"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Laroc",
+    "description": "Laroc",
+    "siteName": "laroc.ticketoffice.me",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rod. Dom Pedro I, km 118",
+    "companyName": "Laroc Club"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_laroc/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_laroc/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_laroc/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_laroc/emailComprador.html",
+      "gift": "../comprar/templates/multi_laroc/emailPresente.html",
+      "signature": "../comprar/templates/multi_laroc/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_laroc/confirmacaoEmail.html"
+
+    }
+  }
+}
