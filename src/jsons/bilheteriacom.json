@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "bilheteriacom.ticketoffice.me",
+  "uri": "https://bilheteriacom.ticketoffice.me",
+  "api": "https://api.bilheteriacom.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.bilheteriacom.ticketoffice.me",
+  "admin": "https://admin.bilheteriacom.ticketoffice.me",
+  "apikey": "live_6ec640d65ff646dfa9a2faaa22f0e88a176e44debb9945de97dc7727f092dd58",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/bilheteriacom/main.scss",
+  "css": "/stylesheets/themes/bilheteriacom.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-bilheteriacom.png",
+  "favico": "/img/bilheteriacom/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "bilheteria.com",
+    "keywords": "bilheteria.com"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Bilheteria",
+    "description": "bilheteria.com",
+    "siteName": "bilheteriacom.ticketoffice.me",
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": " ",
+    "companyName": " "
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_bilheteriacom/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_bilheteriacom/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_bilheteriacom/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_bilheteriacom/emailComprador.html",
+      "gift": "../comprar/templates/multi_bilheteriacom/emailPresente.html",
+      "signature": "../comprar/templates/multi_bilheteriacom/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_bilheteriacom/confirmacaoEmail.html"
+
+    }
+  }
+}

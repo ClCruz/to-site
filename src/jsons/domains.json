@@ -273,5 +273,9 @@
     "laroc.ticketoffice.me": "laroc",
     "api.laroc.ticketoffice.me": "laroc",
     "compra.laroc.ticketoffice.me": "laroc",
-    "admin.laroc.ticketoffice.me": "laroc"
+    "admin.laroc.ticketoffice.me": "laroc",
+    "bilheteriacom.ticketoffice.me": "bilheteriacom",
+    "api.bilheteriacom.ticketoffice.me": "bilheteriacom",
+    "compra.bilheteriacom.ticketoffice.me": "bilheteriacom",
+    "admin.bilheteriacom.ticketoffice.me": "bilheteriacom"
 }
