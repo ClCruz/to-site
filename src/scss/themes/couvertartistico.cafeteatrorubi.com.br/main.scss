@@ -3,36 +3,193 @@
 @import "override.scss";
 @import "../../to-framework/main.scss";
 
-.bg-dark {
-	// background-color: rgb(202, 8, 19) !important;
-	background-color: rgb(0, 0, 0) !important;
+$cor-fundo: $primary;
+$tamanho-header: 55px;
+$gradiente: $secundary !important;
+// colocar imagem dentro de url ou cor hex
+$fundo: url('https://www.wishhotels.co/content/salvador/images/musica/foto3.jpg') rgba(30,30,30,0.3);
+$barra-topo: false;
+
+
+header.bg-dark {
+	background-color: $cor-fundo !important;
+	border-bottom: 4px solid $secundary;
 }
 
-$gradiente: $secundary !important;
+
+
+.card__featured-item {
+	color: white !important;
+	background-color: #666 !important;
+	&:before {
+		font-family: FontAwesome;
+
+    content: "\f005";
+    display: inline-block;
+    color: #ffd800;
+    font-size: 12px;
+	}
+}
+
+
+.suggestions {
+	top: 38px !important;
+}
+
+.team-1,
+.features,
+#section__slider {
+	background: #f3f3f3 !important;
+}
+
+.footer__logo .img {
+	height: 40px;
+}
 
 .header__logo .img {
-	height: 55px;
+	height: $tamanho-header;
 	width: 100%;
 	background-position: left center;
 }
 
-.swal2-progresscircle {
-	background: $secundary !important;
+#ddown1 button {
+	color: #000 !important;
 }
 
-.swal2-styled {
-	font-size: 0.8rem;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-top: 5px;
-	background: $secundary !important;
-	border: none;
-	color: white;
-	transition: 0.5s;
 
-	&:hover {
-		-webkit-transform: translateY(-2px);
-		transform: translateY(-2px);
-		@include box-shadow();
+.bg__main {
+	background: $fundo !important;
+	background-position: center !important;
+	background-size: cover !important;
+	background-blend-mode: multiply;
+	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
+	@include MQ(S) {
+		display: none !important;
 	}
+}
+
+.eventHeader header.bg-dark,
+.header__mobile {
+	background: $cor-fundo !important;
+}
+
+.v--modal-overlay {
+	z-index: 999998 !important;
+}
+
+.navbar-fixed-top {
+	background: $cor-fundo !important;
+}
+
+
+.navbar-fixed-top .to-btn {
+	font-size: 13px !important;
+}
+
+footer.bg-dark {
+	background-color: $cor-fundo !important;
+	color: $cor-texto !important;
+}
+
+footer a,
+footer p,
+header.bg-dark .navbar-nav a.nav-link
+{	color: $cor-texto !important;
+	font-weight: normal;
+
+	@include MQ(S) {
+		color: $cor-texto !important;
+	}
+}
+
+
+@if $barra-topo {
+
+	.container__search--tickethub {
+		display: none !important;
+	}
+	
+	.v--modal-overlay {
+		z-index: 999998 !important;
+	}
+	
+	.team-1 {
+	}
+	
+	.header__search {
+		display: block;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+	}
+	
+	.header__search {
+		display: block !important;
+	}
+	
+	.v-suggestions {
+		width: 70% !important;
+		box-shadow: none !important;
+	}
+	
+	.nav__links {
+		display: none;
+	}
+
+	.v-suggestions input[type=text]:focus {
+    width: 100%;
+    padding-left: 40px;
+    background-position-x: 10px;
+    background-position-y: center;
+    background-size: 12px;
+}
+	
+	.v-suggestions input[type=text] {
+		height: 35px !important;
+		font-size: 13px !important;
+		background-size: 12px;
+		padding-left: 30px;
+		border: solid 1px #ccc;
+		box-shadow: none;
+		border-radius: 4px;
+	
+		&:focus {
+			padding-left: 30px;
+		}
+	}
+}
+
+footer.bg-dark {
+	background: $cor-fundo !important;
+}
+
+
+.ad__badge-it {
+	padding-right: 4px;
+	font-size: 12px !important;
+	background: #f60 !important;
+	 
+}
+.ad__badge-it:after,
+.ad__badge-it:before {
+	display: none;
+}
+
+.navbar-fixed-top .to-btn{
+	font-size: 13px !important;
+	color: $cor-texto !important;
+    border: solid 2px $cor-texto !important;
+    background: 0 0 !important;
+    border-radius: 3px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    vertical-align: middle !important;
+
+		&:hover{
+	color: #fff !important;
+    border: solid 2px $cor-texto !important;
+    background: $cor-texto !important;
+		}
 }

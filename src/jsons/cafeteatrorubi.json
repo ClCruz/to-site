@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/cafeteatrorubi/main.scss",
   "css": "/stylesheets/themes/couvertartistico.cafeteatrorubi.com.br/main.css",
-  "template": "ticketHubSearchHeader",
+  "template": "ingressaria",
   "logo": "https://media.tixs.me/logos/logo-cafeteatrorubi.png",
   "favico": "/img/cafeteatrorubi/",
   "videos": {
