@@ -4,14 +4,37 @@
 @import "../../to-framework/main.scss";
 
 $cor-fundo: $primary;
-$tamanho-header: 45px;
+$cor-texto: #fff;
+$tamanho-header: 55px;
 $gradiente: $secundary !important;
 // colocar imagem dentro de url ou cor hex
-$fundo: url('/assets/bg-dz9.jpg');
+$fundo: url('https://www.laroc.club/app/uploads/2019/07/laroc-2019-09-07-website-homefeature.jpg');
+$barra-topo: false;
 
 
 header.bg-dark {
 	background-color: $cor-fundo !important;
+	border-bottom: 4px solid rgb(255,0,175);
+}
+
+
+
+.card__featured-item {
+	color: white !important;
+	background-color: #666 !important;
+	&:before {
+		font-family: FontAwesome;
+
+    content: "\f005";
+    display: inline-block;
+    color: #ffd800;
+    font-size: 12px;
+	}
+}
+
+
+.suggestions {
+	top: 38px !important;
 }
 
 .team-1,
@@ -37,14 +60,20 @@ header.bg-dark {
 
 .bg__main {
 	background: $fundo !important;
-	background-position: 20% !important;
-	background-size: cover !important;
+	background-position: bottom !important;
+	background-size: 70% !important;
+	background-repeat: no-repeat !important;
+	background-color: rgb(255, 0, 175) !important;
+	height: 635px;
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
 	@include MQ(S) {
 		display: none !important;
 	}
+	.v-suggestions,
+	h2 {
+		display: none;
+	}
 }
-
 .eventHeader header.bg-dark,
 .header__mobile {
 	background: $cor-fundo !important;
@@ -58,9 +87,6 @@ header.bg-dark {
 	background: $cor-fundo !important;
 }
 
-.to-btn {
-	font-size: 13px !important;
-}
 
 .navbar-fixed-top .to-btn {
 	font-size: 13px !important;
@@ -73,13 +99,137 @@ footer.bg-dark {
 
 footer a,
 footer p,
-header.bg-dark .navbar-nav a.nav-link,
-.to-btn,
-.navbar-fixed-top .to-btn {
-	color: $cor-texto !important;
+header.bg-dark .navbar-nav a.nav-link
+{	color: $cor-texto !important;
 	font-weight: normal;
 
 	@include MQ(S) {
 		color: $cor-texto !important;
 	}
+}
+
+
+@if $barra-topo {
+
+	.container__search--tickethub {
+		display: none !important;
+	}
+	
+	.v--modal-overlay {
+		z-index: 999998 !important;
+	}
+	
+	.team-1 {
+	}
+	
+	.header__search {
+		display: block;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+	}
+	
+	.header__search {
+		display: block !important;
+	}
+	
+	.v-suggestions {
+		width: 70% !important;
+		box-shadow: none !important;
+	}
+	
+	.nav__links {
+		display: none;
+	}
+
+	.v-suggestions input[type=text]:focus {
+    width: 100%;
+    padding-left: 40px;
+    background-position-x: 10px;
+    background-position-y: center;
+    background-size: 12px;
+}
+	
+	.v-suggestions input[type=text] {
+		height: 35px !important;
+		font-size: 13px !important;
+		background-size: 12px;
+		padding-left: 30px;
+		border: solid 1px #ccc;
+		box-shadow: none;
+		border-radius: 4px;
+	
+		&:focus {
+			padding-left: 30px;
+		}
+	}
+}
+
+footer.bg-dark {
+	background: $cor-fundo !important;
+}
+
+
+.ad__badge-it {
+	padding-right: 4px;
+	font-size: 12px !important;
+	background: #f60 !important;
+	 
+}
+.ad__badge-it:after,
+.ad__badge-it:before {
+	display: none;
+}
+
+.navbar-fixed-top .to-btn,
+.to-btn {
+	font-size: 13px !important;
+	color: #fff !important;
+    border: solid 2px #fff !important;
+    background: 0 0 !important;
+    border-radius: 3px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    vertical-align: middle !important;
+
+		&:hover{
+	color: $cor-fundo !important;
+    border: solid 2px #fff !important;
+    background: #fff !important;
+		}
+}
+
+.header__search {
+	display: block;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+}
+
+.header__search {
+	display: block !important;
+}
+
+.v-suggestions {
+	width: 70% !important;
+	box-shadow: none !important;
+}
+
+.nav__links {
+	display: none;
+}
+
+.v-suggestions input[type=text] {
+	height: 35px !important;
+	font-size: 13px !important;
+	background-size: 12px;
+	padding-left: 30px;
+
+	&:focus {
+		padding-left: 30px;
+	}
+}
+
+.suggestions {
+	top: 38px !important;
 }
