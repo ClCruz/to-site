@@ -14,7 +14,7 @@ $barra-topo: false;
 
 header.bg-dark {
 	background-color: $cor-fundo !important;
-	border-bottom: 4px solid rgb(255,0,175);
+	border-bottom: 4px solid rgb(255,0,185);
 }
 
 
@@ -63,7 +63,7 @@ header.bg-dark {
 	background-position: bottom !important;
 	background-size: 70% !important;
 	background-repeat: no-repeat !important;
-	background-color: rgb(255, 0, 175) !important;
+	background-color: rgb(255, 0, 185) !important;
 	height: 635px;
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
 	@include MQ(S) {
