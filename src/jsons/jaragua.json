@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.val.art.br",
+  "uri": "https://www.val.art.br",
+  "api": "https://api.val.art.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.val.art.br",
+  "admin": "https://admin.val.art.br",
+  "apikey": "live_2c9424d26d794f88802b1379958d808b8f18341bf3814fae8c0f2d4474441ee9",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/jaragua/main.scss",
+  "css": "/stylesheets/themes/www.val.art.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-jaragua.png",
+  "favico": "/img/jaragua/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "teatro",
+    "keywords": "teatro jaragua"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Teatro Jaraguá",
+    "description": "teatro",
+    "siteName": "www.val.art.br",
+    "CNPJ": "19.406.899/0001-75",
+    "companyAddress": "",
+    "companyName": "Saide Produções Culturais e Artisticas"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_jaragua/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_jaragua/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_jaragua/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_jaragua/emailComprador.html",
+      "gift": "../comprar/templates/multi_jaragua/emailPresente.html",
+      "signature": "../comprar/templates/multi_jaragua/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_jaragua/confirmacaoEmail.html"
+
+    }
+  }
+}
