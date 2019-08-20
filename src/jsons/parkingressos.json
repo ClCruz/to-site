@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.parkingressos.com",
+  "uri": "https://www.parkingressos.com",
+  "api": "https://api.parkingressos.com",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.parkingressos.com",
+  "admin": "https://admin.parkingressos.com",
+  "apikey": "live_ac438150ffb04823af830c346cd8eb1fcf0f9a8527e9454ca7fc75dd1b980f7e",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/parkingressos/main.scss",
+  "css": "/stylesheets/themes/www.parkingressos.com/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-parkingressos.jpeg",
+  "favico": "/img/parkingressos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Ingressos, Parque de diversões, Park Ingressos",
+    "keywords": "Ingressos, Parque de diversões, Park Ingressos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Park Ingressos",
+    "description": "Ingressos, Parque de diversões, Park Ingressos",
+    "siteName": "www.parkingressos.com",
+    "CNPJ": "13.293.552/0001-87",
+    "companyAddress": "",
+    "companyName": "Iluminaproducoes"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_parkingressos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_parkingressos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_parkingressos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_parkingressos/emailComprador.html",
+      "gift": "../comprar/templates/multi_parkingressos/emailPresente.html",
+      "signature": "../comprar/templates/multi_parkingressos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_parkingressos/confirmacaoEmail.html"
+
+    }
+  }
+}
