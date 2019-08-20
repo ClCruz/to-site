@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.conectateatro.com.br",
+  "uri": "https://www.conectateatro.com.br",
+  "api": "https://api.conectateatro.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.conectateatro.com.br",
+  "admin": "https://admin.conectateatro.com.br",
+  "apikey": "live_a82404d96bf14d8c8a7d67f87ca092742ed38606c828437faa4db4d6d360471b",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/conectateatro/main.scss",
+  "css": "/stylesheets/themes/www.conectateatro.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-conectateatro.png",
+  "favico": "/img/conectateatro/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "conecta",
+    "keywords": "coneta teatro"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Conecta Teatro",
+    "description": "conecta",
+    "siteName": "www.conectateatro.com.br",
+    "CNPJ": "",
+    "companyAddress": "",
+    "companyName": "Conecta Teatro"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_conectateatro/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_conectateatro/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_conectateatro/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_conectateatro/emailComprador.html",
+      "gift": "../comprar/templates/multi_conectateatro/emailPresente.html",
+      "signature": "../comprar/templates/multi_conectateatro/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_conectateatro/confirmacaoEmail.html"
+
+    }
+  }
+}
