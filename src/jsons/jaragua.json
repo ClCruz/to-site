@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/jaragua/main.scss",
   "css": "/stylesheets/themes/www.val.art.br/main.css",
   "template": "ingressaria",
-  "logo": "/assets/logo-jaragua.png",
+  "logo": "/assets/logo-jaragua.jpeg",
   "favico": "/img/jaragua/",
   "videos": {
     "list": []
