@@ -94,7 +94,7 @@ export default {
   },
   mounted() {
     this.createMetaObj();
-    this.getLocation();
+    // this.getLocation();
   },
   computed: {
 
