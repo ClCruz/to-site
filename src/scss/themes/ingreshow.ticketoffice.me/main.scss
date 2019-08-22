@@ -4,71 +4,70 @@
 @import "../../to-framework/main.scss";
 
 $cor-fundo: $primary;
-$tamanho-header: 45px;
+$tamanho-header: 55px;
 $gradiente: $secundary !important;
+$cor-texto: #444;
 // colocar imagem dentro de url ou cor hex
-$fundo: url('/assets/bg-dz9.jpg');
-
+$fundo: url("https://images.unsplash.com/photo-1561720698-fcafe06940d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80");
 
 header.bg-dark {
-	background-color: $cor-fundo !important;
+  background-color: $cor-fundo !important;
 }
 
 .team-1,
 .features,
 #section__slider {
-	background: #f3f3f3 !important;
+  background: #f3f3f3 !important;
 }
 
 .footer__logo .img {
-	height: 40px;
+  height: 40px;
 }
 
 .header__logo .img {
-	height: $tamanho-header;
-	width: 100%;
-	background-position: left center;
+  height: $tamanho-header;
+  width: 100%;
+  background-position: left center;
 }
 
 #ddown1 button {
-	color: #000 !important;
+  color: #000 !important;
 }
 
-
 .bg__main {
-	background: $fundo !important;
-	background-position: 20% !important;
-	background-size: cover !important;
-	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
-	@include MQ(S) {
-		display: none !important;
-	}
+  background: $fundo !important;
+  background-position: center !important;
+  background-size: cover !important;
+  // background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
+  @include MQ(S) {
+    display: none !important;
+  }
 }
 
 .eventHeader header.bg-dark,
 .header__mobile {
-	background: $cor-fundo !important;
+  background: $cor-fundo !important;
 }
 
 .v--modal-overlay {
-	z-index: 999998 !important;
+  z-index: 999998 !important;
 }
 
 .navbar-fixed-top {
-	background: $cor-fundo !important;
+  background: $cor-fundo !important;
 }
 
 .to-btn {
-	font-size: 13px !important;
+  font-size: 13px !important;
 }
 
 .navbar-fixed-top .to-btn {
-	font-size: 13px !important;
+  font-size: 13px !important;
 }
 
 footer.bg-dark {
-	background-color: $cor-fundo !important;
-	color: $cor-texto !important;
+  background-color: $cor-fundo !important;
+  color: $cor-texto !important;
 }
 
 footer a,
@@ -76,10 +75,20 @@ footer p,
 header.bg-dark .navbar-nav a.nav-link,
 .to-btn,
 .navbar-fixed-top .to-btn {
-	color: $cor-texto !important;
-	font-weight: normal;
+  color: $cor-texto !important;
+  font-weight: normal;
 
-	@include MQ(S) {
-		color: $cor-texto !important;
-	}
+  @include MQ(S) {
+    color: $cor-texto !important;
+  }
+}
+
+.ad__badge-it {
+  padding-right: 4px;
+  font-size: 12px !important;
+  background: $secundary !important;
+}
+.ad__badge-it:after,
+.ad__badge-it:before {
+  display: none;
 }
