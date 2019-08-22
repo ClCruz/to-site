@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "ingreshow.ticketoffice.me",
+  "uri": "https://ingreshow.ticketoffice.me",
+  "api": "https://api.ingreshow.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.ingreshow.ticketoffice.me",
+  "admin": "https://admin.ingreshow.ticketoffice.me",
+  "apikey": "live_81da2ed8907d4b8b88fd505402c53c3c712cb4a62c274596ad4597b3787ff455",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/ingreshow/main.scss",
+  "css": "/stylesheets/themes/ingreshow.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-ingreshow.png",
+  "favico": "/img/ingreshow/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "IngreShow - Desconto para Shows",
+    "description": "",
+    "siteName": "ingreshow.ticketoffice.me",
+    "CNPJ": "32.878.633/0001-93",
+    "companyAddress": "Rua Canuto do Val, 44 / Sala 2 / Santa Cecília - São Paulo  Atendimento: Segunda a Sexta (9h às 18h)",
+    "companyName": "Gramofone Cultural"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_ingreshow/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_ingreshow/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_ingreshow/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_ingreshow/emailComprador.html",
+      "gift": "../comprar/templates/multi_ingreshow/emailPresente.html",
+      "signature": "../comprar/templates/multi_ingreshow/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_ingreshow/confirmacaoEmail.html"
+
+    }
+  }
+}

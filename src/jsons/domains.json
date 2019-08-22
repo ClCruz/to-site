@@ -293,5 +293,9 @@
     "associacaodosartistas.conectateatro.com.br": "associacaodosartistas",
     "api.associacaodosartistas.conectateatro.com.br": "associacaodosartistas",
     "compra.associacaodosartistas.conectateatro.com.br": "associacaodosartistas",
-    "admin.associacaodosartistas.conectateatro.com.br": "associacaodosartistas"
+    "admin.associacaodosartistas.conectateatro.com.br": "associacaodosartistas",
+    "ingreshow.ticketoffice.me": "ingreshow",
+    "api.ingreshow.ticketoffice.me": "ingreshow",
+    "compra.ingreshow.ticketoffice.me": "ingreshow",
+    "admin.ingreshow.ticketoffice.me": "ingreshow"
 }
