@@ -172,8 +172,8 @@ footer.bg-dark {
 .navbar-fixed-top .to-btn,
 .to-btn {
   font-size: 13px !important;
-  color: #fff !important;
-  border: solid 2px #fff !important;
+  color: #444 !important;
+  border: solid 2px #444 !important;
   background: 0 0 !important;
   border-radius: 3px !important;
   font-weight: 600 !important;
@@ -186,8 +186,8 @@ footer.bg-dark {
 
   &:hover {
     color: $cor-fundo !important;
-    border: solid 2px #fff !important;
-    background: #fff !important;
+    border: solid 2px #444 !important;
+    background: #444 !important;
   }
 }
 
