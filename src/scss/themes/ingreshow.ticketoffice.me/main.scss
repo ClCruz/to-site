@@ -12,6 +12,7 @@ $fundo: url("https://images.unsplash.com/photo-1561720698-fcafe06940d0?ixlib=rb-
 
 header.bg-dark {
   background-color: $cor-fundo !important;
+  border-bottom: 4px solid $secundary;
 }
 
 .team-1,
