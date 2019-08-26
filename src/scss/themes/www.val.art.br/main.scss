@@ -61,21 +61,6 @@ header.bg-dark {
 	background-color: #f3f3f3 !important;
 	// margin-top: 20px;
 	height: 440px;
-	@include MQ(S) {
-		display: block !important;
-		padding: 0 !important;
-	}
-
-	@include MQ(M) {
-		height: 300px;
-	}
-
-	.container__search--tickethub {
-		@include MQ(S) {
-			height: 280px !important;
-			padding: 0 !important;
-		}
-	}
 	.v-suggestions,
 	h2 {
 		display: none;
