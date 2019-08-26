@@ -56,7 +56,7 @@ header.bg-dark {
 .bg__main {
 	background: $fundo !important;
 	background-position: CENTER !important;
-	background-size: 100% auto !important;
+	background-size: contain !important;
 	background-repeat: no-repeat !important;
 	background-color: #f3f3f3 !important;
 	// margin-top: 20px;
@@ -64,6 +64,24 @@ header.bg-dark {
 	.v-suggestions,
 	h2 {
 		display: none;
+	}
+	@include MQ(S) {
+		display: block !important;
+		background-size: cover !important;
+
+		height: 170px !important;
+		padding: 0 !important;
+	}
+	@include MQ(L) {
+		height: 450px !important;
+		padding: 0 !important;
+	}
+
+	.container__search--tickethub {
+		@include MQ(S) {
+			height: 280px !important;
+			padding: 0 !important;
+		}
 	}
 }
 .eventHeader header.bg-dark,
