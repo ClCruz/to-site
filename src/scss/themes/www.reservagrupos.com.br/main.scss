@@ -68,7 +68,7 @@ header.bg-dark {
 
 footer.bg-dark {
   background-color: $cor-fundo !important;
-  color: $cor-texto !important;
+  color: #fff !important;
 }
 
 footer a,
@@ -76,11 +76,11 @@ footer p,
 header.bg-dark .navbar-nav a.nav-link,
 .to-btn,
 .navbar-fixed-top .to-btn {
-  color: $cor-texto !important;
+  color: #fff !important;
   font-weight: normal;
 
   @include MQ(S) {
-    color: $cor-texto !important;
+    color: #fff !important;
   }
 }
 
