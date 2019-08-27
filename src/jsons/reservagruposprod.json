@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.reservagrupos.com.br",
+  "uri": "https://www.reservagrupos.com.br",
+  "api": "https://api.reservagrupos.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.reservagrupos.com.br",
+  "admin": "https://admin.reservagrupos.com.br",
+  "apikey": "live_bddf1af7b6e34160b2d0a07484d8ecfea4c93d7e62274571901f7337f5ed21ac",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/reservagruposprod/main.scss",
+  "css": "/stylesheets/themes/www.reservagrupos.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-reservagruposprod.png",
+  "favico": "/img/reservagruposprod/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "ingressos",
+    "keywords": "ingressos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Reserva Grupos",
+    "description": "ingressos",
+    "siteName": "www.reservagrupos.com.br",
+    "CNPJ": "26.995.192/0001-07",
+    "companyAddress": "",
+    "companyName": "Reserva Grupos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_reservagruposprod/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_reservagruposprod/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_reservagruposprod/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_reservagruposprod/emailComprador.html",
+      "gift": "../comprar/templates/multi_reservagruposprod/emailPresente.html",
+      "signature": "../comprar/templates/multi_reservagruposprod/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_reservagruposprod/confirmacaoEmail.html"
+
+    }
+  }
+}

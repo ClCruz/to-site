@@ -297,5 +297,9 @@
     "ingreshow.ticketoffice.me": "ingreshow",
     "api.ingreshow.ticketoffice.me": "ingreshow",
     "compra.ingreshow.ticketoffice.me": "ingreshow",
-    "admin.ingreshow.ticketoffice.me": "ingreshow"
+    "admin.ingreshow.ticketoffice.me": "ingreshow",
+    "www.reservagrupos.com.br": "reservagruposprod",
+    "api.reservagrupos.com.br": "reservagruposprod",
+    "compra.reservagrupos.com.br": "reservagruposprod",
+    "admin.reservagrupos.com.br": "reservagruposprod"
 }
