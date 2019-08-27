@@ -4,71 +4,71 @@
 @import "../../to-framework/main.scss";
 
 $cor-fundo: $primary;
+$cor-texto: $secundary;
 $tamanho-header: 45px;
 $gradiente: $secundary !important;
 // colocar imagem dentro de url ou cor hex
-$fundo: url('/assets/bg-dz9.jpg');
-
+$fundo: url("/assets/bg-reservagrupos.jpeg");
 
 header.bg-dark {
-	background-color: $cor-fundo !important;
+  background-color: $cor-fundo !important;
 }
 
 .team-1,
 .features,
 #section__slider {
-	background: #f3f3f3 !important;
+  background: #f3f3f3 !important;
 }
 
 .footer__logo .img {
-	height: 40px;
+  height: 40px;
 }
 
 .header__logo .img {
-	height: $tamanho-header;
-	width: 100%;
-	background-position: left center;
+  height: $tamanho-header;
+  width: 100%;
+  background-position: left center;
 }
 
 #ddown1 button {
-	color: #000 !important;
+  color: #000 !important;
 }
 
-
 .bg__main {
-	background: $fundo !important;
-	background-position: 20% !important;
-	background-size: cover !important;
-	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
-	@include MQ(S) {
-		display: none !important;
-	}
+  background: $fundo !important;
+  background-position: bottom !important;
+  background-size: cover !important;
+  height: 510px !important;
+  // background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
+  @include MQ(S) {
+    display: none !important;
+  }
 }
 
 .eventHeader header.bg-dark,
 .header__mobile {
-	background: $cor-fundo !important;
+  background: $cor-fundo !important;
 }
 
 .v--modal-overlay {
-	z-index: 999998 !important;
+  z-index: 999998 !important;
 }
 
 .navbar-fixed-top {
-	background: $cor-fundo !important;
+  background: $cor-fundo !important;
 }
 
 .to-btn {
-	font-size: 13px !important;
+  font-size: 13px !important;
 }
 
 .navbar-fixed-top .to-btn {
-	font-size: 13px !important;
+  font-size: 13px !important;
 }
 
 footer.bg-dark {
-	background-color: $cor-fundo !important;
-	color: $cor-texto !important;
+  background-color: $cor-fundo !important;
+  color: $cor-texto !important;
 }
 
 footer a,
@@ -76,10 +76,69 @@ footer p,
 header.bg-dark .navbar-nav a.nav-link,
 .to-btn,
 .navbar-fixed-top .to-btn {
-	color: $cor-texto !important;
-	font-weight: normal;
+  color: $cor-texto !important;
+  font-weight: normal;
 
-	@include MQ(S) {
-		color: $cor-texto !important;
-	}
+  @include MQ(S) {
+    color: $cor-texto !important;
+  }
+}
+
+.v--modal-overlay {
+  z-index: 999998 !important;
+}
+
+.team-1 {
+}
+
+.header__search {
+  display: block;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.header__search {
+  display: block !important;
+}
+
+.v-suggestions {
+  width: 70% !important;
+  box-shadow: none !important;
+}
+
+.nav__links {
+  display: none;
+}
+
+.v-suggestions input[type="text"] {
+  height: 35px !important;
+  font-size: 13px !important;
+  background-size: 12px;
+  padding-left: 30px;
+
+  &:focus {
+    padding-left: 30px;
+  }
+}
+
+.suggestions {
+  top: 38px !important;
+}
+
+.bg__main {
+  @include MQ(S) {
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  .container__search--tickethub {
+    @include MQ(S) {
+      height: 280px !important;
+      padding: 0 !important;
+    }
+  }
+
+  .v-suggestions,
+  h2 {
+    display: none;
+  }
 }
