@@ -6,7 +6,7 @@
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.reservagrupos.com.br",
   "admin": "https://admin.reservagrupos.com.br",
-  "apikey": "live_675ee57d246b43fba26599abdc43a9afdc5d723ab8e4432cbc246e12ae32c753",
+  "apikey": "live_bddf1af7b6e34160b2d0a07484d8ecfea4c93d7e62274571901f7337f5ed21ac",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
   "scss": "./src/scss/themes/reservagruposprod/main.scss",
