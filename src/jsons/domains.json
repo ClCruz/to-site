@@ -301,5 +301,9 @@
     "www.reservagrupos.com.br": "reservagruposprod",
     "api.reservagrupos.com.br": "reservagruposprod",
     "compra.reservagrupos.com.br": "reservagruposprod",
-    "admin.reservagrupos.com.br": "reservagruposprod"
+    "admin.reservagrupos.com.br": "reservagruposprod",
+    "www.val.art.br": "valart",
+    "api.val.art.br": "valart",
+    "compra.val.art.br": "valart",
+    "admin.val.art.br": "valart"
 }
