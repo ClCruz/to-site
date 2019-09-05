@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "mulheresdeshakespeare.ticketoffice.me",
+  "uri": "https://mulheresdeshakespeare.ticketoffice.me",
+  "api": "https://api.mulheresdeshakespeare.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.mulheresdeshakespeare.ticketoffice.me",
+  "admin": "https://admin.mulheresdeshakespeare.ticketoffice.me",
+  "apikey": "live_a71865fdd9474462821a78b37f9c458184ddcc64587d4aaeb474ec8c68a6e3a7",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/mulheresshakespeare/main.scss",
+  "css": "/stylesheets/themes/mulheresdeshakespeare.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-mulheresshakespeare.png",
+  "favico": "/img/mulheresshakespeare/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "mulheres de shakespeare",
+    "keywords": "mulheres,shakespeare,teatro,show"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Mulheres de Shakespeare",
+    "description": "mulheres de shakespeare",
+    "siteName": "mulheresdeshakespeare.ticketoffice.me",
+    "CNPJ": "",
+    "companyAddress": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_mulheresshakespeare/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_mulheresshakespeare/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_mulheresshakespeare/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_mulheresshakespeare/emailComprador.html",
+      "gift": "../comprar/templates/multi_mulheresshakespeare/emailPresente.html",
+      "signature": "../comprar/templates/multi_mulheresshakespeare/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_mulheresshakespeare/confirmacaoEmail.html"
+
+    }
+  }
+}
