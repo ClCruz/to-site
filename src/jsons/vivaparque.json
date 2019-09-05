@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "vivaparque.ticketoffice.me",
+  "uri": "https://vivaparque.ticketoffice.me",
+  "api": "https://api.vivaparque.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.vivaparque.ticketoffice.me",
+  "admin": "https://admin.vivaparque.ticketoffice.me",
+  "apikey": "live_bbc9390bb41944208732485a71360e458b0af126026c417998123f8c2985a8da",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/vivaparque/main.scss",
+  "css": "/stylesheets/themes/vivaparque.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-vivaparque.png",
+  "favico": "/img/vivaparque/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "viva parque",
+    "keywords": "viva parque"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Viva Parque",
+    "description": "viva parque",
+    "siteName": "vivaparque.ticketoffice.me",
+    "CNPJ": "",
+    "companyAddress": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_vivaparque/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_vivaparque/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_vivaparque/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_vivaparque/emailComprador.html",
+      "gift": "../comprar/templates/multi_vivaparque/emailPresente.html",
+      "signature": "../comprar/templates/multi_vivaparque/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_vivaparque/confirmacaoEmail.html"
+
+    }
+  }
+}
