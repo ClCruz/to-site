@@ -87,7 +87,7 @@ $gradiente: $secundary !important;
 
 	.container__search--tickethub {
 		@include MQ(S) {
-			height: 280px !important;
+			height: 150px !important;
 			padding: 0 !important;
 		}
 	}
@@ -101,6 +101,8 @@ $gradiente: $secundary !important;
 .a .bg__main {
 	@include MQ(S) {
 		padding-top: 20px !important;
+		background-size: auto 91% !important;
+    	background-repeat: no-repeat !important;
 	}
 }
 
