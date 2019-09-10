@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "unafisconacional.ticketoffice.me",
+  "uri": "https://unafisconacional.ticketoffice.me",
+  "api": "https://api.unafisconacional.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.unafisconacional.ticketoffice.me",
+  "admin": "https://admin.unafisconacional.ticketoffice.me",
+  "apikey": "live_d10d6862cad7480e8fef6ebf4ff8c13909b408e65d8e434daf37164842b8b3d7",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/unafisconacional/main.scss",
+  "css": "/stylesheets/themes/unafisconacional.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-unafisconacional.png",
+  "favico": "/img/unafisconacional/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Unafisco Associação Nacional dos Auditores Fiscais da Receita Federal do Brasil. Atividades associativas, convênios e departamento jurídico. Unafisco apoia confraternização entre associados",
+    "keywords": "unafisco,associados,associação,nacional,confraternização,auditor fiscal,aposentados,pensionistas,ativos,receita federal,convênio,assembleia,regional,servidores públicos,RFB"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Unafisco - Associação Nacional dos Auditores Fiscais da Receita Federal do Brasil",
+    "description": "Unafisco Associação Nacional dos Auditores Fiscais da Receita Federal do Brasil. Atividades associativas, convênios e departamento jurídico. Unafisco apoia confraternização entre associados",
+    "siteName": "unafisconacional.ticketoffice.me",
+    "CNPJ": "",
+    "companyAddress": "",
+    "companyName": ""
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_unafisconacional/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_unafisconacional/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_unafisconacional/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_unafisconacional/emailComprador.html",
+      "gift": "../comprar/templates/multi_unafisconacional/emailPresente.html",
+      "signature": "../comprar/templates/multi_unafisconacional/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_unafisconacional/confirmacaoEmail.html"
+
+    }
+  }
+}
