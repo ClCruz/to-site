@@ -7,6 +7,7 @@ header.bg-dark {
 	// background-color: rgb(202, 8, 19) !important;
 	// background-color: rgb(255, 255, 255) !important;
 }
+
 .header__logo .img {
 	height: 55px;
 	width: 100%;
@@ -19,7 +20,12 @@ header.bg-dark {
 	@include MQ(S) {
 	  display: none !important;
 	}
-  }
+}
+
+.eventHeader header.bg-dark {
+    background: linear-gradient(135deg, $primary 10%, $secundary) !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+}
 // footer.bg-dark {
 // 	background-color: rgb(255, 255, 255) !important;
 // 	color: black !important;
