@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="container justify-content-center align-items-center d-flex container__search--tickethub pt-5 pb-4" v-if="siteName == 'www.ingreshow.com.br'">
-      <div class="col-12 col-md-10 justify-content-center text-center" style="height: 380px;" id="fundo_ingressaria">
+      <div class="col-12 col-md-10 justify-content-center text-center" style="height: 249px;" id="fundo_ingressaria">
         <div>
         </div>
       </div>
