@@ -3,83 +3,229 @@
 @import "override.scss";
 @import "../../to-framework/main.scss";
 
-$cor-fundo: $primary;
-$tamanho-header: 45px;
-$gradiente: $secundary !important;
-// colocar imagem dentro de url ou cor hex
-$fundo: url('/assets/bg-dz9.jpg');
-
-
 header.bg-dark {
-	background-color: $cor-fundo !important;
+	// background-color: rgb(202, 8, 19) !important;
+	background-color: none !important;
 }
+.header__logo .img {
+	height: 40px !important;
+	padding: 10px !important;
+	width: 100%;
+}
+
+footer.bg-dark {
+	// background: radial-gradient(circle farthest-corner at 10% 20%, #ffc576 0%, #fe6a67 47.7%, #f01717 92.3%) !important;
+}
+
+// footer a,
+// footer p {
+// 	color: black !important;
+// }
 
 .team-1,
 .features,
-#section__slider {
+#section__slider,
+body {
 	background: #f3f3f3 !important;
 }
 
-.footer__logo .img {
-	height: 40px;
-}
+// footer.bg-dark a {
+// 	color: black !important;
+// }
 
+// footer .img {
+// 	// background: #fff;
+// 	// background-position: center !important;
+// 	// border-radius: 2px;
+// }
+
+$gradiente: $secundary !important;
+.navbar-fixed-top .to-btn {
+	// color: white !important;
+}
 .header__logo .img {
-	height: $tamanho-header;
+	height: 55px;
 	width: 100%;
 	background-position: left center;
 }
 
-#ddown1 button {
-	color: #000 !important;
+.swal2-progresscircle {
+	background: $secundary !important;
 }
 
+.swal2-styled {
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 5px;
+	background: $secundary !important;
+	border: none;
+	color: white;
+	transition: 0.5s;
 
-.bg__main {
-	background: $fundo !important;
-	background-position: 20% !important;
-	background-size: cover !important;
-	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
-	@include MQ(S) {
-		display: none !important;
+	&:hover {
+		-webkit-transform: translateY(-2px);
+		transform: translateY(-2px);
+		@include box-shadow();
 	}
 }
 
-.eventHeader header.bg-dark,
+#ddown1 button {
+	color: black !important;
+}
+
+.bg__main {
+	background: url('/assets/bg-ingreshow.png') !important;
+	// background-size: cover !important;
+	background-repeat: repeat;
+	background-size: auto 112% !important;
+	@include MQ(S) {
+		display: block !important;
+		padding: 0 !important;
+	}
+
+	.container__search--tickethub {
+		@include MQ(S) {
+			height: 150px !important;
+			padding: 0 !important;
+		}
+	}
+
+	.v-suggestions,
+	h2 {
+		display: none;
+	}
+}
+
+.a .bg__main {
+	@include MQ(S) {
+		padding-top: 20px !important;
+		background-size: auto 92% !important;
+    	background-repeat: no-repeat !important;
+	}
+}
+
+.to-block .container {
+	@include MQ(S) {
+	}
+}
+#fundo_ingressaria {
+	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 0 !important;
+	margin-top: -30px !important;
+
+	@include MQ(S) {
+		margin-top: 0 !important;
+		background-position: top !important;
+	}
+}
+
+.eventHeader header.bg-dark {
+	background: $secundary !important;
+
+	// background: #fff !important;
+}
 .header__mobile {
-	background: $cor-fundo !important;
+	background: $secundary !important;
+}
+// #modals-container .btn-success:hover,
+// #modals-container .btn-success:focus,
+// #modals-container .btn-success {
+// 	background-image: radial-gradient(
+// 		circle farthest-corner at 10% 20%,
+// 		rgba(255, 197, 118, 1) 0%,
+// 		rgba(254, 106, 103, 1) 47.7%,
+// 		rgba(240, 23, 23, 1) 92.3%
+// 	) !important;
+// }
+
+// .to-block .to-touch,
+// .container__register form {
+// 	border-top-color: rgba(254, 106, 103, 1) !important;
+// }
+
+// .container__available-times .card__hour {
+// 	background-image: radial-gradient(
+// 		circle farthest-corner at 10% 20%,
+// 		rgba(255, 197, 118, 1) 0%,
+// 		rgba(254, 106, 103, 1) 47.7%,
+// 		rgba(240, 23, 23, 1) 92.3%
+// 	) !important;
+// 	* {
+// 		color: white !important;
+// 	}
+// }
+
+// .card__time {
+// 	&:hover {
+// 		background: rgba(254, 106, 103, 1) !important;
+// 		*,
+// 		p.lead {
+// 			color: white !important;
+// 		}
+
+// 		i {
+// 			color: rgba(254, 106, 103, 1) !important;
+// 		}
+// 	}
+// }
+
+// .card__time-active {
+// 	background: rgba(254, 106, 103, 1) 47.7%;
+// 	*,
+// 	p.lead {
+// 		color: white !important;
+// 	}
+// }
+
+// .icon-active {
+// 	color: rgba(254, 106, 103, 1) !important;
+// }
+
+.eventHeader header.navbar-fixed-top {
+	background: white !important;
+	background-image: white !important;
 }
 
 .v--modal-overlay {
 	z-index: 999998 !important;
 }
 
-.navbar-fixed-top {
-	background: $cor-fundo !important;
+.team-1 {
 }
 
-.to-btn {
+.header__search {
+	display: block;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+}
+
+.header__search {
+	display: block !important;
+}
+
+.v-suggestions {
+	width: 70% !important;
+	box-shadow: none !important;
+}
+
+.nav__links {
+	display: none;
+}
+
+.v-suggestions input[type=text] {
+	height: 35px !important;
 	font-size: 13px !important;
-}
+	background-size: 12px;
+	padding-left: 30px;
 
-.navbar-fixed-top .to-btn {
-	font-size: 13px !important;
-}
-
-footer.bg-dark {
-	background-color: $cor-fundo !important;
-	color: $cor-texto !important;
-}
-
-footer a,
-footer p,
-header.bg-dark .navbar-nav a.nav-link,
-.to-btn,
-.navbar-fixed-top .to-btn {
-	color: $cor-texto !important;
-	font-weight: normal;
-
-	@include MQ(S) {
-		color: $cor-texto !important;
+	&:focus {
+		padding-left: 30px;
 	}
+}
+
+.suggestions {
+	top: 38px !important;
 }
