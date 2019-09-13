@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "clude.ticketoffice.me",
+  "uri": "https://clude.ticketoffice.me",
+  "api": "https://api.clude.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.clude.ticketoffice.me",
+  "admin": "https://admin.clude.ticketoffice.me",
+  "apikey": "live_4a4a64ecbf8f4816b089f831a0696eb0896cd69de447407e848b70a8385af406",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/clude/main.scss",
+  "css": "/stylesheets/themes/clude.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-clude.png",
+  "favico": "/img/clude/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "O CLUDE é uma plataforma de produtos e serviços que propicia infinitas oportunidades aos nossos clientes, chamados de CLUDERS.",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Clude - Clube de vantagens",
+    "description": "O CLUDE é uma plataforma de produtos e serviços que propicia infinitas oportunidades aos nossos clientes, chamados de CLUDERS.",
+    "siteName": "clude.ticketoffice.me",
+    "CNPJ": "32.922.514/0001-90",
+    "companyAddress": "",
+    "companyName": "Clude"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_clude/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_clude/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_clude/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_clude/emailComprador.html",
+      "gift": "../comprar/templates/multi_clude/emailPresente.html",
+      "signature": "../comprar/templates/multi_clude/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_clude/confirmacaoEmail.html"
+
+    }
+  }
+}
