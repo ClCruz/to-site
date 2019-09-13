@@ -8,7 +8,7 @@
         <div>
         </div>
       </div>
-      <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br' && siteName != 'ingreshow.ticketoffice.me'">
+      <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br' && siteName != 'www.ingreshow.com.br'">
         <div class="" style="">
           <h1>Procure eventos</h1>
         </div>
@@ -17,12 +17,12 @@
         </div>
       </div>
     </div>
-    <div class="container justify-content-center align-items-center d-flex container__search--tickethub pt-5 pb-4" v-if="siteName == 'ingreshow.ticketoffice.me'">
+    <div class="container justify-content-center align-items-center d-flex container__search--tickethub pt-5 pb-4" v-if="siteName == 'www.ingreshow.com.br'">
       <div class="col-12 col-md-10 justify-content-center text-center" style="height: 380px;" id="fundo_ingressaria">
         <div>
         </div>
       </div>
-      <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br' && siteName != 'ingreshow.ticketoffice.me'">
+      <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br' && siteName != 'www.ingreshow.com.br'">
         <div class="" style="">
           <h1>Procure eventos</h1>
         </div>
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub" v-if="siteName != 'ingressoparatodos.com.br' && siteName != 'ingreshow.ticketoffice.me'">
+    <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub" v-if="siteName != 'ingressoparatodos.com.br' && siteName != 'www.ingreshow.com.br'">
       <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br'">
         <div class="" style="">
           <h2>Procure por experiências únicas.</h2>

@@ -13,7 +13,7 @@
   </div>
 </div>
 <div v-else class="col-12 col-xl-4 col-md-6 p-2 text-left">
-  <div class="ad__badge-it" v-if="siteName == 'ingressoparatodos.com.br' ||	siteName == 'peixeurbano.ticketoffice.me' ||	siteName == 'ingreshow.ticketoffice.me'">
+  <div class="ad__badge-it" v-if="siteName == 'ingressoparatodos.com.br' ||	siteName == 'peixeurbano.ticketoffice.me' ||	siteName == 'www.ingreshow.com.br'">
     <!-- <i class="far fa-money-bill-alt" style=""></i> -->
     <span class=""  v-if="siteName == 'ingressoparatodos.com.br'" style="margin-top: 6px">
       <template v-if="item.mmAmountIsPer == 0">
