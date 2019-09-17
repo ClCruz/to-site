@@ -325,5 +325,9 @@
     "clude.ticketoffice.me": "clude",
     "api.clude.ticketoffice.me": "clude",
     "compra.clude.ticketoffice.me": "clude",
-    "admin.clude.ticketoffice.me": "clude"
+    "admin.clude.ticketoffice.me": "clude",
+    "teatrocompreingressos.ticketoffice.me": "teatrocompreingressos",
+    "api.teatrocompreingressos.ticketoffice.me": "teatrocompreingressos",
+    "compra.teatrocompreingressos.ticketoffice.me": "teatrocompreingressos",
+    "admin.teatrocompreingressos.ticketoffice.me": "teatrocompreingressos"
 }

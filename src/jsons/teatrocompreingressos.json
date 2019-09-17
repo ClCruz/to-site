@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "teatrocompreingressos.ticketoffice.me",
+  "uri": "https://teatrocompreingressos.ticketoffice.me",
+  "api": "https://api.teatrocompreingressos.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.teatrocompreingressos.ticketoffice.me",
+  "admin": "https://admin.teatrocompreingressos.ticketoffice.me",
+  "apikey": "live_5efbcd6a8f474fe4b45c07cfbe3b4ebfc70d1c2484304b5a90cad028ca79bfeb",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/teatrocompreingressos/main.scss",
+  "css": "/stylesheets/themes/teatrocompreingressos.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-teatrocompreingressos.png",
+  "favico": "/img/teatrocompreingressos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Teatro Compreingressos",
+    "keywords": "Teatro Compreingressos"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Teatro Compreingressos",
+    "description": "Teatro Compreingressos",
+    "siteName": "teatrocompreingressos.ticketoffice.me",
+    "CNPJ": "11.111.111/0001-01",
+    "companyAddress": "",
+    "companyName": "Teatro Compreingressos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_teatrocompreingressos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_teatrocompreingressos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_teatrocompreingressos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_teatrocompreingressos/emailComprador.html",
+      "gift": "../comprar/templates/multi_teatrocompreingressos/emailPresente.html",
+      "signature": "../comprar/templates/multi_teatrocompreingressos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_teatrocompreingressos/confirmacaoEmail.html"
+
+    }
+  }
+}
