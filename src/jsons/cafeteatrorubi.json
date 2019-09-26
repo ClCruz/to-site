@@ -1,11 +1,11 @@
 {
   "env": "production",
-  "host": "couvertartistico.cafeteatrorubi.com.br",
-  "uri": "https://couvertartistico.cafeteatrorubi.com.br",
-  "api": "https://api.cafeteatrorubi.com.br",
+  "host": "couvertartistico.caferubi.com.br",
+  "uri": "https://couvertartistico.caferubi.com.br",
+  "api": "https://api.caferubi.com.br",
   "pinpad": "http://localhost:7001/api",
-  "legacy": "https://compra.cafeteatrorubi.com.br",
-  "admin": "https://admin.cafeteatrorubi.com.br",
+  "legacy": "https://compra.caferubi.com.br",
+  "admin": "https://admin.caferubi.com.br",
   "apikey": "live_3ddd7486246a499daf8d169d154a14d833dfbe5594084ba397e9fa9f3c990bb5",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
@@ -28,7 +28,7 @@
   "info": {
     "title": "Café Teatro Rubi",
     "description": "Café Teatro Rubi | Espaço cultural que apresenta produções de música, teatro e dança. Localizado no Sheraton da Bahia Hotel, tem capacidade para 156 pessoas distribuídas em 39 mesas.",
-    "siteName": "couvertartistico.cafeteatrorubi.com.br",
+    "siteName": "couvertartistico.caferubi.com.br",
     "CNPJ": "19.653.679/0001-46",
     "companyAddress": "Avenida Sete de Setembro, 1537 | Salvador, Bahia – 40080-001 – Brasil | Café-Teatro Rubi – Wish Hotel da Bahia",
     "companyName": "Nace - Nucleo de Ações Culturais Estratégicas Eirelli"
