@@ -59,7 +59,7 @@ gulp.task('sassLocalhost', function() {
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./public/assets/css/localhost/'));
 	gulp
-		.src('./src/scss/themes/www.cafeteatrorubi.com.br/main.scss')
+		.src('./src/scss/themes/www.caferubi.com.br/main.scss')
 		.pipe(sourcemaps.init())
 		.pipe(
 			sass({
