@@ -19,9 +19,17 @@
 </p>
 <a href="https://www.itau.com.br/cartoes/beneficios/beneficios-credito/teatro/">Itaucard 50% de desconto no teatro</a>
 <pre style="color: white; font-family: sans-serif">
+
+
+          <template>
+            <a @click="contact" style="cursor: pointer">Consulte</a>
+            <br>
+          </template>
+
 <a href="https://teatro.compreingressos.com/">
 Clique aqui e compre agora
 </a>
+
 </pre>
                                   </div>
             </div>
@@ -84,6 +92,72 @@ $(document).ready(function () {
   // debugger
 
 });
+
+
+import config from '@/config';
+import {
+  authService
+} from "@/components/common/services/auth";
+import {
+  func
+} from '@/functions';
+  import CityList from '@/components/City-list.vue';
+import {
+  staticPageService
+} from "@/components/common/services/static_page.js";
+
+export default {
+  name: "Footer",
+  computed: {},
+  components: {
+    CityList
+  },
+  methods: {
+    contact() {
+      this.$swal.queue([{
+        title: 'Consulta das bilheterias participantes',
+        html: '<input id="swal-email1" type="text" required placeholder="Digite seu nome" name="name" class="swal2-input">' +
+          '<input id="swal-email2" type="email" required  placeholder="Digite seu email" name="email" class="swal2-input">' +
+          '<input id="swal-email3" type="text" required placeholder="Assunto" name="subject" class="swal2-input">' +
+          '<input id="swal-email5" type="text" required placeholder="Digite o teatro" name="id" class="swal2-input">' +
+          '<textarea style="width: 80%; padding-top: 0.75rem" rows="4" id="swal-email4" placeholder="Digite o espetáculo e quais informações adicionais desejar saber." required> </textarea>',
+        focusConfirm: false,
+        preConfirm: () => {
+          let name = document.getElementById('swal-email1').value;
+          let email = document.getElementById('swal-email2').value;
+          let subject = document.getElementById('swal-email3').value;
+          let content = document.getElementById('swal-email4').value;
+          let id = document.getElementById('swal-email5').value;
+
+          this.contact = {
+            name,
+            email,
+            subject,
+            content,
+            id
+          };
+          authService.contact(this.contact).then(
+            response => {
+              if (this.validateJSON(response)) {
+                this.toastSuccess("Email enviado");
+              }
+            },
+            error => {
+              this.toastError("Falha na execução.");
+            }
+          );
+        }
+      }]).then((result) => {
+        if (result.value) {} else if (result.dismiss === this.$swal.DismissReason.cancel) {
+
+        }
+      });
+    },
+  },
+
+};
+
+
 </script>
 
 <style lang="scss" scoped>
