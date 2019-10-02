@@ -60,7 +60,7 @@ import AppSearch from "@/components/App-search.vue";
 
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
-import config from '@/config';
+
 import {
   authService
 } from "@/components/common/services/auth";
