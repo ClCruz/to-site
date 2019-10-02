@@ -15,77 +15,11 @@
             <div class="row">
                                 <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
                                   <h3>Itaucard Bilheterias Participantes</h3>
-                                  <p class="lead">Confira a lista completa dos teatros onde você também pode comprar seus ingressos com 50% de desconto utilizando o seu Itaucard.
+                                  <p class="lead">Consulte a disponibilidade de venda nas bilhterias das peças participantes.
 </p>
 <a href="https://www.itau.com.br/cartoes/beneficios/beneficios-credito/teatro/">Itaucard 50% de desconto no teatro</a>
 <pre style="color: white; font-family: sans-serif">
 
-São Paulo / SP
-Mini Teatro / Cia de Revista 
-Teatro do Ator 
-Instituto Cultural Capobianco 
-Teatro do nucleo experimental 
-Teatro Italia 
-Teatro Juca Chaves 
-Teatro Mube Nova Cutural 
-Teatro Paiol Cultural 
-Cit Ecum 
-Galpão do Folias 
-
-Cerquilho / SP
-Teatro Municipal de Cerquilho
-
-Rio de Janeiro / RJ
-Teatro Municipal Carlos Gomes 
-Teatro Municipal Parque Das Ruínas 
-Lona Cultural João Bosco 
-Teatro Municipal Maria Clara Machado 
-Teatro Municipal do Jockey 
-Lona Cultural Gilberto Gil 
-Lona Cultural Elza Osborne 
-Teatro Municipal Café Pequeno 
-Teatro Municipal Gonzaguinha 
-Espaço Cultural Municipal Sérgio Porto 
-Teatro Municipal Ziembinski 
-Lona Cultural Terra 
-Centro Coreografico 
-Sala Municipal Baden Powell 
-Centro de Referência da Música Carioca Arthur Da Távola 
-Teatro Municipal Ipanema 
-Lona Cultural Hermeto Pascoal 
-Lona Cultural Carlos Zéfiro 
-Lona Cultural Sandra de Sá - Santa Cruz 
-Lona Cultural Herbert Vianna 
-Unicirco 
-Casa da Gávea 
-Teatro João Caetano 
-Teatro Gláucio Gill 
-Casa de Cultura Laura Alvim 
-Teatro Arthur Azevedo 
-Teatro Armando Gonzaga 
-Lona Renato Russo 
-Lona Jacob do Bandolim
-
-Salvador / BA
-Teatro Acbeu 
-Teatro Isba 
-Teatro Módulo 
-Café Teatro Rubi - Sheraton da Bahia Hotel 
-Teatro Jorge Amado 
-Teatro Sesc Casa do Comércio
-
-Goiãnia / GO
-Teatro Rio Vermelho 
-
-Anápolis / GO
-Teatro Municipal de Anápolis
-
-Campo Grande / MS
-Palácio Popular da Cultura 
-Tenda Palco Brasil 
-
-Curitiba / PR
-Teatro Barracão Encena
 </pre>
                                   </div>
             </div>
