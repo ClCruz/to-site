@@ -60,40 +60,6 @@ import AppSearch from "@/components/App-search.vue";
 
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
-
-import {
-  eventService
-} from "@/components/common/services/event";
-
-Vue.use(VueHead);
-
-export default {
-  name: "event",
-  mixins: [func],
-  components: {},
-  head: {},
-  methods: {},
-  data() {
-    return {
-      siteName: config.info.siteName,
-
-    }
-  },
-  mounted() {
-    if (this.siteName !== 'www.compreingressos.com' ) {
-        window.location = "/";
-    }
-  },
-  computed: {}
-};
-
-$(document).ready(function () {
-  // console.log( "ready!" );
-  // debugger
-
-});
-
-
 import config from '@/config';
 import {
   authService
@@ -106,13 +72,18 @@ import {
   staticPageService
 } from "@/components/common/services/static_page.js";
 
+import {
+  eventService
+} from "@/components/common/services/event";
+
+Vue.use(VueHead);
+
 export default {
-  name: "Footer",
-  computed: {},
-  components: {
-    CityList
-  },
-  methods: {
+  name: "event",
+  mixins: [func],
+  components: {},
+  head: {},
+    methods: {
     contact() {
       this.$swal.queue([{
         title: 'Consulta das bilheterias participantes',
@@ -154,8 +125,27 @@ export default {
       });
     },
   },
+  data() {
+    return {
+      siteName: config.info.siteName,
 
+    }
+  },
+  mounted() {
+    if (this.siteName !== 'www.compreingressos.com' ) {
+        window.location = "/";
+    }
+  },
+  computed: {}
 };
+
+$(document).ready(function () {
+  // console.log( "ready!" );
+  // debugger
+
+});
+
+
 
 
 </script>
