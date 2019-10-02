@@ -19,7 +19,9 @@
 </p>
 <a href="https://www.itau.com.br/cartoes/beneficios/beneficios-credito/teatro/">Itaucard 50% de desconto no teatro</a>
 <pre style="color: white; font-family: sans-serif">
-
+<a href="https://teatro.compreingressos.com/">
+Clique aqui e compre agora
+</a>
 </pre>
                                   </div>
             </div>
