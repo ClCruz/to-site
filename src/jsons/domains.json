@@ -329,5 +329,9 @@
     "teatrocompreingressos.ticketoffice.me": "teatrocompreingressos",
     "api.teatrocompreingressos.ticketoffice.me": "teatrocompreingressos",
     "compra.teatrocompreingressos.ticketoffice.me": "teatrocompreingressos",
-    "admin.teatrocompreingressos.ticketoffice.me": "teatrocompreingressos"
+    "admin.teatrocompreingressos.ticketoffice.me": "teatrocompreingressos",
+    "crefisa.ticketoffice.me": "crefisa",
+    "api.crefisa.ticketoffice.me": "crefisa",
+    "compra.crefisa.ticketoffice.me": "crefisa",
+    "admin.crefisa.ticketoffice.me": "crefisa"
 }

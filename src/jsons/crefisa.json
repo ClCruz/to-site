@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "crefisa.ticketoffice.me",
+  "uri": "https://crefisa.ticketoffice.me",
+  "api": "https://api.crefisa.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.crefisa.ticketoffice.me",
+  "admin": "https://admin.crefisa.ticketoffice.me",
+  "apikey": "live_99d0ee18ae4a4ac082d128a2341e4978ae822e436fdb42f28f56b77078edc456",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/crefisa/main.scss",
+  "css": "/stylesheets/themes/crefisa.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-crefisa.png",
+  "favico": "/img/crefisa/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "Crefisa",
+    "keywords": "Crefisa"
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Crefisa",
+    "description": "Crefisa",
+    "siteName": "crefisa.ticketoffice.me",
+    "CNPJ": "60.779.196/0001-96",
+    "companyAddress": "Rua Canadá, 387 - Jd. América, São Paulo - SP CEP: 01.436-900",
+    "companyName": "Crefisa S/A"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_crefisa/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_crefisa/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_crefisa/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_crefisa/emailComprador.html",
+      "gift": "../comprar/templates/multi_crefisa/emailPresente.html",
+      "signature": "../comprar/templates/multi_crefisa/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_crefisa/confirmacaoEmail.html"
+
+    }
+  }
+}
