@@ -13,7 +13,7 @@ $barra-topo: false;
 
 header.bg-dark {
   background-color: $cor-fundo !important;
-  border-bottom: 4px solid rgb(252, 128, 70);
+  border-bottom: 4px solid rgb(255, 193, 7);
 }
 
 .card__featured-item {
@@ -40,12 +40,12 @@ header.bg-dark {
 }
 
 .footer__logo .img {
-  height: 40px;
+  height: 80px;
 }
 
 .header__logo .img {
   height: $tamanho-header;
-  width: 100%;
+  width: 70px;
   background-position: left center;
 }
 
@@ -156,7 +156,7 @@ footer.bg-dark {
 .ad__badge-it {
   padding-right: 4px;
   font-size: 12px !important;
-  background: #f60 !important;
+  background: #ffc107 !important;
 }
 .ad__badge-it:after,
 .ad__badge-it:before {
