@@ -84,9 +84,9 @@ export default {
         title: 'Consulta das bilheterias participantes',
         html: '<input id="swal-email1" type="text" required placeholder="Digite seu nome" name="name" class="swal2-input">' +
           '<input id="swal-email2" type="email" required  placeholder="Digite seu email" name="email" class="swal2-input">' +
-          '<input id="swal-email3" type="text" required placeholder="Assunto" name="subject" class="swal2-input">' +
-          '<input id="swal-email5" type="text" required placeholder="Digite o teatro" name="id" class="swal2-input">' +
-          '<textarea style="width: 80%; padding-top: 0.75rem" rows="4" id="swal-email4" placeholder="Digite o espetáculo e quais informações adicionais desejar saber." required> </textarea>',
+          '<input id="swal-email3" type="text" required placeholder="Digite seu Telefone Celular" name="subject" class="swal2-input">' +
+          '<input id="swal-email5" type="text" required placeholder="Nome da peça que deseja consultar" name="id" class="swal2-input">' +
+          '<input id="swal-email4" type="text" required placeholder="Nome do teatro que deseja consultar" name="content" class="swal2-input">',
         focusConfirm: false,
         preConfirm: () => {
           let name = document.getElementById('swal-email1').value;
