@@ -64,9 +64,6 @@ import 'swiper/dist/css/swiper.css';
 import {
   authService
 } from "@/components/common/services/auth";
-import {
-  func
-} from '@/functions';
   import CityList from '@/components/City-list.vue';
 import {
   staticPageService
