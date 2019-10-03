@@ -14,21 +14,19 @@
             </div>
             <div class="row">
                                 <div class="col-12 col-sm-6 mx-auto col-md-4 col-lg-6">
-                                  <h3>Itaucard Bilheterias Participantes</h3>
+                                 <center> <h3>Itaucard Bilheterias Participantes</h3></center>
                                   <p class="lead">Consulte a disponibilidade de venda nas bilhterias das peças participantes.
 </p>
-<a href="https://www.itau.com.br/cartoes/beneficios/beneficios-credito/teatro/">Itaucard 50% de desconto no teatro</a>
+<center>
+<a @click="contact" style="cursor: pointer">Consulte</a> </center>
+            <br>
 <pre style="color: white; font-family: sans-serif">
 
-
-          <template>
-            <a @click="contact" style="cursor: pointer">Consulte</a>
-            <br>
-          </template>
-
+<center>
 <a href="https://teatro.compreingressos.com/">
 Clique aqui e compre agora
 </a>
+</center>
 
 </pre>
                                   </div>
