@@ -12,7 +12,7 @@
   "scss": "./src/scss/themes/teatrocompreingressos/main.scss",
   "css": "/stylesheets/themes/teatrocompreingressos.ticketoffice.me/main.css",
   "template": "ingressaria",
-  "logo": "/assets/logo-teatrocompreingressos.png",
+  "logo": "/assets/logo-teatrocompreingressos.Array",
   "favico": "/img/teatrocompreingressos/",
   "videos": {
     "list": []
