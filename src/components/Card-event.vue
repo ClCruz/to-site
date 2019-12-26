@@ -60,7 +60,7 @@
             style="font-weight: bold !important; font-size: 12px !important"
           >{{item.minAmount}}</span>
         </template>
-        <template v-if="item.mmAmountIsPer != 0">
+        <template v-if="item.mmAmountIsPer != 0 ">
           Desconto de
           <span
             style="font-weight: bold !important; font-size: 12px !important"
