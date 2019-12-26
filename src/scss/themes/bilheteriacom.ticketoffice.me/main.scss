@@ -4,10 +4,10 @@
 @import "../../to-framework/main.scss";
 
 $cor-fundo: $primary;
-$tamanho-header: 60px;
+$tamanho-header: 45px;
 $gradiente: $secundary !important;
 // colocar imagem dentro de url ou cor hex
-$fundo: url('https://images.unsplash.com/photo-1561720698-fcafe06940d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80');
+$fundo: url('/assets/bg-dz9.jpg');
 
 
 header.bg-dark {
@@ -37,7 +37,7 @@ header.bg-dark {
 
 .bg__main {
 	background: $fundo !important;
-	background-position: center !important;
+	background-position: 20% !important;
 	background-size: cover !important;
 	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
 	@include MQ(S) {
@@ -83,4 +83,3 @@ header.bg-dark .navbar-nav a.nav-link,
 		color: $cor-texto !important;
 	}
 }
-

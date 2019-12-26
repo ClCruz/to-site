@@ -12,24 +12,24 @@
   "scss": "./src/scss/themes/teatrocompreingressos/main.scss",
   "css": "/stylesheets/themes/teatrocompreingressos.ticketoffice.me/main.css",
   "template": "ingressaria",
-  "logo": "/assets/logo-teatrocompreingressos.png",
+  "logo": "/assets/logo-teatrocompreingressos.Array",
   "favico": "/img/teatrocompreingressos/",
   "videos": {
     "list": []
   },
   "meta": {
-    "description": "Teatro Compreingressos",
-    "keywords": "Teatro Compreingressos"
+    "description": "TEATRO COMPREINGRESSOS",
+    "keywords": "TEATRO COMPREINGRESSOS"
   },
   "recaptcha": {
     "private": "",
     "public": ""
   },
   "info": {
-    "title": "Teatro Compreingressos",
-    "description": "Teatro Compreingressos",
+    "title": "TEATRO COMPREINGRESSOS",
+    "description": "TEATRO COMPREINGRESSOS",
     "siteName": "teatrocompreingressos.ticketoffice.me",
-    "CNPJ": "11.111.111/0001-01",
+    "CNPJ": "11.111.111/0001-02",
     "companyAddress": "",
     "companyName": "Teatro Compreingressos"
   },
