@@ -18,8 +18,8 @@
     "list": []
   },
   "meta": {
-    "description": "bilheteria.com",
-    "keywords": "bilheteria.com"
+    "description": "Bilheteria.com",
+    "keywords": "Bilheteria.com"
   },
   "recaptcha": {
     "private": "",
@@ -27,11 +27,11 @@
   },
   "info": {
     "title": "Bilheteria",
-    "description": "bilheteria.com",
+    "description": "Bilheteria.com",
     "siteName": "bilheteriacom.ticketoffice.me",
     "CNPJ": "07.741.441/0001-93",
-    "companyAddress": " ",
-    "companyName": " "
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
   },
   "templates": {
     "print": {
