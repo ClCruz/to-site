@@ -1,11 +1,11 @@
 {
   "env": "production",
-  "host": "bilheteriacom.ticketoffice.me",
-  "uri": "https://bilheteriacom.ticketoffice.me",
-  "api": "https://api.bilheteriacom.ticketoffice.me",
+  "host": "bilheteria.com.br",
+  "uri": "https://www.bilheteria.com.br",
+  "api": "https://api.api.bilheteria.com.br",
   "pinpad": "http://localhost:7001/api",
-  "legacy": "https://compra.bilheteriacom.ticketoffice.me",
-  "admin": "https://admin.bilheteriacom.ticketoffice.me",
+  "legacy": "https://compra.bilheteria.com.br",
+  "admin": "https://admin.bilheteria.com.br",
   "apikey": "live_6ec640d65ff646dfa9a2faaa22f0e88a176e44debb9945de97dc7727f092dd58",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
@@ -28,7 +28,7 @@
   "info": {
     "title": "Bilheteria",
     "description": "Bilheteria.com",
-    "siteName": "bilheteriacom.ticketoffice.me",
+    "siteName": "Bilheteria.com.br",
     "CNPJ": "07.741.441/0001-93",
     "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
     "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_bilheteriacom/emailPresente.html",
       "signature": "../comprar/templates/multi_bilheteriacom/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_bilheteriacom/confirmacaoEmail.html"
-
     }
   }
 }
