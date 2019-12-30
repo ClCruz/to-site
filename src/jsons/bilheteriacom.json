@@ -9,7 +9,7 @@
   "apikey": "live_6ec640d65ff646dfa9a2faaa22f0e88a176e44debb9945de97dc7727f092dd58",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "scss": "./src/scss/themes/bilheteriacom/main.scss",
+  "scss": "./src/scss/themes/bilheteria.com.br/main.scss",
   "css": "/stylesheets/themes/bilheteria.com.br/main.css",
   "template": "ingressaria",
   "logo": "/assets/logo-bilheteriacom.png",
