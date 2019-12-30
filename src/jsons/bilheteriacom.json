@@ -2,7 +2,7 @@
   "env": "production",
   "host": "bilheteria.com.br",
   "uri": "https://www.bilheteria.com.br",
-  "api": "https://api.api.bilheteria.com.br",
+  "api": "https://api.bilheteria.com.br",
   "pinpad": "http://localhost:7001/api",
   "legacy": "https://compra.bilheteria.com.br",
   "admin": "https://admin.bilheteria.com.br",
