@@ -34,28 +34,10 @@ header.bg-dark {
 	color: #000 !important;
 }
 
-
-#fundo_ingressaria {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	padding: 0 !important;
-	margin-top: -30px !important;
-  
-	@include MQ(S) {
-	  // margin-top: 0 !important;
-	  background-position: top !important;
-	}
-}
-
 .bg__main {
 	background: $fundo !important;
-	background-size: 100% !important;
-	background-color: black !important;
 	background-repeat: no-repeat !important;
 	background-position: center !important;
-	margin-bottom: -132px !important;
-	margin-top: -53px !important;
 }
 
 
