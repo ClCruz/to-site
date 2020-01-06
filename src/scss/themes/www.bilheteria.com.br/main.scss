@@ -8,10 +8,14 @@ $tamanho-header: 45px;
 $gradiente: $secundary !important;
 // colocar imagem dentro de url ou cor hex
 $fundo: url('/assets/bg-dz9.jpg');
+// $logo-face: url('/assets/images/logo-facebook.png');
+// $logo-insta: url('/assets/images/logo-instagram.png');
+// $logo-tw: url('/assets/images/logo-twitter.png');
+// $logo-yt: url('/assets/images/logo-youtube.png');
 
 
 header.bg-dark {
-	background-color: $cor-fundo !important;
+	background-color: black !important;
 }
 
 .team-1,
@@ -63,8 +67,8 @@ header.bg-dark {
 }
 
 footer.bg-dark {
-	background-color: $cor-fundo !important;
-	color: $cor-texto !important;
+	background-color: black !important;
+	color: white !important;
 }
 
 footer a,
@@ -72,10 +76,23 @@ footer p,
 header.bg-dark .navbar-nav a.nav-link,
 .to-btn,
 .navbar-fixed-top .to-btn {
-	color: $cor-texto !important;
+	color: white !important;
 	font-weight: normal;
 
 	@include MQ(S) {
 		color: $cor-texto !important;
 	}
 }
+
+footer .social__media img{
+	height: 48px !important;
+	width: 48px !important;
+	padding: 10px !important;
+	margin-top: -10px !important;
+	margin-right: 10px !important;
+}
+
+.social__media img:first-child{
+	margin-left: -20px !important;
+}
+
