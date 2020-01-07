@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "leonel.ticketoffice.me",
+  "uri": "https://leonel.ticketoffice.me",
+  "api": "https://api.leonel.ticketoffice.me",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.leonel.ticketoffice.me",
+  "admin": "https://admin.leonel.ticketoffice.me",
+  "apikey": "live_091dffbd04644e4d952f13d74fb035094bae029566ba462baa30abaeee93c3b4",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/leonel/main.scss",
+  "css": "/stylesheets/themes/leonel.ticketoffice.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-leonel.png",
+  "favico": "/img/leonel/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Leoenl",
+    "description": "",
+    "siteName": "leonel.ticketoffice.me",
+    "CNPJ": "82.923.382/0001-89",
+    "companyAddress": "ajfsajkfsj",
+    "companyName": "Leonel"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_leonel/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_leonel/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_leonel/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_leonel/emailComprador.html",
+      "gift": "../comprar/templates/multi_leonel/emailPresente.html",
+      "signature": "../comprar/templates/multi_leonel/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_leonel/confirmacaoEmail.html"
+
+    }
+  }
+}
