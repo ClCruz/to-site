@@ -48,7 +48,7 @@
               <a href="#" @click="loadSACPage('policy','privacidade')">Politica de Privacidade</a>
             </template>
           </div>
-          <!-- mudança wihtelabel bilheteriacom -->
+          <!-- mudança wihtelabel bilheteriacom
           <div
             v-if="siteName == 'Bilheteria.com.br' || 'localhost'"
             class="col-12 col-md mt-5 mt-md-0 text-md-left"
@@ -79,7 +79,7 @@
             </h3>
             <p>(11) 99607-9544</p>
 
-            <!-- <div class="social__media">
+            <div class="social__media">
               <a href="https://www.facebook.com/bilheteriacom/">Facebook</a>
               <br />
               <a href="https://twitter.com/bilheteriacom">Twitter</a>
@@ -87,10 +87,10 @@
               <a href="https://www.instagram.com/bilheteriacom/">Instagram</a>
               <br />
               <a href="https://www.youtube.com/channel/UC1_gz9OCwU49rIzLZB0QlWg">Youtube</a>
-            </div>-->
+            </div>
           </div>
 
-          <!-- mudança wihtelabel bilheteriacom -->
+          mudança wihtelabel bilheteriacom-->
           <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
             <h3>
               <strong>Formas de Pagamento</strong>
