@@ -27,9 +27,6 @@
             <template v-if="checkSAC[4] != undefined && checkSAC[4].isvisible == 1">
               <a href="#" @click="loadSACPage('partner','sejaParceiro')">Seja nosso Parceiro</a>
             </template>
-            <div class="mt-3">
-              <City-list></City-list>
-            </div>
           </div>
 
           <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
@@ -47,11 +44,14 @@
             <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
               <a href="#" @click="loadSACPage('policy','privacidade')">Politica de Privacidade</a>
             </template>
+            <div class="mt-3">
+              <City-list></City-list>
+            </div>
           </div>
-          <!-- mudança wihtelabel bilheteriacom
+          <!-- mudança wihtelabel bilheteriacom -->
           <div
-            v-if="siteName == 'Bilheteria.com.br' || 'localhost'"
             class="col-12 col-md mt-5 mt-md-0 text-md-left"
+            v-if="siteName == 'Bilheteria.com.br' || siteName == 'ingreshow.ticketoffice.me'"
           >
             <h3>
               <strong>Siga-nos</strong>
@@ -78,19 +78,9 @@
               <strong>Whatsapp</strong>
             </h3>
             <p>(11) 99607-9544</p>
-
-            <div class="social__media">
-              <a href="https://www.facebook.com/bilheteriacom/">Facebook</a>
-              <br />
-              <a href="https://twitter.com/bilheteriacom">Twitter</a>
-              <br />
-              <a href="https://www.instagram.com/bilheteriacom/">Instagram</a>
-              <br />
-              <a href="https://www.youtube.com/channel/UC1_gz9OCwU49rIzLZB0QlWg">Youtube</a>
-            </div>
           </div>
 
-          mudança wihtelabel bilheteriacom-->
+          <!-- fim mudança wihtelabel bilheteriacom -->
           <div class="col-12 col-md mt-5 mt-md-0 text-md-left">
             <h3>
               <strong>Formas de Pagamento</strong>
@@ -149,6 +139,16 @@
             <img style="width: 80%;" src="/assets/logo-parceiro-construcao.png" alt />
           </div>
         </div>
+        <!-- mudança wihtelabel bilheteriacom -->
+        <div
+          v-if="siteName == 'Bilheteria.com.br' || siteName == 'ingreshow.ticketoffice.me'"
+          class="logos__footer col-10 nopadding p-0"
+        >
+          <img src="assets/images/abqvpng.png" alt />
+          <img src="assets/images/abrhpng.png" alt />
+          <img src="assets/images/adibrapng.png" alt />
+        </div>
+        <!-- fim mudança wihtelabel bilheteriacom -->
         <div class="row mt-5 footer-name nopadding">
           <div class="col text-center">
             <p>{{companyName}}</p>

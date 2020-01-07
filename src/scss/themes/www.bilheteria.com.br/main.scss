@@ -42,12 +42,15 @@ header.bg-dark {
 	background: $fundo !important;
 	background-repeat: no-repeat !important;
 	background-position: center !important;
+	background-size: 100% !important;
+	background-color: #000 !important;
+	margin-bottom: -98px !important;
 }
 
 
 .eventHeader header.bg-dark,
 .header__mobile {
-	background: $cor-fundo !important;
+	background: #000 !important;
 }
 
 .v--modal-overlay {
@@ -67,8 +70,8 @@ header.bg-dark {
 }
 
 footer.bg-dark {
-	background-color: black !important;
-	color: white !important;
+	background-color: #000 !important;
+	color: #ffff !important;
 }
 
 footer a,
@@ -76,11 +79,12 @@ footer p,
 header.bg-dark .navbar-nav a.nav-link,
 .to-btn,
 .navbar-fixed-top .to-btn {
-	color: white !important;
+	color: #ffff !important;
 	font-weight: normal;
 
 	@include MQ(S) {
-		color: $cor-texto !important;
+		color: #ffff !important;
+		background-color: #000 !important;
 	}
 }
 
@@ -96,3 +100,24 @@ footer .social__media img{
 	margin-left: -20px !important;
 }
 
+.logos__footer img{
+	padding: 2px !important;
+	margin-top: -70px !important;
+	float: left !important;
+	height: 90px !important;
+	width: 120px !important;
+
+	@include MQ(S){
+		padding: 2px !important;
+    	height: 70px !important;
+    	width: 80px !important;
+    	margin-top: -51px !important;
+	}
+}
+
+.logos__footer{
+	@include MQ(S){
+	margin-top: 80px !important;
+	margin-left: 37px !important;
+	}
+}
