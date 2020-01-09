@@ -15,7 +15,7 @@ $fundo: url('/assets/bg-dz9.jpg');
 
 
 header.bg-dark {
-	background-color: black !important;
+	background: linear-gradient(to bottom right, rgb(254,60,103), rgb(255,104,84) ) !important; 
 }
 
 .team-1,
@@ -43,14 +43,15 @@ header.bg-dark {
 	background-repeat: no-repeat !important;
 	background-position: center !important;
 	background-size: 100% !important;
-	background-color: #000 !important;
+	background-color: rgb(255, 104, 84) !important;
 	margin-bottom: -110px !important;
+	margin-top: -20px !important;
 }
 
 
 .eventHeader header.bg-dark,
 .header__mobile {
-	background: #000 !important;
+	background: linear-gradient(to bottom right, rgb(254,60,103), rgb(255,104,84) ) !important; 
 }
 
 .v--modal-overlay {
@@ -70,8 +71,8 @@ header.bg-dark {
 }
 
 footer.bg-dark {
-	background-color: #000 !important;
-	color: #ffff !important;
+	background: linear-gradient(to bottom right, rgb(254,60,103), rgb(255,104,84) ) !important;
+	color: #fff !important;
 }
 
 footer a,
@@ -84,28 +85,37 @@ header.bg-dark .navbar-nav a.nav-link,
 
 	@include MQ(S) {
 		color: #ffff !important;
-		background-color: #000 !important;
+		// background-color: #000 !important;
 	}
 }
 
 footer .social__media img{
-	height: 48px !important;
-	width: 48px !important;
+	// height: 48px !important;
+	width: 50px !important;
 	padding: 10px !important;
 	margin-top: -10px !important;
 	margin-right: 10px !important;
+	transition: 0.5s ease-out !important;
+}
+
+footer .social__media img:hover{
+	transform: scale(1.2) !important;
+	transition: 0.5s ease-out;
 }
 
 .social__media img:first-child{
-	margin-left: -20px !important;
+	margin-left: -17px !important;
+
+	@include MQ(S){
+		margin-left: 0 !important; 
+	}
 }
 
-.logos__footer img{
-	padding: 2px !important;
-	margin-top: -70px !important;
-	float: left !important;
-	height: 90px !important;
-	width: 120px !important;
+footer .logos__footer img{
+	padding: 3px !important;
+	height: 58px !important;
+	width: 124px !important;
+	margin-top: -120px !important;
 
 	@include MQ(S){
 		padding: 2px !important;
@@ -116,6 +126,8 @@ footer .social__media img{
 }
 
 .logos__footer{
+	margin: 0px !important;
+
 	@include MQ(S){
 	margin-top: 80px !important;
 	margin-left: 37px !important;

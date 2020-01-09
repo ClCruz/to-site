@@ -141,8 +141,8 @@
         </div>
         <!-- mudança wihtelabel bilheteriacom -->
         <div
+          class="logos__footer col-12 col-md mt-5 mt-md-0 text-md-left"
           v-if="siteName == 'Bilheteria.com.br' || siteName == 'ingreshow.ticketoffice.me'"
-          class="logos__footer col-10 nopadding p-0"
         >
           <img src="assets/images/abqvpng.png" alt />
           <img src="assets/images/abrhpng.png" alt />
