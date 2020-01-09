@@ -51,18 +51,10 @@
               <strong>Siga-nos</strong>
             </h3>
             <div class="social__media">
-              <a href="https://www.facebook.com/bilheteriacom/" target="blank">
-                <img src="/assets/images/logo-facebook.png" alt />
-              </a>
-              <a href="https://www.instagram.com/bilheteriacom/" target="blank">
-                <img src="/assets/images/logo-instagram.png" alt />
-              </a>
-              <a href="https://twitter.com/bilheteriacom" target="blank">
-                <img src="/assets/images/logo-twitter.png" alt />
-              </a>
-              <a href="https://www.youtube.com/channel/UC1_gz9OCwU49rIzLZB0QlWg" target="blank">
-                <img src="/assets/images/logo-youtube.png" alt />
-              </a>
+              <img src="/assets/images/logo-facebook.png" alt />
+              <img src="/assets/images/logo-instagram.png" alt />
+              <img src="/assets/images/logo-twitter.png" alt />
+              <img src="/assets/images/logo-youtube.png" alt />
             </div>
           </div>
 
