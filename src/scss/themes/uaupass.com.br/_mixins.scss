@@ -1,0 +1,46 @@
+
+@mixin box-shadow() {
+  -webkit-box-shadow: 0 3px 8px rgba($black, 0.3);
+  box-shadow: 0 3px 8px rgba($black, 0.3);
+}
+
+@mixin pos($pos, $left:null, $top:null, $right:null, $bottom:null) {
+  position: $pos;
+  left: $left;
+
+  @if $top {
+    top: $top;
+  }
+
+  @if $left {
+    left: $left;
+  }
+
+  @if $right {
+    right: $right;
+  }
+
+  @if $bottom {
+    bottom: $bottom;
+  }
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin maxSize($width, $height) {
+  max-width: $width;
+  max-height: $height;
+}
+
+@mixin bgOpacity($opacity) {
+  background-color: rgb(3, 3, 3);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(3, 3, 3, $opacity);
+  /* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
