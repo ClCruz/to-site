@@ -18,20 +18,20 @@
     "list": []
   },
   "meta": {
-    "description": "",
-    "keywords": ""
+    "description": "meta desc",
+    "keywords": "meta keywords"
   },
   "recaptcha": {
     "private": "",
     "public": ""
   },
   "info": {
-    "title": "Uau Pass",
-    "description": "",
+    "title": "titulo",
+    "description": "meta desc",
     "siteName": "uaupass.com.br",
-    "CNPJ": "84.943.468/0001-00",
-    "companyAddress": "Uau Pass",
-    "companyName": "Uau Pass"
+    "CNPJ": "45.464.654/6546-54",
+    "companyAddress": "Rua das flores",
+    "companyName": "nome empresa"
   },
   "templates": {
     "print": {
