@@ -114,14 +114,14 @@ footer .social__media img:hover{
 
 footer .logos__footer img{
 	padding: 3px !important;
-	height: 58px !important;
-	width: 124px !important;
-	margin-top: -120px !important;
+	// height: 37px !important;
+	// width: 60px !important;
+	// margin-top: -120px !important;
 
 	@include MQ(S){
-		padding: 2px !important;
+		// padding: 2px !important;
     	height: 70px !important;
-    	width: 80px !important;
+    	width: 100px !important;
     	margin-top: -51px !important;
 	}
 }

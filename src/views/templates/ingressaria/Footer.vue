@@ -9,6 +9,16 @@
                 <div class="img" style></div>
               </router-link>
             </div>
+            <!-- mudança wihtelabel bilheteriacom -->
+            <div
+              class="logos__footer text-left mb-3"
+              v-if="siteName == 'Bilheteria.com.br' || siteName == 'ingreshow.ticketoffice.me'"
+            >
+              <img src="assets/images/abqvpng.png" alt />
+              <img src="assets/images/abrhpng.png" alt />
+              <img src="assets/images/adibrapng.png" alt />
+            </div>
+            <!-- fim mudança wihtelabel bilheteriacom -->
           </div>
 
           <div class="col-12 col-md mt-4 mt-sm-0">
@@ -139,16 +149,6 @@
             <img style="width: 80%;" src="/assets/logo-parceiro-construcao.png" alt />
           </div>
         </div>
-        <!-- mudança wihtelabel bilheteriacom -->
-        <div
-          class="logos__footer col-12 col-md mt-5 mt-md-0 text-md-left"
-          v-if="siteName == 'Bilheteria.com.br' || siteName == 'ingreshow.ticketoffice.me'"
-        >
-          <img src="assets/images/abqvpng.png" alt />
-          <img src="assets/images/abrhpng.png" alt />
-          <img src="assets/images/adibrapng.png" alt />
-        </div>
-        <!-- fim mudança wihtelabel bilheteriacom -->
         <div class="row mt-5 footer-name nopadding">
           <div class="col text-center">
             <p>{{companyName}}</p>
