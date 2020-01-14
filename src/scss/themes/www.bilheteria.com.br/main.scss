@@ -7,7 +7,7 @@ $cor-fundo: $primary;
 $tamanho-header: 45px;
 $gradiente: $secundary !important;
 // colocar imagem dentro de url ou cor hex
-$fundo: url('/assets/bg-dz91.jpg');
+$fundo: url('/assets/bg-dz91.png');
 // $logo-face: url('/assets/images/logo-facebook.png');
 // $logo-insta: url('/assets/images/logo-instagram.png');
 // $logo-tw: url('/assets/images/logo-twitter.png');
@@ -44,8 +44,8 @@ header.bg-dark {
 	background-position: center !important;
 	background-size: 100% !important;
 	background-color: rgb(255, 104, 84) !important;
-	margin-bottom: -110px !important;
-	margin-top: -20px !important;
+	// margin-bottom: -110px !important;
+	// margin-top: -20px !important;
 }
 
 
@@ -133,4 +133,18 @@ footer .logos__footer img{
 	margin-top: 80px !important;
 	margin-left: 37px !important;
 	}
+}
+
+.v-suggestions {
+	margin-top: 60px !important;
+	position: relative !important;
+}
+
+.collapse {
+    margin-top: -50px;
+    display: none;
+}
+
+.nav__links{
+	margin-top: 50px !important;
 }

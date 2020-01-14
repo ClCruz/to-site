@@ -33,7 +33,7 @@
     </div>
     <div class="container justify-content-center align-items-center d-flex p-4  pt-5 container__search--tickethub" v-if="siteName != 'ingressoparatodos.com.br' && siteName != 'www.ingreshow.com.br'">
       <div class="col-12 col-md-10 justify-content-center text-center" v-if="siteName != 'ingressoparatodos.com.br'">
-        <div class="" style="">
+        <div class="" v-if="siteName != 'Bilheteria.com.br'" style="">
           <h2>Procure por experiências únicas.</h2>
         </div>
         <div class="input-group mt-0 mb-3 p-2 w-100">
