@@ -15,7 +15,8 @@ $fundo: url('/assets/bg-dz91.png');
 
 
 header.bg-dark {
-	background: linear-gradient(to bottom right, rgb(254,60,103), rgb(255,104,84) ) !important; 
+	background-color: #f29536 !important;
+	// background: linear-gradient(to bottom right, rgb(254,60,103), rgb(255,104,84) ) !important; 
 }
 
 .team-1,
@@ -43,7 +44,8 @@ header.bg-dark {
 	background-repeat: no-repeat !important;
 	background-position: center !important;
 	background-size: 100% !important;
-	background-color: rgb(255, 104, 84) !important;
+	background-color: #f29536 !important;
+	// background-color: rgb(255, 104, 84) !important;
 	// margin-bottom: -110px !important;
 	// margin-top: -20px !important;
 }
@@ -51,7 +53,8 @@ header.bg-dark {
 
 .eventHeader header.bg-dark,
 .header__mobile {
-	background: linear-gradient(to bottom right, rgb(254,60,103), rgb(255,104,84) ) !important; 
+	// background: linear-gradient(to bottom right, rgb(254,60,103), rgb(255,104,84) ) !important; 
+	background: #f29536 !important;
 }
 
 .v--modal-overlay {
@@ -71,7 +74,8 @@ header.bg-dark {
 }
 
 footer.bg-dark {
-	background: linear-gradient(to bottom right, rgb(254,60,103), rgb(255,104,84) ) !important;
+	// background: linear-gradient(to bottom right, rgb(254,60,103), rgb(255,104,84) ) !important;
+	background-color: #f29536 !important;
 	color: #fff !important;
 }
 
