@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "convenia.bilheteria.com.br",
+  "uri": "https://convenia.bilheteria.com.br",
+  "api": "https://api.convenia.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.convenia.bilheteria.com.br",
+  "admin": "https://admin.convenia.bilheteria.com.br",
+  "apikey": "live_015573fef9ac41e49dc7d04b61d4dfed8049e106a5c24737966a31dbad4783d5",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/convenia/main.scss",
+  "css": "/stylesheets/themes/convenia.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-convenia.png",
+  "favico": "/img/convenia/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Convenia",
+    "description": "",
+    "siteName": "convenia.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Convenia LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_convenia/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_convenia/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_convenia/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_convenia/emailComprador.html",
+      "gift": "../comprar/templates/multi_convenia/emailPresente.html",
+      "signature": "../comprar/templates/multi_convenia/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_convenia/confirmacaoEmail.html"
+
+    }
+  }
+}
