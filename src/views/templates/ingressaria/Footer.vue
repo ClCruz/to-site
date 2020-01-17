@@ -10,10 +10,7 @@
               </router-link>
             </div>
             <!-- mudança wihtelabel bilheteriacom -->
-            <div
-              class="logos__footer text-left mb-3"
-              v-if="siteName == 'Bilheteria.com.br' || siteName == 'ingreshow.ticketoffice.me'"
-            >
+            <div class="logos__footer text-left mb-3" v-if="siteName == 'Bilheteria.com.br' ">
               <img src="assets/images/abqvpng.png" alt />
               <img src="assets/images/abrhpng.png" alt />
               <img src="assets/images/adibrapng.png" alt />
@@ -61,7 +58,7 @@
           <!-- mudança wihtelabel bilheteriacom -->
           <div
             class="col-12 col-md mt-5 mt-md-0 text-md-left"
-            v-if="siteName == 'Bilheteria.com.br' || siteName == 'ingreshow.ticketoffice.me'"
+            v-if="siteName == 'Bilheteria.com.br' "
           >
             <h3>
               <strong>Siga-nos</strong>
