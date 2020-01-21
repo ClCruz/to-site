@@ -90,7 +90,7 @@
 
 <!-- mudança aqui BILHETERIA -->
 
- <div class="container__select to-block container__features" id="banner" >
+ <div class="container__select to-block container__features" id="banner" v-if="siteName == 'Bilheteria.com.br'" >
     <div class="container pt-2 pb-0 text-left">
       <div class="col-12 col-sm-12 text-left mt-2 mb-2">
         <h3 class="">Explore nossas categorias <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
