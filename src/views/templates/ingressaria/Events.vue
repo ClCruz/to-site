@@ -90,7 +90,7 @@
 
 <!-- mudança aqui BILHETERIA -->
 
- <div class="container__select to-block container__features" id="banner" v-if="siteName == 'Bilheteria.com.br'" >
+ <div class="container__select to-block container__features" id="banner" v-if="siteName == 'Bilheteria.com.br' || siteName == 'convenia.bilheteria.com.br'" >
     <div class="container pt-2 pb-0 text-left">
       <div class="col-12 col-sm-12 text-left mt-2 mb-2">
         <h3 class="">Explore nossas categorias <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
@@ -119,7 +119,7 @@
         <card-event-featured :bannerEvents="bannerEvents" :swiperOption="swiperOption"></card-event-featured>
     </div>
   </div>
-  <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1 && siteName != 'Bilheteria.com.br' ">
+  <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1 && siteName != 'Bilheteria.com.br' && siteName != 'convenia.bilheteria.com.br' ">
     <div class="container pt-2 pb-0 text-left">
       <h3 class="">Muito mais para você</h3>
 
@@ -132,7 +132,7 @@
   </div>
 
   <!-- Genêros em destaque -->
-  <div class="container__select to-block container__features" id="banner" v-if="siteName != 'Bilheteria.com.br'">
+  <div class="container__select to-block container__features" id="banner" v-if="siteName != 'Bilheteria.com.br' && siteName != 'convenia.bilheteria.com.br'">
     <div class="container pt-2 pb-0 text-left">
       <div class="col-12 col-sm-12 text-left mt-2 mb-2">
         <h3 class="">Explore nossas categorias <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
