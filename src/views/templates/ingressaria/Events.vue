@@ -88,6 +88,25 @@
     </div>
   </section>
 
+<!-- mudança aqui BILHETERIA -->
+
+ <div class="container__select to-block container__features" id="banner" >
+    <div class="container pt-2 pb-0 text-left">
+      <div class="col-12 col-sm-12 text-left mt-2 mb-2">
+        <h3 class="">Explore nossas categorias <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+        <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
+
+        <div class="container__arrows">
+          <div class="swiper-button-prev swiper-button-prev-genres" slot="button-prev"></div>
+          <div class="swiper-button-next swiper-button-next-genres" slot="button-next"></div>
+        </div>
+      </div>
+      <card-genre-list-ingressaria :genreList="genreList" :swiperOption="swiperOptionGenres"></card-genre-list-ingressaria>
+    </div>
+  </div>
+
+<!-- fim mudança aqui BILHETERIA -->
+
   <!-- Banner -->
   <div class="container__select to-block container__features" id="banner">
     <div class="container pt-2 pb-0 text-left">
@@ -100,7 +119,7 @@
         <card-event-featured :bannerEvents="bannerEvents" :swiperOption="swiperOption"></card-event-featured>
     </div>
   </div>
-  <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1">
+  <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1 && siteName != 'Bilheteria.com.br' ">
     <div class="container pt-2 pb-0 text-left">
       <h3 class="">Muito mais para você</h3>
 
@@ -113,7 +132,7 @@
   </div>
 
   <!-- Genêros em destaque -->
-  <div class="container__select to-block container__features" id="banner">
+  <div class="container__select to-block container__features" id="banner" v-if="siteName != 'Bilheteria.com.br'">
     <div class="container pt-2 pb-0 text-left">
       <div class="col-12 col-sm-12 text-left mt-2 mb-2">
         <h3 class="">Explore nossas categorias <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
