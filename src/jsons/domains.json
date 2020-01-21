@@ -339,11 +339,12 @@
     "compra.leonel.ticketoffice.me": "leonel",
     "admin.leonel.ticketoffice.me": "leonel",
     "uaupass.com.br": "uaupass",
-    "api.uaupass.com.br": "uaupass",
-    "compra.uaupass.com.br": "uaupass",
-    "admin.uaupass.com.br": "uaupass",
+    "api.uaupass.com.br": "wwwuaupass",
+    "compra.uaupass.com.br": "wwwuaupass",
+    "admin.uaupass.com.br": "wwwuaupass",
     "convenia.bilheteria.com.br": "convenia",
     "api.convenia.bilheteria.com.br": "convenia",
     "compra.convenia.bilheteria.com.br": "convenia",
-    "admin.convenia.bilheteria.com.br": "convenia"
+    "admin.convenia.bilheteria.com.br": "convenia",
+    "www.uaupass.com.br": "wwwuaupass"
 }

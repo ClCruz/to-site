@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "www.uaupass.com.br",
+  "uri": "https://www.uaupass.com.br",
+  "api": "https://api.uaupass.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.uaupass.com.br",
+  "admin": "https://admin.uaupass.com.br",
+  "apikey": "live_4e3161a8e4ea42d4b7c6221a3f1e22e897e24e21ec6d4c068672b6c21918f270",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/wwwuaupass/main.scss",
+  "css": "/stylesheets/themes/www.uaupass.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-wwwuaupass.png",
+  "favico": "/img/wwwuaupass/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Uau Pass",
+    "description": "",
+    "siteName": "www.uaupass.com.br",
+    "CNPJ": "22.222.222/2222-22",
+    "companyAddress": "Rua bla bla",
+    "companyName": "Uau Pass"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_wwwuaupass/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_wwwuaupass/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_wwwuaupass/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_wwwuaupass/emailComprador.html",
+      "gift": "../comprar/templates/multi_wwwuaupass/emailPresente.html",
+      "signature": "../comprar/templates/multi_wwwuaupass/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_wwwuaupass/confirmacaoEmail.html"
+
+    }
+  }
+}
