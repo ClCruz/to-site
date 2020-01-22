@@ -54,7 +54,10 @@
             <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
               <a href="#" @click="loadSACPage('policy','privacidade')">Politica de Privacidade</a>
             </template>
-            <div class="mt-3" v-if="siteName != 'convenia.bilheteria.com.br'">
+            <div
+              class="mt-3"
+              v-if="siteName != 'convenia.bilheteria.com.br' && siteName != 'Bilheteria.com.br'"
+            >
               <City-list></City-list>
             </div>
           </div>
