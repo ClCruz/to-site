@@ -225,7 +225,7 @@ footer .social__media img:hover {
 
 footer .logos__footer img {
   padding: 2px !important;
-  height: 56px !important;
+  // height: 56px !important;
   // height: 37px !important;
   // width: 60px !important;
   // margin-top: -120px !important;
@@ -255,4 +255,9 @@ footer .logos__footer img {
 #nav-icon3 span,
 #nav-icon4 span {
   background: black !important;
+}
+
+
+.footer__logo .img {
+  background-image: url(/assets/logo-bilheteriacom.png) !important;
 }

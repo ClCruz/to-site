@@ -54,14 +54,14 @@
             <template v-if="checkSAC[2] != undefined && checkSAC[2].isvisible == 1">
               <a href="#" @click="loadSACPage('policy','privacidade')">Politica de Privacidade</a>
             </template>
-            <div class="mt-3">
+            <div class="mt-3" v-if="siteName != 'convenia.bilheteria.com.br'">
               <City-list></City-list>
             </div>
           </div>
           <!-- mudança wihtelabel bilheteriacom -->
           <div
             class="col-12 col-md mt-5 mt-md-0 text-md-left"
-            v-if="siteName == 'Bilheteria.com.br' "
+            v-if="siteName == 'Bilheteria.com.br' || siteName == 'convenia.bilheteria.com.br' "
           >
             <h3>
               <strong>Siga-nos</strong>
@@ -109,6 +109,7 @@
               <br />
             </div>
             <img
+              v-if="siteName != 'Bilheteria.com.br' && siteName != 'convenia.bilheteria.com.br'"
               src="/assets/images/logo-pagarme.svg"
               class="mt-3 p-1"
               style="width: 120px; background: white; border-radius: 3px;"
