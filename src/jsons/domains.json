@@ -381,5 +381,9 @@
     "apcd.bilheteria.com.br": "apcd",
     "api.apcd.bilheteria.com.br": "apcd",
     "compra.apcd.bilheteria.com.br": "apcd",
-    "admin.apcd.bilheteria.com.br": "apcd"
+    "admin.apcd.bilheteria.com.br": "apcd",
+    "apcefsp.bilheteria.com.br": "apcefsp",
+    "api.apcefsp.bilheteria.com.br": "apcefsp",
+    "compra.apcefsp.bilheteria.com.br": "apcefsp",
+    "admin.apcefsp.bilheteria.com.br": "apcefsp"
 }
