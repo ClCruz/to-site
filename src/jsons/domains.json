@@ -345,5 +345,9 @@
     "api.convenia.bilheteria.com.br": "convenia",
     "compra.convenia.bilheteria.com.br": "convenia",
     "admin.convenia.bilheteria.com.br": "convenia",
-    "www.uaupass.com.br": "wwwuaupass"
+    "www.uaupass.com.br": "wwwuaupass",
+    "abrasivos": "abrasivos",
+    "api.abrasivos": "abrasivos",
+    "compra.abrasivos": "abrasivos",
+    "admin.abrasivos": "abrasivos"
 }
