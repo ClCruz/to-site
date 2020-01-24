@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "allsul.bilheteria.com.br",
+  "uri": "https://allsul.bilheteria.com.br",
+  "api": "https://api.allsul.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.allsul.bilheteria.com.br",
+  "admin": "https://admin.allsul.bilheteria.com.br",
+  "apikey": "live_01f6fed657f14182b0e2073b3b70798d18f672eac9ff44579694dcb49fa1c30e",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/allsul/main.scss",
+  "css": "/stylesheets/themes/allsul.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-allsul.png",
+  "favico": "/img/allsul/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Allsul",
+    "description": "",
+    "siteName": "allsul.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Allsul"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_allsul/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_allsul/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_allsul/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_allsul/emailComprador.html",
+      "gift": "../comprar/templates/multi_allsul/emailPresente.html",
+      "signature": "../comprar/templates/multi_allsul/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_allsul/confirmacaoEmail.html"
+
+    }
+  }
+}

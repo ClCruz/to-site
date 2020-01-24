@@ -365,5 +365,9 @@
     "advanced.bilheteria.com.br": "advanced",
     "api.advanced.bilheteria.com.br": "advanced",
     "compra.advanced.bilheteria.com.br": "advanced",
-    "admin.advanced.bilheteria.com.br": "advanced"
+    "admin.advanced.bilheteria.com.br": "advanced",
+    "allsul.bilheteria.com.br": "allsul",
+    "api.allsul.bilheteria.com.br": "allsul",
+    "compra.allsul.bilheteria.com.br": "allsul",
+    "admin.allsul.bilheteria.com.br": "allsul"
 }
