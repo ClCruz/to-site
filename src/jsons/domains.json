@@ -377,5 +377,9 @@
     "amil.bilheteria.com.br": "amil",
     "api.amil.bilheteria.com.br": "amil",
     "compra.amil.bilheteria.com.br": "amil",
-    "admin.amil.bilheteria.com.br": "amil"
+    "admin.amil.bilheteria.com.br": "amil",
+    "apcd.bilheteria.com.br": "apcd",
+    "api.apcd.bilheteria.com.br": "apcd",
+    "compra.apcd.bilheteria.com.br": "apcd",
+    "admin.apcd.bilheteria.com.br": "apcd"
 }

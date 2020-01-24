@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "apcd.bilheteria.com.br",
+  "uri": "https://apcd.bilheteria.com.br",
+  "api": "https://api.apcd.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.apcd.bilheteria.com.br",
+  "admin": "https://admin.apcd.bilheteria.com.br",
+  "apikey": "live_6bff1ed67e164300a766806a54904ee59a035110dfb248c1a38d20efdfeb5b9c",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/apcd/main.scss",
+  "css": "/stylesheets/themes/apcd.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-apcd.png",
+  "favico": "/img/apcd/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "APCD",
+    "description": "",
+    "siteName": "apcd.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "APCD"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_apcd/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_apcd/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_apcd/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_apcd/emailComprador.html",
+      "gift": "../comprar/templates/multi_apcd/emailPresente.html",
+      "signature": "../comprar/templates/multi_apcd/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_apcd/confirmacaoEmail.html"
+
+    }
+  }
+}
