@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "absabin.bilheteria.com.br",
+  "uri": "https://absabin.bilheteria.com.br",
+  "api": "https://api.absabin.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.absabin.bilheteria.com.br",
+  "admin": "https://admin.absabin.bilheteria.com.br",
+  "apikey": "live_3ec50739c1ab4a59b66d9ccfb69743379e38f6f42b9b43c0a8f57ddff1c7bf11",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/absabin/main.scss",
+  "css": "/stylesheets/themes/absabin.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-absabin.png",
+  "favico": "/img/absabin/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "ABSabin",
+    "description": "",
+    "siteName": "absabin.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "ABSabin"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_absabin/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_absabin/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_absabin/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_absabin/emailComprador.html",
+      "gift": "../comprar/templates/multi_absabin/emailPresente.html",
+      "signature": "../comprar/templates/multi_absabin/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_absabin/confirmacaoEmail.html"
+
+    }
+  }
+}
