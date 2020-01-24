@@ -361,5 +361,9 @@
     "adservip.bilheteria.com.br": "adservip",
     "api.adservip.bilheteria.com.br": "adservip",
     "compra.adservip.bilheteria.com.br": "adservip",
-    "admin.adservip.bilheteria.com.br": "adservip"
+    "admin.adservip.bilheteria.com.br": "adservip",
+    "advanced.bilheteria.com.br": "advanced",
+    "api.advanced.bilheteria.com.br": "advanced",
+    "compra.advanced.bilheteria.com.br": "advanced",
+    "admin.advanced.bilheteria.com.br": "advanced"
 }

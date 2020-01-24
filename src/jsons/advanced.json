@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "advanced.bilheteria.com.br",
+  "uri": "https://advanced.bilheteria.com.br",
+  "api": "https://api.advanced.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.advanced.bilheteria.com.br",
+  "admin": "https://admin.advanced.bilheteria.com.br",
+  "apikey": "live_903b4172d1354eeaabb54204a1d6ad5f36a5916d033548628b71c8e95da4ef0c",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/advanced/main.scss",
+  "css": "/stylesheets/themes/advanced.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-advanced.png",
+  "favico": "/img/advanced/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Advanced",
+    "description": "",
+    "siteName": "advanced.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Advanced"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_advanced/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_advanced/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_advanced/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_advanced/emailComprador.html",
+      "gift": "../comprar/templates/multi_advanced/emailPresente.html",
+      "signature": "../comprar/templates/multi_advanced/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_advanced/confirmacaoEmail.html"
+
+    }
+  }
+}
