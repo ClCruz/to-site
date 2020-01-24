@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "asagol.bilheteria.com.br",
+  "uri": "https://asagol.bilheteria.com.br",
+  "api": "https://api.asagol.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.asagol.bilheteria.com.br",
+  "admin": "https://admin.asagol.bilheteria.com.br",
+  "apikey": "live_c84a7d33eee846f1b7af184fdda5ba2c707fb9c8ab3940d8bb1937c2fb5f3f3d",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/asagol/main.scss",
+  "css": "/stylesheets/themes/asagol.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-asagol.png",
+  "favico": "/img/asagol/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Asagol",
+    "description": "",
+    "siteName": "asagol.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Asagol"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_asagol/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_asagol/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_asagol/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_asagol/emailComprador.html",
+      "gift": "../comprar/templates/multi_asagol/emailPresente.html",
+      "signature": "../comprar/templates/multi_asagol/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_asagol/confirmacaoEmail.html"
+
+    }
+  }
+}
