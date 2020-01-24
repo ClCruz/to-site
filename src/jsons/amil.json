@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "amil.bilheteria.com.br",
+  "uri": "https://amil.bilheteria.com.br",
+  "api": "https://api.amil.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.amil.bilheteria.com.br",
+  "admin": "https://admin.amil.bilheteria.com.br",
+  "apikey": "live_b3102fe15869406b9ff6f7f9aacdcdfbeff1730dd5ee4b4db79fecbb1b131cf1",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/amil/main.scss",
+  "css": "/stylesheets/themes/amil.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-amil.png",
+  "favico": "/img/amil/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Amil",
+    "description": "",
+    "siteName": "amil.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Amil"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_amil/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_amil/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_amil/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_amil/emailComprador.html",
+      "gift": "../comprar/templates/multi_amil/emailPresente.html",
+      "signature": "../comprar/templates/multi_amil/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_amil/confirmacaoEmail.html"
+
+    }
+  }
+}
