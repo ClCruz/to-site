@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "cooperjhonson.bilheteria.com.br",
+  "uri": "https://cooperjhonson.bilheteria.com.br",
+  "api": "https://api.cooperjhonson.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.cooperjhonson.bilheteria.com.br",
+  "admin": "https://admin.cooperjhonson.bilheteria.com.br",
+  "apikey": "live_7f0225b9d5aa478bb24c76fdd8ef74c52e96356847f94780b728703f4c5e18df",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/cooperjhonson/main.scss",
+  "css": "/stylesheets/themes/cooperjhonson.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-cooperjhonson.png",
+  "favico": "/img/cooperjhonson/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Johnson & Johnson",
+    "description": "",
+    "siteName": "cooperjhonson.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Johnson & Johnson"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_cooperjhonson/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_cooperjhonson/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_cooperjhonson/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_cooperjhonson/emailComprador.html",
+      "gift": "../comprar/templates/multi_cooperjhonson/emailPresente.html",
+      "signature": "../comprar/templates/multi_cooperjhonson/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_cooperjhonson/confirmacaoEmail.html"
+
+    }
+  }
+}
