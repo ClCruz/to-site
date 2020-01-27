@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "castgroup.bilheteria.com.br",
+  "uri": "https://castgroup.bilheteria.com.br",
+  "api": "https://api.castgroup.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.castgroup.bilheteria.com.br",
+  "admin": "https://admin.castgroup.bilheteria.com.br",
+  "apikey": "live_41893a5840b74322bd8cdc3c5cdf66eb5535376278f346a29f7e4e42758bd5f1",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/castgroup/main.scss",
+  "css": "/stylesheets/themes/castgroup.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-castgroup.png",
+  "favico": "/img/castgroup/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Cast Informática S.A",
+    "description": "",
+    "siteName": "castgroup.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Cast Informática S.A"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_castgroup/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_castgroup/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_castgroup/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_castgroup/emailComprador.html",
+      "gift": "../comprar/templates/multi_castgroup/emailPresente.html",
+      "signature": "../comprar/templates/multi_castgroup/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_castgroup/confirmacaoEmail.html"
+
+    }
+  }
+}

@@ -441,5 +441,9 @@
     "cartaodetodos.bilheteria.com.br": "cartaodetodos",
     "api.cartaodetodos.bilheteria.com.br": "cartaodetodos",
     "compra.cartaodetodos.bilheteria.com.br": "cartaodetodos",
-    "admin.cartaodetodos.bilheteria.com.br": "cartaodetodos"
+    "admin.cartaodetodos.bilheteria.com.br": "cartaodetodos",
+    "castgroup.bilheteria.com.br": "castgroup",
+    "api.castgroup.bilheteria.com.br": "castgroup",
+    "compra.castgroup.bilheteria.com.br": "castgroup",
+    "admin.castgroup.bilheteria.com.br": "castgroup"
 }
