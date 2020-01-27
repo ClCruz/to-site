@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "harmoniabeneficios.bilheteria.com.br",
+  "uri": "https://harmoniabeneficios.bilheteria.com.br",
+  "api": "https://api.harmoniabeneficios.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.harmoniabeneficios.bilheteria.com.br",
+  "admin": "https://admin.harmoniabeneficios.bilheteria.com.br",
+  "apikey": "live_8cdbc7c34a444b9f99d3031766e3beaa8883ee81c49c44a28c5ce69e437c4f61",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/harmoniabeneficios/main.scss",
+  "css": "/stylesheets/themes/harmoniabeneficios.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-harmoniabeneficios.png",
+  "favico": "/img/harmoniabeneficios/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Harmonia Benefícios ",
+    "description": "",
+    "siteName": "harmoniabeneficios.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Harmonia Benefícios "
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_harmoniabeneficios/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_harmoniabeneficios/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_harmoniabeneficios/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_harmoniabeneficios/emailComprador.html",
+      "gift": "../comprar/templates/multi_harmoniabeneficios/emailPresente.html",
+      "signature": "../comprar/templates/multi_harmoniabeneficios/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_harmoniabeneficios/confirmacaoEmail.html"
+
+    }
+  }
+}
