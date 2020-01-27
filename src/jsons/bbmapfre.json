@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "bbmapfre.bilheteria.com.br",
+  "uri": "https://bbmapfre.bilheteria.com.br",
+  "api": "https://api.bbmapfre.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.bbmapfre.bilheteria.com.br",
+  "admin": "https://admin.bbmapfre.bilheteria.com.br",
+  "apikey": "live_006a605b8abf4b82851fefa07b112908208bd0a01530448ebcbd81b550047738",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/bbmapfre/main.scss",
+  "css": "/stylesheets/themes/bbmapfre.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-bbmapfre.png",
+  "favico": "/img/bbmapfre/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "BBMapfre",
+    "description": "",
+    "siteName": "bbmapfre.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "BBMapfre"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_bbmapfre/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_bbmapfre/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_bbmapfre/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_bbmapfre/emailComprador.html",
+      "gift": "../comprar/templates/multi_bbmapfre/emailPresente.html",
+      "signature": "../comprar/templates/multi_bbmapfre/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_bbmapfre/confirmacaoEmail.html"
+
+    }
+  }
+}
