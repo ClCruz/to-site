@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "dois5f.bilheteria.com.br",
+  "uri": "https://dois5f.bilheteria.com.br",
+  "api": "https://api.dois5f.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.dois5f.bilheteria.com.br",
+  "admin": "https://admin.dois5f.bilheteria.com.br",
+  "apikey": "live_8ab8609189b64a8bb8b925559eb60d699a039fdde31d4452a7062f992ff749a1",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/doiscincof/main.scss",
+  "css": "/stylesheets/themes/dois5f.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-doiscincof.png",
+  "favico": "/img/doiscincof/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Dois5f",
+    "description": "",
+    "siteName": "dois5f.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Dois5f"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_doiscincof/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_doiscincof/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_doiscincof/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_doiscincof/emailComprador.html",
+      "gift": "../comprar/templates/multi_doiscincof/emailPresente.html",
+      "signature": "../comprar/templates/multi_doiscincof/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_doiscincof/confirmacaoEmail.html"
+
+    }
+  }
+}
