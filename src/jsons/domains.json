@@ -433,5 +433,9 @@
     "caasp.bilheteria.com.br": "caasp",
     "api.caasp.bilheteria.com.br": "caasp",
     "compra.caasp.bilheteria.com.br": "caasp",
-    "admin.caasp.bilheteria.com.br": "caasp"
+    "admin.caasp.bilheteria.com.br": "caasp",
+    "carrefour.bilheteria.com.br": "carrefour",
+    "api.carrefour.bilheteria.com.br": "carrefour",
+    "compra.carrefour.bilheteria.com.br": "carrefour",
+    "admin.carrefour.bilheteria.com.br": "carrefour"
 }
