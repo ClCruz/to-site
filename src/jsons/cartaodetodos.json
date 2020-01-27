@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "cartaodetodos.bilheteria.com.br",
+  "uri": "https://cartaodetodos.bilheteria.com.br",
+  "api": "https://api.cartaodetodos.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.cartaodetodos.bilheteria.com.br",
+  "admin": "https://admin.cartaodetodos.bilheteria.com.br",
+  "apikey": "live_dbf984b27d5446c5a5c59cbdd685e968a9750b7cbdc64af28581793aaa2d90c1",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/cartaodetodos/main.scss",
+  "css": "/stylesheets/themes/cartaodetodos.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-cartaodetodos.png",
+  "favico": "/img/cartaodetodos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Cartão de Todos",
+    "description": "",
+    "siteName": "cartaodetodos.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Cartão de Todos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_cartaodetodos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_cartaodetodos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_cartaodetodos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_cartaodetodos/emailComprador.html",
+      "gift": "../comprar/templates/multi_cartaodetodos/emailPresente.html",
+      "signature": "../comprar/templates/multi_cartaodetodos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_cartaodetodos/confirmacaoEmail.html"
+
+    }
+  }
+}

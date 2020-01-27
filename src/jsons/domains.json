@@ -437,5 +437,9 @@
     "carrefour.bilheteria.com.br": "carrefour",
     "api.carrefour.bilheteria.com.br": "carrefour",
     "compra.carrefour.bilheteria.com.br": "carrefour",
-    "admin.carrefour.bilheteria.com.br": "carrefour"
+    "admin.carrefour.bilheteria.com.br": "carrefour",
+    "cartaodetodos.bilheteria.com.br": "cartaodetodos",
+    "api.cartaodetodos.bilheteria.com.br": "cartaodetodos",
+    "compra.cartaodetodos.bilheteria.com.br": "cartaodetodos",
+    "admin.cartaodetodos.bilheteria.com.br": "cartaodetodos"
 }
