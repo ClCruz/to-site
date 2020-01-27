@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "assabin.bilheteria.com.br",
+  "uri": "https://assabin.bilheteria.com.br",
+  "api": "https://api.assabin.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.assabin.bilheteria.com.br",
+  "admin": "https://admin.assabin.bilheteria.com.br",
+  "apikey": "live_f89bab2ec4a944218b4c6beb7277f1a718aa3f8d46e249c0abdba6dbcf7d93e4",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/assabin/main.scss",
+  "css": "/stylesheets/themes/assabin.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-assabin.png",
+  "favico": "/img/assabin/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "ASSabin",
+    "description": "",
+    "siteName": "assabin.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "ASSabin"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_assabin/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_assabin/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_assabin/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_assabin/emailComprador.html",
+      "gift": "../comprar/templates/multi_assabin/emailPresente.html",
+      "signature": "../comprar/templates/multi_assabin/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_assabin/confirmacaoEmail.html"
+
+    }
+  }
+}
