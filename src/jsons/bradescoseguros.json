@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "bradescoseguros.bilheteria.com.br",
+  "uri": "https://bradescoseguros.bilheteria.com.br",
+  "api": "https://api.bradescoseguros.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.bradescoseguros.bilheteria.com.br",
+  "admin": "https://admin.bradescoseguros.bilheteria.com.br",
+  "apikey": "live_cea6571b60174347ac41ecf63c919ca341ba13d3ecb54e89863632d0cc5286ab",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/bradescoseguros/main.scss",
+  "css": "/stylesheets/themes/bradescoseguros.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-bradescoseguros.png",
+  "favico": "/img/bradescoseguros/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Bradesco Seguros",
+    "description": "",
+    "siteName": "bradescoseguros.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Bradesco Seguros"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_bradescoseguros/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_bradescoseguros/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_bradescoseguros/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_bradescoseguros/emailComprador.html",
+      "gift": "../comprar/templates/multi_bradescoseguros/emailPresente.html",
+      "signature": "../comprar/templates/multi_bradescoseguros/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_bradescoseguros/confirmacaoEmail.html"
+
+    }
+  }
+}

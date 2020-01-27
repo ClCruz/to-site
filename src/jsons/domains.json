@@ -425,5 +425,9 @@
     "biocath.bilheteria.com.br": "biocath",
     "api.biocath.bilheteria.com.br": "biocath",
     "compra.biocath.bilheteria.com.br": "biocath",
-    "admin.biocath.bilheteria.com.br": "biocath"
+    "admin.biocath.bilheteria.com.br": "biocath",
+    "bradescoseguros.bilheteria.com.br": "bradescoseguros",
+    "api.bradescoseguros.bilheteria.com.br": "bradescoseguros",
+    "compra.bradescoseguros.bilheteria.com.br": "bradescoseguros",
+    "admin.bradescoseguros.bilheteria.com.br": "bradescoseguros"
 }
