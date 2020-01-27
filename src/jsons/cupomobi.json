@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "cupomobi.bilheteria.com.br",
+  "uri": "https://cupomobi.bilheteria.com.br",
+  "api": "https://api.cupomobi.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.cupomobi.bilheteria.com.br",
+  "admin": "https://admin.cupomobi.bilheteria.com.br",
+  "apikey": "live_265d2f2e67a44498a6c8893edcbbef5453c1c1b9980f42c2bd1fca3588b9610e",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/cupomobi/main.scss",
+  "css": "/stylesheets/themes/cupomobi.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-cupomobi.png",
+  "favico": "/img/cupomobi/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Cupomobi",
+    "description": "",
+    "siteName": "cupomobi.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Cupomobi"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_cupomobi/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_cupomobi/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_cupomobi/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_cupomobi/emailComprador.html",
+      "gift": "../comprar/templates/multi_cupomobi/emailPresente.html",
+      "signature": "../comprar/templates/multi_cupomobi/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_cupomobi/confirmacaoEmail.html"
+
+    }
+  }
+}

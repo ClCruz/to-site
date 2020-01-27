@@ -485,5 +485,9 @@
     "crpdf.bilheteria.com.br": "crpdf",
     "api.crpdf.bilheteria.com.br": "crpdf",
     "compra.crpdf.bilheteria.com.br": "crpdf",
-    "admin.crpdf.bilheteria.com.br": "crpdf"
+    "admin.crpdf.bilheteria.com.br": "crpdf",
+    "cupomobi.bilheteria.com.br": "cupomobi",
+    "api.cupomobi.bilheteria.com.br": "cupomobi",
+    "compra.cupomobi.bilheteria.com.br": "cupomobi",
+    "admin.cupomobi.bilheteria.com.br": "cupomobi"
 }
