@@ -481,5 +481,9 @@
     "creditsuisse.bilheteria.com.br": "creditsuisse",
     "api.creditsuisse.bilheteria.com.br": "creditsuisse",
     "compra.creditsuisse.bilheteria.com.br": "creditsuisse",
-    "admin.creditsuisse.bilheteria.com.br": "creditsuisse"
+    "admin.creditsuisse.bilheteria.com.br": "creditsuisse",
+    "crpdf.bilheteria.com.br": "crpdf",
+    "api.crpdf.bilheteria.com.br": "crpdf",
+    "compra.crpdf.bilheteria.com.br": "crpdf",
+    "admin.crpdf.bilheteria.com.br": "crpdf"
 }

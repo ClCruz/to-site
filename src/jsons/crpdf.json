@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "crpdf.bilheteria.com.br",
+  "uri": "https://crpdf.bilheteria.com.br",
+  "api": "https://api.crpdf.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.crpdf.bilheteria.com.br",
+  "admin": "https://admin.crpdf.bilheteria.com.br",
+  "apikey": "live_1b3b61d387df4ef4b2a39f7ffe164f1f80085409d5404933b91050ea4e592dd4",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/crpdf/main.scss",
+  "css": "/stylesheets/themes/crpdf.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-crpdf.png",
+  "favico": "/img/crpdf/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "CRPDF",
+    "description": "",
+    "siteName": "crpdf.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "CRPDF"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_crpdf/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_crpdf/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_crpdf/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_crpdf/emailComprador.html",
+      "gift": "../comprar/templates/multi_crpdf/emailPresente.html",
+      "signature": "../comprar/templates/multi_crpdf/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_crpdf/confirmacaoEmail.html"
+
+    }
+  }
+}
