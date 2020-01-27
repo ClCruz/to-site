@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "atech.bilheteria.com.br",
+  "uri": "https://atech.bilheteria.com.br",
+  "api": "https://api.atech.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.atech.bilheteria.com.br",
+  "admin": "https://admin.atech.bilheteria.com.br",
+  "apikey": "live_3d69378c107743dbb19fb7f7bee05ea0588c21c5c70e465580dfbc578e40f510",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/atech/main.scss",
+  "css": "/stylesheets/themes/atech.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-atech.png",
+  "favico": "/img/atech/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Atech",
+    "description": "",
+    "siteName": "atech.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Atech"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_atech/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_atech/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_atech/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_atech/emailComprador.html",
+      "gift": "../comprar/templates/multi_atech/emailPresente.html",
+      "signature": "../comprar/templates/multi_atech/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_atech/confirmacaoEmail.html"
+
+    }
+  }
+}
