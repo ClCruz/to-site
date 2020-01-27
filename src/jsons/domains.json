@@ -477,5 +477,9 @@
     "corporativo.bilheteria.com.br": "corporativo",
     "api.corporativo.bilheteria.com.br": "corporativo",
     "compra.corporativo.bilheteria.com.br": "corporativo",
-    "admin.corporativo.bilheteria.com.br": "corporativo"
+    "admin.corporativo.bilheteria.com.br": "corporativo",
+    "creditsuisse.bilheteria.com.br": "creditsuisse",
+    "api.creditsuisse.bilheteria.com.br": "creditsuisse",
+    "compra.creditsuisse.bilheteria.com.br": "creditsuisse",
+    "admin.creditsuisse.bilheteria.com.br": "creditsuisse"
 }
