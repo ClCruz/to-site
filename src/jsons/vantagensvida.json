@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "vantagensvida360.bilheteria.com.br",
+  "uri": "https://vantagensvida360.bilheteria.com.br",
+  "api": "https://api.vantagensvida360.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.vantagensvida360.bilheteria.com.br",
+  "admin": "https://admin.vantagensvida360.bilheteria.com.br",
+  "apikey": "live_b882e428978a4975ab494ce4cff512a55877e25def4b42c5b2c26a3d989fba76",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/vantagensvida/main.scss",
+  "css": "/stylesheets/themes/vantagensvida360.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-vantagensvida.png",
+  "favico": "/img/vantagensvida/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "D.P.C Nogueira Intermediação - ME",
+    "description": "",
+    "siteName": "vantagensvida360.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "D.P.C Nogueira Intermediação - ME"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_vantagensvida/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_vantagensvida/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_vantagensvida/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_vantagensvida/emailComprador.html",
+      "gift": "../comprar/templates/multi_vantagensvida/emailPresente.html",
+      "signature": "../comprar/templates/multi_vantagensvida/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_vantagensvida/confirmacaoEmail.html"
+
+    }
+  }
+}
