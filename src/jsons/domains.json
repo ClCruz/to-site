@@ -513,5 +513,9 @@
     "eicon.bilheteria.com.br": "eicon",
     "api.eicon.bilheteria.com.br": "eicon",
     "compra.eicon.bilheteria.com.br": "eicon",
-    "admin.eicon.bilheteria.com.br": "eicon"
+    "admin.eicon.bilheteria.com.br": "eicon",
+    "grandbrasil.bilheteria.com.br": "grandbrasil",
+    "api.grandbrasil.bilheteria.com.br": "grandbrasil",
+    "compra.grandbrasil.bilheteria.com.br": "grandbrasil",
+    "admin.grandbrasil.bilheteria.com.br": "grandbrasil"
 }
