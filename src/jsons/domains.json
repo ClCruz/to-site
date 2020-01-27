@@ -457,5 +457,9 @@
     "cnbsp.bilheteria.com.br": "cnbsp",
     "api.cnbsp.bilheteria.com.br": "cnbsp",
     "compra.cnbsp.bilheteria.com.br": "cnbsp",
-    "admin.cnbsp.bilheteria.com.br": "cnbsp"
+    "admin.cnbsp.bilheteria.com.br": "cnbsp",
+    "coats.bilheteria.com.br": "coats",
+    "api.coats.bilheteria.com.br": "coats",
+    "compra.coats.bilheteria.com.br": "coats",
+    "admin.coats.bilheteria.com.br": "coats"
 }

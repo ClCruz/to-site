@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "coats.bilheteria.com.br",
+  "uri": "https://coats.bilheteria.com.br",
+  "api": "https://api.coats.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.coats.bilheteria.com.br",
+  "admin": "https://admin.coats.bilheteria.com.br",
+  "apikey": "live_83076ba46ebd443e83a13f2391f6e281f0a31de46e5749d3bc34b9a6a833708d",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/coats/main.scss",
+  "css": "/stylesheets/themes/coats.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-coats.png",
+  "favico": "/img/coats/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Coats",
+    "description": "",
+    "siteName": "coats.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Coats"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_coats/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_coats/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_coats/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_coats/emailComprador.html",
+      "gift": "../comprar/templates/multi_coats/emailPresente.html",
+      "signature": "../comprar/templates/multi_coats/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_coats/confirmacaoEmail.html"
+
+    }
+  }
+}
