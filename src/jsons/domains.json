@@ -533,5 +533,9 @@
     "hsmguarulhos.bilheteria.com.br": "hsmguarulhos",
     "api.hsmguarulhos.bilheteria.com.br": "hsmguarulhos",
     "compra.hsmguarulhos.bilheteria.com.br": "hsmguarulhos",
-    "admin.hsmguarulhos.bilheteria.com.br": "hsmguarulhos"
+    "admin.hsmguarulhos.bilheteria.com.br": "hsmguarulhos",
+    "interclube.bilheteria.com.br": "interclube",
+    "api.interclube.bilheteria.com.br": "interclube",
+    "compra.interclube.bilheteria.com.br": "interclube",
+    "admin.interclube.bilheteria.com.br": "interclube"
 }
