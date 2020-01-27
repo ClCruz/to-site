@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "grupoflytour.bilheteria.com.br",
+  "uri": "https://grupoflytour.bilheteria.com.br",
+  "api": "https://api.grupoflytour.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.grupoflytour.bilheteria.com.br",
+  "admin": "https://admin.grupoflytour.bilheteria.com.br",
+  "apikey": "live_20567928ec0848f79ce3efe7e5d6cf3772c65ef2fa7f4f5e895fc57234825579",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/grupoflytour/main.scss",
+  "css": "/stylesheets/themes/grupoflytour.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-grupoflytour.png",
+  "favico": "/img/grupoflytour/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Grupo Flytour",
+    "description": "",
+    "siteName": "grupoflytour.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Grupo Flytour"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_grupoflytour/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_grupoflytour/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_grupoflytour/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_grupoflytour/emailComprador.html",
+      "gift": "../comprar/templates/multi_grupoflytour/emailPresente.html",
+      "signature": "../comprar/templates/multi_grupoflytour/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_grupoflytour/confirmacaoEmail.html"
+
+    }
+  }
+}
