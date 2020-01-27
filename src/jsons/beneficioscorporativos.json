@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "beneficioscorporativos.bilheteria.com.br",
+  "uri": "https://beneficioscorporativos.bilheteria.com.br",
+  "api": "https://api.beneficioscorporativos.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.beneficioscorporativos.bilheteria.com.br",
+  "admin": "https://admin.beneficioscorporativos.bilheteria.com.br",
+  "apikey": "live_d3a8d529f1da49b6b9fc76e420fc915cfd763d4cc0ba4965b4cee97664b9328b",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/beneficioscorporativos/main.scss",
+  "css": "/stylesheets/themes/beneficioscorporativos.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-beneficioscorporativos.png",
+  "favico": "/img/beneficioscorporativos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Beneficios Corporativos",
+    "description": "",
+    "siteName": "beneficioscorporativos.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Beneficios CorporativosBeneficios Corporativos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_beneficioscorporativos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_beneficioscorporativos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_beneficioscorporativos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_beneficioscorporativos/emailComprador.html",
+      "gift": "../comprar/templates/multi_beneficioscorporativos/emailPresente.html",
+      "signature": "../comprar/templates/multi_beneficioscorporativos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_beneficioscorporativos/confirmacaoEmail.html"
+
+    }
+  }
+}
