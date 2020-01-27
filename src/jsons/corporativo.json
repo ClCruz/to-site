@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "corporativo.bilheteria.com.br",
+  "uri": "https://corporativo.bilheteria.com.br",
+  "api": "https://api.corporativo.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.corporativo.bilheteria.com.br",
+  "admin": "https://admin.corporativo.bilheteria.com.br",
+  "apikey": "live_769f96d023f0400a8f0df5b4af726c2ac5ac4a1765504521ad8b0998108bac8a",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/corporativo/main.scss",
+  "css": "/stylesheets/themes/corporativo.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-corporativo.png",
+  "favico": "/img/corporativo/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Corporativo",
+    "description": "",
+    "siteName": "corporativo.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Corporativo"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_corporativo/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_corporativo/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_corporativo/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_corporativo/emailComprador.html",
+      "gift": "../comprar/templates/multi_corporativo/emailPresente.html",
+      "signature": "../comprar/templates/multi_corporativo/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_corporativo/confirmacaoEmail.html"
+
+    }
+  }
+}
