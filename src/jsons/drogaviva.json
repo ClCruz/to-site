@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "drogaviva.bilheteria.com.br",
+  "uri": "https://drogaviva.bilheteria.com.br",
+  "api": "https://api.drogaviva.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.drogaviva.bilheteria.com.br",
+  "admin": "https://admin.drogaviva.bilheteria.com.br",
+  "apikey": "live_8285ae7670d148999fef2703a154136174477eadc2554f37b67b4be9143b339c",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/drogaviva/main.scss",
+  "css": "/stylesheets/themes/drogaviva.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-drogaviva.png",
+  "favico": "/img/drogaviva/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Drogaviva",
+    "description": "",
+    "siteName": "drogaviva.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Drogaviva"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_drogaviva/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_drogaviva/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_drogaviva/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_drogaviva/emailComprador.html",
+      "gift": "../comprar/templates/multi_drogaviva/emailPresente.html",
+      "signature": "../comprar/templates/multi_drogaviva/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_drogaviva/confirmacaoEmail.html"
+
+    }
+  }
+}
