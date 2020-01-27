@@ -445,5 +445,9 @@
     "castgroup.bilheteria.com.br": "castgroup",
     "api.castgroup.bilheteria.com.br": "castgroup",
     "compra.castgroup.bilheteria.com.br": "castgroup",
-    "admin.castgroup.bilheteria.com.br": "castgroup"
+    "admin.castgroup.bilheteria.com.br": "castgroup",
+    "chequeteatro.bilheteria.com.br": "chequeteatro",
+    "api.chequeteatro.bilheteria.com.br": "chequeteatro",
+    "compra.chequeteatro.bilheteria.com.br": "chequeteatro",
+    "admin.chequeteatro.bilheteria.com.br": "chequeteatro"
 }

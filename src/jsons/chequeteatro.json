@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "chequeteatro.bilheteria.com.br",
+  "uri": "https://chequeteatro.bilheteria.com.br",
+  "api": "https://api.chequeteatro.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.chequeteatro.bilheteria.com.br",
+  "admin": "https://admin.chequeteatro.bilheteria.com.br",
+  "apikey": "live_43048780d853451bb2a494089a97a4917ed15228529040c78ba442dbcd89d9e0",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/chequeteatro/main.scss",
+  "css": "/stylesheets/themes/chequeteatro.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-chequeteatro.png",
+  "favico": "/img/chequeteatro/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Cheque Teatro",
+    "description": "",
+    "siteName": "chequeteatro.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Cheque Teatro"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_chequeteatro/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_chequeteatro/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_chequeteatro/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_chequeteatro/emailComprador.html",
+      "gift": "../comprar/templates/multi_chequeteatro/emailPresente.html",
+      "signature": "../comprar/templates/multi_chequeteatro/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_chequeteatro/confirmacaoEmail.html"
+
+    }
+  }
+}
