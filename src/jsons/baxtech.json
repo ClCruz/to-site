@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "baxtech.bilheteria.com.br",
+  "uri": "https://baxtech.bilheteria.com.br",
+  "api": "https://api.baxtech.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.baxtech.bilheteria.com.br",
+  "admin": "https://admin.baxtech.bilheteria.com.br",
+  "apikey": "live_0643f4ee41a44cc5b82ce67dd51b60574a6739772d8b4ce5a9e828aa85326a88",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/baxtech/main.scss",
+  "css": "/stylesheets/themes/baxtech.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-baxtech.png",
+  "favico": "/img/baxtech/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Baxtech Tecnologia Da Informação Ltda",
+    "description": "",
+    "siteName": "baxtech.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Baxtech Tecnologia Da Informação Ltda"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_baxtech/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_baxtech/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_baxtech/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_baxtech/emailComprador.html",
+      "gift": "../comprar/templates/multi_baxtech/emailPresente.html",
+      "signature": "../comprar/templates/multi_baxtech/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_baxtech/confirmacaoEmail.html"
+
+    }
+  }
+}
