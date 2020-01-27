@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "cnbsp.bilheteria.com.br",
+  "uri": "https://cnbsp.bilheteria.com.br",
+  "api": "https://api.cnbsp.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.cnbsp.bilheteria.com.br",
+  "admin": "https://admin.cnbsp.bilheteria.com.br",
+  "apikey": "live_ac009721489541349c810745abeaf39b8f6136c71910411a8b0937430ffe762d",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/cnbsp/main.scss",
+  "css": "/stylesheets/themes/cnbsp.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-cnbsp.png",
+  "favico": "/img/cnbsp/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "CNBSP",
+    "description": "",
+    "siteName": "cnbsp.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "CNBSP"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_cnbsp/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_cnbsp/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_cnbsp/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_cnbsp/emailComprador.html",
+      "gift": "../comprar/templates/multi_cnbsp/emailPresente.html",
+      "signature": "../comprar/templates/multi_cnbsp/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_cnbsp/confirmacaoEmail.html"
+
+    }
+  }
+}
