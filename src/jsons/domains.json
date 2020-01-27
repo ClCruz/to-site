@@ -405,5 +405,9 @@
     "atech.bilheteria.com.br": "atech",
     "api.atech.bilheteria.com.br": "atech",
     "compra.atech.bilheteria.com.br": "atech",
-    "admin.atech.bilheteria.com.br": "atech"
+    "admin.atech.bilheteria.com.br": "atech",
+    "avon.bilheteria.com.br": "avon",
+    "api.avon.bilheteria.com.br": "avon",
+    "compra.avon.bilheteria.com.br": "avon",
+    "admin.avon.bilheteria.com.br": "avon"
 }

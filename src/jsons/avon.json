@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "avon.bilheteria.com.br",
+  "uri": "https://avon.bilheteria.com.br",
+  "api": "https://api.avon.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.avon.bilheteria.com.br",
+  "admin": "https://admin.avon.bilheteria.com.br",
+  "apikey": "live_c85d319d520c40a3956d4487d82202f514730a5afd4f4c108c69829a60b435a5",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/avon/main.scss",
+  "css": "/stylesheets/themes/avon.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-avon.png",
+  "favico": "/img/avon/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Avon",
+    "description": "",
+    "siteName": "avon.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Avon"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_avon/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_avon/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_avon/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_avon/emailComprador.html",
+      "gift": "../comprar/templates/multi_avon/emailPresente.html",
+      "signature": "../comprar/templates/multi_avon/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_avon/confirmacaoEmail.html"
+
+    }
+  }
+}
