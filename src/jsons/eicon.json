@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "eicon.bilheteria.com.br",
+  "uri": "https://eicon.bilheteria.com.br",
+  "api": "https://api.eicon.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.eicon.bilheteria.com.br",
+  "admin": "https://admin.eicon.bilheteria.com.br",
+  "apikey": "live_aa28a6673a984869a98a39421cb788cc32241c5512da4efa946e5bbd664bccd9",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/eicon/main.scss",
+  "css": "/stylesheets/themes/eicon.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-eicon.png",
+  "favico": "/img/eicon/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Eicon Controles",
+    "description": "",
+    "siteName": "eicon.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Eicon Controles"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_eicon/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_eicon/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_eicon/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_eicon/emailComprador.html",
+      "gift": "../comprar/templates/multi_eicon/emailPresente.html",
+      "signature": "../comprar/templates/multi_eicon/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_eicon/confirmacaoEmail.html"
+
+    }
+  }
+}
