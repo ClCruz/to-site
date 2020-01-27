@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "biocath.bilheteria.com.br",
+  "uri": "https://biocath.bilheteria.com.br",
+  "api": "https://api.biocath.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.biocath.bilheteria.com.br",
+  "admin": "https://admin.biocath.bilheteria.com.br",
+  "apikey": "live_0d92b11b9e40412cad8abb07f3d2224a42411a70713b47bb8c7f2a1abf87422b",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/biocath/main.scss",
+  "css": "/stylesheets/themes/biocath.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-biocath.png",
+  "favico": "/img/biocath/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Biocath",
+    "description": "",
+    "siteName": "biocath.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Biocath"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_biocath/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_biocath/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_biocath/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_biocath/emailComprador.html",
+      "gift": "../comprar/templates/multi_biocath/emailPresente.html",
+      "signature": "../comprar/templates/multi_biocath/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_biocath/confirmacaoEmail.html"
+
+    }
+  }
+}
