@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "clubemaisestadao.bilheteria.com.br",
+  "uri": "https://clubemaisestadao.bilheteria.com.br",
+  "api": "https://api.clubemaisestadao.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.clubemaisestadao.bilheteria.com.br",
+  "admin": "https://admin.clubemaisestadao.bilheteria.com.br",
+  "apikey": "live_d3900c5e31c349f9b61f8208f4156176db6c6ceab30645dd8e73cbc8cf7f20e5",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/clubemaisestadao/main.scss",
+  "css": "/stylesheets/themes/clubemaisestadao.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-clubemaisestadao.png",
+  "favico": "/img/clubemaisestadao/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Clube + Estadão",
+    "description": "",
+    "siteName": "clubemaisestadao.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Clube + Estadão"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_clubemaisestadao/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_clubemaisestadao/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_clubemaisestadao/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_clubemaisestadao/emailComprador.html",
+      "gift": "../comprar/templates/multi_clubemaisestadao/emailPresente.html",
+      "signature": "../comprar/templates/multi_clubemaisestadao/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_clubemaisestadao/confirmacaoEmail.html"
+
+    }
+  }
+}
