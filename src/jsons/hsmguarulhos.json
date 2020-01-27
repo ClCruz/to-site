@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "hsmguarulhos.bilheteria.com.br",
+  "uri": "https://hsmguarulhos.bilheteria.com.br",
+  "api": "https://api.hsmguarulhos.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.hsmguarulhos.bilheteria.com.br",
+  "admin": "https://admin.hsmguarulhos.bilheteria.com.br",
+  "apikey": "live_d927da21d6f3498e9ad1bd321f05109b2585328451b141ecb9f33fc9a796b55a",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/hsmguarulhos/main.scss",
+  "css": "/stylesheets/themes/hsmguarulhos.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-hsmguarulhos.png",
+  "favico": "/img/hsmguarulhos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "HSM Guarulhos",
+    "description": "",
+    "siteName": "hsmguarulhos.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "HSM Guarulhos"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_hsmguarulhos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_hsmguarulhos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_hsmguarulhos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_hsmguarulhos/emailComprador.html",
+      "gift": "../comprar/templates/multi_hsmguarulhos/emailPresente.html",
+      "signature": "../comprar/templates/multi_hsmguarulhos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_hsmguarulhos/confirmacaoEmail.html"
+
+    }
+  }
+}
