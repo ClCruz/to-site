@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "cooperfemsa.bilheteria.com.br",
+  "uri": "https://cooperfemsa.bilheteria.com.br",
+  "api": "https://api.cooperfemsa.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.cooperfemsa.bilheteria.com.br",
+  "admin": "https://admin.cooperfemsa.bilheteria.com.br",
+  "apikey": "live_a67ed259b0f64fe09a5b9534981e69ec26ea451812f241f494d1f2adf02670c8",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/cooperfemsa/main.scss",
+  "css": "/stylesheets/themes/cooperfemsa.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-cooperfemsa.png",
+  "favico": "/img/cooperfemsa/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Cooperfemsa",
+    "description": "",
+    "siteName": "cooperfemsa.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Cooperfemsa"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_cooperfemsa/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_cooperfemsa/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_cooperfemsa/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_cooperfemsa/emailComprador.html",
+      "gift": "../comprar/templates/multi_cooperfemsa/emailPresente.html",
+      "signature": "../comprar/templates/multi_cooperfemsa/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_cooperfemsa/confirmacaoEmail.html"
+
+    }
+  }
+}
