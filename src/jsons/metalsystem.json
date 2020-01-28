@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "metalsystem.bilheteria.com.br",
+  "uri": "https://metalsystem.bilheteria.com.br",
+  "api": "https://api.metalsystem.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.metalsystem.bilheteria.com.br",
+  "admin": "https://admin.metalsystem.bilheteria.com.br",
+  "apikey": "live_9176e60dbf6d4085b89bcb334a4db6b4e62edbe1f77c44499d2fba84779c8189",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/metalsystem/main.scss",
+  "css": "/stylesheets/themes/metalsystem.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-metalsystem.png",
+  "favico": "/img/metalsystem/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Metal System",
+    "description": "",
+    "siteName": "metalsystem.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Metal System"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_metalsystem/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_metalsystem/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_metalsystem/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_metalsystem/emailComprador.html",
+      "gift": "../comprar/templates/multi_metalsystem/emailPresente.html",
+      "signature": "../comprar/templates/multi_metalsystem/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_metalsystem/confirmacaoEmail.html"
+
+    }
+  }
+}
