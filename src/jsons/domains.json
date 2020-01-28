@@ -557,5 +557,9 @@
     "locaweb.bilheteria.com.br": "locaweb",
     "api.locaweb.bilheteria.com.br": "locaweb",
     "compra.locaweb.bilheteria.com.br": "locaweb",
-    "admin.locaweb.bilheteria.com.br": "locaweb"
+    "admin.locaweb.bilheteria.com.br": "locaweb",
+    "mdr4.bilheteria.com.br": "mdr",
+    "api.mdr4.bilheteria.com.br": "mdr",
+    "compra.mdr4.bilheteria.com.br": "mdr",
+    "admin.mdr4.bilheteria.com.br": "mdr"
 }
