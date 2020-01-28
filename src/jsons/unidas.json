@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "unidas.bilheteria.com.br",
+  "uri": "https://unidas.bilheteria.com.br",
+  "api": "https://api.unidas.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.unidas.bilheteria.com.br",
+  "admin": "https://admin.unidas.bilheteria.com.br",
+  "apikey": "live_624a1df1119c4382a05b1ba849bc5a03c94179c33e40496d9490cb9d27a58c8f",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/unidas/main.scss",
+  "css": "/stylesheets/themes/unidas.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-unidas.png",
+  "favico": "/img/unidas/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Unidas ",
+    "description": "",
+    "siteName": "unidas.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Unidas "
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_unidas/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_unidas/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_unidas/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_unidas/emailComprador.html",
+      "gift": "../comprar/templates/multi_unidas/emailPresente.html",
+      "signature": "../comprar/templates/multi_unidas/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_unidas/confirmacaoEmail.html"
+
+    }
+  }
+}
