@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "spbancarios.bilheteria.com.br",
+  "uri": "https://spbancarios.bilheteria.com.br",
+  "api": "https://api.spbancarios.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.spbancarios.bilheteria.com.br",
+  "admin": "https://admin.spbancarios.bilheteria.com.br",
+  "apikey": "live_a9718e2f02b74e7e8329933fde371f0ab15dd5f739464970976d9a168626e933",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/spbancarios/main.scss",
+  "css": "/stylesheets/themes/spbancarios.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-spbancarios.png",
+  "favico": "/img/spbancarios/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Spbancarios",
+    "description": "",
+    "siteName": "spbancarios.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Spbancarios"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_spbancarios/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_spbancarios/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_spbancarios/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_spbancarios/emailComprador.html",
+      "gift": "../comprar/templates/multi_spbancarios/emailPresente.html",
+      "signature": "../comprar/templates/multi_spbancarios/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_spbancarios/confirmacaoEmail.html"
+
+    }
+  }
+}

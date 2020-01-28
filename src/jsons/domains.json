@@ -629,5 +629,9 @@
     "sony.bilheteria.com.br": "sony",
     "api.sony.bilheteria.com.br": "sony",
     "compra.sony.bilheteria.com.br": "sony",
-    "admin.sony.bilheteria.com.br": "sony"
+    "admin.sony.bilheteria.com.br": "sony",
+    "spbancarios.bilheteria.com.br": "spbancarios",
+    "api.spbancarios.bilheteria.com.br": "spbancarios",
+    "compra.spbancarios.bilheteria.com.br": "spbancarios",
+    "admin.spbancarios.bilheteria.com.br": "spbancarios"
 }
