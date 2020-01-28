@@ -553,5 +553,9 @@
     "lincard.bilheteria.com.br": "lincard",
     "api.lincard.bilheteria.com.br": "lincard",
     "compra.lincard.bilheteria.com.br": "lincard",
-    "admin.lincard.bilheteria.com.br": "lincard"
+    "admin.lincard.bilheteria.com.br": "lincard",
+    "locaweb.bilheteria.com.br": "locaweb",
+    "api.locaweb.bilheteria.com.br": "locaweb",
+    "compra.locaweb.bilheteria.com.br": "locaweb",
+    "admin.locaweb.bilheteria.com.br": "locaweb"
 }

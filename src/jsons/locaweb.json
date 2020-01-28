@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "locaweb.bilheteria.com.br",
+  "uri": "https://locaweb.bilheteria.com.br",
+  "api": "https://api.locaweb.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.locaweb.bilheteria.com.br",
+  "admin": "https://admin.locaweb.bilheteria.com.br",
+  "apikey": "live_666e084f3de542159d381fd86f29f0b7a42f2de50b264781afa81683a7e27828",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/locaweb/main.scss",
+  "css": "/stylesheets/themes/locaweb.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-locaweb.png",
+  "favico": "/img/locaweb/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Locaweb",
+    "description": "",
+    "siteName": "locaweb.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Locaweb"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_locaweb/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_locaweb/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_locaweb/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_locaweb/emailComprador.html",
+      "gift": "../comprar/templates/multi_locaweb/emailPresente.html",
+      "signature": "../comprar/templates/multi_locaweb/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_locaweb/confirmacaoEmail.html"
+
+    }
+  }
+}
