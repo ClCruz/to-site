@@ -565,5 +565,9 @@
     "metalsystem.bilheteria.com.br": "metalsystem",
     "api.metalsystem.bilheteria.com.br": "metalsystem",
     "compra.metalsystem.bilheteria.com.br": "metalsystem",
-    "admin.metalsystem.bilheteria.com.br": "metalsystem"
+    "admin.metalsystem.bilheteria.com.br": "metalsystem",
+    "metro.bilheteria.com.br": "metro",
+    "api.metro.bilheteria.com.br": "metro",
+    "compra.metro.bilheteria.com.br": "metro",
+    "admin.metro.bilheteria.com.br": "metro"
 }
