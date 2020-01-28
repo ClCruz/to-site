@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "allya.bilheteria.com.br",
+  "uri": "https://allya.bilheteria.com.br",
+  "api": "https://api.allya.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.allya.bilheteria.com.br",
+  "admin": "https://admin.allya.bilheteria.com.br",
+  "apikey": "live_d806cb2aa2b144ae8c0899c55f2295146e1b9828aa4e4ce7931ac5ea3b206e03",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/allya/main.scss",
+  "css": "/stylesheets/themes/allya.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-allya.png",
+  "favico": "/img/allya/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Allya (Colaboradores)",
+    "description": "",
+    "siteName": "allya.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Allya (Colaboradores)"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_allya/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_allya/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_allya/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_allya/emailComprador.html",
+      "gift": "../comprar/templates/multi_allya/emailPresente.html",
+      "signature": "../comprar/templates/multi_allya/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_allya/confirmacaoEmail.html"
+
+    }
+  }
+}
