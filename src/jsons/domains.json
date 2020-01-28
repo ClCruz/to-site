@@ -633,5 +633,9 @@
     "spbancarios.bilheteria.com.br": "spbancarios",
     "api.spbancarios.bilheteria.com.br": "spbancarios",
     "compra.spbancarios.bilheteria.com.br": "spbancarios",
-    "admin.spbancarios.bilheteria.com.br": "spbancarios"
+    "admin.spbancarios.bilheteria.com.br": "spbancarios",
+    "spdmpais.bilheteria.com.br": "spdmpais",
+    "api.spdmpais.bilheteria.com.br": "spdmpais",
+    "compra.spdmpais.bilheteria.com.br": "spdmpais",
+    "admin.spdmpais.bilheteria.com.br": "spdmpais"
 }

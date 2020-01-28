@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "spdmpais.bilheteria.com.br",
+  "uri": "https://spdmpais.bilheteria.com.br",
+  "api": "https://api.spdmpais.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.spdmpais.bilheteria.com.br",
+  "admin": "https://admin.spdmpais.bilheteria.com.br",
+  "apikey": "live_c85a7142c22445d9b9ec29dbefa22b9fafa87a9673914fb1a50bb371447d3cd9",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/spdmpais/main.scss",
+  "css": "/stylesheets/themes/spdmpais.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-spdmpais.png",
+  "favico": "/img/spdmpais/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "SPDMPAIS",
+    "description": "",
+    "siteName": "spdmpais.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "SPDMPAIS"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_spdmpais/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_spdmpais/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_spdmpais/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_spdmpais/emailComprador.html",
+      "gift": "../comprar/templates/multi_spdmpais/emailPresente.html",
+      "signature": "../comprar/templates/multi_spdmpais/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_spdmpais/confirmacaoEmail.html"
+
+    }
+  }
+}
