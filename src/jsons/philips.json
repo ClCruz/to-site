@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "philips.bilheteria.com.br",
+  "uri": "https://philips.bilheteria.com.br",
+  "api": "https://api.philips.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.philips.bilheteria.com.br",
+  "admin": "https://admin.philips.bilheteria.com.br",
+  "apikey": "live_4de50918bfef4a61be8d8a286da38b714abedc81da3344ab97104774628529ad",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/philips/main.scss",
+  "css": "/stylesheets/themes/philips.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-philips.png",
+  "favico": "/img/philips/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Philips",
+    "description": "",
+    "siteName": "philips.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Philips"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_philips/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_philips/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_philips/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_philips/emailComprador.html",
+      "gift": "../comprar/templates/multi_philips/emailPresente.html",
+      "signature": "../comprar/templates/multi_philips/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_philips/confirmacaoEmail.html"
+
+    }
+  }
+}
