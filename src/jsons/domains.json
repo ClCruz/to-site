@@ -645,5 +645,9 @@
     "tacobell.bilheteria.com.br": "tacobell",
     "api.tacobell.bilheteria.com.br": "tacobell",
     "compra.tacobell.bilheteria.com.br": "tacobell",
-    "admin.tacobell.bilheteria.com.br": "tacobell"
+    "admin.tacobell.bilheteria.com.br": "tacobell",
+    "confidence.bilheteria.com.br": "confidence",
+    "api.confidence.bilheteria.com.br": "confidence",
+    "compra.confidence.bilheteria.com.br": "confidence",
+    "admin.confidence.bilheteria.com.br": "confidence"
 }

@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "confidence.bilheteria.com.br",
+  "uri": "https://confidence.bilheteria.com.br",
+  "api": "https://api.confidence.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.confidence.bilheteria.com.br",
+  "admin": "https://admin.confidence.bilheteria.com.br",
+  "apikey": "live_aaae1e96c97c404ca5ab579360216af93a7298b3cf6e46008fc1af379d2a8dcf",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/confidence/main.scss",
+  "css": "/stylesheets/themes/confidence.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-confidence.png",
+  "favico": "/img/confidence/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Travelex",
+    "description": "",
+    "siteName": "confidence.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Travelex"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_confidence/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_confidence/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_confidence/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_confidence/emailComprador.html",
+      "gift": "../comprar/templates/multi_confidence/emailPresente.html",
+      "signature": "../comprar/templates/multi_confidence/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_confidence/confirmacaoEmail.html"
+
+    }
+  }
+}
