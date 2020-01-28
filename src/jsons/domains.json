@@ -589,5 +589,9 @@
     "nextel.bilheteria.com.br": "nextel",
     "api.nextel.bilheteria.com.br": "nextel",
     "compra.nextel.bilheteria.com.br": "nextel",
-    "admin.nextel.bilheteria.com.br": "nextel"
+    "admin.nextel.bilheteria.com.br": "nextel",
+    "odontoprev.bilheteria.com.br": "odontoprev",
+    "api.odontoprev.bilheteria.com.br": "odontoprev",
+    "compra.odontoprev.bilheteria.com.br": "odontoprev",
+    "admin.odontoprev.bilheteria.com.br": "odontoprev"
 }

@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "odontoprev.bilheteria.com.br",
+  "uri": "https://odontoprev.bilheteria.com.br",
+  "api": "https://api.odontoprev.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.odontoprev.bilheteria.com.br",
+  "admin": "https://admin.odontoprev.bilheteria.com.br",
+  "apikey": "live_0a0e4f29ae5c4e5088f7fd627b148fae148100485c344f9b89d17498dbf1dff0",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/odontoprev/main.scss",
+  "css": "/stylesheets/themes/odontoprev.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-odontoprev.png",
+  "favico": "/img/odontoprev/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Odontoprev",
+    "description": "",
+    "siteName": "odontoprev.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Odontoprev"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_odontoprev/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_odontoprev/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_odontoprev/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_odontoprev/emailComprador.html",
+      "gift": "../comprar/templates/multi_odontoprev/emailPresente.html",
+      "signature": "../comprar/templates/multi_odontoprev/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_odontoprev/confirmacaoEmail.html"
+
+    }
+  }
+}
