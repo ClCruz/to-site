@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "sony.bilheteria.com.br",
+  "uri": "https://sony.bilheteria.com.br",
+  "api": "https://api.sony.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.sony.bilheteria.com.br",
+  "admin": "https://admin.sony.bilheteria.com.br",
+  "apikey": "live_e0f883d46f774f02882965a8b2c6125b7d3ddccd8aeb4014a4dffaf2ef496b7c",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/sony/main.scss",
+  "css": "/stylesheets/themes/sony.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-sony.png",
+  "favico": "/img/sony/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Sony ",
+    "description": "",
+    "siteName": "sony.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer ",
+    "companyName": "Sony "
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_sony/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_sony/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_sony/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_sony/emailComprador.html",
+      "gift": "../comprar/templates/multi_sony/emailPresente.html",
+      "signature": "../comprar/templates/multi_sony/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_sony/confirmacaoEmail.html"
+
+    }
+  }
+}
