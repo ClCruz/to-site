@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "moneycorp.bilheteria.com.br",
+  "uri": "https://moneycorp.bilheteria.com.br",
+  "api": "https://api.moneycorp.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.moneycorp.bilheteria.com.br",
+  "admin": "https://admin.moneycorp.bilheteria.com.br",
+  "apikey": "live_00f7608ac86549a385a5af213704cb8a16daef0d6f0f4fc09bf829f5aed60eba",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/moneycorp/main.scss",
+  "css": "/stylesheets/themes/moneycorp.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-moneycorp.png",
+  "favico": "/img/moneycorp/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Moneycorp",
+    "description": "",
+    "siteName": "moneycorp.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer ",
+    "companyName": "Moneycorp"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_moneycorp/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_moneycorp/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_moneycorp/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_moneycorp/emailComprador.html",
+      "gift": "../comprar/templates/multi_moneycorp/emailPresente.html",
+      "signature": "../comprar/templates/multi_moneycorp/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_moneycorp/confirmacaoEmail.html"
+
+    }
+  }
+}
