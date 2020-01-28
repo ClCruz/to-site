@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "kalunga.bilheteria.com.br",
+  "uri": "https://kalunga.bilheteria.com.br",
+  "api": "https://api.kalunga.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.kalunga.bilheteria.com.br",
+  "admin": "https://admin.kalunga.bilheteria.com.br",
+  "apikey": "live_75a1d5fd8ea24183aaea3d10f132a46f73598275f9ac4beeb675913afb341f90",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/kalunga/main.scss",
+  "css": "/stylesheets/themes/kalunga.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-kalunga.png",
+  "favico": "/img/kalunga/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Kalunga",
+    "description": "",
+    "siteName": "kalunga.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Kalunga"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_kalunga/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_kalunga/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_kalunga/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_kalunga/emailComprador.html",
+      "gift": "../comprar/templates/multi_kalunga/emailPresente.html",
+      "signature": "../comprar/templates/multi_kalunga/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_kalunga/confirmacaoEmail.html"
+
+    }
+  }
+}
