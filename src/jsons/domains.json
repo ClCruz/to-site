@@ -577,5 +577,9 @@
     "moneycorp.bilheteria.com.br": "moneycorp",
     "api.moneycorp.bilheteria.com.br": "moneycorp",
     "compra.moneycorp.bilheteria.com.br": "moneycorp",
-    "admin.moneycorp.bilheteria.com.br": "moneycorp"
+    "admin.moneycorp.bilheteria.com.br": "moneycorp",
+    "mundoverde.bilheteria.com.br": "mundoverde",
+    "api.mundoverde.bilheteria.com.br": "mundoverde",
+    "compra.mundoverde.bilheteria.com.br": "mundoverde",
+    "admin.mundoverde.bilheteria.com.br": "mundoverde"
 }
