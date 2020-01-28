@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "4beeclub.bilheteria.com.br",
+  "uri": "https://4beeclub.bilheteria.com.br",
+  "api": "https://api.4beeclub.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.4beeclub.bilheteria.com.br",
+  "admin": "https://admin.4beeclub.bilheteria.com.br",
+  "apikey": "live_6c0cfd8a87684d82894b573beb7d0b3c8feb823dfe2b418b93f897c051062f75",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/quatrobeeclub/main.scss",
+  "css": "/stylesheets/themes/4beeclub.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-quatrobeeclub.png",
+  "favico": "/img/quatrobeeclub/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "4BeeClub (1000vantagens)",
+    "description": "",
+    "siteName": "4beeclub.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "4BeeClub (1000vantagens)"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_quatrobeeclub/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_quatrobeeclub/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_quatrobeeclub/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_quatrobeeclub/emailComprador.html",
+      "gift": "../comprar/templates/multi_quatrobeeclub/emailPresente.html",
+      "signature": "../comprar/templates/multi_quatrobeeclub/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_quatrobeeclub/confirmacaoEmail.html"
+
+    }
+  }
+}
