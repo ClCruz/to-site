@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "uhlmann.bilheteria.com.br",
+  "uri": "https://uhlmann.bilheteria.com.br",
+  "api": "https://api.uhlmann.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.uhlmann.bilheteria.com.br",
+  "admin": "https://admin.uhlmann.bilheteria.com.br",
+  "apikey": "live_9af5d3ac28d84210844aff41e0f0e2e461ef3088486c49029fdf0932520ce9f4",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/uhlmann/main.scss",
+  "css": "/stylesheets/themes/uhlmann.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-uhlmann.png",
+  "favico": "/img/uhlmann/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Uhlmann",
+    "description": "",
+    "siteName": "uhlmann.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Uhlmann"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_uhlmann/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_uhlmann/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_uhlmann/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_uhlmann/emailComprador.html",
+      "gift": "../comprar/templates/multi_uhlmann/emailPresente.html",
+      "signature": "../comprar/templates/multi_uhlmann/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_uhlmann/confirmacaoEmail.html"
+
+    }
+  }
+}

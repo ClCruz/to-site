@@ -649,5 +649,9 @@
     "confidence.bilheteria.com.br": "confidence",
     "api.confidence.bilheteria.com.br": "confidence",
     "compra.confidence.bilheteria.com.br": "confidence",
-    "admin.confidence.bilheteria.com.br": "confidence"
+    "admin.confidence.bilheteria.com.br": "confidence",
+    "uhlmann.bilheteria.com.br": "uhlmann",
+    "api.uhlmann.bilheteria.com.br": "uhlmann",
+    "compra.uhlmann.bilheteria.com.br": "uhlmann",
+    "admin.uhlmann.bilheteria.com.br": "uhlmann"
 }
