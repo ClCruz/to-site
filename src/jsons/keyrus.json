@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "keyrus.bilheteria.com.br",
+  "uri": "https://keyrus.bilheteria.com.br",
+  "api": "https://api.keyrus.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.keyrus.bilheteria.com.br",
+  "admin": "https://admin.keyrus.bilheteria.com.br",
+  "apikey": "live_05c82c18a9e84d0cb06160bc8c3a2d3b4ec4d54921f74905918f7240dfa87154",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/keyrus/main.scss",
+  "css": "/stylesheets/themes/keyrus.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-keyrus.png",
+  "favico": "/img/keyrus/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Keyrus Brasil",
+    "description": "",
+    "siteName": "keyrus.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Keyrus Brasil"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_keyrus/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_keyrus/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_keyrus/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_keyrus/emailComprador.html",
+      "gift": "../comprar/templates/multi_keyrus/emailPresente.html",
+      "signature": "../comprar/templates/multi_keyrus/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_keyrus/confirmacaoEmail.html"
+
+    }
+  }
+}
