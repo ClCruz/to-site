@@ -637,5 +637,9 @@
     "spdmpais.bilheteria.com.br": "spdmpais",
     "api.spdmpais.bilheteria.com.br": "spdmpais",
     "compra.spdmpais.bilheteria.com.br": "spdmpais",
-    "admin.spdmpais.bilheteria.com.br": "spdmpais"
+    "admin.spdmpais.bilheteria.com.br": "spdmpais",
+    "spread.bilheteria.com.br": "spread",
+    "api.spread.bilheteria.com.br": "spread",
+    "compra.spread.bilheteria.com.br": "spread",
+    "admin.spread.bilheteria.com.br": "spread"
 }

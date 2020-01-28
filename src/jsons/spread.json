@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "spread.bilheteria.com.br",
+  "uri": "https://spread.bilheteria.com.br",
+  "api": "https://api.spread.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.spread.bilheteria.com.br",
+  "admin": "https://admin.spread.bilheteria.com.br",
+  "apikey": "live_3f2213a181c340388080076e375d1217242e0e799f1c462c9b5c280b83fb0255",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/spread/main.scss",
+  "css": "/stylesheets/themes/spread.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-spread.png",
+  "favico": "/img/spread/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Spread",
+    "description": "",
+    "siteName": "spread.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Spread"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_spread/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_spread/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_spread/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_spread/emailComprador.html",
+      "gift": "../comprar/templates/multi_spread/emailPresente.html",
+      "signature": "../comprar/templates/multi_spread/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_spread/confirmacaoEmail.html"
+
+    }
+  }
+}
