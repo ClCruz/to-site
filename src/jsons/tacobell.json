@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "tacobell.bilheteria.com.br",
+  "uri": "https://tacobell.bilheteria.com.br",
+  "api": "https://api.tacobell.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.tacobell.bilheteria.com.br",
+  "admin": "https://admin.tacobell.bilheteria.com.br",
+  "apikey": "live_59a763b7b4464928beee2147f9244c3b3cd35fffb6ad4f67a03f3645c66dd52d",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/tacobell/main.scss",
+  "css": "/stylesheets/themes/tacobell.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-tacobell.png",
+  "favico": "/img/tacobell/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Taco Bell ",
+    "description": "",
+    "siteName": "tacobell.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Taco Bell "
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_tacobell/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_tacobell/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_tacobell/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_tacobell/emailComprador.html",
+      "gift": "../comprar/templates/multi_tacobell/emailPresente.html",
+      "signature": "../comprar/templates/multi_tacobell/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_tacobell/confirmacaoEmail.html"
+
+    }
+  }
+}

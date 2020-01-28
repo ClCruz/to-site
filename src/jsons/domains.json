@@ -641,5 +641,9 @@
     "spread.bilheteria.com.br": "spread",
     "api.spread.bilheteria.com.br": "spread",
     "compra.spread.bilheteria.com.br": "spread",
-    "admin.spread.bilheteria.com.br": "spread"
+    "admin.spread.bilheteria.com.br": "spread",
+    "tacobell.bilheteria.com.br": "tacobell",
+    "api.tacobell.bilheteria.com.br": "tacobell",
+    "compra.tacobell.bilheteria.com.br": "tacobell",
+    "admin.tacobell.bilheteria.com.br": "tacobell"
 }
