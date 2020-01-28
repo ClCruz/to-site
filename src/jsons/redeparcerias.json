@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "redeparcerias.bilheteria.com",
+  "uri": "https://redeparcerias.bilheteria.com",
+  "api": "https://api.redeparcerias.bilheteria.com",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.redeparcerias.bilheteria.com",
+  "admin": "https://admin.redeparcerias.bilheteria.com",
+  "apikey": "live_ae5d3411536a4ee7836a2a8a15a2d8ceb7e0c06f6d1a490ab165a912f7bafd92",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/redeparcerias/main.scss",
+  "css": "/stylesheets/themes/redeparcerias.bilheteria.com/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-redeparcerias.png",
+  "favico": "/img/redeparcerias/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Quemais",
+    "description": "",
+    "siteName": "redeparcerias.bilheteria.com",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Quemais"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_redeparcerias/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_redeparcerias/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_redeparcerias/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_redeparcerias/emailComprador.html",
+      "gift": "../comprar/templates/multi_redeparcerias/emailPresente.html",
+      "signature": "../comprar/templates/multi_redeparcerias/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_redeparcerias/confirmacaoEmail.html"
+
+    }
+  }
+}

@@ -601,5 +601,9 @@
     "allya.bilheteria.com.br": "allya",
     "api.allya.bilheteria.com.br": "allya",
     "compra.allya.bilheteria.com.br": "allya",
-    "admin.allya.bilheteria.com.br": "allya"
+    "admin.allya.bilheteria.com.br": "allya",
+    "redeparcerias.bilheteria.com": "redeparcerias",
+    "api.redeparcerias.bilheteria.com": "redeparcerias",
+    "compra.redeparcerias.bilheteria.com": "redeparcerias",
+    "admin.redeparcerias.bilheteria.com": "redeparcerias"
 }
