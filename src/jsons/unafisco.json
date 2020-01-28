@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "unafisco.bilheteria.com.br",
+  "uri": "https://unafisco.bilheteria.com.br",
+  "api": "https://api.unafisco.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.unafisco.bilheteria.com.br",
+  "admin": "https://admin.unafisco.bilheteria.com.br",
+  "apikey": "live_7dac729b0d0b4d44a7426f099c6d38451a306ce414e147618807650024fc9cd0",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/unafisco/main.scss",
+  "css": "/stylesheets/themes/unafisco.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-unafisco.png",
+  "favico": "/img/unafisco/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Unafisco",
+    "description": "",
+    "siteName": "unafisco.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Unafisco"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_unafisco/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_unafisco/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_unafisco/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_unafisco/emailComprador.html",
+      "gift": "../comprar/templates/multi_unafisco/emailPresente.html",
+      "signature": "../comprar/templates/multi_unafisco/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_unafisco/confirmacaoEmail.html"
+
+    }
+  }
+}

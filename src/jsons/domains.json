@@ -653,5 +653,9 @@
     "uhlmann.bilheteria.com.br": "uhlmann",
     "api.uhlmann.bilheteria.com.br": "uhlmann",
     "compra.uhlmann.bilheteria.com.br": "uhlmann",
-    "admin.uhlmann.bilheteria.com.br": "uhlmann"
+    "admin.uhlmann.bilheteria.com.br": "uhlmann",
+    "unafisco.bilheteria.com.br": "unafisco",
+    "api.unafisco.bilheteria.com.br": "unafisco",
+    "compra.unafisco.bilheteria.com.br": "unafisco",
+    "admin.unafisco.bilheteria.com.br": "unafisco"
 }
