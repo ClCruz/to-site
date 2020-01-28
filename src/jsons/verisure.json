@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "verisure.bilheteria.com.br",
+  "uri": "https://verisure.bilheteria.com.br",
+  "api": "https://api.verisure.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.verisure.bilheteria.com.br",
+  "admin": "https://admin.verisure.bilheteria.com.br",
+  "apikey": "live_ff2da3cf222b4481944cfe080c8ebad78dcd0fd248eb4fa29e2ae9ac6b62bcf5",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/verisure/main.scss",
+  "css": "/stylesheets/themes/verisure.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-verisure.png",
+  "favico": "/img/verisure/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Verisure Brasil",
+    "description": "",
+    "siteName": "verisure.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Verisure Brasil"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_verisure/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_verisure/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_verisure/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_verisure/emailComprador.html",
+      "gift": "../comprar/templates/multi_verisure/emailPresente.html",
+      "signature": "../comprar/templates/multi_verisure/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_verisure/confirmacaoEmail.html"
+
+    }
+  }
+}
