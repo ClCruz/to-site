@@ -569,5 +569,9 @@
     "metro.bilheteria.com.br": "metro",
     "api.metro.bilheteria.com.br": "metro",
     "compra.metro.bilheteria.com.br": "metro",
-    "admin.metro.bilheteria.com.br": "metro"
+    "admin.metro.bilheteria.com.br": "metro",
+    "meuclube.bilheteria.com.br": "meuclube",
+    "api.meuclube.bilheteria.com.br": "meuclube",
+    "compra.meuclube.bilheteria.com.br": "meuclube",
+    "admin.meuclube.bilheteria.com.br": "meuclube"
 }
