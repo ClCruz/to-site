@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "vipmaster.bilheteria.com.br",
+  "uri": "https://vipmaster.bilheteria.com.br",
+  "api": "https://api.vipmaster.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.vipmaster.bilheteria.com.br",
+  "admin": "https://admin.vipmaster.bilheteria.com.br",
+  "apikey": "live_a8fed700b69840e79b6bbc4e46e586af994446e05ccd4d14ba038ab28ead6011",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/vipmaster/main.scss",
+  "css": "/stylesheets/themes/vipmaster.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-vipmaster.png",
+  "favico": "/img/vipmaster/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Vip Master",
+    "description": "",
+    "siteName": "vipmaster.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Vip Master"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_vipmaster/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_vipmaster/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_vipmaster/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_vipmaster/emailComprador.html",
+      "gift": "../comprar/templates/multi_vipmaster/emailPresente.html",
+      "signature": "../comprar/templates/multi_vipmaster/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_vipmaster/confirmacaoEmail.html"
+
+    }
+  }
+}
