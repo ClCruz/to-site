@@ -549,5 +549,9 @@
     "keyrus.bilheteria.com.br": "keyrus",
     "api.keyrus.bilheteria.com.br": "keyrus",
     "compra.keyrus.bilheteria.com.br": "keyrus",
-    "admin.keyrus.bilheteria.com.br": "keyrus"
+    "admin.keyrus.bilheteria.com.br": "keyrus",
+    "lincard.bilheteria.com.br": "lincard",
+    "api.lincard.bilheteria.com.br": "lincard",
+    "compra.lincard.bilheteria.com.br": "lincard",
+    "admin.lincard.bilheteria.com.br": "lincard"
 }

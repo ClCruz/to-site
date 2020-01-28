@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "lincard.bilheteria.com.br",
+  "uri": "https://lincard.bilheteria.com.br",
+  "api": "https://api.lincard.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.lincard.bilheteria.com.br",
+  "admin": "https://admin.lincard.bilheteria.com.br",
+  "apikey": "live_0e5cea8804f84b5681664c450ef849006e68c5cd59034a3fbd9947385e14c5a1",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/lincard/main.scss",
+  "css": "/stylesheets/themes/lincard.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-lincard.png",
+  "favico": "/img/lincard/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Lincard",
+    "description": "",
+    "siteName": "lincard.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Lincard"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_lincard/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_lincard/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_lincard/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_lincard/emailComprador.html",
+      "gift": "../comprar/templates/multi_lincard/emailPresente.html",
+      "signature": "../comprar/templates/multi_lincard/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_lincard/confirmacaoEmail.html"
+
+    }
+  }
+}
