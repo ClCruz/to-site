@@ -609,5 +609,9 @@
     "rd.bilheteria.com.br": "rd",
     "api.rd.bilheteria.com.br": "rd",
     "compra.rd.bilheteria.com.br": "rd",
-    "admin.rd.bilheteria.com.br": "rd"
+    "admin.rd.bilheteria.com.br": "rd",
+    "segurosunimed.bilheteria.com.br": "segurosunimed",
+    "api.segurosunimed.bilheteria.com.br": "segurosunimed",
+    "compra.segurosunimed.bilheteria.com.br": "segurosunimed",
+    "admin.segurosunimed.bilheteria.com.br": "segurosunimed"
 }

@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "segurosunimed.bilheteria.com.br",
+  "uri": "https://segurosunimed.bilheteria.com.br",
+  "api": "https://api.segurosunimed.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.segurosunimed.bilheteria.com.br",
+  "admin": "https://admin.segurosunimed.bilheteria.com.br",
+  "apikey": "live_613ce9ab8e7342b0bfc493aec2cde5330e8b832c273948e98bf25345fcec4e42",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/segurosunimed/main.scss",
+  "css": "/stylesheets/themes/segurosunimed.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-segurosunimed.png",
+  "favico": "/img/segurosunimed/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Seguro Unimed ",
+    "description": "",
+    "siteName": "segurosunimed.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Seguro Unimed "
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_segurosunimed/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_segurosunimed/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_segurosunimed/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_segurosunimed/emailComprador.html",
+      "gift": "../comprar/templates/multi_segurosunimed/emailPresente.html",
+      "signature": "../comprar/templates/multi_segurosunimed/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_segurosunimed/confirmacaoEmail.html"
+
+    }
+  }
+}
