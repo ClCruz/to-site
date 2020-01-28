@@ -613,5 +613,9 @@
     "segurosunimed.bilheteria.com.br": "segurosunimed",
     "api.segurosunimed.bilheteria.com.br": "segurosunimed",
     "compra.segurosunimed.bilheteria.com.br": "segurosunimed",
-    "admin.segurosunimed.bilheteria.com.br": "segurosunimed"
+    "admin.segurosunimed.bilheteria.com.br": "segurosunimed",
+    "sincorsp.bilheteria.com.br": "sincorsp",
+    "api.sincorsp.bilheteria.com.br": "sincorsp",
+    "compra.sincorsp.bilheteria.com.br": "sincorsp",
+    "admin.sincorsp.bilheteria.com.br": "sincorsp"
 }

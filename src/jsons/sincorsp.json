@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "sincorsp.bilheteria.com.br",
+  "uri": "https://sincorsp.bilheteria.com.br",
+  "api": "https://api.sincorsp.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.sincorsp.bilheteria.com.br",
+  "admin": "https://admin.sincorsp.bilheteria.com.br",
+  "apikey": "live_8033603ee46c4329b8b46348cbdaf46c83bfc35034cb4e1ea119ccc660a32b9a",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/sincorsp/main.scss",
+  "css": "/stylesheets/themes/sincorsp.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-sincorsp.png",
+  "favico": "/img/sincorsp/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "SINCORSP",
+    "description": "",
+    "siteName": "sincorsp.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "SINCORSP"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_sincorsp/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_sincorsp/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_sincorsp/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_sincorsp/emailComprador.html",
+      "gift": "../comprar/templates/multi_sincorsp/emailPresente.html",
+      "signature": "../comprar/templates/multi_sincorsp/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_sincorsp/confirmacaoEmail.html"
+
+    }
+  }
+}
