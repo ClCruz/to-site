@@ -605,5 +605,9 @@
     "redeparcerias.bilheteria.com": "redeparcerias",
     "api.redeparcerias.bilheteria.com": "redeparcerias",
     "compra.redeparcerias.bilheteria.com": "redeparcerias",
-    "admin.redeparcerias.bilheteria.com": "redeparcerias"
+    "admin.redeparcerias.bilheteria.com": "redeparcerias",
+    "rd.bilheteria.com.br": "rd",
+    "api.rd.bilheteria.com.br": "rd",
+    "compra.rd.bilheteria.com.br": "rd",
+    "admin.rd.bilheteria.com.br": "rd"
 }

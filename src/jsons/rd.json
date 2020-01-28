@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "rd.bilheteria.com.br",
+  "uri": "https://rd.bilheteria.com.br",
+  "api": "https://api.rd.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.rd.bilheteria.com.br",
+  "admin": "https://admin.rd.bilheteria.com.br",
+  "apikey": "live_be95c3750beb420a9c06f44d6cfa3f76918b74c36e4f4bc998138b059fccdf7d",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/rd/main.scss",
+  "css": "/stylesheets/themes/rd.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-rd.png",
+  "favico": "/img/rd/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Raia Drogasil",
+    "description": "",
+    "siteName": "rd.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Raia Drogasil"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_rd/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_rd/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_rd/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_rd/emailComprador.html",
+      "gift": "../comprar/templates/multi_rd/emailPresente.html",
+      "signature": "../comprar/templates/multi_rd/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_rd/confirmacaoEmail.html"
+
+    }
+  }
+}
