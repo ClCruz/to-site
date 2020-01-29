@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "bemodi.bilheteria.com.br",
+  "uri": "https://bemodi.bilheteria.com.br",
+  "api": "https://api.bemodi.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.bemodi.bilheteria.com.br",
+  "admin": "https://admin.bemodi.bilheteria.com.br",
+  "apikey": "live_bea4f02ffd9948739a0b032a4c89a80ef3384b3cbdde4b5f932c0ddc66bbef24",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/bemodi/main.scss",
+  "css": "/stylesheets/themes/bemodi.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-bemodi.png",
+  "favico": "/img/bemodi/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Bemobi Midia",
+    "description": "",
+    "siteName": "bemodi.bilheteria.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Bemobi Midia"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_bemodi/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_bemodi/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_bemodi/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_bemodi/emailComprador.html",
+      "gift": "../comprar/templates/multi_bemodi/emailPresente.html",
+      "signature": "../comprar/templates/multi_bemodi/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_bemodi/confirmacaoEmail.html"
+
+    }
+  }
+}
