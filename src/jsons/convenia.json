@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/convenia/main.scss",
   "css": "/stylesheets/themes/convenia.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-convenia.png",
   "favico": "/img/convenia/",
   "videos": {
