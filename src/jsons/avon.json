@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/avon/main.scss",
   "css": "/stylesheets/themes/avon.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-avon.png",
   "favico": "/img/avon/",
   "videos": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_avon/emailPresente.html",
       "signature": "../comprar/templates/multi_avon/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_avon/confirmacaoEmail.html"
-
     }
   }
 }
