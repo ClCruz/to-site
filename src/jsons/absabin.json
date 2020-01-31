@@ -11,8 +11,8 @@
   "ga": "",
   "scss": "./src/scss/themes/absabin/main.scss",
   "css": "/stylesheets/themes/absabin.bilheteria.com.br/main.css",
-  "template": "ingressaria",
-  "logo": "/assets/logo-absabin.png",
+  "template": "bilheteria",
+  "logo": "/assets/logo-absabin.jpg",
   "favico": "/img/absabin/",
   "videos": {
     "list": []
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_absabin/emailPresente.html",
       "signature": "../comprar/templates/multi_absabin/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_absabin/confirmacaoEmail.html"
-
     }
   }
 }
