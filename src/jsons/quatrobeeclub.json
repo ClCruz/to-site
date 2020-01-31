@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/quatrobeeclub/main.scss",
   "css": "/stylesheets/themes/4beeclub.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-quatrobeeclub.png",
   "favico": "/img/quatrobeeclub/",
   "videos": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_quatrobeeclub/emailPresente.html",
       "signature": "../comprar/templates/multi_quatrobeeclub/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_quatrobeeclub/confirmacaoEmail.html"
-
     }
   }
 }
