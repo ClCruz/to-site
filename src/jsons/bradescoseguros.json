@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/bradescoseguros/main.scss",
   "css": "/stylesheets/themes/bradescoseguros.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-bradescoseguros.png",
   "favico": "/img/bradescoseguros/",
   "videos": {
@@ -29,9 +29,9 @@
     "title": "Bradesco Seguros",
     "description": "",
     "siteName": "bradescoseguros.bilheteria.com.br",
-    "CNPJ": "11.111.111/1111-11",
-    "companyAddress": "Rua Qualquer",
-    "companyName": "Bradesco Seguros"
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
   },
   "templates": {
     "print": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_bradescoseguros/emailPresente.html",
       "signature": "../comprar/templates/multi_bradescoseguros/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_bradescoseguros/confirmacaoEmail.html"
-
     }
   }
 }
