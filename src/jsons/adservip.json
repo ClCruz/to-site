@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/adservip/main.scss",
   "css": "/stylesheets/themes/adservip.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-adservip.png",
   "favico": "/img/adservip/",
   "videos": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_adservip/emailPresente.html",
       "signature": "../comprar/templates/multi_adservip/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_adservip/confirmacaoEmail.html"
-
     }
   }
 }
