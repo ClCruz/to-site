@@ -261,3 +261,15 @@ footer .logos__footer img {
 .footer__logo .img {
   background-image: url(/assets/logo-bilheteriacom.png) !important;
 }
+
+button.my-button {
+  color:#fff !important;
+  background-color: $secundary !important;
+  align-content: center !important;
+  margin-left: 88px !important;
+  margin-top: 25px !important;
+
+  @include MQ(S){
+    margin-left: 53px !important;
+  }
+}

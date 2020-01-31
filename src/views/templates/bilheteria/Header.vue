@@ -1,12 +1,18 @@
 <template>
   <div class="a" :class="{ eventHeader: ['event'].indexOf($route.name) > -1 }">
-    <div>
-      <b-modal ref="modal-cadastro" hide-footer title="Using Component Methods">
+    <div class="my-modal">
+      <b-modal ref="modal-cadastro" hide-footer title>
         <div class="d-block text-center">
-          <h3>Cadastre-se!</h3>
+          <h3>
+            Acesso Restrito
+            <br />Bem Vindo ao Portal coorporativo dos
+            parceiros da BILHETERIA.COM. Para ter acesso aos descontos
+            exclusivos você precisa se cadastrar e possuir
+            o código de acesso fornecido pela área responsável da sua empresa.
+          </h3>
         </div>
-        <b-button class="mt-2" variant="outline-warning" block @click="login">Se Cadastre</b-button>
-        <b-button class="mt-3" variant="outline-danger" block @click="hideModal">Fechar</b-button>
+        <button type="button" class="my-button mt-2 btn" block @click="login">Entrar</button>&nbsp
+        <button type="button" class="my-button mt-2 btn" block @click="hideModal">Fechar</button>
       </b-modal>
     </div>
 
