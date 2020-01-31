@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "bbseguros.bilheteria.com.br",
+  "uri": "https://bbseguros.bilheteria.com.br",
+  "api": "https://api.bbseguros.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.bbseguros.bilheteria.com.br",
+  "admin": "https://admin.bbseguros.bilheteria.com.br",
+  "apikey": "live_da43c53fc3d245839159eaaf6b7f39c174a8a2b77ce64825a14aad0c3d7b78d3",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/bbseguros/main.scss",
+  "css": "/stylesheets/themes/bbseguros.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-bbseguros.png",
+  "favico": "/img/bbseguros/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "BRASILSEG",
+    "description": "",
+    "siteName": "bbseguros.bilheteria.com.br",
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_bbseguros/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_bbseguros/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_bbseguros/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_bbseguros/emailComprador.html",
+      "gift": "../comprar/templates/multi_bbseguros/emailPresente.html",
+      "signature": "../comprar/templates/multi_bbseguros/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_bbseguros/confirmacaoEmail.html"
+
+    }
+  }
+}
