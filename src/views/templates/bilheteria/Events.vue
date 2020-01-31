@@ -119,8 +119,8 @@
         <card-event-featured :bannerEvents="bannerEvents" :swiperOption="swiperOption"></card-event-featured>
     </div>
   </div>
-  <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1 ">
-    <div class="container pt-2 pb-0 text-left">
+  <!-- <div class="container__select to-block container__features" id="banner" v-if="cityList.length > 1 ">
+     <div class="container pt-2 pb-0 text-left">
       <h3 class="">Muito mais para você</h3>
 
       <div class="container__arrows">
@@ -128,8 +128,8 @@
         <div class="swiper-button-next swiper-button-next-cities" slot="button-next"></div>
       </div>
       <card-cities :bannerEvents="bannerEvents" :swiperOption="swiperOptionCities"></card-cities>
-    </div>
-  </div>
+    </div> 
+  </div> -->
 
   <!-- Genêros em destaque -->
   <!--<div class="container__select to-block container__features" id="banner" v-if="siteName != 'Bilheteria.com.br' && siteName != 'convenia.bilheteria.com.br'">
