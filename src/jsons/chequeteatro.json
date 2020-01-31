@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/chequeteatro/main.scss",
   "css": "/stylesheets/themes/chequeteatro.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-chequeteatro.png",
   "favico": "/img/chequeteatro/",
   "videos": {
@@ -29,9 +29,9 @@
     "title": "Cheque Teatro",
     "description": "",
     "siteName": "chequeteatro.bilheteria.com.br",
-    "CNPJ": "11.111.111/1111-11",
-    "companyAddress": "Rua Qualquer",
-    "companyName": "Cheque Teatro"
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
   },
   "templates": {
     "print": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_chequeteatro/emailPresente.html",
       "signature": "../comprar/templates/multi_chequeteatro/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_chequeteatro/confirmacaoEmail.html"
-
     }
   }
 }
