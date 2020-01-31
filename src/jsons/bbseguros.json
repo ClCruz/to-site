@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/bbseguros/main.scss",
   "css": "/stylesheets/themes/bbseguros.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-bbseguros.png",
   "favico": "/img/bbseguros/",
   "videos": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_bbseguros/emailPresente.html",
       "signature": "../comprar/templates/multi_bbseguros/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_bbseguros/confirmacaoEmail.html"
-
     }
   }
 }
