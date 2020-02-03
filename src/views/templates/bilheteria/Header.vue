@@ -1,21 +1,5 @@
 <template>
   <div class="a" :class="{ eventHeader: ['event'].indexOf($route.name) > -1 }">
-    <div class="my-modal">
-      <b-modal ref="modal-cadastro" hide-footer title>
-        <div class="d-block text-center">
-          <h3>
-            Acesso Restrito
-            <br />Bem Vindo ao Portal coorporativo dos
-            parceiros da BILHETERIA.COM. Para ter acesso aos descontos
-            exclusivos você precisa se cadastrar e possuir
-            o código de acesso fornecido pela área responsável da sua empresa.
-          </h3>
-        </div>
-        <button type="button" class="my-button mt-2 btn" block @click="login">Entrar</button>&nbsp
-        <button type="button" class="my-button mt-2 btn" block @click="hideModal">Fechar</button>
-      </b-modal>
-    </div>
-
     <div class="header">
       <!-- header das paginas (menos evento) -->
       <header id="navbar" class="bg-dark" data-block-type="headers" data-id="2">
@@ -172,6 +156,40 @@
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
+
+    <!-- teste -->
+
+    <div class="my-modal">
+      <b-modal
+        v-if="!isLogged"
+        no-close-on-esc
+        no-close-on-backdrop
+        hide-header-close
+        ref="modal-cadastro"
+        hide-footer
+      >
+        <div class="d-block text-center">
+          <h3>ACESSO RESTRITO</h3>
+          <br />
+          <p>
+            Bem Vindo ao Portal coorporativo dos
+            parceiros da BILHETERIA.COM. Para ter acesso aos descontos
+            exclusivos você precisa se cadastrar e possuir
+            o código de acesso fornecido pela área responsável da sua empresa.
+          </p>
+        </div>
+        <b-button
+          type="button"
+          class="mt-3 btn"
+          style="background-color:#f29536; border: none"
+          block
+          @click="login"
+        >Entrar</b-button>&nbsp
+        <!-- <button type="button" class="my-button mt-2 btn" block @click="hideModal">Fechar</button> -->
+      </b-modal>
+    </div>
+
+    <!-- teste -->
   </div>
 </template>
 
@@ -229,7 +247,10 @@ export default {
       return logged.token;
     }
   },
-  mounted() {},
+  mounted() {
+    this.showModal();
+  },
+
   methods: {
     //teste
     showModal() {
@@ -296,9 +317,6 @@ export default {
       }
       this.menuOpen = !this.menuOpen;
     }
-  },
-  mounted() {
-    this.showModal();
   }
 };
 </script>
