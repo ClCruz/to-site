@@ -25,24 +25,7 @@
 
             <div class="collapse navbar-collapse col-md-8 light">
               <div class="nav__links navbar-nav ml-auto">
-                <!-- <city-list-header></city-list-header> -->
-
                 <ul class="navbar-nav">
-                  <!-- <li class="nav-item">
-                  <router-link class="nav-link" to="/busca/genero/TEATRO">Teatro
-                  </router-link>
-                </li>
-                <li class="nav-item">
-
-                  <router-link class="nav-link" to="/busca/genero/Show">Shows
-                  </router-link>
-                </li>
-                <li class="nav-item">
-                  <router-link class="nav-link" to="/busca/genero/Infantil">Infantil
-                  </router-link>
-                  </li>-->
-                  <!-- <city-list-header></city-list-header> -->
-
                   <li class="nav-item">
                     <router-link class="nav-link" to="/sac/empresa/sobre">Ajuda</router-link>
                   </li>
@@ -162,30 +145,30 @@
     <div class="my-modal">
       <b-modal
         v-if="!isLogged"
+        ref="modalCadastro"
+        centered
         no-close-on-esc
         no-close-on-backdrop
         hide-header-close
-        ref="modal-cadastro"
         hide-footer
+        hide-header
       >
         <div class="d-block text-center">
           <h3>ACESSO RESTRITO</h3>
           <br />
           <p>
-            Bem Vindo ao Portal coorporativo dos
-            parceiros da BILHETERIA.COM. Para ter acesso aos descontos
-            exclusivos você precisa se cadastrar e possuir
-            o código de acesso fornecido pela área responsável da sua empresa.
+            Bem vindo ao portal corporativo dos parceiros da Bilheteria.com!
+            Para ter acesso aos descontos exclusivos é necessário se cadastrar com o código da sua empresa, fornecido pelo responsável da área de Gestão de pessoas. Esperamos você!
           </p>
         </div>
         <b-button
           type="button"
+          size="sm"
           class="mt-3 btn"
-          style="background-color:#f29536; border: none"
+          style="background-color:#ff9000; border: none; border-radius: 200px"
           block
           @click="login"
-        >Entrar</b-button>&nbsp
-        <!-- <button type="button" class="my-button mt-2 btn" block @click="hideModal">Fechar</button> -->
+        >Entrar</b-button>
       </b-modal>
     </div>
 
@@ -252,17 +235,14 @@ export default {
   },
 
   methods: {
-    //teste
     showModal() {
-      this.$refs["modal-cadastro"].show();
+      let logged = JSON.parse(this.ls_get("client"));
+      if (logged) return true;
+      this.$refs["modalCadastro"].show();
     },
-    hideModal() {
-      this.$refs["modal-cadastro"].hide();
-    },
-
-    //teste
 
     login() {
+      this.$refs["modalCadastro"].hide();
       this.$route.matched[0].instances.default.$parent.login();
     },
     modifyme() {

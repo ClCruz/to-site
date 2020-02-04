@@ -15,7 +15,7 @@ header.bg-dark {
 
 footer.bg-dark {
   // background: radial-gradient(circle farthest-corner at 10% 20%, #ffc576 0%, #fe6a67 47.7%, #f01717 92.3%) !important;
-  	background-color: #f29536 !important;
+  	background-color: #ff9000 !important;
 	color: #fff !important;
 }
 
@@ -104,7 +104,7 @@ $gradiente: $secundary !important;
 .a .bg__main{
   height: 400px !important;
   margin-top: 50px !important;
-  background-color: #f29536 !important;
+  background-color: #ff9000 !important;
   @include MQ(S) {
 	  margin-top: 0 !important;
     display: block !important;
@@ -147,11 +147,11 @@ $gradiente: $secundary !important;
   // background: #fff !important;
 }
 .header__mobile {
-  background: #f29536 !important;
+  background: #ff9000 !important;
 }
 
 header.navbar-fixed-top {
-	background: #f29536 !important;
+	background: #ff9000!important;
 }
 
 .eventHeader header.navbar-fixed-top {
@@ -242,5 +242,5 @@ footer .logos__footer img{
 }
 
 #navbar {
-	background-color: #f29536 !important;
+	background-color: #ff9000 !important;
 }
