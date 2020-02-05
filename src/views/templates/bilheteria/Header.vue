@@ -35,11 +35,11 @@
             </div>
 
             <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex">
-              <span
+              <!-- <span
                 v-if="!isLogged"
                 class="btn btn-light to-btn hidden-xs hidden-sm"
                 @click="login"
-              >Entrar</span>
+              >Entrar</span>-->
               <span v-if="!isLogged" class="header__signin-mobile" @click="login">
                 <img src alt />
               </span>
@@ -142,35 +142,30 @@
 
     <!-- teste -->
 
-    <div class="my-modal">
-      <b-modal
-        v-if="!isLogged"
-        ref="modalCadastro"
-        centered
-        no-close-on-esc
-        no-close-on-backdrop
-        hide-header-close
-        hide-footer
-        hide-header
-      >
-        <div class="d-block text-center">
-          <h3>ACESSO RESTRITO</h3>
-          <br />
-          <p>
-            Bem vindo ao portal corporativo dos parceiros da Bilheteria.com!
-            Para ter acesso aos descontos exclusivos é necessário se cadastrar com o código da sua empresa, fornecido pelo responsável da área de Gestão de pessoas. Esperamos você!
-          </p>
-        </div>
+    <b-modal
+      v-if="!isLogged"
+      ref="modalCadastro"
+      size="lg"
+      centered
+      no-close-on-esc
+      no-close-on-backdrop
+      hide-header-close
+      hide-footer
+    >
+      <div class="d-block text-center">
+        <h2>ACESSO RESTRITO!</h2>
+        <p>
+          Bem vindo ao portal corporativo dos parceiros da Bilheteria.com!
+          Para ter acesso aos descontos exclusivos é necessário se cadastrar com o código da sua empresa, fornecido pelo responsável da área de Gestão de pessoas. Esperamos você!
+        </p>
         <b-button
-          type="button"
-          size="sm"
-          class="mt-3 btn"
-          style="background-color:#ff9000; border: none; border-radius: 200px"
-          block
           @click="login"
-        >Entrar</b-button>
-      </b-modal>
-    </div>
+          style="background: #ff9000; border: none; border-radius: 100px; width: 150px"
+        >
+          <strong>Entrar</strong>
+        </b-button>
+      </div>
+    </b-modal>
 
     <!-- teste -->
   </div>
