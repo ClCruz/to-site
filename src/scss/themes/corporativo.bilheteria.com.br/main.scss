@@ -3,83 +3,291 @@
 @import "override.scss";
 @import "../../to-framework/main.scss";
 
-$cor-fundo: $primary;
-$tamanho-header: 45px;
-$gradiente: $secundary !important;
-// colocar imagem dentro de url ou cor hex
-$fundo: url('/assets/bg-dz9.jpg');
-
-
 header.bg-dark {
-	background-color: $cor-fundo !important;
+  // background-color: rgb(202, 8, 19) !important;
+  background-color: none !important;
+}
+.header__logo .img {
+  height: 60px !important;
+  padding: 10px !important;
+  width: 100%;
+}
+
+footer.bg-dark {
+  // background: radial-gradient(circle farthest-corner at 10% 20%, #ffc576 0%, #fe6a67 47.7%, #f01717 92.3%) !important;
+  background-color: $primary !important;
+  color: #fff !important;
 }
 
 .team-1,
 .features,
-#section__slider {
-	background: #f3f3f3 !important;
+#section__slider,
+body {
+  background: #f3f3f3 !important;
 }
 
-.footer__logo .img {
-	height: 40px;
-}
-
-.header__logo .img {
-	height: $tamanho-header;
-	width: 100%;
-	background-position: left center;
-}
-
-#ddown1 button {
-	color: #000 !important;
-}
-
-
-.bg__main {
-	background: $fundo !important;
-	background-position: 20% !important;
-	background-size: cover !important;
-	// background: linear-gradient(135deg, #196dd4 10%, #01a2e7);
-	@include MQ(S) {
-		display: none !important;
-	}
-}
-
-.eventHeader header.bg-dark,
-.header__mobile {
-	background: $cor-fundo !important;
-}
-
-.v--modal-overlay {
-	z-index: 999998 !important;
-}
-
-.navbar-fixed-top {
-	background: $cor-fundo !important;
+$gradiente: $secundary !important;
+.navbar-fixed-top .to-btn {
+  color: #fff !important;
 }
 
 .to-btn {
-	font-size: 13px !important;
+  color: black !important;
 }
 
-.navbar-fixed-top .to-btn {
-	font-size: 13px !important;
+.header__logo .img {
+  height: 55px;
+  width: 100%;
+  background-position: left center;
 }
 
-footer.bg-dark {
-	background-color: $cor-fundo !important;
-	color: $cor-texto !important;
+.swal2-progresscircle {
+  background: $secundary !important;
 }
 
-footer a,
-footer p,
-header.bg-dark .navbar-nav a.nav-link,
-.to-btn,
-.navbar-fixed-top .to-btn {
-	color: $cor-texto !important;
-	font-weight: normal;
+.swal2-styled {
+  font-size: 0.8rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+  background: $secundary !important;
+  border: none;
+  color: white;
+  transition: 0.5s;
 
-	@include MQ(S) {
-		color: $cor-texto !important;
-	}
+  &:hover {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+    @include box-shadow();
+  }
+}
+
+#ddown1 button {
+  color: black !important;
+}
+
+.bg__main {
+  height: 375px !important;
+  // background: url(/assets/bg-convenia.jpeg) !important;
+  background: #fff !important ;
+  background-repeat: no-repeat !important;
+  background-size: auto 101% !important;
+  background-position: center !important;
+  background-color: black !important;
+
+  @include MQ(S) {
+    display: block !important;
+    padding: 0 !important;
+
+    // mudança aqui
+    height: 130px !important;
+    background-size: 120% !important;
+    // mudança aqui
+  }
+
+  // mudança 2
+  @include MQ(M) {
+    display: block !important;
+    padding-top: 0 !important;
+    height: 285px !important;
+    background-size: 120% !important;
+  }
+  // mudança 2
+
+  .container__search--tickethub {
+    @include MQ(S) {
+      height: 150px !important;
+      padding: 0 !important;
+    }
+  }
+
+  .v-suggestions,
+  h2 {
+    display: none;
+  }
+}
+
+.a .bg__main {
+  // height: 400px !important;
+  margin-top: -300px !important;
+  background-color: #fff !important;
+  @include MQ(S) {
+    margin-top: -71px !important;
+    display: block !important;
+    height: 130px !important;
+    padding-top: 20px !important;
+    background-size: 120% !important;
+    background-repeat: no-repeat !important;
+  }
+
+  @include MQ(M) {
+    display: block !important;
+    padding-top: 0 !important;
+    height: 285px !important;
+    background-size: 120% !important;
+  }
+}
+
+.to-block .container {
+  @include MQ(S) {
+  }
+}
+
+#fundo_ingressaria {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 !important;
+  margin-top: -30px !important;
+
+  @include MQ(S) {
+    // margin-top: 0 !important;
+    background-position: top !important;
+  }
+}
+
+.eventHeader header.bg-dark {
+  background: $secundary !important;
+
+  // background: #fff !important;
+}
+.header__mobile {
+  background: $primary !important;
+}
+
+header.navbar-fixed-top {
+  background: #fff !important;
+}
+
+.eventHeader header.navbar-fixed-top {
+  background: white !important;
+  background-image: white !important;
+}
+
+.v--modal-overlay {
+  z-index: 999998 !important;
+}
+
+.header__search {
+  display: block;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.header__search {
+  display: block !important;
+}
+
+.v-suggestions {
+  width: 70% !important;
+  box-shadow: none !important;
+}
+
+.nav__links {
+  display: none;
+}
+
+.v-suggestions input[type="text"] {
+  height: 35px !important;
+  font-size: 13px !important;
+  background-size: 12px;
+  padding-left: 30px;
+
+  &:focus {
+    padding-left: 30px;
+  }
+}
+
+.suggestions {
+  top: 38px !important;
+}
+
+footer .social__media img {
+  // height: 48px !important;
+  width: 50px !important;
+  padding: 10px !important;
+  margin-top: -10px !important;
+  margin-right: 10px !important;
+  transition: 0.5s ease-out !important;
+}
+
+footer .social__media img:hover {
+  transform: scale(1.2) !important;
+  transition: 0.5s ease-out;
+}
+
+.social__media img:first-child {
+  margin-left: -17px !important;
+
+  @include MQ(S) {
+    margin-left: 0 !important;
+  }
+}
+
+footer .logos__footer img {
+  padding: 2px !important;
+  // height: 56px !important;
+  // height: 37px !important;
+  // width: 60px !important;
+  // margin-top: -120px !important;
+
+  @include MQ(S) {
+    // padding: 2px !important;
+    height: 70px !important;
+    width: 100px !important;
+    margin-top: -51px !important;
+  }
+}
+
+.logos__footer {
+  margin: 0px !important;
+
+  @include MQ(S) {
+    margin-top: 80px !important;
+    margin-left: 37px !important;
+  }
+}
+
+#navbar {
+  background-color: $primary!important;
+}
+
+#nav-icon1 span,
+#nav-icon3 span,
+#nav-icon4 span {
+  background: black !important;
+}
+
+
+.footer__logo .img {
+  background-image: url(/assets/logo-bilheteriacom.png) !important;
+}
+
+button.my-button {
+  color:#fff !important;
+  background-color: $secundary !important;
+  align-content: center !important;
+  margin-left: 88px !important;
+  margin-top: 25px !important;
+
+  @include MQ(S){
+    margin-left: 53px !important;
+  }
+}
+
+.modal-header {
+  border-radius: 1.2em 1.2em 0 0 !important;
+  border-bottom: none !important;
+  margin-right: 0 !important;
+  margin-left: -0.5px !important;
+  margin-bottom: -0.5px !important;
+  background-image: url(/assets/images/warning.png) !important;
+  background-repeat: no-repeat !important;
+  height: 128px !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-color: $primary !important;
+}
+
+.modal-content {
+  border-radius: 1.3em !important;
 }
