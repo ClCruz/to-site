@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/bemodi/main.scss",
   "css": "/stylesheets/themes/bemodi.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-bemodi.png",
   "favico": "/img/bemodi/",
   "videos": {
@@ -29,9 +29,9 @@
     "title": "Bemobi Midia",
     "description": "",
     "siteName": "bemodi.bilheteria.com.br",
-    "CNPJ": "11.111.111/1111-11",
-    "companyAddress": "Rua Qualquer",
-    "companyName": "Bemobi Midia"
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
   },
   "templates": {
     "print": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_bemodi/emailPresente.html",
       "signature": "../comprar/templates/multi_bemodi/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_bemodi/confirmacaoEmail.html"
-
     }
   }
 }
