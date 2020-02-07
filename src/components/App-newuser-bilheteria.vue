@@ -150,13 +150,46 @@
           </div>
 
           <!-- teste -->
-          <div>
+          <h4 class="col d-block text-center">Inserir código da empresa</h4>
+          <div
+            v-bind:class="{ errorinputuser: (!validateinfoc.parceiro || !validateinfoc.codigoparceiro), formgroup: true }"
+          >
             <span class="icon-case" title="Code">
-              <i class="fa fa-code"></i>
+              <!--<i class="fa fa-code"></i>-->
             </span>
-            <input type="text" maxlength="50" placeholder="Código da empresa *" />
-          </div>
+            <input
+              class="mr-2 pr-2"
+              type="text"
+              data-rule="required"
+              v-model="formc.codigoparceiro"
+              maxlength="50"
+              style="width: 20%;"
+              placeholder="Código *"
+              data-errormsg="O código da empresa deve ser preenchido."
+            />
 
+            <span class="icon-case" title="Company">
+              <i class="fa fa-info"></i>
+            </span>
+            <input
+              type="text"
+              data-rule="required"
+              v-model="formc.parceiro"
+              maxlength="50"
+              style="width: 77.3%;"
+              placeholder="Nome do parceiro em letras minúsculas *"
+              data-errormsg="O nome do parceiro deve ser preenchido."
+            />
+          </div>
+          <div class="col d-block text-center">
+            <b-button
+              type="button"
+              @click="verify"
+              title="Verficação de código"
+              class="bouton-contact btn btn-success mt-3 mb-4"
+              style="margin-left: 10px; min-width: 50% !important; width: auto !important"
+            >Verificar código</b-button>
+          </div>
           <!-- teste -->
         </div>
         <div class="rightcontact col-12 col-md-6">
@@ -549,6 +582,7 @@ export default {
         }
       });
     },
+
     getbyzipcode() {
       Vue.nextTick().then(response => {
         if (this.form.zipcode.length >= 9) {
@@ -570,6 +604,29 @@ export default {
         }
       });
     },
+
+    //teste
+
+    validatec() {
+      this.validateinfoc.parceiro = true;
+      this.validateinfoc.codigoparceiro = true;
+
+      let ret = true;
+
+      if (this.formc.parceiro.trim().length == 0) {
+        ret = false;
+        this.validateinfoc.parceiro = false;
+      }
+
+      if (this.formc.codigoparceiro.trim().length == 0) {
+        ret = false;
+        this.validateinfoc.codigoparceiro = false;
+      }
+
+      return ret;
+    },
+
+    //teste
     validate() {
       this.validateinfo.firstname = true;
       this.validateinfo.lastname = true;
@@ -698,8 +755,31 @@ export default {
     closemodalfather() {
       this.$route.matched[0].instances.default.$parent.modal_close_newuser();
     },
+
+    //teste
+
+    verify() {
+      if (this.processing) return false;
+
+      if (!this.validatec()) {
+        this.toastError("Preencha os campos de código e de parceiro.");
+        return false;
+      } else {
+        this.toastSuccess("Código de empresa autorizado");
+      }
+    },
+
+    //teste
+
     save() {
       if (this.processing) return false;
+
+      //teste
+      if (!this.validatec()) {
+        this.toastError("Preencha os campos de código e de parceiro.");
+        return false;
+      }
+      //teste
 
       if (!this.validate()) {
         this.toastError(
@@ -778,6 +858,15 @@ export default {
       selects: {
         documenttype: []
       },
+
+      //teste
+
+      validateinfoc: {
+        pareceiro: true,
+        codigoparceiro: true
+      },
+
+      //teste
       validateinfo: {
         firstname: true,
         lastname: true,
@@ -802,6 +891,15 @@ export default {
         newsletter: true,
         agree: true
       },
+
+      //teste
+
+      formc: {
+        parceiro: "",
+        codigoparceiro: ""
+      },
+
+      //teste
       form: {
         confirmemail: false,
         askforpass: true,
