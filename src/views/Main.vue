@@ -113,6 +113,7 @@ import appresetpass from "@/components/App-resetpass.vue";
 import applogin from "@/components/App-login.vue";
 import appnewuser from "@/components/App-newuser.vue";
 import appnewusertixsme from "@/components/App-newuser-tixsme.vue";
+import appnewuserbilheteria from "@/components/App-newuser-bilheteria.vue";
 
 import { authService } from "@/components/common/services/auth";
 
@@ -299,7 +300,31 @@ export default {
           break;
       }
 
-      if (this.template == "tixsme") {
+      //teste
+
+      if (this.template == "bilheteria") {
+        this.$modal.show(
+          appnewuserbilheteria,
+          {},
+          {
+            draggable: false,
+            name: this.modals.add.name, //'newuser',
+            classes: "addusermodal",
+            resizable: false,
+            width: 800,
+            adaptive: false,
+            height: "auto",
+            scrollable: true,
+            clickToClose: clickToClose
+          },
+          {
+            closed: this.modalnewuserclosed
+          }
+        );
+      }
+
+      //teste
+      else if (this.template == "tixsme") {
         this.$modal.show(
           appnewusertixsme,
           {},
