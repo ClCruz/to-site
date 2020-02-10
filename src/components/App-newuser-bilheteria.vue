@@ -4,12 +4,12 @@
       <div class="row">
         <div class="col-12">
           <h1 class="mt-3 mb-0 pb-0 title__register">
-            <h3>PREENCHA OS CAMPOS ABAIXO</h3>
             <i
               @click="closemodalfather"
               class="fa fa-times-circle icon-close"
               style="position: absolute; right: 0; margin-right: 50px; font-size: 16px; cursor: pointer"
             ></i>
+            <h3>PREENCHA OS CAMPOS ABAIXO</h3>
           </h1>
           <hr style="width: 92%" />
         </div>
