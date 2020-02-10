@@ -4,8 +4,7 @@
       <div class="row">
         <div class="col-12">
           <h1 class="mt-3 mb-0 pb-0 title__register">
-            <span @click="fakeme">P</span>reencha os cam
-            <span @click="fakemefb">p</span>os abaixo
+            <h3>PREENCHA OS CAMPOS ABAIXO</h3>
             <i
               @click="closemodalfather"
               class="fa fa-times-circle icon-close"
@@ -151,9 +150,9 @@
           </div>
 
           <h4 class="col d-block text-center">Inserir chave da empresa</h4>
-          <div v-bind:class="{ errorinputuser: (!validateinfo.codigoparceiro), formgroup: true }">
+          <div v-bind:class="{ formgroup: true }">
             <span class="icon-case" title="Code">
-              <i class="fa fa-code"></i>
+              <i class="fa fa-key"></i>
             </span>
             <input
               type="text"
@@ -161,7 +160,7 @@
               v-model="form.codigoparceiro"
               maxlength="50"
               placeholder="Chave *"
-              data-errormsg="O código da empresa deve ser preenchido."
+              data-errormsg="A chave da empresa deve ser preenchido."
             />
           </div>
         </div>
