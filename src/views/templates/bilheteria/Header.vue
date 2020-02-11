@@ -143,7 +143,7 @@
     <!-- teste -->
 
     <b-modal
-      v-if="!isLogged"
+      v-if="!isLogged && siteName != 'Bilheteria.com.br'"
       ref="modalCadastro"
       size="lg"
       centered
