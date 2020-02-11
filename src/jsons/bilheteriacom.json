@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/bilheteria.com.br/main.scss",
   "css": "/stylesheets/themes/bilheteria.com.br/main.css",
-  "template": "bilheteria",
+  "template": "ingressaria",
   "logo": "/assets/logo-bilheteriacom.png",
   "favico": "/img/bilheteriacom/",
   "videos": {

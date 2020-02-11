@@ -36,13 +36,13 @@
 
             <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex">
               <!-- <span
-                v-if="!isLogged"
+                v-if="!isLogged && siteName == 'Bilheteria.com.br'"
                 class="btn btn-light to-btn hidden-xs hidden-sm"
                 @click="login"
-              >Entrar</span>-->
+              >Entrar</span>
               <span v-if="!isLogged" class="header__signin-mobile" @click="login">
                 <img src alt />
-              </span>
+              </span>-->
 
               <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName">
                 <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
@@ -143,7 +143,7 @@
     <!-- teste -->
 
     <b-modal
-      v-if="!isLogged && siteName != 'Bilheteria.com.br'"
+      v-if="!isLogged "
       ref="modalCadastro"
       size="lg"
       centered
@@ -237,8 +237,8 @@ export default {
     },
 
     login() {
-      this.$refs["modalCadastro"].hide();
       this.$route.matched[0].instances.default.$parent.login();
+      this.$refs["modalCadastro"].hide();
     },
     modifyme() {
       this.$route.matched[0].instances.default.$parent.modifyme();
