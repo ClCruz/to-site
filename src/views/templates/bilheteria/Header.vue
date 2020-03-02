@@ -153,11 +153,8 @@
       hide-footer
     >
       <div class="d-block text-center">
-        <h2>ACESSO RESTRITO!</h2>
-        <p>
-          Bem vindo ao portal corporativo dos parceiros da Bilheteria.com!
-          Para ter acesso aos descontos exclusivos é necessário se cadastrar com o código da sua empresa, fornecido pelo responsável da área de Gestão de pessoas. Esperamos você!
-        </p>
+        <h2>“ATENÇÃO”</h2>
+        <p>Bem-vindo ao novo site corporativo dos parceiros da Bilheteria.com! Para acessar os produtos com descontos exclusivos , se você já está cadastrado, favor clicar em “Entrar” e refazer sua senha de acesso clicando em “Esqueceu sua senha?” Se você não tem conta, cadastre-se clicando em “Entrar” e em “Cadastre-se”</p>
         <b-button
           @click="login"
           style="background: #ff9000; border: none; border-radius: 100px; width: 150px"
