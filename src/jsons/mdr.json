@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/mdr/main.scss",
   "css": "/stylesheets/themes/mdr4.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-mdr.png",
   "favico": "/img/mdr/",
   "videos": {
@@ -29,9 +29,9 @@
     "title": "MDR4",
     "description": "",
     "siteName": "mdr4.bilheteria.com.br",
-    "CNPJ": "11.111.111/1111-11",
-    "companyAddress": "Rua Qualquer",
-    "companyName": "MDR4"
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
   },
   "templates": {
     "print": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_mdr/emailPresente.html",
       "signature": "../comprar/templates/multi_mdr/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_mdr/confirmacaoEmail.html"
-
     }
   }
 }
