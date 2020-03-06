@@ -681,5 +681,9 @@
     "bbseguros.bilheteria.com.br": "bbseguros",
     "api.bbseguros.bilheteria.com.br": "bbseguros",
     "compra.bbseguros.bilheteria.com.br": "bbseguros",
-    "admin.bbseguros.bilheteria.com.br": "bbseguros"
+    "admin.bbseguros.bilheteria.com.br": "bbseguros",
+    "bemobi.bilheteria.com.br": "bemobi",
+    "api.bemobi.bilheteria.com.br": "bemobi",
+    "compra.bemobi.bilheteria.com.br": "bemobi",
+    "admin.bemobi.bilheteria.com.br": "bemobi"
 }

@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "bemobi.bilheteria.com.br",
+  "uri": "https://bemobi.bilheteria.com.br",
+  "api": "https://api.bemobi.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.bemobi.bilheteria.com.br",
+  "admin": "https://admin.bemobi.bilheteria.com.br",
+  "apikey": "live_5574a72470bc47b4b30fa2f38a2fd0c4ca332978da66473ea415d8af453c492f",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/bemobi/main.scss",
+  "css": "/stylesheets/themes/bemobi.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-bemobi.png",
+  "favico": "/img/bemobi/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Bemobi Midia",
+    "description": "",
+    "siteName": "bemobi.bilheteria.com.br",
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_bemobi/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_bemobi/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_bemobi/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_bemobi/emailComprador.html",
+      "gift": "../comprar/templates/multi_bemobi/emailPresente.html",
+      "signature": "../comprar/templates/multi_bemobi/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_bemobi/confirmacaoEmail.html"
+
+    }
+  }
+}
