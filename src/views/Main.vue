@@ -111,6 +111,7 @@ import VModal from "vue-js-modal";
 
 import appresetpass from "@/components/App-resetpass.vue";
 import applogin from "@/components/App-login.vue";
+import apploginbilheteria from "@/components/App-login-bilheteria.vue";
 import appnewuser from "@/components/App-newuser.vue";
 import appnewusertixsme from "@/components/App-newuser-tixsme.vue";
 import appnewuserbilheteria from "@/components/App-newuser-bilheteria.vue";
@@ -394,23 +395,44 @@ export default {
         }
         return;
       }
-      this.$modal.show(
-        applogin,
-        {},
-        {
-          draggable: false,
-          name: this.modals.login.name, //'login',
-          resizable: true,
-          adaptive: true,
-          height: "auto",
-          scrollable: true,
-          classes: "",
-          clickToClose: clickToClose
-        },
-        {
-          closed: this.modalloginclosed
-        }
-      );
+
+      if (this.template == "bilheteria") {
+        this.$modal.show(
+          apploginbilheteria,
+          {},
+          {
+            draggable: false,
+            name: this.modals.login.name, //'login',
+            resizable: true,
+            adaptive: true,
+            height: "auto",
+            scrollable: true,
+            classes: "",
+            clickToClose: clickToClose
+          },
+          {
+            closed: this.modalloginclosed
+          }
+        );
+      } else {
+        this.$modal.show(
+          applogin,
+          {},
+          {
+            draggable: false,
+            name: this.modals.login.name, //'login',
+            resizable: true,
+            adaptive: true,
+            height: "auto",
+            scrollable: true,
+            classes: "",
+            clickToClose: clickToClose
+          },
+          {
+            closed: this.modalloginclosed
+          }
+        );
+      }
     },
     modalresetpassclosed() {
       window.location = "/";

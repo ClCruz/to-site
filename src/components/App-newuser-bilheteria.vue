@@ -149,7 +149,8 @@
             />
           </div>
 
-          <h4 class="col d-block text-center">Inserir chave da empresa</h4>
+          <!-- class="col d-block text-center" -->
+          <h4>CÓDIGO DE ACESSO</h4>
           <div v-bind:class="{ formgroup: true }">
             <span class="icon-case" title="Code">
               <i class="fa fa-key"></i>
@@ -159,8 +160,8 @@
               data-rule="required"
               v-model="form.codigoparceiro"
               maxlength="50"
-              placeholder="Chave *"
-              data-errormsg="A chave da empresa deve ser preenchido."
+              placeholder="Código *"
+              data-errormsg="O código de acesso deve ser preenchido."
             />
           </div>
         </div>
