@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/bemobi/main.scss",
   "css": "/stylesheets/themes/bemobi.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-bemobi.png",
   "favico": "/img/bemobi/",
   "videos": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_bemobi/emailPresente.html",
       "signature": "../comprar/templates/multi_bemobi/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_bemobi/confirmacaoEmail.html"
-
     }
   }
 }
