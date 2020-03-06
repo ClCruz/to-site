@@ -65,7 +65,7 @@ $gradiente: $secundary !important;
   height: 375px !important;
   background: url(/assets/bg-dz9.jpg) !important;
   background-repeat: no-repeat !important;
-  background-size: auto 101% !important;
+  background-size: auto 32% !important;
   background-position: center !important;
   background-color: black !important;
 
@@ -103,8 +103,9 @@ $gradiente: $secundary !important;
 
 .a .bg__main{
   height: 400px !important;
-  margin-top: 50px !important;
-  background-color: #ff9000 !important;
+    margin-top: -60px !important;
+    background-color: #ff9000 !important;
+    margin-bottom: -137px !important;
   @include MQ(S) {
 	  margin-top: 0 !important;
     display: block !important;
