@@ -689,5 +689,9 @@
     "sicoobmetalcred.bilheteria.com.br": "sicoobmetalcred",
     "api.sicoobmetalcred.bilheteria.com.br": "sicoobmetalcred",
     "compra.sicoobmetalcred.bilheteria.com.br": "sicoobmetalcred",
-    "admin.sicoobmetalcred.bilheteria.com.br": "sicoobmetalcred"
+    "admin.sicoobmetalcred.bilheteria.com.br": "sicoobmetalcred",
+    "coopermsd.bilheteria.com.br": "coopermsd",
+    "api.coopermsd.bilheteria.com.br": "coopermsd",
+    "compra.coopermsd.bilheteria.com.br": "coopermsd",
+    "admin.coopermsd.bilheteria.com.br": "coopermsd"
 }
