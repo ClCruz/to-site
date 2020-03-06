@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "sicoobmetalcred.bilheteria.com.br",
+  "uri": "https://sicoobmetalcred.bilheteria.com.br",
+  "api": "https://api.sicoobmetalcred.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.sicoobmetalcred.bilheteria.com.br",
+  "admin": "https://admin.sicoobmetalcred.bilheteria.com.br",
+  "apikey": "live_011905a5708744acb4caf76390a0d0ecacf2aa05e8ff4a1d97cc450e87267ff7",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/sicoobmetalcred/main.scss",
+  "css": "/stylesheets/themes/sicoobmetalcred.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-sicoobmetalcred.png",
+  "favico": "/img/sicoobmetalcred/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Sicoobmetalcred",
+    "description": "",
+    "siteName": "sicoobmetalcred.bilheteria.com.br",
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_sicoobmetalcred/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_sicoobmetalcred/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_sicoobmetalcred/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_sicoobmetalcred/emailComprador.html",
+      "gift": "../comprar/templates/multi_sicoobmetalcred/emailPresente.html",
+      "signature": "../comprar/templates/multi_sicoobmetalcred/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_sicoobmetalcred/confirmacaoEmail.html"
+
+    }
+  }
+}
