@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/abrasiivos/main.scss",
   "css": "/stylesheets/themes/abrasivos.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-abrasiivos.png",
   "favico": "/img/abrasiivos/",
   "videos": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_abrasiivos/emailPresente.html",
       "signature": "../comprar/templates/multi_abrasiivos/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_abrasiivos/confirmacaoEmail.html"
-
     }
   }
 }
