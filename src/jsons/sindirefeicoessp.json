@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/sindirefeicoessp/main.scss",
   "css": "/stylesheets/themes/sindirefeicoessp.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-sindirefeicoessp.png",
   "favico": "/img/sindirefeicoessp/",
   "videos": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_sindirefeicoessp/emailPresente.html",
       "signature": "../comprar/templates/multi_sindirefeicoessp/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_sindirefeicoessp/confirmacaoEmail.html"
-
     }
   }
 }
