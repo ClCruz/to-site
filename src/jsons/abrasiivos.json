@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "abrasivos.bilheteria.com.br",
+  "uri": "https://abrasivos.bilheteria.com.br",
+  "api": "https://api.abrasivos.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.abrasivos.bilheteria.com.br",
+  "admin": "https://admin.abrasivos.bilheteria.com.br",
+  "apikey": "live_9ae266b5d9d84f0fb43236fe1396a0ab7bfd2f8533ac42068f42c2c3c556faf2",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/abrasiivos/main.scss",
+  "css": "/stylesheets/themes/abrasivos.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-abrasiivos.png",
+  "favico": "/img/abrasiivos/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Abrasivos Saint Gobain",
+    "description": "",
+    "siteName": "abrasivos.bilheteria.com.br",
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_abrasiivos/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_abrasiivos/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_abrasiivos/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_abrasiivos/emailComprador.html",
+      "gift": "../comprar/templates/multi_abrasiivos/emailPresente.html",
+      "signature": "../comprar/templates/multi_abrasiivos/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_abrasiivos/confirmacaoEmail.html"
+
+    }
+  }
+}
