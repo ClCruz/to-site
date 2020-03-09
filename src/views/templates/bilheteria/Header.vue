@@ -150,11 +150,15 @@
       no-close-on-esc
       no-close-on-backdrop
       hide-header-close
+      hide-header
       hide-footer
     >
       <div class="d-block text-center">
-        <h2>“ATENÇÃO”</h2>
-        <p>Bem-vindo ao novo site corporativo dos parceiros da Bilheteria.com! Para acessar os produtos com descontos exclusivos , se você já está cadastrado, favor clicar em “Entrar” e refazer sua senha de acesso clicando em “Esqueceu sua senha?” Se você não tem conta, cadastre-se clicando em “Entrar” e em “Cadastre-se”</p>
+        <p style="font-size: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <strong>Bem-vindo ao novo site corporativo dos parceiros Bilheteria.com!</strong>
+        </p>
+        <p>Para acessar os produtos com descontos exclusivos é necessário fazer login com sua conta clicando em "Entrar". Caso não tenha uma conta cadastrada, clique em "Entrar" e em "Cadastre-se". Se for necessário refazer sua conta clique em "Entrar" e em seguida "Esqueceu sua senha?".</p>
+        <h4>Equipe Bilheteria.com!</h4>
         <b-button
           @click="login"
           style="background: #ff9000; border: none; border-radius: 100px; width: 150px"
