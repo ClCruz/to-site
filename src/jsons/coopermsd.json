@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/coopermsd/main.scss",
   "css": "/stylesheets/themes/coopermsd.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-coopermsd.png",
   "favico": "/img/coopermsd/",
   "videos": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_coopermsd/emailPresente.html",
       "signature": "../comprar/templates/multi_coopermsd/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_coopermsd/confirmacaoEmail.html"
-
     }
   }
 }
