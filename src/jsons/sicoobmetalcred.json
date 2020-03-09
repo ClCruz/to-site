@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/sicoobmetalcred/main.scss",
   "css": "/stylesheets/themes/sicoobmetalcred.bilheteria.com.br/main.css",
-  "template": "ingressaria",
+  "template": "bilheteria",
   "logo": "/assets/logo-sicoobmetalcred.png",
   "favico": "/img/sicoobmetalcred/",
   "videos": {
@@ -47,7 +47,6 @@
       "gift": "../comprar/templates/multi_sicoobmetalcred/emailPresente.html",
       "signature": "../comprar/templates/multi_sicoobmetalcred/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_sicoobmetalcred/confirmacaoEmail.html"
-
     }
   }
 }
