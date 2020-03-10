@@ -145,7 +145,7 @@
     <b-modal
       v-if="!isLogged "
       ref="modalCadastro"
-      size="lg"
+      size="sm"
       centered
       no-close-on-esc
       no-close-on-backdrop
