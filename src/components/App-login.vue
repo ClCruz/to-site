@@ -59,7 +59,7 @@
                   </div>
                   <h4
                     v-if="siteName == 'Bilheteria.com.br'"
-                  >Favor Renovar sua senha clicando em “esqueceu sua senha” ou renove seu cadastro em “cadastra-se”</h4>
+                  >Favor Renovar sua senha clicando em “esqueceu sua senha” ou renove seu cadastro em “cadastre-se”</h4>
                   <div class="row mt-3">
                     <div class="col mt-4">
                       <button class="btn mb-2 btn-success" type="button" @click="signin">
