@@ -15,8 +15,8 @@ header.bg-dark {
 
 footer.bg-dark {
   // background: radial-gradient(circle farthest-corner at 10% 20%, #ffc576 0%, #fe6a67 47.7%, #f01717 92.3%) !important;
-  background-color: $primary !important;
-  color: #fff !important;
+  	background-color: #ff9000 !important;
+	color: #fff !important;
 }
 
 .team-1,
@@ -28,13 +28,8 @@ body {
 
 $gradiente: $secundary !important;
 .navbar-fixed-top .to-btn {
-  color: black !important;
+	color: #fff !important;
 }
-
-.to-btn {
-  color: black !important;
-}
-
 .header__logo .img {
   height: 55px;
   width: 100%;
@@ -68,8 +63,7 @@ $gradiente: $secundary !important;
 
 .bg__main {
   height: 375px !important;
-  // background: url(/assets/bg-convenia.jpeg) !important;
-  background: #fff !important ;
+  background: url(/assets/bg-dz91.jpg) !important;
   background-repeat: no-repeat !important;
   background-size: auto 101% !important;
   background-position: center !important;
@@ -86,11 +80,11 @@ $gradiente: $secundary !important;
   }
 
   // mudança 2
-  @include MQ(M) {
-    display: block !important;
-    padding-top: 0 !important;
-    height: 285px !important;
-    background-size: 120% !important;
+  @include MQ(M){
+      display: block !important;
+      padding-top: 0 !important;
+      height: 285px !important;
+      background-size: 120% !important;
   }
   // mudança 2
 
@@ -107,25 +101,25 @@ $gradiente: $secundary !important;
   }
 }
 
-.a .bg__main {
-  // height: 400px !important;
-  margin-top: -300px !important;
-  background-color: #fff !important;
+.a .bg__main{
+  height: 400px !important;
+  margin-top: 50px !important;
+  background-color: #ff9000 !important;
   @include MQ(S) {
-    margin-top: -71px !important;
+	  margin-top: 0 !important;
     display: block !important;
-    height: 130px !important;
+    height: 121px !important;
     padding-top: 20px !important;
-    background-size: 120% !important;
-    background-repeat: no-repeat !important;
+    background-size: 100% !important;
+	background-repeat: no-repeat !important;
   }
 
-  @include MQ(M) {
+  @include MQ(M){
     display: block !important;
     padding-top: 0 !important;
     height: 285px !important;
     background-size: 120% !important;
-  }
+}
 }
 
 .to-block .container {
@@ -146,17 +140,18 @@ $gradiente: $secundary !important;
   }
 }
 
+
 .eventHeader header.bg-dark {
   background: $secundary !important;
 
   // background: #fff !important;
 }
 .header__mobile {
-  background: #fff !important;
+  background: #ff9000 !important;
 }
 
 header.navbar-fixed-top {
-  background: #fff !important;
+	background: #ff9000!important;
 }
 
 .eventHeader header.navbar-fixed-top {
@@ -201,50 +196,49 @@ header.navbar-fixed-top {
   top: 38px !important;
 }
 
-footer .social__media img {
-  // height: 48px !important;
-  width: 50px !important;
-  padding: 10px !important;
-  margin-top: -10px !important;
-  margin-right: 10px !important;
-  transition: 0.5s ease-out !important;
+footer .social__media img{
+	// height: 48px !important;
+	width: 50px !important;
+	padding: 10px !important;
+	margin-top: -10px !important;
+	margin-right: 10px !important;
+	transition: 0.5s ease-out !important;
 }
 
-footer .social__media img:hover {
-  transform: scale(1.2) !important;
-  transition: 0.5s ease-out;
+footer .social__media img:hover{
+	transform: scale(1.2) !important;
+	transition: 0.5s ease-out;
 }
 
-.social__media img:first-child {
-  margin-left: -17px !important;
+.social__media img:first-child{
+	margin-left: -17px !important;
 
-  @include MQ(S) {
-    margin-left: 0 !important;
-  }
+	@include MQ(S){
+		margin-left: 0 !important; 
+	}
 }
 
-footer .logos__footer img {
-  padding: 2px !important;
-  // height: 56px !important;
-  // height: 37px !important;
-  // width: 60px !important;
-  // margin-top: -120px !important;
+footer .logos__footer img{
+	padding: 3px !important;
+	// height: 37px !important;
+	// width: 60px !important;
+	// margin-top: -120px !important;
 
-  @include MQ(S) {
-    // padding: 2px !important;
-    height: 70px !important;
-    width: 100px !important;
-    margin-top: -51px !important;
-  }
+	@include MQ(S){
+		// padding: 2px !important;
+    	height: 70px !important;
+    	width: 100px !important;
+    	margin-top: -51px !important;
+	}
 }
 
-.logos__footer {
-  margin: 0px !important;
+.logos__footer{
+	margin: 0px !important;
 
-  @include MQ(S) {
-    margin-top: 80px !important;
-    margin-left: 37px !important;
-  }
+	@include MQ(S){
+	margin-top: 80px !important;
+	margin-left: 37px !important;
+	}
 }
 
 #navbar {
@@ -274,19 +268,23 @@ button.my-button {
   }
 }
 
-.modal-header {
-  border-radius: 1.2em 1.2em 0 0 !important;
-  border-bottom: none !important;
-  margin-right: 0 !important;
-  margin-left: -0.5px !important;
-  margin-bottom: -0.5px !important;
-  background-image: url(/assets/images/warning.png) !important;
-  background-repeat: no-repeat !important;
-  height: 128px !important;
-  background-size: contain !important;
-  background-position: center !important;
-  background-color: $primary !important;
-}
+//MODAL
+
+// .modal-header {
+//   border-radius: 1.2em 1.2em 0 0 !important;
+//   border-bottom: none !important;
+//   margin-right: 0 !important;
+//   margin-left: -0.5px !important;
+//   margin-bottom: -0.5px !important;
+//   background-image: url(/assets/images/warning.png) !important;
+//   background-repeat: no-repeat !important;
+//   height: 128px !important;
+//   background-size: contain !important;
+//   background-position: center !important;
+//   background-color: $primary !important;
+// }
+
+//FIM MODAL
 
 .modal-content {
   border-radius: 1.3em !important;
