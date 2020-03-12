@@ -1,42 +1,45 @@
 {
   "env": "production",
-  "host": "tixs.me",
+  "host": "www.tixs.me",
   "uri": "https://www.tixs.me",
   "api": "https://api.tixs.me",
   "pinpad": "http://localhost:7001/api",
-  "admin": "https://admin.tixs.me",
   "legacy": "https://compra.tixs.me",
+  "admin": "https://admin.tixs.me",
   "apikey": "live_ad7750c9491a41b7bd2fed3b0d03a8f44613d2c3b20d4435b6e7f2b67881d34c",
   "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
   "ga": "",
-  "scss": "./src/scss/themes/www.tixs.me/main.scss",
-  "css": "/stylesheets/themes/tixsme/main.css",
-  "template": "tixsme",
-  "logo": "https://media.tixs.me/logos/logo-tixsme.png",
+  "scss": "./src/scss/themes/tixsme/main.scss",
+  "css": "/stylesheets/themes/www.tixs.me/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-tixsme.png",
   "favico": "/img/tixsme/",
   "videos": {
     "list": []
   },
   "meta": {
-    "description": "Venda de Ingressos",
-    "keywords": "venda,ingresssos,tixs,me"
+    "description": "Eventos",
+    "keywords": "Eventos"
   },
   "recaptcha": {
     "private": "",
     "public": ""
   },
   "info": {
-    "title": "Tixs.me | Venda de Ingressos e Tickets",
-    "description": "Venda de Ingressos",
-    "siteName": "Tixs.ME",
-    "CNPJ": "28.427.697/0001-09",
-    "companyAddress": "Rua Marcelo Ribeiro de Mendonça, 109 - Sala 121 - Torre II - CEP 11030-210 - SANTOS - SP",
-    "companyName": "E2C COMPANHIA ENTRETENIMENTO ESPORTES TECNOLOGIA NEGÓCIOS LTDA"
+    "title": "tixs.me",
+    "description": "Eventos",
+    "siteName": "www.tixs.me",
+    "CNPJ": "11.665.394/0001-13",
+    "companyAddress": "RUA GENERAL JARDIM 633",
+    "companyName": "Tixs.me"
   },
   "templates": {
     "print": {
       "voucher": "../comprar/templates/multi_tixsme/impressaoComprador.html",
       "gift": "../comprar/templates/multi_tixsme/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
     },
     "email": {
       "recover": "../comprar/templates/multi_tixsme/solicitarSenha.html",
