@@ -706,5 +706,9 @@
     "api.cooperjohnson.bilheteria.com.br": "cooperjohnson",
     "compra.cooperjohnson.bilheteria.com.br": "cooperjohnson",
     "admin.cooperjohnson.bilheteria.com.br": "cooperjohnson",
-    "admin.tixs.me": "tixsme"
+    "admin.tixs.me": "tixsme",
+    "teatro.bilheteria.com.br": "teatrobilheteria",
+    "api.teatro.bilheteria.com.br": "teatrobilheteria",
+    "compra.teatro.bilheteria.com.br": "teatrobilheteria",
+    "admin.teatro.bilheteria.com.br": "teatrobilheteria"
 }
