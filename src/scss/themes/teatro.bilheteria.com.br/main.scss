@@ -242,7 +242,7 @@ footer .logos__footer img{
 }
 
 #navbar {
-  background-color: #fff !important;
+  background-color: #ff9000 !important;
 }
 
 #nav-icon1 span,
@@ -256,17 +256,17 @@ footer .logos__footer img{
   background-image: url(/assets/logo-bilheteriacom.png) !important;
 }
 
-button.my-button {
-  color:#fff !important;
-  background-color: $secundary !important;
-  align-content: center !important;
-  margin-left: 88px !important;
-  margin-top: 25px !important;
+// button.my-button {
+//   color:#fff !important;
+//   background-color: $secundary !important;
+//   align-content: center !important;
+//   margin-left: 88px !important;
+//   margin-top: 25px !important;
 
-  @include MQ(S){
-    margin-left: 53px !important;
-  }
-}
+//   @include MQ(S){
+//     margin-left: 53px !important;
+//   }
+// }
 
 //MODAL
 

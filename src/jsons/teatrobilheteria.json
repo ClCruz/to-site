@@ -11,7 +11,7 @@
   "ga": "",
   "scss": "./src/scss/themes/teatrobilheteria/main.scss",
   "css": "/stylesheets/themes/teatro.bilheteria.com.br/main.css",
-  "template": "bilheteria",
+  "template": "ingressaria",
   "logo": "/assets/logo-teatrobilheteria.png",
   "favico": "/img/teatrobilheteria/",
   "videos": {
