@@ -11,8 +11,8 @@
   "ga": "",
   "scss": "./src/scss/themes/avon/main.scss",
   "css": "/stylesheets/themes/avon.bilheteria.com.br/main.css",
-  "template": "bilheteria",
-  "logo": "/assets/logo-avon.png",
+  "template": "ingressaria",
+  "logo": "/assets/logo-avon.jpeg",
   "favico": "/img/avon/",
   "videos": {
     "list": []
@@ -29,9 +29,9 @@
     "title": "Avon",
     "description": "",
     "siteName": "avon.bilheteria.com.br",
-    "CNPJ": "07.741.441/0001-93",
-    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
-    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Avon"
   },
   "templates": {
     "print": {
@@ -47,6 +47,7 @@
       "gift": "../comprar/templates/multi_avon/emailPresente.html",
       "signature": "../comprar/templates/multi_avon/confirmacaoEmailAssinatura.html",
       "confirmation": "../comprar/templates/multi_avon/confirmacaoEmail.html"
+
     }
   }
 }
