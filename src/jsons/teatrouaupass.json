@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "teatro.uaupass.com.br",
+  "uri": "https://teatro.uaupass.com.br",
+  "api": "https://api.teatro.uaupass.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.teatro.uaupass.com.br",
+  "admin": "https://admin.teatro.uaupass.com.br",
+  "apikey": "live_24e2f35818c24a44b44c0dfad6ec5a36de212d8e8baf4676910c9c9bbeed9012",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/teatrouaupass/main.scss",
+  "css": "/stylesheets/themes/teatro.uaupass.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-teatrouaupass.png",
+  "favico": "/img/teatrouaupass/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Teatro Uaupass",
+    "description": "",
+    "siteName": "teatro.uaupass.com.br",
+    "CNPJ": "11.111.111/1111-11",
+    "companyAddress": "Rua Qualquer",
+    "companyName": "Teatro Uaupass"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_teatrouaupass/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_teatrouaupass/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_teatrouaupass/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_teatrouaupass/emailComprador.html",
+      "gift": "../comprar/templates/multi_teatrouaupass/emailPresente.html",
+      "signature": "../comprar/templates/multi_teatrouaupass/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_teatrouaupass/confirmacaoEmail.html"
+
+    }
+  }
+}
