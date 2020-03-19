@@ -142,7 +142,7 @@
 
     <!-- teste -->
 
-    <b-modal
+    <!-- <b-modal
       v-if="!isLogged "
       ref="modalCadastro"
       size="sm"
@@ -166,7 +166,7 @@
           <strong>Entrar</strong>
         </b-button>
       </div>
-    </b-modal>
+    </b-modal>-->
 
     <!-- teste -->
   </div>
@@ -227,19 +227,19 @@ export default {
     }
   },
   mounted() {
-    this.showModal();
+    // this.showModal();
   },
 
   methods: {
-    showModal() {
-      let logged = JSON.parse(this.ls_get("client"));
-      if (logged) return true;
-      this.$refs["modalCadastro"].show();
-    },
+    // showModal() {
+    //   let logged = JSON.parse(this.ls_get("client"));
+    //   if (logged) return true;
+    //   this.$refs["modalCadastro"].show();
+    // },
 
     login() {
       this.$route.matched[0].instances.default.$parent.login();
-      this.$refs["modalCadastro"].hide();
+      // this.$refs["modalCadastro"].hide();
     },
     modifyme() {
       this.$route.matched[0].instances.default.$parent.modifyme();

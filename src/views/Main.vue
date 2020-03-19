@@ -487,6 +487,9 @@ export default {
     }
   },
   mounted() {
+    if (this.template == "bilheteria") {
+      this.login();
+    }
     this.checkroute();
     this.validatetoken();
   },
