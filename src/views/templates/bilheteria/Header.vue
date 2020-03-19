@@ -35,14 +35,15 @@
             </div>
 
             <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex">
-              <!-- <span
-                v-if="!isLogged && siteName == 'Bilheteria.com.br'"
+              <span
+                v-if="!isLogged "
                 class="btn btn-light to-btn hidden-xs hidden-sm"
+                style="color: black"
                 @click="login"
               >Entrar</span>
               <span v-if="!isLogged" class="header__signin-mobile" @click="login">
                 <img src alt />
-              </span>-->
+              </span>
 
               <b-dropdown v-if="isLogged" class="m-md-2" id="ddown1" :text="clientName">
                 <b-dropdown-item @click="goto('legacy:my_account')">Meus pedidos</b-dropdown-item>
