@@ -58,7 +58,7 @@
                     </div>
                   </div>
                   <h4
-                    v-if="siteName == 'Bilheteria.com.br' || siteName == 'teatro.bilheteria.com.br'"
+                    v-if="siteName == 'Bilheteria.com.br' || siteName == 'teatro.bilheteria.com.br' || siteName == 'games.bilheteria.com.br'"
                   >Favor Renovar sua senha clicando em “esqueceu sua senha” ou renove seu cadastro em “cadastre-se”</h4>
                   <div class="row mt-3">
                     <div class="col mt-4">
