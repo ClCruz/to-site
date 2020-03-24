@@ -1,0 +1,53 @@
+{
+  "env": "production",
+  "host": "games.bilheteria.com.br",
+  "uri": "https://games.bilheteria.com.br",
+  "api": "https://api.games.bilheteria.com.br",
+  "pinpad": "http://localhost:7001/api",
+  "legacy": "https://compra.games.bilheteria.com.br",
+  "admin": "https://admin.games.bilheteria.com.br",
+  "apikey": "live_b467f3fd976d4e0ab7c7c4c3873b7c4ed71c109efbd849df9559a039d750a3e4",
+  "geokey": "AIzaSyCH0_IkJUiB8TLRuIJFvnI-JKLvuKx1zl8",
+  "ga": "",
+  "scss": "./src/scss/themes/gamesbilheteria/main.scss",
+  "css": "/stylesheets/themes/games.bilheteria.com.br/main.css",
+  "template": "ingressaria",
+  "logo": "/assets/logo-gamesbilheteria.png",
+  "favico": "/img/gamesbilheteria/",
+  "videos": {
+    "list": []
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "recaptcha": {
+    "private": "",
+    "public": ""
+  },
+  "info": {
+    "title": "Games Bilheteria",
+    "description": "",
+    "siteName": "games.bilheteria.com.br",
+    "CNPJ": "07.741.441/0001-93",
+    "companyAddress": "R DEPUTADO LACERDA FRANCO, 300 CJ 23 - PINHEIROS - SÃO PAULO / SP",
+    "companyName": "BILHETERIA.COM PRODUCOES E PROMOCOES LTDA"
+  },
+  "templates": {
+    "print": {
+      "voucher": "../comprar/templates/multi_gamesbilheteria/impressaoComprador.html",
+      "gift": "../comprar/templates/multi_gamesbilheteria/impressaoPresente.html"
+    },
+    "emails": {
+      "folder": "/v1/template/email/default/"
+    },
+    "email": {
+      "recover": "../comprar/templates/multi_gamesbilheteria/solicitarSenha.html",
+      "buyer": "../comprar/templates/multi_gamesbilheteria/emailComprador.html",
+      "gift": "../comprar/templates/multi_gamesbilheteria/emailPresente.html",
+      "signature": "../comprar/templates/multi_gamesbilheteria/confirmacaoEmailAssinatura.html",
+      "confirmation": "../comprar/templates/multi_gamesbilheteria/confirmacaoEmail.html"
+
+    }
+  }
+}
