@@ -60,7 +60,10 @@
             <strong>{{ item.ds_evento | truncate(35, ' ...') }}</strong>
           </h4>
 
-          <p class="p-0 m-0 event__item event__item-date">
+          <p
+            v-if="siteName != 'games.bilheteria.com.br'"
+            class="p-0 m-0 event__item event__item-date"
+          >
             <span class="bold">{{item.datas}}</span>
             <span class="ml-1 mr-2" v-if="item.showPartnerInfo == 1">-</span>
             <span class v-if="item.showPartnerInfo == 1">
@@ -68,7 +71,10 @@
               {{item.partner}}
             </span>
           </p>
-          <p class="p-0 pt-1 m-0 h-200 event__item event__item-local">
+          <p
+            v-if="siteName != 'games.bilheteria.com.br'"
+            class="p-0 pt-1 m-0 h-200 event__item event__item-local"
+          >
             <span
               class="bold"
               style="text-transform: capitalize !important"

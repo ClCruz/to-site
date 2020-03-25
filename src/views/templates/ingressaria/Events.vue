@@ -93,8 +93,10 @@
  <div class="container__select to-block container__features" id="banner" v-if="siteName == 'Bilheteria.com.br' || siteName == 'teatro.bilheteria.com.br' || siteName == 'games.bilheteria.com.br'" >
     <div class="container pt-2 pb-0 text-left">
       <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-        <h3 class="">Explore nossas categorias <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-        <p class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
+        <h3 v-if="siteName == 'games.bilheteria.com.br'" class="">Explore nossos jogos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+        <h3 v-if="siteName != 'games.bilheteria.com.br'" class="">Explore nossas categorias <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+        <p v-if="siteName == 'games.bilheteria.com.br'" class="mt-3 mb-0 pb-0">Descubra jogos através das categorias mais procuradas</p>
+        <p v-if="siteName != 'games.bilheteria.com.br'" class="mt-3 mb-0 pb-0">Descubra eventos através das categorias mais procuradas</p>
 
         <div class="container__arrows">
           <div class="swiper-button-prev swiper-button-prev-genres" slot="button-prev"></div>
@@ -110,8 +112,10 @@
   <!-- Banner -->
   <div class="container__select to-block container__features" id="banner">
     <div class="container pt-2 pb-0 text-left">
-      <h3 class="">Experiências em destaque</h3>
-      <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Uma seleção de eventos para você</pre>
+      <h3 v-if="siteName == 'games.bilheteria.com.br'" class="">Jogos em destaque</h3>
+      <h3 v-if="siteName != 'games.bilheteria.com.br'" class="">Experiências em destaque</h3>
+      <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0 || siteName == 'games.bilheteria.com.br'">Uma seleção de jogos para você</pre>
+      <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0 && siteName != 'games.bilheteria.com.br'">Uma seleção de eventos para você</pre>
         <div class="container__arrows">
           <div class="swiper-button-prev swiper-button-prev-featured" slot="button-prev"></div>
           <div class="swiper-button-next swiper-button-next-featured" slot="button-next"></div>
@@ -151,8 +155,10 @@
     <div class="container">
       <div class="row row__events">
         <div class="col-12 col-sm-12 text-left mt-2 mb-2">
-          <h3 class="">Próximos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
-          <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0">Encontre um evento com toda a facilidade que você precisa</p>
+          <h3 v-if="siteName == 'games.bilheteria.com.br'" class="">Jogos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+          <h3 v-if="siteName != 'games.bilheteria.com.br'" class="">Próximos eventos <span style="font-size: 18.5px; color: #777;">{{searchTerm !== "" ? "(" + searchTerm + ")" : ""}}</span></h3>
+          <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0 || siteName == 'games.bilheteria.com.br'">Encontre um jogo com toda a facilidade que você precisa</p>
+          <p class="mt-3 mb-0 pb-0" v-if="filteredData.length > 0 && siteName != 'games.bilheteria.com.br'">Encontre um evento com toda a facilidade que você precisa</p>
         </div>
         <p style="font-size: 16px; font-weight: bold" class="mt-3" v-if="filteredData.length == 0">{{filteredData.length == 0 ? 'Nenhum evento encontrado' : ''}}</p>
 

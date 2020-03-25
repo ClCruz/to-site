@@ -35,6 +35,7 @@
                           id="badge__address"
                         >{{event.ds_local_evento}}</a>
                         <a
+                          v-if="siteName != 'games.bilheteria.com.br'"
                           :href="'/busca/cidade/' + event.city"
                           class="badge badge__icon badge__city badge-secondary"
                           id="badge__city"
@@ -70,7 +71,11 @@
                           />
                         </span>
                       </span>
-                      <h3 class="mt-3">Detalhes do evento</h3>
+                      <h3
+                        v-if="siteName != 'games.bilheteria.com.br'"
+                        class="mt-3"
+                      >Detalhes do evento</h3>
+                      <h3 v-if="siteName == 'games.bilheteria.com.br'" class="mt-3">Detalhes do jogo</h3>
 
                       <p
                         id="read-more-p"
@@ -153,11 +158,14 @@
                         :animate="true"
                       ></LineLoader>
                       <span v-else>
-                        <h3 class="mt-3">Local do evento</h3>
+                        <h3
+                          v-if="siteName != 'games.bilheteria.com.br'"
+                          class="mt-3"
+                        >Local do evento</h3>
                         <div class="row align-items-center">
                           <div class="col-4"></div>
 
-                          <div class="col-12">
+                          <div v-if="siteName != 'games.bilheteria.com.br'" class="col-12">
                             <p class="lead">{{this.event.address}}</p>
                             <a href="#" @click="map($event)" class="btn to-btn dark">
                               <i class="fa fa-sm mr-2 fa-map"></i>Ver mapa
@@ -178,6 +186,7 @@
               </div>
 
               <div
+                v-if="siteName != 'games.bilheteria.com.br'"
                 class="btn__comprar"
                 id="btn__comprar"
                 @click="scrollTo()"
@@ -187,11 +196,39 @@
                 <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
                 Comprar ingressos
               </div>
+
+              <div
+                v-if="siteName == 'games.bilheteria.com.br'"
+                class="btn__comprar"
+                id="btn__comprar"
+                @click="scrollTo()"
+                title="Selecionar horários"
+              >
+                <!-- <i class="fa fa-sm fa-shopping-cart"></i> -->
+                <i class="fa fa-sm fa-arrow-down" title="Visualizar opções de compra"></i>
+                Comprar créditos
+              </div>
               <div class="container pl-0 mt-0 pt-0 container__calendar">
                 <div class>
                   <div class="p-2">
-                    <h3 class id="horario">Escolha de horário</h3>
-                    <p class="mt-1 mb-0 pb-0">Selecione uma data e um horário para compra</p>
+                    <h3
+                      v-if="siteName != 'games.bilheteria.com.br'"
+                      class
+                      id="horario"
+                    >Escolha de horário</h3>
+                    <h3
+                      v-if="siteName == 'games.bilheteria.com.br'"
+                      class
+                      id="horario"
+                    >Compre seu crédito</h3>
+                    <p
+                      v-if="siteName != 'games.bilheteria.com.br'"
+                      class="mt-1 mb-0 pb-0"
+                    >Selecione uma data e um horário para compra</p>
+                    <p
+                      v-if="siteName == 'games.bilheteria.com.br'"
+                      class="mt-1 mb-0 pb-0"
+                    >Clique abaixo para comprar</p>
                     <div class="container__arrows">
                       <div class="swiper-button-prev" slot="button-prev"></div>
                       <div class="swiper-button-next" slot="button-next"></div>
@@ -205,6 +242,7 @@
                         <div class="c">
                           <!-- :class="{ 'card__time-active': index == 0 }" -->
                           <div
+                            v-if="siteName != 'games.bilheteria.com.br'"
                             class="img-fluid rounded-0 col-12 p-0 card__time text-center align-items-center"
                             style
                             @click="filteredHours(item.day), selected = item.id_apresentacao"
@@ -244,7 +282,7 @@
                       >
                         <div>
                           <!-- <h3 class="">HORÁRIO</h3> -->
-                          <h3 class="lead">
+                          <h3 v-if="siteName != 'games.bilheteria.com.br'" class="lead">
                             <i
                               class="far fa-sm fa-clock"
                               style="margin-right: 5px; font-size: 15px"
@@ -253,7 +291,7 @@
                           </h3>
                           <p class="lead">
                             <span
-                              v-if="siteName != 'Bilheteria.com.br'"
+                              v-if="siteName != 'Bilheteria.com.br' && siteName != 'games.bilheteria.com.br'"
                               class="card__hour-icon"
                             >R$ {{item.ValPeca | moneyIngressaria }} -</span>
 
@@ -271,6 +309,12 @@
                 <div class="row">
                   <div class="col-sm-12 pb-1 text-left mt-4">
                     <h3
+                      v-if="siteName == 'games.bilheteria.com.br'"
+                      style="font-size: 17px"
+                      class="result__container mb-1"
+                    >Outros jogos que você possa gostar:</h3>
+                    <h3
+                      v-if="siteName != 'games.bilheteria.com.br'"
                       style="font-size: 17px"
                       class="result__container mb-1"
                     >Outros eventos na sua região:</h3>
