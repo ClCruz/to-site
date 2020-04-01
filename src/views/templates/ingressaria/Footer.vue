@@ -112,7 +112,7 @@
               <br />
             </div>
             <img
-              v-if="siteName != 'Bilheteria.com.br' && siteName != 'convenia.bilheteria.com.br'"
+              v-if="siteName != 'Bilheteria.com.br' && siteName != 'teatro.uaupass.com.br'"
               src="/assets/images/logo-pagarme.svg"
               class="mt-3 p-1"
               style="width: 120px; background: white; border-radius: 3px;"
@@ -155,15 +155,16 @@
         </div>
         <div class="row mt-5 footer-name nopadding">
           <div class="col text-center">
-            <p>{{companyName}}</p>
+            <p v-if="siteName != 'teatro.uaupass.com.br'">{{companyName}}</p>
           </div>
         </div>
         <div class="row mt-0 nopadding mb-0 pb-0">
           <div class="col text-center">
             <p>
               {{companyAddress}}
-              <span v-if="companyAddress != ''">-</span>
-              CNPJ: {{CNPJ}}
+              <span
+                v-if="companyAddress != '' && siteName != 'teatro.uaupass.com.br'"
+              >- CNPJ: {{CNPJ}}</span>
             </p>
           </div>
         </div>
